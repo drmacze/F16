@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "welcome-dlavie-update-center",
+      "type": "announcement",
+      "title": "DLavie Update Center aktif",
+      "body": "Launcher sekarang diarahkan menjadi satu hub modern untuk update GitHub, Shizuku/root updater, community, dan profile.",
+      "priority": "high",
+      "createdAt": "2026-06-28T00:00:00+07:00"
+    },
+    {
+      "id": "test-patch-v2",
+      "type": "patch",
+      "title": "Patch test v2 tersedia",
+      "body": "Patch ini hanya membuat file DLavieLauncherTest.txt untuk menguji akses tulis Shizuku/root ke folder FIFA 16.",
+      "priority": "normal",
+      "createdAt": "2026-06-28T00:00:00+07:00"
+    },
+    {
+      "id": "next-roadmap",
+      "type": "roadmap",
+      "title": "Roadmap berikutnya",
+      "body": "Berikutnya: progress update lebih detail, repair mode, restore point list, dan integrasi updater penuh ke Compose tanpa membuka layar lama.",
+      "priority": "normal",
+      "createdAt": "2026-06-28T00:00:00+07:00"
+    }
+  ]
+}
