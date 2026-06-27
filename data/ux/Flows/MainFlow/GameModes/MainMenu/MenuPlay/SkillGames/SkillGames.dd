@@ -1,12 +1,28 @@
 {
     "actions":
     [
-		{
+        {
             "viewname": "act_back",
             "impl":
             {
                 "type": "nav",
                 "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_play",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_training"
+            }
+        },
+        {
+            "viewname": "act_training",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_training"
             }
         }
     ]
