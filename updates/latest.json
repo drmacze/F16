@@ -1,6 +1,19 @@
 {
-  "latestVersionCode": 1,
-  "latestVersionName": "v1 - Base Data",
+  "latestVersionCode": 2,
+  "latestVersionName": "v2 - DLavie Launcher Test Patch",
   "gamePackage": "com.ea.gp.fifaworld",
-  "patches": []
+  "patches": [
+    {
+      "from": 1,
+      "to": 2,
+      "name": "DLavie Shizuku Copy Test",
+      "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
+      "files": [
+        {
+          "path": "DLavieLauncherTest.txt",
+          "content": "DLavie Launcher Test Patch v2\nJika file ini muncul di folder FIFA 16, berarti sistem update otomatis via Shizuku/root berhasil.\n"
+        }
+      ]
+    }
+  ]
 }
