@@ -1,16 +1,50 @@
 {
+  "schemaVersion": 2,
   "latestVersionCode": 2,
   "latestVersionName": "v2 - DLavie Launcher Test Patch",
+  "minimumLauncherVersionCode": 7,
+  "minimumLauncherVersionName": "0.6.0",
   "gamePackage": "com.ea.gp.fifaworld",
+  "channel": "stable",
+  "channels": {
+    "stable": true,
+    "beta": false,
+    "developer": false
+  },
+  "status": {
+    "state": "online",
+    "message": "DLavie update service is ready. Gunakan patch test ini untuk memastikan Shizuku/root copy berhasil."
+  },
+  "releaseNotes": [
+    "Menambahkan manifest metadata v2 untuk DLavie Update Center.",
+    "Menyiapkan channel stable/beta/developer.",
+    "Patch test membuat file DLavieLauncherTest.txt di folder data FIFA 16.",
+    "Jika file test muncul, sistem Shizuku/root updater berjalan benar."
+  ],
+  "knownIssues": [
+    "Patch test belum mengubah gameplay atau UI game.",
+    "File OBB besar belum dipatch secara delta; OBB masih perlu strategi khusus."
+  ],
   "patches": [
     {
       "from": 1,
       "to": 2,
       "name": "DLavie Shizuku Copy Test",
+      "type": "inline",
+      "channel": "stable",
       "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
+      "requiresShizuku": true,
+      "requiresRoot": false,
+      "critical": false,
+      "safeToAutoApply": true,
+      "estimatedSizeBytes": 180,
+      "riskLevel": "low",
+      "restartGameRequired": false,
+      "description": "Patch kecil untuk menguji apakah launcher bisa menulis file ke folder data FIFA 16 via Shizuku/root.",
       "files": [
         {
           "path": "DLavieLauncherTest.txt",
+          "sha256": "",
           "content": "DLavie Launcher Test Patch v2\nJika file ini muncul di folder FIFA 16, berarti sistem update otomatis via Shizuku/root berhasil.\n"
         }
       ]
