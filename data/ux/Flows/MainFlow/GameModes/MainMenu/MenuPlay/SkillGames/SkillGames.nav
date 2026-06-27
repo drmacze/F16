@@ -1,18 +1,37 @@
 {
-	"name": "SkillGames",
-	"onEnter":
-	[
-	   ["blockingLoadVVM", ["SkillGames.vvm"]]
-	],
-	"onExit":
-	[
-	   ["unloadVVM"]
-	],
-	"transitions":
-	[
-	   {
-	       "event": "evt_back",
-		   "targets": ["out_exit_gamemode"]
-	   }
-	]
+    "name": "SkillGames",
+    "states":
+    [
+        {
+            "name": "SkillGamesHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["SkillGames.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_training",
+                    "targets": ["TrainingMatch"]
+                }
+            ]
+        },
+        {
+            "name": "TrainingMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/SkillGames/TrainingMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        }
+    ]
 }
