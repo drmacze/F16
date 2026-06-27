@@ -1,0 +1,244 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "ChallengeRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_BOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_BOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.HomeTeamCrest": "RowPanel.RowLeftPanel.HomeTeamCrest.image",
+        "dataProviders.HomeTeamName": "RowPanel.RowLeftPanel.HomeTeamName.text",
+        "dataProviders.HomeTeamShortName": "RowPanel.RowLeftPanel.HomeTeamShortName.text",
+        "dataProviders.HomeTeamScore": "RowPanel.RowLeftPanel.HomeTeamScore.text",
+        "dataProviders.AwayTeamCrest": "RowPanel.RowLeftPanel.AwayTeamCrest.image",
+        "dataProviders.AwayTeamName": "RowPanel.RowLeftPanel.AwayTeamName.text",
+        "dataProviders.AwayTeamShortName": "RowPanel.RowLeftPanel.AwayTeamShortName.text",
+        "dataProviders.AwayTeamScore": "RowPanel.RowLeftPanel.AwayTeamScore.text",
+
+        "dataProviders.TeamNameFontColor": "RowPanel.RowLeftPanel.HomeTeamName.fontColor",
+        "dataProviders.TeamNameFontColor": "RowPanel.RowLeftPanel.AwayTeamName.fontColor",
+        "dataProviders.TeamScoreFontColor": "RowPanel.RowLeftPanel.HomeTeamScore.fontColor",
+        "dataProviders.TeamScoreFontColor": "RowPanel.RowLeftPanel.AwayTeamScore.fontColor",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 740,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width":565,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x00fc7f",
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 10,
+                            "width": 50,
+                            "height": 50
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"HomeTeamScore",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": -40,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_EPL",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.8
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"HomeTeamName",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 15,
+                            "marginLeft": -125,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "width": 200,
+                            "autoScroll":true,
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"HomeTeamShortName",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": -150,
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_EXTRABOLD",
+                            "text": "VS",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "AwayTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 10,
+                            "width": 50,
+                            "height": 50
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"AwayTeamScore",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginRight": -40,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_EPL",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.8
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"AwayTeamName",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 15,
+                            "marginRight": -125,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "width": 200,
+                            "autoScroll":true,
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"AwayTeamShortName",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "marginRight": -150,
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "BOTTOM",
+                            "alignH": "FILL",
+                            "marginBottom": 0,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.2
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "marginRight": 0,
+                    "width": 170,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x00fc7f",
+                            "highlightable": true,
+                            "alpha": 0.8,
+                            "visible":false
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"StartGame",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 20,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name":"StartGameIcon",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 20,
+                            "width": 40,
+                            "height": 40,
+                            "alpha": 0.9
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1671 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+    
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$UCL2016_Background"
+        },
+        
+        {
+           "commonName": "Panel",
+           "name": "BagianMenuTournament",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": -48,
+           "width": 800,
+           "height": 400,
+           "children":
+           [
+              {
+                 "commonName": "Asset",
+                 "alignV": "FILL",
+                 "alignH": "FILL",
+                 "marginTop": -10,
+                 "marginBottom": -10,
+                 "marginLeft": -10,
+                 "marginRight": -10,
+                 "alpha": 0.5,
+                 "type": "$BackgroundHitam"
+              },
+              {
+                 "commonName": "Label",
+                 "alignV": "TOP",
+                 "alignH": "CENTER",
+                 "fontColor": "$COLOR_WHITE",
+                 "fontSize": 25,
+                 "text": "MATCH LIST"
+              },
+              {
+                 "commonName": "Asset",
+                 "alignV": "TOP",
+                 "alignH": "CENTER",
+                 "marginTop": 55,
+                 "width": 92,
+                 "height": 90,
+                 "type": "$UCL2016_Logo"
+              },
+              {
+                 "commonName": "Asset",
+                 "alignV": "FILL",
+                 "alignH": "FILL",
+                 "type": "$UCL2016_Grafik"
+              },
+
+              {
+                 "commonName": "Panel",
+                 "name": "BagianMenu",
+                 "alignV": "BOTTOM",
+                 "alignH": "FILL",
+                 "marginBottom": -100,
+                 "marginLeft": -10,
+                 "height": 85,
+                 "children":
+                 [
+                    {
+                        "commonName": "Panel",
+                        "name": "MenuPlayMatch",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "width": 200,
+                        "height": 85,
+                        "alpha": 2,
+                        "children":
+                        [
+                           {
+                              "commonName": "LiveTile",
+                              "alignV": "FILL",
+                              "alignH": "FILL",
+                              "clickAction": "act_advance"
+                           },
+                           {
+                              "commonName": "Label",
+                              "alignV": "TOP",
+                              "alignH": "CENTER",
+                              "marginTop": 5,
+                              "fontSize": 18,
+                              "fontColor": "$COLOR_DARK_GRAY",
+                              "text": "PLAY NEXT MATCH"
+                           },
+                           {
+                              "commonName": "Asset",
+                              "alignV": "BOTTOM",
+                              "alignH": "CENTER",
+                              "marginBottom": 7,
+                              "width": 50,
+                              "height": 50,
+                              "type": "$IconPlayMatch"
+                           }
+                        ]
+                    },
+                    {
+                        "commonName": "Panel",
+                        "name": "MenuTeamManagement",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginLeft": 205,
+                        "width": 203,
+                        "height": 85,
+                        "alpha": 2,
+                        "children":
+                        [
+                           {
+                              "commonName": "LiveTile",
+                              "alignV": "FILL",
+                              "alignH": "FILL",
+                              "clickAction": "act_squad"
+                           },
+                           {
+                              "commonName": "Label",
+                              "alignV": "TOP",
+                              "alignH": "CENTER",
+                              "marginTop": 5,
+                              "fontSize": 18,
+                              "fontColor": "$COLOR_DARK_GRAY",
+                              "text": "TEAM MANAGEMENT"
+                           },
+                           {
+                              "commonName": "Asset",
+                              "alignV": "BOTTOM",
+                              "alignH": "CENTER",
+                              "marginBottom": 7,
+                              "width": 50,
+                              "height": 50,
+                              "type": "$IconTeamManagement"
+                           }
+                        ]
+                    },
+                    {
+                        "commonName": "Panel",
+                        "name": "MenuGameSettings",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginLeft": 413,
+                        "width": 202,
+                        "height": 85,
+                        "alpha": 2,
+                        "children":
+                        [
+                           {
+                              "commonName": "LiveTile",
+                              "alignV": "FILL",
+                              "alignH": "FILL",
+                              "clickAction": "act_gamesettings"
+                           },
+                           {
+                              "commonName": "Label",
+                              "alignV": "TOP",
+                              "alignH": "CENTER",
+                              "marginTop": 5,
+                              "fontSize": 18,
+                              "fontColor": "$COLOR_DARK_GRAY",
+                              "text": "GAME SETTINGS"
+                           },
+                           {
+                              "commonName": "Asset",
+                              "alignV": "BOTTOM",
+                              "alignH": "CENTER",
+                              "marginBottom": 7,
+                              "width": 50,
+                              "height": 50,
+                              "type": "$IconGameSettings"
+                           }
+                        ]
+                    },
+                    {
+                        "commonName": "Panel",
+                        "name": "MenuEndTournament",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginLeft": 620,
+                        "width": 200,
+                        "height": 85,
+                        "alpha": 2,
+                        "children":
+                        [
+                           {
+                              "commonName": "LiveTile",
+                              "alignV": "FILL",
+                              "alignH": "FILL",
+                              "clickAction": "act_restart"
+                           },
+                           {
+                              "commonName": "Label",
+                              "alignV": "TOP",
+                              "alignH": "CENTER",
+                              "marginTop": 5,
+                              "fontSize": 18,
+                              "fontColor": "$COLOR_DARK_GRAY",
+                              "text": "END TOURNAMENT"
+                           },
+                           {
+                              "commonName": "Asset",
+                              "alignV": "BOTTOM",
+                              "alignH": "CENTER",
+                              "marginBottom": 5,
+                              "width": 55,
+                              "height": 55,
+                              "type": "$IconEndTournament"
+                           }
+                        ]
+                    }
+                 ]
+              },
+              
+              {
+                 "commonName": "Panel",
+                 "name": "BagianInfoChampionsTeam",
+                 "alignV": "BOTTOM",
+                 "alignH": "CENTER",
+                 "marginBottom": 10,
+                 "visible": false,
+                 "bindings":
+                 [
+                     {
+                         "binding": "bnd_champion_visible",
+                         "property": "visible"
+                     }
+                 ],
+                 "children":
+                 [
+                     {
+                         "commonName": "Label",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "fontSize": 20,
+                         "fontColor": "0xffd700",
+                         "marginBottom": 80,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_text",
+                                 "property": "text"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Image",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "scaleX": 0.25,
+                         "scaleY": 0.25,
+                         "marginBottom": 10,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_champion_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "fontSize": 20,
+                         "fontColor": "0xffffff",
+                         "marginBottom": -15,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_champion_team",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "name": "BagianInfoNextMatch",
+                 "alignV": "BOTTOM",
+                 "alignH": "CENTER",
+                 "bindings":
+                 [
+                     {
+                         "binding": "bnd_match_visible",
+                         "property": "visible"
+                     }
+                 ],
+                 "children":
+                 [
+                     {
+                         "commonName": "Label",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "fontSize": 17,
+                         "fontColor": "$COLOR_WHITE",
+                         "marginBottom": 73,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_text",
+                                 "property": "text"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "fontSize": 30,
+                         "fontColor": "0xffffff",
+                         "marginBottom": 20,
+                         "text": "VS"
+                     },
+                     {
+                         "commonName": "Image",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "scaleX": 0.2,
+                         "scaleY": 0.2,
+                         "marginBottom": 20,
+                         "marginLeft": -70,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_home_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Image",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "scaleX": 0.2,
+                         "scaleY": 0.2,
+                         "marginBottom": 20,
+                         "marginRight": -70,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_away_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "fontSize": 20,
+                         "fontColor": "0xffffff",
+                         "marginBottom": -5,
+                         "marginLeft": -70,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_home_team",
+                                 "property": "text"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "BOTTOM",
+                         "alignH": "CENTER",
+                         "fontSize": 20,
+                         "fontColor": "0xffffff",
+                         "marginBottom": -5,
+                         "marginRight": -70,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_away_team",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              /* --------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KIRI PART 1 */
+              /* --------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 20,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team1_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team1_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 62,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team2_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team2_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 125,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team3_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team3_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 169,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team4_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team4_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 232,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team5_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team5_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 275,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team6_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team6_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 338,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team7_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team7_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 382,
+                 "marginLeft": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team8_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team8_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* ------------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KANAN PART 1 */
+              /* ------------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginRight": 3,
+                 "marginTop": 20,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team9_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team9_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginRight": 3,
+                 "marginTop": 62,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team10_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team10_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 125,
+                 "marginRight": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team11_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team11_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 169,
+                 "marginRight": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team12_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team12_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 232,
+                 "marginRight": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team13_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team13_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 275,
+                 "marginRight": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team14_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team14_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 338,
+                 "marginRight": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team15_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team15_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 382,
+                 "marginRight": 3,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team16_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team16_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* --------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KIRI PART 2 */
+              /* --------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 40,
+                 "marginLeft": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team17_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team17_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 147,
+                 "marginLeft": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team18_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team18_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 255,
+                 "marginLeft": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team19_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team19_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 360,
+                 "marginLeft": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team20_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team20_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* --------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KIRI PART 3 */
+              /* --------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 94,
+                 "marginLeft": 228,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team25_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team25_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 307,
+                 "marginLeft": 228,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team26_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team26_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* -------------------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KIRI PART 4 (FINAL) */
+              /* -------------------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "LEFT",
+                 "marginTop": 200,
+                 "marginLeft": 305,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team29_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 44,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team29_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* ------------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KANAN PART 2 */
+              /* ------------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 40,
+                 "marginRight": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team21_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team21_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 147,
+                 "marginRight": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team22_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team22_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 255,
+                 "marginRight": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team23_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team23_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 360,
+                 "marginRight": 115,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team24_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team24_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* ------------------------------------------------- */
+              /* BAGIAN GRAFIK TIM KANAN PART 3 */
+              /* ------------------------------------------------- */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 94,
+                 "marginRight": 228,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team27_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team27_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 307,
+                 "marginRight": 228,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team28_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team28_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              },
+
+              /* ------------------------------------------------------------ */
+              /* BAGIAN GRAFIK TIM KANAN PART 4 (FINAL) */
+              /* ------------------------------------------------------------ */
+                        
+              {
+                 "commonName": "Panel",
+                 "alignV": "TOP",
+                 "alignH": "RIGHT",
+                 "marginTop": 200,
+                 "marginRight": 305,
+                 "children":
+                 [
+                     {
+                         "commonName": "Image",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "scaleX": 0.12,
+                         "scaleY": 0.12,
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team30_crest",
+                                 "property": "image"
+                             }
+                         ]
+                     },
+                     {
+                         "commonName": "Label",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 46,
+                         "fontSize": 25,
+                         "fontColor": "0xffffff",
+                         "bindings":
+                         [
+                             {
+                                 "binding": "bnd_team30_score",
+                                 "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+              }
+                
+            ]
+        }
+	    
+	]
+}

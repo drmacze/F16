@@ -1,0 +1,52 @@
+{
+    "name": "GTN",
+    "states":
+    [
+        {
+            "name": "RedirectGTN",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["GTN.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_toscout",
+                    "targets": ["Toscout"]
+                },
+                {
+                    "event": "evt_tolist",
+                    "targets": ["Tolist"]
+                }
+            ]
+        },
+        {
+            "name": "Toscout",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/GTN/Scoutlist/Scoutlist.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "GTN",
+                "out_exit_gamemode1": "GTN"
+            }
+        },
+        {
+            "name": "Tolist",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/GTN/Setscout/Setscout.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "GTN",
+                "out_exit_gamemode1": "GTN"
+            }
+        }
+    ]
+}       

@@ -1,0 +1,187 @@
+{
+    "actions":
+    [
+    
+		{
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_back",
+          "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        
+        {
+            "viewname": "act_home_country_previous",
+            "actionname": "act_home_country_previous"
+        },
+        {
+            "viewname": "act_home_country_next",
+            "actionname": "act_home_country_next"
+        },
+        {
+            "viewname": "act_home_league_previous",
+            "actionname": "act_home_league_previous"
+        },
+        {
+            "viewname": "act_home_league_next",
+            "actionname": "act_home_league_next"
+        },
+        {
+            "viewname": "act_home_team_previous",
+            "actionname": "act_home_team_previous"
+        },
+        {
+            "viewname": "act_home_team_next",
+            "actionname": "act_home_team_next"
+        }
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_home_squad_name",
+            "binding": "bnd_home_squad_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_selected_squad",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_PREGAME_SELECTED_SQUAD"
+            }
+        },
+        {
+            "viewname": "bnd_panel_home_title",
+            "binding": "bnd_panel_home_title",
+            "type": "string"
+        },
+		{
+			"viewname": "bnd_select_mode_label",
+			"type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "FUT_SELECTTEAM_TEAM_SELECT"
+            }
+		},
+        {
+            "viewname": "bnd_versus",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_CMN_VS"
+            }
+        },
+        {
+            "viewname": "bnd_option_squad",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_SQUAD"
+            }
+        },
+        {
+            "viewname": "bnd_home_team_selector",
+            "binding": "bnd_home_team_selector",
+            "type": "object"
+        },
+        
+        {
+            "viewname": "bnd_ready_label_texture",
+            "binding": "bnd_ready_label_texture",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_real_team_visible",
+            "binding": "bnd_home_real_team_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_fut_squad_visible",
+            "binding": "bnd_home_fut_squad_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_team_country",
+            "binding": "bnd_home_team_country",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_league",
+            "binding": "bnd_home_team_league",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_options_enabled",
+            "binding": "bnd_options_enabled",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_team_selector_alpha",
+            "binding": "bnd_home_team_selector_alpha",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_home_friendly_team_visible",
+            "binding": "bnd_home_friendly_team_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_user_plate",
+            "binding": "bnd_home_user_plate",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home_user_plate_visible",
+            "binding": "bnd_home_user_plate_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_ready_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_PREGAME_READY"
+            }
+        },
+        {
+            "viewname": "bnd_home_ready_label_visible",
+            "binding": "bnd_home_ready_label_visible",
+            "type": "bool"
+        },
+		{
+			"viewname": "BND_LTXT_SEARCH",
+            "type": "string",
+            "impl": { "type": "ltxt", "tag": "LTXT_CMN_SEARCH" }
+		},
+		{
+            "viewname": "bnd_label_tickernavpublisher",
+            "binding": "bnd_label_tickernavpublisher",
+            "type": "string"
+        },
+		{
+            "viewname": "bnd_autodisable_tickernavpublisher",
+            "binding": "bnd_autodisable_tickernavpublisher",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_team_id",
+            "binding": "bnd_team_id",
+            "type": "string"
+        }
+    ]
+}

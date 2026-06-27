@@ -1,0 +1,5 @@
+{
+	"dds": ["Calendar.dd"],
+    "vms": [["lua", "Calendar.lua"]],
+    "views": [["gfx", {"layout": "Calendar.layout"}]]
+}

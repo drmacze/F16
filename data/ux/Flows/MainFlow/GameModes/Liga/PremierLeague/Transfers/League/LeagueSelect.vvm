@@ -1,0 +1,5 @@
+{
+	"dds": ["LeagueSelect.dd"],
+    "vms": [["lua", "LeagueSelect.lua"]],
+    "views": [["gfx", {"layout": "LeagueSelect.layout"}]]
+}

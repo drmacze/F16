@@ -1,0 +1,5 @@
+{
+    "dds": ["MenuHub.dd"],
+    "vms": [["lua", "/flows/MainFlow/GameModes/pregame/MatchSelect/MatchSelect.lua"]],
+    "views": [["gfx", { "layout": "MenuHub.layout" }]]
+}

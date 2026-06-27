@@ -1,0 +1,133 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "MatchGradeCHomeRowRoot",
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 560.0,
+            "height": 70.0
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "LEFT",
+            "textAlignV": "CENTER",
+            "fontSize": 24
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+"fontColor": "$COLOR_WHITE",
+            "alignV": "FILL"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "textAlignH": "CENTER",
+            "fontColor": "$COLOR_WHITE",
+            "fontSize": 20
+        }
+    },
+    "propertyMap":
+    {
+       "dataProviders.HomeTeamCrest": "RowPanel.HomeTeamCrest.image",
+        "dataProviders.HomeTeamName": "RowPanel.HomeTeamName.text",
+        "dataProviders.minute": "RowPanel.TimeLabel.text",
+        "dataProviders.image": "RowPanel.EventIcon.image",
+        "dataProviders.head": "RowPanel.PlayerHead.image",
+        "dataProviders.name": "RowPanel.PlayerLabel.text",
+        "dataProviders.iconOffset": "RowPanel.EventIcon.marginRight",
+        "width": "RowPanel.width",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": -10.0,
+            "y": 0.0,
+            "children":
+            [
+                {
+                         "commonName": "Image",
+                    "name": "EventTimeBgIdle",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginLeft": 66.0,
+                    "marginTop": 2.0,
+                    "width": 50,
+                    "height": 40,
+                    "alpha": 0.8,
+                    "image": "$Matchgradei5"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "HomeTeamCrest",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginLeft": 70.0,
+                    "marginTop": 5.0,
+                    "width": 35,
+                    "height": 35,
+                    "alpha": 1
+                   
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"HomeTeamName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 70.0,
+                    "marginTop": 3.0,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "PlayerLabel",
+                    "alignH": "LEFT",
+                    "width": 200.0,
+                    "marginLeft": 1305.0,
+                    "fontColor": "$COLOR_WHITE",
+                    "autoScroll":true,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "EventStyle"
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "EventIcon",
+                    "alignH": "RIGHT",
+                    "alignV": "CENTER",
+                    "marginRight": 6000.0,
+                    "scaleX": 0.1,
+                    "scaleY": 0.1
+                },
+                {
+                    "commonName": "Label",
+                    "name": "TimeLabel",
+                    "alignH": "RIGHT",
+                    "marginRight": -2000.0,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyle"
+                    ]
+                }
+            ]
+        }
+    ]
+}  ]
+}

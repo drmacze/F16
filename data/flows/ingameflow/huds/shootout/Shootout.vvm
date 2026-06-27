@@ -1,0 +1,5 @@
+{
+    "dds":   ["Shootout.dd"],
+    "vms":   [["lua", "Shootout.lua"]],
+    "views": [["gfx", { "layout": "Shootout.layout" }]]
+}

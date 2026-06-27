@@ -1,0 +1,26 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+        {
+            "commonName": "VerticalList",
+            "name": "MatchFacts",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "rowWidth": 700,
+            "rowHeight": 26,
+            "row": "MatchFactRow",
+            "useAlternating": true,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_match_facts",
+                    "property": "dataProviders"
+                }
+            ]
+        }
+    ]
+}

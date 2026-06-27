@@ -1,0 +1,284 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 77,
+                    "width": 1000,
+                    "height": 475,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 469.5,
+                            "width": 150,
+                            "height": 35,
+                            "type": "$BackgroundJudulMenu"
+                        },
+
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 506,
+                            "marginTop": 5,
+                            "width": 150,
+                            "height": 35,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "OFFICE"
+                        }
+                    ]
+                },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "clickAction": "act_goalscorer"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Topskor"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "clickAction": "act_fixtures"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "type": "$Tombol_List"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 325,
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "clickAction": "act_calendar"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 325,
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Kalender"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "CENTER",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 355,
+                                  "type": "$LiveTileBackgroundIdle"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 300,
+                                  "type": "$ads3"
+                              }
+                          ]
+                },
+                 {
+                     "commonName": "Panel",
+                     "name": "TopScore",
+                     "alignV": "BOTTOM",
+                     "alignH": "LEFT",
+                     "marginTop": 120,
+                     "width": 642,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "TOP SCORERS"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Check players with the most goals"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "MatchList",
+                     "alignV": "TOP",
+                     "alignH": "LEFT",
+                     "marginTop": 120,
+                     "width": 317,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "MATCH LIST"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "Check all teams match results"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Calendar",
+                     "alignV": "TOP",
+                     "alignH": "LEFT",
+                     "marginTop": 120,
+                     "marginLeft": 325,
+                     "width": 317,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "CALENDAR"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Check the match schedule"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "News",
+                     "alignV": "CENTER",
+                     "alignH": "RIGHT",
+                     "marginTop": 59,
+                     "width": 350,
+                     "height": 355,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 25,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "NEWS"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "LEFT",
+                                   "marginBottom": 27,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "MARCA : Cristiano Ronaldo has just received the"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "LEFT",
+                                   "marginBottom": 6,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "award of UEFA Best Player in Europe"
+                               }
+                          ]
+                 }
+            ]
+        }
+                            
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

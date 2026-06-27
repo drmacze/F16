@@ -1,0 +1,230 @@
+{
+    "name": "TeamSelect",
+    "initial":
+    {
+        "targets": ["RedirectSelectTeam"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectSelectTeam",
+            "onEnter":
+            [
+                ["set", ["fromScreen", ".fromScreen"]]
+            ],
+            "states":
+            [
+				{
+                    "name": "RedirectSelectTeamByGamemode",
+                    "onEnter":
+                    [
+                        ["invoke", [".type"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "seasons",
+                            "targets": ["RedirectSeasonsTeamSelect"]
+                        },
+                        {
+                            "event": "tournaments",
+                            "targets": ["RedirectTournamentsTeamSelect"]
+                        },
+                        {
+                            "event": "friendly",
+                            "targets": ["RedirectFriendlyTeamSelect"]
+                        }
+                    ]
+                },
+				{
+                    "name": "RedirectSeasonsTeamSelect",
+                    "onEnter":
+                    [
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["SeasonsTeamSelect"]
+                        }
+                    ]
+                },
+				{
+                    "name": "RedirectTournamentsTeamSelect",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["TournamentsTeamSelect"]
+                        }
+                    ]
+                },
+				{
+                    "name": "RedirectFriendlyTeamSelect",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["FriendlyTeamSelect"]
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "name": "SeasonsTeamSelect",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/pregame/teamselect/SeasonsTeamSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE", "fromScreen" : ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_to_settings",
+                    "targets": ["SettingsCustomize"]
+                },
+                {
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "fut"],
+                    "targets": ["SquadFUT"]
+                },
+				{
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadReal"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        },
+		{
+            "name": "TournamentsTeamSelect",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/pregame/teamselect/TournamentsTeamSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE", "fromScreen" : ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_to_settings",
+                    "targets": ["SettingsCustomize"]
+                },
+                {
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "fut"],
+                    "targets": ["SquadFUT"]
+                },
+				{
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadReal"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+                
+            ]
+        },
+		{
+            "name": "FriendlyTeamSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["FriendlyTeamSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE", "fromScreen" : ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_to_settings",
+                    "targets": ["SettingsCustomize"]
+                },
+                {
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "fut"],
+                    "targets": ["SquadFUT"]
+                },
+				{
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadReal"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                },
+                {
+                    "event": "evt_to_squadaway",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadRealAway"]
+                }
+            ]
+        },
+		{
+            "name": "SettingsCustomize",
+            "type": "external",
+            "file": "/flows/mainflow/settingscustomize/settingscustomize.nav",
+            "outputs":
+            {
+                "out_back": "RedirectSelectTeam",
+                "out_advance": "RedirectSelectTeam"
+            }
+        },
+        {
+            "name": "SquadRealAway",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/real/pregame/squad/squadaway.nav",
+            "outputs":
+            {
+                "out_back": "RedirectSelectTeam",
+                "out_advance": "RedirectSelectTeam"
+            }
+        },
+        {
+            "name": "SquadReal",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/real/pregame/squad/squad.nav",
+            "outputs":
+            {
+                "out_back": "RedirectSelectTeam",
+                "out_advance": "RedirectSelectTeam"
+            }
+        },
+        {
+            "name": "SquadFUT",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/fut/club/squad/squad.nav",
+            "outputs":
+            {
+                "out_back": "out_back",
+                "out_advance": "RedirectSelectTeam"
+            }
+        }
+    ]
+}

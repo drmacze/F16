@@ -1,0 +1,573 @@
+{
+    "name": "Liga",
+    "initial":
+    {
+        "targets": ["MenuLiga"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuLiga",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MarketValue.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+
+                    "event": "evt_restart",
+
+                    "targets": ["Restart"]
+
+                },
+                {
+
+                    "event": "evt_hub",
+
+                    "targets": ["Hub"]
+
+                },
+                {
+                    "event": "evt_table",
+                    "targets": ["Table"]
+                },
+                {
+
+                    "event": "evt_teamselect",
+
+                    "targets": ["TeamSelect"]
+
+                },
+                {
+
+                    "event": "evt_goalscorer",
+
+                    "targets": ["GoalScorers"]
+
+                },
+                {
+
+
+
+                    "event": "evt_squado",
+
+
+
+                    "targets": ["Squado"]
+
+
+
+                },
+                {
+
+                    "event": "evt_squad",
+
+                    "targets": ["Squad"]
+
+                },               
+                {
+
+
+
+                    "event": "evt_transfers",
+
+
+
+                    "targets": ["Transfers"]
+
+
+
+                },
+
+                {
+
+
+
+                    "event": "evt_season",
+
+
+
+                    "targets": ["Season"]
+
+
+
+                },
+
+                {
+
+
+
+                    "event": "evt_office",
+
+
+
+                    "targets": ["Office"]
+
+
+
+                },
+                {
+                    "event": "evt_sim",
+                    "targets": ["Sim"]
+                },
+                {
+                    "event": "evt_seasonnext",
+                    "targets": ["SeasonNext"]
+                },
+                {
+                    "event": "evt_progress",
+                    "targets": ["Progress"]
+                },
+                {
+
+                    "event": "evt_manager",
+
+                    "targets": ["Manager"]
+
+                },
+                {
+                    "event": "evt_end",
+                    "targets": ["End"]
+                }
+            ]
+        },
+        
+                
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev2/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",
+                "out_exit_gamemode1": "Liga"
+            }
+        },
+        {
+            "name": "GoalScorers",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Goalscorers/Goalscorers.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",
+                "out_exit_gamemode1": "Liga"
+            }
+        },
+        {
+
+            "name": "Manager",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev2/Manager/KitSelect/KitSelect.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "Liga",
+
+                "out_exit_gamemode1": "Liga"
+
+            }
+
+        },
+        {
+
+            "name": "TeamSelect",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/TeamSelect/TeamSelect.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "Liga",
+
+                "out_exit_gamemode1": "Liga"
+
+            }
+
+        },
+        {
+            "name": "Table",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev1/Liga.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",            
+                "out_exit_gamemode1": "Liga"
+                
+            }
+        },
+        {
+            "name": "Progress",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Progress/Progress.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",            
+                "out_exit_gamemode1": "Liga"
+                
+            }
+        },
+        {
+            "name": "SeasonNext",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",            
+                "out_exit_gamemode1": "Liga"
+                
+            }
+        },
+        {
+
+            "name": "Restart",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/Restart/Restart.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "out_exit_gamemode1"
+
+                
+
+            }
+
+        },
+        {
+
+            "name": "Hub",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transferhub/Hub.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "Liga",            
+
+                "out_exit_gamemode1": "Liga"
+
+                
+
+            }
+
+        },
+        {
+
+            "name": "Squad",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Squad/Squad.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "Liga",            
+
+                "out_exit_gamemode1": "Liga"
+
+                
+
+            }
+
+        },        
+        {
+
+
+
+            "name": "Squado",
+
+
+
+            "type": "external",
+
+
+
+            "file": "/Flows/MainFlow/GameModes/Liga/Squad/Squad.nav",
+
+
+
+            "outputs":
+
+
+
+            {
+
+
+
+                "out_exit_gamemode": "Liga",            
+
+
+
+                "out_exit_gamemode1": "Liga"
+
+
+
+                
+
+
+
+            }
+
+
+
+        },        
+        {
+
+
+
+
+
+
+
+            "name": "Myteam",
+
+
+
+
+
+
+
+            "type": "external",
+
+
+
+
+
+
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Myteam/myteam.nav",
+
+
+
+
+
+
+
+            "outputs":
+
+
+
+
+
+
+
+            {
+
+
+
+
+
+
+
+                "out_exit_gamemode": "Liga",            
+
+
+
+
+
+
+
+                "out_exit_gamemode1": "Liga"
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+        },
+
+        {
+
+
+
+            "name": "Transfers",
+
+
+
+            "type": "external",
+
+
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Transfers.nav",
+
+
+
+            "outputs":
+
+
+
+            {
+
+
+
+                "out_exit_gamemode": "Liga",            
+
+
+
+                "out_exit_gamemode1": "Liga"
+
+
+
+                
+
+
+
+            }
+
+
+
+        },
+
+        {
+
+
+
+            "name": "Season",
+
+
+
+            "type": "external",
+
+
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Season/Season.nav",
+
+
+
+            "outputs":
+
+
+
+            {
+
+
+
+                "out_exit_gamemode": "Liga",            
+
+
+
+                "out_exit_gamemode1": "Liga"
+
+
+
+                
+
+
+
+            }
+
+
+
+        },
+
+        {
+
+
+
+            "name": "Office",
+
+
+
+            "type": "external",
+
+
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Office.nav",
+
+
+
+            "outputs":
+
+
+
+            {
+
+
+
+                "out_exit_gamemode": "Liga",            
+
+
+
+                "out_exit_gamemode1": "Liga"
+
+
+
+                
+
+
+
+            }
+
+
+
+        },
+        {
+            "name": "Sim",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Sim/Liga.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",            
+                "out_exit_gamemode1": "Liga"
+                
+            }
+        },
+        {
+            "name": "End",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SeasonEnd/Liga.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",            
+                "out_exit_gamemode1": "Liga"
+                
+            }
+        }
+        
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_advance"
+          }
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },  
+        {
+        "viewname": "act_detailstats",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_detailstats"
+            }
+        }       
+    ],
+    "data":
+    [
+    
+        {
+            "viewname": "bnd_logo_tim_home",
+            "binding": "bnd_logo_tim_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_tim_away",
+            "binding": "bnd_logo_tim_away",
+            "type": "object"
+        },      
+        {
+            "viewname": "bnd_nama_tim_home",
+            "binding": "bnd_nama_tim_home",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_match_difficulty",
+            "binding":  "bnd_match_difficulty",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_nama_tim_away",
+            "binding": "bnd_nama_tim_away",
+            "type": "string"
+        }
+    ]
+}

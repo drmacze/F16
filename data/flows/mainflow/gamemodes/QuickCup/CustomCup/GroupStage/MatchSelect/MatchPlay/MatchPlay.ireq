@@ -1,0 +1,6 @@
+[
+	"/flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/Standings/Standings.lua",
+	"/lua/enums/eventmanager.lua",
+    "/lua/packages/tableutil.lua",
+	"/lua/common/CommonNavVars.lua"
+]

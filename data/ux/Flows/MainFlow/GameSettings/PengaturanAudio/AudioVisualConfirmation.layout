@@ -1,0 +1,59 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+   "commonName": "Overlay",
+    "bindings":
+    [
+        {
+            "property": "title",
+            "binding": "bnd_title"
+        }
+    ],
+    "footer":
+    [
+        {
+            "icon": "$FooterIconNo",
+            "clickAction": "act_cancel",
+            "bindings":
+            [
+                {
+                    "property": "label",
+                    "binding": "bnd_cancel_label"
+                }
+            ]
+        },
+        {
+            "icon": "$FooterIconYes",
+            "clickAction": "act_confirm",
+            "bindings":
+            [
+                {
+                    "property": "label",
+                    "binding": "bnd_confirm_label"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+			"commonName": "Label",
+			"name": "insDescLbl",
+			"x": 25,
+			"y": 20,
+			"width": 560,
+			"multiline": true,
+			"wordWrap": true,
+			"styles": ["TF_LABEL_CENTERED"],
+			"bindings":
+			[
+				{
+					"property": "text",
+					"binding": "bnd_message"
+				}
+			]
+		}
+    ]
+}

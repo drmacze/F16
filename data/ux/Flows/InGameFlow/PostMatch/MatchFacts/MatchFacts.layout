@@ -1,0 +1,190 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+    
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.5,
+            "type": "$BackgroundHitam"
+        },
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 700,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "name": "BagianInfoTim&Skor",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "marginTop": 51,
+                    "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                    "commonName": "TabBar",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 700,
+                    "tabs":
+                    [
+                        {
+                            "selectAction": "act_select_facts",
+                            "height": 45,
+                            "label": "FACTS"
+                        },
+                        {
+                            "selectAction": "act_select_events",
+                            "height": 45,
+                            "label": "EVENTS"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "LogoTimHome",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 70,
+                    "marginLeft": -200,
+                    "scaleX": 0.40,
+                    "scaleY": 0.40,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "LogoTimAway",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 70,
+                    "marginRight": -200,
+                    "scaleX": 0.40,
+                    "scaleY": 0.40,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimHome",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 175,
+                    "marginLeft": -200,
+                    "fontSize": 20,
+                    "forceCaps": true,
+                    "fontColor": "$COLOR_BLACK",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimAway",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 175,
+                    "marginRight": -200,
+                    "fontSize": 20,
+                    "forceCaps": true,
+                    "fontColor": "$COLOR_BLACK",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "SkorPertandingan",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 80,
+                    "fontSize": 60,
+                    "fontColor": "$COLOR_BLACK",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_result",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "SkorAduPinalty",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 150,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_BLACK",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_shootout_result",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Layer",
+                    "name": "MatchFactsTabView",
+                    "marginTop": 210,
+                    "alignV": "FILL",
+                    "alignH": "FILL"
+                }
+            ]
+        }
+
+    ]
+}

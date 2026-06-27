@@ -1,0 +1,21 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "alignV": "FILL",
+    "alignH": "CENTER",
+    "width": 1200,
+    "children":
+    [
+        {
+            "commonName": "NavBar",
+			"alignV": "BOTTOM",
+            "alignH": "FILL",
+            "marginBottom": 15,
+            "marginLeft": 17,
+            "height": 30
+        }
+    ]
+}

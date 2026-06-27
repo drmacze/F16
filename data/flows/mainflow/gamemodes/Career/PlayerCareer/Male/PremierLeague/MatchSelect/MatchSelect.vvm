@@ -1,0 +1,13 @@
+{
+  "dds": [
+    "MatchSelect.dd",
+    "TabActive/Players.dd"
+  ],
+  "vms": [
+    ["lua", "MatchSelect.lua"],
+    ["lua", "TabActive/Players.lua"]
+  ],
+  "views": [
+    ["gfx", { "layout": "MatchSelect.layout" }]
+  ]
+}

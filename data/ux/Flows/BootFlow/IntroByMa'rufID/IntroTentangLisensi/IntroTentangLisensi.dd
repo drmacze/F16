@@ -1,0 +1,13 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_advance"
+            }
+        }
+    ]
+}

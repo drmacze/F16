@@ -1,0 +1,5 @@
+{
+    "dds":   ["GameMenu.dd", "PostmatchMenu.dd", "/flows/mainflow/widgets/cab/CAB.dd", "Animated.dd"],
+    "vms":   [["lua", "GameMenu.lua"], ["lua", "PostmatchMenu.lua"], ["lua", "Animated.lua"]],
+    "views": [["gfx", {"layout": "PostmatchMenu.layout"}]]
+}

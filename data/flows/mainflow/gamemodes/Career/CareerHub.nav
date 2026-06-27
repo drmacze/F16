@@ -1,0 +1,58 @@
+{
+    "name": "CareerHub",
+    "initial":
+    {
+        "targets": ["RedirectCareerHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectCareerHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["CareerHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_player_career",
+                    "targets": ["PlayerCareer"]
+                },
+                {
+                    "event": "evt_manager_career",
+                    "targets": ["ManagerCareer"]
+                }
+
+            ]
+        },
+
+        {
+            "name": "PlayerCareer",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/Male.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CareerHub"
+            }
+        },
+        {
+            "name": "ManagerCareer",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Coach/CoachHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CareerHub"
+            }
+        }
+
+        
+    ]
+}

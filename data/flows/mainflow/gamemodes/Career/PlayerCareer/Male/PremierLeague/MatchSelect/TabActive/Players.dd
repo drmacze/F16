@@ -1,0 +1,167 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+
+        {
+            "viewname": "act_player_select",
+            "actionname": "act_player_select"
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_player_list",
+            "binding":  "bnd_player_list",
+            "type":     "array"
+        },
+        {
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+            "type":"bool"
+            },
+         {
+            "viewname": "bnd_yt_select_visible",
+            "binding":  "bnd_yt_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_fb_select_visible",
+            "binding":  "bnd_fb_select_visible",
+            "type":     "bool"
+          },
+         {
+            "viewname": "bnd_ig_select_visible",
+            "binding":  "bnd_ig_select_visible",
+            "type":     "bool"
+         },
+         {
+            "viewname": "bnd_wa_select_visible",
+            "binding":  "bnd_wa_select_visible",
+            "type":     "bool"
+         },
+         {
+            "viewname": "bnd_tl_select_visible",
+            "binding":  "bnd_tl_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname":"bnd_loading_visible",
+            "binding":"bnd_loading_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_team_crest",
+            "binding":"bnd_team_crest",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_icon_central",
+            "binding":"bnd_icon_central",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_icon_false",
+            "binding":"bnd_icon_false",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_rating_false",
+            "binding":"bnd_rating_false",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_team_name",
+            "binding":"bnd_team_name",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_name",
+            "binding":"bnd_player_name",
+            "type":"string"
+            },
+        {
+            "viewname":"bnd_player_number",
+            "binding":"bnd_player_number",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_avatar",
+            "binding":"bnd_player_avatar",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_ID",
+            "binding":"bnd_player_ID",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_position",
+            "binding":"bnd_player_position",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_rating",
+            "binding":"bnd_player_rating",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_kitnumber",
+            "binding":"bnd_player_kitnumber",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_country",
+            "binding":"bnd_player_country",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_stars",
+            "binding":"bnd_player_stars",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_3d_player",
+            "binding":"bnd_3d_player",
+            "type":"object"
+        },
+        {
+            "viewname":"bnd_player_stat1",
+            "binding":"bnd_player_stat1",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat2",
+            "binding":"bnd_player_stat2",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat3",
+            "binding":"bnd_player_stat3",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat4",
+            "binding":"bnd_player_stat4",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat5",
+            "binding":"bnd_player_stat5",
+            "type":"string"
+        },
+        {
+            "viewname":"bnd_player_stat6",
+            "binding":"bnd_player_stat6",
+            "type":"string"
+        }
+    ]
+}

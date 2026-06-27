@@ -1,0 +1,90 @@
+{
+    "name": "TeamSelect",
+    "states":
+    [
+		{
+            "name": "RedirectTeamSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/TeamSelect/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/TeamSelect/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_team_select",
+                    "targets": ["QuickCupStart"]
+                }
+            ]
+        },
+        {
+            "name": "QuickCupStart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/MatchSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamSelect",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

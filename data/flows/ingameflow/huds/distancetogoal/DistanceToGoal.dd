@@ -1,0 +1,46 @@
+{
+    "actions":
+    [
+    ],
+    "data":
+    [
+        {
+            "viewname":"bnd_nationalization",
+            "binding":"bnd_nationalization",
+			"type":"int"
+        },
+		{
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+			"type":"bool"
+        },
+        {
+            "viewname":"bnd_xg_info_num",
+            "binding":"bnd_xg_info_num",
+			"type":"string"
+        },
+		{
+            "viewname":"bnd_distance_info_num",
+            "binding":"bnd_distance_info_num",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_distance_info_sys",
+            "binding":"bnd_distance_info_sys",
+			"type":"string"
+        },
+		{
+            "viewname": "bnd_distance_info",
+            "binding":  "bnd_distance_info",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+					"DistanceNumber": "string",
+					"DistanceSystem": "string"
+                }
+            }
+        }
+    ]
+}

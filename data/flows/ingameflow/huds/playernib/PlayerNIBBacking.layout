@@ -1,0 +1,31 @@
+{
+    "animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "TUTORIAL_TRANSITION_IN"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "OVERLAY_TRANSITION_OUT"
+				}
+			]
+     }
+	],
+    "commonName": "Asset",
+    "alignV": "TOP",
+    "alignH": "LEFT",
+    "width": 2000,
+    "height": 1000,
+    "marginLeft": 0,
+    "marginTop": 0,
+    "type": "$weatherFog"
+},

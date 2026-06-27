@@ -1,0 +1,57 @@
+{
+    "name": "MenuPlayHub",
+    "onEnter":
+    [
+        ["setTabContext", [1]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuPlayHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+
+        {
+            "event": "evt_menu_home",
+            "targets": ["out_menu_home"]
+        },
+        {
+            "event": "evt_menu_online",
+            "targets": ["out_menu_online"]
+        },
+        {
+            "event": "evt_menu_customize",
+            "targets": ["out_menu_customize"]
+        },
+
+        {
+            "event": "evt_kickoff",
+            "targets": ["out_menuplay_kickoff"]
+        },
+        {
+            "event": "evt_career",
+            "targets": ["out_menuplay_career"]
+        },
+        {
+            "event": "evt_skillgames",
+            "targets": ["out_menuplay_skillgames"]
+        },
+        {
+            "event": "evt_tournament",
+            "targets": ["out_menuplay_tournament"]
+        },
+        {
+            "event": "evt_beapro",
+            "targets": ["out_menuplay_beapro"]
+        },
+        {
+            "event": "evt_bestteamstour",
+            "targets": ["out_menuplay_bestteamstour"]
+        }
+        
+    ]
+}

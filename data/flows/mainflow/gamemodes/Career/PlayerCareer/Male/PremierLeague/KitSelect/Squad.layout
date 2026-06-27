@@ -1,0 +1,2710 @@
+{
+	"commonName": "Panel",
+	"alignH": "FILL",
+	"alignV": "FILL",
+	"name": "insOuterContainer",
+	"animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "SCREEN_TRANSITION_IN"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "SCREEN_TRANSITION_OUT"
+				}
+			]
+		}
+	],
+	"behaviors":
+	[
+		{
+			"commonName": "SquadTeamManagementBehavior",
+      "starting11": "insSquad.insSquadContainer.insSquadLayout",
+      "subsAndReserves": "squadSubsContainer.insItemDock",
+      "actionName": "act_swap_players"
+		},
+		{
+			"commonName": "SquadPlayerComparisonBehavior",
+      "comparisonTargetNames": [
+        "insSquad.insSquadContainer.insSquadLayout",
+        "squadSubsContainer.insItemDock"
+      ],
+      "actionName": "act_compare_players"
+		},
+		{
+			"commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$Si",
+            "actionName": "act_advance",
+            "label": ""
+        },
+		{
+			"commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_advance",
+            "label": ""
+        }
+    ],
+	"style-definitions":
+	{
+		"TF_TEAM_NAME":
+		{
+            "text-format": "fow.style.SquadStyle.TF_FORMATION_NAME",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER"
+		},
+		"TF_TEAM_NAME1":
+		{
+            "fontFace": "$Italic",
+            "fontColor": "$COLOR_WHITE",
+            "fontSize": 80,
+            "textAlignH": "CENTER",
+            "bold": false
+		},
+		"TF_SUBS_REMAINING_LABEL":
+        {
+            "fontTitle": "$FONT_TITLE",
+            "fontSize": 22,
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER"
+        },
+		"TF_TEAM_STATS_LABEL":
+		{
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL",
+            "fontColor": "$COLOR_WHITE"
+        },
+		"TF_COMPARISON_TITLE": 
+       {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_ORANGE",
+			"alpha": 0,
+			"leading": -4,
+			"textAlignH": "CENTER"
+	   },
+		"TF_COMPARISON_LABELS": 
+       {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"textAlignH": "CENTER",
+			"height": 58,
+			"width": 230,
+			"leading": -15,
+			"underline": false,
+			"multiline": true
+		},
+		"TF_COMPARISON_STATS_RED":
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": 29
+		},
+		"TF_COMPARISON_STATS_BLUE_NEUTRAL": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": 29
+		},
+		"TF_COMPARISON_STATS_BLUE_POSITIVE": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"fontColor": "$COLOR_GREEN",
+			"textAlignH": "CENTER",
+			"leading": 29
+		},
+		"TF_COMPARISON_STATS_BLUE_NEGATIVE":
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"fontColor": "$COLOR_LIGHT_RED",
+			"textAlignH": "CENTER",
+			"leading": 29
+	    },
+		"PLAYER_BRONZE_SHORTNAME": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"x": 21,
+			"y": 90,
+			"textAlignH": "CENTER"
+	    },
+		"PLAYER_BRONZE_SMALLRATING": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"x": 80,
+			"y": 63,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_BRONZE_POSITION": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 12,
+			"x": 5,
+			"y": 41,
+			"alpha": 0,
+			"fontColor": "$COLOR_WHITE"
+        },
+		"PLAYER_SILVER_SHORTNAME": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"x": 21,
+			"y": 90,
+			"textAlignH": "CENTER"
+	    },
+		"PLAYER_SILVER_SMALLRATING": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"x": 80,
+			"y": 63,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_SILVER_POSITION": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 12,
+			"x": 5,
+			"y": 41,
+			"alpha": 0,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_GOLD_SHORTNAME": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"x": 21,
+			"y": 90,
+			"textAlignH": "CENTER"
+	    },
+		"PLAYER_GOLD_SMALLRATING": 
+        {
+			"fontFace": "$CruyffSansMedium",
+			"fontSize": 15,
+			"x": 80,
+			"y": 63,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_GOLD_POSITION": 
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 12,
+			"x": 5,
+			"y": 41,
+			"alpha": 0,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$CruyffSansRegular",
+			"fontSize": 15,
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"leading": -4
+	    },
+		"TF_TEAM_STATS":
+		{
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL",
+            "fontColor": "$COLOR_WHITE"
+		}
+	},
+	"children":
+	[	
+		{
+	   	"commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",           
+           "type": "$Bg_Epl"
+        },
+        {             
+            "commonName": "Asset",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 20,
+            "marginLeft": 105,
+            "width": 50,
+            "height": 50,
+            "type": "$LogoManagerMode"         
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 35,
+            "marginLeft": 248,
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$CruyffSansBold",
+            "text": "Team Management"        
+         },
+         {
+            "commonName": "Rectangle",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 35,
+            "marginLeft": 450,
+            "width": 2,
+            "height": 20,
+            "alpha": 0.3,
+            "color": "0xFFFFFF"
+       },
+        {
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 10,
+            "marginLeft": 130,
+            "scaleX": 0.8,
+            "scaleY": 0.8,
+            "icon": "$SimMatchIcon8",
+            "clickAction": "act_"       
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 39,
+            "marginLeft": 473,
+            "fontSize": 15,
+            "fontColor": "$COLOR_WHITE",
+            "fontFace": "$CruyffSansBold",
+            "text": "Squad"           
+        },
+        {
+            "commonName": "LiveTile",
+            "name": "Office",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 28,
+            "marginLeft": 160,
+            "width": 300,
+            "height": 35,
+            "clickAction": "act_tactical",
+            "headline": ["Squad"],
+            "bindings": 
+            [
+                {
+                    "binding": "",
+                    "property": ""
+                }
+            ]   
+     },
+        {
+          "commonName": "Panel",
+          "name": "dataPanel",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "marginTop": 70,
+          "marginLeft": 455,
+          "height": 50,
+          "width": 200,
+          "authoringData": {
+            "expanded": false
+          },
+          "children": [
+            {
+              "commonName": "TeamRating",
+              "name": "teamRating",
+              "width": 190,
+              "attLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "attValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "defLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "defValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "dividersVisible": true,
+              "midLabelStyles": [
+                "TF_TEAM_SELECT_RATING_LABELS"
+              ],
+              "midValueStyles": [
+                "TF_TEAM_SELECT_RATING_VALUES"
+              ],
+              "bindings": [
+                {
+                  "binding": "bnd_team_rating",
+                  "property": "dataProviders"
+                }
+              ]
+            }
+          ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,      
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -16,
+                    "marginLeft": 30,
+                    "width": 50,
+                    "height": 50,
+                    "icon": "$SimMatchIcon13",
+                    "clickAction": "act_advance"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Save"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -16,
+                    "marginLeft": 110,
+                    "width": 50,
+                    "height": 50,
+                    "icon": "$",
+                    "clickAction": "act_advance1"
+                 },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -15,
+                    "marginLeft": 490,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": ""
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 166,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": ""
+                }
+            ]
+        },
+        {
+			"commonName": "Asset",
+            "name": "insPitch",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+			"marginTop": -40,
+			"marginLeft": -240,
+			"width": 680,
+            "height": 370,
+            "type": "$PitchCareer"
+            
+         },
+	 	{
+        	"commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 460,
+            "width": 420,
+            "height": 500,
+            "color": "0x18001A",
+            "alpha": 0,
+           "cornerRaduis": 10
+      
+					},				
+				{
+					"commonName": "Image",
+					"alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -120,
+            "marginLeft": 460,
+					"scaleX": 0.80,
+		            "scaleY": 0.80,
+					"name": "insTeamCrest",
+					"alpha": 0.7,
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_crest",
+							"property": "image"
+						}
+					]
+		},
+		{
+					"commonName": "Label",
+					"alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginTop": 20,
+            "marginLeft": 1020,
+					"width": 330,
+                            "autoScroll":true,
+					"textAlignH": "CENTER",
+					"fontFace": "$CruyffSansExpanded",
+					"fontSize": 30,
+					"alpha": 0.7,
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_name_off",
+							"property": "text"
+						}
+					]
+					},				
+				{
+					"commonName": "StarRating",
+					"alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 5,
+            "marginLeft": 460,
+					"scaleX": 1.9,
+		            "scaleY": 1.9,
+		            "alpha": 0.7,
+					"name": "insStarRating",
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_stars",
+							"property": "stars"
+						}
+					]
+         },
+	 	{
+        	"commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 230,
+            "marginLeft": -240,
+            "width": 900,
+            "height": 130,
+            "color": "0x18001A",
+            "alpha": 1,
+            "cornerRaduis": 10           
+                          },
+	 	{
+        	"commonName": "Image",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 460,
+            "width": 420,
+            "height": 500,
+            "bindings":
+					[
+						{
+							"binding": "bnd_rectangle_swap",
+							"property": "image"
+							},
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+						}
+					]
+		},
+	 	{
+        	"commonName": "Image",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 460,
+            "width": 420,
+            "height": 500,
+            "bindings":
+					[
+						{
+							"binding": "bnd_rectangle_swap",
+							"property": "image"
+							},
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+						}
+					]
+		},
+        {
+            "commonName": "Panel",
+            "name": "insPlayerViewContainer",
+            "height": 72.0,
+            "width": 214.0,
+            "alignH": "RIGHT",
+			"alignV": "CENTER",
+			"marginRight": -111.0,
+			"marginTop": 111.0,
+			"alpha": 0.0,
+            "authoringData":
+            {
+                "visible": false,
+                "expanded": false
+            },
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "name": "subPanelBG1",
+                    "alignV": "CENTER",
+                    "height": 68.0,
+                    "width": 214.0,
+                    "alpha": 0.3,
+                    "styles":
+                    [
+                        "SubPanel"
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insItemViewCBLabel",
+                    "marginTop": 11.0,
+                    "width": 214.0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_view_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "SquadInfoLabel"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "insItemViewsCB",
+                    "height": 33.0,
+                    "marginTop": 34.0,
+                    "width": 214.0,
+                    "arrowType": "blue_small",
+                    "arrowYOffset": -10.0,
+                    "clickSFX": "act_change_squad_player_view",
+                    "hasArrows": true,
+                    "isCircular": true,
+                    "itemStyleName": "SquadToggleInfo",
+                    "itemType": "IconWithLabel",
+                    "toggleAction":
+                    {
+                        "action": "act_change",
+                        "binding": "bnd_item_view_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_item_view_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        },               
+        {
+			"commonName": "Panel",
+			"alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -200,
+            "marginLeft": 340,
+			"width": 230,
+			"name": "insTeamStats",
+			"children":
+			[
+				{
+					"commonName": "Label",
+					"x": 0.0,
+					"y": 0.0,
+					"width": 230,
+					"marginTop": 130,
+					"marginLeft": -5,
+					"height": 150,
+					"textAlignH": "CENTER",
+					"alpha": 1,
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_nameh",
+							"property": "text"
+						}
+					],
+					"styles":
+					[
+						"TF_TEAM_STATS_LABEL"
+					]
+				},				
+				{
+					"commonName": "Label",
+					"marginTop": 95,
+					"marginLeft": -3,
+					"textAlignH": "CENTER",
+					"alignH": "FILL",
+					"x": 0.0,
+					"y": 0,
+					"alpha": 0.5,
+					"fontFace": "$CruyffSansLight",
+			        "fontSize": 18,
+			        "fontColor": "$COLOR_WHITE",
+					"name": "insRatingLabel",
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_ratingv_label",
+							"property": "text"
+						}
+					
+					]
+		        },
+				{
+					"commonName": "DragToggle",
+					"itemStyleName": "SquadToggleInfo",
+					"itemType": "Label",
+					"itemStyleName": "TF_SUBS_REMAINING_LABEL",
+					"toggleAction":
+					{
+						"action": "act_change",
+						"binding": "bnd_formation_index"
+					},
+					"x": 800,
+					"y": 240,
+					"marginTop": 160.0,
+					"marginLeft": -2,
+					"width": 220,
+					"height": 33,
+					"alpha": 0,
+					"alignH": "CENTER",
+					"name": "insFormationToggle",
+                    "arrowType": "blue_small",
+					"bindings":
+					[
+						{
+							"binding": "bnd_formation_lisht",
+							"property": "dataProviders"
+						}
+					],
+	                "styles":
+		            [
+						"TF_COMPARISON_STATS_BLUE_POSITIVE"
+		            ]
+				},
+                {
+                    "commonName": "Label",                    
+                    "alignH": "FILL",
+                    "marginTop": 130,
+					"marginLeft": 50,
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansMedium",
+                    "text": ""
+			    },				
+				{
+					"commonName": "StarRating",
+					"x": 0.0,
+					"y": 0.0,
+					"marginTop": 70,
+					"marginLeft": 64,
+					"scaleX": 1.2,
+		            "scaleY": 1.2,
+		            "alpha": 0,
+					"name": "insStarRating",
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_ratingu",
+							"property": "stars"
+						}
+					]
+			    },				
+				{
+					"commonName": "Image",
+					"marginTop": -5.0,
+					"marginLeft": 77,
+					"x": 0,
+					"y": 0,
+					"scaleX": 0.28,
+		            "scaleY": 0.28,
+					"name": "insTeamCrest",
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_crejst",
+							"property": "image"
+						}
+					]
+		        },				
+				{
+					"commonName": "Image",
+					"marginTop": 150.0,
+					"marginLeft": 55,
+					"x": 0,
+					"y": 0,
+					"width": 210,
+                    "height": 210,
+					"name": "insTeamMan",
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_mnan",
+							"property": "image"
+						}
+					]
+				}				
+			]
+		},		
+		{
+			"commonName": "Label",
+			"alignV": "TOP",
+			"marginLeft": -140,
+			"marginTop": 70,
+			"alpha": 0,
+			"name": "insSquadName",
+			"bindings":
+			[
+				{
+					"binding": "bnd_panel_title",
+					"property": "text"
+				}
+			],
+			"styles":
+			[
+				"TF_PANEL_HEADER_WHITE"
+			]
+		},		
+		{
+			"commonName": "Asset",
+			"type": "$HubFooteyrDivider",
+			"alignV": "BOTTOM",
+			"alignH": "FILL",
+			"x": 10.0,
+			"y": 693.0,
+			"name": "footerBackground"
+		},
+        {
+            "commonName": "Panel",
+            "name": "InfoPlayer",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": -100,
+            "marginTop": 90,
+            "width": 350,
+            "height": 340,
+            "bindings": [],
+            "children": [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0xFFFFFF",
+                    "alpha": 0
+                },
+                {
+                    "commonName": "PlayerComparison",
+                    "visible": true,
+                    "width": 350,
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "name": "insPlayerComparison",
+                    "bindings": [
+                        {
+                            "binding": "",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "",
+                            "property": "playerLabel"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "InfoPlayerStatsActive",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 130,
+            "marginTop": -30,
+            "width": 280,
+            "height": 300,
+            "children": 
+            [
+
+        {
+            "commonName": "Panel",
+            "name": "InfoPlayer1",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginRight": 0,
+            "marginTop": 10,
+            "width": 150,
+            "height": 300,
+            "children": 
+            [
+                {
+                    "commonName": "Image",
+                    "name": "imgFramePlayer",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 105,
+                    "height": 105,
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "bindings": [
+                        {
+                            "binding": "bnd_swap1_off_active",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgSubsPlayer",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 135,
+                    "height": 70,
+                    "marginTop": -60,
+                    "marginRight": -55,
+                    "bindings": [
+                        {
+                            "binding": "bnd_swap3_active",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+               },
+                {
+                    "commonName": "Image",
+                    "name": "Divider",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 375,
+                    "height": 5,
+                    "marginTop": 16,
+                    "marginRight": -178,
+                    "alpha": 0.3,
+                    "bindings": [
+                        {
+                            "binding": "bnd_divider_swap",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Divider",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 375,
+                    "height": 5,
+                    "marginTop": 16,
+                    "marginRight": -178,
+                    "alpha": 0.3,
+                    "bindings": [
+                        {
+                            "binding": "bnd_divider_swap",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                    },
+                {
+                    "commonName": "Asset",
+                    "name": "HomeCrest",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 120,
+                    "height": 500,
+                    "marginTop": -5,
+                    "marginRight": -50,
+              
+                    "type": "$UserPlateDividerLinte"
+                  },
+                {
+                    "commonName": "Image",
+                    "name": "Divider",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 130,
+                    "height": 520,
+                    "marginTop": -19,
+                    "marginRight": -55,
+                    "alpha": 0.3,
+                    "bindings": [
+                        {
+                            "binding": "bnd_vertical_swap",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                 },
+                {
+                    "commonName": "Image",
+                    "name": "Divider",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 375,
+                    "height": 5,
+                    "marginTop": 303,
+                    "marginRight": -178,
+                    "alpha": 0.3,
+                    "bindings": [
+                        {
+                            "binding": "bnd_divider_swap",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Divider",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "width": 363,
+                    "height": 88,
+                    "marginTop": 335,
+                    "marginRight": -173,
+                    "bindings": [
+                        {
+                            "binding": "bnd_player_fitness_icons",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 82,
+                    "height": 82,
+                    "marginTop": -65,
+                    "marginRight": 53,
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_avatar",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 32,
+                    "height": 32,
+                    "marginTop": -27,
+                    "marginRight": -17,
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_flags",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                    },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveName",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+                    "marginTop": -19,
+                    "marginLeft": 112,
+                    "fontSize": 20,
+                    "width": 210,
+                            "autoScroll":true,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$CruyffSansExpanded",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_name",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                    },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveRating",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -57,
+                    "marginRight": -15,
+                    "fontSize": 27,
+                    "fontFace": "$CruyffSansLight",
+                    "fontColor": "$COLOR_LIGHT_GREEN",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_rating",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveRating",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+                    "marginTop": -56,
+                    "marginLeft": 117,
+                    "fontSize": 19,
+                    "alpha": 0.7,
+                    "fontFace": "$CruyffSansLight",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_position",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 82,
+                    "height": 82,
+                    "marginTop": -65,
+                    "marginRight": 53,
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_avatar",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 124.9,
+                    "marginRight": 45,
+                    "width": 12.5,
+                    "height": 12.5,
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_fitness_icon",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveName",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 124,
+                    "marginRight": 65.5,
+                    "fontSize": 15,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_fitness",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_active_player_fitness_color",
+                            "property": "color"                        
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveName",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 89,
+                    "marginRight": 55,
+                    "fontSize": 15,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_name",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveNations",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 159.5,
+                    "marginRight": 55,
+                    "fontSize": 15,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_nations",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveRating",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginRight": 110,
+                    "fontSize": 27,
+                    "fontFace": "$CruyffSansLight",
+                    "fontColor": "$COLOR_LIGHT_GREEN",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_rating",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                    },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveRating",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginRight": 110,
+                    "fontSize": 27,
+                    "fontFace": "$CruyffSansLight",
+                    "fontColor": "$COLOR_LIGHT_GREEN",
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_rating",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel1",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 90,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label1",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel2",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 125,
+            "marginLeft": 65,
+            "fontSize": 14,
+                 "fontFace": "$CruyffSansRegular",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label2",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel3",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 160,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label3",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel4",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 195,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label4",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel5",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 230,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label5",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel6",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 265,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label6",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 300,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label7",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 335,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label8",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 370,
+            "marginLeft": 65,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label9",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 91,
+                    "marginLeft": -15,
+                    "width": 12.5,
+                    "height": 12.5,
+                    "bindings": [
+                        {
+                            "binding": "bnd_active_player_fitness_icon",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblActiveName",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+                    "marginTop": 90,
+                    "marginLeft": 70,
+                    "fontSize": 15,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_player_fitness",
+                            "property": "text"
+                                      },
+                        {
+                            "binding": "bnd_player_fitness_color",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel1",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 90,
+            "marginLeft": -43,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label2",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+                {
+                    "commonName": "Label",
+                    "name": "lblPassivePos",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+                    "marginTop": 125,
+                    "marginLeft": 70,
+                    "fontSize": 15,
+                                     "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_player_sharpness",
+                            "property": "text"                        
+                        },
+                        {
+                            "binding": "bnd_player_sharpness_color",
+                            "property": "color"                        
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                    },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 122.2,
+                    "marginLeft": -15,
+                    "width": 14.5,
+                    "height": 16.5,
+                    "bindings": [
+                        {
+                            "binding": "bnd_player_sharpness_icons",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_active_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 125,
+            "marginLeft": -43,
+            "fontSize": 14,
+                 "fontFace": "$CruyffSansRegular",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label15",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel3",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 160,
+            "marginLeft": -43,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label13",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 195,
+            "marginLeft": 55,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_player_focus",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+         },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel4",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 195,
+            "marginLeft": -43,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label14",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel5",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 230,
+            "marginLeft": -43,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label12",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 265,
+            "marginLeft": -43,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label11",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 330,
+            "marginLeft": -43,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label10",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabelVIP",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 40,
+            "marginLeft": 65,
+            "fontSize": 18,
+            "fontColor": "0xFFFFFF",
+            "fontFace": "$CruyffSansExtended",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_info",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoLabelVIP",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 40,
+            "marginLeft": 65,
+            "fontSize": 18,
+            "fontColor": "0xFFFFFF",
+            "fontFace": "$CruyffSansExtended",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_notification",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats1",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 195,
+            "marginLeft": -55,
+            "fontSize": 15,    
+            "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_1",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_stat_color_1",
+                    "property": "color"
+                },               
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+            
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 160,
+            "marginLeft": 55,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_player_role",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 230,
+            "marginLeft": -55,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_2",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_stat_color_2",
+                    "property": "color"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 230,
+            "marginLeft": 55,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_player_positioning",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats3",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 265,
+            "marginLeft": -55,
+            "fontSize": 15,
+      "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_3",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_stat_color_3",
+                    "property": "color"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats3",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 265,
+            "marginLeft": -10,
+            "fontSize": 15,
+      "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_player_number",
+                    "property": "text"             
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats4",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 300,
+            "marginLeft": -55,
+            "fontSize": 15,
+         "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_4",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_stat_color_4",
+                    "property": "color"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats5",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 335,
+            "marginLeft": -55,
+            "fontSize": 15,
+  "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_5",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_stat_color_5",
+                    "property": "color"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 90,
+            "marginLeft": 160,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label4",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 125,
+            "marginLeft": 160,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label5",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 160,
+            "marginLeft": 160,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label6",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 195,
+            "marginLeft": 160,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label7",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 230,
+            "marginLeft": 160,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label8",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoLabel7",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 265,
+            "marginLeft": 160,
+            "fontSize": 14,
+            "fontColor": "$COLOR_LIGHT_GRAY",
+                       "fontFace": "$CruyffSansRegular",
+            "bindings": [
+                {
+                    "binding": "bnd_swap_label9",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 90,
+            "marginLeft": 258,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_1",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 125,
+            "marginLeft": 258,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_2",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 160,
+            "marginLeft": 258,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_3",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 195,
+            "marginLeft": 258,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_4",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 230,
+            "marginLeft": 258,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_5",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+            },
+        {
+            "commonName": "Label",
+            "name": "InfoStats2",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+                    "textAlignH": "LEFT",
+            "marginTop": 265,
+            "marginLeft": 258,
+            "fontSize": 15,
+   "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_6",
+                    "property": "text"
+                
+                },
+                {
+                    "binding": "bnd_active_player_visible",
+                    "property": "visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "InfoStats6",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 370,
+            "marginLeft": -55,
+            "fontSize": 15,
+       "fontFace": "$CruyffSansMedium",
+            "bindings": [
+                {
+                    "binding": "bnd_active_stat_6",
+                    "property": "text"
+                },
+                {
+                    "binding": "bnd_active_stat_color_6",
+                    "property": "color"
+                },
+                {
+                    "binding": "bnd_passive_player_visible",
+                    "property": "visible"
+                }
+            ]
+        }
+    ]
+},
+        {
+            "commonName": "Panel",
+            "name": "InfoPlayer2",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginLeft": 0,
+            "marginTop": 10,
+            "width": 150,
+            "height": 300,
+            "children": 
+            [
+                {
+                    "commonName": "Image",
+                    "name": "imgFramePlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 105,
+                    "height": 105,
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "bindings": [
+                        {
+                            "binding": "bnd_swap2_off_passive",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 82,
+                    "height": 82,
+                    "marginTop": -65,
+                    "marginLeft": 53,
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_player_avatar",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "imgAvatarPlayer2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 124.9,
+                    "marginLeft": 65.5,
+                    "width": 12.5,
+                    "height": 12.5,
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_player_fitness_icon",
+                            "property": "image"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblPassivePos",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 124,
+                    "marginLeft": 44.5,
+                    "fontSize": 15,
+                                     "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_player_fitness",
+                            "property": "text"                        
+                        },
+                        {
+                            "binding": "bnd_passive_player_fitness_color",
+                            "property": "color"                        
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblPassiveName",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 89,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+                    "fontColor": "0xFFFFFF",
+                                        "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_player_name",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblPassiveNations",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 160,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_player_nations",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "lblPassiveRating",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -15,
+                    "marginLeft": 110,
+                    "fontSize": 25,
+                    "fontFace": "$CruyffSansLight",
+                    "fontColor": "$COLOR_LIGHT_GREEN",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_player_rating",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "InfoStatsPassive1",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 196,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+"fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_stat_1",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_stat_color_1",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "InfoStatsPassive2",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 231,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+"fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_stat_2",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_stat_color_2",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "InfoStatsPassive3",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 266,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+"fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_stat_3",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_stat_color_3",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "InfoStatsPassive4",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 301,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+"fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_stat_4",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_stat_color_4",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "InfoStatsPassive5",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 336,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+"fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_stat_5",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_stat_color_5",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "InfoStatsPassive6",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 371,
+                    "marginLeft": 55,
+                    "fontSize": 15,
+"fontFace": "$CruyffSansMedium",
+                    "bindings": [
+                        {
+                            "binding": "bnd_passive_stat_6",
+                            "property": "text"
+                        },
+                        {
+                            "binding": "bnd_passive_stat_color_6",
+                            "property": "color"
+                        },
+                        {
+                            "binding": "bnd_passive_player_visible",
+                            "property": "visible"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+		},
+    {
+      "commonName": "Panel",
+      "name": "insSquad",
+      "alignH": "FILL",
+      "alignV": "CENTER",
+      "height": 490,
+      "marginTop": -20,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "insSquadContainer",
+          "alignH": "CENTER",
+          "alignV": "CENTER",
+          "height": 490,
+          "scaleX": 0.76,
+                    "scaleY": 0.76,
+          "children": [
+            
+            {
+              "commonName": "SquadLayout",
+              "name": "insSquadLayout",
+              "alignH": "CENTER",
+              "alignV": "CENTER",
+              "marginTop": -60,
+					"marginLeft": -320,
+              "exchangeTargetNames": [
+                "squadSubsContainer.insItemDock"
+              ],
+              "size": 0,
+              "itemView": 1,
+              "highlightable": true,
+              "preserveWidth": true,
+              "bindings": [
+                {
+                  "binding": "bnd_context_menu",
+                  "property": "contextMenuEnabled"
+                },
+                {
+                  "binding": "bnd_item_view",
+                  "property": "itemView"
+                },
+                {
+                  "binding": "bnd_formation",
+                  "property": "formation"
+                },
+                {
+                  "binding": "bnd_enable_item_interaction",
+                  "property": "resetItemInteraction"
+                },
+                {
+                  "binding": "bnd_starting_11",
+                  "property": "starting11"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "squadSubsContainer",
+      "alignH": "CENTER",
+      "alignV": "BOTTOM",
+      "marginBottom": 20,
+      "width": 1100,
+      "alpha": 1,
+      "children": [
+        {
+          "commonName": "ItemDock",
+          "name": "insItemDock",
+          "alignH": "FILL",
+          "alignV": "CENTER",
+          "marginBottom": 70,
+          "marginLeft": -140,
+          "displayWidth": "FILL",
+          "height": 60,
+          "itemPadding": 5,
+          "size": 0,
+          "itemView": 1,
+          "scrollable": true,
+          "draggable": true,
+          "highlightable": true,
+          "mouseInteractive": true,
+          "itemClickAction": "act_consumable_highlight",
+          "selectedBg": "$GenericWhiteBG_BlueEdge",
+          "loadConsumablesContext": true,
+          "autoHide": false,
+          "contextMenuEnabled": true,
+          "displayType": "SUBS_AND_RES",
+          "bindings": [
+            {
+              "binding": "bnd_subs_and_res",
+              "property": "dataProviders"
+            
+            }
+          ]
+				}
+			]
+		},		
+		{
+			"commonName": "Label",
+			"marginTop": 150,
+			"marginLeft": 0,
+			"textAlignH": "CENTER",
+			"alignH": "LEFT",
+			"alignV": "CENTER",			
+			"alpha": 0,
+			"name": "insFormationLabel",
+			"bindings":
+			[
+				{
+					"binding": "bnd_formation_label",
+					"property": "text"
+				}
+			],
+			"styles":
+			[
+				"TF_TEAM_STATS_LABEL_MOD"
+			]
+       
+		},		
+		{
+			"commonName": "Group",
+			"marginTop": 570,
+			"marginLeft": 180,
+			"name": "insFormation",
+			"children":
+			[
+				{
+					"commonName": "VisualPanel",
+					"width": 230,
+					"height": 40.0,
+					"alignH": "RIGHT",
+					"name": "insFormationBackground",
+					"alpha": 0.45,
+					"bindings":
+					[
+						{
+							"binding": "",
+							"property": "title"
+						}
+					]
+				}				
+			]
+		}		
+	]
+}

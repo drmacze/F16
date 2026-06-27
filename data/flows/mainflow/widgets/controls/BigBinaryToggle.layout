@@ -1,0 +1,94 @@
+{   
+	"name":"BigBinaryToggleRoot",
+    "behaviors":
+    [
+         {
+             "commonName": 	"BigBinaryToggleBehavior",
+             "name":		"bigBinaryToggleBehavior"
+         }
+    ],
+	"propertyMap":
+	{
+		"onLabel":			"bigBinaryToggleBehavior.onLabel",
+		"onSelectedIcon":	"on.selectedLabel.icon",
+		"onUnselectedIcon":	"on.unselectedLabel.icon",
+		"onAction": 		"off.onButton.clickAction",
+		"offLabel":			"bigBinaryToggleBehavior.offLabel",
+		"offSelectedIcon":	"off.selectedLabel.icon",
+		"offUnselectedIcon":"off.unselectedLabel.icon",
+		"offAction": 		"on.offButton.clickAction",
+		"isOn":				"bigBinaryToggleBehavior.isOn"
+	},
+	"children":
+		[
+			{
+				"commonName":"Group",
+				"name":"off",
+				"children":
+					[
+						{
+							"commonName": "Image",
+							"name":"background",
+		                    "image": "$CONTROL_SELECT_CONTROLLER"
+						},
+		                {
+		                    "commonName": "IconWithLabel",
+		                    "name":       "selectedLabel",
+		                    "x":          403,
+		                    "y":          25,
+               				"center": true,
+                			"textStyles": ["TF_LABEL_BIG_BINARY_TOGGLE_BLACK"]
+		                },
+		                {
+		                    "commonName": "IconWithLabel",
+		                    "name":       "unselectedLabel",
+		                    "x":          130,
+		                    "y":          25,
+               				"center": true,
+                			"textStyles": ["TF_LABEL_BIG_BINARY_TOGGLE_WHITE"]
+		                },
+						{
+							"commonName": "fow.base.BaseButton",
+							"name": "onButton",
+		                    "x":          269,
+							"height": 53,
+							"width": 269
+						}
+					]
+			},
+			{
+				"commonName":"Group",
+				"name":"on",
+				"children":
+					[
+						{
+							"commonName": "Image",
+							"name":"background",
+		                    "image": "$CONTROL_SELECT_TOUCH"
+						},
+		                {
+		                    "commonName": "IconWithLabel",
+		                    "name":       "selectedLabel",
+		                    "x":          130,
+		                    "y":          25,
+               				"center": true,
+                			"textStyles": ["TF_LABEL_BIG_BINARY_TOGGLE_BLACK"]
+		                },
+		                {
+		                    "commonName": "IconWithLabel",
+		                    "name":       "unselectedLabel",
+		                    "x":          403,
+		                    "y":          25,
+               				"center": true,
+                			"textStyles": ["TF_LABEL_BIG_BINARY_TOGGLE_WHITE"]
+		                },
+						{
+							"commonName": "fow.base.BaseButton",
+							"name": "offButton",
+							"height": 53,
+							"width": 269
+						}
+					]
+			}
+		]
+}

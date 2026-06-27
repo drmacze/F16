@@ -1,0 +1,110 @@
+{
+  "actions": [],
+  "data": [
+    {
+      "viewname": "bnd_animate_count0",
+      "binding": "bnd_animate_count0",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count1",
+      "binding": "bnd_animate_count1",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count2",
+      "binding": "bnd_animate_count2",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count3",
+      "binding": "bnd_animate_count3",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count4",
+      "binding": "bnd_animate_count4",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count5",
+      "binding": "bnd_animate_count5",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count6",
+      "binding": "bnd_animate_count6",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count7",
+      "binding": "bnd_animate_count7",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count8",
+      "binding": "bnd_animate_count8",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count9",
+      "binding": "bnd_animate_count9",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_animate_count10",
+      "binding": "bnd_animate_count10",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel1_visible",
+      "binding": "bnd_panel1_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel2_visible",
+      "binding": "bnd_panel2_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel3_visible",
+      "binding": "bnd_panel3_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel4_visible",
+      "binding": "bnd_panel4_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel5_visible",
+      "binding": "bnd_panel5_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel6_visible",
+      "binding": "bnd_panel6_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel7_visible",
+      "binding": "bnd_panel7_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel8_visible",
+      "binding": "bnd_panel8_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel9_visible",
+      "binding": "bnd_panel9_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_panel10_visible",
+      "binding": "bnd_panel10_visible",
+      "type": "bool"
+    }
+  ]
+}

@@ -1,0 +1,1271 @@
+{
+    "children":
+    [ 
+       {
+
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "x": -220.0,
+            "y": 60.0,
+            "width": 1300,
+            "scaleX": 1.0,
+            "scaleY": 0.90,
+            "marginBottom": 0,
+            "marginLeft": 0,
+            "width": 1500,
+            "height": 750,
+            "type": "$BgmatchgadePerfomance"
+         },
+          {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 190,
+                            "scaleX": 9.13,
+                            "scaleY": 9.13,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "x": -220.0,
+            "y": 60.0,
+            "width": 1300,
+            "scaleX": 1.0,
+            "scaleY": 0.90,
+            "marginBottom": 0,
+            "marginLeft": 0,
+            "width": 1500,
+            "height": 750,
+            "alpha": 0.8,
+            "type": "$Matchgrade8"
+            },
+            {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "x": -220.0,
+            "y": 60.0,
+            "width": 1300,
+            "scaleX": 1.0,
+            "scaleY": 0.90,
+            "marginBottom": 0,
+            "marginLeft": 0,
+            "width": 1500,
+            "height": 750,      
+            "type": "$Matchgrade9"
+            },
+			    {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 1.90,
+                    "scaleY": 1.85,
+                    "x": -110.0,
+                    "y": 140.0,          
+                    "type": "$Matchgrade1"
+                    },
+   			     {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 400,
+                    "width": 300,
+                    "x": 350.0,
+                    "y": 230.0,
+                    "type": "$Matchgrade2"
+                    },
+            
+                     {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 1.90,
+                    "scaleY": 3.20,
+                    "x": 780.0,
+                    "y": 30.0,
+                    "alpha": 0.6,
+                    "type": "$Matchgrade6"
+                    },
+     			    {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 1.5,
+                    "scaleY": 1.45,
+                    "x": 370.0,
+                    "y": 240.0,
+                    "type": "$Matchgrade11"
+                    },
+                    {
+                    "commonName": "Asset",
+                    "name": "EventIcon",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "x": 175.0,
+                    "y": 155.0,
+                    "width": 75,
+                    "height": 75,
+                    "alpha": 0.5,
+                    "type": "$Matchgrade3"
+                    },
+     			    {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 1.90,
+                    "scaleY": 1.85,
+                    "x": -93.0,
+                    "y": 140.0,
+                    "alpha": 0.6,
+                    "type": "$Matchgrade6"
+                    },
+      			    {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 1.90,
+                    "scaleY": 1.85,
+                    "x": -108.0,
+                    "y": 140.0,          
+                    "type": "$Matchgrade7"
+                    },
+                    {
+            "commonName": "VerticalList",
+            "name": "matchEventsHome",
+            "x": 970.0,
+            "y": 200.0,
+            "displayRange": 1,
+            "row": "MatchGradeARowHome",
+            "rowHeight": 70.0,
+            "rowWidth": 522.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+            },
+            {
+           "commonName": "VerticalList",
+            "name": "matchEventsHome",
+            "x": 1030.0,
+            "y": 200.0,
+            "displayRange": 1,
+            "row": "MatchGradeCRowHome",
+            "rowHeight": 70.0,
+            "rowWidth": 522.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+            },
+            {
+            "commonName": "VerticalList",
+            "name": "matchEventsHome",
+            "x": 950.0,
+            "y": 80.0,
+            "displayRange": 1,
+            "row": "MatchGradeDRowHome",
+            "rowHeight": 70.0,
+            "rowWidth": 522.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list2",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "matchGradeBHome",
+            "x": -190.0,
+            "y": 278.0,
+            "displayRange": 8,
+            "row": "MatchGradeBRowHome",
+            "rowHeight": 43.4,
+            "rowWidth": 472.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+            },
+			    {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 1.90,
+                    "scaleY": 1.85,
+                     "x": -110.0,
+                     "y": 140.0,
+                    "type": "$Matchgrade4"
+            },
+            {
+            "commonName": "VerticalList",
+            "name": "matchGradeBHome",
+            "x": -190.0,
+            "y": 278.0,
+            "displayRange": 1,
+            "row": "MatchGradeRowAway",
+            "rowHeight": 43.4,
+            "rowWidth": 472.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "matchGradeHome",
+            "x": -130.0,
+            "y": 118.0,
+            "displayRange": 1,
+            "row": "MatchGradeRowHome",
+            "rowHeight": 150.0,
+            "rowWidth": 422.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "matchGradeAway",
+            "x": 50000.0,
+            "y": 150.0,
+            "displayRange": 4,
+            "row": "MatchGradeRowAway",
+            "rowHeight": 70.0,
+            "rowWidth": 422.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_away_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+            },
+            {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 190,
+                            "scaleX": 0.13,
+                            "scaleY": 0.13,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+            {
+            "commonName": "VerticalList",
+            "name": "matchFacts",
+            "alignH": "CENTER",
+            "height": 150.0,
+            "marginTop": -405.0,
+            "width": 500.0,
+            "x": 750.0,
+            "y": 260.0,
+            "displayRange": 11,
+            "row": "MatchGradeRow",
+            "rowHeight": 33.0,
+            "rowWidth": 400.0,
+            "useAlternating": false,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_match_facts",
+                    "property": "dataProviders"
+                }
+            ]
+            },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 428.0,
+                    "y": 635.0,
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "Overall Position"
+            },
+            {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 771.0,
+                    "y": 568.0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "Offsides"
+            },
+            {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 771.0,
+                    "y": 603.0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "Fouls Committed"                    
+            },
+            {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 1044.0,
+                    "y": 568.0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "0"
+            },
+            {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 1107.0,
+                    "y": 568.0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "1"
+            },
+            {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 1044.0,
+                    "y": 603.0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "4"
+            },
+            {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 1106.0,
+                    "y": 603.0,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "3"
+                    },        
+                    {
+            "commonName": "TabBar",
+            "name": "selectionTabBar",
+            "x": -50.0,
+            "y": 4000.0,
+            "width": 1100,
+            "scaleX": 0.9,
+            "scaleY": 0.9,
+            "height": 20.0,
+            "tabs":
+                   [
+                       {
+                        "label": "PLAY MATCH"
+                       },
+                       {
+                       "label": "SIM MATCH"
+                       },
+                       {
+                       "label": "PLAY HIGHLIGHTS"
+                       },
+                       {
+                       "label": "TEAM MANAGEMENT"
+                       }, 
+                       {
+                           "label": "CUSTOMISE",
+                           "clickAction": "act_exit"
+                       }
+                   ]
+                   },
+        {
+            "commonName": "Image",
+            "name": "LogoTimHome",
+            "scaleX": 0.55,
+            "scaleY": 0.55,
+            "x": 200,
+            "y": 105,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_home_team_crest",
+                  "property": "image"
+               }
+            ]
+            },
+        {
+            "commonName": "Image",
+            "name": "LogoTimHome",
+            "scaleX": 0.55,
+            "scaleY": 0.55,
+            "x": 150,
+            "y": 205,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_home_team_crest",
+                  "property": "image"
+               }
+            ]
+            },
+                       {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 190,
+                            "scaleX": 0.13,
+                            "scaleY": 0.13,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+           {
+                          "commonName": "Image",
+                          "name": "LogoTimHome",
+                          "x": 420.0,
+            "y": 265.0,
+                          "scaleY": 0.50,
+                          "scaleX": 0.50,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_logo_tim_home",
+                                "property": "image"
+                             }
+                          ]
+                       },
+
+           {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+				            "alignV": "CENTER",
+                            "x": 230,
+            "y": 405,                                                
+                            "alpha": 0.9,
+                            "fontSize": 17,
+                            "textAlignH": "CENTER",
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",                        
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_nama_tim_home",
+                                    "property": "text"
+                                }
+                            ]
+                            },
+                        {
+                            "commonName": "Image",
+                            
+                            "width":45,
+                            "height": 45,
+                            "x": 450,
+            "y": 65,
+                            "bindings":[
+                            {
+                                "binding": "bnd_home_team_crest",
+                                "property": "image"
+                             }
+                           ]
+         },
+         {
+            "commonName": "Label",
+            "name": "NamaTimHome",
+            "fontSize": 30,
+            "fontFace": "$DINPro-CondMedium",
+            "forceCaps": true,
+            "x": 12000,
+            "y": 63,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_team_label",
+                  "property": "text"
+               }
+            ]
+         },
+         {
+            "commonName": "Image",
+            "name": "LogoTimAway",
+            "scaleX": 0.65,
+            "scaleY": 0.65,
+            "x": 120.0,
+            "y": 365.0,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_away_team_crest",
+                  "property": "image"
+               }
+            ]
+         },
+         {
+            "commonName": "Label",
+            "name": "NamaTimAway",
+            "fontSize": 30,
+            "fontFace": "$CruyffSansRegular",
+            "forceCaps": true,
+            "x": 4500,
+            "y": 65,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_number_label",
+                  "property": "text"
+               }
+            ]
+            },
+         {
+            "commonName": "Label",
+            "name": "NamaTimHome",
+            "fontSize": 30,
+            "fontFace": "$CruyffSansRegular",
+            "forceCaps": true,
+            "x": 320,
+            "y": 205,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_nama_tim_home",
+                  "property": "text"
+               }
+            ]
+            },
+         {
+            "commonName": "Label",
+            "name": "NamaTimAway",
+            "fontSize": 30,
+            "fontFace": "$CruyffSansRegular",
+            "forceCaps": true,
+            "x": 250,
+            "y": 205,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_away_team_name",
+                  "property": "text"
+               }
+            ]
+            },
+         {
+            "commonName": "Label",
+            "name": "NamaTimAway",
+            "fontSize": 30,
+            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+            "forceCaps": true,
+            "x": 6500,
+            "y": 95,
+            "bindings":
+            [
+               {
+                  "binding": "bnd_player_label",
+                  "property": "text"
+               }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "y": -20,
+            "x": 360,
+            "fontSize": 25,
+			"fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+		    "text": "PLAYER GOAL SCORED"
+		},
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -150.0,
+                    "y": 85.0,
+                    "fontSize": 30,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "Player Performance"
+                    },
+                {
+                    "commonName": "GenericButton",
+                    "x": -178.0,
+                    "y": 169.0,
+                    "width": 1100,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIcon6",
+                    "clickAction": "act_"
+                    },
+                {
+                    "commonName": "GenericButton",
+                    "x": 507.0,
+                    "y": 170.0,
+                    "width": 1100,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIcon7",
+                    "clickAction": "act_"
+                    },
+                {
+                    "commonName": "GenericButton",
+                    "x": 450.0,
+                    "y": 109.0,
+                    "width": 1100,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIcon81",
+                    "clickAction": "act_"
+                    },
+                {
+                    "commonName": "GenericButton",
+                    "x": 490.0,
+                    "y": 109.0,
+                    "width": 1100,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIcon91",
+                    "clickAction": "act_"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 320.0,
+                    "y": 135.0,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 420.0,
+                    "y": 135.0,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 520.0,
+                    "y": 135.0,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 620.0,
+                    "y": 135.0,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 720.0,
+                    "y": 135.0,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 820.0,
+                    "y": 135.0,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+		},
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -105.0,
+                    "y": 661.0,
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "Back"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -100.0,
+                    "y": 247.0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "POS"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 292.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -140.0,
+                    "y": 285.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": ""
+                },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 335.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+               },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 377.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 420.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 464.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 508.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 552.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -85.0,
+                    "y": 596.0,
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "*"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -30.0,
+                    "y": 247.0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "Name"               
+                },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 285.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 328.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+               },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 371.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 414.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 458.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 501.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 547.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -70.0,
+                    "y": 590.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 160.0,
+                    "y": 247.0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "MR"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 285.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 328.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+               },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 371.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 414.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 458.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 501.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 547.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 120.0,
+                    "y": 590.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                 },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 220.0,
+                    "y": 247.0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "AST"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 285.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 328.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_BLACK",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+               },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 371.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 414.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 458.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 501.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 547.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": 190.0,
+                    "y": 590.0,
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_HEADER",
+                    "text": ""
+                    
+                   
+                    },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "x": -630.0,
+                    "y": 250.0,
+                    "width": 1100,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIconu6",
+                    "clickAction": "act_"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "x": -630.0,
+                    "y": 660.0,
+                    "width": 1100,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                    },
+                {
+                    "commonName": "GenericButton",
+                    "x": -530.0,
+                    "y": 660.0,
+                    "width": 1100,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "height": 20.0,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_exit"
+                    },
+               {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "x": -5.0,
+                    "y": 661.0,
+                    "fontSize": 18,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$CruyffSansRegular",
+                    "text": "Sort"
+                    },
+                    {
+            "commonName": "TabBar",
+            "x": 345,
+            "y": 160,
+            "width": 635.5,
+            "tabs":
+            [
+               {
+                  "selectAction": "act_select_facts",
+                  "height": 40,
+                  "label": "Summary"
+               },
+               {
+                  "selectAction": "act_select_media",
+                  "height": 40,
+                  "label": "Possession"
+               },
+               {
+                  "selectAction": "",
+                  "height": 40,
+                  "label": "Shooting"
+               },
+               {
+                  "selectAction": "",
+                  "height": 40,
+                  "label": "Passing"
+               },
+               {
+                  "selectAction": "act_select_media",
+                  "height": 40,
+                  "label": "Defending"
+               },
+               {
+                  "selectAction": "act_select_events",
+                  "height": 40,
+                  "label": "Goalkeeping"
+               }
+            ]
+        },
+        {
+            "commonName": "Image",
+            "name": "verticalSeparator",
+            "height": 260.0,
+            "x": 442.0,
+            "y": 0.0,
+            "type": "$UserPlateDividerLine"
+        }
+    ]
+} ]
+} "y": 0.0,
+            "type": "$UserPlateDividerLine"
+        }
+    ]
+} ]
+}      }
+    ]
+} ]
+}
+}
+}}

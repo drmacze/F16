@@ -1,0 +1,252 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon4",
+            "actionName": "act_advance",
+            "label": "Select"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Home_Away"
+        },
+        {
+            "commonName": "Panel",
+            "name": "ModeInfo",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 75,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "MD"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Matchday"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 280.1,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xAAAAAA"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 310,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Select Sides"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianSide",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 15,
+                    "marginLeft": 0,
+                    "width": 930,
+                    "height": 470,
+                    "cornerRaduis": 13,
+                    "alpha": 0,
+                    "color": "0x1C1C1C"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 15,
+                    "marginLeft": 0,
+                    "width": 170,
+                    "height": 440,
+                    "alpha": 0.6,
+                    "type": "$Bg_SideSelect"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_com"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": -250,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_home"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 250,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_away"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Com",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_com_icon1",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Com",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_com_icon2",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Home",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": -360,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_home_icon",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Away",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 360,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_away_icon",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

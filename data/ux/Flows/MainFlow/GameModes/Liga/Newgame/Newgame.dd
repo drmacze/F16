@@ -1,0 +1,48 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },        
+        {
+            "viewname": "act_newgame",
+            "actionname": "act_newgame"
+        },
+        {
+            "viewname": "act_new",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_new"
+            }
+        },
+        {
+            "viewname": "act_load",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_load"
+            }
+        },
+        {
+            "viewname": "act_loadgame",
+            "actionname": "act_loadgame"
+        }
+        
+               
+    ],
+    "data":
+    [        
+        {
+            "viewname": "bnd_matchday_label",
+            "binding":  "bnd_matchday_label",
+            "type":     "string"
+        }
+              
+    ]
+}

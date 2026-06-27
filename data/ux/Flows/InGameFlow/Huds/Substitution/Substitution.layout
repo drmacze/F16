@@ -1,0 +1,36 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+	"alignV": "FILL",
+    "alignH": "FILL",
+    "children":
+    [
+        {
+            "commonName": "Substitution",
+            "name": "BagianInfoSubstitutions",
+			"alignV": "BOTTOM",
+			"alignH": "CENTER",
+			"marginBottom": 65,
+			"scaleX": 1,
+			"scaleY": 1,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_nationalization",
+                    "property": "nationalization"
+                },
+                {
+                    "binding": "bnd_subs_info",
+                    "property": "data"
+                },
+                {
+                    "binding": "bnd_visible",
+                    "property": "visible"
+                }
+            ]
+        }
+    ]
+}

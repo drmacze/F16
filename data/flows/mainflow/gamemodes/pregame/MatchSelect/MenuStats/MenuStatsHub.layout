@@ -1,0 +1,508 @@
+/* ------------------------------------- */
+/* MOD Created By MounTsa */
+/* ------------------------------------- */
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "ANIMASI_MASUK_MAINMENU"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "ANIMASI_KELUAR_MAINMENU"
+        }
+      ]
+    }
+  ],
+  "children": [
+  
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 35,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 1010,
+                            "height": 90,
+                            "width": 224,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 1052,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Detailed Stats"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -230,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_White",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_detail"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Details"
+                        }
+                    ]
+                 },
+    {
+      "commonName": "Panel",
+      "name": "BagianMatchPreview",
+      "alignV": "TOP",
+      "alignH": "CENTER",
+      "marginTop": 83.5,
+      "width": 780,
+      "height": 307.5,
+      "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "marginTop": 200,
+          "marginLeft": -90,
+          "height": 330,
+          "width": 330,
+          "alpha": 1,
+          "type": "$IconHomeMatch"
+        },
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 230,
+          "marginLeft": 0,
+          "height": 220,
+          "width": 200,
+          "alpha": 1,
+          "type": "$IconStats2"
+        },
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 200,
+          "marginLeft": 310,
+          "height": 330,
+          "width": 330,
+          "alpha": 1,
+          "type": "$IconAwayMatch"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 190,
+          "marginLeft": -190,
+          "fontColor": "$COLOR_LIGHT_GREEN",
+          "fontSize": 20,
+          "forceCaps": false,
+          "text": "Player1"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 190,
+          "marginRight": -180,
+          "fontColor": "$COLOR_LIGHT_BLUE",
+          "fontSize": 20,
+		  "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "bindings": [
+            {
+              "property": "text",
+              "binding": "bnd_match_difficulty"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "Match",
+          "alignV": "BOTTOM",
+          "alignH": "CENTER",
+          "marginBottom": 70,
+          "marginLeft": 0,
+          "fontColor": "$COLOR_YELLOW",
+          "fontSize": 15,
+          "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "text": "Last 5 Matches"
+        },
+        {
+          "commonName": "Label",
+          "name": "Match",
+          "alignV": "BOTTOM",
+          "alignH": "LEFT",
+          "marginBottom": 50,
+          "marginLeft": 20,
+          "fontColor": "$COLOR_YELLOW",
+          "fontSize": 15,
+          "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "text": "Conversion Rate"
+        },
+        {
+          "commonName": "Label",
+          "name": "Match",
+          "alignV": "BOTTOM",
+          "alignH": "RIGHT",
+          "marginBottom": 50,
+          "marginRight": 20,
+          "fontColor": "$COLOR_YELLOW",
+          "fontSize": 15,
+          "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "text": "Conversion Rate"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 60,
+          "marginLeft": -200,
+          "fontColor": "$COLOR_LIGHT_GREEN",
+          "fontSize": 20,
+          "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "text": "Wins"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 60,
+          "marginLeft": 0,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontSize": 20,
+          "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "text": "Draw"
+        },
+        {
+          "commonName": "Label",
+          "name": "AI",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 60,
+          "marginRight": -200,
+          "fontColor": "$COLOR_LIGHT_BLUE",
+          "fontSize": 20,
+          "fontFace": "$FONT_DINPROBOLD",
+          "forceCaps": false,
+          "text": "Wins"
+        },
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 90,
+          "marginLeft": -200,
+          "height": 50,
+          "width": 50,
+          "alpha": 1,
+          "type": "$IconGreen"
+        },
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 90,
+          "marginLeft": 0,
+          "height": 50,
+          "width": 50,
+          "alpha": 1,
+          "type": "$IconGray"
+        },
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 90,
+          "marginRight": -200,
+          "height": 50,
+          "width": 50,
+          "alpha": 1,
+          "type": "$IconBlue"
+        },
+        {
+          "commonName": "Panel",
+          "name": "Bagian1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": -10,
+          "width": 450,
+          "height": 100.5,
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "FILL",
+              "marginTop": 120,
+              "height": 8,
+              "marginLeft": 0,
+              "color": "$COLOR_LIGHT_BLUE",
+              "alpha": 0.7
+            },
+            {
+              "commonName": "Panel",
+              "name": "Bagian1",
+              "alignV": "TOP",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "width": 225,
+              "height": 100.5,
+              "children": [
+                {
+                  "commonName": "Rectangle",
+                  "alignV": "CENTER",
+                  "alignH": "FILL",
+                  "marginTop": 120,
+                  "height": 8,
+                  "marginLeft": 0,
+                  "color": "$COLOR_LIGHT_GREEN",
+                  "alpha": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "commonName": "Panel",
+          "name": "BagianTeam",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": 115,
+          "width": 220,
+          "height": 100.5,
+          "children": [
+            {
+              "commonName": "SimpleButton",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 200,
+              "width": 250,
+              "height": 260,
+              "backgroundImage": "$IconEstats",
+              "backgroundHighlightImage": "$IconEstats",
+              "clickAction": "act_menustats_detailstats"
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_home",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 37,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_home",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 72,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_home",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 110,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_home",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 150,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_home",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimAway",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginTop": -5,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_away",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimAway",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginTop": 32,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_away",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimAway",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginTop": 67,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_away",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimAway",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginTop": 107,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_away",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Image",
+              "name": "LogoTimAway",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginTop": 147,
+              "width": 30,
+              "height": 30,
+              "bindings": [
+                {
+                  "binding": "bnd_logo_tim_away",
+                  "property": "image"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

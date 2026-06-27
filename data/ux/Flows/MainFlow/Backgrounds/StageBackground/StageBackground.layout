@@ -1,0 +1,30 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+	"commonName": "Panel",
+	"alignV": "FILL",
+	"alignH": "FILL",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_BACKGROUND_SYSTEM"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundDefault"
+        }
+    ]
+}

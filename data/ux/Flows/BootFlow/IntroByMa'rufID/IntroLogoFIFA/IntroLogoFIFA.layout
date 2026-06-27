@@ -1,0 +1,65 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_INTRO_AWALGAME"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_INTRO_AWALGAME"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+    
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -25,
+            "marginRight": -10,
+            "width": 500,
+            "height": 300,
+            "type": "$SplashScreenLogo"
+        },
+        
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": -175,
+            "marginLeft": -5,
+            "width": 70,
+            "height": 70,
+            "alpha": 5,
+            "path": "animasi/Animasi_Loading.swf"
+        }
+        
+    ]
+}

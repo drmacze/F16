@@ -1,0 +1,21 @@
+{
+    "name": "TeamManagement_Home",
+    "onEnter":
+    [
+        ["invoke", ["evt_hide_watermark"]], 
+        ["loadVVM", ["/Flows/MainFlow/GameModes/PreGame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Home.vvm", { "type": ".type", "gamemode": ".gamemode", "eventData": ".event.data" } ]]
+    ],
+    "onExit":
+    [
+        ["invoke", ["evt_show_watermark"]], 
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_advance",
+            "let": {"fromScreen": "TeamManagement_Home"},
+            "targets": ["out_advance"]
+        }
+    ]
+}

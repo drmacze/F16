@@ -1,0 +1,5 @@
+{
+    "dds": ["PengaturanGrafik.dd"],
+    "vms": [["lua", "PengaturanGrafik.lua"]],
+    "views": [["gfx", {"layout": "PengaturanGrafik.layout"}]]
+}

@@ -1,0 +1,5 @@
+{
+    "dds": ["TeamManagement_Away.dd", "TeamManagementModelAway.dd", "Formation/FormationModelReal_Away.dd"],
+    "vms": [["lua", "TeamManagement_Away.lua"]],
+    "views": [["gfx", {"layout": "TeamManagement_Away.layout"}]]
+}

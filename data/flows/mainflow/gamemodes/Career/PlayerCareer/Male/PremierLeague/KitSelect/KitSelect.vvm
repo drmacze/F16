@@ -1,0 +1,15 @@
+{
+  "dds": [
+    "KitSelect.dd",
+    "TeamManagementModel.dd",
+    "formation/FormationModelReal.dd"
+  ],
+  "vms": [
+    ["lua", "KitSelect.lua"],
+    ["lua", "TeamManagementModel.lua"],
+    ["lua", "formation/FormationModelReal.lua"]
+  ],
+  "views": [
+    ["gfx", { "layout": "KitSelect.layout" }]
+  ]
+}

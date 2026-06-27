@@ -1,0 +1,41 @@
+{
+    "name": "MenuCustomizeHub",
+    "onEnter":
+    [
+        ["setTabContext", [3]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuCustomizeHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+
+        {
+            "event": "evt_menu_home",
+            "targets": ["out_menu_home"]
+        },
+        {
+            "event": "evt_menu_play",
+            "targets": ["out_menu_play"]
+        },
+        {
+            "event": "evt_menu_online",
+            "targets": ["out_menu_online"]
+        },
+
+        {
+            "event": "evt_gamesettings",
+            "targets": ["out_gamesettings"]
+        },
+        {
+            "event": "evt_editteams",
+            "targets": ["out_editteams"]
+        }
+        
+    ]
+}

@@ -1,0 +1,462 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],    
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+    
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$BackgroundPreGame"
+        },
+
+        {
+           "commonName": "Asset",
+           "alignV": "TOP",
+           "alignH": "CENTER",
+           "marginTop": 420,
+           "marginRight": 20,
+           "width": 1500,
+           "height": 60,
+           "alpha": 0.6,
+           "path": "Animasi/Animasi_Adboard_LogoEASports.swf"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "MenuMatchSelect",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 850,
+            "height": 470,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginLeft": -87,
+                   "width": 170,
+                   "height": 30,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 3,
+                   "marginLeft": -87,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+                   "text": "MATCH PREVIEW"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginRight": -87,
+                   "width": 170,
+                   "height": 30,
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 3,
+                   "marginRight": -86,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_DARK_GRAY",
+                   "text": "TEAM SHEETS"
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMatchPreview",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 33.5,
+                    "width": 520,
+                    "height": 357.5,
+                    "children":
+                    [
+                       {
+                          "commonName": "Asset",
+                          "alignV": "FILL",
+                          "alignH": "FILL",
+                          "alpha": 0.95,
+                          "type": "$LiveTileBackgroundIdle"
+                       },
+                       {
+                          "commonName": "Label",
+                          "alignV": "TOP",
+                          "alignH": "CENTER",
+                          "marginTop": 5,
+                          "fontColor": "$COLOR_DARK_GRAY",
+                          "fontSize": 17,
+                          "text": "Match Type : Day Time | Referee : Random"
+                       },
+
+                       {
+                          "commonName": "Label",
+                          "name": "NamaStadion",
+                          "alignV": "TOP",
+                          "alignH": "CENTER",
+                          "marginTop": 30,
+                          "fontColor": "$COLOR_DARK_GRAY",
+                          "fontSize": 17,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_nama_stadion",
+                                "property": "text"
+                             }
+                          ]
+                       },
+                                              
+                       {
+                          "commonName": "Label",
+                          "alignV": "CENTER",
+                          "alignH": "CENTER",
+                          "marginTop": 15,
+                          "fontColor": "$COLOR_DARK_GRAY",
+                          "fontSize": 40,
+                          "text": "VS"
+                       },
+                       
+                       {
+                          "commonName": "Image",
+                          "name": "LogoTimHome",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "marginBottom": -7,
+                          "marginLeft": 70,
+                          "width": 110,
+                          "height": 110,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_logo_tim_home",
+                                "property": "image"
+                             }
+                          ]
+                       },
+                       {
+                          "commonName": "Image",
+                          "name": "LogoTimAway",
+                          "alignV": "CENTER",
+                          "alignH": "RIGHT",
+                          "marginBottom": -7,
+                          "marginRight": 70,
+                          "width": 110,
+                          "height": 110,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_logo_tim_away",
+                                "property": "image"
+                             }
+                          ]
+                       },
+                      
+                       {
+                          "commonName": "Label",
+                          "name": "NamaTimHome",
+                          "alignV": "CENTER",
+                          "alignH": "CENTER",
+                          "marginBottom": -80,
+                          "marginLeft": -136,
+                          "fontColor": "$COLOR_DARK_GRAY",
+                          "fontSize": 18,
+                          "forceCaps": true,
+                          "autoTextShadow": true,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_nama_tim_home",
+                                "property": "text"
+                             }
+                          ]
+                       },
+                       {
+                          "commonName": "Label",
+                          "name": "NamaTimAway",
+                          "alignV": "CENTER",
+                          "alignH": "CENTER",
+                          "marginBottom": -80,
+                          "marginRight": -137,
+                          "fontColor": "$COLOR_DARK_GRAY",
+                          "fontSize": 18,
+                          "forceCaps": true,
+                          "autoTextShadow": true,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_nama_tim_away",
+                                "property": "text"
+                             }
+                          ]
+                       }
+                    ]
+                },
+                  
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 867,
+                    "height": 75,
+                    "children":
+                    [
+
+                       {
+                          "commonName": "Panel",
+                          "name": "MenuPlayMatch",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "width": 170,
+                          "height": 75,
+                          "alpha": 2,
+                          "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL",
+                                  "clickAction": "act_playmatch"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL",
+                                  "type": "$MenuSelection"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 4,
+                                  "fontSize": 17,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "PLAY MATCH"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "CENTER",
+                                  "marginBottom": 8,
+                                  "width": 40,
+                                  "height": 40,
+                                  "type": "$IconPlayMatch2"
+                              }
+                          ]
+                       },
+
+                       {
+                          "commonName": "Panel",
+                          "name": "MenuTeamManagement",
+                          "alignV": "BOTTOM",
+                          "alignH": "LEFT",
+                          "marginLeft": 174.2,
+                          "width": 170,
+                          "height": 75,
+                          "alpha": 2,
+                          "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL",
+                                  "clickAction": "act_teammanagement"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 4,
+                                  "fontSize": 16,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "TEAM MANAGEMENT"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "CENTER",
+                                  "marginBottom": 8,
+                                  "width": 40,
+                                  "height": 40,
+                                  "type": "$IconTeamManagement"
+                              }
+                          ]
+                       },
+                       
+                       {
+                          "commonName": "Panel",
+                          "name": "MenuGameSettings",
+                          "alignV": "BOTTOM",
+                          "alignH": "CENTER",
+                          "width": 170,
+                          "height": 75,
+                          "alpha": 2,
+                          "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL",
+                                  "clickAction": "act_gamesettings"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 4,
+                                  "fontSize": 17,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "GAME SETTINGS"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "CENTER",
+                                  "marginBottom": 8,
+                                  "width": 40,
+                                  "height": 40,
+                                  "type": "$IconGameSettings"
+                              }
+                          ]
+                       },
+
+                       {
+                          "commonName": "Panel",
+                          "name": "MenuControllerSettings",
+                          "alignV": "BOTTOM",
+                          "alignH": "RIGHT",
+                          "marginRight": 172.5,
+                          "width": 171.8,
+                          "height": 75,
+                          "alpha": 2,
+                          "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 4,
+                                  "fontSize": 15,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "CONTROLLER SETTINGS"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "CENTER",
+                                  "marginBottom": 8,
+                                  "width": 40,
+                                  "height": 40,
+                                  "type": "$IconControllerSettings"
+                              }
+                          ]
+                       },
+ 
+                       {
+                          "commonName": "Panel",
+                          "name": "MenuSelectSides",
+                          "alignV": "BOTTOM",
+                          "alignH": "RIGHT",
+                          "width": 170,
+                          "height": 75,
+                          "alpha": 2,
+                          "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL",
+                                  "clickAction": "act_selectside"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 4,
+                                  "fontSize": 17,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "SELECT SIDE"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "CENTER",
+                                  "marginBottom": 8,
+                                  "width": 84,
+                                  "height": 43,
+                                  "type": "$IconSelectSides"
+                              }
+                          ]
+                       }
+                       
+                    ]
+                }
+                
+           ]
+        }
+        
+    ]
+}

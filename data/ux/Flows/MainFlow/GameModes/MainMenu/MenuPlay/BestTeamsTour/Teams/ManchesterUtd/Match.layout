@@ -1,0 +1,123 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BestTeamsTourBackground"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 700,
+            "height": 450,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "alpha": 0.7,
+                   "type": "$BackgroundHitam"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "SELECT MATCH TO PLAY"
+                },
+                {
+                    "commonName": "VerticalList",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 40.5,
+                    "displayRange": 4,
+                    "highlightable": true,
+                    "row": "MatchRow",
+                    "rowWidth": 695,
+                    "rowHeight": 101,
+                    "rowChangeAction": "act_match_play",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+	    
+	]
+}

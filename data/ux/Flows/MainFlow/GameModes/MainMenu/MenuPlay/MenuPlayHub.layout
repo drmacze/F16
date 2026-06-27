@@ -1,0 +1,272 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU_TAB"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU_TAB"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                    [
+            
+                        {
+                            "commonName": "Grid",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "spacingH": 7,
+                            "spacingV": 7,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "MenuKickOff",
+                                    "column": 0,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+									"child": "MenuUltimateTeam",
+                                    "column": 1,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "MenuNewCareer",
+                                    "column": 0,
+                                    "row": 1,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "MenuNewTournament",
+                                    "column": 1,
+                                    "row": 1,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "MenuSkillGames",
+                                    "column": 0,
+                                    "row": 2,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "MenuBeAProBestTeamsTour",
+                                    "column": 1,
+                                    "row": 2,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuKickOff",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"clickAction": "act_kickoff",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuPlay_KickOff"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_kickoff",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuUltimateTeam",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuPlay_UltimateTeam"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_ultimateteam",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuNewCareer",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"clickAction": "act_career",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuPlay_NewCareer"
+                                    ],
+      						        "bindings":
+									[
+										{
+											"binding": "bnd_live_tile_newcareer",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuNewTournament",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"clickAction": "act_tournament",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuPlay_NewTournament"
+                                    ],
+      						        "bindings":
+									[
+										{
+											"binding": "bnd_live_tile_newtournament",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuSkillGames",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"clickAction": "act_skillgames",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuPlay_SkillGames"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_skillgames",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+									"commonName": "DragToggle",
+									"name": "MenuBeAProBestTeamsTour",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"hasArrows": false,
+									"consumeInput": true,
+									"animated": true,
+									"useTimer": true,
+									"timeRemaining": 3,
+									"itemType": "LiveTile",
+									"bindings":
+									[
+										{
+										    "binding": "bnd_live_tile_beapro_bestteamstour",
+											"property": "dataProviders"
+										}
+									],
+									"behaviors":
+									[
+										{
+											"commonName": "TileBulletMediator",
+										    "positionType": 3,
+										    "style": "ingame",
+										    "showBackground": true,
+									   	    "activateBackground": true,
+										    "currentIndex": 0
+										}
+									]
+                                }
+                            ]
+                        }
+                        
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

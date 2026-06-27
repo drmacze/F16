@@ -1,0 +1,76 @@
+{
+    "name": "Fixtures",
+    "states":
+    [
+        {
+            "name": "RedirectFixtures",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Fixtures.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_next",
+                    "targets": ["Next"]
+                },
+                {
+                    "event": "evt_decrease",
+                    "targets": ["Decrease"]
+                },
+                {
+                    "event": "evt_nextteam",
+                    "targets": ["Nextteam"]
+                },
+                {
+                    "event": "evt_previousteam",
+                    "targets": ["Previousteam"]
+                }
+            ]
+        },
+        {
+            "name": "Next",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Fixtures/Toggle/Next.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Fixtures"
+            }
+        },
+        {
+            "name": "Decrease",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Fixtures/Toggle/Decrease.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Fixtures"
+            }
+        },
+        {
+            "name": "Nextteam",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Fixtures/Toggleteams/Next.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Fixtures"
+            }
+        },
+        {
+            "name": "Previousteam",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Fixtures/Toggleteams/Decrease.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Fixtures"
+            }
+        }
+    ]
+}

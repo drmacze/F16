@@ -1,0 +1,25 @@
+{
+    "name": "TeamRoster",
+    "states":
+    [
+		{
+            "name": "RedirectTeamRoster",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamRoster.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        }
+        
+    ]
+}

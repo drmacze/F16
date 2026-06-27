@@ -1,0 +1,7 @@
+[
+	"/lua/enums/eventmanager.lua",
+    "/lua/enums/pregamemanager.lua",
+	"/lua/common/CommonNavVars.lua",
+	"/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/EditTeams/TeamSelect/HomeTeamSelectModel.lua",
+	"/lua/packages/tableutil.lua"
+]

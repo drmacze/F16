@@ -1,0 +1,100 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_goal_player_avatar",
+            "binding":  "bnd_goal_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_goal_player_name",
+            "binding":  "bnd_goal_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_level",
+            "binding":  "bnd_goal_player_level",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_count",
+            "binding":  "bnd_goal_player_count",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_text",
+            "binding": "bnd_text",
+			"type": "string"
+        },
+		{
+            "viewname": "bnd_visible",
+            "binding": "bnd_visible",
+			"type": "bool"
+        },
+        {
+            "viewname": "bnd_player_visible",
+            "binding": "bnd_player_visible",
+			"type": "bool"
+        },
+        
+		{
+            "viewname": "bnd_alpha",
+            "binding": "bnd_alpha",
+			"type": "float"
+        },
+        
+        {
+            "viewname": "bnd_nationalization",
+            "binding": "bnd_nationalization",
+			"type": "int"
+        },
+
+        {
+            "viewname": "bnd_goal_player_desc",
+            "binding": "bnd_goal_player_desc",
+			"type": "string"
+        },
+
+        {
+            "viewname": "bnd_goal_time",
+            "binding": "bnd_goal_time",
+			"type": "string"
+        },
+
+        {
+            "viewname": "bnd_goal_type",
+            "binding": "bnd_goal_type",
+			"type": "string"
+        },
+
+        {
+            "viewname": "bnd_goal_desc",
+            "binding": "bnd_goal_desc",
+			"type": "string"
+        },
+       
+		{
+            "viewname": "bnd_data",
+            "binding": "bnd_data",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "team": "string",
+                    "kitNumber": "string",
+                    "playerName": "string",
+                    "bottomText": "string",
+                    "showBottomText": "bool",
+                    "iconType": "int"
+                }
+            }
+        }
+        
+    ]
+}

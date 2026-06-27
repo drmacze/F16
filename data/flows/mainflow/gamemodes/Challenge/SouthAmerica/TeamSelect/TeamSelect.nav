@@ -1,0 +1,38 @@
+{
+    "name": "TeamSelect",
+    "states":
+    [
+		{
+            "name": "RedirectTeamSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_team_select",
+                    "targets": ["ChallengeStart"]
+                }
+            ]
+        },
+        {
+            "name": "ChallengeStart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Challenge/SouthAmerica/Challenge.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamSelect",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

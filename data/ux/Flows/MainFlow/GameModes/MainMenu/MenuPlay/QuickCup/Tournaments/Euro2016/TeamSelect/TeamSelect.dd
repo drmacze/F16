@@ -1,0 +1,30 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_team_select",
+            "actionname": "act_team_select"
+        }
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_team_list",
+            "binding": "bnd_team_list",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_visible",
+            "binding": "bnd_visible",
+            "type": "bool"
+        }
+    ]
+}

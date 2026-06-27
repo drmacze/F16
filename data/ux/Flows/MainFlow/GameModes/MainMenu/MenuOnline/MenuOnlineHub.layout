@@ -1,0 +1,221 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU_TAB"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU_TAB"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                    [
+            
+                        {
+                            "commonName": "Grid",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "spacingH": 7,
+                            "spacingV": 7,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "MenuSeasons",
+                                    "column": 0,
+                                    "row": 0,
+                                    "colSpan": 2,
+                                    "rowSpan": 4
+                                },
+                                {
+									"child": "MenuProClubs",
+                                    "column": 2,
+                                    "row": 0,
+                                    "colSpan": 2,
+                                    "rowSpan": 4
+                                },
+                                {
+                                    "child": "MenuCoOPSeasons",
+                                    "column": 0,
+                                    "row": 4,
+                                    "colSpan": 2,
+                                    "rowSpan": 2
+                                },
+                                {
+                                    "child": "MenuOnlineFriendlies",
+                                    "column": 2,
+                                    "row": 4,
+                                    "colSpan": 2,
+                                    "rowSpan": 2
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuSeasons",
+									"alignV": "FILL",
+									"alignH": "FILL",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuOnline_Seasons"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_seasons",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuProClubs",
+									"alignV": "FILL",
+									"alignH": "FILL",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuOnline_ProClubs"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_proclubs",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuCoOPSeasons",
+									"alignV": "FILL",
+									"alignH": "FILL",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuOnline_CoOpSeasons"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_coopseasons",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuOnlineFriendlies",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuOnline_OnlineFriendlies"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_onlinefriendlies",
+											"property": "dataProviders"
+										}
+                                    ]
+                                }
+                            ]
+                        }
+                        
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

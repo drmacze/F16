@@ -1,0 +1,52 @@
+{
+    "name": "Pregame",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["stateChange", [".flowState"]],
+        ["substateChange", ["PREGAME"]],
+        ["set", ["flow", ".flow"]]
+    ],
+    "states":
+    [
+        {
+            "name": "FlowBranch",
+            "states":
+            [
+
+                {
+                    "name": "TeamSelect",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/EditTeams/TeamSelect/TeamSelect.nav",
+                            "outputs":
+                            {
+                                "out_back": "out_exit",
+                                "out_advance": "TeamRoster"
+                            }
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "TeamRoster",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/EditTeams/TeamRoster.nav",
+                            "outputs":
+                            {
+                                "out_back": "TeamSelect",
+                                "out_advance": "TeamSelect"
+                            }
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

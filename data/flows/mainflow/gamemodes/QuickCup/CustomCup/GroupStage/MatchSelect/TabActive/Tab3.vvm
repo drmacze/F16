@@ -1,0 +1,11 @@
+{
+	"dds": [
+	"/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Standings/Standings.dd",
+	"/flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Goalscorers/Goalscorers.dd"
+	],
+     "vms": [
+	 ["lua", "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Standings/Standings.lua"],
+	 ["lua", "/flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Goalscorers/Goalscorers.lua"]
+	 ],
+    "views": [["gfx", { "layout": "Tab3.layout" }]]
+}

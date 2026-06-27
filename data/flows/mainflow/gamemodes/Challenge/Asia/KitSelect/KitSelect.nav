@@ -1,0 +1,49 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["KitSelectStartMatch"]
+    },
+    "states":
+    [
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["KitSelectStartMatch.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event":   "evt_refresh_on_resize",
+                    "targets": ["KitSelectStartMatch"]
+                }
+                
+                
+            ]
+        },
+        
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Challenge/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        }
+
+    ]
+}

@@ -1,0 +1,195 @@
+{
+  "name": "PostMatch",
+  "let": { "gameState": "postmatch" },
+  "type": "parallel",
+  "onEnter": [
+    ["showControllerCursor"],
+    ["substateChange", ["POSTGAME"]],
+    ["feShowing", [true, true]],
+    ["activeZoneTransition", ["ZONE_NONE", "ZONE_OFFLINE"]],
+    ["zoneChange", ["ZONE_OFFLINE"]]
+  ],
+  "onExit": [
+    ["substateChange", ["INGAME"]],
+    ["activeZoneTransition", ["ZONE_OFFLINE", "ZONE_NONE"]],
+    ["zoneChange", ["ZONE_NONE"]],
+    ["hideUI"],
+    ["hideStageBackground"]
+  ],
+  "transitions": [
+    { "event": "evt_restart", "targets": ["out_restart_match"] },
+    { "event": "evt_retry", "targets": ["out_retry_match"] },
+    { "event": "evt_quit_from_game", "targets": ["out_exit_match"] }
+  ],
+  "states": [
+    {
+      "onEnter": [["addAudioContext", ["postmatch"]]],
+      "onExit": [
+        ["removeAudioContext", ["postmatch"]],
+        ["RefreshUserCredit"],
+        ["clearMatchResults"],
+        ["clearCachedCoinBalance"],
+        ["startMenuMusic"]
+      ],
+      "states": [
+        {
+          "name": "InitPostMatch",
+          "states": [
+            {
+              "name": "ShowUI",
+              "onEnter": [
+                ["showInGameUI", [".gamemode", ".flow", ".type", ".gameState"]]
+              ],
+              "transitions": [
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "seasons"],
+                  "targets": ["SeasonUpdate"],
+                  "let": { "redirect": "MatchResults" }
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "tournaments"],
+                  "targets": ["MatchResults"],
+                  "let": { "redirect": "LevelUp" }
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "friendly"],
+                  "targets": ["MatchResults"],
+                  "let": { "redirect": "LevelUp" }
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "ftf"],
+                  "targets": ["PostmatchMenu"]
+                },
+                {
+                  "event": "evt_on_show_in_game_ui_complete",
+                  "cond": ["==", ".type", "debug"],
+                  "targets": ["MatchResults"],
+                  "let": { "redirect": "LevelUp" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SeasonUpdate",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/seasonupdate/seasonupdate.nav",
+          "outputs": {
+            "out_advance": "MatchResults"
+          }
+        },
+        {
+          "name": "MatchResults",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/MatchResults/MatchResults.nav",
+          "outputs": {
+            "out_level_up": "LevelUp",
+            "out_captured_media": "PostmatchMenu",
+            "out_check_media": "PostmatchMenu"
+          }
+        },
+        {
+          "name": "LevelUp",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/levelup/levelup.nav",
+          "outputs": {
+            "out_advance": "PostmatchMenu",
+            "out_quit": "PostmatchMenu"
+          }
+        },
+        {
+          "name": "PostmatchMenu",
+          "initial": { "targets": ["TabFacts"] },
+          "onEnter": [
+            ["blockingLoadVVM", ["/flows/ingameflow/gamemenus/PostmatchMenu.vvm", {
+              "gamemode": ".gamemode",
+              "flow": ".flow",
+              "type": ".type",
+              "gameState": ".gameState"
+            }]]
+          ],
+          "onExit": [["unloadVVM"]],
+          "states": [
+            { "name": "TabFacts", "onEnter": [["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Facts2.vvm"]]], "onExit": [["unloadVVM"]], "transitions": [
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] },
+                { "event": "evt_tab_performance", "targets": ["TabPerformance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_quit", "targets": ["TabQuit"] }
+              ]
+            },
+            { "name": "TabHighlight", "onEnter": [["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Highlight.vvm"]]], "onExit": [["unloadVVM"]], "transitions": [
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] },
+                { "event": "evt_tab_performance", "targets": ["TabPerformance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_quit", "targets": ["TabQuit"] }
+              ]
+            },
+            { "name": "TabPerformance", "onEnter": [["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Performance.vvm"]]], "onExit": [["unloadVVM"]], "transitions": [
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] },
+                { "event": "evt_tab_quit", "targets": ["TabQuit"] }
+              ]
+            },
+            { "name": "TabRestart", "onEnter": [["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Restart2.vvm"]]], "onExit": [["unloadVVM"]], "transitions": [
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] },
+                { "event": "evt_tab_performance", "targets": ["TabPerformance"] },
+                { "event": "evt_tab_quit", "targets": ["TabQuit"] }
+              ]
+            },
+            { "name": "TabQuit", "onEnter": [["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Quit.vvm"]]], "onExit": [["unloadVVM"]], "transitions": [
+                { "event": "evt_tab_facts", "targets": ["TabFacts"] },
+                { "event": "evt_tab_highlight", "targets": ["TabHighlight"] },
+                { "event": "evt_tab_performance", "targets": ["TabPerformance"] },
+                { "event": "evt_tab_restart", "targets": ["TabRestart"] }
+              ]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_to_match_facts", "targets": ["MatchFacts"], "let": { "redirect": "menu" } },
+            { "event": "evt_to_match_highlights", "targets": ["MatchHighlights"], "let": { "redirect": "menu" } },
+            { "event": "evt_to_match_grade", "targets": ["MatchGrade"], "let": { "redirect": "menu" } },
+            { "event": "evt_restart_match", "targets": ["out_restart_match"] },
+            { "event": "evt_quit", "targets": ["Quit"] }
+          ]
+        },
+        {
+          "name": "MatchFacts",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/matchfacts/matchfacts.nav",
+          "outputs": {
+            "out_menu": "TabFacts"
+          }
+        },
+        {
+          "name": "MatchHighlights",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/matchhighlights/matchhighlights.nav",
+          "outputs": {
+            "out_menu": "TabHighlight"
+          }
+        },
+        {
+          "name": "MatchGrade",
+          "type": "external",
+          "file": "/flows/ingameflow/postmatch/MatchGrade/MatchGrade.nav",
+          "outputs": {
+            "out_menu": "TabPerformance"
+          }
+        },
+        {
+          "name": "Quit",
+          "onEnter": [
+            ["hideUI"],
+            ["invoke", ["evt_quit_from_game"]]
+          ]
+        }
+      ]
+    }
+  ]
+}

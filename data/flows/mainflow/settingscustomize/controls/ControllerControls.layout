@@ -1,0 +1,327 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": -33,
+            "marginLeft": 385,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Controller controls",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+             "textStyles":
+            [
+               "TF_BUTTON_CONTROLON"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": 237,
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "Control Settings"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 160,
+                    "marginLeft": 298,
+                    "width": 300,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Here you can change control settings. virtual button, controller, button position and player skill."
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 280,
+                    "marginLeft": 315,
+                    "width": 320,
+                    "height": 190,
+                    "type": "$_Controls_Settings2"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "BasicControlsList",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginLeft": -260,
+            "marginTop": -180,
+            "displayRange": 7,
+            "mouseWheelEnabled": true,
+            "row": "fow.components.widgets.settingscustomize.controls.BasicControlsRow",
+            "rowHeight": 60,
+            "rowWidth": 400,
+            "useAlternating": false,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_basic_group_v",
+                    "property": "visible"
+                },
+                {
+                    "binding": "bnd_basic_controller_list_data",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "AdvancedControlsList",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginLeft": -260,
+            "marginTop": -180,
+            "displayRange": 7,
+            "mouseWheelEnabled": true,
+            "row": "fow.components.widgets.settingscustomize.controls.ControlsRow",
+            "rowHeight": 60,
+            "rowWidth": 400,
+            "useAlternating": false,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_advanced_group_v",
+                    "property": "visible"
+                },
+                {
+                    "binding": "bnd_advanced_controller_list_data",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "Stack",
+            "name": "ControlViewStack",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginLeft": -380,
+            "marginTop": -180,
+            "width": 200.0,
+            "spacing": 1.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "ControlViewLabel",
+                    "alignH": "FILL",
+                    "height": 35,
+                    "textAlignH": "CENTER",
+                    "textAlignV": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_settings_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_ACCOMPLISHMENT_HUB_CATEGORY"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "ControlViewComboBox",
+                    "alignH": "FILL",
+                    "height": 30,
+                    "marginTop": 0,
+                    "isCircular": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+                    "maskContent": true,
+                    "hasArrows": true,
+                    "arrowType" : "blue",
+                    "toggleAction":
+                    {
+                        "action": "act_settings_change",
+                        "binding": "bnd_controll_settings_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_settings_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Stack",
+            "name": "ControlSchemeStack",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginLeft": -380,
+            "marginTop": -116,
+            "width": 200.0,
+            "spacing": 1.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "ControlScheme",
+                    "alignH": "FILL",
+                    "height": 30,
+                    "textAlignH": "CENTER",
+                    "textAlignV": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_advanced_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_ACCOMPLISHMENT_HUB_CATEGORY"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "ControlSchemeComboBox",
+                    "alignH": "FILL",
+                    "height": 30,
+                    "marginTop": 0,
+                    "isCircular": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+                    "maskContent": true,
+                    "hasArrows": true,
+                    "arrowType" : "blue",
+                    "toggleAction":
+                    {
+                        "action": "act_advanced_change",
+                        "binding": "bnd_controll_advanced_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_advanced_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Stack",
+            "name": "ControlTypeStack",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginLeft": -380,
+            "marginTop": -60,
+            "width": 200.0,
+            "x": 100,
+            "y": 360,
+            "spacing": 1.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "ControlTypeLabel",
+                    "alignH": "FILL",
+                    "height": 30,
+                    "textAlignH": "CENTER",
+                    "textAlignV": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_type_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_ACCOMPLISHMENT_HUB_CATEGORY"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "ControlTypeComboBox",
+                    "alignH": "FILL",
+                    "height": 30,
+                    "marginTop": 0,
+                    "isCircular": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+                    "maskContent": true,
+                    "hasArrows": true,
+                    "arrowType" : "blue",
+                    "toggleAction":
+                    {
+                        "action": "act_type_change",
+                        "binding": "bnd_controll_type_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_type_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,373 @@
+{
+    "commonName": "Panel",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_back",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_select_team",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_random",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                { 
+                    "binding": "bnd_tour_bg", 
+                    "property": "image" 
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Actions",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 215,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_select_team"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 275,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Select"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 400,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_random"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 460,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Random"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 590,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_change_team"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 650,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Change"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 650,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_change_team"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "TourInfo",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 25,
+            "height": 90,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 50,
+                    "width": 90,
+                    "height": 90,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tour_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 150,
+                    "width": 2,
+                    "height": 60,
+                    "color": "0xffffff",
+                    "alpha": 0.8
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 170,
+                    "fontSize": 32,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "text": "Select Team"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "AllInfo",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Info",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "width": 1000,
+                    "height": 500,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 20,
+                            "marginLeft": -180,
+                            "width": 970,
+                            "height": 460,
+                            "cornerRaduis": 8,
+                            "alpha": 1,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tour_color",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 20,
+                            "marginLeft": 500,
+                            "width": 350,
+                            "height": 460,
+                            "cornerRaduis": 8,
+                            "alpha": 1,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tour_color",
+                                    "property": "color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "Line",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -95,
+                            "marginLeft": -410,
+                            "width": 1,
+                            "height": 193,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "Line",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -95,
+                            "marginLeft": -180,
+                            "width": 1,
+                            "height": 193,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "Line",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -95,
+                            "marginLeft": 50,
+                            "width": 1,
+                            "height": 193,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "Line",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 135,
+                            "marginLeft": -410,
+                            "width": 1,
+                            "height": 193,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "Line",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 135,
+                            "marginLeft": -180,
+                            "width": 1,
+                            "height": 193,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "Line",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 135,
+                            "marginLeft": 50,
+                            "width": 1,
+                            "height": 193,
+                            "color": "0xffffff",
+                            "alpha": 0.5
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

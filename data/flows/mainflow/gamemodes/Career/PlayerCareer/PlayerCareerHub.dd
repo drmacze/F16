@@ -1,0 +1,45 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+			"viewname": "act_male",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_male"
+			}
+		},
+
+        {
+			"viewname": "act_female",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_female"
+			}
+		}
+        
+    ],
+    "data":
+    [
+    {
+			"viewname": "bnd_player_bg",
+      "binding": "bnd_player_bg",
+			"type": "object"
+		},
+    {
+			"viewname": "bnd_menu_list",
+      "binding": "bnd_menu_list",
+			"type": "object"
+		}
+
+    ]
+}

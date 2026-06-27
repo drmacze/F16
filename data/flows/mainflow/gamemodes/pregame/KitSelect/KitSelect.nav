@@ -1,0 +1,45 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["KitSelectStartMatch"]
+    },
+    "states":
+    [
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["KitSelectStartMatch.vvm"]]
+              
+            ],
+            "onExit":
+            [
+                
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["MatchSelect"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        },
+        {
+            "name": "MatchSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/pregame/MatchSelect/MatchSelect.nav",
+            "outputs":
+            {
+                "out_back": "KitSelect",
+                "out_back1": "out_back1"
+            }
+        }
+    ]
+}
+

@@ -1,0 +1,90 @@
+{
+    "name": "TeamSelect",
+    "initial":
+    {
+        "targets": ["RedirectSelectTeam"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectSelectTeam",
+            "onEnter":
+            [
+                ["set", ["fromScreen", ".fromScreen"]]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectSelectTeamByGamemode",
+                    "onEnter":
+                    [
+                        ["invoke", [".type"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "friendly",
+                            "targets": ["RedirectFriendlyTeamSelect"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectFriendlyTeamSelect",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["FriendlyTeamSelect"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "FriendlyTeamSelect",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/pregame/teamselect/FriendlyTeamSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE", "fromScreen" : ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_to_settings",
+                    "targets": ["SettingsCustomize"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["SideSelect"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        },
+        {
+            "name": "SettingsCustomize",
+            "type": "external",
+            "file": "/flows/mainflow/settingscustomize/settingscustomize.nav",
+            "outputs":
+            {
+                "out_back": "RedirectSelectTeam",
+                "out_advance": "RedirectSelectTeam"
+            }
+        },
+        {
+            "name": "SideSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/pregame/SideSelect/SideSelect.nav",
+            "outputs":
+            {
+                "out_back": "TeamSelect",
+                "out_back1": "out_back"
+            }
+        }
+    ]
+}

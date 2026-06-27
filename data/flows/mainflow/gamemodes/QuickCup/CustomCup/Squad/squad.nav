@@ -1,0 +1,32 @@
+{
+    "name": "Squad",
+    "onEnter":
+    [
+        ["invoke", ["evt_hide_watermark"]], 
+        ["loadVVM", ["Squad.vvm", { "type": ".type", "gamemode": ".gamemode", "eventData": ".event.data" } ]]
+    ],
+    "onExit":
+    [
+        ["invoke", ["evt_show_watermark"]], 
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        
+        {
+            "event":   "evt_advance",
+            "let":     {"fromScreen":"Squad"},
+            "targets": ["out_exit_gamemode"]
+        },
+        {
+            "event":   "evt_back",
+            "let":     {"fromScreen":"Squad"},
+            "targets": ["out_exit_gamemode"]
+        }
+    ]
+    
+}
+
+ 
+ 
+ 

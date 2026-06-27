@@ -1,0 +1,70 @@
+{
+    "data":
+    [
+    
+		{
+			"viewname": "bnd_data_pengaturan_match",
+            "binding": "bnd_data_pengaturan_match",
+            "type": "object"
+		},
+
+		{
+            "viewname": "bnd_camera_options",
+            "binding": "bnd_camera_options",
+            "type": "object"
+        },		
+        {
+            "viewname": "bnd_auto_switch_options",
+            "binding": "bnd_auto_switch_options",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_auto_switch_move_assist_options",
+            "binding": "bnd_auto_switch_move_assist_options",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_move_assistance_options",
+            "binding": "bnd_move_assistance_options",
+            "type": "object"
+        },        
+		{
+            "viewname": "bnd_half_length_options",
+            "binding": "bnd_half_length_options",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_difficulty_options",
+            "binding": "bnd_difficulty_options",
+            "type": "object"
+        }
+        
+    ],
+	"actions":
+	[
+		{
+			"viewname": "act_change_camera_option",
+			"actionname": "act_change_camera_option"
+		},
+		{
+			"viewname": "act_change_auto_switch_option",
+			"actionname": "act_change_auto_switch_option"
+		},
+		{
+			"viewname": "act_change_auto_switch_move_assist_option",
+			"actionname": "act_change_auto_switch_move_assist_option"
+		},
+		{
+			"viewname": "act_change_move_assistance_option",
+			"actionname": "act_change_move_assistance_option"
+		},
+		{
+			"viewname": "act_change_half_length_option",
+			"actionname": "act_change_half_length_option"
+		},
+		{
+			"viewname": "act_change_difficulty_option",
+			"actionname": "act_change_difficulty_option"
+		}
+	]
+}

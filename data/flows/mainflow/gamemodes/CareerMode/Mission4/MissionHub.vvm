@@ -1,0 +1,5 @@
+{
+    "dds": ["MissionHub.dd"],
+    "vms": [["lua", "MissionHub.lua"]],
+    "views": [["gfx", { "layout": "MissionHub.layout" }]]
+}

@@ -1,0 +1,66 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_exit",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_exit"
+            }
+        },
+        {
+            "viewname": "act_select_facts",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_facts"
+            }
+        },
+        {
+            "viewname": "act_select_events",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_events"
+            }
+        }
+    ],
+    "data":
+    [
+		{
+			"viewname": "bnd_judul",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MATCHFACTS_PANEL_TITLE"
+			}
+		},
+		{
+            "viewname": "bnd_home_team_crest",
+            "binding": "bnd_home_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding": "bnd_away_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_result",
+            "binding": "bnd_result",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        }
+    ]
+}

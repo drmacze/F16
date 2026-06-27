@@ -1,0 +1,521 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_advance",
+            "label": "Select"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+  
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$BackgroundPreGame"
+        },
+        
+        {
+           "commonName": "Asset",
+           "alignV": "TOP",
+           "alignH": "CENTER",
+           "marginTop": 420,
+           "marginRight": 20,
+           "width": 1500,
+           "height": 60,
+           "alpha": 0.6,
+           "path": "Animasi/Animasi_Adboard_LogoEASports.swf"
+        },
+                
+        {
+            "commonName": "Panel",
+            "name": "MenuPemilihanTim",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 800,
+            "height": 480,
+            "children":
+            [
+            
+               {
+                  "commonName": "Panel",
+                  "name": "BagianTimHome",
+                  "alignV": "CENTER",
+                  "alignH": "LEFT",
+                  "width": 277,
+                  "height": 460,
+                  "children":
+                  [
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "TOP",
+                        "alignH": "LEFT",
+                        "marginTop": 29,
+                        "marginLeft": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_home_country_previous"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "TOP",
+                        "alignH": "RIGHT",
+                        "marginTop": 29,
+                        "marginRight": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_home_country_next"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": -37,
+                        "marginLeft": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_home_team_previous"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "CENTER",
+                        "alignH": "RIGHT",
+                        "marginTop": -37,
+                        "marginRight": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_home_team_next"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "BOTTOM",
+                        "alignH": "LEFT",
+                        "marginBottom": 33,
+                        "marginLeft": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_home_league_previous"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "BOTTOM",
+                        "alignH": "RIGHT",
+                        "marginBottom": 33,
+                        "marginRight": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_home_league_next"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "type": "$BackgroundPilihTim"
+                     },
+
+                     {
+                        "commonName": "Label",
+                        "name": "NamaPilihNegara",
+                        "alignV": "TOP",
+                        "alignH": "CENTER",
+                        "marginTop": 4,
+                        "fontSize": 21,
+                        "fontColor": "$COLOR_BLACK",
+                        "forceCaps": true,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_home_team_country",
+                              "property": "text"
+                           }
+                        ]
+                     },
+
+                     {
+                        "commonName": "Asset",
+                        "alignV": "TOP",
+                        "alignH": "LEFT",
+                        "marginTop": 33.5,
+                        "marginLeft": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentLeft"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "TOP",
+                        "alignH": "RIGHT",
+                        "marginTop": 33.5,
+                        "marginRight": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentRight"
+                     },
+
+                                          
+                     {
+                        "commonName": "Label",
+                        "name": "NamaPilihTim",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": -122,
+                        "fontSize": 21,
+                        "fontColor": "$COLOR_WHITE",
+                        "forceCaps": true,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_home_team_name",
+                              "property": "text"
+                           }
+                        ]
+                     },
+
+                     
+                     {
+                        "commonName": "Asset",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": -36.5,
+                        "marginLeft": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentLeft"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "CENTER",
+                        "alignH": "RIGHT",
+                        "marginTop": -36.5,
+                        "marginRight": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentRight"
+                     },
+                     {
+                        "commonName": "TeamSelector",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": -10,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_home_team_selector",
+                              "property": "dataProviders"
+                           }
+                        ]
+                     },
+
+                     {
+                        "commonName": "Label",
+                        "name": "NamaPilihLiga",
+                        "alignV": "BOTTOM",
+                        "alignH": "CENTER",
+                        "marginBottom": 58,
+                        "fontSize": 21,
+                        "fontColor": "$COLOR_BLACK",
+                        "forceCaps": true,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_home_team_league",
+                              "property": "text"
+                           }
+                        ]
+                     },
+
+                     {
+                        "commonName": "Asset",
+                        "alignV": "BOTTOM",
+                        "alignH": "LEFT",
+                        "marginBottom": 35.5,
+                        "marginLeft": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentLeft"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "BOTTOM",
+                        "alignH": "RIGHT",
+                        "marginBottom": 35.5,
+                        "marginRight": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentRight"
+                     }
+                  ]
+               },
+               
+               {
+                  "commonName": "Asset",
+                  "alignV": "CENTER",
+                  "alignH": "CENTER",
+                  "marginBottom": -100,
+                  "width": 135,
+                  "height": 310,
+                  "type": "$BackgroundLogoVS"
+               },
+ 
+               {
+                  "commonName": "Panel",
+                  "name": "BagianTimAway",
+                  "alignV": "CENTER",
+                  "alignH": "RIGHT",
+                  "width": 277,
+                  "height": 460,
+                  "children":
+                  [
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "TOP",
+                        "alignH": "LEFT",
+                        "marginTop": 29,
+                        "marginLeft": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_away_country_previous"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "TOP",
+                        "alignH": "RIGHT",
+                        "marginTop": 29,
+                        "marginRight": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_away_country_next"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": -37,
+                        "marginLeft": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_away_team_previous"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "CENTER",
+                        "alignH": "RIGHT",
+                        "marginTop": -37,
+                        "marginRight": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_away_team_next"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "BOTTOM",
+                        "alignH": "LEFT",
+                        "marginBottom": 33,
+                        "marginLeft": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_away_league_previous"
+                     },
+                     {
+                        "commonName": "GenericButton",
+                        "alignV": "BOTTOM",
+                        "alignH": "RIGHT",
+                        "marginBottom": 33,
+                        "marginRight": 23,
+                        "width": 25,
+                        "height": 25,
+                        "clickAction": "act_away_league_next"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "type": "$BackgroundPilihTim"
+                     },
+
+                     {
+                        "commonName": "Label",
+                        "name": "NamaPilihNegara",
+                        "alignV": "TOP",
+                        "alignH": "CENTER",
+                        "marginTop": 4,
+                        "fontSize": 21,
+                        "fontColor": "$COLOR_BLACK",
+                        "forceCaps": true,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_away_team_country",
+                              "property": "text"
+                           }
+                        ]
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "TOP",
+                        "alignH": "LEFT",
+                        "marginTop": 33.5,
+                        "marginLeft": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentLeft"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "TOP",
+                        "alignH": "RIGHT",
+                        "marginTop": 33.5,
+                        "marginRight": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentRight"
+                     },
+                     {
+                        "commonName": "Label",
+                        "name": "NamaPilihTim",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": -122,
+                        "fontSize": 21,
+                        "fontColor": "$COLOR_WHITE",
+                        "forceCaps": true,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_away_team_name",
+                              "property": "text"
+                           }
+                        ]
+                     },                     
+                     {
+                        "commonName": "Asset",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": -36.5,
+                        "marginLeft": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentLeft"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "CENTER",
+                        "alignH": "RIGHT",
+                        "marginTop": -36.5,
+                        "marginRight": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentRight"
+                     },
+                     {
+                        "commonName": "TeamSelector",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": -10,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_away_team_selector",
+                              "property": "dataProviders"
+                           }
+                        ]
+                     },
+
+                     {
+                        "commonName": "Label",
+                        "name": "NamaPilihLiga",
+                        "alignV": "BOTTOM",
+                        "alignH": "CENTER",
+                        "marginBottom": 56,
+                        "fontSize": 21,
+                        "fontColor": "$COLOR_BLACK",
+                        "forceCaps": true,
+                        "bindings":
+                        [
+                           {
+                              "binding": "bnd_away_team_league",
+                              "property": "text"
+                           }
+                        ]
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "BOTTOM",
+                        "alignH": "LEFT",
+                        "marginBottom": 35.5,
+                        "marginLeft": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentLeft"
+                     },
+                     {
+                        "commonName": "Asset",
+                        "alignV": "BOTTOM",
+                        "alignH": "RIGHT",
+                        "marginBottom": 35.5,
+                        "marginRight": 24,
+                        "width": 16,
+                        "height": 18,
+                        "type": "$TournamentRight"
+                     }
+
+                     
+                  ]
+               }
+               
+            ]
+        }
+        
+    ]
+}

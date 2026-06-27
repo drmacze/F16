@@ -1,0 +1,48 @@
+{
+	"name": "PlayerMode",
+    "let":  
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "MOTM_MATCH"
+	},
+    "onEnter":
+    [
+         ["viewLayer", ["Gamemodes"]],
+        ["finishViewUnload", ["screen"]],
+        ["showFEUI", [".gamemode"]],
+        ["stateChange", ["PlayerMode"]],
+        ["SetGameMode", ["PlayerMode"]]
+    ],
+    "onExit":
+    [
+        ["hideUI", [".gamemode"]]
+    ],
+    "initial":
+    {
+        "targets": ["Pregame"]
+    },
+    "states":
+    [
+        {
+            "name": "Pregame",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayAIVSAI/PreGame/PreGame.nav",
+            "outputs":
+            {
+                "out_exit": "out_exit_gamemode",
+                "out_ingame_flow": "InGameFlow"
+            }
+        },
+		{
+			"name": "InGameFlow",
+			"type": "external",
+			"file": "/flows/ingameflow/InGameFlow.nav",
+			"outputs":
+			{
+				"out_exit": "out_exit_gamemode"
+			}
+		}
+    ]
+}

@@ -1,0 +1,5 @@
+{
+	"dds": ["Remover.dd"],
+    "vms": [["lua", "Remover.lua"]],
+    "views": [["gfx", {"layout": "Remover.layout"}]]
+}

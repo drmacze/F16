@@ -1,0 +1,36 @@
+{
+	"name": "ControlsHelp",
+	"onEnter":
+	[
+		["updateUserPlateDisplayMode", ["lite"]]
+	],
+	"onExit":
+	[
+		["updateUserPlateDisplayMode", ["full"]]
+	],
+	"initial":
+    {
+        "targets": ["ControlsHelpState"]
+    },
+	"states":
+	[
+		{
+			"name": "ControlsHelpState",
+			"onEnter": 
+			[
+				["blockingLoadVVM", ["ControlsHelp.vvm"]]
+			],
+			"onExit":
+			[
+				["unloadVVM"]
+			],
+			"transitions":
+			[
+				{
+					"event": "evt_back",
+					"targets": ["out_exit_gamemode"]
+				}
+			]
+		}
+	]
+}

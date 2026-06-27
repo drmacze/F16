@@ -1,0 +1,16 @@
+{
+    "name": "MenuStats",
+    "states":
+    [
+        {              
+            "name": "MenuStat_DetailStats",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/MenuStats/detailstats/detailstats.nav",
+            "outputs":
+            {
+               "out_back": "out_hub",
+               "out_advance": "out_hub"
+            }
+        }
+    ]
+}

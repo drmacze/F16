@@ -1,0 +1,38 @@
+{
+    "name": "SelectLeagueTeam",
+    "states":
+    [
+		{
+            "name": "RedirectSelectLeagueTeam",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["SelectLeagueTeam.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_proceed",
+                    "targets": ["LigaStart"]
+                }
+            ]
+        },
+        {
+            "name": "LigaStart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "SelectLeagueTeam",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

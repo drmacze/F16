@@ -1,0 +1,5 @@
+{
+    "dds": ["TouchControls.dd"],
+    "vms": [["lua", "TouchControls.lua"]],
+    "views": [["gfx", {"layout": "TouchControls.layout"}]]
+}

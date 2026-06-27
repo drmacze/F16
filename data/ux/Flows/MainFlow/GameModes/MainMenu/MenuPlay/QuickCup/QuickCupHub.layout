@@ -1,0 +1,341 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 800,
+            "height": 500,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "SELECT TOURNAMENT"
+                },
+
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 50,
+                   "marginLeft": 20,
+                   "fontSize": 18,
+			       "fontColor": "$COLOR_DARK_GRAY",
+			       "text": "Welcome to Tournament Mode ! Select a Country or Tournament to Start. There are New 3 Tournaments"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 73,
+                   "marginLeft": 20,
+                   "fontSize": 18,
+			       "fontColor": "$COLOR_DARK_GRAY",
+			       "text": "to Play Now."
+                },
+
+                /* ---------------------------------- */
+                /* Bagian Click Tournament */
+                /* ---------------------------------- */
+                
+                {
+                   "commonName": "LiveTilePlay",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginLeft": 82,
+                   "height": 380,
+                   "width": 180,
+                   "clickAction": "act_euro2016"
+                },
+                {
+                   "commonName": "LiveTilePlay",
+                   "alignV": "BOTTOM",
+                   "alignH": "CENTER",
+                   "height": 380,
+                   "width": 180,
+                   "clickAction": "act_facup"
+                },
+                {
+                   "commonName": "LiveTilePlay",
+                   "alignV": "BOTTOM",
+                   "alignH": "RIGHT",
+                   "marginRight": 75,
+                   "height": 380,
+                   "width": 180,
+                   "clickAction": "act_ucl2016"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "marginTop": 105,
+                   "height": 40,
+                   "alpha": 0.4,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 112,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_BLACK",
+			       "text": "COUNTRY"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "marginTop": 145,
+                   "width": 800,
+                   "height": 125,
+                   "type": "$MenuSelection"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 130,
+                   "marginLeft": 100,
+                   "width": 145,
+                   "height": 140,
+                   "type": "$LogoCountryWorld"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 240,
+                   "marginLeft": 144,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "World"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 130,
+                   "width": 145,
+                   "height": 140,
+                   "type": "$LogoCountryEngland"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 240,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "England"
+                },
+
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 130,
+                   "marginRight": 100,
+                   "width": 145,
+                   "height": 140,
+                   "type": "$LogoCountryWorld"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 240,
+                   "marginRight": 146,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "Europe"
+                },
+                                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "marginTop": 270,
+                   "height": 40,
+                   "alpha": 0.4,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 277,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_BLACK",
+			       "text": "TOURNAMENTS"
+                },
+
+                {
+                   "commonName": "Asset",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 38,
+                   "marginLeft": 100,
+                   "width": 135,
+                   "height": 135,
+                   "type": "$LogoTournamentEuro2016"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 10,
+                   "marginLeft": 108,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_BLACK",
+			       "text": "WORLD CUP"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "BOTTOM",
+                   "alignH": "CENTER",
+                   "marginBottom": 35,
+                   "width": 145,
+                   "height": 150,
+                   "type": "$LogoTournamentFACup"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "CENTER",
+                   "marginBottom": 10,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_BLACK",
+			       "text": "FA CUP"
+                },
+
+                {
+                   "commonName": "Asset",
+                   "alignV": "BOTTOM",
+                   "alignH": "RIGHT",
+                   "marginBottom": 36,
+                   "marginRight": 100,
+                   "width": 135,
+                   "height": 135,
+                   "type": "$LogoTournamentUCL2016"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "RIGHT",
+                   "marginBottom": 10,
+                   "marginRight": 85,
+                   "fontSize": 22,
+			       "fontColor": "$COLOR_BLACK",
+			       "text": "CHAMPIONS CUP"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "CENTER",
+                   "alignH": "LEFT",
+                   "marginTop": -40,
+                   "marginLeft": 20,
+                   "width": 25,
+                   "height": 38,
+                   "type": "$TournamentLeft"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "CENTER",
+                   "alignH": "RIGHT",
+                   "marginTop": -40,
+                   "marginRight": 20,
+                   "width": 25,
+                   "height": 38,
+                   "type": "$TournamentRight"
+                }
+                
+		    ]
+	    }
+	    
+	]
+}

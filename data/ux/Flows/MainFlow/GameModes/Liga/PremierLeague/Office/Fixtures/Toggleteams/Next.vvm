@@ -1,0 +1,5 @@
+{
+    "dds": ["Next.dd"],
+    "vms": [["lua", "Next.lua"]]
+    
+}

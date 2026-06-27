@@ -1,0 +1,37 @@
+{
+    "name": "InGameSquadAway",
+    "onEnter":
+    [
+        ["invoke", ["evt_hide_watermark"]],
+        ["loadVVM", ["/flows/ingameflow/gamemenus/ingamesquad/InGameSquadAway.vvm", { "gamemode": ".gamemode", "flowState": "ingame" }]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"],
+        ["invoke", ["evt_show_watermark"]]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_advance",
+            "targets": ["out_advance"]
+        },
+        {
+            "event":   "evt_back",
+            "targets": ["out_back"]
+        }
+    ],
+    "states":
+    [
+        {
+            "name": "Idle",
+            "transitions":
+            [
+                {
+                    "event":   "evt_toggle_pause",
+                    "targets": ["Idle"]
+                }
+            ]
+        }
+    ]
+}

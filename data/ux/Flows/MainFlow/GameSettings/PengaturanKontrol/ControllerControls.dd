@@ -1,0 +1,228 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_settings_change",
+            "actionname": "act_settings_change"
+        },
+        {
+            "viewname": "act_type_change",
+            "actionname": "act_type_change"
+        },
+        {
+            "viewname": "act_advanced_change",
+            "actionname": "act_advanced_change"
+        },
+        {
+            "viewname": "act_reset_all",
+            "actionname": "act_reset_all"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_btn_reset",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_CMN_RESET"
+            }
+        },
+		{
+			"viewname": "bnd_button_x1_animation",
+			"binding": "bnd_button_x1_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_y1_animation",
+			"binding": "bnd_button_y1_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_a1_animation",
+			"binding": "bnd_button_a1_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_b1_animation",
+			"binding": "bnd_button_b1_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_bumper1_animation",
+			"binding": "bnd_button_bumper1_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_bumper2_animation",
+			"binding": "bnd_button_bumper2_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_a_animation",
+			"binding": "bnd_button_a_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_b_animation",
+			"binding": "bnd_button_b_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_x_animation",
+			"binding": "bnd_button_x_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_y_animation",
+			"binding": "bnd_button_y_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_lt_animation",
+			"binding": "bnd_button_lt_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_lb_animation",
+			"binding": "bnd_button_lb_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_rt_animation",
+			"binding": "bnd_button_rt_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_rb_animation",
+			"binding": "bnd_button_rb_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_rs_animation",
+			"binding": "bnd_button_rs_animation",
+            "type": "object"
+		},
+		{
+			"viewname": "bnd_button_ls_animation",
+			"binding": "bnd_button_ls_animation",
+            "type": "object"
+		},
+		{
+            "viewname": "bnd_advancedattacking_group_v",
+			"binding": "bnd_advancedattacking_group_v",
+            "type": "bool"
+            
+        },
+		{
+            "viewname": "bnd_advanceddefensive_group_v",
+			"binding": "bnd_advanceddefensive_group_v",
+            "type": "bool"
+            
+        },
+		{
+            "viewname": "bnd_controll_settings_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SETTINGS_CONTROL_VIEW"
+            }
+        },
+        {
+            "viewname": "bnd_controll_type_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SETTINGS_CONTROL_TYPE"
+            }
+        },
+		{
+            "viewname": "bnd_controll_advanced_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SETTINGS_CONTROL_SCHEME"
+            }
+        },
+        {
+            "viewname": "bnd_controll_settings_index",
+            "binding": "bnd_controll_settings_index",
+            "type": "int",
+            "actions":
+            [
+                {
+                    "viewname": "act_settings_change",
+                    "actionname": "act_settings_change"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_controll_type_index",
+            "binding": "bnd_controll_type_index",
+            "type": "int",
+            "actions":
+            [
+                {
+                    "viewname": "act_type_change",
+                    "actionname": "act_type_change"
+                }
+            ]
+        },
+		{
+            "viewname": "bnd_controll_advanced_index",
+            "binding": "bnd_controll_advanced_index",
+            "type": "int",
+            "actions":
+            [
+                {
+                    "viewname": "act_advanced_change",
+                    "actionname": "act_advanced_change"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_controll_settings_list",
+            "binding": "bnd_controll_settings_list",
+            "type": "object"
+        },	
+        {
+            "viewname": "bnd_controll_type_list",
+            "binding": "bnd_controll_type_list",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_controll_type_list_enabled",
+            "binding": "bnd_controll_type_list_enabled",
+            "type": "bool"
+        },
+		{
+            "viewname": "bnd_controll_advanced_list",
+            "binding": "bnd_controll_advanced_list",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_basic_group_v",
+            "binding": "bnd_basic_group_v",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_advanced_group_v",
+            "binding": "bnd_advanced_group_v",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_basic_controller_list_data",
+            "binding": "bnd_basic_controller_list_data",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_advanced_controller_list_data",
+            "binding": "bnd_advanced_controller_list_data",
+            "type": "object"
+        }
+    ]
+}

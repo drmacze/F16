@@ -1,0 +1,118 @@
+{
+	"name": "Help",
+	"onEnter":
+	[
+		["viewLayer", ["Gamemodes"]]
+	],
+	"initial":
+    {
+        "targets": ["HelpHub"]
+    },
+    "transitions":
+    [
+        {
+            "event":   "evt_to_home",
+            "targets": ["out_exit_gamemode"]
+        }
+    ],
+	"states":
+	[
+		{
+			"name": "HelpHub",
+			"onEnter": 
+			[
+				["blockingLoadVVM", ["HelpHub.vvm"]]
+			],
+			"onExit":
+			[
+				["unloadVVM"]
+			],
+			"transitions":
+			[
+				{
+					"event": "evt_back",
+					"targets": ["out_exit_gamemode"]
+				},
+				{
+					"event":   "evt_to_general_help_hub",
+                    "targets": ["GeneralHelp"]
+				},
+				{
+					"event":   "evt_to_controls_help_hub",
+                    "targets": ["ControlsHelp"]
+				},
+				{
+					"event":   "evt_to_simulation_help_hub",
+                    "targets": ["SimulationHelp"]
+				}
+			],
+			"states":
+			[
+				{
+					"name": "BrowserClosed",
+					"onEnter":
+					[
+						["showBackButton"]
+					],
+					"transitions":
+					[
+						{
+							"event":   "evt_open_browser",
+							"targets": ["BrowserOpened"]
+						}
+					]
+				},
+				{
+					"name": "BrowserOpened",
+					"onEnter":
+					[
+						["loadVVM", ["/flows/bootflow/tos/BrowserScreen.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					],
+					"transitions":
+					[
+						{
+							"event":   "evt_close_browser",
+							"targets": ["BrowserClosed"]
+						},
+						{
+							"event": "evt_networkstatus_showpopup",
+							"cond":    ["==", ".HIDE_NETWORK_POPUP", false],
+							"targets": ["BrowserClosed"]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "GeneralHelp",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/helpandabout/help/general_help/GeneralHelp.nav",
+			"outputs":
+			{
+				"out_exit_gamemode": "Help"
+			}
+		},	
+		{
+			"name": "ControlsHelp",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/helpandabout/help/controls_help/ControlsHelp.nav",
+			"outputs":
+			{
+				"out_exit_gamemode": "Help"
+			}
+		},	
+		{
+			"name": "SimulationHelp",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/helpandabout/help/simulation_help/SimulationHelp.nav",
+			"outputs":
+			{
+				"out_exit_gamemode": "Help"
+			}
+		}
+	]
+}

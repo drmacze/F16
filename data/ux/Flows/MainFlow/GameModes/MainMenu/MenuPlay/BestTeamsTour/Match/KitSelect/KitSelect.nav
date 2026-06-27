@@ -1,0 +1,42 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["KitSelectStartMatch"]
+    },
+    "states":
+    [
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["KitSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/BestTeamsTour/Match/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        }
+
+    ]
+}

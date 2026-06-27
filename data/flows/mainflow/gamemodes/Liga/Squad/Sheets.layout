@@ -1,0 +1,297 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 70,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "MC"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Squad"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 245,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xA8A8A8",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 273,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Team Sheets"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 30,
+            "marginLeft": 0,
+            "width": 1000,
+            "height": 370,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "alpha": 0,
+                    "color": "0x1B1B2A"
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "width": 495,
+                    "height": 370,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 13,
+                            "alpha": 0.8,
+                            "color": "0x1B1B2A"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$Tab_inTeam"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_squad"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 25,
+                            "marginLeft": 50,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "bold": false,
+                            "scaleX": 1.4,
+                            "scaleY": 1.6,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_sheetname",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "playerteam",
+                            "alignH": "RIGHT",
+                            "alignV": "TOP",
+                            "marginTop": 15,
+                            "marginRight": 20,
+                            "scaleX": 0.3,
+                            "scaleY": 0.3,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 15,
+                            "marginLeft": 20,
+                            "fontSize": 22,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "bold": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_playerteam",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "width": 495,
+                    "height": 370,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 13,
+                            "alpha": 0.8,
+                            "color": "0x1B1B2A"
+                        },
+                        {
+                            "commonName": "GridTable",
+                            "name": "leaguesGridTable",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "marginTop": 0,
+                            "marginLeft": 0,
+                            "color": "0xFFFFFF",
+                            "cellIndexChangeAction":
+                            {
+                                "action": "act_change",
+                                "binding": "bnd_player_index"
+                            },
+                            "columns": 2,
+                            "hasBulletIndicator": false,
+                            "itemType": "LeagueGridCell",
+                            "rows": 2,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_player_list",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_default_cell_data",
+                                    "property": "defaultCellData"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

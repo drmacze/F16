@@ -1,0 +1,67 @@
+{
+    "name": "Match",
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["Match.vvm"]],
+        ["blockingLoadVVM", ["/Flows/InGameFlow/GameFlow/GameFlow.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"],
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "name": "MatchSetup",
+			"onEnter":
+			[
+			    ["stateChange", ["MOTM_MATCH"]],
+                ["substateChange", ["PREGAME"]],
+                ["invoke", ["evt_to_team_setup"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_to_team_setup",
+                    "targets": ["TeamSetup"]
+                }
+            ]
+        },
+        {
+            "name": "TeamSetup",
+            "onEnter":
+            [
+                ["setTeams"],
+                ["invoke", ["evt_start_match"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_start_match",
+                    "targets": ["InGameFlow"]
+                }
+            ]
+        },
+		{
+            "let":
+            {
+                "gamemode": "real",
+                "flow": "offline",
+                "type": "friendly"
+            },
+            "states":
+            [
+                {
+					"name": "InGameFlow",
+					"type": "external",
+					"file": "/Flows/InGameFlow/InGameFlow.nav",
+					"outputs":
+					{
+						"out_exit": "out_exit_gamemode"
+					}
+				}
+			]
+        }
+    ]
+}

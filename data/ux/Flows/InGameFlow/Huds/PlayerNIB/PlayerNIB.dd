@@ -1,0 +1,75 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_camera_change",
+			"actionname": "act_camera_change"
+		}
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_active",
+            "binding": "bnd_active",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_alpha",
+            "binding": "bnd_alpha",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_player_info",
+            "binding": "bnd_player_info",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_stamina_inner_bg",
+            "binding":  "bnd_stamina_inner_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stamina_width",
+            "binding":  "bnd_stamina_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_stamina_bottom",
+            "binding":  "bnd_stamina_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_stamina_outside_bg",
+            "binding":  "bnd_stamina_outside_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stamina_short_width",
+            "binding":  "bnd_stamina_short_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_stamina",
+            "binding": "bnd_stamina",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "stamina": "float",
+                    "shortStamina": "float"
+                }
+            }
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding": "bnd_home_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding": "bnd_away_team_crest",
+            "type": "object"
+        }
+    ]
+}

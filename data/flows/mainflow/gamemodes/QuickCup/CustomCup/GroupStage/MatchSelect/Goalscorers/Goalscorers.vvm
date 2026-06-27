@@ -1,0 +1,6 @@
+{
+	"dds": ["Goalscorers.dd"],
+    "vms": [["lua", "Goalscorers.lua"]],
+    "views": [["gfx", {"layout": "Goalscorers.layout"}]],
+	"ireqs": ["Goalscorers.ireq"]
+}

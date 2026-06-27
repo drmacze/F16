@@ -1,0 +1,558 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+	"commonName": "Panel",
+	"name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+	"behaviors":
+	[
+		{
+			"commonName": "SquadTeamManagementBehavior",
+			"starting11": "insSquad.insSquadLayout",
+			"subsAndReserves": "insSquad.insItemDock",
+			"actionName": "act_swap_players"
+		},
+		{
+			"commonName": "SquadPlayerComparisonBehavior",
+			"comparisonTargetNames":
+			[
+				"insSquad.insSquadLayout",
+				"insSquad.insItemDock"
+			],
+			"actionName": "act_compare_players"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_advance",
+            "label": "Save"
+        }
+	],
+	"style-definitions":
+	{
+		"TF_TEAM_NAME":
+		{
+            "text-format": "fow.style.SquadStyle.TF_FORMATION_NAME",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER"
+		},
+		"TF_TEAM_NAME1":
+		{
+            "fontColor": "$COLOR_WHITE",
+            "fontSize": 80,
+            "textAlignH": "CENTER",
+            "bold": false
+		},
+		 "TF_SUBS_REMAINING_LABEL":
+        {
+            "fontTitle": "$FONT_TITLE",
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "CENTER"
+        },
+		"TF_TEAM_STATS_LABEL":
+		{
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL",
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE"
+		},
+		"TF_TEAM_STATS_LABEL_MOD":
+		{
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL",
+            "fontSize": 21.5,
+            "fontColor": "$COLOR_BLACK"
+		},
+		"TF_TEAM_STATS":
+		{
+            "text-format": "fow.style.SquadStyle.TF_COMBOBOX_LABEL",
+            "fontColor": "$COLOR_WHITE"
+		}
+	},
+	"children":
+	[
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_FormasiTeam"
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 550,
+            "children":
+            [
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianNotifikasi2",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": -10,
+                    "marginRight": -318,
+                    "width": 413,
+                    "height": 70,
+                    "children":
+                    [
+                        {
+                           "commonName": "Asset",
+                           "alignV": "FILL",
+                           "alignH": "FILL",
+                           "type": "$Background_Judulstand2"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 29,
+                           "marginRight": 288,
+                           "fontSize": 21.5,
+                           "fontColor": "$COLOR_BLACK",
+                           "text": "TEAM"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianInfo2",
+					"alignV": "TOP",
+					"alignH": "RIGHT",
+					"marginTop": 50,
+					"marginRight": -100.5,
+					"width": 193,
+					"height": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 193,
+                            "height": 100,
+                            "type": "$MenuSelection"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "Crest",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 10,
+                            "marginRight": -1.5,
+                            "width": 50,
+                            "height": 50,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_crest",
+                                    "property": "image"
+                                }
+		                    ]
+                        },     
+                        {
+                            "commonName": "StarRating",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 70,
+                            "marginRight": -1.5,
+                            "scaleX": 1.2,
+                            "scaleY": 1.2,
+                            "name": "insStarRating",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_rating",
+                                    "property": "stars"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 100,
+                            "width": 193,
+                            "height": 35,
+                            "type": "$LiveTileBackgroundIdle"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 107.5,
+                            "marginRight": -1.5,
+                            "width": 180,
+                            "autoScroll": true,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_DARK_GRAY",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_name",
+                                    "property": "text"
+                                }
+		                    ]
+                        }  
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianNotifikasi",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -10,
+                    "marginLeft": -318,
+                    "width": 413,
+                    "height": 70,
+                    "children":
+                    [
+                        {
+                           "commonName": "Asset",
+                           "alignV": "FILL",
+                           "alignH": "FILL",
+                           "type": "$Background_Judulstand"
+                        },
+                        {
+                           "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 29,
+                            "marginLeft": 263.5,
+                            "bindings":
+		                    [
+                                {
+                                    "binding": "bnd_team_rating_label",
+                                    "property": "text"
+                                }
+		                    ],
+		                    "styles":
+		                    [
+                                    "TF_TEAM_STATS_LABEL_MOD"
+		                    ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianInfo",
+					"alignV": "TOP",
+					"alignH": "LEFT",
+					"marginTop": 50,
+					"marginLeft": -100.5,
+					"width": 193,
+					"height": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 193,
+                            "height": 75,
+                            "type": "$MenuSelection"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+					       "marginLeft": -1.5,
+                           "marginTop": 7.5,
+                           "fontSize": 17,
+                           "fontColor": "$COLOR_WHITE",
+                           "text": "FORMATION"
+                        },
+                        {
+                           "commonName": "DragToggle",
+                           "itemStyleName": "TF_SUBS_REMAINING_LABEL",
+                           "isCircular": true,
+                           "itemType": "Label",
+                           "toggleAction":
+                           {
+                           "action": "act_change",
+                           "binding": "bnd_formation_index"
+                           },
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 40,
+					       "marginLeft": -1.5,
+                           "width": 180,
+                           "height": 33,
+                           "clickAction": "act_formation_popup",
+                           "name": "insFormationToggle",
+                           "arrowType": "",
+                           "animated": true,
+                           "bindings":
+                           [
+                                {
+                                    "binding": "bnd_formation_list",
+                                    "property": "dataProviders"
+                                }
+                           ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 75,
+                            "width": 193,
+                            "height": 188,
+                            "type": "$LiveTileBackgroundIdle"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+					       "marginLeft": -1.5,
+                           "marginTop": 82.5,
+                           "fontSize": 17,
+                           "fontColor": "$COLOR_DARK_GRAY",
+                           "text": "COMPARISON"
+                        },
+                        {
+                           "commonName": "PlayerComparison",
+                           "name": "insPlayerComparison",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 107,
+                           "width": 193,
+                           "height": 140,
+                           "visible": false,
+                           "bindings":
+                           [
+                                {
+                                    "binding": "bnd_player_comparison_data",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_comparison_type",
+                                    "property": "playerLabel"
+                                }
+                           ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+
+
+
+
+                
+		{
+			"commonName": "Group",
+			"width": 210,
+			"marginTop": 255,
+			"marginLeft": -116,
+			"name": "insFormation",
+			"authoringData":
+			{
+				"expanded": false
+			},
+			"children":
+			[
+				{
+					"commonName": "",
+					"width": 210,
+					"height": 40.0,
+					"name": "",
+					"title":""
+				},
+				
+
+						{
+					"commonName": "Image",
+					"marginBottom": -410,
+					"marginLeft": 0,
+					"alignH": "CENTER",
+					"alignV": "BOTTOM",
+					"scaleX": 0.55,
+		            "scaleY": 0.55,
+					"name": "insTeamManagerUnknown",
+					"type": "$ManagerCardUnknown"
+				},
+				{
+					"commonName": "Image",
+					"marginBottom": -410,
+					"marginLeft": 0,
+					"alignH": "CENTER",
+					"alignV": "BOTTOM",
+					"scaleX": 0.55,
+		            "scaleY": 0.55,
+					"name": "insTeamManager",
+					"bindings":
+					[
+						{
+							"binding": "bnd_team_man",
+							"property": "image"
+						}
+					]
+				},
+				{
+					"commonName": "DragToggle",
+					"itemStyleName": "TF_TEAM_NAME1",
+					"alpha": 0.4,
+					"isCircular": true,
+					"itemType": "Label",
+					"toggleAction":
+					{
+						"action": "act_change",
+						"binding": "bnd_formation_index"
+					},
+					"x": -110.0,
+					"y": 3500000,
+					"width": 750,
+					"height": 160.0,
+					"alignH": "CENTER",
+					"clickAction": "act_formation_popup",
+					"name": "insFormationToggle",
+                    "arrowType": "blue_small",
+                    "animated": true,
+					"bindings":
+					[
+						{
+							"binding": "bnd_formation_list",
+							"property": "dataProviders"
+						}
+					]
+				}
+			]
+		},
+	    {
+			"commonName": "Panel",
+			"marginTop": 250.0,
+			"width": 900.0,
+			"alignV": "BOTTOM",
+			"height": 400.0,
+			"alignH": "CENTER",
+			"marginBottom": 35.0,
+			"name": "insSquad",
+			"authoringData":
+			{
+				"expanded": false
+			},
+			"children":
+			[
+				{
+					"commonName": "SquadChemistryLinks",
+					"x": 424.0,
+					"y": 484.0,
+					"marginTop": 177,
+					"marginLeft": 452.0,
+					"name": "insChemistryLinks",
+					"bindings":
+					[
+						{
+							"binding": "bnd_chemistry_matrix",
+							"property": "formationChemistry"
+						}
+					]
+				},
+				{
+					"commonName": "SquadLayout",
+					"contextMenuEnabled": true,
+					"exchangeTargetNames":
+					[
+						"insSquad.insItemDock"
+					],
+					"itemView": 1,
+					"highlightable": true,
+					"x": 493.0,
+					"y": 423.0,
+					"marginTop": 120,
+					"marginLeft": 452.0,
+					"name": "insSquadLayout",
+					"bindings":
+					[
+						{
+							"binding": "bnd_starting_11",
+							"property": "starting11"
+						},
+						{
+							"binding": "bnd_formation",
+							"property": "formation"
+						}
+					]
+				},
+				{
+					"commonName": "Asset",
+					"alignH": "CENTER",
+					"marginTop": -160,
+					"marginLeft": 5,
+					"width": 950,
+					"height": 600,
+					"path": "views/items/item_generic_ambient2.swf"
+				},
+				{
+					"commonName": "SubsDrawer",
+					"selectable": true,
+					"mouseInteractive": true,
+					"contextMenuEnabled": true,
+					"exchangeTargetNames":
+					[
+						"insSquad.insSquadLayout"
+					],
+					"itemView": 1,
+					"autoHide": true,
+					"scrollable": true,
+					"draggable": true,
+					"highlightable": true,
+					"size": 0,
+					"alignV": "BOTTOM",
+					"alignH": "CENTER",
+					"displayType": "SUBS_AND_RES",
+					"marginBottom": -295.0,
+					"name": "insItemDock",
+					"height": 295,
+					"width": 1425,
+					"bindings":
+					[
+						{
+							"binding": "bnd_subs_and_res",
+							"property": "dataProviders"
+						}
+					]
+				}
+
+			]
+		}
+	]
+}

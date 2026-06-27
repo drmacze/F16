@@ -1,0 +1,275 @@
+{
+    "name": "MainHub",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "name": "InitHub",
+                    "onEnter":
+                    [
+                        ["showFEUI"],
+                        ["enableMainFlowLayerMouseInteraction", ["Widgets", true, false]],
+                        ["blockingLoadVVM", ["/flows/mainflow/widgets/extendeduserbio/loading/Loading.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_on_show_fe_ui_complete",
+                            "targets": ["Hub"]
+                        }
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]],
+                        ["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["updateUserPlateDisplayMode", ["full"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Hub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MainMenu/MainHub.vvm", {}, { "viewType": "screen" }]],
+                                ["stateChange", ["ARENA"]],
+                                ["substateChange", ["SUBSTATE_NONE"]],
+                                ["updateUserPlateDisplayMode", ["full"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM", [{}, { "waitForNextView": ".enableScreenTransitions" }]]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab1",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [0]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/TabActive/Tab1.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+                                        { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+                                        { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+                                        { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+                                        { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab2",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [1]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/TabActive/Tab2.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+                                        { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+                                        { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+                                        { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+                                        { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab3",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [2]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/TabActive/Tab3.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+                                        { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+                                        { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+                                        { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+                                        { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [3]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/TabActive/Tab4.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+                                        { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+                                        { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+                                        { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+                                        { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab5",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [4]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/TabActive/Tab5.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+                                        { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+                                        { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+                                        { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+                                        { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab6",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [5]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/TabActive/Tab6.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+                                        { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+                                        { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+                                        { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+                                        { "event": "evt_tab5", "targets": ["RedirectTab5"] }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        { "event": "evt_enter_ko", "targets": ["EnterKO"] },
+                        { "event": "evt_enter_tn", "targets": ["EnterTN"] },
+                        { "event": "evt_enter_cm", "targets": ["EnterCM"] },
+                        { "event": "evt_enter_pc", "targets": ["EnterPC"] },
+                        { "event": "evt_enter_rm", "targets": ["EnterRM"] },
+                        { "event": "evt_to_credits", "targets": ["Credits"] },
+                        { "event": "evt_customize", "targets": ["Customize"] },
+                        { "event": "evt_news", "targets": ["News"] },
+                        { "event": "evt_to_about", "targets": ["About"] }
+                    ]
+                },
+                {
+                    "name": "EnterKO",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuKO/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab1"
+                    }
+                },
+                {
+                    "name": "EnterTN",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/CustomCup.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab2"
+                    }
+                },
+                {
+                    "name": "EnterCM",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/Liga/Newgame/Newgame.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab3",
+                        "out_exit_gamemode1": "RedirectTab3"
+                    }
+                },
+                {
+                    "name": "EnterPC",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/Career/CareerHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab4"
+                    }
+                },
+                {
+                    "name": "EnterRM",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/ClassicMatch/ClassicMatch.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab5"
+                    }
+                },
+                {
+                    "name": "Credits",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/Credits/CreditsHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab6"
+                    }
+                },
+                {
+                    "name": "Customize",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/Customize/CustomizeHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "News",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/Customize/News/NewsHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "About",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/helpandabout/help/Help.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                }
+            ]
+        }
+    ]
+}

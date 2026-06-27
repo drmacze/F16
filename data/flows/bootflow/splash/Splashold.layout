@@ -1,0 +1,100 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "MouseClickActionBehavior",
+            "actionName": "act_press_start"
+        },
+        {
+            "commonName": "KeyPressActionBehavior",
+            "actionName": "act_press_start"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "name": "darkener",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "alpha": 0.5,
+            "height": 350.0,
+            "x": 0.0,
+            "y": 0.0,
+            "type": "$FixedPanelL",
+            "bindings":
+            [
+                {
+                    "binding": "BND_BACKGROUND_WIDTH",
+                    "property": "width"
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "contentGroup",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 768.0,
+            "width": 1024.0,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "name": "logo",
+                    "y": 283.0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_olp_logo_x",
+                            "property": "x"
+                        },
+                        {
+                            "binding": "bnd_olp_logo",
+                            "property": "type"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insDisclaimer",
+                    "width": 600.0,
+                    "x": 350.0,
+                    "y": 280.0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_disclaimer_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_SPLASH_DISCLAIMER"
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "insPressStart",
+            "alignH": "CENTER",
+            "alignV": "BOTTOM",
+            "marginBottom": 20.0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_continue_label",
+                    "property": "text"
+                }
+            ],
+            "styles":
+            [
+                "TF_SPLASH_PRESS_START"
+            ]
+        }
+    ]
+}

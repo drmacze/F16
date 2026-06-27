@@ -1,0 +1,272 @@
+/* ------------------------------------- */
+/* MOD Created By MounTsa */
+/* ------------------------------------- */
+
+{
+  "commonName": "Panel",
+  "name": "rootContainer",
+  "alignV": "CENTER",
+  "alignH": "CENTER",
+  "bindings": [
+    {
+      "binding": "BND_SCREEN_WIDTH",
+      "property": "width"
+    },
+    {
+      "binding": "BND_SCREEN_HEIGHT",
+      "property": "height"
+    }
+  ],
+  "animationScripts": [
+    {
+      "name": "show",
+      "script": [
+        {
+          "anim": "ANIMASI_MASUK_MAINMENU"
+        }
+      ]
+    },
+    {
+      "name": "hide",
+      "script": [
+        {
+          "anim": "ANIMASI_KELUAR_MAINMENU"
+        }
+      ]
+    }
+  ],
+  "behaviors": [],
+  "children": [
+  
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 35,
+                    "height": 30,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -30,
+                            "marginLeft": 798,
+                            "height": 90,
+                            "width": 267,
+                            "alpha": 1,
+                            "path": "views/backgrounds/Green_Effect.swf"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 845,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "text": "Controller Settings"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 70,
+                    "marginLeft": 0,
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "height": 100,
+                            "width": 200,
+                            "backgroundImage": "$Tab_Action_White",
+                            "backgroundHighlightImage": "$Tab_Action_Green",
+                            "clickAction": "act_menuside_selectside"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0x1E1E1E",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Tap to Controller"
+                        }
+                    ]
+                 },
+    {
+      "commonName": "Panel",
+      "name": "BagianMatchPreview",
+      "alignV": "TOP",
+      "alignH": "CENTER",
+      "marginTop": 83.5,
+      "width": 780,
+      "height": 307.5,
+      "children": [
+
+        {
+          "commonName": "Label",
+          "name": "NamaTimHome",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginBottom": -100,
+          "marginLeft": -315,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontSize": 18,
+          "forceCaps": true,
+          "bindings": [
+            {
+              "binding": "bnd_home_team_name",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "NamaTimAway",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginBottom": -100,
+          "marginRight": -315,
+          "fontColor": "$COLOR_LIGHT_GRAY",
+          "fontSize": 18,
+          "forceCaps": true,
+          "bindings": [
+            {
+              "binding": "bnd_away_team_name",
+              "property": "text"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 60,
+          "marginLeft": -315,
+          "fontColor": "$COLOR_LIGHT_GREEN",
+          "fontSize": 19,
+          "forceCaps": false,
+          "text": "Player1"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "TOP",
+          "alignH": "CENTER",
+          "marginTop": 60,
+          "marginRight": -315,
+          "fontColor": "$COLOR_LIGHT_BLUE",
+          "fontSize": 19,
+          "forceCaps": false,
+          "bindings": [
+            {
+              "property": "text",
+              "binding": "bnd_match_difficulty"
+            }
+          ]
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "BOTTOM",
+          "alignH": "CENTER",
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "fontColor": "$COLOR_YELLOW",
+          "fontSize": 18,
+          "fontFace": "$FONT_ORIGIN_NORMAL",
+          "forceCaps": false,
+          "text": "Current Controll Preset"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "BOTTOM",
+          "alignH": "CENTER",
+          "marginBottom": -20,
+          "marginLeft": 0,
+          "fontColor": "0x8D1C3E",
+          "fontSize": 18,
+          "fontFace": "$FONT_ORIGIN_NORMAL",
+          "forceCaps": false,
+          "text": "Player1"
+        },
+        {
+          "commonName": "Label",
+          "name": "Player1",
+          "alignV": "BOTTOM",
+          "alignH": "CENTER",
+          "marginBottom": -150,
+          "marginLeft": 0,
+          "fontColor": "0xFFFFFF",
+          "fontSize": 18,
+          "fontFace": "$FONT_ORIGIN_NORMAL",
+          "forceCaps": false,
+          "text": "Alternate"
+        },
+        {
+          "commonName": "Asset",
+          "alignV": "BOTTOM",
+          "alignH": "CENTER",
+          "marginBottom": -100,
+          "marginLeft": 0,
+          "height": 70,
+          "width": 100,
+          "alpha": 1,
+          "type": "$Controller_Preset"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "BagianNameStadium",
+      "alignV": "BOTTOM",
+      "alignH": "CENTER",
+      "marginBottom": 40,
+      "marginLeft": 0,
+      "width": 900,
+      "height": 40,
+      "children": [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 15,
+                            "color": "0x1C1C1C",
+                            "alpha": 0.8
+                        },
+        {
+          "commonName": "Label",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginLeft": 0,
+          "marginBottom": 0,
+		  "width": 900,
+          "fontSize": 15,
+          "fontColor": "$COLOR_WHITE",
+          "bindings": [
+            {
+              "binding": "bnd_info_match",
+              "property": "text"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

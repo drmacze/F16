@@ -1,0 +1,234 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU_TAB"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU_TAB"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                    [
+                                            
+                        {
+                            "commonName": "Grid",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "spacingH": 7,
+                            "spacingV": 7,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "MenuKickOff",
+                                    "column": 0,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 2
+                                },
+                                {
+									"child": "MenuFIFA16PlayBeautiful",
+                                    "column": 1,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 2
+                                },
+                                {
+                                    "child": "MenuPlayRivalMatchPlayAIVSAI",
+                                    "column": 0,
+                                    "row": 2,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "MenuHelpAbout",
+                                    "column": 1,
+                                    "row": 2,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+									"commonName": "LiveTilePlay",
+									"name": "MenuKickOff",
+									"alignV": "FILL",
+									"alignH": "FILL",
+                                    "clickAction": "act_kickoff",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuHome_KickOff"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_kickoff",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuFIFA16PlayBeautiful",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuHome_FIFA16PlayBeautiful",
+                                       "$MenuHome_FIFA16PlayBeautiful2",
+                                       "$MenuHome_FIFA16PlayBeautiful3",
+                                       "$MenuHome_FIFA16PlayBeautiful4"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_fifa16playbeautiful",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+									"commonName": "DragToggle",
+									"name": "MenuPlayRivalMatchPlayAIVSAI",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"hasArrows": false,
+									"consumeInput": true,
+									"animated": true,
+									"useTimer": true,
+									"timeRemaining": 5,
+									"itemType": "LiveTile",
+									"bindings":
+									[
+										{
+										    "binding": "bnd_live_tile_playrivalmatch_playaivsai",
+											"property": "dataProviders"
+										}
+									],
+									"behaviors":
+									[
+										{
+											"commonName": "TileBulletMediator",
+										    "positionType": 3,
+										    "style": "ingame",
+										    "showBackground": true,
+									   	    "activateBackground": true,
+										    "currentIndex": 0
+										}
+									]
+                                },
+                                {
+									"commonName": "DragToggle",
+									"name": "MenuHelpAbout",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"hasArrows": false,
+									"consumeInput": true,
+									"animated": true,
+									"useTimer": true,
+									"timeRemaining": 4,
+									"itemType": "LiveTile",
+									"bindings":
+									[
+										{
+										    "binding": "bnd_live_tile_help_about",
+											"property": "dataProviders"
+										}
+									],
+									"behaviors":
+									[
+										{
+											"commonName": "TileBulletMediator",
+										    "positionType": 3,
+										    "style": "ingame",
+										    "showBackground": true,
+									   	    "activateBackground": true,
+										    "currentIndex": 0
+										}
+									]
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

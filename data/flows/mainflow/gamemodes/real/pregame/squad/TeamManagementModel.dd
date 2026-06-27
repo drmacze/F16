@@ -1,0 +1,97 @@
+{
+    "actions":
+    [
+        {
+            "viewname":   "act_swap_players",
+            "actionname": "act_swap_players"
+        },
+        {
+            "viewname":   "act_compare_players",
+            "actionname": "act_compare_players"
+        },
+        {
+            "viewname":   "act_item_show_bio",
+
+            "actionname": "act_item_show_bio"
+        },
+		{
+            "viewname":   "act_send_item_data",
+            "actionname": "act_send_item_data"
+        }
+    ],
+    "data":
+    [
+	    {
+            "viewname": "bnd_chemistry_sfx",
+            "binding":  "bnd_chemistry_sfx",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_chemistry_matrix",
+            "binding":  "bnd_chemistry_matrix",
+            "type":     "object",
+            "deps":     ["bnd_formation"]
+        },
+        {
+            "viewname": "bnd_starting_11",
+            "binding":  "bnd_starting_11",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_subs_and_res",
+            "binding":  "bnd_subs_and_res",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team_name",
+            "binding":  "bnd_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_rating",
+            "binding":  "bnd_team_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_team_rating_label",
+            "binding":  "bnd_team_rating_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_overall",
+            "binding":  "bnd_team_overall",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_player_comparison_data",
+            "binding":  "bnd_player_comparison_data",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_man",
+            "binding":  "bnd_team_man",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_manager",
+            "binding":  "bnd_manager",
+            "type":     "object",
+            "deps":     ["bnd_formation_index"]
+        },
+        {
+            "viewname": "bnd_manager_item_visibility",
+            "binding":  "bnd_manager_item_visibility",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_context_menu_visible",
+            "binding":  "bnd_context_menu_visible",
+            "type":     "bool"
+        }
+    ]
+}

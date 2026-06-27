@@ -1,0 +1,95 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_select_match_settings",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_select_match_settings"
+            }
+        },
+        {
+            "viewname": "act_select_controls",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_select_controls"
+            }
+        },
+        {
+            "viewname": "act_select_audio_visual",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_select_audio_visual"
+            }
+        },
+        {
+            "viewname": "act_select_debug_settings",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_select_debug_settings"
+            }
+        },
+        {
+            "viewname": "act_select_user",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_select_user"
+            }
+        },
+        {
+            "viewname":   "act_accept",
+            "actionname": "act_accept"
+        },
+        {
+            "viewname":   "act_cancel",
+            "actionname": "act_cancel"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_accept_button",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MOB_SETTINGS_SAVE"
+            }
+        },
+        {
+            "viewname": "bnd_cancel_button",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_CANCEL"
+            }
+        },
+
+        {
+            "viewname": "bnd_settings_customize_tab_index",
+            "binding":  "bnd_settings_customize_tab_index",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_is_in_game",
+            "binding":  "bnd_is_in_game",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_debug_settings_tab_visibility",
+            "binding":  "bnd_debug_settings_tab_visibility",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_gameplay_settings_tab_visibility",
+            "binding":  "bnd_gameplay_settings_tab_visibility",
+            "type":     "bool"
+        }		
+    ]
+}

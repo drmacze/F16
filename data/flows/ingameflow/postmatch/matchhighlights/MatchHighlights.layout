@@ -1,0 +1,73 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "SCREEN_SHOW" } ]
+	    },
+		{
+			"name" : "hide",
+		    "script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+ 	   }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 45,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_exit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_exit"
+                }
+            ]
+        }
+    ]
+}

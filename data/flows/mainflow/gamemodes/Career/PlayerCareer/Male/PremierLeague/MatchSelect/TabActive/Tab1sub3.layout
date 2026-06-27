@@ -1,0 +1,73 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Tab1Sub3",
+            "alignV": "BOTTOM",
+            "alignH": "LEFT",
+            "marginLeft": 120,
+            "marginBottom": 111,
+            "width": 450,
+            "height": 48,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 5,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 1.5,
+                    "marginLeft": 17,
+                    "width": 41,
+                    "height": 41,
+                    "backgroundImage": "$Career_Icon_Train_on",
+                    "backgroundHighlightImage": "$Career_Icon_Train_on",
+                    "clickAction": "act_"             
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 90,                                
+                    "fontFace": "$CruyffSansMedium",
+			        "fontSize": 18,
+			        "fontColor": "0x000000",
+                    "text": "10 Update New Feeds"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "FILL",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "clickAction": "act_back"
+                }
+            ]
+        }
+    ]
+}

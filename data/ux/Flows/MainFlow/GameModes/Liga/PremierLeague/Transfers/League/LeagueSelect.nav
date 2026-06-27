@@ -1,0 +1,53 @@
+{
+    "name": "LeagueSelect",
+    "states":
+    [
+		{
+            "name": "RedirectLeagueSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["LeagueSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_team_select",
+                    "targets": ["LigaStart"]
+                },
+                {
+                    "event": "evt_team",
+                    "targets": ["Team"]
+                }
+            ]
+        },
+        {
+            "name": "LigaStart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Player/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "LeagueSelect",
+                "out_exit_gamemode1": "LeagueSelect"
+            }
+        },
+        {
+            "name": "Team",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Team/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "LeagueSelect",
+                "out_exit_gamemode1": "LeagueSelect"
+            }
+        }
+        
+    ]
+}

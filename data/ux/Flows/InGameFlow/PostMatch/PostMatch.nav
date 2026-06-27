@@ -1,0 +1,96 @@
+{
+    "name": "PostMatch",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["substateChange", ["POSTGAME"]],
+        ["activeZoneTransition", ["ZONE_NONE", "ZONE_OFFLINE"]],
+        ["zoneChange", ["ZONE_OFFLINE"]],
+        ["showControllerCursor"],
+        ["feShowing", [true, true]]
+    ],
+    "onExit":
+    [
+        ["substateChange", ["INGAME"]],
+        ["activeZoneTransition", ["ZONE_OFFLINE", "ZONE_NONE"]],
+        ["zoneChange", ["ZONE_NONE"]],
+        ["hideUI"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_restart_match",
+            "targets": ["out_restart_match"]
+        },
+        {
+            "event": "evt_quit_from_game",
+            "targets": ["out_exit_match"]
+        }
+    ],
+    "states":
+    [
+        {
+            "onExit":
+            [
+                ["startMenuMusic"]
+            ],
+            "states":
+            [
+                {
+                    "name": "PostMatchMenu",
+                    "onEnter":
+                    [
+                        ["blockingLoadVVM", ["/flows/ingameflow/gamemenus/PostmatchMenu.vvm", { "gameState": ".gameState" }]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_to_match_facts",
+                            "targets": ["MatchFacts"],
+                            "let": { "redirect": "menu" }
+                        },
+                        {
+                            "event": "evt_to_match_highlights",
+                            "targets": ["MatchHighlights"],
+                            "let": { "redirect": "menu" }
+                        },
+                        {
+                            "event": "evt_quit",
+                            "targets": ["Quit"]
+                        }
+                    ]
+                },
+                {
+                    "name": "MatchFacts",
+                    "type": "external",
+                    "file": "/flows/ingameflow/postmatch/matchfacts/matchfacts.nav",
+                    "outputs":
+                    {
+                        "out_menu": "PostMatchMenu"
+                    }
+                },
+                {
+                    "name": "MatchHighlights",
+                    "type": "external",
+                    "file": "/flows/ingameflow/postmatch/matchhighlights/matchhighlights.nav",
+                    "outputs":
+                    {
+                        "out_menu": "PostMatchMenu"
+                    }
+                },
+                {
+                    "name": "Quit",
+					"onEnter":
+					[
+						["hideUI"],
+						["invoke", ["evt_quit_from_game"]]
+					]
+                }
+            ]
+        }
+    ]
+}

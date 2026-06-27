@@ -1,0 +1,1886 @@
+{
+			"commonName": "Panel",
+            "name": "Starting11",
+			"alignV": "FILL",
+			"alignH": "FILL",
+			"bindings":
+			[
+				{
+					"property": "visible",
+					"binding":  "bnd_active"
+				}
+			],
+			"children":
+			[
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$LoadingScrim"
+                },
+				{
+					"commonName": "Panel",
+					"name": "Field",
+                    "alignH":"FILL",
+                    "alignV":"CENTER",
+					"children":
+					[
+						{
+							"commonName": "Image",
+							"alignV": "CENTER",
+                            "alignH": "CENTER",
+							"bindings":[
+								{
+									"property": "image",
+									"binding":  "bnd_field"
+								},
+                                {
+                                    "property": "height",
+                                    "binding":  "bnd_field_height"
+                                },
+                                {
+                                    "property": "width",
+                                    "binding":  "bnd_field_width"
+                                },
+                                {
+                                    "property": "marginLeft",
+                                    "binding":  "bnd_field_left"
+                                },
+                                {
+                                    "property": "marginTop",
+                                    "binding":  "bnd_field_top"
+                                }
+						 	]
+					  	}
+				   	]
+		   		},
+                   {
+                          "commonName": "Panel",
+                          "name": "BagianTim",
+                          "alignH": "CENTER",
+                          "alignV": "CENTER",
+                          "width": 1050,
+                          "height": 480,
+                          "children":
+                          [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "color":"0x000000",
+                                    "alpha": 0
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team_crest"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team_crest_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team_crest_height"
+                                        },
+                                        {
+                                            "property": "alignV",
+                                            "binding":  "bnd_team_crest_alignV"
+                                        },
+                                        {
+                                            "property": "alignH",
+                                            "binding":  "bnd_team_crest_alignH"
+                                        },
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_team_crest_left"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_team_crest_top"
+                                        },
+                                        {
+                                            "property": "marginRight",
+                                            "binding":  "bnd_team_crest_right"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_team_crest_bottom"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "forceCaps": true,
+                                    "width": 310,
+                                    "autoScroll":true,
+                                    "fontFace":"$FONT_HEADER",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "text",
+                                            "binding":  "bnd_team_name"
+                                        },
+                                        {
+                                            "property": "fontFace",
+                                            "binding":  "bnd_fontFace"
+                                        },
+                                        {
+                                            "property": "fontSize",
+                                            "binding":  "bnd_team_name_fontSize"
+                                        },
+                                        {
+                                            "property": "fontColor",
+                                            "binding":  "bnd_team_name_fontColor"
+                                        },
+                                        {
+                                            "property": "alignV",
+                                            "binding":  "bnd_team_name_alignV"
+                                        },
+                                        {
+                                            "property": "alignH",
+                                            "binding":  "bnd_team_name_alignH"
+                                        },
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_team_name_left"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_team_name_top"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "forceCaps": true,
+                                    "width": 100,
+                                    "autoScroll":true,
+                                    "fontFace":"$FONT_HEADER",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "text",
+                                            "binding":  "bnd_team_formation"
+                                        },
+                                        {
+                                            "property": "fontFace",
+                                            "binding":  "bnd_fontFace"
+                                        },
+                                        {
+                                            "property": "fontSize",
+                                            "binding":  "bnd_team_formation_fontSize"
+                                        },
+                                        {
+                                            "property": "fontColor",
+                                            "binding":  "bnd_team_formation_fontColor"
+                                        },
+                                        {
+                                            "property": "alignV",
+                                            "binding":  "bnd_team_formation_alignV"
+                                        },
+                                        {
+                                            "property": "alignH",
+                                            "binding":  "bnd_team_formation_alignH"
+                                        },
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_team_formation_left"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_team_formation_top"
+                                        }
+                                    ]
+                                 },
+                                 {
+                                    "commonName": "Image",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team_crest2"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_team_crest2_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_team_crest2_height"
+                                        },
+                                        {
+                                            "property": "alignV",
+                                            "binding":  "bnd_team_crest2_alignV"
+                                        },
+                                        {
+                                            "property": "alignH",
+                                            "binding":  "bnd_team_crest2_alignH"
+                                        },
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_team_crest2_left"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_team_crest2_top"
+                                        },
+                                        {
+                                            "property": "marginRight",
+                                            "binding":  "bnd_team_crest2_right"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_team_crest2_bottom"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "alpha": 1,
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_logo"
+                                        },
+                                        {
+                                            "property": "width",
+                                            "binding":  "bnd_logo_width"
+                                        },
+                                        {
+                                            "property": "height",
+                                            "binding":  "bnd_logo_height"
+                                        },
+                                        {
+                                            "property": "alignV",
+                                            "binding":  "bnd_logo_alignV"
+                                        },
+                                        {
+                                            "property": "alignH",
+                                            "binding":  "bnd_logo_alignH"
+                                        },
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_logo_left"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_logo_top"
+                                        },
+                                        {
+                                            "property": "marginRight",
+                                            "binding":  "bnd_logo_right"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_logo_bottom"
+                                        }
+                                    ]
+                                }
+                            ]
+                       },
+                       {
+                          "commonName": "Panel",
+                          "name": "BagianFormasi",
+                          "alignH": "CENTER",
+                          "alignV": "CENTER",
+                          "scaleX": 0.8,
+                          "scaleY": 0.8,
+                          "bindings":
+                          [
+                             {
+                                "property": "active",
+                                "binding":  "bnd_active"
+                             },
+                             {
+                                "property": "visible",
+                                "binding":  "bnd_visible"
+                             },
+                             {
+                                "property": "marginLeft",
+                                "binding":  "bnd_formation_left"
+                             },
+                             {
+                                "property": "marginTop",
+                                "binding":  "bnd_formation_top"
+                              }
+                           ],
+                           "children":
+                           [
+                               {
+                                    "commonName": "Asset",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "type": "$LoadingScrim"
+                                },                        
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player1_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player1_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player1_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontSize":15,
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player1_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "marginLeft":34,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "autoScroll":true,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player1_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player2_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player2_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop": -2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player2_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontSize":15,
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player2_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "marginLeft":34,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "autoScroll":true,
+                                                    "fontSize":15,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player2_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player3_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player3_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop": -2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player3_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player3_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player3_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player4_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player4_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop": -2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player4_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player4_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player4_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player5_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player5_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop": -2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player5_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontSize":15,
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player5_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player5_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player6_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player6_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player6_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontSize":15,
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player6_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player6_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player7_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player7_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player7_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player7_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player7_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player8_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player8_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player8_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player8_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "fontSize":15,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player8_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player9_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player9_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player9_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontFace": "$FONT_HEADER",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player9_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player9_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player10_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player10_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player10_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontFace": "$FONT_HEADER",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player10_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "fontSize":15,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player10_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "width": 120,
+                                    "height": 80,
+                                    "bindings":[
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_player11_left"
+                                        },
+                                        {
+                                            "property": "marginBottom",
+                                            "binding":  "bnd_player11_bottom"
+                                        }
+                                    ],
+                                    "children":[
+                                        {
+                                            "commonName": "Image",
+                                            "alignV": "TOP",
+                                            "alignH": "CENTER",
+                                            "marginTop":-2,
+                                            "width":60,
+                                            "height":60,
+                                            "bindings":[
+                                                {
+                                                    "property": "image",
+                                                    "binding":  "bnd_player11_avatar"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "commonName": "Panel",
+                                            "alignH": "FILL",
+                                            "alignV": "BOTTOM",
+                                            "height":20,
+                                            "children":[
+                                                {
+                                                    "commonName": "Rectangle",
+                                                    "alignH": "FILL",
+                                                    "alignV": "FILL",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                           "property": "color",
+                                                           "binding":  "bnd_bg_name_color"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Panel",
+                                                    "alignV": "FILL",
+                                                    "alignH": "LEFT",
+                                                    "width":20,
+                                                    "children":[
+                                                        {
+                                                            "commonName": "Rectangle",
+                                                            "alignH": "FILL",
+                                                            "alignV": "FILL",
+                                                            "bindings":
+                                                            [
+                                                                {
+                                                                    "property": "color",
+                                                                    "binding":  "bnd_bg_number_color"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "commonName": "Label",
+                                                            "alignH": "CENTER",
+                                                            "alignV": "CENTER",
+                                                            "fontColor":"0x1E1E1E",
+                                                            "fontFace": "$FONT_HEADER",
+                                                            "marginLeft":-1,
+                                                            "marginTop": 0,
+                                                            "fontSize":15,
+                                                            "bindings":[
+                                                                {
+                                                                    "property": "text",
+                                                                    "binding":  "bnd_player11_number"
+                                                                },
+                                                                {
+                                                                    "property": "fontColor",
+                                                                    "binding":  "bnd_player_number_fontColor"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "BOTTOM",
+                                                    "fontColor":"0x1E1E1E",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "marginLeft":34,
+                                                    "autoScroll":true,
+                                                    "fontSize":15,
+                                                    "width":75,
+                                                    "marginBottom": 19,
+                                                    "bindings":[
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player11_name"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_player_name_fontColor"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
+                                } 
+                            ]
+                        },
+          {
+            "commonName": "Panel",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "bindings":
+            [
+                {
+                    "property": "active",
+                    "binding":  "bnd_active"
+                },
+                {
+                    "property": "visible",
+                    "binding":  "bnd_visible"
+                }
+            ],
+            "children":
+            [
+                                {
+                                    "commonName": "Panel",
+                                    "name": "BagianCadangan",
+                                    "alignH":"CENTER",
+                                    "alignV":"CENTER",
+                                    "bindings":
+                                    [
+                                        {
+                                            "property": "marginLeft",
+                                            "binding":  "bnd_posisi_sub_left"
+                                        },
+                                        {
+                                            "property": "marginTop",
+                                            "binding":  "bnd_posisi_sub_top"
+                                        }
+                                    ],
+                                    "children":
+                                    [
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "bindings":
+                                                    [
+                                                      {
+                                                          "property": "text",
+                                                          "binding":  "bnd_text_sub"
+                                                      },
+                                                      {
+                                                          "property": "fontSize",
+                                                          "binding":  "bnd_text_sub_fontSize"
+                                                      },
+                                                      {
+                                                          "property": "fontColor",
+                                                          "binding":  "bnd_text_sub_fontColor"
+                                                      },
+                                                      {
+                                                          "property": "marginLeft",
+                                                          "binding":  "bnd_text_sub_left"
+                                                      },
+                                                      {
+                                                          "property": "marginTop",
+                                                          "binding":  "bnd_text_sub_top"
+                                                      }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 25,
+                                                    "marginTop": 30,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player12_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 39,
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "text":"GK",
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playergksub_fontColor"
+                                                        }
+                                                    ]
+                                                 },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 60,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player13_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                 },
+                                                 {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 90,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player14_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 120,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player15_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                 },
+                                                 {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 150,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player16_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                 },
+                                                 {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 180,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player17_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "commonName": "Label",
+                                                    "alignH": "LEFT",
+                                                    "alignV": "CENTER",
+                                                    "marginLeft": 0,
+                                                    "marginTop": 210,
+                                                    "fontColor":"0xFFFFFF",
+                                                    "fontFace": "$FONT_HEADER",
+                                                    "autoTextShadow": true,
+                                                    "width": 130,
+                                                    "autoScroll":true,
+                                                    "bindings":
+                                                    [
+                                                        {
+                                                            "property": "text",
+                                                            "binding":  "bnd_player18_name"
+                                                        },
+                                                        {
+                                                            "property": "fontSize",
+                                                            "binding":  "bnd_playersub_fontSize"
+                                                        },
+                                                        {
+                                                            "property": "fontColor",
+                                                            "binding":  "bnd_playersub_fontColor"
+                                                        }
+                                                    ]
+                                                 }
+                                             ]
+                                         }
+                                     ]
+                                 }
+                             ]
+                         }
+                     ]
+                 }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "MatchRowRoot",
+    "mouseInteractive": true,
+    "propertyMap":
+    {
+        "dataProviders.HomeTeamCrest": "RowPanel.RowLeftPanel.HomeTeamCrest.image",
+        "dataProviders.HomeTeamName": "RowPanel.RowLeftPanel.HomeTeamName.text",
+        "dataProviders.HomeTeamShortName": "RowPanel.RowLeftPanel.HomeTeamShortName.text",
+        "dataProviders.AwayTeamCrest": "RowPanel.RowLeftPanel.AwayTeamCrest.image",
+        "dataProviders.AwayTeamName": "RowPanel.RowLeftPanel.AwayTeamName.text",
+        "dataProviders.AwayTeamShortName": "RowPanel.RowLeftPanel.AwayTeamShortName.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "width": 700,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "marginTop": 5,
+                    "marginLeft": 5,
+                    "marginRight": 5,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$LiveTileBackgroundIdle"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 20,
+                            "width": 75,
+                            "height": 75
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "HomeTeamShortName",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 15,
+                            "marginLeft": -130,
+                            "fontSize": 37,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "HomeTeamName",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 19,
+                            "marginLeft": -130,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontSize": 38,
+                            "fontColor": "$COLOR_DARK_GRAY",
+                            "text": "- VS -"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "AwayTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 75,
+                            "height": 75
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "AwayTeamShortName",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 15,
+                            "marginRight": -130,
+                            "fontSize": 37,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "AwayTeamName",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 19,
+                            "marginRight": -130,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

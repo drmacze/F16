@@ -1,0 +1,5 @@
+{
+    "dds":   ["InstantReplay.dd"],
+    "vms":   [["lua", "InstantReplay.lua"]],
+    "views": [["gfx", {"layout": "InstantReplay.layout"}]]
+}

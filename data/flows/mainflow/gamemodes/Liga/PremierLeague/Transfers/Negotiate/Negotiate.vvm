@@ -1,0 +1,5 @@
+{
+	"dds": ["Negotiate.dd"],
+    "vms": [["lua", "Negotiate.lua"]],
+    "views": [["gfx", {"layout": "Negotiate.layout"}]]
+}

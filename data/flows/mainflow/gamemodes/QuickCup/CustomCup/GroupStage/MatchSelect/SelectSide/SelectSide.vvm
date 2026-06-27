@@ -1,0 +1,4 @@
+{
+    "dds": ["SelectSide.dd"],
+    "vms": [["lua", "SelectSide.lua"]]
+}

@@ -1,0 +1,594 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_visible",
+            "binding": "bnd_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_nama_tim_home",
+            "binding": "bnd_nama_tim_home",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_nama_tim_away",
+            "binding": "bnd_nama_tim_away",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_width",
+            "binding": "bnd_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_height",
+            "binding": "bnd_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_top",
+            "binding": "bnd_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_left",
+            "binding": "bnd_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_scoreboard_width",
+            "binding": "bnd_scoreboard_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_logo_inside_visible",
+            "binding": "bnd_logo_inside_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_logo_height",
+            "binding": "bnd_logo_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_logo_width",
+            "binding": "bnd_logo_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_logo_top",
+            "binding": "bnd_logo_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_logo_left",
+            "binding": "bnd_logo_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_logo_image",
+            "binding": "bnd_logo_image",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_homeBg_width",
+            "binding": "bnd_homeBg_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeBg_left",
+            "binding": "bnd_homeBg_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeBg_image",
+            "binding": "bnd_homeBg_image",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_awayBg_width",
+            "binding": "bnd_awayBg_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayBg_right",
+            "binding": "bnd_awayBg_right",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayBg_image",
+            "binding": "bnd_awayBg_image",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_scoreBg_width",
+            "binding": "bnd_scoreBg_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_scoreBg_right",
+            "binding": "bnd_scoreBg_right",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_scoreBg_image",
+            "binding": "bnd_scoreBg_image",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_outside_visible",
+            "binding": "bnd_logo_outside_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_homeName_text",
+            "binding": "bnd_homeName_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_homeName_left",
+            "binding": "bnd_homeName_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeName_top",
+            "binding": "bnd_homeName_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeName_fontSize",
+            "binding": "bnd_homeName_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeName_fontColor",
+            "binding": "bnd_homeName_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayName_text",
+            "binding": "bnd_awayName_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayName_right",
+            "binding": "bnd_awayName_right",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayName_top",
+            "binding": "bnd_awayName_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayName_fontSize",
+            "binding": "bnd_awayName_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayName_fontColor",
+            "binding": "bnd_awayName_fontColor",
+            "type": "string"
+        },
+
+
+        
+        
+        {
+            "viewname": "bnd_homeCrest",
+            "binding": "bnd_homeCrest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_homeCrest_left",
+            "binding": "bnd_homeCrest_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeCrest_width",
+            "binding": "bnd_homeCrest_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeCrest_height",
+            "binding": "bnd_homeCrest_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayCrest",
+            "binding": "bnd_awayCrest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_awayCrest_right",
+            "binding": "bnd_awayCrest_right",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayCrest_width",
+            "binding": "bnd_awayCrest_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayCrest_height",
+            "binding": "bnd_awayCrest_height",
+            "type": "int"
+        },
+
+        
+        
+        {
+            "viewname": "bnd_homeScore_text",
+            "binding": "bnd_homeScore_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_homeScore_top",
+            "binding": "bnd_homeScore_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeScore_left",
+            "binding": "bnd_homeScore_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeScore_fontSize",
+            "binding": "bnd_homeScore_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeScore_fontColor",
+            "binding": "bnd_homeScore_fontColor",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_awayScore_text",
+            "binding": "bnd_awayScore_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_awayScore_top",
+            "binding": "bnd_awayScore_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayScore_right",
+            "binding": "bnd_awayScore_right",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayScore_fontSize",
+            "binding": "bnd_awayScore_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayScore_fontColor",
+            "binding": "bnd_awayScore_fontColor",
+            "type": "string"
+        },
+        
+        {
+            "viewname": "bnd_score_text",
+            "binding": "bnd_score_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_score_top",
+            "binding": "bnd_score_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_score_left",
+            "binding": "bnd_score_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_score_fontSize",
+            "binding": "bnd_score_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_score_fontColor",
+            "binding": "bnd_score_fontColor",
+            "type": "string"
+        },
+  
+        {
+            "viewname": "bnd_time_width",
+            "binding": "bnd_time_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_time_height",
+            "binding": "bnd_time_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_time_top",
+            "binding": "bnd_time_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_time_left",
+            "binding": "bnd_time_left",
+            "type": "int"
+        },
+
+        {
+            "viewname": "bnd_timeBg_image",
+            "binding": "bnd_timeBg_image",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_time_text",
+            "binding": "bnd_time_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_time_fontSize",
+            "binding": "bnd_time_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_time_fontColor",
+            "binding": "bnd_time_fontColor",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_extraTime_visible",
+            "binding": "bnd_extraTime_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_extraTime_width",
+            "binding": "bnd_extraTime_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_extraTime_height",
+            "binding": "bnd_extraTime_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_extraTime_top",
+            "binding": "bnd_extraTime_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_extraTime_left",
+            "binding": "bnd_extraTime_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_extraTimeBg_image",
+            "binding": "bnd_extraTimeBg_image",
+            "type": "object"
+        },
+
+        {
+            "viewname": "bnd_extraTime_text",
+            "binding": "bnd_extraTime_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_extraTime_text_left",
+            "binding":  "bnd_extraTime_text_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_extraTime_fontSize",
+            "binding": "bnd_extraTime_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_extraTime_fontColor",
+            "binding": "bnd_extraTime_fontColor",
+            "type": "string"
+        },
+        
+        {
+            "viewname": "bnd_live_logo",
+            "binding":  "bnd_live_logo",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_homeRect_visible",
+            "binding":  "bnd_homeRect_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_homeRect_height",
+            "binding":  "bnd_homeRect_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeRect_color",
+            "binding":  "bnd_homeRect_color",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_awayRect_visible",
+            "binding":  "bnd_awayRect_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_awayRect_height",
+            "binding":  "bnd_awayRect_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayRect_color",
+            "binding":  "bnd_awayRect_color",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_text_bold",
+            "binding":  "bnd_text_bold",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_time_text_top",
+            "binding":  "bnd_time_text_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_time_text_left",
+            "binding":  "bnd_time_text_left",
+            "type": "int"
+        },
+
+        {
+            "viewname": "bnd_homeRect_top",
+            "binding":  "bnd_homeRect_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayRect_top",
+            "binding":  "bnd_awayRect_top",
+            "type": "int"
+        },
+
+        {
+            "viewname": "bnd_homeRect_left",
+            "binding":  "bnd_homeRect_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_homeRect_width",
+            "binding":  "bnd_homeRect_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayRect_right",
+            "binding":  "bnd_awayRect_right",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_awayRect_width",
+            "binding":  "bnd_awayRect_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_scoreBg_height",
+            "binding":  "bnd_scoreBg_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_scoreBg_top",
+            "binding":  "bnd_scoreBg_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_width",
+            "binding":  "bnd_stat_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_height",
+            "binding":  "bnd_stat_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_top",
+            "binding":  "bnd_stat_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_left",
+            "binding":  "bnd_stat_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_color",
+            "binding":  "bnd_stat_color",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_stat_text",
+            "binding":  "bnd_home_stat_text",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_stat_fontSize",
+            "binding":  "bnd_stat_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_fontColor",
+            "binding":  "bnd_stat_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_stat_text_fontColor",
+            "binding":  "bnd_stat_text_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_stat_fontColor",
+            "binding":  "bnd_home_stat_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_stat_fontColor",
+            "binding":  "bnd_away_stat_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_stat_text_left",
+            "binding":  "bnd_home_stat_text_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_home_stat_text_top",
+            "binding":  "bnd_home_stat_text_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_away_stat_text",
+            "binding":  "bnd_away_stat_text",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_stat_text_left",
+            "binding":  "bnd_away_stat_text_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_away_stat_text_top",
+            "binding":  "bnd_away_stat_text_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_text_left",
+            "binding":  "bnd_stat_text_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_text_top",
+            "binding":  "bnd_stat_text_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_visible",
+            "binding":  "bnd_stat_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_stat_text_fontSize",
+            "binding":  "bnd_stat_text_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_stat_text",
+            "binding":  "bnd_stat_text",
+            "type": "string"
+        }
+        
+    ]
+}

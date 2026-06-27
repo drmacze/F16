@@ -1,0 +1,18 @@
+{
+	"actions":
+	[
+  		{
+          "viewname": "act_menu_customize",
+          "impl":
+          {
+            "type": "nav",
+            "event": "evt_menu_customize"
+          }
+      }
+
+	],
+	"data":
+	[
+		
+	]
+}

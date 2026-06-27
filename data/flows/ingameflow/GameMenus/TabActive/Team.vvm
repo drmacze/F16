@@ -1,0 +1,8 @@
+{
+
+    "views": [
+        ["gfx", {"layout": "Team.layout"}]    
+    ]
+    
+}
+

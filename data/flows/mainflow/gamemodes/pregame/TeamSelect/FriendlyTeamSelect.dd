@@ -1,0 +1,132 @@
+{
+    "actions":
+    [
+		{
+            "viewname":   "act_away_country_previous",
+            "actionname": "act_away_country_previous"
+        },
+        {
+            "viewname":   "act_away_country_next",
+            "actionname": "act_away_country_next"
+        },
+        {
+            "viewname":   "act_away_league_previous",
+            "actionname": "act_away_league_previous"
+        },
+        {
+            "viewname":   "act_away_league_next",
+            "actionname": "act_away_league_next"
+        },
+        {
+            "viewname":   "act_away_team_previous",
+            "actionname": "act_away_team_previous"
+        },
+        {
+            "viewname":   "act_away_team_next",
+            "actionname": "act_away_team_next"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_away_team_selector",
+            "binding":  "bnd_away_team_selector",
+            "type":		  "object"
+        },
+        {
+            "viewname": "bnd_away2_team_selector",
+            "binding":  "bnd_away2_team_selector",
+            "type":		  "object"
+        },
+        {
+            "viewname": "bnd_away3_team_selector",
+            "binding":  "bnd_away3_team_selector",
+            "type":		  "object"
+        },
+        {
+            "viewname": "bnd_away_real_team_visible",
+            "binding":  "bnd_away_real_team_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_user_plate",
+            "binding":  "bnd_away_user_plate",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_user_plate_visible",
+            "binding":  "bnd_away_user_plate_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_team_selector_alpha",
+            "binding":  "bnd_away_team_selector_alpha",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_away_team_messages_visible",
+            "binding":  "bnd_away_team_messages_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_team_message",
+            "binding":  "bnd_away_team_message",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_country",
+            "binding":  "bnd_away_team_country",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_league",
+            "binding":  "bnd_away_team_league",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding":  "bnd_away_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_all_ready",
+            "binding":  "bnd_all_ready",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_real_team_toggles_visible",
+            "binding":  "bnd_away_real_team_toggles_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_country_select_visible",
+            "binding":  "bnd_home_country_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_team_select_visible",
+            "binding":  "bnd_home_team_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_league_select_visible",
+            "binding":  "bnd_home_league_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_country_select_visible",
+            "binding":  "bnd_away_country_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_team_select_visible",
+            "binding":  "bnd_away_team_select_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_league_select_visible",
+            "binding":  "bnd_away_league_select_visible",
+            "type":     "bool"
+        }
+    ]
+}

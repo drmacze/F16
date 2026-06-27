@@ -1,0 +1,24 @@
+{
+    "name": "Restart",
+    "states":
+    [
+		{
+            "name": "RedirectRestart",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Restart.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,302 @@
+{
+    "name": "GamePlay",
+    "type": "parallel",
+    "onEnter":
+    [
+    	["hideControllerCursor"],
+		["viewLayer", ["GamePlay"]],
+		["blockingLoadVVM", ["/flows/ingameflow/GamePlay.vvm" ,{ "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState" }]],
+		["checkCreateMatch"],
+		["notifyGameplaySoundEnter"],
+        ["onGameplayEntered"]
+    ],
+    "onExit":
+    [
+		["showControllerCursor"],
+		["unloadVVM"],
+        ["notifyGameplaySoundExit"]
+    ],
+    "states":
+    [
+		{
+			"name":"GameControls",
+			"initial":
+			{
+                "targets": ["checkGameControls"]
+            },
+            "states":
+			[
+				{
+					"name":"checkGameControls",
+					"onEnter":
+					[
+						["checkIfTouchControlsAreEnabled"]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_show_touch_controls",
+							"targets": ["showTouchControls"]
+						}
+					]
+				},
+				{
+					"name":"showTouchControls",
+					"onEnter":
+					[
+						["viewLayer", ["GamePlay"]],
+						["loadVVM", ["/flows/ingameflow/huds/gamecontrols/GameControls.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					]
+				}
+			]
+        },
+	    {
+            "name": "Tactics",
+			"onEnter": [["loadVVM", ["/flows/ingameflow/huds/tactics/Tactics.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "PlayerNIB",
+            "type": "parallel",
+            "states":
+            [
+				{
+                    "name": "PlayerNIBBacking",
+                    "onEnter": [
+									["blockingLoadVVM", ["/flows/ingameflow/huds/playernib/PlayerNIBBacking.vvm"]]
+							   ],
+                    "onExit": [["unloadVVM"]]
+                },
+                {
+                    "name": "PlayerNIBHome",
+                    "onEnter": [
+									["blockingLoadVVM", ["/flows/ingameflow/huds/playernib/PlayerNIBHome.vvm", { "side": 0 }]]
+							   ],
+                    "onExit": [["unloadVVM"]]
+                },
+                {
+                    "name": "PlayerNIBAway",
+                    "onEnter": [
+									["blockingLoadVVM", ["/flows/ingameflow/huds/playernib/PlayerNIBAway.vvm", { "side": 1 }]]
+							    ],
+                    "onExit": [["unloadVVM"]]
+                }
+            ]
+        },
+        {
+            "name": "Mentality",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/mentality/Mentality.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "ScoreClock",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/scoreclock/ScoreClock_Tournament.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "Shootout",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/shootout/Shootout.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "Substitution",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/substitution/Substitution.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "DistanceToGoal",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/distancetogoal/DistanceToGoal.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "EventInfo",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/eventinfo/EventInfo.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "GameEvents",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/gameevents/GameEvents.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "SixSecondIndicator",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/sixsecondindicator/SixSecondIndicator.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "RefereeAdvantage",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/refereeadvantage/RefereeAdvantage.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "ScoreboardSubstitutions",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/scoreboardsubstitution/ScoreboardSubstitutions.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "Comparison",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/comparison/Comparison.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "MediaCapture",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/capturemedia/CaptureMedia.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type" }]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "SetPieceTaker",
+            "onEnter":
+            [
+			   ["blockingLoadVVM", ["/flows/ingameflow/huds/setpiecetaker/SetPieceTaker.vvm"]],
+			   ["updateSetPieceTaker"]
+	        ],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "PenalityKickMeter",
+            "type": "parallel",
+            "states":
+            [
+                {
+                    "name": "PenalityKickMeterHUDLeft",
+                    "onEnter": [["loadVVM", ["/flows/ingameflow/huds/penalitykickmeter/PenalityKickMeterLeft.vvm", { "orientation": "left" }]]],
+                    "onExit": [["unloadVVM"]]
+                },
+                {
+                    "name": "PenalityKickMeterHUDRight",
+                    "onEnter": [["loadVVM", ["/flows/ingameflow/huds/penalitykickmeter/PenalityKickMeterRight.vvm", { "orientation": "right" }]]],
+                    "onExit": [["unloadVVM"]]
+                }
+            ]
+        },
+		{
+            "name": "PenaltyHelp",
+            "onEnter": [
+							["blockingLoadVVM", ["/flows/ingameflow/huds/penaltyhelp/PenaltyHelp.vvm"]],
+							["onPenaltyHelpEntered"]
+					   ],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "AttackDefense",
+            "states":
+            [
+                {
+                    "name": "HideAttackDefense",
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_show_gameplay_attack_defense",
+                            "targets": ["ShowAttackDefense"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowAttackDefense",
+                    "onEnter":
+                    [
+                        ["blockingLoadVVM", [".event.data.vvm", {"data": ".event.data.data"}]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_hide_gameplay_attack_defense",
+                            "targets": ["HideAttackDefense"]
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+            "name": "FreeKickTutorial",
+            "states":
+            [
+                {
+                    "name": "HideFreeKickTutorial",
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_show_free_kick_tutorial",
+                            "targets": ["ShowFreeKickTutorial"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowFreeKickTutorial",
+                    "onEnter":
+                    [
+                        ["pauseGameInteractive"],
+                        ["blockingLoadVVM", [".event.data.vvm", {"data": ".event.data.data"}]]
+                    ],
+                    "onExit":
+                    [
+                        ["unpauseGameInteractive"],
+						["setTutorialhide"],
+                        ["unloadVVM"]
+                    ],
+					"transitions":
+                    [
+                        {
+                            "event": "evt_hide_free_kick_tutorial",
+                            "targets": ["HideFreeKickTutorial"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Tutorial",
+            "states":
+            [
+                {
+                    "name": "HideTutorial",
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_show_gameplay_tutorial",
+                            "targets": ["ShowTutorial"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowTutorial",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["overlays"]],
+                        ["blockingLoadVVM", [".event.data.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["viewLayer", ["GamePlay"]],
+						["setTutorialhide"],
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_hide_gameplay_tutorial",
+                            "targets": ["HideTutorial"]
+                        },
+						{
+                            "event": "evt_toggle_pause",
+                            "targets": ["HideTutorial"]
+                        }
+					]
+                }
+            ]
+        },
+        {
+            "name": "Accomplishment",
+            "onEnter": [["blockingLoadVVM", ["/flows/ingameflow/huds/accomplishment/Accomplishment.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "dds":   ["BrowserScreen.dd"],
+	"vms":   [["lua", "BrowserScreen.lua"]],
+    "views": [["gfx", {"layout": "BrowserScreen.layout"}]]
+}

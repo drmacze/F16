@@ -1,0 +1,109 @@
+{
+    "name": "MetricsFlow",
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["/flows/metricsflow/Metrics.vvm"]],
+        ["blockingLoadVVM", ["/flows/ingameflow/gameflow/GameFlow.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"],
+        ["unloadVVM"]
+    ],
+    "initial":
+    {
+        "targets": ["Init"]
+    },
+    "states":
+    [      
+        {
+            "name": "Init",
+            "onEnter":
+            [
+                ["enableSplashScreen", [false]],
+                ["invoke", ["evt_advance"]]
+            ],
+            "onExit":
+            [
+                ["handleEvent", ["GM_EVENT_STARTBUTTON_PRESSED"]],
+                ["transitionFromCrowdToArena"],
+                ["setTitleStartButtonControllerId"],
+                ["notifyMovieStarted", ["BOOTFLOW_OUTRO_VIDEO"]],
+                ["notifyBootflowDone"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["Arena"]
+                }
+            ]
+        },
+        {
+            "name": "Arena",
+            "onEnter":
+            [
+                ["stateChange", ["ARENA"]],
+                ["substateChange", ["SUBSTATE_NONE"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_event_game_started",
+                    "targets": ["MatchSetup"]
+                }
+            ]
+        },
+        {
+            "name": "MatchSetup",
+            "onEnter":
+            [
+                ["stateChange", ["MOTM_MATCH"]],
+                ["substateChange", ["PREGAME"]],
+                ["invoke", ["evt_to_team_setup"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_to_team_setup",
+                    "targets": ["TeamSetup"]
+                }
+            ]
+        },
+        {
+            "name": "TeamSetup",
+            "onEnter":
+            [
+                ["setTeams"],
+                ["invoke", ["evt_start_match"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_start_match",
+                    "targets": ["InGameFlow"]
+                }
+            ]
+        },
+		{
+            "let":
+            {
+                "gamemode": "real",
+                "flow": "offline",
+                "type": "friendly"
+            },
+            "states":
+            [
+                {
+					"name": "InGameFlow",
+					"type": "external",
+					"file": "/flows/ingameflow/ingameflow.nav",
+					"outputs":
+					{
+						"out_exit": "out_next_flow"
+					}
+				}
+			]
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "marginTop": -90,
+            "width": 400,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -100,
+                    "width": 90,
+                    "height": 40,
+                    "scaleY": 1,
+                    "multiline": true,
+                    "bold": true,
+                    "label": "Info",
+                    "icon": "",
+                    "backgroundImage": "",
+                    "backgroundHighlightImage": "",
+                    "clickAction": "act_to",
+                    "textStyles":
+                    [
+                        "TF_BUTTON_TABON"
+                    ]
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 10,
+                    "marginLeft": -100,
+                    "width": 90,
+                    "height": 5,
+                    "color": "0xFFAF3D"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 90,
+            "width": 590,
+            "height": 300,
+            "children":
+            [
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchFacts",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 300.0,
+                    "marginTop": 20,
+                    "marginLeft": 35,
+                    "width": 650.0,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 9,
+                    "row": "GameMenuRows",
+                    "rowHeight": 28.0,
+                    "rowWidth": 590.0,
+                    "useAlternating": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_facts",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

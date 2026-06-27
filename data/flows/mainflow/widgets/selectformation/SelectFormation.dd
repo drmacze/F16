@@ -1,0 +1,96 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_close",
+			"actionname": "act_close"
+		},
+		{
+			"viewname": "act_change",
+			"actionname": "act_change"
+			},
+		{
+			"viewname": "act_select",
+			"actionname": "act_select"
+		}
+	],
+	"data":
+	[
+		{
+			"viewname": "bnd_title",
+			"binding": "bnd_title",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_button_close",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_CMN_CANCEL"
+			}
+		},
+		{
+			"viewname": "bnd_index",
+			"binding":  "bnd_index",
+			"type":	 "int",
+			"actions":
+			[
+				{
+					"viewname": "act_change",
+					"actionname": "act_change"
+				}
+			]
+		},
+		{
+			"viewname": "bnd_list",
+			"binding":  "bnd_list",
+			"type":	 "object"
+		},
+		{
+			"viewname": "bnd_width",
+			"binding":  "bnd_width",
+			"type":	 "float"
+		},
+		{
+			"viewname": "bnd_height",
+			"binding":  "bnd_height",
+			"type":	 "float"
+		},
+		{
+			"viewname": "bnd_columns",
+			"binding":  "bnd_columns",
+			"type":	 "int"
+		},
+		{
+			"viewname": "bnd_rows",
+			"binding":  "bnd_rows",
+			"type":	 "int"
+		},
+		{
+			"viewname": "bnd_bullet_indicator",
+			"binding":  "bnd_bullet_indicator",
+			"type":	 "bool"
+		},
+		{
+			"viewname": "bnd_item_type",
+			"binding":  "bnd_item_type",
+			"type":	 "string"
+		},
+		{
+			"viewname": "bnd_overlay_width",
+			"binding":  "bnd_overlay_width",
+			"type":	 "float"
+		},
+		{
+			"viewname": "bnd_overlay_height",
+			"binding":  "bnd_overlay_height",
+			"type":	 "float"
+		},
+		{
+			"viewname": "bnd_overlay_visible",
+			"binding":  "bnd_overlay_visible",
+			"type":	 "bool"
+		}
+	]
+}

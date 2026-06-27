@@ -1,0 +1,89 @@
+{
+    "commonName": "Panel",
+	"name": "mentalityBar",
+	"alignH": "FILL",
+	"alignV": "FILL",
+    "children":
+    [
+        {
+            "commonName": "Mentality",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginBottom": 0,
+            "bindings":
+            [
+                {
+                    "property": "mentality",
+                    "binding":  "bnd_home_mentality"
+                },
+                {
+                    "property": "label",
+                    "binding":  "bnd_home_label"
+                },
+                {
+                    "property": "active",
+                    "binding":  "bnd_home_active"
+                },
+                {
+                    "property": "visible",
+                    "binding":  "bnd_home_mentality_default_visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "width": 400,
+            "height": 80,
+            "marginRight":210,
+            "bindings":[
+                {
+                    "property": "visible",
+                    "binding":  "bnd_home_mentality_new_visible"
+                }
+            ],
+            "children":
+            [
+
+                {
+                    "commonName": "TabBar",
+                    "name": "BagianTab",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 70,
+                    "width": 330,
+                    "tabs":
+                    [
+                       {
+                           "label": "DEFENCE",
+                           "clickAction": "act_defend"
+                       },
+                       {
+                           "label": "BALANCE",
+                           "clickAction": "act_balance"
+                       },
+                       {
+                           "label": "ATTACK",
+                           "clickAction": "act_attack"
+                       }
+                   ],
+                   "bindings":
+                   [
+                      {
+                          "binding": "bnd_home_mentality_index",
+                          "property": "selectedIndex"
+                      }
+                   ]
+                }
+                
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "PanelLayoutBehavior"
+        }
+    ]
+}

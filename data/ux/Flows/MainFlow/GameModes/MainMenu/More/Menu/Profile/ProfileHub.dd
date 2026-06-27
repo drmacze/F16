@@ -1,0 +1,49 @@
+{
+	"actions":
+	[
+      {
+          "viewname": "act_back",
+          "impl":
+          {
+              "type": "nav",
+              "event": "evt_back"
+          }
+      },
+      {
+          "viewname": "act_to_youtube",
+          "impl":
+          {
+              "type": "nav",
+              "event": "evt_to_youtube"
+          }
+      },
+      {
+          "viewname": "act_to_instagram",
+          "impl":
+          {
+              "type": "nav",
+              "event": "evt_to_instagram"
+          }
+      },
+      {
+          "viewname": "act_to_facebook",
+          "impl":
+          {
+              "type": "nav",
+              "event": "evt_to_facebook"
+          }
+      },
+      {
+          "viewname": "act_to_tiktok",
+          "impl":
+          {
+              "type": "nav",
+              "event": "evt_to_tiktok"
+          }
+      }
+  ],
+	"data":
+	[
+  
+  ]
+}

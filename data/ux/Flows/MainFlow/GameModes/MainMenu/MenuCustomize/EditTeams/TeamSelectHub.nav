@@ -1,0 +1,36 @@
+{
+	"name": "TeamRosterHub",
+    "let":
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "MOTM_MATCH"
+	},
+    "onEnter":
+    [
+        ["viewLayer", ["Gamemodes"]],
+        ["finishViewUnload", ["screen"]],
+        ["showFEUI", [".gamemode"]]
+    ],
+    "onExit":
+    [
+        ["hideUI", [".gamemode"]]
+    ],
+    "initial":
+    {
+        "targets": ["Pregame"]
+    },
+    "states":
+    [
+        {
+            "name": "Pregame",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/EditTeams/PreGame.nav",
+            "outputs":
+            {
+                "out_exit": "out_exit_gamemode"
+			}
+		}
+    ]
+}

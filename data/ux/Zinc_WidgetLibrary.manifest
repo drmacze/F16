@@ -1,0 +1,1243 @@
+{
+	"widgets":
+	[
+
+		{
+            "CommonName": "MatchRow",
+            "LayoutPath": "Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/MatchRow.layout"
+        },
+        {
+            "CommonName": "TeamRow",
+            "LayoutPath": "Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/TeamSelect/TeamRow.layout"
+        },
+
+        {
+            "CommonName": "PlayerRow",
+            "LayoutPath": "flows/mainflow/GameModes/MainMenu/MenuCustomize/EditTeams/PlayerRow/PlayerRow.layout"
+        },
+        
+		{
+			"CommonName": "Rectangle",
+			"RuntimeName": "ux.widget.Rectangle"
+		},
+		{
+			"CommonName": "Group",
+			"RuntimeName": "fow.base::BaseComponent"
+		},
+		{
+			"CommonName": "NavBar",
+			"RuntimeName": "fow.components.widgets.ticker::NavBar"
+		},
+		{
+			"CommonName": "Image",
+			"RuntimeName": "fow.base.components::Image"
+		},
+		{
+			"CommonName": "Movie",
+			"RuntimeName": "fow.base.components::Movie"
+		},
+		{
+			"CommonName": "Label",
+			"RuntimeName": "fow.base.components::Label"
+		},
+		{
+			"CommonName": "VerticalList",
+			"RuntimeName": "fow.base.components::VerticalList"
+		},
+		{
+			"CommonName": "SimulationList",
+			"RuntimeName": "fow.base.components::SimulationList"
+		},
+		{
+			"CommonName": "ListRow",
+			"RuntimeName": "fow.base.components::ListRow"
+		},
+		{
+			"CommonName": "CollectionView",
+			"RuntimeName": "ux.widget::CollectionView"
+		},
+		{
+			"CommonName":"fow.base.BaseButton",
+			"RuntimeName":"fow.base.BaseButton"
+		},
+		{
+			"CommonName":"fow.base.BaseRow",
+			"RuntimeName":"fow.base.BaseRow"
+		},
+		{
+			"CommonName": "ComboBox",
+			"RuntimeName": "fow.base.components::ComboBox"
+		},
+		{
+			"CommonName": "GenericButton",
+			"RuntimeName": "fow.components.global.buttons::GenericButton"
+		},
+		{
+			"CommonName": "TickerButton",
+			"RuntimeName": "fow.components.global.buttons::TickerButton"
+		},
+		{
+			"CommonName": "BidButton",
+			"RuntimeName": "fow.components.global.buttons::BidButton"
+		},
+		{
+			"CommonName": "TutorialButton",
+			"RuntimeName": "fow.components.global.buttons::TutorialButton"
+		},
+		{
+			"CommonName": "TabButton",
+			"RuntimeName": "fow.components.global.buttons::TabButton"
+		},
+		{
+			"CommonName": "ToggleButton",
+			"RuntimeName": "fow.components.global.buttons::ToggleButton"
+		},
+		{
+			"CommonName": "CloseButton",
+			"RuntimeName": "fow.components.global.buttons::CloseButton"
+		},
+		{
+			"CommonName": "TabBar",
+			"RuntimeName": "fow.components.global::TabBar"
+		},
+		{
+			"CommonName": "StarRating",
+			"RuntimeName": "fow.components.global::StarRating"
+		},
+		{
+			"CommonName": "ItemDock",
+			"RuntimeName": "fow.components.global::ItemDock"
+		},
+		{
+			"CommonName": "ItemList",
+			"RuntimeName": "fow.components.global::ItemList"
+		},
+		{
+			"CommonName": "ItemSlot",
+			"RuntimeName": "fow.components.global::ItemSlot"
+		},
+		{
+			"CommonName": "PlayerExchangeItems",
+			"RuntimeName": "fow.components.global::PlayerExchangeItems"
+		},
+		{
+			"CommonName": "BlankItem",
+			"RuntimeName": "fow.components.global.item::BlankItem"
+		},
+		{
+			"CommonName": "PlayerItem",
+			"RuntimeName": "fow.components.global.item::PlayerItem"
+		},
+		{
+			"CommonName": "ConsumableItem",
+			"RuntimeName": "fow.components.global.item::ConsumableItem"
+		},
+		{
+			"CommonName": "ManagerItem",
+			"RuntimeName": "fow.components.global.item::ManagerItem"
+		},
+		{
+			"CommonName": "FieldPlayerItem",
+			"RuntimeName": "fow.components.global.item::FieldPlayerItem"
+		},
+		{
+			"CommonName": "GenericItem",
+			"RuntimeName": "fow.components.global.item::GenericItem"
+		},
+		{
+			"CommonName": "SimulationItem",
+			"RuntimeName": "fow.components.global.item::SimulationItem"
+		},
+		{
+			"CommonName": "ItemSelectedConsumables",
+			"RuntimeName": "fow.components.global::ItemSelectedConsumables"
+		},
+		{
+			"CommonName": "DraggableCarousel",
+			"RuntimeName": "fow.components.global.DraggableCarousel"
+		},
+		{
+			"CommonName": "AgeSelectCarousel",
+			"RuntimeName": "fow.components.global.AgeSelectCarousel"
+		},
+		{
+			"CommonName": "ConsumablesFormulaDisplay",
+			"RuntimeName": "fow.components.global.ConsumablesFormulaDisplay"
+		},
+		{
+			"CommonName": "FieldManagerItem",
+			"RuntimeName": "fow.components.global.item::FieldManagerItem"
+		},
+		{
+			"CommonName": "ItemToggle",
+			"RuntimeName": "fow.components.global.item::ItemToggle"
+		},
+		{
+			"CommonName": "ItemContextMenu",
+			"RuntimeName": "fow.base.components::ItemContextMenu"
+		},
+		{
+			"CommonName": "PlayerComparison",
+			"RuntimeName": "fow.components.widgets.squad::PlayerComparison"
+		},
+		{
+			"CommonName": "SquadLayout",
+			"RuntimeName": "fow.components.widgets.squad::SquadLayout"
+		},
+		{
+			"CommonName": "SquadChemistryLinks",
+			"RuntimeName": "fow.components.widgets.squad::SquadChemistryLinks"
+		},
+		{
+			"CommonName": "Overlay",
+			"RuntimeName": "fow.base::BaseOverlay"
+		},
+		{
+			"CommonName": "Popup",
+			"RuntimeName": "fow.base.components::Popup"
+		},
+		{
+			"CommonName": "AdOverlay",
+			"RuntimeName": "fow.components.widgets.adoverlay::AdOverlay"
+		},
+		{
+			"CommonName": "AwardContainer",
+			"RuntimeName": "fow.components.widgets.awards::AwardContainer"
+		},
+		{
+			"CommonName": "FeatureTile",
+			"RuntimeName": "fow.components.global::FeatureTileRotator"
+		},
+		{
+			"CommonName": "LiveTile",
+			"RuntimeName": "fow.components.global::LiveTile"
+		},
+		{
+			"CommonName": "LiveTileSkillGame",
+			"RuntimeName": "fow.components.global::LiveTileSkillGame"
+		},
+		{
+			"CommonName": "LiveTilePlay",
+			"RuntimeName": "fow.components.global::LiveTilePlay"
+		},
+		{
+			"CommonName": "ItemCounterTile",
+			"RuntimeName": "fow.components.global::ItemCounterTile"
+		},
+		{
+			"CommonName": "InventoryTile",
+			"RuntimeName": "fow.components.global::InventoryTile"
+		},
+		{
+			"CommonName": "SeasonTile",
+			"RuntimeName": "fow.components.global::SeasonTile"
+		},
+		{
+			"CommonName": "FavouriteTeamPlayersTile",
+			"RuntimeName": "fow.components.global::FavouriteTeamPlayersTile"
+		},
+		{
+			"CommonName": "ExtraImageLiveTile",
+			"RuntimeName": "fow.components.global::ExtraImageLiveTile"
+		},
+		{
+			"CommonName": "SquadTile",
+			"RuntimeName": "fow.components.global::SquadTile"
+		},
+		{
+			"CommonName": "AgeComponent",
+			"RuntimeName": "fow.components.global::AgeComponent"
+		},
+		{
+			"CommonName": "TrophyCarouselItem",
+			"RuntimeName": "fow.components.global::TrophyCarouselItem"
+		},
+		{
+			"CommonName": "LabelWithBackground",
+			"RuntimeName": "fow.components.global::LabelWithBackground"
+		},
+		{
+			"CommonName": "GenericCarousel",
+			"RuntimeName": "fow.components.global.GenericCarousel"
+		},
+		{
+			"CommonName": "MyPackComponent",
+			"RuntimeName": "fow.components.global::MyPackComponent"
+		},
+		{
+			"CommonName": "PackArt",
+			"RuntimeName": "fow.components.global::PackArt"
+		},
+		{
+			"CommonName": "PackComponent",
+			"RuntimeName": "fow.components.global::PackComponent"
+		},
+		{
+			"CommonName": "SkillGameSelectComponent",
+			"RuntimeName": "fow.components.global::SkillGameSelectComponent"
+		},
+		{
+			"CommonName": "FIFAPointsPack",
+			"RuntimeName": "fow.components.global::FIFAPointsPack"
+		},
+		{
+			"CommonName": "CategoryButton",
+			"RuntimeName": "fow.components.global.buttons::CategoryButton"
+		},
+		{
+			"CommonName": "ArrowButton",
+			"RuntimeName": "fow.components.global.buttons::ArrowButton"
+		},
+		{
+			"CommonName": "AnimatedCircularProgressBar",
+			"RuntimeName": "fow.components.global::AnimatedCircularProgressBar"
+		},
+		{
+			"CommonName": "Toggle",
+			"RuntimeName": "fow.components.widgets.toggle::Toggle"
+		},
+		{
+			"CommonName": "XPBar",
+			"RuntimeName": "fow.components.widgets.userplate::XPBar"
+		},
+		{
+			"CommonName": "UserPlate",
+			"RuntimeName": "fow.components.widgets.userplate::UserPlate"
+		},
+		{
+			"CommonName": "InGameUserPlate",
+			"RuntimeName": "fow.components.widgets.userplate::InGameUserPlate"
+		},
+		{
+			"CommonName": "UserPlateLite",
+			"RuntimeName": "fow.components.widgets.userplate::UserPlateLite"
+		},
+		{
+			"CommonName": "SharedUserPlate",
+			"RuntimeName": "fow.components.widgets.userplate::SharedUserPlate"
+		},
+		{
+			"CommonName": "MatchCreditDisplay",
+			"RuntimeName": "fow.components.widgets.matchcredits::MatchCreditDisplay"
+		},
+		{
+			"CommonName": "AddFIFAPointsButton",
+			"RuntimeName": "fow.components.widgets.userplate::AddFIFAPointsButton"
+		},
+		{
+			"CommonName": "AddMatchCreditsButton",
+			"RuntimeName": "fow.components.widgets.matchcredits::AddMatchCreditsButton"
+		},
+		{
+			"CommonName": "Scrollbar",
+			"RuntimeName": "fow.base.components::Scrollbar"
+		},
+		{
+			"CommonName": "ScrollView",
+			"RuntimeName": "fow.base.components::ScrollView"
+		},
+		{
+			"CommonName": "ScrollableTextbox",
+			"RuntimeName": "fow.base.components::ScrollableTextbox"
+		},
+		{
+			"CommonName": "HSlider",
+			"RuntimeName": "fow.base.components::HSlider"
+		},
+		{
+			"CommonName": "NavigationBarButton",
+			"RuntimeName": "fow.components.widgets.navigationbar::NavigationBarButton"
+		},
+		{
+			"CommonName": "NavigationBarMediaCaptureButton",
+			"RuntimeName": "fow.components.widgets.navigationbar::NavigationBarMediaCaptureButton"
+		},
+		{
+			"CommonName": "Accordion",
+			"RuntimeName": "fow.base.components::Accordion"
+		},
+		{
+			"CommonName": "InGameUserPlateLite",
+			"RuntimeName": "fow.components.widgets.userplate.InGameUserPlateLite"
+		},
+		{
+			"CommonName": "ItemCarousel",
+			"RuntimeName": "fow.components.global.ItemCarousel"
+		},
+		{
+			"CommonName": "PlayerExchangeSelection",
+			"RuntimeName": "fow.components.global.PlayerExchangeSelection"
+		},
+		{
+			"CommonName": "PlayerExchangeItemList",
+			"RuntimeName": "fow.components.global.PlayerExchangeItemList"
+		},
+		{
+			"CommonName": "SortableList",
+			"RuntimeName": "fow.components.widgets.sortablelist.SortableList"
+		},
+		{
+			"CommonName": "PlayerPreview",
+			"RuntimeName": "fow.components.widgets.playerpreview.PlayerPreview"
+		},
+		{
+			"CommonName": "PlayerPosition",
+			"RuntimeName": "fow.components.widgets.playerposition.PlayerPosition"
+		},
+		{
+			"CommonName": "SearchCriteria",
+			"RuntimeName": "fow.components.widgets.searchcriteria.SearchCriteria"
+		},
+		{
+			"CommonName": "Comparison",
+			"RuntimeName": "fow.components.widgets.huds.comparison::Comparison"
+		},
+		{
+			"CommonName": "DistanceToGoal",
+			"RuntimeName": "fow.components.widgets.huds.distancetogoal::DistanceToGoal"
+		},
+		{
+			"CommonName": "EventInfo",
+			"RuntimeName": "fow.components.widgets.huds.eventinfo::EventInfo"
+		},
+		{
+			"CommonName": "GameEvents",
+			"RuntimeName": "fow.components.widgets.huds.gameevents::GameEvents"
+		},
+		{
+			"CommonName": "MatchInfo",
+			"RuntimeName": "fow.components.widgets.huds.matchinfo::MatchInfo"
+		},
+		{
+			"CommonName": "MatchInfoNPC",
+			"RuntimeName": "fow.components.widgets.huds.matchinfonpc::MatchInfoNPC"
+		},
+		{
+			"CommonName": "PlayerNIB",
+			"RuntimeName": "fow.components.widgets.huds.playernib::PlayerNIB"
+		},
+		{
+			"CommonName": "ScoreboardSubstitutions",
+			"RuntimeName": "fow.components.widgets.huds.scoreboardsubstitutions::ScoreboardSubstitutions"
+		},
+		{
+			"CommonName": "ScoreClock",
+			"RuntimeName": "fow.components.widgets.huds.scoreclock::ScoreClock"
+		},
+		{
+			"CommonName": "Starting11",
+			"RuntimeName": "fow.components.widgets.huds.starting11::Starting11"
+		},
+		{
+			"CommonName": "Substitution",
+			"RuntimeName": "fow.components.widgets.huds.substitution::Substitution"
+		},
+		{
+			"CommonName": "Mentality",
+			"RuntimeName": "fow.components.widgets.huds.mentality::Mentality"
+		},
+		{
+			"CommonName": "PenalityKickMeter",
+			"RuntimeName": "fow.components.widgets.huds.penalitykickmeter::PenalityKickMeter"
+		},
+		{
+			"CommonName": "AccomplishmentHud",
+			"RuntimeName": "fow.components.widgets.huds.accomplishment::Accomplishment"
+		},
+		{
+			"CommonName": "SkillGamesInfo",
+			"RuntimeName": "fow.components.widgets.huds.skillgamesinfo::SkillGamesInfo"
+		},
+		{
+			"CommonName": "ScoresInfo",
+			"RuntimeName": "fow.components.widgets.huds.skillgamesinfo::ScoresInfo"
+		},
+		{
+			"CommonName": "Shootout",
+			"RuntimeName": "fow.components.widgets.huds.shootout::Shootout"
+		},
+		{
+			"CommonName": "AmountSelector",
+			"RuntimeName": "fow.components.widgets.auctionhouse::AmountSelector"
+		},
+		{
+			"CommonName": "FilterCategory",
+			"RuntimeName": "fow.components.widgets.auctionhouse::FilterCategory"
+		},
+		{
+			"CommonName": "FilterCell",
+			"RuntimeName": "fow.components.widgets.auctionhouse::FilterCell"
+		},
+		{
+			"CommonName": "SelectSquadCell",
+			"RuntimeName": "fow.components.widgets.squad::SelectSquadCell"
+		},
+		{
+			"CommonName": "NameSearch",
+			"RuntimeName": "fow.components.widgets.auctionhouse::NameSearch"
+		},
+		{
+			"CommonName": "SeasonProgressBar",
+			"RuntimeName": "fow.components.widgets.season.components::SeasonProgressBar"
+		},
+		{
+			"CommonName": "Prizes",
+			"RuntimeName": "fow.components.widgets.season.components::Prizes"
+		},
+		{
+			"CommonName": "SocialWall",
+			"RuntimeName": "fow.components.widgets.social::SocialWall"
+		},
+		{
+			"CommonName": "FriendList",
+			"RuntimeName": "fow.components.widgets.social::FriendList"
+		},
+		{
+			"CommonName": "AccomplishmentTimer",
+			"RuntimeName": "fow.components.widgets.accomplishmentlist::AccomplishmentTimer"
+		},
+		{
+			"CommonName": "AccomplishmentGridCell",
+			"RuntimeName": "fow.components.widgets.accomplishmentshub::AccomplishmentGridCell"
+		},
+		{
+			"CommonName": "MatchHistory",
+			"RuntimeName": "fow.components.widgets.mainseasson::MatchHistory"
+		},
+		{
+			"CommonName": "RadioButtonManager",
+			"RuntimeName": "fow.components.global.RadioButtonManager"
+		},
+		{
+			"CommonName": "TitleBonus",
+			"RuntimeName": "fow.components.widgets.seasons.components::TitleBonus"
+		},
+		{
+			"CommonName": "TitleBonusGroup",
+			"RuntimeName": "fow.components.widgets.seasons.components::TitleBonusGroup"
+		},
+		{
+			"CommonName": "ClubButton",
+			"RuntimeName": "fow.components.widgets.squadcustomization::ClubButton"
+		},
+		{
+			"CommonName": "ClubItemList",
+			"RuntimeName": "fow.components.widgets.squadcustomization.ClubItemList"
+		},
+		{
+			"CommonName": "EditLink",
+			"RuntimeName": "fow.components.global.buttons.EditLink"
+		},
+		{
+			"CommonName": "StatusBar",
+			"RuntimeName": "fow.components.global.StatusBar"
+		},
+		{
+			"CommonName": "InputTextField",
+			"RuntimeName": "fow.base.components.InputTextField"
+		},
+		{
+			"CommonName": "TournamentTree",
+			"RuntimeName": "fow.components.widgets.tournamenttree.TournamentTree"
+		},
+		{
+			"CommonName": "TournamentRequirementsRow",
+			"RuntimeName": "fow.components.widgets.tournamentselect.components::TournamentRequirementsRow"
+		},
+		{
+			"CommonName": "AnimatedValue",
+			"RuntimeName": "fow.components.global.AnimatedValue"
+		},
+		{
+			"CommonName": "TexturedScale9Tiler",
+			"RuntimeName": "fow.base.components::TexturedScale9Tiler"
+		},
+		{
+			"CommonName": "TexturedHorizontalTiler",
+			"RuntimeName": "fow.base.components::TexturedHorizontalTiler"
+		},
+		{
+			"CommonName": "TexturedVerticalTiler",
+			"RuntimeName": "fow.base.components::TexturedVerticalTiler"
+		},
+		{
+			"CommonName": "History",
+			"RuntimeName": "fow.components.widgets.season.components.History"
+		},
+		{
+			"CommonName": "NewsItem",
+			"RuntimeName": "fow.components.widgets.social.wall.NewsItem"
+		},
+		{
+			"CommonName": "WallGrid",
+			"RuntimeName": "fow.components.widgets.social.wall.WallGrid"
+		},
+		{
+			"CommonName": "AccomplishmentsGrid",
+			"RuntimeName": "fow.components.widgets.accomplishmentsbar.AccomplishmentsGrid"
+		},
+		{
+			"CommonName": "NewsImage",
+			"RuntimeName": "fow.components.widgets.social.wall.NewsImage"
+		},
+		{
+			"CommonName": "LikeButton",
+			"RuntimeName": "fow.components.widgets.social.LikeButton"
+		},
+		{
+			"CommonName": "AvatarLink",
+			"RuntimeName": "fow.components.widgets.social.AvatarLink"
+		},
+		{
+			"CommonName": "CaptureMedia",
+			"RuntimeName": "fow.components.widgets.huds.capturemedia.CaptureMedia"
+		},
+		{
+			"CommonName": "NotificationBar",
+			"RuntimeName": "fow.components.widgets.notificationbar.NotificationBar"
+		},
+		{
+			"CommonName": "AdBannerRotator",
+			"RuntimeName": "fow.components.widgets.adbanner.AdBannerRotator"
+		},
+		{
+			"CommonName": "AdBanner",
+			"RuntimeName": "fow.components.widgets.adbanner.AdBanner"
+		},
+		{
+			"CommonName": "AnimationPlayer",
+			"RuntimeName": "fow.components.global.item.AnimationPlayer"
+		},
+		{
+			"CommonName": "HotKey",
+			"RuntimeName": "fow.components.global.HotKey"
+		},
+		{
+			"CommonName": "StackDataPanel",
+			"RuntimeName": "ux.widget.StackDataPanel"
+		},
+		{
+			"CommonName": "SkipNIS",
+			"RuntimeName": "fow.components.widgets.huds.skipnis.SkipNIS"
+		},
+		{
+			"CommonName": "ControlSelectButton",
+			"RuntimeName": "fow.components.global.buttons::ControlSelectButton"
+		},
+		{
+			"CommonName": "RedeemRewards",
+			"RuntimeName": "fow.components.widgets.redeemrewads::RedeemRewards"
+		},
+		{
+			"CommonName": "PlayerExchangeRewardBar",
+			"RuntimeName": "fow.components.widgets.playerexchange::PlayerExchangeRewardBar"
+		},
+		{
+			"CommonName": "BreadCrumb",
+			"RuntimeName": "fow.components.widgets.breadcrumb::BreadCrumb"
+		},
+		{
+			"CommonName": "VideoProgressBar",
+			"RuntimeName": "fow.components.widgets.video.components::VideoProgressBar"
+		},
+		{
+			"CommonName": "CircularProgressBar",
+			"RuntimeName": "fow.components.widgets.speechdownload::CircularProgressBar"
+		},
+		{
+			"CommonName": "SpeechDownloadCell",
+			"RuntimeName": "fow.components.widgets.speechdownload::SpeechDownloadCell"
+		},
+		{
+			"CommonName": "IconWithLabel",
+			"RuntimeName": "fow.components.global::LabelWithIcon"
+		},
+		{
+			"CommonName": "LinkButton",
+			"LayoutPath": "flows/mainflow/widgets/global/LinkButton.layout"
+		},
+		{
+			"CommonName": "ChemistryBar",
+			"LayoutPath": "flows/mainflow/widgets/global/ChemistryBar.layout"
+		},
+		{
+			"CommonName": "FixtureResultsRow",
+			"LayoutPath": "flows/mainflow/gamemodes/fut/play/seasons/fixtureandresults/FixtureResultsRow.layout"
+		},
+		{
+			"CommonName": "FixtureRow",
+			"LayoutPath": "flows/mainflow/gamemodes/fut/play/seasons/fixturelist/FixtureRow.layout"
+		},
+		{
+			"CommonName": "GeneralSettingsRow",
+			"LayoutPath": "flows/mainflow/settingscustomize/general/GeneralSettingsRow.layout"
+		},
+		{
+			"CommonName": "GameEventsRow",
+			"LayoutPath": "flows/ingameflow/huds/gameevents/GameEventsRow.layout"
+		},
+		{
+			"CommonName": "LeaderboardsTLRow",
+			"LayoutPath": "widget/feature/leaderboard/LeaderboardTLRow.layout"
+		},
+		{
+			"CommonName": "RadioButton",
+			"LayoutPath": "flows/mainflow/widgets/global/RadioButton.layout"
+		},
+		{
+			"CommonName": "LeaderboardsComparisonRow",
+			"LayoutPath": "widget/feature/leaderboardscomparison/LeaderboardsComparisonRow.layout"
+		},
+		{
+			"CommonName": "LeaderboardsRow",
+			"LayoutPath": "flows/mainflow/gamemodes/fut/club/leaderboards/LeaderboardsRow.layout"
+		},
+		{
+			"CommonName": "LabelWithIcon",
+			"LayoutPath": "flows/mainflow/widgets/global/LabelWithIcon.layout"
+		},
+		{
+			"CommonName": "GameMenuRows",
+			"LayoutPath": "flows/ingameflow/gamemenus/GameMenuRows.layout"
+		},
+		{
+			"CommonName": "SimPauseMenuRows",
+			"LayoutPath": "flows/mainflow/gamemodes/fut/simulation/pause/SimPauseMenuRows.layout"
+		},
+		{
+			"CommonName": "MatchFactRow",
+			"LayoutPath": "flows/ingameflow/postmatch/matchfacts/facts/MatchFactRow.layout"
+		},
+		{
+			"CommonName": "MatchEventsRowHome",
+			"LayoutPath": "flows/ingameflow/postmatch/matchfacts/events/MatchEventsRowHome.layout"
+		},
+		{
+			"CommonName": "MatchEventsRowAway",
+			"LayoutPath": "flows/ingameflow/postmatch/matchfacts/events/MatchEventsRowAway.layout"
+		},
+		{
+			"CommonName": "LatencyIndicator",
+			"LayoutPath": "flows/mainflow/widgets/global/LatencyIndicator.layout"
+		},
+		{
+			"CommonName": "OutbidMessage",
+			"LayoutPath": "flows/mainflow/messagecenter/messagetype/OutbidMessage.layout"
+		},
+		{
+			"CommonName": "StoreMessage",
+			"LayoutPath": "flows/mainflow/messagecenter/messagetype/StoreMessage.layout"
+		},
+		{
+			"CommonName": "SystemMessage",
+			"LayoutPath": "flows/mainflow/messagecenter/messagetype/SystemMessage.layout"
+		},
+		{
+			"CommonName": "InfoMessage",
+			"LayoutPath": "flows/mainflow/messagecenter/messagetype/InfoMessage.layout"
+		},
+		{
+			"CommonName": "ChatMessage",
+			"LayoutPath": "flows/mainflow/messagecenter/messagetype/ChatMessage.layout"
+		},
+		{
+			"CommonName": "InviteMessage",
+			"LayoutPath": "flows/mainflow/messagecenter/messagetype/InviteMessage.layout"
+		},
+		{
+			"CommonName": "MatchEventsRow",
+			"LayoutPath": "flows/mainflow/widgets/matchfacts/MatchEventsRow.layout"
+		},
+		{
+			"CommonName": "Avatar",
+			"LayoutPath": "widget/global/buttons/Avatar.layout"
+		},
+		{
+			"CommonName": "TeamRating",
+			"LayoutPath": "widget/global/TeamRating.layout"
+		},
+		{
+			"CommonName": "FlatPanel",
+			"LayoutPath": "widget/global/FlatPanel.layout"
+		},
+		{
+			"CommonName": "VisualPanel",
+			"LayoutPath": "widget/global/VisualPanel.layout"
+		},
+		{
+			"CommonName": "VisualPanelAlternate",
+			"LayoutPath": "widget/global/VisualPanelAlternate.layout"
+		},
+		{
+			"CommonName": "VisualPanelAlternateTutorial",
+			"LayoutPath": "widget/global/VisualPanelAlternateTutorial.layout"
+		},
+		{
+			"CommonName": "AwardPoints",
+			"LayoutPath": "widget/feature/awards/AwardPoints.layout"
+		},
+		{
+			"CommonName": "TotwRewardButton",
+			"LayoutPath": "widget/feature/totw/TotwRewardButton.layout"
+		},
+		{
+			"CommonName": "FifaPointsButton",
+			"LayoutPath": "widget/global/FifaPointsButton.layout"
+		},
+		{
+			"CommonName": "TeamSelector",
+			"LayoutPath": "widget/global/TeamSelector.layout"
+		},
+		{
+			"CommonName": "MessageCenterRow",
+			"LayoutPath": "widget/feature/messagecenter/MessageCenterRow.layout"
+		},
+		{
+			"CommonName": "AuctionHouseBidContext",
+			"LayoutPath": "flows/mainflow/gamemodes/fut/trade/auctionhouse/AuctionHouseBidContext.layout"
+		},
+		{
+			"CommonName": "AuctionHouseItemDock",
+			"LayoutPath": "flows/mainflow/gamemodes/fut/trade/auctionhouse/AuctionHouseItemDock.layout"
+		},
+		{
+			"CommonName": "BigBinaryToggle",
+			"LayoutPath": "flows/mainflow/widgets/controls/BigBinaryToggle.layout"
+		},
+		{
+			"CommonName": "GestureArea",
+			"RuntimeName": "fow.input.gestures::GestureArea"
+		},
+		{
+			"CommonName": "ReplayControl",
+			"RuntimeName": "fow.components.widgets.instantreplay::ReplayControl"
+		},
+		{
+			"CommonName": "AssetButton",
+			"RuntimeName": "fow.components.global.buttons::AssetButton"
+		},
+		{
+			"CommonName": "VerticalSlider",
+			"RuntimeName": "fow.components.widgets.instantreplay::VerticalSlider"
+		},
+		{
+			"CommonName": "DragToggle",
+			"RuntimeName": "fow.components.widgets.dragtoggle::DragToggle"
+		},
+		{
+			"CommonName": "BinaryToggle",
+			"RuntimeName": "fow.components.widgets.binarytoggle::BinaryToggle"
+		},
+		{
+			"CommonName": "BaseGameButton",
+			"RuntimeName": "fow.components.widgets.gamecontrols::BaseGameButton"
+		},
+		{
+			"CommonName": "GameButton",
+			"RuntimeName": "fow.components.widgets.gamecontrols::GameButton"
+		},
+		{
+			"CommonName": "SwipeGameButton",
+			"RuntimeName": "fow.components.widgets.gamecontrols::SwipeGameButton"
+		},
+		{
+			"CommonName": "DPad",
+			"RuntimeName": "fow.components.widgets.gamecontrols::DPad"
+		},
+		{
+			"CommonName": "CheckBox",
+			"RuntimeName": "fow.components.widgets.checkbox::CheckBox"
+		},
+		{
+			"CommonName": "CustomizationRow",
+			"RuntimeName": "fow.components.widgets.optionpanels::CustomizationRow"
+		},
+		{
+			"CommonName": "SimulationRow",
+			"RuntimeName": "fow.components.widgets.simulation::SimulationRow"
+		},
+		{
+			"CommonName": "SimulationMentalityButton",
+			"RuntimeName": "fow.components.widgets.simulation::SimulationMentalityButton"
+		},
+		{
+			"CommonName": "CurrentZoneIndicator",
+			"RuntimeName": "fow.components.widgets.simulation::CurrentZoneIndicator"
+		},
+		{
+			"CommonName": "DragMount",
+			"RuntimeName": "fow.components.global::DragMount"
+		},
+		{
+			"CommonName": "VirtualKeyboard",
+			"RuntimeName": "fow.components.global::VirtualKeyboard"
+		},
+		{
+			"CommonName": "SimpleLabel",
+			"RuntimeName": "fow.components.global::SimpleLabel"
+		},
+		{
+			"CommonName": "BulletIndicator",
+			"RuntimeName": "fow.components.widgets.bulletindicator::BulletIndicator"
+		},
+		{
+			"CommonName": "SubsDrawer",
+			"RuntimeName": "fow.components.widgets.subsdrawer::SubsDrawer"
+		},
+		{
+			"CommonName": "GridTable",
+			"RuntimeName": "fow.components.global::GridTable"
+		},
+		{
+			"CommonName": "GridCell",
+			"RuntimeName": "fow.base.components::GridCell"
+		},
+		{
+			"CommonName": "FavoriteGridCell",
+			"RuntimeName": "fow.components.widgets.userplate::CountryGridCell"
+		},
+		{
+			"CommonName": "CountryGridCell",
+			"RuntimeName": "fow.components.widgets.userplate::CountryGridCell"
+		},
+		{
+			"CommonName": "LeagueGridCell",
+			"RuntimeName": "fow.components.widgets.userplate::LeagueGridCell"
+		},
+		{
+			"CommonName": "TeamGridCell",
+			"RuntimeName": "fow.components.widgets.userplate::TeamGridCell"
+		},
+		{
+			"CommonName": "PlayerGridCell",
+			"RuntimeName": "fow.components.widgets.userplate::PlayerGridCell"
+		},
+		{
+			"CommonName": "BioGridCell",
+			"RuntimeName": "fow.components.widgets.userplate::BioGridCell"
+		},
+		{
+			"CommonName": "SimpleButton",
+			"RuntimeName": "fow.components.global.buttons::SimpleButton"
+		},
+		{
+			"CommonName": "TileButton",
+			"RuntimeName": "fow.components.global.buttons::TileButton"
+		},
+		{
+			"CommonName": "AssetCache",
+			"RuntimeName": "fow.components.global::AssetCache"
+		},
+		{
+			"CommonName": "PlayerBioStats",
+			"RuntimeName": "fow.components.widgets.playerbio::PlayerBioStats"
+		},
+		{
+			"CommonName": "ConsumableButton",
+			"RuntimeName": "fow.components.global.buttons::ConsumableButton"
+		},
+		{
+			"CommonName": "AwardsRow",
+			"RuntimeName": "fow.components.widgets.season.components::AwardsRow"
+		}
+	],
+	"behaviors":
+	[
+		{
+			"CommonName": "MouseInputDispatcher",
+			"RuntimeName": "fow.behaviors.DispatchMouseInputBehavior"
+		},
+		{
+			"CommonName": "ScaleToParent",
+			"RuntimeName": "fow.behaviors.ScaleToParentSizeBehavior"
+		},
+		{
+			"CommonName": "ActionBehavior",
+			"RuntimeName": "ux.behavior.data.ActionBehavior"
+		},
+		{
+			"CommonName": "TriggerOnTrue",
+			"RuntimeName": "ux.behavior.data.TriggerOnTrue"
+		},
+		{
+			"CommonName": "PrioritizedInputDispatcher",
+			"RuntimeName": "ux.behavior.input.InputPrioritizer"
+		},
+		{
+			"CommonName": "InputConsumer",
+			"RuntimeName": "ux.behavior.input.InputConsumer"
+		},
+		{
+			"CommonName": "PointBehavior",
+			"RuntimeName": "ux.behavior.pointer.PointBehavior"
+		},
+		{
+			"CommonName": "ClickBehavior",
+			"RuntimeName": "ux.behavior.pointer.ClickBehavior"
+		},
+		{
+			"CommonName": "SignalScriptBehavior",
+			"RuntimeName": "ux.behavior.anim.SignalScriptBehavior"
+		},
+		{
+			"CommonName": "TriggerOnControlChangeBehavior",
+			"RuntimeName": "ux.behavior.anim.TriggerOnControlChange"
+		},
+		{
+			"CommonName": "ApplyStyleOnControlChange",
+			"RuntimeName": "ux.behavior.style.ApplyStyleOnControlBehavior"
+		},
+		{
+			"CommonName": "ChooseStyleForTarget",
+			"RuntimeName": "ux.behavior.style.ChooseStyleBehavior"
+		},
+		{
+			"CommonName": "BaseRowOnPointedChanged",
+			"RuntimeName": "fow.behaviors.widget.BaseRowChangeOnPointedBehavior"
+		},
+		{
+			"CommonName": "AudioActionBehavior",
+			"RuntimeName": "fow.behaviors.AudioActionBehavior"
+		},
+		{
+			"CommonName": "MouseClickActionBehavior",
+			"RuntimeName": "fow.behaviors.input.AnyClickActionBehavior"
+		},
+		{
+			"CommonName": "KeyPressActionBehavior",
+			"RuntimeName": "fow.behaviors.input.AnyKeyActionBehavior"
+		},
+		{
+			"CommonName": "SquadValidationBehavior",
+			"RuntimeName": "fow.behaviors.squad.SquadValidationBehavior"
+		},
+		{
+			"CommonName": "SquadTeamManagementBehavior",
+			"RuntimeName": "fow.behaviors.squad.SquadTeamManagementBehavior"
+		},
+		{
+			"CommonName": "SquadPlayerComparisonBehavior",
+			"RuntimeName": "fow.behaviors.squad.SquadPlayerComparisonBehavior"
+		},
+		{
+			"CommonName": "EvaluatePlayerFitnessBehavior",
+			"RuntimeName": "fow.behaviors.squad.EvaluatePlayerFitnessBehavior"
+		},
+		{
+			"CommonName": "TickerNavPublisher",
+			"RuntimeName": "fow.behaviors.TickerNavPublisher"
+		},
+		{
+			"CommonName": "SquadInventoryBehavior",
+			"RuntimeName": "fow.behaviors.squad.SquadInventoryBehavior"
+		},
+		{
+			"CommonName": "SquadCustomizationBehavior",
+			"RuntimeName": "fow.behaviors.squad.SquadCustomizationBehavior"
+		},
+		{
+			"CommonName": "StageBackgroundResizeBehavior",
+			"RuntimeName": "fow.behaviors.StageBackgroundResizeBehavior"
+		},
+		{
+			"CommonName": "MatchPrepBehavior",
+			"RuntimeName": "fow.behaviors.matchprep.MatchPrepBehavior"
+		},
+		{
+			"CommonName": "PointerPopupMediator",
+			"RuntimeName": "fow.behaviors.input.PointerPopupMediator"
+		},
+		{
+			"CommonName": "ComboBoxTogglePublisher",
+			"RuntimeName": "fow.behaviors.ComboBoxTogglePublisher"
+		},
+		{
+			"CommonName": "ScrimClickBehavior",
+			"RuntimeName": "fow.behaviors.ScrimClickBehavior"
+		},
+		{
+			"CommonName": "InputBlocker",
+			"RuntimeName": "fow.behaviors.input.InputBlocker"
+		},
+		{
+			"CommonName": "LayerPropertyBehavior",
+			"RuntimeName": "fow.behaviors.LayerPropertyBehavior"
+		},
+		{
+			"CommonName": "MainHubTutorial1Behavior",
+			"RuntimeName": "fow.behaviors.ftf.MainHubTutorial1Behavior"
+		},
+		{
+			"CommonName": "MainHubTutorial2Behavior",
+			"RuntimeName": "fow.behaviors.ftf.MainHubTutorial2Behavior"
+		},
+		{
+			"CommonName": "MainHubTutorial3Behavior",
+			"RuntimeName": "fow.behaviors.ftf.MainHubTutorial3Behavior"
+		},
+		{
+			"CommonName": "SquadOptionsBehavior",
+			"RuntimeName": "fow.behaviors.ftf.SquadOptionsBehavior"
+		},
+		{
+			"CommonName": "SquadChemestryBehavior",
+			"RuntimeName": "fow.behaviors.ftf.SquadChemestryBehavior"
+		},
+		{
+			"CommonName": "SimulationTutorial2Behavior",
+			"RuntimeName": "fow.behaviors.ftf.SimulationTutorial2Behavior"
+		},
+		{
+			"CommonName": "SimulationTutorial3Behavior",
+			"RuntimeName": "fow.behaviors.ftf.SimulationTutorial3Behavior"
+		},
+		{
+			"CommonName": "SquadSubsBehavior",
+			"RuntimeName": "fow.behaviors.ftf.SquadSubsBehavior"
+		},
+		{
+			"CommonName": "PlayerExchangeTutorial1Behavior",
+			"RuntimeName": "fow.behaviors.ftf.PlayerExchangeTutorial1Behavior"
+		},
+		{
+			"CommonName": "PlayerExchangeTutorial2Behavior",
+			"RuntimeName": "fow.behaviors.ftf.PlayerExchangeTutorial2Behavior"
+		},
+		{
+			"CommonName": "PanelLayoutBehavior",
+			"RuntimeName": "fow.behaviors.layout.PanelLayoutBehavior"
+		},
+		{
+			"CommonName": "ChemistryBarBehavior",
+			"RuntimeName": "fow.behaviors.layout.ChemistryBarBehavior"
+		},
+		{
+			"CommonName": "GameEventsRowBehavior",
+			"RuntimeName": "fow.behaviors.layout.GameEventsRowBehavior"
+		},
+		{
+			"CommonName": "ApplyTextCase",
+			"RuntimeName": "fow.behaviors.style.ApplyTextCase"
+		},
+		{
+			"CommonName": "ApplyStyle",
+			"RuntimeName": "fow.behaviors.style.ApplyStyleBehavior"
+		},
+		{
+			"CommonName": "RadioButtonBehavior",
+			"RuntimeName": "fow.behaviors.layout.RadioButtonBehavior"
+		},
+		{
+			"CommonName": "LabelWithIconBehavior",
+			"RuntimeName": "fow.behaviors.layout.CenterContainerBehavior"
+		},
+		{
+			"CommonName": "TriggerScriptBehavior",
+			"RuntimeName": "ux.behavior.anim.TriggerScriptBehavior"
+		},
+		{
+			"CommonName": "AutoTriggerScriptBehavior",
+			"RuntimeName": "fow.behaviors.anim.AutoTriggerScriptBehavior"
+		},
+		{
+			"CommonName": "SignalSetProperty",
+			"RuntimeName": "fow.behaviors.SignalSetPropertyBehavior"
+		},
+		{
+			"CommonName": "SimpleHitTestBehavior",
+			"RuntimeName": "fow.behaviors.element.SimpleHitTestBehavior"
+		},
+		{
+			"CommonName": "ParallelogramHitTestBehavior",
+			"RuntimeName": "fow.behaviors.element.ParallelogramHitTestBehavior"
+		},
+		{
+			"CommonName": "AddChildHitTestBehavior",
+			"RuntimeName": "fow.behaviors.element.AddChildHitTestBehavior"
+		},
+		{
+			"CommonName": "BaseRowChangedOnComboBoxBehavior",
+			"RuntimeName": "fow.behaviors.widget.BaseRowChangedOnComboBoxBehavior"
+		},
+		{
+			"CommonName":"ToggleSelectOnClick",
+			"RuntimeName":"fow.behaviors.control.ToggleSelectOnClick"
+		},
+		{
+			"CommonName": "SizeSetterBehavior",
+			"RuntimeName": "ux.behavior.SizeSetterBehavior"
+		},
+		{
+			"CommonName": "CombinePropertiesBehavior",
+			"RuntimeName": "fow.behaviors.CombinePropertiesBehavior"
+		},
+		{
+			"CommonName": "InterpolatePropertyBehavior",
+			"RuntimeName": "fow.behaviors.InterpolatePropertyBehavior"
+		},
+		{
+			"CommonName":"CursorActionBehavior",
+			"RuntimeName":"fow.behaviors.input.CursorActionBehavior"
+		},
+		{
+			"CommonName": "TeamSelectorBehavior",
+			"RuntimeName": "fow.behaviors.widget.global.TeamSelectorBehavior"
+		},
+		{
+			"CommonName":"DynamicChildBehavior",
+			"RuntimeName":"ux.listcreation.DynamicChildBehavior"
+		},
+		{
+			"CommonName":"MessagesSelectorBehavior",
+			"RuntimeName":"fow.behaviors.widget.feature.messagecenter.MessagesSelectorBehavior"
+		},
+		{
+			"CommonName": "ButtonPayloadCallbackSetter",
+			"RuntimeName": "fow.behaviors.ButtonPayloadCallbackSetter"
+		},
+		{
+			"CommonName": "PointLocalizer",
+			"RuntimeName": "fow.behaviors.input.PointLocalizer"
+		},
+		{
+			"CommonName": "DragToggleBehavior",
+			"RuntimeName": "fow.behaviors::DragToggleBehavior"
+		},
+		{
+			"CommonName": "LoadItInOverlay",
+			"RuntimeName": "fow.behaviors::LoadItInOverlay"
+		},
+		{
+			"CommonName": "TileBulletMediator",
+			"RuntimeName": "fow.behaviors::TileBulletMediator"
+		},
+		{
+			"CommonName": "BigBinaryToggleBehavior",
+			"RuntimeName": "fow.behaviors.layout.BigBinaryToggleBehavior"
+		},
+		{
+			"CommonName": "JackpotPlayerPopupBehavior",
+			"RuntimeName": "fow.behaviors.shop.JackpotPlayerPopupBehavior"
+		},
+		{
+			"CommonName": "ControlsHelpLoadBehavior",
+			"RuntimeName": "fow.behaviors.help.ControlsHelpLoadBehavior"
+		},
+		{
+			"CommonName": "LoginGiftBehavior",
+			"RuntimeName": "fow.behaviors.layout.LoginGiftBehavior"
+		},
+		{
+			"CommonName": "SkillGameRewardsBehavior",
+			"RuntimeName": "fow.behaviors.layout.SkillGameRewardsBehavior"
+		},
+		{
+			"CommonName": "SkillGameInstructionsBehavior",
+			"RuntimeName": "fow.behaviors.layout.SkillGameInstructionsBehavior"
+		},
+		{
+			"CommonName": "SelectFavoriteClub",
+			"RuntimeName": "fow.behaviors.layout.SelectFavoriteClub"
+		}
+	]
+}

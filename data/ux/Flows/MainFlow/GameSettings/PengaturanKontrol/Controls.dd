@@ -1,0 +1,21 @@
+{
+	"actions":
+	[
+        {
+            "viewname": "act_select_touch_controls",
+			"actionname": "act_select_touch_controls"
+        },
+        {
+            "viewname": "act_select_controller_controls",
+			"actionname": "act_select_controller_controls"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_is_touch_control",
+            "binding": "bnd_is_touch_control",
+            "type": "bool"
+        }	
+    ]
+}

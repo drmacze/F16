@@ -1,0 +1,29 @@
+{
+  "name": "MatchResults",
+  "states": [
+    {
+      "onEnter": [
+        ["viewLayer", ["Gamemodes"]],
+        ["blockingLoadVVM", ["/flows/ingameflow/postmatch/MatchResults/MatchResults.vvm", {
+          "gamemode": ".gamemode",
+          "flow": ".flow",
+          "type": ".type",
+          "gameState": ".gameState",
+          "skipFE": ".SKIP_FE"
+        }]]
+      ],
+      "onExit": [
+        ["unloadVVM"]
+      ],
+      "onEvent": [
+        ["act_advance", "evt_advance"]
+      ],
+      "transitions": [
+        {
+          "event": "evt_advance",
+          "targets": ["out_check_media"]
+        }
+      ]
+    }
+  ]
+}

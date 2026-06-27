@@ -1,0 +1,91 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "BeaproRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.AwayTeamCrest": "RowPanel.RowLeftPanel.AwayTeamCrest.image",
+        "dataProviders.AwayTeamName": "RowPanel.RowLeftPanel.AwayTeamName.text",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 350,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width":350,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                       {
+                            "commonName": "Image",
+                            "name": "AwayTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 0,
+                            "marginLeft": 10,
+                            "width": 40,
+                            "height": 40
+                        },
+                        
+                        {
+                            "commonName": "Label",
+                            "name":"AwayTeamName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 70,
+                            "marginBottom": 0,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_DINPROBOLD"
+                        }
+                        
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "marginRight": 0,
+                    "width": 170,
+                    "height": 100,
+                    "children":
+                    [
+                        
+                        {
+                            "commonName": "Image",
+                            "name":"StartGameIcon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 10,
+                            "width": 30,
+                            "height": 30
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

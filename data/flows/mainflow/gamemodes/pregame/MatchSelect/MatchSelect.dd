@@ -1,0 +1,127 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_squadhome",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squadhome"
+            }
+        },
+        {
+            "viewname": "act_squadaway",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squadaway"
+            }
+        },
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_tab4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4"
+            }
+        },
+        {
+            "viewname": "act_menu_stats",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menu_stats"
+            }
+        },
+        {
+            "viewname": "act_menu_sides",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menu_sides"
+            }
+        },
+        {
+            "viewname": "act_menu_detailstats",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_menu_detailstats"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_logo_team_home",
+            "binding": "bnd_logo_team_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_team_away",
+            "binding": "bnd_logo_team_away",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_man_team_home",
+            "binding": "bnd_man_team_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_man_team_away",
+            "binding": "bnd_man_team_away",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_match_difficulty",
+            "binding":  "bnd_match_difficulty",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stadium_name",
+            "binding":  "bnd_stadium_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_info_match",
+            "binding":  "bnd_info_match",
+            "type":     "string"
+        }
+    ]
+}

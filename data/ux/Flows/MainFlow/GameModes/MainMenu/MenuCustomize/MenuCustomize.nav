@@ -1,0 +1,24 @@
+{
+    "name": "MenuCustomize",
+    "states":
+    [
+        {
+            "name": "GameSettings",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameSettings/GameSettings.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "EditTeams",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/EditTeams/TeamSelectHub.nav", 
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+    ]
+}

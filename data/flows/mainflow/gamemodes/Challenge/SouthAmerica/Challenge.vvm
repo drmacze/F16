@@ -1,0 +1,5 @@
+{
+	"dds": ["Challenge.dd"],
+    "vms": [["lua", "Challenge.lua"]],
+    "views": [["gfx", {"layout": "Challenge.layout"}]]
+}

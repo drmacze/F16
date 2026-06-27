@@ -1,0 +1,37 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_menu_home",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_home"
+			}
+		},
+		{
+			"viewname": "act_menu_play",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_play"
+			}
+		},
+		{
+			"viewname": "act_menu_online",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_online"
+			}
+		},
+		{
+			"viewname": "act_menu_customize",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_customize"
+			}
+		}
+	]
+}

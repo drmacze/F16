@@ -1,0 +1,178 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Tab",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 256,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Kick Off",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 265,
+                    "height": 10,
+                    "width": 93,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BgInfo",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 130,
+                    "marginTop": -30,
+                    "width": 562,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillColor": "0x1B1B2A",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0x00D9D1",
+                            "outlineAlpha": 1,
+                            "cornerRaduis": 9
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 560,
+                            "height": 373,
+                            "type": "$_Menu_ko"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 10,
+                            "marginLeft": 10,
+                            "width": 5,
+                            "height": 20,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0x00D9D1"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 10,
+                            "marginLeft": 15,
+                            "width": 2,
+                            "height": 55,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0x00D9D1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 10,
+                            "marginLeft": 20,
+                            "autoTextShadow": true,
+                            "fontSize": 18,
+                            "fontFace": "$FONT_ARCHIVOBLACKREGULAR",
+                            "fontColor": "0xFFFFFF",
+                            "text": "KICK OFF"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 31,
+                            "marginLeft": 20,
+                            "autoTextShadow": true,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xD1D1D1",
+                            "text": "The shortest distance between\nyou and the field.",
+                            "leading": 1
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 85,
+                    "marginLeft": 130,
+                    "height": 42,
+                    "width": 562,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "FILL",
+                            "width": 180,
+                            "backgroundImage": "$_ClickToEnterOn2",
+                            "backgroundHighlightImage": "$_ClickToEnterOn2",
+                            "clickAction": "act_enter_ko"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 8,
+                            "marginBottom": -1,
+                            "width": 170,
+                            "autoScroll": true,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Enter Kick Off"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

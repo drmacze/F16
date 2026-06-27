@@ -1,0 +1,53 @@
+{
+    "name": "TeamManagement",
+    "states":
+    [
+		{
+            "name": "RedirectTeamManagement",
+            "onEnter":
+            [
+        ["stateChange", [".flowState"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+                ["loadVVM", ["/Flows/MainFlow/GameModes/PreGame/MatchSelect/MenuSquad/TeamManagement/TeamManagement.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                },
+				{
+                    "event": "evt_teammanagement_home",
+                    "targets": ["TeamManagement_Home"]
+                },
+				{
+                    "event": "evt_teammanagement_away",
+                    "targets": ["TeamManagement_Away"]
+                }
+            ]
+        },
+        {
+            "name": "TeamManagement_Home",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/PreGame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Home.nav",
+            "outputs":
+            {
+                "out_advance": "out_back"
+            }
+        },
+        {
+            "name": "TeamManagement_Away",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/PreGame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Away.nav",
+            "outputs":
+            {
+                "out_advance": "out_back"
+            }
+        }
+    ]
+}

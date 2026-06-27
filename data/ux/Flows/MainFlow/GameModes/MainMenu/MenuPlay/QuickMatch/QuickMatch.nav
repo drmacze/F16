@@ -1,0 +1,43 @@
+{
+	"name": "QuickMatch",
+    "let": 
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "MOTM_MATCH"
+	},
+    "onEnter":
+    [
+        ["viewLayer", ["Gamemodes"]],
+        ["finishViewUnload", ["screen"]],
+        ["set", ["gamemode", "real"]],
+        ["showFEUI", [".gamemode"]]
+    ],
+    "onExit":
+    [
+        ["hideUI", [".gamemode"]]
+    ],
+    "states":
+    [
+        {
+            "name": "PreGame",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/PreGame/PreGame.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode",
+                "out_ingame_flow": "InGameFlow"
+            }
+        },
+		{
+			"name": "InGameFlow",
+			"type": "external",
+			"file": "/Flows/InGameFlow/InGameFlow.nav",
+			"outputs":
+			{
+				"out_exit": "out_exit_gamemode"
+			}
+		}
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        }
+        
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_name",
+            "binding":  "bnd_team_name",
+            "type":     "string"
+        },                
+        {
+            "viewname": "bnd_match_label",
+            "binding":  "bnd_match_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_finish_label",
+            "binding":  "bnd_finish_label",
+            "type":     "string"
+        }
+        
+    ]
+}

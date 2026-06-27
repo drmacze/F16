@@ -1,0 +1,116 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_render_resolution",
+            "binding":  "bnd_render_resolution",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_default",
+            "binding":  "bnd_crowd_mode_default",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_replay",
+            "binding":  "bnd_crowd_mode_replay",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_nis",
+            "binding":  "bnd_crowd_mode_nis",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_highlight",
+            "binding":  "bnd_crowd_mode_highlight",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_setpiece",
+            "binding":  "bnd_crowd_mode_setpiece",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_sle_mode",
+            "binding":  "bnd_sle_mode",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_shadow_mode",
+            "binding":  "bnd_shadow_mode",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_shadow_player_low",
+            "binding":  "bnd_shadow_player_low",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_right_label",
+            "binding":  "bnd_right_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_right_image",
+            "binding":  "bnd_right_image",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_option_index",
+            "binding":  "bnd_option_index",
+            "type":     "object",
+            "actions":
+            [
+                {
+                    "viewname":   "act_change",
+                    "actionname": "act_change"
+                }
+            ]
+        },
+		{
+			"viewname": "bnd_debug_settings_list_data",
+            "binding":  "bnd_debug_settings_list_data",
+            "type":     "object"
+		}
+    ],
+	"actions":
+	[
+		{
+			"viewname":   "act_change_render_resolution",
+			"actionname": "act_change_render_resolution"
+		},
+		{
+			"viewname":   "act_change_crowd_mode_default",
+			"actionname": "act_change_crowd_mode_default"
+		},
+		{
+			"viewname":   "act_change_crowd_mode_replay",
+			"actionname": "act_change_crowd_mode_replay"
+		},
+		{
+			"viewname":   "act_change_crowd_mode_nis",
+			"actionname": "act_change_crowd_mode_nis"
+		},
+		{
+			"viewname":   "act_change_crowd_mode_highlight",
+			"actionname": "act_change_crowd_mode_highlight"
+		},
+		{
+			"viewname":   "act_change_crowd_mode_setpiece",
+			"actionname": "act_change_crowd_mode_setpiece"
+		},
+		{
+			"viewname":   "act_change_sle_mode",
+			"actionname": "act_change_sle_mode"
+		},
+		{
+			"viewname":   "act_change_shadow_mode",
+			"actionname": "act_change_shadow_mode"
+		},
+		{
+			"viewname":   "act_change_shadow_player_low",
+			"actionname": "act_change_shadow_player_low"
+		}
+	]
+}

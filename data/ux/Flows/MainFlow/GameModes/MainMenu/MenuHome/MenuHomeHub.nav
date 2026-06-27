@@ -1,0 +1,53 @@
+{
+    "name": "MenuHomeHub",
+    "onEnter":
+    [
+        ["setTabContext", [0]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuHomeHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+    
+        {
+            "event": "evt_menu_play",
+            "targets": ["out_menu_play"]
+        },
+        {
+            "event": "evt_menu_online",
+            "targets": ["out_menu_online"]
+        },
+        {
+            "event": "evt_menu_customize",
+            "targets": ["out_menu_customize"]
+        },
+        
+        {
+            "event": "evt_kickoff",
+            "targets": ["out_menuhome_kickoff"]
+        },
+        {
+            "event": "evt_playrivalmatch",
+            "targets": ["out_menuhome_playrivalmatch"]
+        },
+        {
+            "event": "evt_playaivsai",
+            "targets": ["out_menuhome_playaivsai"]
+        },
+        {
+            "event": "evt_help",
+            "targets": ["out_menuhome_help"]
+        },
+        {
+            "event": "evt_about",
+            "targets": ["out_menuhome_about"]
+        }
+        
+    ]
+}

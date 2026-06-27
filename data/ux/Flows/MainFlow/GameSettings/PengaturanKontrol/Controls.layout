@@ -1,0 +1,31 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+        {
+            "commonName": "BigBinaryToggle",
+            "x": 20,
+            "y": -122,
+            "styles": ["TF_LABEL_CENTERED"],
+            "visible": true,
+            "onLabel": "LTXT_MOB_SETTINGS_CONTROLLER",
+            "onSelectedIcon": "$CONTROL_ICON_GAMEPAD_GREY",
+            "onUnselectedIcon": "$CONTROL_ICON_TOUCHPAD_WHITE",
+            "onAction": "act_select_touch_controls",
+            "offLabel": "LTXT_MOB_SETTINGS_VIRTUAL",
+            "offUnselectedIcon":"$CONTROL_ICON_GAMEPAD_WHITE",
+            "offSelectedIcon": "$CONTROL_ICON_TOUCHPAD_GREY",
+            "offAction": "act_select_controller_controls",
+            "bindings":
+            [
+                {
+                    "property": "isOn",
+                    "binding": "bnd_is_touch_control"
+                }
+            ]
+        }
+    ]
+}

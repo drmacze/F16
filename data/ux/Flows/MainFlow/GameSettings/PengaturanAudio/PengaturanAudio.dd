@@ -1,0 +1,57 @@
+{
+	"actions":
+	[
+        {
+			"viewname": "act_music_change",
+			"actionname": "act_music_change"
+		},
+        {
+			"viewname": "act_fx_change",
+			"actionname": "act_fx_change"
+		},
+        {
+			"viewname": "act_commentary_change",
+			"actionname": "act_commentary_change"
+		},
+        {
+			"viewname": "act_crowd_change",
+			"actionname": "act_crowd_change"
+		},
+		{
+            "viewname": "act_show_speech_download_popup",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_show_speechdownload_popup"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_music_value",
+            "binding": "bnd_music_value",
+            "type": "number"
+        },
+        {
+            "viewname": "bnd_fx_value",
+            "binding": "bnd_fx_value",
+            "type": "number"
+        },
+        {
+            "viewname": "bnd_commentary_value",
+            "binding": "bnd_commentary_value",
+            "type": "number"
+        },
+        {
+            "viewname": "bnd_crowd_value",
+            "binding": "bnd_crowd_value",
+            "type": "number"
+        },
+		{
+            "viewname": "bnd_download_speech_disable",
+            "binding": "bnd_download_speech_disable",
+            "type": "bool"
+        }
+    ]
+}

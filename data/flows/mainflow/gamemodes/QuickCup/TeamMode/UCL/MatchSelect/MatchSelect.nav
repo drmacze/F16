@@ -1,0 +1,287 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["MenuMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "MenuMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/MatchSelect/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/MatchSelect/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab3",
+                    "states":
+                    [
+                        {
+                            "name": "Tab3",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/MatchSelect/TabActive/Tab3.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab4",
+                    "states":
+                    [
+                        {
+                            "name": "Tab4",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/MatchSelect/TabActive/Tab4.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab4sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/MatchSelect/TabActive/Tab4sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub2",
+                                            "targets": ["RedirectTab4sub2"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/MatchSelect/TabActive/Tab4sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub1",
+                                            "targets": ["RedirectTab4sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                },
+                {
+                    "event": "evt_standing",
+                    "targets": ["Standing"]
+                },
+                {
+                    "event": "evt_standing_home",
+                    "targets": ["StandingHome"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UCL/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2"
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/Restart/Restart.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "Standing",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UCL/QuickCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3",
+                "out_exit_gamemode1": "RedirectTab3"
+            }
+        },
+        {
+            "name": "StandingHome",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/TeamMode/UCL/QuickCup.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab1",
+                "out_exit_gamemode1": "RedirectTab1"
+            }
+        }
+    ]
+}

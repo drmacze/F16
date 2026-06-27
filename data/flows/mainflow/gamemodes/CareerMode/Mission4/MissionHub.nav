@@ -1,0 +1,44 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+{
+    "name": "MissionHub",
+    "initial":
+    {
+        "targets": ["RedirectMissionHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMissionHub",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["MissionHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_setup",
+                    "targets": ["Start"]
+                }
+            ]
+        },
+        {
+            "name": "Start",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MissionHub",            
+                "out_exit_gamemode1": "MissionHub"
+            }
+        }
+    ]
+}
+/*-- Modified MVNPROD Youtube Channel --*/

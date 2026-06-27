@@ -1,0 +1,5 @@
+{
+    "dds":   ["IntroLoadingSplash.dd"],
+	"vms":   [["lua", "IntroLoadingSplash.lua"]],
+    "views": [["gfx", {"layout": "IntroLoadingSplash.layout"}]]
+}

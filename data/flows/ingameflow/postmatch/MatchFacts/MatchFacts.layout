@@ -1,0 +1,306 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_exit",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Rectangle",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "color": "0x000000",
+            "alpha": 0.8
+        },
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 45,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_exit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "marginTop": -90,
+            "width": 400,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": -100,
+                    "width": 90,
+                    "height": 40,
+                    "scaleY": 1,
+                    "multiline": true,
+                    "bold": true,
+                    "label": "Info",
+                    "icon": "",
+                    "backgroundImage": "",
+                    "backgroundHighlightImage": "",
+                    "clickAction": "act_select_facts",
+                    "textStyles":
+                    [
+                        "TF_BUTTON_TABOFF"
+                    ]
+                 },
+                 {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 5,
+                    "marginLeft": 0,
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "alpha": 0.3,
+                    "text": "|"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 100,
+                    "width": 90,
+                    "height": 40,
+                    "scaleY": 1,
+                    "multiline": true,
+                    "bold": true,
+                    "label": "Events",
+                    "icon": "",
+                    "backgroundImage": "",
+                    "backgroundHighlightImage": "",
+                    "clickAction": "act_select_events",
+                    "textStyles":
+                    [
+                        "TF_BUTTON_TABOFF"
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 50,
+            "width": 500,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "width": 450,
+                    "image": "$FadedDividerLine"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "fontSize": 30,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "STATISTICS"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -150,
+            "width": 800,
+            "height": 100,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "name": "ColorBg",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x151515",
+                    "cornerRaduis": 15,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Image",
+                    "name": "LogoTimHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 70,
+                    "height": 70,
+                    "marginLeft": -300,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "LogoTimAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 70,
+                    "height": 70,
+                    "marginLeft": 300,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 0,
+                    "marginLeft": -160,
+                    "fontSize": 23,
+                    "fontColor": "0x04F276",
+                    "fontFace": "$FONT_HEADER",
+                    "forceCaps":true,
+                    "autoScroll":true,
+                    "width": 160,
+                    "bindings":
+                    [
+                       {
+                          "binding": "bnd_home_team_name",
+                          "property": "text"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 0,
+                    "marginLeft": 160,
+                    "fontSize": 23,
+                    "fontColor": "0x03A9F4",
+                    "fontFace": "$FONT_HEADER",
+                    "forceCaps":true,
+                    "autoScroll":true,
+                    "width": 160,
+                    "bindings":
+                    [
+                       {
+                          "binding": "bnd_away_team_name",
+                          "property": "text"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "SkorPertandingan",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 50,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace":"$FONT_CRUYFFSANSBOLD",
+                    "alpha": 0.9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_result",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Layer",
+            "name": "MatchFactsTabView",
+            "x": -45,
+            "y": 180
+        }
+    ]
+}

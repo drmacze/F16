@@ -1,0 +1,38 @@
+{
+    "name": "CustomCup",
+    "states":
+    [
+        {
+            "name": "RedirectCustomCup",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["CustomCup.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_group_stage",
+                    "targets": ["GroupStage"]
+                }
+            ]
+        },
+        {
+            "name": "GroupStage",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomCup",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+    ]
+}

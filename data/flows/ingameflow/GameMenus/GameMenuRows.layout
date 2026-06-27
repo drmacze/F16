@@ -1,0 +1,101 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "GameMenuRowRoot",
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 750.0,
+            "height": 21.0
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "textAlignH": "CENTER",
+            "textAlignV": "CENTER"
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "textAlignH": "CENTER",
+            "forceCaps": false,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontSize": 15
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginLeft": 60.0,
+            "marginRight": 60.0,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "0x04F276",
+             "fontSize": 19
+        },
+            "NumberStyleRight":
+        {
+            "width": 80.0,
+            "marginLeft": 60.0,
+            "marginRight": 60.0,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "0x03A9F4",
+            "fontSize": 19
+            
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.valueRight": "RowPanel.RightNumberLabel.text",
+        "dataProviders.value": "RowPanel.LeftNumberLabel.text",
+        "dataProviders.label": "RowPanel.EventLabel.text",
+        "width": "RowPanel.width",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "EventLabel",
+                    "alignH": "CENTER",
+                    "width": 312.0,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "EventStyle"
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "LeftNumberLabel",
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyle"
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "RightNumberLabel",
+                    "alignH": "RIGHT",
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyleRight"
+                    ]
+                }
+            ]
+        }
+    ]
+}

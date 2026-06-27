@@ -1,0 +1,215 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 425,
+                    "height": 30,
+                    "width": 180,
+                    "label": "UEFA Champions League",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 401,
+                    "height": 10,
+                    "width": 230,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x1B1B2A",
+                            "cornerRaduis": 9,
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -40,
+                            "width": 232,
+                            "height": 155,
+                            "type": "$_IconUCL",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 80,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "UEFA Champions League"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": 0,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0x00FFD1",
+                            "width": 300,
+                            "text": "High stakes • Tournament football • Elite opposition"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 145,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xA1A1A1",
+                            "textAlignH": "CENTER",
+                            "width": 300,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Establish yourself as a European great in the\ncontinent's pinnacle competition."
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab2sub1"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 430,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x1B1B2A",
+                            "cornerRaduis": 9,
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -70,
+                            "width": 232,
+                            "height": 155,
+                            "type": "$_IconUWCL",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 42,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "UEFA Women's Champions\nLeague",
+                            "textAlignH": "CENTER",
+                            "width": 290,
+                            "leading": 3
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 95,
+                            "marginLeft": 0,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0x00FFD1",
+                            "width": 300,
+                            "text": "Pinnacle • Prestige • Victory"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 140,
+                            "marginLeft": 0,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xA1A1A1",
+                            "textAlignH": "CENTER",
+                            "width": 300,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Take on the top teams in the women's game,\nplaying in the Semi-Final, or jumping directly to\nthe final."
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab2sub2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "NIS",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["viewLayer", ["NIS"]],
+		["enterNIS"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_skipNISFlow",
+            "targets": ["out_exit_flow"]
+        },
+        {
+            "event": "evt_toggle_pause",
+            "targets": ["out_exit_pause"],
+            "let": { "initial": "menu" }
+        }
+    ],
+    "states":
+    [
+        {
+            "name": "MatchInfo",
+            "onEnter": [["loadVVM", ["/Flows/InGameFlow/Huds/MatchInfo/MatchInfo_Tournament.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "MatchInfoNPC",
+            "onEnter": [["loadVVM", ["/Flows/InGameFlow/Huds/MatchInfoNPC/MatchInfoNPC_Tournament.vvm"]]],
+            "onExit": [["unloadVVM"]]
+        },
+        {
+            "name": "Starting11",
+            "onEnter": [["loadVVM", ["/Flows/InGameFlow/Huds/Starting11/Starting11.vvm", { "gamemode": ".gamemode", "flow": ".flow" }]]],
+            "onExit": [["unloadVVM"]]
+        }
+    ]
+}

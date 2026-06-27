@@ -1,0 +1,196 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$BackgroundPreGame"
+        },
+        
+        {
+           "commonName": "Asset",
+           "alignV": "TOP",
+           "alignH": "CENTER",
+           "marginTop": 420,
+           "marginRight": 20,
+           "width": 1500,
+           "height": 60,
+           "alpha": 0.6,
+           "path": "Animasi/Animasi_Adboard_LogoEASports.swf"
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 550,
+            "children":
+            [
+                {
+                    "commonName": "LiveTile",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 380,
+                    "height": 380,
+                    "clickAction": "act_setscout"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "width": 380,
+                    "height": 380,
+                    "type": "$Bg_Scout2"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 95,
+                    "marginLeft": 325,
+                    "fontSize": 35,
+                    "fontColor": "$COLOR_DARK_GRAY",
+                    "text": "HIRE"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 135,
+                    "marginLeft": 325,
+                    "fontSize": 35,
+                    "fontColor": "$COLOR_DARK_GRAY",
+                    "text": "SCOUT"
+                },
+                {
+                    "commonName": "LiveTile",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -100,
+                    "width": 380,
+                    "height": 380,
+                    "clickAction": "act_setscout"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -100,
+                    "width": 380,
+                    "height": 380,
+                    "type": "$Bg_Scout3"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 95,
+                    "marginLeft": -85,
+                    "fontSize": 35,
+                    "fontColor": "$COLOR_DARK_GRAY",
+                    "text": "HIRE"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 135,
+                    "marginLeft": -85,
+                    "fontSize": 35,
+                    "fontColor": "$COLOR_DARK_GRAY",
+                    "text": "SCOUT"
+                },
+                {
+                    "commonName": "LiveTile",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": -100,
+                    "width": 380,
+                    "height": 380,
+                    "clickAction": "act_setscout"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": -100,
+                    "width": 380,
+                    "height": 380,
+                    "type": "$Bg_Scout1"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 95,
+                    "marginLeft": 734,
+                    "fontSize": 35,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "SCOUT"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 135,
+                    "marginLeft": 734,
+                    "fontSize": 35,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "LIST"
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

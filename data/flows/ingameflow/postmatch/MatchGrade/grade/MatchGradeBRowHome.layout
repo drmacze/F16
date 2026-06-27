@@ -1,0 +1,150 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "MatchGradeHomeRowRoot",
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 560.0,
+            "height": 70.0
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "LEFT",
+            "textAlignV": "CENTER",
+            "fontSize": 20
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+"fontColor": "$COLOR_WHITE",
+"fontFace": "$FONT_CRUYFFSANSMEDIUM",
+"fontSize": 20,
+            "alignV": "FILL"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+            "textAlignH": "CENTER",
+            "fontColor": "$COLOR_WHITE",
+            "fontSize": 20
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.HomeTeamCrest": "RowPanel.RowLeftPanel.HomeTeamCrest.image",
+        "dataProviders.HomeTeamName": "RowPanel.RowLeftPanel.HomeTeamName.text",
+    
+        "dataProviders.number": "RowPanel.NumberLabel.text",
+        "dataProviders.image": "RowPanel.EventIcon.image",
+        "dataProviders.head": "RowPanel.PlayerHead.image",
+        "dataProviders.name": "RowPanel.PlayerLabel.text",
+        "dataProviders.iconOffset": "RowPanel.EventIcon.marginRight",
+        "width": "RowPanel.width",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": -10.0,
+            "y": 0.0,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "EventTimeBgIdle",
+                    "alignH": "RIGHT",
+                    "alignV": "CENTER",
+                    "marginRight": -30000.0,
+                    "scaleX": 1.5,
+                    "scaleY": 1.5,
+                    "alpha": 0.15,
+                    "image": "$EventTimeBgIdle"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "PlayerHead",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                   "marginLeft": -600000.0,
+                    "width": 85,
+                    "height": 85,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "name": "PlayerLabel",
+                    "alignH": "LEFT",
+                    "width": 200.0,
+                    "marginLeft": 170.0,
+                    "fontColor": "$COLOR_WHITE",
+                    "autoScroll":true,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "EventStyle"
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "EventIcon",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginLeft": 355.0,
+                    "marginTop": -1,
+                    "width": 63,
+                    "height": 60
+                    },
+                       {
+                          "commonName": "Label",
+                          "name": "NamaTimAway",
+                          "alignV": "TOP",
+                          "alignH": "CENTER",
+                          "marginTop": 25,
+                          "marginLeft": 230,
+                          "fontColor": "$COLOR_WHITE",
+                          "fontSize": 30,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_nama_tim_home",
+                                "property": "text"
+                             }
+                          ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NumberLabel",
+                    "alignH": "LEFT",
+                    "marginLeft": 405.0,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyle"
+                    ]
+                    },
+                    {
+                            "commonName": "Image",
+                            "name": "HomeTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 50,
+                            "width": 40,
+                            "height": 40
+                            
+                }
+            ]
+        }
+    ]
+}  ]
+}

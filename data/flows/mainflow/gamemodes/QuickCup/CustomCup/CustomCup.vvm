@@ -1,0 +1,5 @@
+{
+	"dds": ["CustomCup.dd"],
+    "vms": [["lua", "CustomCup.lua"]],
+    "views": [["gfx", {"layout": "CustomCup.layout"}]]
+}

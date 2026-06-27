@@ -1,0 +1,405 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_advance",
+            "label": "Select"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 700,
+            "height": 500,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "SELECT TEAMS TO CHECK"
+                },
+
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 45.5,
+                   "marginLeft": 5,
+                   "width": 330,
+                   "height": 448.5,
+                   "alpha": 0.7,
+                   "type": "$BackgroundHitam"
+                },
+                
+                {
+                   "commonName": "TeamSelector",
+                   "name": "BagianInfoTimLogo&Rating",
+                   "alignV": "CENTER",
+                   "alignH": "LEFT",
+                   "marginBottom": 5,
+                   "marginLeft": 9,
+                   "width": 320,
+                   "height": 535,
+                   "bindings":
+                   [
+                      {
+                         "binding": "bnd_home_team_selector_alpha",
+                         "property": "alpha"
+                      },
+                      {
+                         "binding": "bnd_home_team_selector",
+                         "property": "dataProviders"
+                      }
+                   ]
+                },
+                
+                {
+                   "commonName": "Panel",
+                   "name": "BagianMenuGantiTim",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 55,
+                   "marginLeft": 15,
+                   "height": 430,
+                   "width": 310,
+                   "children":
+                   [
+
+                      {
+                         "commonName": "LiveTilePlay",
+                         "name": "insToggleCountry",
+                         "alignV": "TOP",
+                         "alignH": "LEFT",
+                         "width": 48,
+                         "height": 48,
+                         "clickAction": "act_home_country_previous"
+                      },
+                      {
+                         "commonName": "Asset",
+                         "alignV": "TOP",
+                         "alignH": "LEFT",
+                         "marginTop": 6,
+                         "marginLeft": 9,
+                         "width": 30,
+                         "height": 35,
+                         "type": "$TournamentLeft"
+                      },
+                
+                      {
+                         "commonName": "LiveTilePlay",
+                         "name": "insToggleCountry",
+                         "alignV": "TOP",
+                         "alignH": "RIGHT",
+                         "width": 48,
+                         "height": 48,
+                         "clickAction": "act_home_country_next"
+                      },
+                      {
+                         "commonName": "Asset",
+                         "alignV": "TOP",
+                         "alignH": "RIGHT",
+                         "marginTop": 6,
+                         "marginRight": 9,
+                         "width": 30,
+                         "height": 35,
+                         "type": "$TournamentRight"
+                      },
+
+                      {
+                         "commonName": "LiveTilePlay",
+                         "name": "insToggleTeam",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "width": 48,
+                         "height": 48,
+                         "clickAction": "act_home_team_previous"
+                      },
+                      {
+                         "commonName": "Asset",
+                         "alignV": "CENTER",
+                         "alignH": "LEFT",
+                         "marginLeft": 9,
+                         "width": 30,
+                         "height": 35,
+                         "type": "$TournamentLeft"
+                      },
+                      
+                      {
+                         "commonName": "LiveTilePlay",
+                         "name": "insToggleTeam",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "width": 48,
+                         "height": 48,
+                         "clickAction": "act_home_team_next"
+                      },
+                      {
+                         "commonName": "Asset",
+                         "alignV": "CENTER",
+                         "alignH": "RIGHT",
+                         "marginRight": 9,
+                         "width": 30,
+                         "height": 35,
+                         "type": "$TournamentRight"
+                      },
+                            				     
+                      {
+                         "commonName": "LiveTilePlay",
+                         "name": "insToggleLeague",
+                         "alignV": "BOTTOM",
+                         "alignH": "LEFT",
+                         "width": 48,
+                         "height": 48,
+                         "clickAction": "act_home_league_previous"
+                      },
+                      {
+                         "commonName": "Asset",
+                         "alignV": "BOTTOM",
+                         "alignH": "LEFT",
+                         "marginBottom": 6,
+                         "marginLeft": 9,
+                         "width": 30,
+                         "height": 35,
+                         "type": "$TournamentLeft"
+                      },
+                      
+                      {
+                         "commonName": "LiveTilePlay",
+                         "name": "insToggleLeague",
+                         "alignV": "BOTTOM",
+                         "alignH": "RIGHT",
+                         "width": 48,
+                         "height": 48,
+                         "clickAction": "act_home_league_next"
+                      },
+                      {
+                         "commonName": "Asset",
+                         "alignV": "BOTTOM",
+                         "alignH": "RIGHT",
+                         "marginBottom": 6,
+                         "marginRight": 9,
+                         "width": 30,
+                         "height": 35,
+                         "type": "$TournamentRight"
+                      }
+                      
+                   ]
+                },
+
+                {
+                   "commonName": "Panel",
+                   "name": "BagianMenuInfoTim",
+                   "alignV": "TOP",
+                   "alignH": "RIGHT",
+                   "marginTop": 45.5,
+                   "marginRight": 5,
+                   "height": 448.5,
+                   "width": 355,
+                   "children":
+                   [
+                      {
+                         "commonName": "Asset",
+                         "alignV": "FILL",
+                         "alignH": "FILL",
+                         "alpha": 0.7,
+                         "type": "$BackgroundHitam"
+                      },
+                      
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 5,
+                         "marginLeft": 5,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "text": "TEAM NAME   :"
+                      },
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 5,
+                         "marginLeft": 148,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "fontColor": "0xffd700",
+                         "bindings":
+                         [
+                            {
+                               "binding": "bnd_home_team_name",
+                               "property": "text"
+                            }
+                         ]
+                      },
+
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 40,
+                         "marginLeft": 5,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "text": "LEAGUE         :"
+                      },
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 40,
+                         "marginLeft": 148,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "fontColor": "0xffd700",
+                         "bindings":
+                         [
+                            {
+                               "binding": "bnd_home_team_league",
+                               "property": "text"
+                            }
+                         ]
+                      },
+
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 75,
+                         "marginLeft": 5,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "text": "NATIONALITY :"
+                      },
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 75,
+                         "marginLeft": 148,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "fontColor": "0xffd700",
+                         "bindings":
+                         [
+                            {
+                               "binding": "bnd_home_team_country",
+                               "property": "text"
+                            }
+                         ]
+                      },
+
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 110,
+                         "marginLeft": 5,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "text": "TEAM ID         :"
+                      }, 
+                      {
+                         "commonName": "Label",
+                         "alignH": "LEFT",
+                         "alignV": "TOP",
+                         "marginTop": 110,
+                         "marginLeft": 148,
+                         "forceCaps": true,
+                         "fontSize": 20,
+                         "fontColor": "0xffd700",
+                         "bindings":
+                         [
+                            {
+                              "binding": "bnd_team_id",
+                              "property": "text"
+                            }
+                         ]
+                      }
+
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

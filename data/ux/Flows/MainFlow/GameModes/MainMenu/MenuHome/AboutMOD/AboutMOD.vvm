@@ -1,0 +1,4 @@
+{
+	"dds": ["AboutMOD.dd"],
+    "views": [["gfx", {"layout": "AboutMOD.layout"}]]
+}

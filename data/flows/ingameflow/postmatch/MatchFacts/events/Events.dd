@@ -1,0 +1,66 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_team_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_TEAM_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_time_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_TIME_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_event_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_EVENT_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_number_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "Number_Abbr2"
+            }
+        },
+        {
+            "viewname": "bnd_player_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_PLAYER_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_away_events_list",
+            "binding":  "bnd_away_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_home_events_list",
+            "binding":  "bnd_home_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_empty_rows_data",
+            "binding":  "bnd_empty_rows_data",
+            "type":     "array"
+        }
+            
+    ]
+}

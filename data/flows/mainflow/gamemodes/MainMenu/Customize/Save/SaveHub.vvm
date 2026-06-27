@@ -1,0 +1,5 @@
+{
+	"dds":	 ["SaveHub.dd"],
+	"vms":   [["lua", "SaveHub.lua"]],
+    "views": [["gfx", {"layout": "SaveHub.layout"}]]
+}

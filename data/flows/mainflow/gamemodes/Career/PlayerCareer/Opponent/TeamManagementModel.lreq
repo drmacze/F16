@@ -1,0 +1,5 @@
+[
+    "/lua/common/ItemModel.lua",
+    "/lua/packages/tableutil.lua",
+    "/Flows/MainFlow/GameModes/Career/PlayerCareer/Opponent/formation/FormationModelReal.lua"
+]

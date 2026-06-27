@@ -1,0 +1,161 @@
+{
+    "name": "ShootoutHUD",
+    "let":  { "gameState": "shootout" },
+    "type": "parallel",
+	"onEnter":
+    [
+		["viewLayer", ["GamePlay"]],
+		["blockingLoadVVM", ["/flows/ingameflow/huds/shootout/ShootoutHUD.vvm"]],
+		["showGamePlayHUDs", [true]]
+    ],
+    "onExit":
+    [
+		["unloadVVM"],
+		["showGamePlayHUDs", [false]]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_toggle_pause",
+            "targets": ["out_pause"],
+            "let":     { "initial": "menu" }
+        },
+        {
+            "event":   "evt_regulation_time_over",
+            "targets": ["out_match_over"]
+        },
+        {
+            "event":   "evt_p2p_disconnect",
+            "targets": ["out_p2p_disconnect"]
+        },
+        {
+            "event":   "evt_fos_error_ingame",
+            "targets": ["out_fos_error"]
+        },
+		{
+            "event":   "evt_show_victory_connection_lost_ingame_relogin",
+            "targets": ["out_victory_error_relogin"]
+        },
+        {
+            "event":   "evt_show_victory_connection_lost_duplicate_account_ingame",
+            "targets": ["out_victory_error_relogin_duplicate"]
+        }
+    ],
+    "states":
+    [
+		{
+			"name":"GameControls",
+			"initial":
+			{
+                "targets": ["checkGameControls"]
+            },
+            "states":
+			[
+				{
+					"name":"checkGameControls",
+					"onEnter":
+					[
+						["checkIfTouchControlsAreEnabled"]
+					],
+					"transitions":
+					[
+						{
+							"event":   "evt_show_touch_controls",
+							"targets": ["showTouchControls"]
+						}
+					]
+				},
+				{
+					"name":"showTouchControls",
+					"onEnter":
+					[
+						["loadVVM", ["/flows/ingameflow/huds/gamecontrols/GameControls.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					]
+				}
+			]
+        },
+		{
+            "name": "PlayerNIB",
+            "type": "parallel",
+            "states":
+            [
+				{
+                    "name":    "PlayerNIBBacking",
+                    "onEnter": [
+									["blockingLoadVVM", ["/flows/ingameflow/huds/playernib/PlayerNIBBacking.vvm"]]
+							   ],
+                    "onExit":  [["unloadVVM"]]
+                },
+                {
+                    "name":    "PlayerNIBHome",
+                    "onEnter": [
+									["blockingLoadVVM", ["/flows/ingameflow/huds/playernib/PlayerNIBHome.vvm", { "side": 0 }]]
+							   ],
+                    "onExit":  [["unloadVVM"]]
+                },
+                {
+                    "name":    "PlayerNIBAway",
+                    "onEnter":  
+					[
+						["blockingLoadVVM", ["/flows/ingameflow/huds/playernib/PlayerNIBAway.vvm", { "side": 1 }]]
+					],
+                    "onExit":  [["unloadVVM"]]
+                }
+            ]
+        },
+		{
+            "name":	   "Shootout",
+            "onEnter": 
+			[
+				["blockingLoadVVM", ["/flows/ingameflow/huds/shootout/Shootout.vvm"]],
+				["showShootoutBoard"]
+			],
+            "onExit":  [["unloadVVM"]]
+        },
+        {
+            "name": "PenalityKickMeter",
+            "type": "parallel",
+            "states":
+            [
+                {
+                    "name": "PenalityKickMeterHUDLeft",
+                    "onEnter":
+                    [
+                        ["loadVVM", ["/flows/ingameflow/huds/penalitykickmeter/PenalityKickMeterLeft.vvm", { "orientation": "left" }]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ]
+                },
+                {
+                    "name": "PenalityKickMeterHUDRight",
+                    "onEnter":
+                    [
+                        ["loadVVM", ["/flows/ingameflow/huds/penalitykickmeter/PenalityKickMeterRight.vvm", { "orientation": "right" }]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "PenaltyHelp",
+             "onEnter": 
+			[
+				["blockingLoadVVM", ["/flows/ingameflow/huds/penaltyhelp/PenaltyHelp.vvm"]],
+				["onPenaltyHelpEntered"]
+			],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ]
+        }		
+    ]
+}

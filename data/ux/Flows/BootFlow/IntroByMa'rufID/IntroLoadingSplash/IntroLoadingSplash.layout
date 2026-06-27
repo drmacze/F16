@@ -1,0 +1,130 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_INTRO_AWALGAME"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_INTRO_AWALGAME"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+    
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$SplashScreen"
+        },
+        
+        {
+            "commonName": "Asset",
+            "alignV": "BOTTOM",
+            "alignH": "RIGHT",
+            "marginBottom": 35,
+            "marginRight": 35,
+            "width": 50,
+            "height": 50,
+            "alpha": 5,
+            "path": "animasi/Animasi_Loading.swf"
+        },
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 150,
+            "width": 500,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 500,
+                    "height": 300,
+                    "type": "$SplashScreenLogo"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -99,
+                   "marginLeft": -13,
+                   "fontSize": 30,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "LOADING ..."
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "RIGHT",
+                    "marginBottom": -30,
+                    "marginRight": -125,
+                    "width": 80,
+                    "height": 60,
+                    "path": "animasi/Loading16.swf"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -160,
+                   "marginLeft": -13,
+                   "fontSize": 22,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "© 2015 Electronic Arts Inc."
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -190,
+                   "marginLeft": -13,
+                   "fontSize": 15,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "This is uses autosave. autosave will overwrite content without confirmation."
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -210,
+                   "marginLeft": -13,
+                   "fontSize": 15,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "Do not turn off your Android Phone while the autosave icon is displayed."
+                }
+            ]
+        }
+    ]
+}

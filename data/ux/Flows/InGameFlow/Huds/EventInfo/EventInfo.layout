@@ -1,0 +1,108 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "FILL",
+    "alignH": "FILL",
+    "children":
+    [
+
+        {
+			"commonName": "Panel",
+			"name": "InfoGoal&Event",
+			"alignV": "TOP",
+			"alignH": "LEFT",
+			"marginTop": 90.5,
+			"marginLeft": 140.5,
+			"width": 273,
+			"height": 60,
+            "bindings":
+			[
+				{
+					"binding": "bnd_visible",
+					"property": "visible"
+				}
+			],
+			"children":
+			[
+				{
+			        "commonName": "Asset",
+			        "alignV": "CENTER",
+			        "alignH": "CENTER",
+			        "marginTop": -16,
+			        "marginLeft": -2,
+                    "width": 396,
+			        "height": 155,
+			        "type": "$ScoreBoard_Player"
+				},
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -10,
+                    "width": 28,
+                    "height": 28,
+                    "marginLeft":-88,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_team_crest"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -10,
+                    "marginRight": -85,
+                    "width": 25,
+                    "height": 25,
+                    "type": "$InfoBadge"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "forceCaps": true,
+                    "fontSize": 16,
+                    "marginLeft": -2,
+                    "marginBottom": 10,
+			        "fontFace": "$FONT_KNULMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_goal_player_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+			        "commonName": "EventInfo",
+			        "alignV": "CENTER",
+			        "alignH": "CENTER",
+			        "marginTop": -20,
+			        "marginLeft": -122.5,
+	                "bindings":
+			        [
+				        {
+					        "binding": "bnd_nationalization",
+					        "property": "nationalization"
+				        },
+				        {
+					        "binding": "bnd_data",
+					        "property": "data"
+				        }
+			        ]
+		        }
+            ]
+        }
+        
+    ]
+}

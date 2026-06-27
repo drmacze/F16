@@ -1,0 +1,4 @@
+{
+	"dds": ["SkillGames.dd"],
+    "views": [["gfx", {"layout": "SkillGames.layout"}]]
+}

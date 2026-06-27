@@ -1,0 +1,73 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_playmatch",
+            "actionname": "act_playmatch"
+        },
+        {
+            "viewname": "act_teammanagement",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_teammanagement"
+            }
+        },
+        {
+            "viewname": "act_gamesettings",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_gamesettings"
+            }
+        },
+        {
+            "viewname": "act_selectside",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_selectside"
+            }
+        }
+    ],
+    "data":
+    [
+           
+        {
+            "viewname": "bnd_logo_tim_home",
+            "binding": "bnd_logo_tim_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_tim_away",
+            "binding": "bnd_logo_tim_away",
+            "type": "object"
+        },
+
+        {
+            "viewname": "bnd_nama_tim_home",
+            "binding": "bnd_nama_tim_home",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_nama_tim_away",
+            "binding": "bnd_nama_tim_away",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_nama_stadion",
+            "binding": "bnd_nama_stadion",
+            "type": "string"
+        }
+                     
+    ]
+}

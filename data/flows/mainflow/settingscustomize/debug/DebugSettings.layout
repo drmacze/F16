@@ -1,0 +1,128 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": -90,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Graphics",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+             "textStyles":
+            [
+               "TF_BUTTON_PLAYMODEON"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": 233,
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "Visual Graphics"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 160,
+                    "marginLeft": 284,
+                    "width": 300,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Here you can change the game's graphic settings, visuals, crowd..."
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 280,
+                    "marginLeft": 315,
+                    "width": 320,
+                    "height": 190,
+                    "type": "$_Graphics_Settings"
+                    }
+                 ]
+               },
+               {
+                    "commonName": "VerticalList",
+                    "name": "PengaturanMatch",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": -500,
+                    "rowWidth": 630,
+                    "rowHeight": 60,
+                    "displayRange": 7,
+                    "useAlternating": false,
+                    "row": "CustomizationRow",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_debug_settings_list_data",
+                            "property": "dataProviders"
+                        }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}

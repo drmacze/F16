@@ -1,0 +1,11 @@
+{
+    "dds":[
+    "MatchResults.dd",
+    "MatchFacts.dd",
+    "/flows/ingameflow/GameMenus/GameMenu.dd"],
+    "vms":   [
+    ["lua", "MatchResults.lua"],
+    ["lua", "MatchFacts.lua"],
+    ["lua", "/flows/ingameflow/GameMenus/GameMenu.lua"]],
+    "views": [["gfx", {"layout":"MatchResults.layout"}]]
+}

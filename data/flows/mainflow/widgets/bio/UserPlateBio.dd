@@ -1,0 +1,142 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_auto_switch_options",
+            "binding":  "bnd_auto_switch_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_auto_switch_move_assist_options",
+            "binding":  "bnd_auto_switch_move_assist_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_move_assistance_options",
+            "binding":  "bnd_move_assistance_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_half_length_options",
+            "binding":  "bnd_half_length_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_difficulty_options",
+            "binding":  "bnd_difficulty_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_camera_options",
+            "binding":  "bnd_camera_options",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_large_buttons_options",
+            "binding":  "bnd_large_buttons_options",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_large_dpad_options",
+            "binding":  "bnd_large_dpad_options",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_left_handed_options",
+            "binding":  "bnd_left_handed_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_camera_zoom_value",
+            "binding":  "bnd_camera_zoom_value",
+            "type":     "int"
+        },
+		{
+            "viewname": "bnd_camera_height_value",
+            "binding":  "bnd_camera_height_value",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_right_label",
+            "binding":  "bnd_right_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_right_image",
+            "binding":  "bnd_right_image",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_option_index",
+            "binding":  "bnd_option_index",
+            "type":     "object",
+            "actions":
+            [
+                {
+                    "viewname":   "act_change",
+                    "actionname": "act_change"
+                }
+            ]
+        },
+		{
+			"viewname": "bnd_match_settings_list_data",
+            "binding":  "bnd_match_settings_list_data",
+            "type":     "object"
+		}
+    ],
+	"actions":
+	[
+		{
+			"viewname":   "act_change_auto_switch_option",
+			"actionname": "act_change_auto_switch_option"
+		},
+		{
+			"viewname":   "act_change_auto_switch_move_assist_option",
+			"actionname": "act_change_auto_switch_move_assist_option"
+		},
+		{
+			"viewname":   "act_change_move_assistance_option",
+			"actionname": "act_change_move_assistance_option"
+		},
+		{
+			"viewname":   "act_change_half_length_option",
+			"actionname": "act_change_half_length_option"
+		},
+		{
+			"viewname":   "act_change_difficulty_option",
+			"actionname": "act_change_difficulty_option"
+		},
+		{
+			"viewname":   "act_change_camera_option",
+			"actionname": "act_change_camera_option"
+		},
+        {
+            "viewname":   "act_change_large_buttons_option",
+            "actionname": "act_change_large_buttons_option"
+        },
+        {
+            "viewname":   "act_change_large_dpad_option",
+            "actionname": "act_change_large_dpad_option"
+        },
+        {
+            "viewname":   "act_change_left_handed_option",
+            "actionname": "act_change_left_handed_option"
+        },
+		{
+			"viewname":   "act_change_camera_zoom",
+			"actionname": "act_change_camera_zoom"
+		},
+		{
+			"viewname":   "act_change_camera_height",
+			"actionname": "act_change_camera_height"
+		},
+	  {
+			"viewname":   "act_change_weather_option",
+			"actionname": "act_change_weather_option"
+		},
+    {
+			"viewname":   "act_change_playernib_option",
+			"actionname": "act_change_playernib_option"
+		}
+	]
+}

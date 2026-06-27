@@ -1,0 +1,170 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_save",
+            "label": "Save"
+        }
+    ],
+    "style-definitions":
+    {
+        "TF_SETTINGS_ROW_LABEL":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$COLOR_DARK_BLUE",
+            "textAlignH": "LEFT",
+            "fontSize": 24
+        },
+        "TF_SETTINGS_ROW_TOGGLE":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$COLOR_DARK_BLUE",
+            "textAlignH": "CENTER",
+            "fontSize": 24
+        },
+        "TEKS_DI_CONTROL_SCHEME":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$COLOR_DARK_BLUE",
+            "textAlignH": "CENTER",
+            "forceCaps": true,
+            "fontSize": 24
+        }
+    },
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 900,
+            "height": 520,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "marginTop": 0.2,
+                   "height": 140,
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "BOTTOM",
+                   "alignH": "FILL",
+                   "height": 330,
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "GAME SETTINGS"
+                },
+                {
+                   "commonName": "TabBar",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "marginTop": 145.2,
+                   "tabs":
+                   [
+                      {
+                          "label": "MATCH",
+                          "clickAction": "act_pengaturan_match"
+                      },
+                      {
+                          "label": "CONTROLS",
+                          "clickAction": "act_pengaturan_kontrol"
+                      },
+                      {
+                          "label": "AUDIO",
+                          "clickAction": "act_pengaturan_audio"
+                      },
+                      {
+                          "label": "GRAPHICS",
+                          "clickAction": "act_pengaturan_grafik"
+                      }
+                   ],
+                   "bindings":
+                   [
+                      {
+                          "binding": "bnd_settings_customize_tab_index",
+                          "property": "selectedIndex"
+                      }
+                   ]
+                },
+                {
+                   "commonName": "Layer",
+                   "name": "SettingsCustomizeContent",
+                   "alignV": "BOTTOM",
+                   "alignH": "FILL",
+                   "marginBottom": 330
+                }
+		    ]
+	    }
+        
+    ]
+}

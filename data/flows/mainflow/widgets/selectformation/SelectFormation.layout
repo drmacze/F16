@@ -1,0 +1,286 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "TUTORIAL_TRANSITION_IN" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "TUTORIAL_TRANSITION_OUT" } ]
+	      }
+    ],
+    "style-definitions":
+    {
+		"TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$FONT_CRUYFFSANSREGULAR",
+			"fontSize": 15,
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"leading": -4
+	    },
+		"TF_LIVE_TILE_HEADLINE_SMALL": 
+        {
+			"fontFace": "$FONT_CRUYFFSANSBOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$FONT_CRUYFFSANSREGULAR",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_HIGHLIGHTED_SMALL":
+        {
+			"fontFace": "$FONT_CRUYFFSANSBOLD",
+			"fontSize": 15,
+		    "fontColor": "$COLOR_WHITE",
+			"leading": -4
+        },
+		"TF_FILTER_CATEGORY": {
+			"fontFace": "$FONT_CRUYFFSANSBOLD",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_SELECTION_NAME": {
+			"fontFace": "$FONT_CRUYFFSANSREGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"forceCaps": false,
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_CELL_LABEL": {
+			"fontFace": "$FONT_CRUYFFSANSMEDIUM",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+        },
+		"TF_PANEL_HEADER_CENTERED":
+		{
+			"fontFace": "$FONT_CRUYFFSANSBOLD",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_YELLOW",
+			"alpha": 0,
+			"forceCaps": true,
+			"textAlignH": "CENTER"
+        },
+        "SquadToggleInfo":
+		{
+			"fontFace": "$FONT_CRUYFFSANSBOLD",
+			"fontSize": 20,                                                        
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+        },
+		"TF_SELECT_FAVORITE_LABEL": {
+			"fontFace": "$FONT_CRUYFFSANSBOLD",
+			"fontSize": 18,
+			"marginTop": 20,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+        }
+    },
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_close",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_select",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$"
+        },
+        {
+            "commonName": "GridTable",
+            "name": "FormationGrid",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "width": 500,
+            "height": 200,
+            "rows": 1,
+            "columns": 1,
+            "cellIndexChangeAction":
+            {
+            "action": "act_change",
+            "binding": "bnd_index"
+            },
+            "bindings":
+            [
+                {
+                    "binding": "bnd_list",
+                    "property": "dataProviders"
+                },
+                {
+                    "binding": "bnd_item_type",
+                    "property": "itemType"                
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Actions",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_close"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 215,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_select"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 275,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Select"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ModeInfo",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 75,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "PC"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Squad"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 245,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xAAAAAA"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 275,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Edit Formation"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -165,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "Formations:"  
+                }
+             ]            
+          }
+       ]   
+    }
+  ]
+}

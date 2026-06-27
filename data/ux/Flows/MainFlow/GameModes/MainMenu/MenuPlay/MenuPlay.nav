@@ -1,0 +1,63 @@
+{
+    "name": "MenuPlay",
+    "states":
+    [
+    
+        {
+            "name": "MenuPlay_KickOff",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickMatch/QuickMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuPlay_Career",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Newgame/Newgame.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub",
+                "out_exit_gamemode1": "out_hub"
+            }
+        },
+        {
+            "name": "MenuPlay_SkillGames",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/SkillGames/SkillGames.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuPlay_BestTeamsTour",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/BestTeamsTour/BestTeamsTour.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuPlay_NewTournament",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/QuickCupHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuPlay_BeAPro",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/BeAPro/BeAPro.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+        
+    ]
+}

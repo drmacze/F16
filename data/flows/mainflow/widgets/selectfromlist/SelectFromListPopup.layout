@@ -1,0 +1,101 @@
+{
+	"commonName": "Panel",
+	"alignH":"FILL",
+	"alignV":"FILL",
+	"children":
+	[
+		{
+			"commonName": "GridTable",
+			"name": "gridtable",
+			"height": 390,
+			"width": 760,
+			"rows": 2,
+			"columns": 4,
+			"hasBulletIndicator": true,
+			"cellIndexChangeAction":
+			{
+				"action": "act_change",
+				"binding": "bnd_index"
+			},
+			"bindings":
+			[
+				{
+					"binding": "bnd_list",
+					"property": "dataProviders"
+				},
+				{
+					"binding": "bnd_width",
+					"property": "width"
+				},
+				{
+					"binding": "bnd_height",
+					"property": "height"
+				},
+				{
+					"binding": "bnd_columns",
+					"property": "columns"
+				},
+				{
+					"binding": "bnd_rows",
+					"property": "rows"
+				},
+				{
+					"binding": "bnd_bullet_indicator",
+					"property": "hasBulletIndicator"
+				},
+				{
+					"binding": "bnd_item_type",
+					"property": "itemType"
+				}
+			],
+			"behaviors":
+			[
+				{
+					"commonName": "LoadItInOverlay",
+					"name": "loadInOverlay",
+					"overlay": "bgOverlay",
+					"resizeOverlay": false,
+					"bindings":
+					[
+						{
+							"property": "loadInOverlay",
+							"binding": "bnd_overlay_visible"
+						},
+						{
+							"property": "overlayTitle",
+							"binding": "bnd_title"
+						}
+					]
+				}
+			]
+		},
+		{
+			"commonName": "Overlay",
+			"name": "bgOverlay",
+			"autoDisableFooterButtons": false,
+			"height": 390,
+			"width": 760,
+			"alignH":"CENTER",
+			"alignV":"CENTER",
+			"footer":
+			[
+				{
+					"icon": "$FooterIconNo",
+					"clickAction": "act_close",
+                    "label": "Close"
+				}
+			],
+			"bindings":
+			[
+				{
+					"binding": "bnd_overlay_width",
+					"property": "width"
+				},
+				{
+					"binding": "bnd_overlay_height",
+					"property": "height"
+				}
+			]
+		}
+	]
+}

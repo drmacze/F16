@@ -1,0 +1,397 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+            "viewname": "act_myteam",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_myteam"
+            }
+        },
+        {
+            "viewname": "act_fixtures",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_fixtures"
+            }
+        },
+        {
+            "viewname": "act_table",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_table"
+            }
+        },
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab1sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1sub1"
+            }
+        },
+        {
+            "viewname": "act_tab1sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1sub2"
+            }
+        },
+        {
+            "viewname": "act_tab1sub3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1sub3"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_tab2sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2sub1"
+            }
+        },
+        {
+            "viewname": "act_tab2sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2sub2"
+            }
+        },
+        {
+            "viewname": "act_tab2sub3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2sub3"
+            }
+        },
+        {
+            "viewname": "act_tab2sub4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2sub4"
+            }
+        },
+        {
+            "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_tab3sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3sub1"
+            }
+        },
+        {
+            "viewname": "act_tab3sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3sub2"
+            }
+        },
+        {
+            "viewname": "act_tab3sub3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3sub3"
+            }
+        },
+        {
+            "viewname": "act_tab3sub4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3sub4"
+            }
+        },
+        {
+            "viewname": "act_tab4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4"
+            }
+        },
+        {
+            "viewname": "act_tab4sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4sub1"
+            }
+        },
+        {
+            "viewname": "act_tab4sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4sub2"
+            }
+        },
+        {
+            "viewname": "act_tab4sub3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4sub3"
+            }
+        },
+        {
+            "viewname": "act_tab4sub4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4sub4"
+            }
+        },
+        {
+            "viewname": "act_tab5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5"
+            }
+        },
+        {
+            "viewname": "act_tab5sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5sub1"
+            }
+        },
+        {
+            "viewname": "act_tab5sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5sub2"
+            }
+        },      
+        {
+            "viewname": "act_tab5sub3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5sub3"
+            }
+        },
+        {
+            "viewname": "act_tab6",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab6"
+            }
+        },
+        {
+            "viewname": "act_save",
+            "actionname": "act_save"
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_exit",
+            "actionname": "act_exit"
+        },
+        {
+            "viewname": "act_opponent",
+            "actionname": "act_opponent"
+        },
+        {
+            "viewname": "act_table_tab_visible",
+            "actionname": "act_table_tab_visible"
+        },
+        {
+            "viewname": "act_end_tab_visible",
+            "actionname": "act_end_tab_visible"
+        },
+        {
+            "viewname": "act_table2_tab_visible",
+            "actionname": "act_table2_tab_visible"
+        },
+        {
+            "viewname": "act_end2_tab_visible",
+            "actionname": "act_end2_tab_visible"
+        },
+        {
+            "viewname": "act_play",
+            "actionname": "act_play"
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+        {
+            "viewname": "act_restart",
+            "actionname": "act_restart"
+        },
+        {
+            "viewname": "act_end_career",
+            "actionname": "act_end_career"
+        }                
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_date",
+            "binding":  "bnd_date",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_matchday",
+            "binding":  "bnd_matchday",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_table_tab_visible",
+            "binding":  "bnd_table_tab_visible",
+            "type":     "bool"            
+        },
+        {
+            "viewname": "bnd_end_tab_visible",
+            "binding":  "bnd_end_tab_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_table2_tab_visible",
+            "binding":  "bnd_table2_tab_visible",
+            "type":     "bool"            
+        },
+        {
+            "viewname": "bnd_end2_tab_visible",
+            "binding":  "bnd_end2_tab_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_result_visible",
+            "binding":  "bnd_result_visible",
+            "type":     "bool"            
+        },
+        {
+            "viewname": "bnd_match_visible",
+            "binding":  "bnd_match_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_success_visible",
+            "binding":  "bnd_success_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_logo_league",
+            "binding":  "bnd_logo_league",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_active_home_team_crest",
+            "binding":  "bnd_active_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_active_away_team_crest",
+            "binding":  "bnd_active_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_active_home_team_name",
+            "binding":  "bnd_active_home_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_active_away_team_name",
+            "binding":  "bnd_active_away_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_position",
+            "binding":  "bnd_home_team_position",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_position",
+            "binding":  "bnd_away_team_position",
+            "type":     "string"
+       },
+       {
+            "viewname": "bnd_home_team_position_marginLeft",
+            "binding":  "bnd_home_team_position_marginLeft",
+            "type":     "int"  
+       },
+       {
+            "viewname": "bnd_away_team_position_marginLeft",
+            "binding":  "bnd_away_team_position_marginLeft",
+            "type":     "int"  
+        },
+        {
+            "viewname": "bnd_failed_label",
+            "binding":  "bnd_failed_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_finish_label",
+            "binding":  "bnd_finish_label",
+            "type":     "string"
+        }        
+    ]
+}

@@ -1,0 +1,612 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Kembali"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "SelectTransfers",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -40,
+            "marginLeft": -80,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 53,
+                    "marginLeft": 450,
+                    "width": 700,
+                    "height": 530,
+                    "color": "0x1f1c1c",
+                    "cornerRaduis": 0,
+                    "alpha": 1
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 150,
+                    "width": 1295,
+                    "height": 50,
+                    "color": "0x1f1c1c",
+                    "cornerRaduis": 0,
+                    "alpha": 1
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "LIHAT PEMAIN SCOUTED ANDA"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 320,
+                    "marginLeft": 190,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_GOLD",
+                    ": "OVR"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 310,
+                    "marginLeft": 630,
+                    "fontFace": "$FONT_DINPRO",
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_GOLD",
+                    "text": "Action"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 520,
+                    "marginLeft": 200,
+                    "fontFace": "$FONT_DINPRO",
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_GOLD",
+                    "text": "Market Value:"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 320,
+                    "marginLeft": 395,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 26,
+                    "fontColor": "$COLOR_GOLD",
+                    "text": "GOALS"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 516,
+                    "marginLeft": 460,
+                    "fontSize": 28,
+                    "fontFace": "$FONT_TIMER",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playervalue",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 70,
+                    "marginLeft": 280,
+                    "fontSize": 24,
+                    "fontFace": "$FONT_DINPROCONDBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_stat1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 110,
+                    "marginLeft": 280,
+                    "fontSize": 24,
+                    "fontFace": "$FONT_DINPROCONDBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_stat2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 150,
+                    "marginLeft": 280,
+                    "fontSize": 24,
+                    "fontFace": "$FONT_DINPROCONDBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_stat3",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 190,
+                    "marginLeft": 280,
+                    "fontSize": 24,
+                    "fontFace": "$FONT_DINPROCONDBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_stat4",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 230,
+                    "marginLeft": 280,
+                    "fontSize": 24,
+                    "fontFace": "$FONT_DINPROCONDBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_stat5",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 280,
+                    "fontSize": 24,
+                    "fontFace": "$FONT_DINPROCONDBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_stat6",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 70,
+                    "marginLeft": 180,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_TUTORIAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_statname1",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 110,
+                    "marginLeft": 180,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_TUTORIAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_statname2",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 150,
+                    "marginLeft": 180,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_TUTORIAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_statname3",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 190,
+                    "marginLeft": 180,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_TUTORIAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_statname4",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 230,
+                    "marginLeft": 180,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_TUTORIAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_statname5",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 180,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_TUTORIAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_statname6",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 455,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_KNULMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playername",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 370,
+                    "marginLeft": 190,
+                    "fontSize": 100,
+                    "fontFace": "$FONT_TIMER",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerrating",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 370,
+                    "marginLeft": 400,
+                    "fontSize": 100,
+                    "fontFace": "$FONT_TIMER",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_goalscount",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 660,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_KNULMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerteam",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "playerhead",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -60.0,
+                    "marginLeft": 450,
+                    "scaleX": 1,
+                    "scaleY": 1,
+                    "scaleZ": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerhead",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "playerteam",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": -60.0,
+                    "marginLeft": 670,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "scaleZ": 0.6,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_playerteamcrest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+		            "commonName": "Panel",
+		            "name": "UIFrame",
+		            "alignV": "CENTER",
+		            "alignH": "CENTER",
+		            "marginTop": 130,
+		            "marginLeft": 640,
+		            "width": 250,
+		            "height": 40,
+		            "children":
+		            [
+		                {
+		                    "commonName": "Rectangle",
+		                    "alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "cornerRaduis": 15,
+		                    "color": "0xFFFFFF",
+		                    "alpha": 1
+		                },
+		                {
+		                    "commonName": "Label",
+		                    "alignV": "CENTER",
+		                    "alignH": "CENTER",
+		                    "fontSize": 22,
+		                    "fontColor": "$COLOR_BLACK",
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+		                    "text": "Tambahkan ke shortlist"
+		                },
+		                {
+		                    "commonName": "GenericButton",
+		                    "alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "clickAction": "act_toshortlist"
+		                }
+		            ]
+		        },
+		        {
+		            "commonName": "Panel",
+		            "name": "UIFrame",
+		            "alignV": "CENTER",
+		            "alignH": "CENTER",
+		            "marginTop": 180,
+		            "marginLeft": 640,
+		            "width": 250,
+		            "height": 40,
+		            "children":
+		            [
+		                {
+		                    "commonName": "Rectangle",
+		                    "alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "cornerRaduis": 15,
+		                    "color": "0xFFFFFF",
+		                    "alpha": 1
+		                },
+		                {
+		                    "commonName": "Label",
+		                    "alignV": "CENTER",
+		                    "alignH": "CENTER",
+		                    "fontSize": 22,
+		                    "fontColor": "$COLOR_BLACK",
+		                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+		                    "text": "Hapus dari scoulist"
+		                },
+		                {
+		                    "commonName": "GenericButton",
+		                    "alignV": "FILL",
+		                    "alignH": "FILL",
+		                    "clickAction": "act_scoutlist"
+		                }
+		            ]
+		        },
+                 {
+                    "commonName": "GridTable",
+                    "name": "leaguesGridTable",
+                    "height": 530,
+                    "width": 600,
+                    "marginTop": 50,
+                    "marginRight": 900,
+                    "color": "0xFFFFFF",
+                    "cellIndexChangeAction":
+                    {
+                        "action": "act_change",
+                        "binding": "bnd_player_index"
+                    },
+                    "columns": 2,
+                    "hasBulletIndicator": false,
+                    "itemType": "LeagueGridCell",
+                    "rows": 2,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_player_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_default_cell_data",
+                            "property": "defaultCellData"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

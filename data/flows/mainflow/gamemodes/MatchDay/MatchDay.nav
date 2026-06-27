@@ -1,0 +1,48 @@
+{
+    "name": "MatchDay",
+    "states":
+    [
+		{
+            "name": "MenuMatchDay",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/MatchDay/MatchDay.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_match_play",
+                    "targets": ["SideSelect"]
+                }
+            ]
+        },
+        {
+            "name": "SideSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/SideSelect/SideSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchDay",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MatchDay/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

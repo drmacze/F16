@@ -1,0 +1,150 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_away_country_previous",
+            "actionname": "act_away_country_previous"
+        },
+        {
+            "viewname": "act_away_country_next",
+            "actionname": "act_away_country_next"
+        },
+        {
+            "viewname": "act_away_league_previous",
+            "actionname": "act_away_league_previous"
+        },
+        {
+            "viewname": "act_away_league_next",
+            "actionname": "act_away_league_next"
+        },
+        {
+            "viewname": "act_away_team_previous",
+            "actionname": "act_away_team_previous"
+        },
+        {
+            "viewname": "act_away_team_next",
+            "actionname": "act_away_team_next"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_away_team_team_name",
+            "binding": "bnd_away_team_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_country_name",
+            "binding": "bnd_away_country_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_league_name",
+            "binding": "bnd_away_league_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_panel_away_title",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_FP_OPPONENT"
+            }
+        },
+        {
+            "viewname": "bnd_away_team_selector",
+            "binding": "bnd_away_team_selector",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_real_team_visible",
+            "binding": "bnd_away_real_team_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_away_user_plate",
+            "binding": "bnd_away_user_plate",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_user_plate_visible",
+            "binding": "bnd_away_user_plate_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_away_country_flag",
+            "binding": "bnd_away_country_flag",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_league_logo",
+            "binding": "bnd_away_league_logo",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_team_selector_alpha",
+            "binding": "bnd_away_team_selector_alpha",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_away_ready_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_PREGAME_READY"
+            }
+        },
+       
+        {
+            "viewname": "bnd_away_team_messages_visible",
+            "binding": "bnd_away_team_messages_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_away_team_message",
+            "binding": "bnd_away_team_message",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_loading_visible",
+            "binding": "bnd_away_team_loading_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_away_team_loading_message",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "OSDK_SEARCH_FOR_OPP"
+            }
+        },
+        {
+            "viewname": "bnd_away_team_country",
+            "binding": "bnd_away_team_country",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_league",
+            "binding": "bnd_away_team_league",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_real_team_toggles_visible",
+            "binding": "bnd_away_real_team_toggles_visible",
+            "type": "bool"
+        },
+        {
+			"viewname": "BND_LTXT_SEARCH",
+            "type": "string",
+            "impl": { "type": "ltxt", "tag": "LTXT_CMN_SEARCH" }
+		}
+    ]
+}

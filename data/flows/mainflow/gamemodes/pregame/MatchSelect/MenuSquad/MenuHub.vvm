@@ -1,0 +1,26 @@
+{
+    "dds": [
+	"MenuHub.dd",
+	"TeamManagement/TeamManagementModelHome.dd",
+	"TeamManagement/TeamManagementModelAway.dd",
+	"TeamManagement/Formation/FormationModelReal_Home.dd",
+	"TeamManagement/Formation/FormationModelReal_Away.dd"
+	],
+    "vms": [
+    ["lua", "/flows/MainFlow/GameModes/pregame/MatchSelect/MatchSelect.lua"],
+	["lua", "TeamManagement/TeamManagementModelHome.lua"],
+	["lua", "TeamManagement/TeamManagementModelAway.lua"],
+	["lua", "TeamManagement/Formation/FormationModelReal_Home.lua"],
+	["lua", "TeamManagement/Formation/FormationModelReal_Away.lua"]
+	],
+    "views": [["gfx", { "layout": "MenuHub.layout" }]],
+  "ireqs": [
+    "Common.ireq",
+	"TeamManagement/TeamManagement_Home.ireq",
+	"TeamManagement/TeamManagement_Away.ireq",
+	"TeamManagement/TeamManagementModelHome.ireq",
+	"TeamManagement/TeamManagementModelAway.ireq",
+	"TeamManagement/Formation/FormationModelReal_Home.ireq",
+	"TeamManagement/Formation/FormationModelReal_Away.ireq"
+  ]
+}

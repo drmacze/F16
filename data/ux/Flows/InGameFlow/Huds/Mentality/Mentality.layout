@@ -1,0 +1,42 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+	"name": "HUDMentalityTaktik",
+	"alignV": "FILL",
+	"alignH": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "PanelLayoutBehavior"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Mentality",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 88,
+            "marginLeft": 157,
+            "orientation": "left",
+            "bindings":
+            [
+                {
+                    "property": "mentality",
+                    "binding": "bnd_home_mentality"
+                },
+                {
+                    "property": "label",
+                    "binding": "bnd_home_label"
+                },
+                {
+                    "property": "active",
+                    "binding": "bnd_home_active"
+                }
+            ]
+        }
+    ]
+}

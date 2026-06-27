@@ -1,0 +1,161 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+            
+                {
+                    "commonName": "Asset",
+                    "name": "BagianLogoFIFA16",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -15,
+                    "marginLeft": -2,
+                    "width": 225,
+                    "height": 60,
+                    "type": "$LogoFIFA16"
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "BagianNotifikasi",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": -20,
+                    "width": 413,
+                    "height": 70,
+                    "children":
+                    [
+                        {
+                           "commonName": "Asset",
+                           "alignV": "FILL",
+                           "alignH": "FILL",
+                           "type": "$LogoBarNotifikasi"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 7.5,
+                           "marginLeft": 46,
+                           "fontSize": 13,
+                           "fontColor": "$COLOR_BLACK",
+                           "text": "ROBBI AREZA       ID 04062003              IDN"
+                        }
+                    ]
+                },
+                
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": -40,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "This Mod Is Originally From MA'RUF ID,"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": -59,
+                    "fontSize": 16,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "But I Made It More Perfect, So Enjoy This Game. ~R.A."
+                },
+                
+                {
+                    "commonName": "TabBar",
+                    "name": "BagianTab",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 75,
+                    "marginLeft": -2,
+                    "width": 620,
+                    "tabs":
+                    [
+                       {
+                           "label": "HOME",
+                           "clickAction": "act_menu_home"
+                       },
+                       {
+                           "label": "PLAY",
+                           "clickAction": "act_menu_play"
+                       },
+                       {
+                           "label": "ONLINE",
+                           "clickAction": "act_menu_online"
+                       },
+                       {
+                           "label": "CUSTOMIZE",
+                           "clickAction": "act_menu_customize"
+                       }
+                   ],
+                   "bindings":
+                   [
+                      {
+                          "binding": "bnd_tab_index",
+                          "property": "selectedIndex"
+                      }
+                   ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

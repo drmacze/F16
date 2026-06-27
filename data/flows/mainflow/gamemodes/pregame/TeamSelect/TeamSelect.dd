@@ -1,0 +1,160 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_back",
+            "actionname": "act_back"
+        },
+        {
+            "viewname":   "act_squad",
+            "actionname": "act_squad"
+        },
+        {
+            "viewname":   "act_squadaway",
+            "actionname": "act_squadaway"
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+        {
+            "viewname": "act_home_country_previous",
+            "actionname": "act_home_country_previous"
+        },
+        {
+            "viewname": "act_home_country_next",
+            "actionname": "act_home_country_next"
+        },
+        {
+            "viewname": "act_home_league_previous",
+            "actionname": "act_home_league_previous"
+        },
+        {
+            "viewname": "act_home_league_next",
+            "actionname": "act_home_league_next"
+        },
+        {
+            "viewname": "act_home_team_previous",
+            "actionname": "act_home_team_previous"
+        },
+        {
+            "viewname": "act_home_team_next",
+            "actionname": "act_home_team_next"
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_home_squad_name",
+            "binding": "bnd_home_squad_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_panel_home_title",
+            "binding": "bnd_panel_home_title",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_selector",
+            "binding": "bnd_home_team_selector",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home2_team_selector",
+            "binding": "bnd_home2_team_selector",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home3_team_selector",
+            "binding": "bnd_home3_team_selector",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home_real_team_visible",
+            "binding": "bnd_home_real_team_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_fut_squad_visible",
+            "binding": "bnd_home_fut_squad_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_team_country",
+            "binding": "bnd_home_team_country",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_league",
+            "binding": "bnd_home_team_league",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_options_enabled",
+            "binding": "bnd_options_enabled",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_team_selector_alpha",
+            "binding": "bnd_home_team_selector_alpha",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_home_friendly_team_visible",
+            "binding": "bnd_home_friendly_team_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_user_plate",
+            "binding": "bnd_home_user_plate",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_label_tickernavpublisher",
+            "binding": "bnd_label_tickernavpublisher",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_autodisable_tickernavpublisher",
+            "binding": "bnd_autodisable_tickernavpublisher",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_home_country_flag",
+            "binding": "bnd_home_country_flag",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home_league_logo",
+            "binding": "bnd_home_league_logo",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_country_flag",
+            "binding": "bnd_away_country_flag",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_league_logo",
+            "binding": "bnd_away_league_logo",
+            "type": "object"
+        }
+    ]
+}

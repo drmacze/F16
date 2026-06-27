@@ -1,0 +1,217 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+    
+        {
+            "commonName": "VerticalList",
+            "name": "BasicControlsList",
+            "x": 315,
+            "rowWidth": 580,
+            "rowHeight": 55,
+            "displayRange": 6,
+            "useAlternating": true,
+            "row": "fow.components.widgets.settingscustomize.controls.BasicControlsRow",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_basic_group_v",
+                    "property": "visible"
+                },
+                {
+                    "binding": "bnd_basic_controller_list_data",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "AdvancedControlsList",
+            "x": 315,
+            "rowWidth": 580,
+            "rowHeight": 55,
+            "displayRange": 6,
+            "useAlternating": true,
+            "row": "fow.components.widgets.settingscustomize.controls.ControlsRow",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_advanced_group_v",
+                    "property": "visible"
+                },
+                {
+                    "binding": "bnd_advanced_controller_list_data",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Stack",
+            "name": "ControlViewStack",
+            "width": 280,
+            "x": 20,
+            "y": 20,
+			"spacing": 1.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "ControlViewLabel",
+                    "alignH": "FILL",
+                    "height": 44.0,
+                    "textAlignH": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_settings_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_ACCOMPLISHMENT_HUB_CATEGORY"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "ControlViewComboBox",
+                    "alignH": "FILL",
+                    "height": 50.0,
+                    "marginTop": 3.0,
+                    "isCircular": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+					"maskContent": true,
+					"hasArrows": true,
+					"arrowType" : "blue",
+                    "toggleAction":
+                    {
+                        "action": "act_settings_change",
+                        "binding": "bnd_controll_settings_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_settings_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Stack",
+            "name": "ControlSchemeStack",
+            "width": 280,
+            "x": 20,
+            "y": 127,
+			"spacing": 1.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "ControlScheme",
+                    "alignH": "FILL",
+                    "height": 44.0,
+                    "textAlignH": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_advanced_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_ACCOMPLISHMENT_HUB_CATEGORY"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "ControlSchemeComboBox",
+                    "alignH": "FILL",
+                    "height": 50.0,
+                    "marginTop": 3.0,
+                    "isCircular": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+					"maskContent": true,
+					"hasArrows": true,
+					"arrowType" : "blue",
+                    "toggleAction":
+                    {
+                        "action": "act_advanced_change",
+                        "binding": "bnd_controll_advanced_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_advanced_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Stack",
+            "name": "ControlTypeStack",
+            "width": 280,
+            "x": 20,
+            "y": 235,
+			"spacing": 1.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "ControlTypeLabel",
+                    "alignH": "FILL",
+                    "height": 44.0,
+                    "textAlignH": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_type_label",
+                            "property": "text"
+                        }
+                    ],
+                    "styles":
+                    [
+                        "TF_ACCOMPLISHMENT_HUB_CATEGORY"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "ControlTypeComboBox",
+                    "alignH": "FILL",
+                    "height": 50.0,
+                    "marginTop": 3.0,
+                    "isCircular": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+					"maskContent": true,
+					"hasArrows": true,
+					"arrowType" : "blue",
+                    "toggleAction":
+                    {
+                        "action": "act_type_change",
+                        "binding": "bnd_controll_type_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_controll_type_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

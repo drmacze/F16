@@ -1,0 +1,13 @@
+{
+    "actions":
+    [
+    ],
+    "data":
+    [
+		{
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+			"type":"bool"
+        }
+    ]
+}

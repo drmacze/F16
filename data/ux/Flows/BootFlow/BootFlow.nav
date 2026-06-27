@@ -1,0 +1,435 @@
+{
+    "name": "BootFlow",
+    "initial":
+    {
+        "targets": ["Init"]
+    },
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["/flows/bootflow/BootFlow.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "name": "Init",
+            "onEnter":
+            [
+                ["notifyFEInitialized"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["AwaitingIONEvent"]
+                }
+            ]
+        },
+        {
+            "name": "AwaitingIONEvent",
+            "onEnter":
+            [
+                ["notifyBootflowStarted"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["ScreenInitialization"]
+                }
+            ]
+        },
+        {
+            "name": "ScreenInitialization",
+            "onEnter":
+            [
+                ["notifyMovieStarted", ["BOOTFLOW_ITS_IN_THE_GAME_VIDEO"]],
+                ["notifyScreenEntered", ["BOOTFLOW_LEGAL"]],
+                ["notifyMovieEnded", ["BOOTFLOW_ITS_IN_THE_GAME_VIDEO"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["LegalScreen"]
+                }
+            ]
+        },
+         {
+            "name": "LegalScreen",
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["HDVideo"]
+                }
+            ]
+        },
+        {
+            "name": "HDVideo",
+            "onEnter":
+            [
+                ["notifyMovieStarted", ["BOOTFLOW_EA_LOGO_VIDEO"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["WaitForLoadComplete"]
+                }
+            ]
+        },
+        {
+            "name": "WaitForLoadComplete",
+            "onEnter":
+            [
+                ["notifyScreenEntered", ["BOOTFLOW_PRESS_START"]],
+                ["notifyMovieEnded", ["BOOTFLOW_PRESS_START"]],
+                ["feShowing", [true, false]],
+                ["activeZoneTransition", ["ZONE_NONE", "ZONE_OFFLINE"]],
+                ["zoneChange", ["ZONE_OFFLINE"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["InitSaveLoad"]
+                }
+            ]
+        },
+        {
+            "name": "InitSaveLoad",
+            "transitions":
+            [
+                {
+                    "event": "evt_init_advance",
+                    "targets": ["ActivateUserFlow"]
+                }
+            ]
+        },
+        {
+            "name": "ActivateUserFlow",
+            "onEnter":
+            [
+                ["initSaveLoad"],
+                ["sendSaveLoadMessage", [0]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["LoadFileListFlow"]
+                }
+            ]
+        },
+        {
+            "name": "LoadFileListFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [1]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["LoadFlow"]
+                }
+            ]
+        },
+        {
+            "name": "LoadFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [2]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_custom_profile_setup",
+                    "targets": ["FakeUserSelection_AfterCreateFlow"]
+                },
+                {
+                    "event": "evt_req_dialog_box_proceed",
+                    "targets": ["FakeUserSelection_AfterLoadFlow"]
+                }
+            ]
+        },
+        {
+            "name": "FakeUserSelection_AfterCreateFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [3]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["UserSaveFlow"]
+                }
+            ]
+        },
+        {
+            "name": "FakeUserSelection_AfterLoadFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [3]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["BootFlow_SaveLoad"]
+                },
+                {
+                    "event": "evt_req_dialog_box_delete",
+                    "targets": ["BootFlow_DeleteProfile"]
+                }
+            ]
+        },
+        {
+            "name": "BootFlow_DeleteProfile",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [3]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_req_dialog_box_yes_delete",
+                    "targets": ["BootFlow_DeleteProfile_Yes"]
+                }
+            ]
+        },
+        {
+            "name": "BootFlow_DeleteProfile_Yes",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [3]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["LoadFileListFlow"]
+                }
+            ]
+        },
+        {
+            "name": "UserSaveFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [4]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["BootFlow_SaveLoad"]
+                }
+            ]
+        },
+        {
+            "name": "BootFlow_SaveLoad",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [5]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_show_save_indicator",
+                    "targets": ["FakeUserSelection_AfterBootFlow"]
+                }
+            ]
+        },
+        {
+            "name": "FakeUserSelection_AfterBootFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [3]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["AutoLoadFlow"]
+                }
+            ]
+        },
+        {
+            "name": "AutoLoadFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [6]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["AutoLoadMultipleGroupsFlow"]
+                }
+            ]
+        },
+        {
+            "name": "AutoLoadMultipleGroupsFlow",
+            "onEnter":
+            [
+                ["sendSaveLoadMessage", [7]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_response_basic_flow",
+                    "cond": ["==", ".SKIP_FE", true],
+                    "targets": ["out_metrics_flow"]
+                },
+                {
+                    "event": "evt_response_basic_flow",
+                    "targets": ["IntroByMa'rufID"]
+                }
+            ]
+        },
+        
+        {
+            "name": "IntroByMa'rufID",
+            "onEnter":
+            [
+				["invoke", ["evt_show_stage_background"]]
+            ],
+            "onExit":
+            [
+                ["notifyBootflowDone"]
+            ],
+			"states":
+			[
+				{
+					"name": "RedirectIntro",
+					"onEnter":
+					[
+						["invoke", ["evt_redirect"]]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_redirect",
+							"targets": ["IntroLogoFIFA"]
+						}
+					]
+				},
+				{
+					"name": "IntroLogoFIFA",
+					"onEnter":
+					[
+						["blockingLoadVVM", ["/flows/bootflow/IntroByMa'rufID/intrologofifa/IntroLogoFIFA.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_advance",
+							"targets": ["IntroTentangLisensi"]
+						}
+					]
+				},
+				{
+					"name": "IntroTentangLisensi",
+					"onEnter":
+					[
+						["blockingLoadVVM", ["/flows/bootflow/IntroByMa'rufID/introtentanglisensi/IntroTentangLisensi.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_advance",
+							"targets": ["IntroLoadingSplash"]
+						}
+					]
+				},
+				{
+					"name": "IntroLoadingSplash",
+					"onEnter":
+					[
+						["blockingLoadVVM", ["/flows/bootflow/IntroByMa'rufID/introloadingsplash/IntroLoadingSplash.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_advance",
+							"targets": ["SplashScreen"]
+						}
+					]
+				}
+			]
+        },
+
+        {
+            "name": "SplashScreen",
+            "onEnter":
+            [
+				["invoke", ["evt_show_stage_background"]],
+                ["showFEMask"],
+                ["addAudioContext", ["pressStart"]],
+				["checkDebugConsole"],
+				["showControllerCursor"]
+            ],
+            "onExit":
+            [
+                ["removeAudioContext", ["pressStart"]],
+                ["handleEvent", ["GM_EVENT_STARTBUTTON_PRESSED"]],
+                ["transitionFromCrowdToArena"],
+				["setTitleStartButtonControllerId"],
+                ["notifyMovieStarted", ["BOOTFLOW_OUTRO_VIDEO"]],
+                ["notifyBootflowDone"]
+            ],
+			"states":
+			[
+				{
+					"name": "RedirectSplash",
+					"onEnter":
+					[
+						["invoke", ["evt_redirect"]]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_redirect",
+							"targets": ["ShowSplash"]
+						}
+					]
+				},
+				{
+					"name": "ShowSplash",
+					"onEnter":
+					[
+						["blockingLoadVVM", ["/flows/bootflow/splash/Splash.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"]
+					],
+					"transitions":
+					[
+						{
+							"event": "evt_advance",
+							"targets": ["out_next_flow"]
+						}
+					]
+				}
+			]
+        }
+    ]
+}

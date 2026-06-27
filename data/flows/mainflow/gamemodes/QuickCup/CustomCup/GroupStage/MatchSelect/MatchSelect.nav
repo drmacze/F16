@@ -1,0 +1,356 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["MenuMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "MenuMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab3",
+                    "states":
+                    [
+                        {
+                            "name": "Tab3",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab3.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab3sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab3sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub2",
+                                            "targets": ["RedirectTab3sub2"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab3sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab3sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub1",
+                                            "targets": ["RedirectTab3sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab4",
+                    "states":
+                    [
+                        {
+                            "name": "Tab4",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab4.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab4sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab4sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub2",
+                                            "targets": ["RedirectTab4sub2"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/TabActive/Tab4sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub1",
+                                            "targets": ["RedirectTab4sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["SelectSideFlow"]
+                },
+                {
+                    "event": "evt_to_sim_match",
+                    "targets": ["SimulateMatch"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_topscores",
+                    "targets": ["GoalScores"]
+                },
+                {
+                    "event": "evt_standing",
+                    "targets": ["Standing"]
+                },
+                {
+                    "event": "evt_standing_home",
+                    "targets": ["StandingHome"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                }
+            ]
+        },
+        {
+			"name": "SimulateMatch",
+			"type": "external",
+			"file": "/flows/mainflow/GameModes/QuickCup/CustomCup/PlaySim/Match.nav",
+			"outputs":
+            {
+				"out_back": "MatchSelect"
+            }
+        },
+        {
+            "name": "SelectSideFlow",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/SelectSide/SelectSide.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/QuickCup/CustomCup/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2"
+            }
+        },
+        {
+            "name": "GoalScores",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Goalscorers/Goalscorers.nav",
+            "outputs": 
+            {
+                "out_exit_gamemode": "RedirectTab3sub2",
+                "out_exit_gamemode1": "RedirectTab3sub2"
+            }
+        },
+        {
+            "name": "Standing",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Standings/Standings.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3sub1",
+                "out_exit_gamemode1": "RedirectTab3sub1"
+            }
+        },
+        {
+            "name": "StandingHome",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/MatchSelect/Standings/Standings.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab1",
+                "out_exit_gamemode1": "RedirectTab1"
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/Restart/Restart.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        }
+    ]
+}

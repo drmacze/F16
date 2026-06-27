@@ -1,0 +1,185 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_next_group",
+            "actionname": "act_next_group"
+        },
+        {
+            "viewname": "act_prev_group",
+            "actionname": "act_prev_group"
+        },
+        {
+            "viewname": "act_bracket",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_bracket"
+            }
+        },
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+             "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_tab4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4"
+            }
+        },
+        {
+            "viewname": "act_tab5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5"
+            }
+        },
+        {
+            "viewname": "act_tab6",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab6"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_color_tourid",
+            "binding":  "bnd_color_tourid",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_standings_list",
+            "binding": "bnd_standings_list",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_fixtures_list",
+            "binding": "bnd_fixtures_list",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_group_standings",
+            "binding": "bnd_group_standings",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_round32_fixtures",
+            "binding": "bnd_round32_fixtures",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_round16_fixtures",
+            "binding": "bnd_round16_fixtures",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_quarter_fixtures",
+            "binding": "bnd_quarter_fixtures",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_semi_fixtures",
+            "binding": "bnd_semi_fixtures",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_final_fixture",
+            "binding": "bnd_final_fixture",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_knockout_fixtures",
+            "binding": "bnd_knockout_fixtures",
+            "type": "array"
+        },
+        {
+            "viewname": "bnd_info_progres",
+            "binding": "bnd_info_progres",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_matchday_label",
+            "binding": "bnd_matchday_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_realtime",
+            "binding": "bnd_realtime",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_month_label",
+            "binding": "bnd_month_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_group_label_current",
+            "binding": "bnd_group_label_current",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_group_label_prev",
+            "binding": "bnd_group_label_prev",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_group_label_next",
+            "binding": "bnd_group_label_next",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_tour_label",
+            "binding": "bnd_tour_label",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_tour_trophy",
+            "binding": "bnd_tour_trophy",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_bg_tour",
+            "binding": "bnd_bg_tour",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_tour_logo",
+            "binding": "bnd_tour_logo",
+            "type": "object"
+        }
+    ]
+}

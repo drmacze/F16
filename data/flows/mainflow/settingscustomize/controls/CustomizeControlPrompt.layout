@@ -1,0 +1,44 @@
+{
+    "commonName": "Overlay",
+    "width":      630,
+    "height":     100,
+    "bindings":
+    [
+        {
+            "property": "title",
+            "binding":  "bnd_overlay_title"
+        },
+		{
+			"property": "footer",
+            "binding":  "bnd_overlay_footer"
+		}
+    ],
+    "children":
+    [
+        {
+            "commonName": "Label",
+            "x":          35,
+            "y":          35,
+            "styles":   ["TF_LABEL_CENTERED"],
+            "bindings":
+            [
+                {
+                    "property": "text",
+                    "binding":  "bnd_message"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "MouseClickActionBehavior",
+            "actionName": "act_mouse_click"
+        },
+        {
+            "commonName": "KeyPressActionBehavior",
+            "includeKeyUp": false,
+            "actionName": "act_key_press"
+        }
+    ]
+}

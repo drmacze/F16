@@ -1,0 +1,566 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_proceed",
+            "label": "Select"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },     
+        
+        
+        {
+            "commonName": "Panel",
+            "name": "Layout",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "SelectTeams",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "width": 325,
+                    "height": 475,
+                    "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "width": 325,
+                                  "height": 40
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "FILL",
+                                  "alignH": "FILL",
+                                  "height": 40,
+                                  "width": 325,
+                                  "type": "$BackgroundJudulMenu"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 5,
+                                  "fontSize": 25,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "SELECT TEAM"
+                              },
+                              {
+                                  "commonName": "Panel",
+                                  "name": "LeagueContainerPanel",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "width": 325,
+                                  "height": 100,
+                                  "marginTop": 40,
+                                  "children":
+                                         [
+                                            {
+                                                "commonName": "LiveTile",
+                                                "alignV": "FILL",
+                                                "alignH": "FILL",
+                                                "alpha": 1
+                                            },
+                                            {
+                                                "commonName": "Image",
+                                                "name": "leagueLogo",
+                                                "alignH": "CENTER",
+                                                "alignV": "BOTTOM",
+                                                "scaleX": 0.30,
+                                                "scaleY": 0.30,
+                                                "scaleZ": 0.30,
+                                                "bindings":
+                                                     [
+                                                         {
+                                                             "binding": "bnd_league_crest",
+                                                             "property": "image"
+                                                         }
+                                                     ]
+                                            },
+                                            
+
+                                            {
+                                                "commonName": "DragToggle",
+                                                "name": "leaguesToggle",
+                                                "alignH": "CENTER",
+                                                "alignV": "TOP",
+                                                "height": 100,
+                                                "width": 325,
+                                                "marginTop": 5,
+                                                "width": 325,
+                                                "arrowType": "",
+                                                "clickAction": "act_select_league",
+                                                "clickSFX": "act_select_preferred_league",
+                                                "hasArrows": "",
+                                                "itemStyleName": "TF_SELECT_FAVORITE_LEAGUE_TOGGLE",
+                                                "itemType": "Label",
+                                                "toggleAction":
+                                                         {
+                                                             "action": "act_change",
+                                                             "binding": "bnd_league_list_index"
+                                                         },
+                                                       "bindings":
+                                                     [
+                                                         {
+                                                             "binding": "bnd_league_list_toggle",
+                                                             "property": "dataProviders"
+                                                         }
+                                                     ]
+                                            }
+                                         ]
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "width": 325,
+                                  "height": 335,
+                                  "marginTop": 140
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "width": 325,
+                                  "height": 335,
+                                  "marginTop": 140,
+                                  "type": "$MenuSelection"
+                              },
+                              
+                              {
+                                  "commonName": "Panel",
+                                  "name": "Crest",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "width": 325,
+                                  "height": 335,
+                                  "marginTop": 140,
+                                  "children":
+                                         [
+                                            {
+                                                "commonName": "fow.base.BaseButton",
+                                                "name": "buttonTeam",
+                                                "alignH": "FILL",
+                                                "alignV": "FILL",
+                                                "clickAction": "act_select_team"
+                                            },
+                                            {
+                                                "commonName": "Image",
+                                                "alignH": "CENTER",
+                                                "alignV": "TOP",
+                                                "marginTop": 48,
+                                                "scaleX": 0.6,
+                                                "scaleY": 0.6,
+                                                "bindings":
+                                                     [
+                                                         {
+                                                             "binding": "bnd_team_crest",
+                                                             "property": "image"
+                                                         }
+                                                     ]
+                                            },
+                                            {
+                                                "commonName": "StarRating",
+                                                "name": "starRating",
+                                                "alignH": "CENTER",
+                                                "alignV": "BOTTOM",
+                                                "marginBottom": 120,
+                                                "size": "big",
+                                                "bindings":
+                                                     [
+                                                         {
+                                                             "binding": "bnd_team_star_rating",
+                                                             "property": "stars"
+                                                         }
+                                                     ]
+                                                     
+                                            },
+                                            {
+                                                "commonName": "Asset",
+                                                "alignV": "TOP",
+                                                "alignH": "CENTER",
+                                                "marginRight": 120,
+                                                "marginTop": 105,
+                                                "width": 18,
+                                                "height": 28,
+                                                "type": "$TournamentLeft"
+                                            },
+                                            {
+                                                "commonName": "Asset",
+                                                "alignV": "TOP",
+                                                "alignH": "CENTER",
+                                                "marginLeft": 120,
+                                                "marginTop": 105,
+                                                "width": 18,
+                                                "height": 28,
+                                                "type": "$TournamentRight"
+                                            },
+                                            
+                                            {
+                                                "commonName": "DragToggle",
+                                                "name": "teamsToggle",
+                                                "alignH": "CENTER",
+                                                "alignV": "CENTER",
+                                                "height": 335,
+                                                "width": 325,
+                                                "marginTop": 5,
+                                                "width": 325,
+                                                "arrowType": "",
+                                                "clickAction": "act_select_team",
+                                                "clickSFX": "act_select_preferred_team",
+                                                "hasArrows": "",
+                                                "isCircular": true,
+                                                "itemStyleName": "TF_SELECT_FAVORITE_TEAM_TOGGLE",
+                                                "itemType": "Label",
+                                                "toggleAction":
+                                                         {
+                                                             "action": "act_change",
+                                                             "binding": "bnd_team_list_index"
+                                                         },
+                                                       "bindings":
+                                                     [
+                                                         {
+                                                             "binding": "bnd_team_list_toggle",
+                                                             "property": "dataProviders"
+                                                         }
+                                                     ]
+                                            },
+
+                                            {
+                                                "commonName": "Panel",
+                                                "name": "dataPanel",
+                                                "alignH": "CENTER",
+                                                "alignV": "BOTTOM",
+                                                "marginBottom": 2,
+                                                "height": 71.0,
+                                                "width": 240.0,
+                                                "authoringData":
+                                                         {
+                                                             "expanded": false
+                                                         },
+                                                "children":
+                                                     [
+                                                         {
+                                    "commonName": "TeamRating",
+                                    "name": "teamRating",
+                                    "width": 240.0,
+                                    "attLabelStyles":
+                                    [
+                                        "TF_TEAM_SELECT_RATING_LABELS"
+                                    ],
+                                    "attValueStyles":
+                                    [
+                                        "TF_TEAM_SELECT_RATING_VALUES"
+                                    ],
+                                    "defLabelStyles":
+                                    [
+                                        "TF_TEAM_SELECT_RATING_LABELS"
+                                    ],
+                                    "defValueStyles":
+                                    [
+                                        "TF_TEAM_SELECT_RATING_VALUES"
+                                    ],
+                                    "dividersVisible": false,
+                                    "midLabelStyles":
+                                    [
+                                        "TF_TEAM_SELECT_RATING_LABELS"
+                                    ],
+                                    "midValueStyles":
+                                    [
+                                        "TF_TEAM_SELECT_RATING_VALUES"
+                                    ],
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team_rating",
+                                            "property": "dataProviders"
+                                        }
+                                    ]
+                                                         }
+                                                     ]
+                                            }
+                                            
+                                            
+                                         ]
+                              }
+                            
+                          ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianInfo",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "width": 550,
+                    "height": 475,
+                    "children":
+                          [
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "CENTER",
+                                  "alignH": "CENTER",
+                                  "width": 550,
+                                  "height": 475,
+                                  "type": "$LiveTileBackgroundIdle"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "height": 40,
+                                  "width": 550,
+                                  "type": "$BackgroundJudulMenu"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "marginTop": 5,
+                                  "fontSize": 25,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "INFORMATION"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "CENTER",
+                                  "width": 550,
+                                  "height": 435,
+                                  "marginTop": 40,
+                                  "type": "$New_Manager"
+                              }
+                          ]
+                }
+            ]
+        },
+        
+        
+
+        
+
+        
+        {
+            "commonName": "Panel",
+            "name": "SelectClick",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Group",
+                    "name": "scrimContainer",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "visible": false,
+                    "behaviors":
+                    [
+                        {
+                            "commonName": "ScrimClickBehavior",
+                            "name": "ClickThroughPreventer"
+                        },
+                        {
+                            "commonName": "PanelLayoutBehavior",
+                            "name": "MakeItAPanel"
+                        }
+                    ],
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "darkScrimAsset",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "styles":
+                            [
+                                "PopupScrim"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Overlay",
+                    "name": "gridTableOverlay",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "height": 400,
+                    "visible": false,
+                    "width": 800,
+                    "footer":
+                    [
+                        {
+                            "icon": "$IconButton_O",
+                            "clickAction": "act_selector_cancel"
+                        }
+                    ],
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "GridTable",
+                            "name": "leaguesGridTable",
+                            "height": 400,
+                            "width": 900,
+                            "cellIndexChangeAction":
+                            {
+                                "action": "act_change",
+                                "binding": "bnd_league_index"
+                            },
+                            "columns": 3,
+                            "hasBulletIndicator": true,
+                            "itemType": "LeagueGridCell",
+                            "rows": 2,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_league_list",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_default_cell_data",
+                                    "property": "defaultCellData"
+                                }
+                            ],
+                            "behaviors":
+                            [
+                                {
+                                    "commonName": "LoadItInOverlay",
+                                    "name": "loadLeaguesTableInOverlay",
+                                    "overlay": "gridTableOverlay",
+                                    "overlayScrim": "scrimContainer",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_league_overlay_visible",
+                                            "property": "loadInOverlay"
+                                        },
+                                        {
+                                            "binding": "bnd_league_title",
+                                            "property": "overlayTitle"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "GridTable",
+                            "name": "teamsGridTable",
+                            "height": 400,
+                            "width": 900,
+                            "cellIndexChangeAction":
+                            {
+                                "action": "act_change",
+                                "binding": "bnd_team_index"
+                            },
+                            "columns": 4,
+                            "hasBulletIndicator": true,
+                            "itemType": "TeamGridCell",
+                            "rows": 2,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_list",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_default_cell_data",
+                                    "property": "defaultCellData"
+                                }
+                            ],
+                            "behaviors":
+                            [
+                                {
+                                    "commonName": "LoadItInOverlay",
+                                    "name": "loadTeamsTableInOverlay",
+                                    "overlay": "gridTableOverlay",
+                                    "overlayScrim": "scrimContainer",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team_overlay_visible",
+                                            "property": "loadInOverlay"
+                                        },
+                                        {
+                                            "binding": "bnd_team_title",
+                                            "property": "overlayTitle"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

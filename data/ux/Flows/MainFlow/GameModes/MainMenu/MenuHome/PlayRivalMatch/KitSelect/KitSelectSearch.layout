@@ -1,0 +1,34 @@
+{
+    "behaviors":
+    [
+        {
+            "commonName":   "TickerNavPublisher",
+            "name":       "bvr_back",
+            "icon":       "$FooterIconBack",
+            "actionName": "act_back",
+			"alignH": 		"LEFT",
+            "bindings":
+            [
+                {
+                    "property": "label",
+                    "binding":  "BND_LTXT_BACK"
+                }
+            ]
+        },
+        {
+            "commonName":   "TickerNavPublisher",
+            "name":       "bvr_advance",
+            "icon":       "$FooterIconSearch",
+            "actionName": "act_advance",
+            "autoDisable": false,
+			"alignH": 		"RIGHT",
+            "bindings":
+            [
+                {
+                    "property": "label",
+                    "binding":  "BND_SEARCH"
+                }
+            ]
+        }
+    ]
+}

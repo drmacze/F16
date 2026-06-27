@@ -1,0 +1,67 @@
+{
+    "name": "MatchPlay",
+    "states":
+    [
+        {
+            "name": "RedirectMatchPlay",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchPlay.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                { 
+                    "event": "evt_customize",
+                    "targets": ["Customize"]
+                },
+                { 
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_refresh_on_resize",
+                    "targets": ["MatchPlay"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "Customize",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/GroupStage/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchPlay"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/flows/MainFlow/GameModes/QuickCup/CustomCup/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchPlay"
+            }
+        }
+    ]
+}

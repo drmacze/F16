@@ -1,0 +1,44 @@
+{
+    "name": "MatchHighlights",
+    "onEnter":
+    [
+        ["set", ["redirect", ".redirect"]]
+    ],
+    "states":
+    [
+        {
+            "name": "Highlights",
+            "onEnter":
+            [
+               ["substateChange", ["REPLAYS"]],
+               ["blockingLoadVVM", ["/flows/ingameflow/postmatch/matchhighlights/MatchHighlights.vvm"]]
+            ],
+            "onExit":
+            [
+               ["substateChange", ["INGAME"]],
+               ["unloadVVM"]
+            ],
+            "transitions":
+            [
+               {
+                  "event": "evt_exit",
+                  "targets": ["Exit"]
+               }
+            ]
+        },
+        {
+            "name": "Exit",
+            "onEnter":
+            [
+                ["invoke", [".redirect"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "menu",
+                    "targets": ["out_menu"]
+                }
+            ]
+        }
+    ]
+}

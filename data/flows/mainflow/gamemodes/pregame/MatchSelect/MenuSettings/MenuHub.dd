@@ -1,0 +1,65 @@
+{
+    "actions":
+    [
+         {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        }
+    ],
+    "data": [
+        {
+            "viewname": "bnd_stadium_name",
+            "binding": "bnd_stadium_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_logo_team_home",
+            "binding": "bnd_logo_team_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_team_away",
+            "binding": "bnd_logo_team_away",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_man_team_home",
+            "binding": "bnd_man_team_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_man_team_away",
+            "binding": "bnd_man_team_away",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_live_tile_squad",
+            "binding": "bnd_live_tile_squad",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_match_difficulty",
+            "binding":  "bnd_match_difficulty",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_weather_type",
+            "binding": "bnd_weather_type",
+            "type": "string"
+        }
+    ]
+}

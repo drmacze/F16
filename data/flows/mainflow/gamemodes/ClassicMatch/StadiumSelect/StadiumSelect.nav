@@ -1,0 +1,48 @@
+{
+    "name": "StadiumSelect",
+    "initial":
+    {
+        "targets": ["RedirectStadiumSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectStadiumSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["StadiumSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["SideSelect"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+                
+                
+            ]
+        },
+                
+        {
+            "name": "SideSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/ClassicMatch/SideSelect/SideSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "StadiumSelect",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+        
+        
+
+    ]
+}

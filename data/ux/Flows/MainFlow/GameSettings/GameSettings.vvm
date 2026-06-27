@@ -1,0 +1,5 @@
+{
+    "dds": ["GameSettings.dd"],
+    "vms": [["lua", "GameSettings.lua"]],
+    "views": [["gfx", { "layout": "GameSettings.layout" }]]
+}

@@ -1,0 +1,206 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "FILL",
+    "alignH": "FILL",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "type": "$EfekKabut"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 1,
+            "type": "$EfekVignette"
+        },
+
+        {
+            "commonName": "Panel",
+            "name": "BagianLogoEASportsLive",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 35,
+            "marginRight": 45,
+            "width": 185,
+            "height": 60,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LogoEASportsHDLive"
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "IntroInfoMatch",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 750,
+            "height": 380,
+            "bindings":
+			[
+				{
+					"binding": "bnd_visible",
+					"property": "visible"
+				}
+			],
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$Background_MatchInfo"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 4,
+                    "fontSize": 24.5,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "TODAY'S MATCH"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -20,
+                    "width": 60,
+                    "height": 60,
+                    "type": "$Background_LogoVS"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -20,
+                    "marginLeft": -1.4,
+                    "fontSize": 49,
+                    "fontColor": "$COLOR_BLACK",
+                    "text": "V"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -39,
+                    "width": 300,
+                    "fontSize": 20,
+                    "fontColor": "0x25C4CD",
+                    "forceCaps": true,
+                    "bindings":
+                    [
+                       {
+					       "binding": "bnd_nama_stadion",
+					       "property": "text"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -17,
+                    "marginLeft": -215,
+                    "width": 165,
+                    "height": 165,
+                    "bindings":
+                    [
+                       {
+					       "binding": "bnd_logo_tim_home",
+					       "property": "image"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -17,
+                    "marginRight": -215,
+                    "width": 165,
+                    "height": 165,
+                    "bindings":
+                    [
+                       {
+					       "binding": "bnd_logo_tim_away",
+					       "property": "image"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -90,
+                    "marginLeft": -215,
+                    "width": 300,
+                    "fontSize": 25,
+                    "forceCaps": true,
+                    "bindings":
+                    [
+                       {
+					       "binding": "bnd_nama_tim_home",
+					       "property": "text"
+                       }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -90,
+                    "marginRight": -215,
+                    "width": 300,
+                    "fontSize": 25,
+                    "forceCaps": true,
+                    "bindings":
+                    [
+                       {
+					       "binding": "bnd_nama_tim_away",
+					       "property": "text"
+                       }
+                    ]
+                }
+            ]
+        }
+        
+    ]
+}

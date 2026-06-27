@@ -1,0 +1,82 @@
+{
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "animationScripts":
+	[
+		{
+			"name" : "show",
+			"script" :
+			[
+				{
+					"anim" : "SIMPLE_SCREEN_SHOW"
+				}
+			]
+		},
+		{
+			"name" : "hide",
+			"script" :
+			[
+				{
+					"anim" : "SIMPLE_SCREEN_HIDE"
+				}
+             ]
+          }
+       ],
+       "behaviors":
+       [
+         {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+          }
+       ],
+       "children":
+       [
+           {
+                "commonName": "Panel",
+                "width": 1024,
+                "height": 768,
+                "alignH": "CENTER",
+                "alignV": "CENTER",
+                "children":
+                [
+                   {
+                       "commonName": "Asset",
+                       "type": "$LoadingScrim",
+                       "alignH": "CENTER",
+                       "alignV": "CENTER"
+                   },
+                   {
+                       "commonName": "Asset",
+                       "alignH": "CENTER",
+                       "alignV": "CENTER",
+                       "path": "views/loadingindicator/loadingIcon.swf"
+                   }
+               ]
+            },
+            {
+                "commonName": "Panel",
+                "alignH": "CENTER",
+                "alignV": "CENTER",
+                "marginTop": 80,
+                "children":
+                [
+                   {
+                       "commonName": "Label",
+                       "name": "insLoadingLabel",
+                       "styles": ["TF_STSELECT_TOGGLE"],
+                       "autoTextShadow": true,
+                       "text": "Loading..."
+                   }
+                ]
+            }
+        ],
+        "behaviors":
+        [
+            {
+                "commonName": "PanelLayoutBehavior"
+            }
+        ]
+}

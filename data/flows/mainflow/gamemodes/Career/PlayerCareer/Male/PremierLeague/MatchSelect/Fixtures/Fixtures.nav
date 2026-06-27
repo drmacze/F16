@@ -1,0 +1,33 @@
+{
+    "name": "Fixtures",
+    "states":
+    [
+        {
+            "name": "RedirectFixtures",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Fixtures.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]              
+                }
+            ]
+        },
+        {
+            "name": "Next",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Fixtures/Toggle/Next.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Fixtures"
+            }        
+        }
+    ]
+}

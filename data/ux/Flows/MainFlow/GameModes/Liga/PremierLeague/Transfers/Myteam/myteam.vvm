@@ -1,0 +1,5 @@
+{
+	"dds": ["myteam.dd"],
+    "vms": [["lua", "myteam.lua"]],
+    "views": [["gfx", {"layout": "myteam.layout"}]]
+}

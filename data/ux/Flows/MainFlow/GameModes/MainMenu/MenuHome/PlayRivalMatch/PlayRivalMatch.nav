@@ -1,0 +1,66 @@
+/* ------------------------------------------------------ */
+/* New Game Mode Created By Ma'ruf ID */
+/* ------------------------------------------------------ */
+
+{
+    "name": "PlayRivalMatch",
+    "onEnter":
+    [
+        ["invoke", ["evt_show_stage_background"]]
+    ],
+    "states":
+    [
+		{
+            "name": "MenuPlayRivalMatch",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/PlayRivalMatch.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_match_play",
+                    "targets": ["StadiumSelect"]
+                }
+            ]
+        },
+        {
+            "name": "StadiumSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/StadiumSelect/StadiumSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayRivalMatch",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "SideSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/SideSelect/SideSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayRivalMatch",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

@@ -1,0 +1,195 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "FILL",
+    "alignH": "FILL",
+    "children":
+    [
+    
+        {
+			"commonName": "Panel",
+			"name": "PlayerNIBTimAway",
+			"alignV": "BOTTOM",
+			"alignH": "RIGHT",
+			"marginBottom": 35,
+			"marginRight": 40,
+			"width": 300,
+			"height": 40,
+            "bindings":
+			[
+				{
+					"binding": "bnd_active",
+					"property": "visible"
+				}
+			],
+			"children":
+			[
+			    {
+			        "commonName": "Panel",
+			        "name": "BagianNamaPemain",
+			        "alignV": "CENTER",
+			        "alignH": "LEFT",
+			        "width": 250,
+			        "height": 40,
+			        "children":
+			        [
+			            {
+			               "commonName": "Asset",
+			               "commonName": "Asset",
+			               "alignV": "FILL",
+			               "alignH": "CENTER",
+			               "width": 280,
+			               "marginRight": 1,
+			               "type": "$BackgroundNamaPemain_Away"
+			            },
+			            {
+			               "commonName": "PlayerNIB",
+			               "orientation": "right",
+			               "marginTop": 2,
+			               "marginRight": 10,
+			               "bindings":
+			               [
+			                  {
+					             "binding": "bnd_player_info",
+					             "property": "dataProviders"
+				              }
+			               ]
+		                },
+			            {
+			               "commonName": "Asset",
+			               "commonName": "Asset",
+			               "alignV": "FILL",
+			               "alignH": "CENTER",
+			               "width": 280,
+			               "marginRight": 1,
+			               "type": "$PenutupStaminaAway"
+			            }
+			        ]
+			    },
+                
+                
+                
+                
+                
+                
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",  
+			        "marginTop": 32,
+                    "marginRight": 49,
+                    "height": 3,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_active"
+                        },
+                        {
+                            "property": "alpha",
+                            "binding":  "bnd_alpha"
+                        },
+                        {
+                            "property": "width",
+                            "binding":  "bnd_stamina_width"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_stamina_bottom"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "NIBStaminaInner",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "visible",
+                                    "binding":  "bnd_active"
+                                },
+                                {
+                                    "property": "alpha",
+                                    "binding":  "bnd_alpha"
+                                },
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_stamina_inner_bg"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "name": "NIBStaminaOutSide",
+                            "alignH": "LEFT",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "visible",
+                                    "binding":  "bnd_active"
+                                },
+                                {
+                                    "property": "alpha",
+                                    "binding":  "bnd_alpha"
+                                },
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_stamina_outside_bg"
+                                },	
+                                {
+                                    "property": "width",
+                                    "binding":  "bnd_stamina_short_width"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                
+                
+                
+                
+			    {
+			        "commonName": "Panel",
+			        "name": "BagianLogoTim",
+			        "alignV": "CENTER",
+			        "alignH": "RIGHT",
+			        "width": 60,
+			        "height": 60,
+			        "children":
+			        [
+			            {
+			               "commonName": "Asset",
+			               "alignV": "FILL",
+			               "alignH": "FILL",
+			               "type": "$BackgroundLogoTim"
+			            },
+			            {
+			               "commonName": "Image",
+			               "alignV": "CENTER",
+			               "alignH": "CENTER",
+			               "width": 40,
+			               "height": 40,
+			               "bindings":
+			               [
+			                  {
+					             "binding": "bnd_away_team_crest",
+					             "property": "image"
+				              }
+			               ]
+		                }
+			        ]
+			    }
+			]
+        }
+        
+	]
+}

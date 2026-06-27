@@ -1,0 +1,199 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Career"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -90,
+                    "marginLeft": 0,
+                    "height": 300,
+                    "width": 450,
+                    "type": "$Icon_Lisensi"
+                },
+                
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": -420,
+                    "width": 200,
+                    "height": 40,
+                    "clickAction": "act_to_youtube",
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "YOUTUBE"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": -210,
+                    "width": 200,
+                    "height": 40,
+                    "clickAction": "act_to_instagram",
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "INSTAGRAM"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": 210,
+                    "width": 200,
+                    "height": 40,
+                    "clickAction": "act_to_facebook",
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "FACEBOOK"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": 420,
+                    "width": 200,
+                    "height": 40,
+                    "clickAction": "act_to_tiktok",
+                    "type": "grey",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "TIKTOK"
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 120,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "©2025 Mod Create MVNPROD",
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 97,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "This patch data was modified by mvnprod visit the YouTube channel, Support the experts so they are enthusiastic about giving their best",
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 85,
+                    "marginLeft": 0,
+                    "fontSize": 10,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontColor":"0xffffff",
+                    "text": "Developed Electronic Arts under the EA Sports label.",
+                    "alpha": 0.3
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Loading",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginLeft": 3,
+                    "height": 50,
+                    "width": 50,
+                    "alpha": 1,
+                    "path": "views/loadingindicator/loadingIcon.swf"
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

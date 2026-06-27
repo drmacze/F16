@@ -1,0 +1,11 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "PanelLayoutBehavior"
+        }
+    ]
+}

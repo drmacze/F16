@@ -1,0 +1,36 @@
+{
+  "name": "SelectSideFlow",
+  "initial": {
+    "targets": ["SelectSide"]
+  },
+  "states": [
+    {
+      "name": "SelectSide",
+      "onEnter": [
+        ["blockingLoadVVM", ["SelectSide.vvm"]]
+      ],
+      "onExit": [
+        ["unloadVVM"]
+      ],
+      "transitions": [
+        {
+          "event": "evt_advance",
+          "targets": ["MatchPlay"]
+        },
+        {
+          "event": "evt_back",
+          "targets": ["out_exit_gamemode"]
+        }
+      ]
+    },
+    {
+      "name": "MatchPlay",
+      "type": "external",
+      "file": "/flows/mainflow/gamemodes/QuickCup/CustomCup/GroupStage/MatchSelect/MatchPlay/MatchPlay.nav",
+      "outputs": {
+        "out_exit_gamemode": "SelectSide",
+        "out_exit_gamemode1": "out_exit_gamemode"
+      }
+    }
+  ]
+}

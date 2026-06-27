@@ -1,0 +1,108 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "TeamRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 257,
+            "height": 280
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$TILE_COLOR_LABEL",
+            "textAlignH": "CENTER",
+            "textAlignV": "CENTER"
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_BOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "fontFace": "$FONT_BOLD",
+            "textAlignH": "CENTER",
+            "fontColor": "$TILE_COLOR_VALUE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.TeamRating.stars",
+        "dataProviders.TeamNameFontColor": "RowPanel.RowLeftPanel.TeamName.fontColor",
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "width": 750,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x00fc7f",
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 10,
+                            "marginTop": 0,
+                            "width": 60,
+                            "height": 60
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamName",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 20,
+                            "marginLeft": 70,
+                            "fontSize": 19,
+                            "forceCaps": true,
+                            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "StarRating",
+                            "name":"TeamRating",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 35,
+                            "marginLeft": 38,
+                            "size": "medium"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

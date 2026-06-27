@@ -1,0 +1,2166 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_cup_bg",
+                    "property": "image"
+                }
+			]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 135,
+            "fontSize": 16,
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+            "fontColor": "0xFFFFFF",
+            "text": "UEFA Women's CL",
+            "alpha": 1
+        },
+        {
+            "commonName": "Image",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "width": 100,
+            "height": 100,
+            "marginBottom": 25,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_cup_logo",
+                    "property": "image"
+                }
+            ]
+        },
+        {
+            "commonName":"Panel",
+            "name":"ChampionPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "scaleX": 0.45,
+            "scaleY": 0.45,
+            "marginTop": -105,
+            "marginRight": 0,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_champion_visible",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 30,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "0xFFFFFF",
+                    "marginTop": -80,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_text",
+                            "property": "text"
+                        }
+                    ]
+                },
+                { 
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "scaleX": 0.4,
+                    "scaleY": 0.4,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_champion_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "fontSize": 35,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "0xffffff",
+                    "marginBottom": -100,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_champion_team",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "scaleX": 0.72,
+            "scaleY": 0.72,
+            "width": 1520,
+            "height": 350,
+            "marginTop": 90,
+            "marginLeft": 0,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "marginTop": 100,
+                    "marginLeft": 0,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": -65,
+                            "width": 990,
+                            "height": 42,
+                            "alpha": 0,
+                            "color": "0x08088A"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": -112,
+                           "marginLeft": 198,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "R16", 
+                           "alpha": 0.8
+                       },
+                       {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": -112,
+                           "marginLeft": 360,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "QTR", 
+                           "alpha": 0.8
+                       },
+                       {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": -112,
+                           "marginLeft": 535,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "SEMI", 
+                           "alpha": 0.8
+                       },
+                       {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": -112,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "GRAND FINAL", 
+                           "alpha": 0.8
+                       },
+                       {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": -112,
+                           "marginRight": 198,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "R16", 
+                           "alpha": 0.8
+                       },
+                       {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": -112,
+                           "marginRight": 360,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "QTR", 
+                           "alpha": 0.8
+                       },
+                       {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": -112,
+                           "marginRight": 535,
+                           "fontSize": 22,
+                           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                           "fontColor": "0xFFFFFF",
+                           "text": "SEMI", 
+                           "alpha": 0.8
+                       },
+                       {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 130,
+                            "width": 1562,
+                            "height": 590,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_cup_map",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team1_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team1_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team1_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": -15,
+                           "marginLeft": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team2_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team2_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team2_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 171,
+                            "marginLeft": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team3_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team3_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team3_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 156,
+                           "marginLeft": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 171,
+                            "marginLeft": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team4_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team4_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team4_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 342,
+                            "marginLeft": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team5_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team5_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team5_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 327,
+                           "marginLeft": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 342,
+                            "marginLeft": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team6_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team6_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team6_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 512,
+                            "marginLeft": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team7_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team7_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team7_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 497,
+                           "marginLeft": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 512,
+                            "marginLeft": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team8_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team8_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team8_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 0,
+                            "marginRight": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team9_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team9_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team9_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": -15,
+                           "marginRight": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 0,
+                            "marginRight": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team10_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team10_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team10_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 171,
+                            "marginRight": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team11_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team11_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team11_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 156,
+                           "marginRight": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 171,
+                            "marginRight": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team12_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team12_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team12_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 342,
+                            "marginRight": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team13_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team13_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team13_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 327,
+                           "marginRight": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 342,
+                            "marginRight": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team14_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team14_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team14_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 512,
+                            "marginRight": 60,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team15_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team15_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team15_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 497,
+                           "marginRight": 207,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 512,
+                            "marginRight": 325,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team16_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team16_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team16_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 84,
+                            "marginLeft": 230,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team17_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team17_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team17_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 69,
+                           "marginLeft": 375,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 84,
+                            "marginLeft": 495,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team18_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team18_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team18_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 426,
+                            "marginLeft": 230,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team19_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team19_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team19_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 411,
+                           "marginLeft": 375,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 426,
+                            "marginLeft": 495,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team20_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team20_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team20_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 256,
+                            "marginLeft": 417,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team25_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team25_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team25_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "LEFT",
+                           "marginTop": 239,
+                           "marginLeft": 562,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 256,
+                            "marginLeft": 680,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team26_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team26_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team26_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 162,
+                            "marginLeft": 560,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "scaleX": 0.20,
+                                    "scaleY": 0.20,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team29_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 67,
+                                    "fontSize": 30,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team29_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginLeft": 147,
+                                    "fontSize": 30,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team29_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "marginTop": 144,
+                           "marginLeft": 0,
+                           "fontSize": 30,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 84,
+                            "marginRight": 230,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team21_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team21_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team21_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 69,
+                           "marginRight": 375,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 84,
+                            "marginRight": 495,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team22_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team22_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team22_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 426,
+                            "marginRight": 230,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team23_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team23_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team23_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 411,
+                           "marginRight": 375,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 426,
+                            "marginRight": 495,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team24_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team24_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team24_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 256,
+                            "marginRight": 417,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team27_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 55,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team27_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 115,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team27_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },                   
+                        {
+                           "commonName": "Label",
+                           "alignV": "TOP",
+                           "alignH": "RIGHT",
+                           "marginTop": 239,
+                           "marginRight": 562,
+                           "fontSize": 25,
+                           "alpha": 1,
+                           "fontColor": "0xFFFFFF",
+                           "text": "-"
+                         },
+                         {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 256,
+                            "marginRight": 680,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.18,
+                                    "scaleY": 0.18,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team28_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -59,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team28_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": -90,
+                                    "fontSize": 25,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team28_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName":"Panel",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 162,
+                            "marginRight": 560,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "scaleX": 0.20,
+                                    "scaleY": 0.20,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team30_crest",
+                                            "property": "image"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 67,
+                                    "fontSize": 30,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team30_abbr",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "RIGHT",
+                                    "marginRight": 147,
+                                    "fontSize": 30,
+                                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                                    "fontColor": "0xffffff",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team30_score",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }                
+            ]
+        }	    
+	]
+}

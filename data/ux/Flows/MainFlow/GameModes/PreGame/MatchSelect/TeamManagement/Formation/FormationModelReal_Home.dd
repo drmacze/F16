@@ -1,0 +1,27 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_toggle_formation",
+            "binding": "bnd_toggle_formation",
+            "type": "int",
+            "actions":
+                [
+                    {
+                        "viewname": "act_toggle_formation",
+                        "actionname": "act_toggle_formation"
+                    }
+                ]
+        },
+        {
+            "viewname": "bnd_formation_list",
+            "binding": "bnd_formation_list",
+            "type": "toggleData"
+        },
+        {
+            "viewname": "bnd_formation",
+            "binding": "bnd_formation",
+            "type": "object"
+        }
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "TopGoalRowRoot",
+    "mouseInteractive": false,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_CRUYFFSANSBOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.PlayerHead": "RowPanel.RowLeftPanel.PlayerHead.image",
+        "dataProviders.PlayerNationality": "RowPanel.RowLeftPanel.PlayerNationality.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.LeagueCrest": "RowPanel.RowLeftPanel.LeagueCrest.image",
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.Rank": "RowPanel.RowLeftPanel.Rank.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.Rating.text",
+        "dataProviders.Goals": "RowPanel.RowLeftPanel.Goals.text",
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 880,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 550,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":"Rank",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -260,
+                            "marginBottom": -2,
+                            "fontSize": 25,
+                            "fontColor": "0xFFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "alpha": 0.6
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "PlayerHead",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 5,
+                            "marginLeft": -210,
+                            "width": 45,
+                            "height": 45
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 110,
+                            "marginBottom": -2,
+                            "width": 150,
+                            "autoScroll":true,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "TeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 20,
+                            "width": 35,
+                            "height": 35
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Goals",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 100,
+                            "marginBottom": -2,
+                            "fontSize": 25,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "FILL",
+                            "marginTop": 35,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

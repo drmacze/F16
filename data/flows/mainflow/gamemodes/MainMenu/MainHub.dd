@@ -1,0 +1,183 @@
+{
+	"actions":
+	[
+        {
+			"viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_tab4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4"
+            }
+        },
+        {
+            "viewname": "act_tab5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5"
+            }
+        },
+        {
+            "viewname": "act_tab6",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab6"
+            }
+        },
+        {
+            "viewname": "act_enter_ko",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_ko"
+            }
+        },
+        {
+            "viewname": "act_enter_tn",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_tn"
+            }
+        },
+        {
+            "viewname": "act_enter_cm",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_cm"
+            }
+        },
+        {
+            "viewname": "act_enter_pc",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_pc"
+            }
+        },
+        {
+            "viewname": "act_enter_rm",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_rm"
+            }
+        },
+        {
+            "viewname": "act_to_credits",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_to_credits"
+            }
+        },
+        {
+            "viewname": "act_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_customize"
+            }
+        },
+        {
+            "viewname": "act_news",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_news"
+            }
+        },
+        {
+            "viewname": "act_to_about",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_about"
+            }
+		},
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+		{
+            "viewname": "act_to_info_tile",
+            "actionname": "act_to_info_tile"
+        },
+		{
+            "viewname": "act_to_mod_tile",
+            "actionname": "act_to_mod_tile"
+        },
+        {
+            "viewname": "act_match_play",
+            "actionname": "act_match_play"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team1",
+            "binding": "bnd_team1",
+			"type": "object"
+    	},
+        {
+            "viewname": "bnd_team2",
+            "binding": "bnd_team2",
+			"type": "object"
+        },
+        {
+            "viewname": "bnd_live_model_bg",
+            "binding": "bnd_live_model_bg",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_live_model_ads",
+            "binding": "bnd_live_model_ads",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_Menu_bg",
+            "binding": "bnd_Menu_bg",
+			"type": "object"
+    	},
+		{
+		    "viewname": "bnd_model",
+            "binding": "bnd_model",
+			"type": "object"
+	   }
+  ]
+}

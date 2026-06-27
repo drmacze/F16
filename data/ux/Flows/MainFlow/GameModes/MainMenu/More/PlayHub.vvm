@@ -1,0 +1,4 @@
+{
+    "dds": ["PlayHub.dd"],
+    "views": [["gfx", { "layout": "PlayHub.layout" }]]
+}

@@ -1,0 +1,378 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_confirm",
+			"actionname": "act_confirm"
+		},
+		{
+			"viewname": "act_change",
+			"actionname": "act_change"
+		},
+		{
+			"viewname": "act_select_league",
+			"actionname": "act_select_league"
+		},
+		{
+			"viewname": "act_select_team",
+			"actionname": "act_select_team"
+		},
+		{
+			"viewname": "act_selector_cancel",
+			"actionname": "act_selector_cancel"
+		},
+        {
+            "viewname": "act_proceed",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_proceed"
+            }
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_btn_click",
+            "actionname": "act_btn_click"
+        }
+	],
+	"data":
+	[
+		{
+			"viewname": "bnd_next_label",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_CNM_NEXT"
+			}
+		},
+		{
+			"viewname": "bnd_welcome_label",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_FTF_WELCOME"
+			}
+		},
+		{
+			"viewname": "bnd_player_label",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_FTF_GET_PLAYER"
+			}
+		},
+		{
+			"viewname": "bnd_title",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_FAV_TEAM_SELECT_TITLE"
+			}
+		},
+		{
+			"viewname": "bnd_select_favorite_team_description",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_FTF_FAVORITE_FREE_ITEMS"
+			}
+		},
+		{
+			"viewname": "bnd_league_label",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_PLAYER_BIO_SELECT_LEAGUE"
+			}
+		},
+		{
+			"viewname": "bnd_team_label",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_PLAYER_BIO_SELECT_TEAM"
+			}
+		},
+		{
+			"viewname": "bnd_league_index",
+			"binding": "bnd_league_index",
+			"type": "int",
+			"actions":
+			[
+				{
+					"viewname": "act_change",
+					"actionname": "act_change"
+				}
+			]
+		},
+		{
+			"viewname": "bnd_league_list",
+			"binding": "bnd_league_list",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_league_overlay_visible",
+			"binding": "bnd_league_overlay_visible",
+			"type": "bool"
+		},
+        {
+            "viewname": "bnd_home_kit",
+            "binding":  "bnd_home_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_kit",
+            "binding":  "bnd_away_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_value",
+            "binding":  "bnd_team_value",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_transfer_budget",
+            "binding":  "bnd_transfer_budget",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_menu_bg",
+            "binding":  "bnd_menu_bg",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_league_index",
+            "binding":  "bnd_league_index",
+            "type": "int"
+		},
+        {
+            "viewname": "bnd_stadium_name",
+            "binding":  "bnd_stadium_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_color1",
+            "binding":  "bnd_difficulty_color1",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_color2",
+            "binding":  "bnd_difficulty_color2",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_color3",
+            "binding":  "bnd_difficulty_color3",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_color4",
+            "binding":  "bnd_difficulty_color4",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_color5",
+            "binding":  "bnd_difficulty_color5",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_label1",
+            "binding":  "bnd_difficulty_label1",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_label2",
+            "binding":  "bnd_difficulty_label2",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_label3",
+            "binding":  "bnd_difficulty_label3",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_label4",
+            "binding":  "bnd_difficulty_label4",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_difficulty_label5",
+            "binding":  "bnd_difficulty_label5",
+            "type":     "string"
+        },
+		{
+			"viewname": "bnd_selected_league_name",
+			"binding": "bnd_selected_league_name",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_team_index",
+			"binding": "bnd_team_index",
+			"type": "int",
+			"actions":
+			[
+				{
+					"viewname": "act_change",
+					"actionname": "act_change"
+				}
+			]
+		},
+		{
+			"viewname": "bnd_team_list",
+			"binding": "bnd_team_list",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_team_overlay_visible",
+			"binding": "bnd_team_overlay_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_selected_team_name",
+			"binding": "bnd_selected_team_name",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_country_name",
+			"binding": "bnd_country_name",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_team_crest",
+			"binding": "bnd_team_crest",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_league_crest",
+			"binding": "bnd_league_crest",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_league_crest_active",
+			"binding": "bnd_league_crest_active",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_default_cell_data",
+			"binding": "bnd_default_cell_data",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_league_title",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_BIO_SELECT_LEAGUE_TITLE"
+			}
+		},
+		{
+			"viewname": "bnd_team_title",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_BIO_SELECT_TEAM_TITLE"
+			}
+		},
+		{
+			"binding": "bnd_team_star_rating",
+			"viewname": "bnd_team_star_rating",
+			"type": "float"
+		},
+		{
+			"binding": "bnd_team_rating",
+			"viewname": "bnd_team_rating",
+			"type": "object"
+		},
+		{
+			"binding":  "bnd_league_list_toggle",
+			"viewname": "bnd_league_list_toggle",
+			"type":
+			{
+				"metaType": "object",
+				"members":
+				{
+					"data": "array",
+					"index": "int"
+				}
+			}
+		},
+		{
+			"binding":  "bnd_league_list_index",
+			"viewname": "bnd_league_list_index",
+			"type":	 "int",
+			"actions":
+			[
+				{
+					"viewname":   "act_change",
+					"actionname": "act_change"
+				}
+			]
+		},
+		{
+			"binding":  "bnd_team_list_toggle",
+			"viewname": "bnd_team_list_toggle",
+			"type":
+			{
+				"metaType": "object",
+				"members":
+				{
+					"data": "array",
+					"index": "int"
+				}
+			}
+		},
+		{
+			"binding":  "bnd_team_list_index",
+			"viewname": "bnd_team_list_index",
+			"type":	 "int",
+			"actions":
+			[
+				{
+					"viewname":   "act_change",
+					"actionname": "act_change"
+				}
+			]
+		},
+    {
+      "viewname": "bnd_home_country_select_visible",
+      "binding": "bnd_home_country_select_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_home_team_select_visible",
+      "binding": "bnd_home_team_select_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_home_league_select_visible",
+      "binding": "bnd_home_league_select_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_mens_select_visible",
+      "binding": "bnd_mens_select_visible",
+      "type": "bool"
+    },
+    {
+      "viewname": "bnd_womens_select_visible",
+      "binding": "bnd_womens_select_visible",
+      "type": "bool"
+    }
+  ]
+}

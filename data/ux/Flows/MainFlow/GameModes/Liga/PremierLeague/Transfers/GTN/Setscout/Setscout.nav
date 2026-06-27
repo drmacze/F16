@@ -1,0 +1,24 @@
+{
+    "name": "Setscout",
+    "states":
+    [
+        {
+            "name": "RedirectSetscout",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Setscout.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        }
+    ]
+}

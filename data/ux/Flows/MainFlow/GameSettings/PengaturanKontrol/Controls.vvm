@@ -1,0 +1,5 @@
+{
+    "dds": ["Controls.dd"],
+    "vms": [["lua", "Controls.lua"]],
+    "views": [["gfx", {"layout": "Controls.layout"}]]
+}

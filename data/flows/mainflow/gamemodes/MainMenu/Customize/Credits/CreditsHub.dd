@@ -1,0 +1,57 @@
+{
+	"actions":
+	[
+		{
+    		"viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+             }
+		},
+        {
+			"viewname": "act_youtube_roberfl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_youtube_roberfl"
+			}
+		},
+		{
+		    "viewname": "act_instagram_roberfl",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_instagram_roberfl"
+			}
+		},
+		{
+			"viewname": "act_youtube_dk7",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_youtube_dk7"
+			}
+		},
+		{
+			"viewname": "act_instagram_dk7",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_instagram_dk7"
+			}
+		},
+		{
+            "viewname":   "act_to_DFLinfo_tile",
+            "actionname": "act_to_DFLinfo_tile"
+		}       
+    ],
+	"data":
+	[
+        {
+			"viewname": "bnd_Menu_bg",
+            "binding": "bnd_Menu_bg",
+			"type": "object"
+		}
+    ]
+}

@@ -1,0 +1,57 @@
+{
+	"actions":
+	[
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        },
+        {
+            "viewname":"act_women_career",
+            "actionname":"act_women_career"
+        },
+        {
+			"viewname": "act_player_career",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_player_career"
+            }
+        }
+	],
+    "data":
+	[
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}

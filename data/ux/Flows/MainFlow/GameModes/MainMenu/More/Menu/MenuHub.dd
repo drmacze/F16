@@ -1,0 +1,89 @@
+{
+    "actions":
+    [
+
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+        {
+            "viewname":"act_mvnprod",
+            "actionname":"act_mvnprod"
+        },
+        {
+            "viewname":"act_update",
+            "actionname":"act_update"
+        },
+        {
+            "viewname": "act_credits",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_credits"
+            }
+        },
+        {
+            "viewname": "act_team_roster",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_team_roster"
+            }
+        }
+  ],
+	"data":
+	[
+        {
+            "viewname": "bnd_settings_select",
+            "binding":  "bnd_settings_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_profile_select",
+            "binding":  "bnd_profile_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_update_select",
+            "binding":  "bnd_update_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_roster_select",
+            "binding":  "bnd_roster_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_free1_select",
+            "binding":  "bnd_free1_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_free2_select",
+            "binding":  "bnd_free2_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_free3_select",
+            "binding":  "bnd_free3_select",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_free4_select",
+            "binding":  "bnd_free4_select",
+            "type":     "bool"
+        }
+  ]
+}

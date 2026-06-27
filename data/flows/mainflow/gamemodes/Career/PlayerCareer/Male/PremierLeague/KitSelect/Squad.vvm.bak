@@ -1,0 +1,5 @@
+{
+    "dds":   ["Squad.dd", "TeamManagementModel.dd", "/lua/common/FormationModel.dd", "formation/FormationModelReal.dd"],
+    "vms":   [["lua", "Squad.lua"]],
+    "views": [["gfx", {"layout": "Squad.layout"}]]
+}

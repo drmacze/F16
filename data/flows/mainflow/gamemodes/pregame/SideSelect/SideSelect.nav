@@ -1,0 +1,42 @@
+{
+    "name": "SideSelect",
+    "initial":
+    {
+        "targets": ["RedirectSideSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectSideSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["SideSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                }
+            ]
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/pregame/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_back": "SideSelect",
+                "out_back1": "out_back1"
+            }
+        }
+    ]
+}

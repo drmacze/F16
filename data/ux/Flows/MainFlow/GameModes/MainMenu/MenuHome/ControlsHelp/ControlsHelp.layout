@@ -1,0 +1,457 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -8,
+            "width": 860,
+            "height": 479,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "CONTROLS HELP"
+                }
+		    ]
+	    },
+		{
+			"commonName": "Panel",
+			"name": "panelDataContainer",
+			"alignV": "FILL",
+			"alignH": "FILL",
+			"children":
+			[
+				{
+					"commonName": "Panel",
+					"name": "panelWithImageAndText",
+					"alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 25,
+					"height": 415,
+					"width": 860,
+					"children":
+					[
+						{
+							"commonName": "Image",
+							"name": "descriptionImage",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"marginTop": -25,
+							"bindings":
+							[
+								{
+									"binding": "bnd_sub_page_image",
+									"property": "image"
+								}
+							],
+							"behaviors":
+							[
+								{
+									"commonName": "ControlsHelpLoadBehavior",
+									"actionName": "act_on_image_loaded"
+								}
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelMentality",
+							"alignH": "CENTER",
+							"alignV": "TOP",
+							"marginTop": 150.0,
+							"width": 328.0,
+							"multiline": false,
+							"bindings":
+							[
+								{
+									"binding": "bnd_mentality",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_mentality_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_MENTALITY_LABEL_HELP"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelThrough",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 156.0,
+							"marginRight": 108.0,
+							"width": 110.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_through",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_through_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON_SMALLER_FONT"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "label2ndDefender",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 153.0,
+							"marginRight": 126.0,
+							"width": 98.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_2nd_defender",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_2nd_defender_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON_SMALLER_FONT"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelPass",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 53.0,
+							"marginRight": 167.0,
+							"width": 76.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_pass",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_pass_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelSwitch",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 53.0,
+							"marginRight": 168.0,
+							"width": 72.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_switch",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_switch_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelShoot",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 180.0,
+							"marginRight": 34.0,
+							"width": 72.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_shoot",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_shoot_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelTackleBasic",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 180.0,
+							"marginRight": 26.0,
+							"width": 92.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_tackle",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_tackle_basic_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelSprintOff",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 65.0,
+							"marginRight": 45.0,
+							"width": 86.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_sprint_offence",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_sprint_offence_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelSprintDeff",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 65.0,
+							"marginRight": 52.0,
+							"width": 72.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_sprint_deffence",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_sprint_deffence_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Panel",
+							"name": "panelForTopBanner",
+							"alignH": "CENTER",
+							"marginTop": -25,
+							"height": 100,
+							"width": 860,
+							"children":
+							[
+								{
+									"commonName": "Asset",
+									"name": "background",
+									"alignH": "FILL",
+									"alignV": "FILL",
+									"type": "$bkg_panel_top_controls_help"
+								},
+								{
+									"commonName": "AssetButton",
+									"name": "buttonRight",
+									"alignV": "CENTER",
+									"alignH": "RIGHT",								
+									"marginRight": 10,
+									"clickAction": "act_go_right",
+									"buttonAsset": "$BlueThickArrowRight"
+								},
+								{
+									"commonName": "AssetButton",
+									"name": "buttonLeft",
+									"alignV": "CENTER",
+									"alignH": "LEFT",
+									"marginLeft": 10,
+									"clickAction": "act_go_left",
+									"buttonAsset": "$BlueThickArrowLeft"
+								},
+								{
+									"commonName": "Panel",
+									"name": "panelWithText",
+									"alignH": "FILL",
+									"alignV": "FILL",
+									"children":
+									[
+										{
+											"commonName": "Label",
+											"name": "labelSubPageTitle",
+											"alignH": "CENTER",
+											"marginTop": 5,
+											"textAlignH": "CENTER",
+											"width": 700,
+											"multiline": true,
+                                            "forceCaps": true,
+											"bindings":
+											[
+												{
+													"binding": "bnd_subpage_title",
+													"property": "text"
+												}
+											],
+											"styles":
+											[
+												"TF_CONTENT_HEADER"
+											]
+										},
+										{
+											"commonName": "Label",
+											"name": "labelSubPageCnt",
+											"alignH": "CENTER",
+											"marginTop": 40,
+											"width": 700,
+											"multiline": true,
+											"leading": 1,
+											"fontSize": 15,
+											"fontColor": "$COLOR_BLACK",
+											"textAlignH": "CENTER",
+											"bindings":
+											[
+												{
+													"binding": "bnd_subpage_content",
+													"property": "text"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+		
+	]
+}

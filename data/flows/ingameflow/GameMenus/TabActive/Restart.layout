@@ -1,0 +1,152 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_IN" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_OUT" } ]
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 45,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_restart_match"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Select"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_restart_match"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 238,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_toggle_pause"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 298,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Resume"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 298,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_toggle_pause"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 306,
+                    "marginLeft": 17,
+                    "height": 12,
+                    "width": 195,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 306,
+                    "marginLeft": 17,
+                    "height": 12,
+                    "width": 195,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 290,
+                    "marginLeft": 25,
+                    "fontSize": 16,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "RESTART MATCH"
+                }
+            ]
+        }
+    ]
+}

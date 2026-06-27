@@ -1,0 +1,20 @@
+{
+    "name": "TeamManagement_Home",
+    "onEnter":
+    [
+        ["invoke", ["evt_hide_watermark"]], 
+        ["loadVVM", ["/Flows/MainFlow/GameModes/PreGame/MatchSelect/TeamManagement/TeamManagement_Home.vvm", { "type": ".type", "gamemode": ".gamemode", "eventData": ".event.data" } ]]
+    ],
+    "onExit":
+    [
+        ["invoke", ["evt_show_watermark"]], 
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_advance",
+            "targets": ["out_advance"]
+        }
+    ]
+}

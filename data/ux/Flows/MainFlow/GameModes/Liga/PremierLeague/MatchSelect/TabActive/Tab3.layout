@@ -1,0 +1,284 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 77,
+                    "width": 1000,
+                    "height": 475,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 313,
+                            "width": 150,
+                            "height": 35,
+                            "type": "$BackgroundJudulMenu"
+                        },
+
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 328,
+                            "marginTop": 5,
+                            "width": 150,
+                            "height": 35,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "TRANSFERS"
+                        }
+                    ]
+                },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                          [
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "type": "$LiveTileBackgroundIdle"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "type": "$Background_UT"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "clickAction": "act_hub"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Kontrak"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "RIGHT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "clickAction": "act_gtn"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "RIGHT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "type": "$Background_Scout"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "clickAction": "act_searching"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Carip"
+                              }
+                          ]
+                },
+                 {
+                     "commonName": "Panel",
+                     "name": "Search",
+                     "alignV": "BOTTOM",
+                     "alignH": "LEFT",
+                     "marginTop": 120,
+                     "width": 350,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "SEARCH PLAYERS"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Search for a specific players"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Window",
+                     "alignV": "TOP",
+                     "alignH": "LEFT",
+                     "marginTop": 120,
+                     "width": 642,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "TRANSFER WINDOW"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "Monitor the transfer market"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Cotract",
+                     "alignV": "TOP",
+                     "alignH": "RIGHT",
+                     "marginTop": 120,
+                     "width": 350,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "CONTRACTS"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "Manage the players contracts"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Scout",
+                     "alignV": "BOTTOM",
+                     "alignH": "RIGHT",
+                     "marginTop": 120,
+                     "width": 642,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "PLAYERS SCOUT"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Find new talent for your squad"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 63,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Budget : $1.500.000"
+                               }
+                          ]
+                 }
+            ]
+        }
+                
+                
+                
+         
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

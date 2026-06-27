@@ -1,0 +1,407 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_team_select",
+            "actionname": "act_team_select"
+        },
+        {
+            "viewname":"act_random",
+            "actionname":"act_random"
+        },
+        {
+            "viewname":"act_selected",
+            "actionname":"act_selected"
+        },
+        {
+            "viewname":"act_select_team",
+            "actionname":"act_select_team"
+        },
+        {
+            "viewname":"act_change_team",
+            "actionname":"act_change_team"
+        },
+        { "viewname": "act_tab_team1", "actionname": "act_tab_team1" },
+        { "viewname": "act_tab_team2", "actionname": "act_tab_team2" },
+        { "viewname": "act_tab_team3", "actionname": "act_tab_team3" },
+        { "viewname": "act_tab_team4", "actionname": "act_tab_team4" },
+        { "viewname": "act_tab_team5", "actionname": "act_tab_team5" },
+        { "viewname": "act_tab_team6", "actionname": "act_tab_team6" },
+        { "viewname": "act_tab_team7", "actionname": "act_tab_team7" },
+        { "viewname": "act_tab_team8", "actionname": "act_tab_team8" },
+        { "viewname": "act_tab_team9", "actionname": "act_tab_team9" },
+        { "viewname": "act_tab_team10", "actionname": "act_tab_team10" },
+        { "viewname": "act_tab_team11", "actionname": "act_tab_team11" },
+        { "viewname": "act_tab_team12", "actionname": "act_tab_team12" },
+        { "viewname": "act_tab_team13", "actionname": "act_tab_team13" },
+        { "viewname": "act_tab_team14", "actionname": "act_tab_team14" },
+        { "viewname": "act_tab_team15", "actionname": "act_tab_team15" },
+        { "viewname": "act_tab_team16", "actionname": "act_tab_team16" },
+        { "viewname": "act_tab_team17", "actionname": "act_tab_team17" },
+        { "viewname": "act_tab_team18", "actionname": "act_tab_team18" },
+        { "viewname": "act_tab_team19", "actionname": "act_tab_team19" },
+        { "viewname": "act_tab_team20", "actionname": "act_tab_team20" },
+        { "viewname": "act_tab_team21", "actionname": "act_tab_team21" },
+        { "viewname": "act_tab_team22", "actionname": "act_tab_team22" },
+        { "viewname": "act_tab_team23", "actionname": "act_tab_team23" },
+        { "viewname": "act_tab_team24", "actionname": "act_tab_team24" },
+        { "viewname": "act_tab_team25", "actionname": "act_tab_team25" },
+        { "viewname": "act_tab_team26", "actionname": "act_tab_team26" },
+        { "viewname": "act_tab_team27", "actionname": "act_tab_team27" },
+        { "viewname": "act_tab_team28", "actionname": "act_tab_team28" },
+        { "viewname": "act_tab_team29", "actionname": "act_tab_team29" },
+        { "viewname": "act_tab_team30", "actionname": "act_tab_team30" },
+        { "viewname": "act_tab_team31", "actionname": "act_tab_team31" },
+        { "viewname": "act_tab_team32", "actionname": "act_tab_team32" },
+        { "viewname": "act_tab_team33", "actionname": "act_tab_team33" },
+        { "viewname": "act_tab_team34", "actionname": "act_tab_team34" },
+        { "viewname": "act_tab_team35", "actionname": "act_tab_team35" },
+        { "viewname": "act_tab_team36", "actionname": "act_tab_team36" },
+        { "viewname": "act_tab_team37", "actionname": "act_tab_team37" },
+        { "viewname": "act_tab_team38", "actionname": "act_tab_team38" },
+        { "viewname": "act_tab_team39", "actionname": "act_tab_team39" },
+        { "viewname": "act_tab_team40", "actionname": "act_tab_team40" },
+        { "viewname": "act_tab_team41", "actionname": "act_tab_team41" },
+        { "viewname": "act_tab_team42", "actionname": "act_tab_team42" },
+        { "viewname": "act_tab_team43", "actionname": "act_tab_team43" },
+        { "viewname": "act_tab_team44", "actionname": "act_tab_team44" },
+        { "viewname": "act_tab_team45", "actionname": "act_tab_team45" },
+        { "viewname": "act_tab_team46", "actionname": "act_tab_team46" },
+        { "viewname": "act_tab_team47", "actionname": "act_tab_team47" },
+        { "viewname": "act_tab_team48", "actionname": "act_tab_team48" }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tour_bg",
+            "binding":  "bnd_tour_bg",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_tour_logo",
+            "binding":  "bnd_tour_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_tour_color",
+            "binding":  "bnd_tour_color",
+            "type":     "init"
+        },
+        {
+            "viewname": "bnd_tour_color_tab",
+            "binding":  "bnd_tour_color_tab",
+            "type":     "init"
+        },
+        {
+            "viewname": "bnd_team_list",
+            "binding":  "bnd_team_list",
+            "type":     "array"
+        },
+        {
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+            "type":"bool"
+        },
+        {
+            "viewname":"bnd_loading_visible",
+            "binding":"bnd_loading_visible",
+            "type":"bool"
+        },
+        {     
+            "viewname": "bnd_team1",
+            "binding":  "bnd_team1",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team2",
+            "binding":  "bnd_team2",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team3",
+            "binding":  "bnd_team3",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team4",
+            "binding":  "bnd_team4",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team5",
+            "binding":  "bnd_team5",
+            "type":     "object"
+         },
+        {     
+            "viewname": "bnd_team6",
+            "binding":  "bnd_team6",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team7",
+            "binding":  "bnd_team7",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team8",
+            "binding":  "bnd_team8",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team9",
+            "binding":  "bnd_team9",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team10",
+            "binding":  "bnd_team10",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team11",
+            "binding":  "bnd_team11",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team12",
+            "binding":  "bnd_team12",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team13",
+            "binding":  "bnd_team13",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team14",
+            "binding":  "bnd_team14",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team15",
+            "binding":  "bnd_team15",
+            "type":     "object"
+        },
+        { "viewname": "bnd_logo_team1", "binding": "bnd_logo_team1", "type": "object" },
+        { "viewname": "bnd_logo_team2", "binding": "bnd_logo_team2", "type": "object" },
+        { "viewname": "bnd_logo_team3", "binding": "bnd_logo_team3", "type": "object" },
+        { "viewname": "bnd_logo_team4", "binding": "bnd_logo_team4", "type": "object" },
+        { "viewname": "bnd_logo_team5", "binding": "bnd_logo_team5", "type": "object" },
+        { "viewname": "bnd_logo_team6", "binding": "bnd_logo_team6", "type": "object" },
+        { "viewname": "bnd_logo_team7", "binding": "bnd_logo_team7", "type": "object" },
+        { "viewname": "bnd_logo_team8", "binding": "bnd_logo_team8", "type": "object" },
+        { "viewname": "bnd_logo_team9", "binding": "bnd_logo_team9", "type": "object" },
+        { "viewname": "bnd_logo_team10", "binding": "bnd_logo_team10", "type": "object" },
+        { "viewname": "bnd_logo_team11", "binding": "bnd_logo_team11", "type": "object" },
+        { "viewname": "bnd_logo_team12", "binding": "bnd_logo_team12", "type": "object" },
+        { "viewname": "bnd_logo_team13", "binding": "bnd_logo_team13", "type": "object" },
+        { "viewname": "bnd_logo_team14", "binding": "bnd_logo_team14", "type": "object" },
+        { "viewname": "bnd_logo_team15", "binding": "bnd_logo_team15", "type": "object" },
+        { "viewname": "bnd_logo_team16", "binding": "bnd_logo_team16", "type": "object" },
+        { "viewname": "bnd_logo_team17", "binding": "bnd_logo_team17", "type": "object" },
+        { "viewname": "bnd_logo_team18", "binding": "bnd_logo_team18", "type": "object" },
+        { "viewname": "bnd_logo_team19", "binding": "bnd_logo_team19", "type": "object" },
+        { "viewname": "bnd_logo_team20", "binding": "bnd_logo_team20", "type": "object" },
+        { "viewname": "bnd_logo_team21", "binding": "bnd_logo_team21", "type": "object" },
+        { "viewname": "bnd_logo_team22", "binding": "bnd_logo_team22", "type": "object" },
+        { "viewname": "bnd_logo_team23", "binding": "bnd_logo_team23", "type": "object" },
+        { "viewname": "bnd_logo_team24", "binding": "bnd_logo_team24", "type": "object" },
+        { "viewname": "bnd_logo_team25", "binding": "bnd_logo_team25", "type": "object" },
+        { "viewname": "bnd_logo_team26", "binding": "bnd_logo_team26", "type": "object" },
+        { "viewname": "bnd_logo_team27", "binding": "bnd_logo_team27", "type": "object" },
+        { "viewname": "bnd_logo_team28", "binding": "bnd_logo_team28", "type": "object" },
+        { "viewname": "bnd_logo_team29", "binding": "bnd_logo_team29", "type": "object" },
+        { "viewname": "bnd_logo_team30", "binding": "bnd_logo_team30", "type": "object" },
+        { "viewname": "bnd_logo_team31", "binding": "bnd_logo_team31", "type": "object" },
+        { "viewname": "bnd_logo_team32", "binding": "bnd_logo_team32", "type": "object" },
+        
+        { "viewname": "bnd_logo_team33", "binding": "bnd_logo_team33", "type": "object" },
+        { "viewname": "bnd_logo_team34", "binding": "bnd_logo_team34", "type": "object" },
+        { "viewname": "bnd_logo_team35", "binding": "bnd_logo_team35", "type": "object" },
+        { "viewname": "bnd_logo_team36", "binding": "bnd_logo_team36", "type": "object" },
+        { "viewname": "bnd_logo_team37", "binding": "bnd_logo_team37", "type": "object" },
+        { "viewname": "bnd_logo_team38", "binding": "bnd_logo_team38", "type": "object" },
+        { "viewname": "bnd_logo_team39", "binding": "bnd_logo_team39", "type": "object" },
+        { "viewname": "bnd_logo_team40", "binding": "bnd_logo_team40", "type": "object" },
+        { "viewname": "bnd_logo_team41", "binding": "bnd_logo_team41", "type": "object" },
+        { "viewname": "bnd_logo_team42", "binding": "bnd_logo_team42", "type": "object" },
+        { "viewname": "bnd_logo_team43", "binding": "bnd_logo_team43", "type": "object" },
+        { "viewname": "bnd_logo_team44", "binding": "bnd_logo_team44", "type": "object" },
+        { "viewname": "bnd_logo_team45", "binding": "bnd_logo_team45", "type": "object" },
+        { "viewname": "bnd_logo_team46", "binding": "bnd_logo_team46", "type": "object" },
+        { "viewname": "bnd_logo_team47", "binding": "bnd_logo_team47", "type": "object" },
+        { "viewname": "bnd_logo_team48", "binding": "bnd_logo_team48", "type": "object" },
+        
+        { "viewname": "bnd_name_team1", "binding": "bnd_name_team1", "type": "string" },
+        { "viewname": "bnd_name_team2", "binding": "bnd_name_team2", "type": "string" },
+        { "viewname": "bnd_name_team3", "binding": "bnd_name_team3", "type": "string" },
+        { "viewname": "bnd_name_team4", "binding": "bnd_name_team4", "type": "string" },
+        { "viewname": "bnd_name_team5", "binding": "bnd_name_team5", "type": "string" },
+        { "viewname": "bnd_name_team6", "binding": "bnd_name_team6", "type": "string" },
+        { "viewname": "bnd_name_team7", "binding": "bnd_name_team7", "type": "string" },
+        { "viewname": "bnd_name_team8", "binding": "bnd_name_team8", "type": "string" },
+        { "viewname": "bnd_name_team9", "binding": "bnd_name_team9", "type": "string" },
+        { "viewname": "bnd_name_team10", "binding": "bnd_name_team10", "type": "string" },
+        { "viewname": "bnd_name_team11", "binding": "bnd_name_team11", "type": "string" },
+        { "viewname": "bnd_name_team12", "binding": "bnd_name_team12", "type": "string" },
+        { "viewname": "bnd_name_team13", "binding": "bnd_name_team13", "type": "string" },
+        { "viewname": "bnd_name_team14", "binding": "bnd_name_team14", "type": "string" },
+        { "viewname": "bnd_name_team15", "binding": "bnd_name_team15", "type": "string" },
+        { "viewname": "bnd_name_team16", "binding": "bnd_name_team16", "type": "string" },
+        { "viewname": "bnd_name_team17", "binding": "bnd_name_team17", "type": "string" },
+        { "viewname": "bnd_name_team18", "binding": "bnd_name_team18", "type": "string" },
+        { "viewname": "bnd_name_team19", "binding": "bnd_name_team19", "type": "string" },
+        { "viewname": "bnd_name_team20", "binding": "bnd_name_team20", "type": "string" },
+        { "viewname": "bnd_name_team21", "binding": "bnd_name_team21", "type": "string" },
+        { "viewname": "bnd_name_team22", "binding": "bnd_name_team22", "type": "string" },
+        { "viewname": "bnd_name_team23", "binding": "bnd_name_team23", "type": "string" },
+        { "viewname": "bnd_name_team24", "binding": "bnd_name_team24", "type": "string" },
+        { "viewname": "bnd_name_team25", "binding": "bnd_name_team25", "type": "string" },
+        { "viewname": "bnd_name_team26", "binding": "bnd_name_team26", "type": "string" },
+        { "viewname": "bnd_name_team27", "binding": "bnd_name_team27", "type": "string" },
+        { "viewname": "bnd_name_team28", "binding": "bnd_name_team28", "type": "string" },
+        { "viewname": "bnd_name_team29", "binding": "bnd_name_team29", "type": "string" },
+        { "viewname": "bnd_name_team30", "binding": "bnd_name_team30", "type": "string" },
+        { "viewname": "bnd_name_team31", "binding": "bnd_name_team31", "type": "string" },
+        { "viewname": "bnd_name_team32", "binding": "bnd_name_team32", "type": "string" },
+        { "viewname": "bnd_name_team33", "binding": "bnd_name_team33", "type": "string" },
+        { "viewname": "bnd_name_team34", "binding": "bnd_name_team34", "type": "string" },
+        { "viewname": "bnd_name_team35", "binding": "bnd_name_team35", "type": "string" },
+        { "viewname": "bnd_name_team36", "binding": "bnd_name_team36", "type": "string" },
+        { "viewname": "bnd_name_team37", "binding": "bnd_name_team37", "type": "string" },
+        { "viewname": "bnd_name_team38", "binding": "bnd_name_team38", "type": "string" },
+        { "viewname": "bnd_name_team39", "binding": "bnd_name_team39", "type": "string" },
+        { "viewname": "bnd_name_team40", "binding": "bnd_name_team40", "type": "string" },
+        { "viewname": "bnd_name_team41", "binding": "bnd_name_team41", "type": "string" },
+        { "viewname": "bnd_name_team42", "binding": "bnd_name_team42", "type": "string" },
+        { "viewname": "bnd_name_team43", "binding": "bnd_name_team43", "type": "string" },
+        { "viewname": "bnd_name_team44", "binding": "bnd_name_team44", "type": "string" },
+        { "viewname": "bnd_name_team45", "binding": "bnd_name_team45", "type": "string" },
+        { "viewname": "bnd_name_team46", "binding": "bnd_name_team46", "type": "string" },
+        { "viewname": "bnd_name_team47", "binding": "bnd_name_team47", "type": "string" },
+        { "viewname": "bnd_name_team48", "binding": "bnd_name_team48", "type": "string" },
+        
+        { "viewname": "bnd_visible_team1", "binding": "bnd_visible_team1", "type": "bool" },
+        { "viewname": "bnd_visible_team2", "binding": "bnd_visible_team2", "type": "bool" },
+        { "viewname": "bnd_visible_team3", "binding": "bnd_visible_team3", "type": "bool" },
+        { "viewname": "bnd_visible_team4", "binding": "bnd_visible_team4", "type": "bool" },
+        { "viewname": "bnd_visible_team5", "binding": "bnd_visible_team5", "type": "bool" },
+        { "viewname": "bnd_visible_team6", "binding": "bnd_visible_team6", "type": "bool" },
+        { "viewname": "bnd_visible_team7", "binding": "bnd_visible_team7", "type": "bool" },
+        { "viewname": "bnd_visible_team8", "binding": "bnd_visible_team8", "type": "bool" },
+        { "viewname": "bnd_visible_team9", "binding": "bnd_visible_team9", "type": "bool" },
+        { "viewname": "bnd_visible_team10", "binding": "bnd_visible_team10", "type": "bool" },
+        { "viewname": "bnd_visible_team11", "binding": "bnd_visible_team11", "type": "bool" },
+        { "viewname": "bnd_visible_team12", "binding": "bnd_visible_team12", "type": "bool" },
+        { "viewname": "bnd_visible_team13", "binding": "bnd_visible_team13", "type": "bool" },
+        { "viewname": "bnd_visible_team14", "binding": "bnd_visible_team14", "type": "bool" },
+        { "viewname": "bnd_visible_team15", "binding": "bnd_visible_team15", "type": "bool" },
+        { "viewname": "bnd_visible_team16", "binding": "bnd_visible_team16", "type": "bool" },
+        { "viewname": "bnd_visible_team17", "binding": "bnd_visible_team17", "type": "bool" },
+        { "viewname": "bnd_visible_team18", "binding": "bnd_visible_team18", "type": "bool" },
+        { "viewname": "bnd_visible_team19", "binding": "bnd_visible_team19", "type": "bool" },
+        { "viewname": "bnd_visible_team20", "binding": "bnd_visible_team20", "type": "bool" },
+        { "viewname": "bnd_visible_team21", "binding": "bnd_visible_team21", "type": "bool" },
+        { "viewname": "bnd_visible_team22", "binding": "bnd_visible_team22", "type": "bool" },
+        { "viewname": "bnd_visible_team23", "binding": "bnd_visible_team23", "type": "bool" },
+        { "viewname": "bnd_visible_team24", "binding": "bnd_visible_team24", "type": "bool" },
+        { "viewname": "bnd_visible_team25", "binding": "bnd_visible_team25", "type": "bool" },
+        { "viewname": "bnd_visible_team26", "binding": "bnd_visible_team26", "type": "bool" },
+        { "viewname": "bnd_visible_team27", "binding": "bnd_visible_team27", "type": "bool" },
+        { "viewname": "bnd_visible_team28", "binding": "bnd_visible_team28", "type": "bool" },
+        { "viewname": "bnd_visible_team29", "binding": "bnd_visible_team29", "type": "bool" },
+        { "viewname": "bnd_visible_team30", "binding": "bnd_visible_team30", "type": "bool" },
+        { "viewname": "bnd_visible_team31", "binding": "bnd_visible_team31", "type": "bool" },
+        { "viewname": "bnd_visible_team32", "binding": "bnd_visible_team32", "type": "bool" },
+        { "viewname": "bnd_visible_team33", "binding": "bnd_visible_team33", "type": "bool" },
+        { "viewname": "bnd_visible_team34", "binding": "bnd_visible_team34", "type": "bool" },
+        { "viewname": "bnd_visible_team35", "binding": "bnd_visible_team35", "type": "bool" },
+        { "viewname": "bnd_visible_team36", "binding": "bnd_visible_team36", "type": "bool" },
+        { "viewname": "bnd_visible_team37", "binding": "bnd_visible_team37", "type": "bool" },
+        { "viewname": "bnd_visible_team38", "binding": "bnd_visible_team38", "type": "bool" },
+        { "viewname": "bnd_visible_team39", "binding": "bnd_visible_team39", "type": "bool" },
+        { "viewname": "bnd_visible_team40", "binding": "bnd_visible_team40", "type": "bool" },
+        { "viewname": "bnd_visible_team41", "binding": "bnd_visible_team41", "type": "bool" },
+        { "viewname": "bnd_visible_team42", "binding": "bnd_visible_team42", "type": "bool" },
+        { "viewname": "bnd_visible_team43", "binding": "bnd_visible_team43", "type": "bool" },
+        { "viewname": "bnd_visible_team44", "binding": "bnd_visible_team44", "type": "bool" },
+        { "viewname": "bnd_visible_team45", "binding": "bnd_visible_team45", "type": "bool" },
+        { "viewname": "bnd_visible_team46", "binding": "bnd_visible_team46", "type": "bool" },
+        { "viewname": "bnd_visible_team47", "binding": "bnd_visible_team47", "type": "bool" },
+        { "viewname": "bnd_visible_team48", "binding": "bnd_visible_team48", "type": "bool" },
+        {     
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team_kit_home",
+            "binding":  "bnd_team_kit_home",
+            "type":     "object"
+        },
+        {     
+            "viewname": "bnd_team_kit_away",
+            "binding":  "bnd_team_kit_away",
+            "type":     "object"
+        },
+        {
+			"binding": "bnd_team_rating",
+			"viewname": "bnd_team_rating",
+			"type": "object"
+		},
+        { 
+            "binding": "bnd_rating_star_team", 
+            "viewname": "bnd_rating_star_team", 
+            "type": "float" 
+        },
+        {
+            "viewname": "bnd_team_name",
+            "binding":  "bnd_team_name",
+            "type":     "string"      
+        },
+        {
+            "viewname": "bnd_tour_name",
+            "binding":  "bnd_tour_name",
+            "type":     "string"      
+        },
+        {
+            "viewname": "bnd_group_name",
+            "binding":  "bnd_group_name",
+            "type":     "string"      
+        },
+        {     
+            "viewname": "bnd_flag_team",
+            "binding":  "bnd_flag_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_rating_team",
+            "binding":  "bnd_rating_team",
+            "type":     "string"      
+        }
+    ]
+}

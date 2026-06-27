@@ -1,0 +1,40 @@
+{
+    "data":
+    [
+    
+        {
+            "viewname": "bnd_visible_komentator",
+            "binding": "bnd_visible_komentator",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_visible_wasit",
+            "binding": "bnd_visible_wasit",
+            "type": "bool"
+        },
+        
+        {
+            "viewname": "bnd_nationalization",
+            "binding": "bnd_nationalization",
+			"type": "int"
+        },
+
+		{
+            "viewname": "bnd_npc_info",
+            "binding": "bnd_npc_info",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "topText": "string",
+                    "middleText": "string",
+                    "bottomText": "string",
+                    "overlayTitle": "string",
+                    "leagueId": "int"
+                }
+            }
+        }
+        
+    ]
+}

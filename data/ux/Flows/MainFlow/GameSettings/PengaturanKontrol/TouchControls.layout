@@ -1,0 +1,76 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+        {
+            "commonName": "Stack",
+            "name": "PengaturanControlScheme",
+            "width": 252,
+            "x": 634.5,
+            "y": -132,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignH": "FILL",
+                    "textAlignH": "CENTER",
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_BLACK",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_control_scheme_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "alignH": "FILL",
+                    "marginTop": 10,
+                    "isCircular": true,
+                    "itemStyleName": "TEKS_DI_CONTROL_SCHEME",
+                    "itemType": "Label",
+                    "maskContent": true,
+					"hasArrows": true,
+					"arrowType" : "blue_medium",
+                    "toggleAction":
+                    {
+                        "action": "act_change_control_scheme_option",
+                        "binding": "bnd_control_scheme_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_control_scheme_options",
+                            "property": "dataProviders"
+                        },
+						{
+							"binding": "bnd_enable_control_scheme",
+							"property": "active"
+						}
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "PengaturanKontrol",
+            "rowWidth": 910,
+            "rowHeight": 55,
+            "displayRange": 6,
+            "useAlternating": true,
+            "row": "CustomizationRow",
+            "bindings":
+            [
+                {
+                    "property": "dataProviders",
+                    "binding": "bnd_touch_controls_list_data"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "dds":   ["SelectFormation.dd"],
+	"vms":	 [["lua", "SelectFormation.lua"]],
+    "views": [["gfx", { "layout": "SelectFormation.layout" }]]
+}

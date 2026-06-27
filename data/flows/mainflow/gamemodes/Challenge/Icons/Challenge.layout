@@ -1,0 +1,287 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_back",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_squad",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_restart",
+            "label": ""
+        }
+    ],
+    "children":
+    [ 
+        {
+			"commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 245,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_squad"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 305,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Squad"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 445,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_restart"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 505,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Reset"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "ModeInfo",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 75,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "CL"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Challenge"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 280.6,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xAAAAAA"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 310.6,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Matches"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UImenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "width": 1000,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 13,
+                    "alpha": 0.8,
+                    "color": "0x1B1B2A"
+                 },
+                 {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 10,
+                    "marginLeft": 0,
+                    "width": 950,
+                    "height": 450,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 4,
+                    "rowChangeAction": "act_advance",
+                    "highlightable": true,
+                    "row": "ChallengeRow",
+                    "rowHeight": 107.5,
+                    "rowWidth": 950,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+         },
+         {
+            "commonName": "GenericButton",
+            "alignV": "BOTTOM",
+            "alignH": "LEFT",
+            "marginBottom": -2,
+            "marginLeft": 45,
+            "height": 50,
+            "width": 100,
+            "label": "",
+            "icon": "",
+            "clickAction": "act_back"
+         },
+         {
+            "commonName": "GenericButton",
+            "alignV": "BOTTOM",
+            "alignH": "LEFT",
+            "marginBottom": -2,
+            "marginLeft": 300,
+            "height": 50,
+            "width": 100,
+            "label": "",
+            "icon": "",
+            "clickAction": "act_squad"
+         },
+         {
+            "commonName": "GenericButton",
+            "alignV": "BOTTOM",
+            "alignH": "LEFT",
+            "marginBottom": -2,
+            "marginLeft": 500,
+            "height": 50,
+            "width": 100,
+            "label": "",
+            "icon": "",
+            "clickAction": "act_restart"                
+            }
+        ]
+     }
+  ]
+}

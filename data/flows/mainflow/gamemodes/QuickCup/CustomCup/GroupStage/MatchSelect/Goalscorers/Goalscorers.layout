@@ -1,0 +1,268 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [    
+        {  
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_bg_tour",
+                    "property": "image"
+                }
+			]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 93,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "T"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Office"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 247,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xA8A8A8",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 278,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Top Scorers"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "width": 900,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "alpha": 1,
+                    "cornerRaduis": 20,
+                    "bindings":
+                    [
+			            {
+				            "binding": "bnd_color_tourid",
+					    	"property": "fillColor"
+						}
+					]
+				},
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "height": 54,
+                    "alpha": 0.5,
+                    "type": "$_RectangleTop"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "CupLogo",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 7,
+                    "marginLeft": 27,
+                    "width": 45,
+                    "height": 45,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 18,
+                    "marginLeft": 85,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "forceCaps": false,
+                    "alpha": 1,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tour_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 94,
+                    "height": 1,
+                    "color": "0xFFFFFF",
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 65,
+                    "marginLeft": 0,
+                    "width": 900,
+                    "fontSize": 19,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "          Pos                   Player                                                                                           Team                                                                  Goals            "
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "TableMatch",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "VerticalList",
+                            "name": "matchlist",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 99,
+                            "marginLeft": 0,
+                            "displayRange": 5,
+                            "highlightable": true,
+                            "row": "StatsRow",
+                            "rowHeight": 70,
+                            "rowWidth": 910,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,208 @@
+{
+    "actions": [
+        {
+            "viewname": "act_hide",
+            "actionname": "act_hide"
+        },
+        {
+            "viewname": "act_show_rename_popup",
+            "actionname": "act_show_rename_popup"
+        },
+        {
+            "viewname": "act_text_change",
+            "actionname": "act_text_change"
+        },
+        {
+            "viewname": "act_confirm_setup",
+			"actionname": "act_confirm_setup"
+        },
+        {
+            "viewname": "act_back",
+            "impl": {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_btn_click",
+            "actionname": "act_btn_click"
+        },
+        {
+            "viewname": "act_next_tournament_type",
+            "actionname": "act_next_tournament_type"
+        },
+        {
+            "viewname": "act_prev_tournament_type",
+            "actionname": "act_prev_tournament_type"
+        },
+        {
+            "viewname": "act_next_team_count",
+            "actionname": "act_next_team_count"
+        },
+        {
+            "viewname": "act_prev_team_count",
+            "actionname": "act_prev_team_count"
+        },
+        {
+            "viewname": "act_next_auto_fill",
+            "actionname": "act_next_auto_fill"
+        },
+        {
+            "viewname": "act_prev_auto_fill",
+            "actionname": "act_prev_auto_fill"
+        },
+        {
+            "viewname": "act_next_tour_id",
+            "actionname": "act_next_tour_id"
+        },
+        {
+            "viewname": "act_prev_tour_id",
+            "actionname": "act_prev_tour_id"
+        },
+        {
+            "viewname": "act_next_team_gender",
+            "actionname": "act_next_team_gender"
+        },
+        {
+            "viewname": "act_prev_team_gender",
+            "actionname": "act_prev_team_gender"
+        }
+    ],
+    "data": [
+        {
+            "binding": "bnd_tournament_type_toggle",
+            "viewname": "bnd_tournament_type_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+        {
+            "binding": "bnd_number_of_teams_toggle",
+            "viewname": "bnd_number_of_teams_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+        {
+            "binding": "bnd_auto_fills_toggle",
+            "viewname": "bnd_auto_fills_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+        {
+            "binding": "bnd_tour_id_toggle",
+            "viewname": "bnd_tour_id_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+        {
+            "binding": "bnd_team_type_toggle",
+            "viewname": "bnd_team_type_toggle",
+            "type": {
+                "metaType": "object",
+                "members": { "data": "array", "index": "int" }
+            }
+        },
+        {
+            "binding": "bnd_setting_changed",
+            "viewname": "bnd_setting_changed",
+            "type": "object",
+            "actions": [
+                {
+                    "viewname": "act_change_setting",
+                    "actionname": "act_change_setting"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_title",
+            "type": "string",
+            "impl": {
+                "type": "ltxt",
+                "tag": "LTXT_CREATE_TOURNAMENT" 
+            }
+        },
+        {
+            "viewname": "bnd_description",
+            "binding": "bnd_description",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_tournament_name",
+            "binding": "bnd_tournament_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_tournament_crest",
+            "binding":  "bnd_tournament_crest",
+            "type":     "object"
+        },
+		{
+			"viewname": "bnd_prev_tournament_crest",
+			"binding":  "bnd_prev_tournament_crest",
+			"type":     "object"
+		},
+		{
+			"viewname": "bnd_next_tournament_crest",
+			"binding":  "bnd_next_tournament_crest",
+			"type":     "object"
+		},
+        {
+            "viewname": "bnd_tournament_type_text",
+            "binding":  "bnd_tournament_type_text",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_count_text",
+            "binding":  "bnd_team_count_text",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_auto_fill_text",
+            "binding":  "bnd_auto_fill_text",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_tour_id_text",
+            "binding":  "bnd_tour_id_text",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_type_text",
+            "binding":  "bnd_team_type_text",
+            "type":     "string"
+        },
+		
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        }
+    ]
+}

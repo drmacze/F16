@@ -1,0 +1,145 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": 45,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "User Info",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+             "textStyles":
+            [
+               "TF_BUTTON_PLAYMODEON"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "marginLeft": -190,
+            "height": 300,
+            "width": 550,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 6,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "User Name:"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 6,
+                    "marginLeft": 0,
+                    "forceCaps": true,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "Player 01"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 68,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "ID"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 68,
+                    "marginLeft": 0,
+                    "forceCaps": true,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "010203"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 128,
+                    "marginLeft": 0,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Game Version:"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 128,
+                    "marginLeft": 0,
+                    "forceCaps": true,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "3.0"
+                }
+              ]
+           }
+        ]
+     }
+  ]
+}

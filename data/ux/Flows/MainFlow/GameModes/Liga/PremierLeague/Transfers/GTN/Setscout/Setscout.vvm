@@ -1,0 +1,5 @@
+{
+	"dds": ["Setscout.dd"],
+    "vms": [["lua", "Setscout.lua"]],
+    "views": [["gfx", {"layout": "Setscout.layout"}]]
+}

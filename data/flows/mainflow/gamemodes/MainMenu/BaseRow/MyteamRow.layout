@@ -1,0 +1,259 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_BOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_BOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.PlayerHead": "RowPanel.RowLeftPanel.PlayerHead.image",
+        "dataProviders.Player1Team": "RowPanel.RowLeftPanel.Player1Team.image",
+        "dataProviders.Home2TeamCrest": "RowPanel.RowLeftPanel.Home2TeamCrest.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.PlayerTeam": "RowPanel.RowLeftPanel.PlayerTeam.text",
+        "dataProviders.TransferTeam": "RowPanel.RowLeftPanel.TransferTeam.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.Rating.text",
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 740,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width":1965,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -2,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 1,
+                            "fontFace": "$FONT_BOLD",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "PlayerHead",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 5,
+                            "marginLeft": 30,
+                            "width": 60,
+                            "height": 60
+                        },
+                        
+                        {
+                            "commonName": "Image",
+                            "name": "Home2TeamCrest",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 5,
+                            "marginRight": -125,
+                            "width": 60,
+                            "height": 60
+                        },
+                        
+                        {
+
+                            "commonName": "Image",
+
+                            "name": "Player1Team",
+
+                            "alignV": "BOTTOM",
+
+                            "alignH": "CENTER",
+
+                            "marginBottom": 5,
+
+                            "marginLeft": 740,
+
+                            "width": 60,
+
+                            "height": 60
+
+                        },
+                        
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerName",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 160,
+                            "marginBottom": 0,
+                            "fontSize": 27,
+                            "fontColor": "0x556B2F",
+                            "fontFace": "$FONT_BOLD"
+                        },
+                        
+                        {
+
+                            "commonName": "Label",
+
+                            "name":"Position",
+
+                            "alignV": "CENTER",
+
+                            "alignH": "CENTER",
+
+                            "marginLeft": 330,
+
+                            "marginBottom": 0,
+
+                            "fontSize": 27,
+
+                            "fontColor": "0x556B2F",
+
+                            "fontFace": "$FONT_BOLD"
+
+                        },
+                        
+                        {
+
+                            "commonName": "Label",
+
+                            "name":"Rating",
+
+                            "alignV": "CENTER",
+
+                            "alignH": "CENTER",
+
+                            "marginLeft": 450,
+
+                            "marginBottom": 0,
+
+                            "fontSize": 27,
+
+                            "fontColor": "0x556B2F",
+
+                            "fontFace": "$FONT_BOLD"
+
+                        },
+                        
+                        {
+
+                            "commonName": "Label",
+
+                            "name":"PlayerTeam",
+
+                            "alignV": "CENTER",
+
+                            "alignH": "CENTER",
+
+                            "marginLeft": 610,
+
+                            "marginBottom": 0,
+
+                            "fontSize": 27,
+
+                            "fontColor": "0x556B2F",
+
+                            "fontFace": "$FONT_BOLD"
+
+                        },
+                        
+                        {
+
+                            "commonName": "Label",
+
+                            "name":"TransferTeam",
+
+                            "alignV": "CENTER",
+
+                            "alignH": "CENTER",
+
+                            "marginLeft": 880,
+
+                            "marginBottom": 0,
+
+                            "fontSize": 27,
+
+                            "fontColor": "0x556B2F",
+
+                            "fontFace": "$FONT_BOLD"
+
+                        }
+                        
+                    ]
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "marginRight": 0,
+                    "width": 170,
+                    "height": 150,
+                    "children":
+                    [
+                        
+                        {
+                            "commonName": "Image",
+                            "name":"StartGameIcon",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 12,
+                            "marginLeft": 50,
+                            "width": 35,
+                            "height": 35
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}
+
+

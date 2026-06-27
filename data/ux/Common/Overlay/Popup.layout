@@ -1,0 +1,56 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Popup",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_NOTIFIKASI"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_NOTIFIKASI"
+                }
+            ]
+        }
+    ],
+    "bindings":
+    [
+        {
+            "property": "footer",
+            "binding": "bnd_popup_buttons",
+            "required": true
+        },
+        {
+            "property": "message",
+            "binding": "bnd_popup_message"
+        },
+        {
+            "property": "escapeAction",
+            "binding": "bnd_escape_action"
+        },
+        {
+            "property": "autoEscape",
+            "binding": "bnd_auto_escape"
+        },
+        {
+            "property": "labelXoffset",
+            "binding": "bnd_label_x_offset"
+        },
+		{
+			"property": "popupLoaderVisible",
+			"binding":	"bnd_popup_loader_visible"
+		}
+    ]
+}

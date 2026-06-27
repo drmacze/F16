@@ -1,0 +1,80 @@
+{
+    "name": "MatchFacts",
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["/flows/ingameflow/postmatch/matchfacts/MatchFacts.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type" }]],
+        ["viewLayer", ["Gamemodes"]],
+        ["set", ["redirect", ".redirect"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "transitions":
+            [
+                {
+                    "event": "evt_exit",
+                    "targets": ["Exit"]
+                }
+            ],
+            "states":
+            [
+                {
+                    "name": "Facts",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["MatchFactsTabView"]],
+                        ["blockingLoadVVM", ["/flows/ingameflow/postmatch/matchfacts/facts/Facts.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_events",
+                            "targets": ["Events"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Events",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["MatchFactsTabView"]],
+                        ["blockingLoadVVM",  ["/flows/ingameflow/postmatch/matchfacts/events/Events.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_facts",
+                            "targets": ["Facts"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Exit",
+            "onEnter":
+            [
+                ["invoke", [".redirect"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "menu",
+                    "targets": ["out_menu"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,220 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 34,
+                    "marginLeft": 217,
+                    "height": 70,
+                    "width": 170,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 55,
+                    "marginLeft": 265,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "text": "Camera"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -13,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 107,
+                    "marginLeft": 90,
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": "Customise Camera"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "You can make camera settings now"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 173,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "Set the camera according to your comfort when playing,"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 195,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "you can also set it manually for zoom and hight"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 235,
+                    "marginLeft": 90,
+                    "width": 480,
+                    "height": 250,
+                    "type": "$ImgCamera"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginTop": 20,
+            "marginLeft": 115,
+            "width": 520,
+            "height": 380,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "marginTop": 55,
+                    "marginLeft": 0,
+                    "text":"Camera Zoom",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "HSlider",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "marginTop": 70,
+                    "marginRight": 0,
+                    "x": 0,
+                    "y": 0,
+                    "changeAction": "act_change_camera_zoom",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_camera_zoom_value",
+                            "property": "value"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "marginTop": 115,
+                    "marginLeft": 0,
+                    "text":"Camera Height",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "HSlider",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "marginTop": 130,
+                    "marginRight": 0,
+                    "x": 0,
+                    "y": 0,
+                    "changeAction": "act_change_camera_height",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_camera_height_value",
+                            "property": "value"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "VerticalList",
+                    "name": "PengaturanMatch",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": -190,
+                    "marginLeft": 85,
+                    "rowWidth": 610,
+                    "rowHeight": 60,
+                    "displayRange": 7,
+                    "useAlternating": false,
+                    "row": "CustomizationRow",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_settings_list_data",
+                            "property": "dataProviders"
+                        }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

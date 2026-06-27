@@ -1,0 +1,83 @@
+{
+    "actions":
+    [
+        {
+            "viewname":   "act_swap_players",
+            "actionname": "act_swap_players"
+        },
+        {
+            "viewname":   "act_compare_players",
+            "actionname": "act_compare_players"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_home_chemistry_matrix",
+            "binding":  "bnd_home_chemistry_matrix",
+            "type":     "object",
+            "deps":     ["bnd_home_formation"]
+        },
+        {
+            "viewname": "bnd_home_starting_11",
+            "binding":  "bnd_home_starting_11",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_subs_and_res",
+            "binding":  "bnd_home_subs_and_res",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding":  "bnd_home_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding":  "bnd_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_rating",
+            "binding":  "bnd_home_team_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_home_team_rating_label",
+            "binding":  "bnd_home_team_rating_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_overall",
+            "binding":  "bnd_home_team_overall",
+            "type":     "int"
+        },
+                {
+            "viewname": "bnd_home_player_comparison_data",
+            "binding":  "bnd_home_player_comparison_data",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_man",
+            "binding":  "bnd_home_team_man",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_manager",
+            "binding":  "bnd_home_manager",
+            "type":     "object",
+            "deps":     ["bnd_home_formation_index"]
+        },
+        {
+            "viewname": "bnd_home_manager_item_visibility",
+            "binding":  "bnd_home_manager_item_visibility",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_context_menu_visible",
+            "binding":  "bnd_home_context_menu_visible",
+            "type":     "bool"
+        }
+    ]
+}

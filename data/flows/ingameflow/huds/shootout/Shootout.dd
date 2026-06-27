@@ -1,0 +1,49 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_active",
+            "binding":  "bnd_active",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_score",
+            "binding":  "bnd_score",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team",
+            "binding":  "bnd_home_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team",
+            "binding":  "bnd_away_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_title",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_PENALTIES"
+            }
+        },
+        {
+            "viewname": "bnd_side",
+            "binding":  "bnd_side",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_home_history",
+            "binding":  "bnd_home_history",
+            "type":     "int_array"
+        },
+        {
+            "viewname": "bnd_away_history",
+            "binding":  "bnd_away_history",
+            "type":     "int_array"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "dds":   ["SquadAway.dd", "TeamManagementModelAway.dd", "formation/FormationModelReal.dd"],
+    "vms":   [["lua", "SquadAway.lua"]],
+    "views": [["gfx", {"layout": "SquadAway.layout"}]]
+}
+

@@ -1,0 +1,11 @@
+{
+    "dds": [
+        "Performa.dd"
+    ],
+    "vms": [
+        ["lua", "Performa.lua"]
+    ],
+    "views": [
+        ["gfx", {"layout": "Performance.layout"}]
+    ]
+}

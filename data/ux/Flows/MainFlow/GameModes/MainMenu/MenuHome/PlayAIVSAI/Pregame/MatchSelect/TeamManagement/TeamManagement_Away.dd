@@ -1,0 +1,79 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_advance"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_formation_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_FORMATION_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_comparison_type",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_PLR_COMPARISON"
+            }
+        },
+        {
+            "viewname": "bnd_panel_title",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_PANEL_TITLE"
+            }
+        },
+        {
+            "viewname": "bnd_team_rating_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_TEAM_RATING_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_team_chemistry_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_TEAM_CHEMISTRY_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_player_view_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SQD_PLAYER_VIEW_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_accept_button",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_CMN_DONE"
+            }
+        }
+    ]
+}

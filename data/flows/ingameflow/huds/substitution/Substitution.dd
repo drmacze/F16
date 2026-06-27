@@ -1,0 +1,174 @@
+{
+    "actions":
+    [
+    ],
+    "data":
+    [
+        {
+            "viewname":"bnd_nationalization",
+            "binding":"bnd_nationalization",
+			"type":"int"
+        },
+		{
+            "viewname":"bnd_visible",
+            "binding":"bnd_visible",
+			"type":"bool"
+        },
+		{
+            "viewname": "bnd_subs_info",
+            "binding":  "bnd_subs_info",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+					"NumberofSubs": "int",
+					"SubIn1Text": "string",
+					"SubIn1NumText": "string",
+					"SubIn2Text": "string",
+					"SubIn2NumText": "string",
+					"SubIn3Text": "string",
+					"SubIn3NumText": "string",
+					"SubOut1Text": "string",
+					"SubOut1NumText": "string",
+					"SubOut2Text": "string",
+					"SubOut2NumText": "string",
+					"SubOut3Text": "string",
+					"SubOut3NumText": "string",
+					"overlayTitle": "string",
+					"TeamId": "int"
+                }
+            }
+        },
+        {
+            "viewname":"bnd_sub_crest",
+            "binding":"bnd_sub_crest",
+            "type":"object"
+        },
+        {
+            "viewname": "bnd_bg_crest_color",
+            "binding":  "bnd_bg_crest_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg_textsub_color",
+            "binding":  "bnd_bg_textsub_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_textsub_fontColor",
+            "binding":  "bnd_textsub_fontColor",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg_playersub_color",
+            "binding":  "bnd_bg_playersub_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_sub_num_fontColor",
+            "binding":  "bnd_sub_num_fontColor",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_sub_text_fontColor",
+            "binding":  "bnd_sub_text_fontColor",
+            "type":     "string"
+        },
+        
+        {
+            "viewname":"bnd_subin1_visible",
+            "binding":"bnd_subin1_visible",
+			"type":"bool"
+        },
+        {
+            "viewname":"bnd_subin2_visible",
+            "binding":"bnd_subin2_visible",
+			"type":"bool"
+        },
+        {
+            "viewname":"bnd_subin3_visible",
+            "binding":"bnd_subin3_visible",
+			"type":"bool"
+        },
+
+        {
+            "viewname":"bnd_subin_num1",
+            "binding":"bnd_subin_num1",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subin_text1",
+            "binding":"bnd_subin_text1",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subin_num2",
+            "binding":"bnd_subin_num2",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subin_text2",
+            "binding":"bnd_subin_text2",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subin_num3",
+            "binding":"bnd_subin_num3",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subin_text3",
+            "binding":"bnd_subin_text3",
+			"type":"string"
+        },
+
+        {
+            "viewname":"bnd_subout1_visible",
+            "binding":"bnd_subout1_visible",
+			"type":"bool"
+        },
+        {
+            "viewname":"bnd_subout2_visible",
+            "binding":"bnd_subout2_visible",
+			"type":"bool"
+        },
+        {
+            "viewname":"bnd_subout3_visible",
+            "binding":"bnd_subout3_visible",
+			"type":"bool"
+        },
+
+        {
+            "viewname":"bnd_subout_num1",
+            "binding":"bnd_subout_num1",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subout_text1",
+            "binding":"bnd_subout_text1",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subout_num2",
+            "binding":"bnd_subout_num2",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subout_text2",
+            "binding":"bnd_subout_text2",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subout_num3",
+            "binding":"bnd_subout_num3",
+			"type":"string"
+        },
+        {
+            "viewname":"bnd_subout_text3",
+            "binding":"bnd_subout_text3",
+			"type":"string"
+        }
+
+    ]
+}

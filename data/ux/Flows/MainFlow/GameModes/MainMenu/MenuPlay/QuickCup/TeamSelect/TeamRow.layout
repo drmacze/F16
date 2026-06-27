@@ -1,0 +1,60 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "TeamRowRoot",
+    "mouseInteractive": true,
+    "propertyMap":
+    {
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.TeamRating.stars",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "width": 700,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 595,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "TeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 12,
+                            "width": 75,
+                            "height": 75
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "TeamName",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 22,
+                            "marginLeft": 100,
+                            "fontSize": 27,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "StarRating",
+                            "name": "TeamRating",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 43,
+                            "marginLeft": 103
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

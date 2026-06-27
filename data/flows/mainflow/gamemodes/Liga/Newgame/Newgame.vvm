@@ -1,0 +1,5 @@
+{
+	"dds": ["Newgame.dd"],
+    "vms": [["lua", "Newgame.lua"]],
+    "views": [["gfx", {"layout": "Newgame.layout"}]]
+}

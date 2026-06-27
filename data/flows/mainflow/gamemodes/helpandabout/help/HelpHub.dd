@@ -1,0 +1,84 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+            "viewname": "act_to_general_help_hub",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_general_help_hub"
+            }
+        },
+		{
+            "viewname": "act_to_controls_help_hub",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_controls_help_hub"
+            }
+        },
+		{
+            "viewname": "act_to_simulation_help_hub",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_simulation_help_hub"
+            }
+        },
+		{
+            "viewname": "act_to_customer_experience",
+            "actionname": "act_to_customer_experience"
+        }
+		
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_general_help",
+            "binding":  "bnd_general_help",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_controls_help",
+            "binding":  "bnd_controls_help",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_simulation_help",
+            "binding":  "bnd_simulation_help",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_online_manuals_help",
+            "binding":  "bnd_online_manuals_help",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_customer_experience_help",
+            "binding":  "bnd_customer_experience_help",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_back_visibility",
+            "binding":  "bnd_back_visibility",
+            "type":     "bool"
+        },
+		{
+            "viewname": "bnd_ltxt_back",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_BACK"
+            }
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "actions":
+    [
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_active",
+            "binding":  "bnd_active",
+			"type":     "bool"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+			"type":     "object"
+        },
+		{
+            "viewname": "bnd_player_lineup",
+            "binding":  "bnd_player_lineup",
+			"type":     "object"
+        }
+    ]
+}

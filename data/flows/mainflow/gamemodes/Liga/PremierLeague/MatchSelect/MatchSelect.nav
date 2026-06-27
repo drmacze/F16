@@ -1,0 +1,728 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["MenuMatchSelect"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        },
+                        {
+                            "event": "evt_tab5",
+                            "targets": ["RedirectTab5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab2sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab2sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab2sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab2sub2",
+                                            "targets": ["RedirectTab2sub2"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab2sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab2sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab2sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab2sub1",
+                                            "targets": ["RedirectTab2sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        },
+                        {
+                            "event": "evt_tab5",
+                            "targets": ["RedirectTab5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab3",
+                    "states":
+                    [
+                        {
+                            "name": "Tab3",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab3.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab3sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab3sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub2",
+                                            "targets": ["RedirectTab3sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab3sub3",
+                                            "targets": ["RedirectTab3sub3"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab3sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab3sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub1",
+                                            "targets": ["RedirectTab3sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab3sub3",
+                                            "targets": ["RedirectTab3sub3"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab3sub3",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub3",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab3sub3.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub1",
+                                            "targets": ["RedirectTab3sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab3sub2",
+                                            "targets": ["RedirectTab3sub2"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        },
+                        {
+                            "event": "evt_tab5",
+                            "targets": ["RedirectTab5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab4",
+                    "states":
+                    [
+                        {
+                            "name": "Tab4",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab4.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab4sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab4sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub2",
+                                            "targets": ["RedirectTab4sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab4sub3",
+                                            "targets": ["RedirectTab4sub3"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab4sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub1",
+                                            "targets": ["RedirectTab4sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab4sub3",
+                                            "targets": ["RedirectTab4sub3"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4sub3",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub3",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab4sub3.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub1",
+                                            "targets": ["RedirectTab4sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab4sub2",
+                                            "targets": ["RedirectTab4sub2"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab5",
+                            "targets": ["RedirectTab5"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab5",
+                    "states":
+                    [
+                        {
+                            "name": "Tab5",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab5.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab5sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab5sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab5sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab5sub2",
+                                            "targets": ["RedirectTab5sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab5sub3",
+                                            "targets": ["RedirectTab5sub3"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab5sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab5sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab5sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab5sub1",
+                                            "targets": ["RedirectTab5sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab5sub3",
+                                            "targets": ["RedirectTab5sub3"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab5sub3",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab5sub3",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/flows/mainflow/gamemodes/Liga/PremierLeague/MatchSelect/TabActive/Tab5sub3.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab5sub2",
+                                            "targets": ["RedirectTab5sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab5sub1",
+                                            "targets": ["RedirectTab5sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                },
+                {
+                    "event": "evt_sheet",
+                    "targets": ["Sheets"]
+                },
+                {
+                    "event": "evt_table",
+                    "targets": ["Table"]
+                },
+                {
+                    "event": "evt_goalscorer",
+                    "targets": ["GoalScorers"]
+                },
+                {
+                    "event": "evt_searching",
+                    "targets": ["Searching"]
+                },
+                {
+                    "event": "evt_remove",
+                    "targets": ["Remove"]
+                },
+                {
+                    "event": "evt_progress",
+                    "targets": ["Progress"]
+                },
+                {
+                    "event": "evt_fixtures",
+                    "targets": ["Fixtures"]
+                },
+                {
+                    "event": "evt_savegame",
+                    "targets": ["Save"]
+                },
+                {
+                    "event": "evt_hub",
+                    "targets": ["Hub"]
+                },
+                {
+                    "event": "evt_calendar",
+                    "targets": ["Calendar"]
+                },
+                {
+                    "event": "evt_teamhub",
+                    "targets": ["Teamhub"]
+                },
+                {
+                    "event": "evt_gtn",
+                    "targets": ["GTN"]
+                } 
+            ]
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/MatchSelect/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Restart/Restart.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+            }
+        },
+        {
+            "name": "Sheets",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Squad/Sheets.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2sub1",
+                "out_exit_gamemode1": "RedirectTab2sub1"
+            }
+        },
+        {
+            "name": "Teamhub",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Squad/Hub/TeamRoster.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2sub2",
+                "out_exit_gamemode1": "RedirectTab2sub2"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2",
+                "out_exit_gamemode1": "RedirectTab2"
+            }
+        },
+        {
+            "name": "Table",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/MatchSelect/Standings/Standings.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",            
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "GTN",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/GTN/GTN.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3sub2",            
+                "out_exit_gamemode1": "RedirectTab3sub2"
+            }
+        },
+        {
+            "name": "GoalScorers",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Goalscorers/Goalscorers.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab4sub1",
+                "out_exit_gamemode1": "RedirectTab4sub1"
+            }
+        },
+        {
+            "name": "Searching",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Searching/Searching.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3sub1",
+                "out_exit_gamemode1": "RedirectTab3sub1"
+            }
+        },
+        {
+            "name": "Hub",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Transferhub/Hub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3sub3",
+                "out_exit_gamemode1": "RedirectTab3sub3"
+            }
+        },
+        {
+            "name": "Remove",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Remover/Remover.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3sub2",
+                "out_exit_gamemode1": "RedirectTab3sub2"
+            }
+        },
+        {
+            "name": "Progress",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/MatchSelect/Progress/Progress.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",            
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },
+        {
+            "name": "Fixtures",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Fixtures/Fixtures.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab4sub2",
+                "out_exit_gamemode1": "RedirectTab4sub2"
+            }
+        },
+        {
+            "name": "Calendar",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Office/Calendar/Calendar.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab4sub3",
+                "out_exit_gamemode1": "RedirectTab4sub3"
+            }
+        },
+        {
+            "name": "Save",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/Customize/Save/SaveHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab5sub3",
+                "out_exit_gamemode1": "RedirectTab5sub3"
+            }
+        }
+    ]
+}

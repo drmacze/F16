@@ -1,0 +1,328 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.2,
+            "type": "$"
+        },        
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                 {
+                        "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -285,
+                            "marginLeft": 17,
+                            "width": 65,
+                            "height": 65,
+                            "type": "$Icon_Cm"
+                            },
+		                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -580,
+                    "fontFace": "$CruyffSans-Regular",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Office"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -525,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "|"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -422,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 1,
+                    "text": "Match Fixtures"
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -5,
+                    "marginLeft": -395,
+                    "fontFace": "$DINPro",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                 },
+                 {
+                 "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -16,
+                    "marginLeft": -370,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_FIFA_MOD_WHITE",
+                    "alpha": 0.7,
+                    "text": ""
+                    },           
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -176,
+            "marginLeft": -540,
+            "width": 270,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 5,
+                    "color": "$COLOR_WHITE",
+                    "alpha": 0
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -50,
+            "marginLeft": -540,
+            "width": 270,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 5,
+                    "color": "$COLOR_WHITE",
+                    "alpha": 0
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 25,
+            "marginLeft": 160,
+            "width": 1100,
+            "height": 600,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -15,
+            "marginLeft": -100,
+            "width": 950,
+            "height": 480,
+                    "cornerRaduis": 10,
+                    "color": "$COLOR_BLACK",
+                    "alpha": 0.7
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginLeft": -98,                  
+                    "marginTop": 95,
+                    "width": 930,
+                    "height": 1,
+                    "color": "$COLOR_WHITE",
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 106,
+                    "marginLeft": -680,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchday_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignH": "CENTER",
+                    "alignV": "TOP",
+                    "marginTop": 55,
+                    "marginLeft": -100,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_label",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 0,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 6,
+                    "highlightable": true,
+                    "row": "FixturesRow",
+                    "rowHeight": 70.0,
+                    "rowWidth": 925,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "TOP",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 450,
+                    "marginLeft": 200,
+                    "scaleX": 1.6,
+                    "scaleY": 1.0,
+                    "icon": "$IconArrowRight",
+                    "clickAction": "act_next"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 450,
+                    "marginLeft": -35,
+                    "scaleX": 1.6,
+                    "scaleY": 1.0,
+                    "icon": "$IconArrowLeft",
+                    "clickAction": "act_decrease"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "TOP",
+                    "marginTop": 70,
+                    "marginLeft": 330,
+                    "scaleX": 0.1,
+                    "scaleY": 0.1,
+                    "icon": "$ArrowRight",
+                    "clickAction": "act_nextteam"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "TOP",
+                    "marginTop": 70,
+                    "marginLeft": -530,
+                    "scaleX": 0.1,
+                    "scaleY": 0.1,
+                    "icon": "$ArrowLeft",
+                    "clickAction": "act_previousteam"
+                }
+            ]
+        }             
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

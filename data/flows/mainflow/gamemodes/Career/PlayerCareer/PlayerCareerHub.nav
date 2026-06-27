@@ -1,0 +1,55 @@
+{
+    "name": "PlayerCareerHub",
+    "initial":
+    {
+        "targets": ["RedirectPlayerCareerHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectPlayerCareerHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["PlayerCareerHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_male",
+                    "targets": ["Male"]
+                },
+                {
+                    "event": "evt_female",
+                    "targets": ["Female"]
+                }
+            ]
+        },
+
+        {
+            "name": "Male",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/Male.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayerCareerHub"
+            }
+        },
+        {
+            "name": "Female",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Female/Female.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayerCareerHub"
+            }
+        }      
+    ]
+}

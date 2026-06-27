@@ -1,0 +1,54 @@
+{
+    "name": "MainFlow",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["MainFlow.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+    
+        {
+            "name": "Main",
+            "type": "parallel",
+            "states":
+            [
+				{
+					"states":
+					[
+						{
+							"name": "MainMenu",
+							"type": "external",
+							"file": "/Flows/MainFlow/GameModes/MainMenu/MainMenu.nav"
+						},
+						{
+							"name": "MetricsMode",
+							"type": "external",
+							"file": "/flows/metricsflow/metricsflow.nav",
+							"outputs":
+							{
+								"out_next_flow": "MainMenu"
+							}
+						}
+					]
+				},
+                {
+                    "name": "Widgets",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/Widgets/Widgets.nav"
+                }
+            ]
+        },
+     
+		{
+			"name": "SpeechDownloadPopup",
+            "type": "external",
+            "file": "/Flows/MainFlow/SpeechDownload/SpeechDownload.nav"
+		}
+       
+    ]
+}

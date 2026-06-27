@@ -1,0 +1,35 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_awayformation_popup",
+            "actionname": "act_awayformation_popup"
+        }
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_awayformation_index",
+            "binding":  "bnd_awayformation_index",
+            "type":     "int",
+            "actions":
+            [
+                {
+                    "viewname":   "act_awaychange",
+                    "actionname": "act_awaychange"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_awayformation_list",
+            "binding":  "bnd_awayformation_list",
+            "type":     "dataList"
+        },
+        {
+            "viewname": "bnd_awayformation",
+            "binding":  "bnd_awayformation",
+            "type":     "object",
+            "deps":     ["bnd_awayformation_index"]
+        }
+    ]
+}

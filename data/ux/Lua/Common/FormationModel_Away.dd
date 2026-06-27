@@ -1,0 +1,35 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_formation_popup",
+            "actionname": "act_formation_popup"
+        }
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_formation_index",
+            "binding": "bnd_formation_index",
+            "type": "int",
+            "actions":
+            [
+                {
+                    "viewname": "act_change",
+                    "actionname": "act_change"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_formation_list",
+            "binding": "bnd_formation_list",
+            "type": "dataList"
+        },
+        {
+            "viewname": "bnd_formation",
+            "binding": "bnd_formation",
+            "type": "object",
+            "deps": ["bnd_formation_index"]
+        }
+    ]
+}

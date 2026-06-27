@@ -1,0 +1,107 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "PlayerRowRoot",
+    "mouseInteractive": true,
+    "propertyMap":
+    {
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+        "dataProviders.PlayerAvatar": "RowPanel.RowLeftPanel.PlayerAvatar.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.Rating": "RowPanel.RowRightPanel.PlayerRating.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 550,
+            "children":
+            [
+                
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "width": 472,
+                    "marginTop": 5,
+                    "marginLeft": 8.5,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$LiveTileBackgroundIdle10"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Position",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 10,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "PlayerAvatar",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 95,
+                            "width": 60,
+                            "height": 60
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 185,
+                            "fontSize": 20,
+
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 35,
+                    "marginLeft": 15,
+                    "width": 510,
+                    "height": 2,
+                    "color": "0x757575",
+                    "alpha": 0.5
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "width": 472,
+                    "marginLeft": 19,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "PlayerRating",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontSize": 20,
+
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

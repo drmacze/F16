@@ -1,0 +1,201 @@
+{
+    "name": "MatchSelect",
+    "initial":
+    {
+        "targets": ["RedirectMatchSelect"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/pregame/MatchSelect/MenuPreview/MenuHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/MenuHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab3",
+                    "states":
+                    [
+                        {
+                            "name": "Tab3",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/pregame/MatchSelect/MenuSettings/MenuHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab4",
+                    "states":
+                    [
+                        {
+                            "name": "Tab4",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/pregame/MatchSelect/MenuController/MenuHub.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["PlayMatch"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                },
+                {
+                    "event": "evt_squad_home",
+                    "targets": ["SquadHome"]
+                },
+                {
+                    "event": "evt_squad_away",
+                    "targets": ["SquadAway"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/pregame/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_back": "out_back1"
+            }
+        },
+        {
+            "name": "SquadHome",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Home.nav",
+            "outputs":
+            {
+               "out_back": "RedirectTab2",
+               "out_advance": "RedirectTab2"
+            }
+        },
+        {              
+            "name": "SquadAway",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/MenuSquad/TeamManagement/TeamManagement_Away.nav",
+            "outputs":
+            {
+               "out_back": "RedirectTab2",
+               "out_advance": "RedirectTab2"
+            }
+        }
+    ]
+}
+

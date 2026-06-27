@@ -1,0 +1,462 @@
+{ 
+    "commonName": "Panel",
+	"name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+	"bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [ 
+        {
+            "commonName": "Image",
+            "name": "insHomeStadium",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "width": 1920,
+            "height": 1080,
+            "alpha": 0,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_home_stadium_bg"
+                }
+            ]
+        },
+        {
+            "commonName": "Rectangle",
+            "alignH": "FILL",
+            "alignV": "BOTTOM",
+            "marginBottom": -20,
+            "height": 160,
+            "alpha": 0,
+            "color":"0x151515"
+        },
+        {
+            "commonName": "Image",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1920,
+            "height": 1080,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_home_openAnim"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "width": 1920,
+            "height": 1080,
+            "type": "$bg_shadow1",
+            "bindings":[
+                {
+                    "property": "visible",
+                    "binding":  "bnd_shadow_visible"
+                }
+            ]
+        },
+        {
+            "commonName": "Image",
+            "name": "logo",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "alpha": 0,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_logo"
+                },
+                {
+                    "property": "alignV",
+                    "binding":  "bnd_logo_alignV"
+                },
+                {
+                    "property": "alignH",
+                    "binding":  "bnd_logo_alignH"
+                },
+                {
+                    "property": "width",
+                    "binding":  "bnd_logo_width"
+                },
+                {
+                    "property": "height",
+                    "binding":  "bnd_logo_height"
+                },
+                {
+                    "property": "marginLeft",
+                    "binding":  "bnd_logo_left"
+                },
+                {
+                    "property": "marginRight",
+                    "binding":  "bnd_logo_right"
+                },
+                {
+                    "property": "marginTop",
+                    "binding":  "bnd_logo_top"
+                },
+                {
+                    "property": "marginBottom",
+                    "binding":  "bnd_logo_bottom"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BgLoading1"
+        },
+        {
+            "commonName": "Image",
+            "name": "BgLoading",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_BgLoading"
+                },
+                {
+                    "property": "alignV",
+                    "binding":  "bnd_BgLoading_alignV"
+                },
+                {
+                    "property": "alignH",
+                    "binding":  "bnd_BgLoading_alignH"
+                },
+                {
+                    "property": "width",
+                    "binding":  "bnd_BgLoading_width"
+                },
+                {
+                    "property": "height",
+                    "binding":  "bnd_BgLoading_height"
+                },
+                {
+                    "property": "marginLeft",
+                    "binding":  "bnd_BgLoading_left"
+                },
+                {
+                    "property": "marginRight",
+                    "binding":  "bnd_BgLoading_right"
+                },
+                {
+                    "property": "marginTop",
+                    "binding":  "bnd_BgLoading_top"
+                },
+                {
+                    "property": "marginBottom",
+                    "binding":  "bnd_BgLoading_bottom"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "alignH":     "CENTER",
+            "alignV":     "BOTTOM",
+            "marginBottom": 40,
+            "width": 80,
+            "height": 80,
+            "path": "views/loadingindicator/loadingIcon.swf"
+         },
+         {
+            "commonName":"Panel",
+            "alignV": "FILL",
+            "alignH": "CENTER",
+            "bindings":[
+                {
+                    "property": "alignH",
+                    "binding":  "bnd_match_info_alignH"
+                },
+                {
+                    "property": "marginRight",
+                    "binding":  "bnd_match_info_right"
+                },
+                {
+                    "property": "marginLeft",
+                    "binding":  "bnd_match_info_left"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "name": "insLoadingIndicator",
+                    "path": "views/loadingindicator/loadingIcon.swf off",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "marginRight",
+                            "binding":  "bnd_loadingIcon_right"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_loadingIcon_bottom"
+                        },
+                        {
+                            "property": "width",
+                            "binding":  "bnd_loadingIcon_width"
+                        },
+                        {
+                            "property": "height",
+                            "binding":  "bnd_loadingIcon_height"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":[
+                        {
+                            "property": "text",
+                            "binding":  "bnd_loading_text"
+                        },
+                        {
+                            "property": "marginLeft",
+                            "binding":  "bnd_loading_text_left"
+                        },
+                        {
+                            "property": "marginTop",
+                            "binding":  "bnd_loading_text_top"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insLabelHomeTeamName",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "text",
+                            "binding":  "bnd_home_team_name"
+                        },
+                        {
+                            "property": "marginLeft",
+                            "binding":  "bnd_home_team_name_left"
+                        },
+                        {
+                            "property": "marginTop",
+                            "binding":  "bnd_home_team_name_top"
+                        },
+                        {
+                            "property": "fontSize",
+                            "binding":  "bnd_team_name_size"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insLabelAwayTeamName",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "text",
+                            "binding":  "bnd_away_team_name"
+                        },
+                        {
+                            "property": "marginLeft",
+                            "binding":  "bnd_away_team_name_left"
+                        },
+                        {
+                            "property": "marginTop",
+                            "binding":  "bnd_away_team_name_top"
+                        },
+                        {
+                            "property": "fontSize",
+                            "binding":  "bnd_team_name_size"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "insCrestHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_home_team_crest"
+                        },
+                        {
+                            "property": "marginRight",
+                            "binding":  "bnd_home_team_crest_right"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_home_team_crest_bottom"
+                        },
+                        {
+                            "property": "width",
+                            "binding":  "bnd_team_crest_width"
+                        },
+                        {
+                            "property": "height",
+                            "binding":  "bnd_team_crest_height"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "insCrestAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "image",
+                            "binding":  "bnd_away_team_crest"
+                        },
+                        {
+                            "property": "marginRight",
+                            "binding":  "bnd_away_team_crest_right"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_away_team_crest_bottom"
+                        },
+                        {
+                            "property": "width",
+                            "binding":  "bnd_team_crest_width"
+                        },
+                        {
+                            "property": "height",
+                            "binding":  "bnd_team_crest_height"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insLabelMatchType",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "fontSize": 24,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0,
+                    "bindings":
+                    [
+                        {
+                            "property": "text",
+                            "binding":  "bnd_match_type"
+                        },
+                        {
+                            "property": "marginTop",
+                            "binding":  "bnd_match_type_top"
+                        },
+                        {
+                            "property": "marginLeft",
+                            "binding":  "bnd_match_type_left"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0,
+                    "bindings":[
+                        {
+                            "property": "text",
+                            "binding":  "bnd_match_vs"
+                        },
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_match_vs_bottom"
+                        },
+                        {
+                            "property": "marginRight",
+                            "binding":  "bnd_match_vs_right"
+                        },
+                        {
+                            "property": "fontSize",
+                            "binding":  "bnd_match_vs_size"
+                        }
+                    ]
+                },
+                {
+                    "commonName":"Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "alpha": 0,
+                    "bindings":[
+                        {
+                            "property": "marginBottom",
+                            "binding":  "bnd_match_stadium_bottom"
+                        },
+                        {
+                            "property": "marginRight",
+                            "binding":  "bnd_match_stadium_right"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 18,
+                            "fontSize": 30,
+                            "fontColor": "$COLOR_EAFC24",
+                            "alpha": 0,
+                            "bindings":[
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_stadium_title"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "marginBottom": -40, 
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_stadium"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

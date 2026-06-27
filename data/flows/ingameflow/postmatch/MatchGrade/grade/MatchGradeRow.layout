@@ -1,0 +1,104 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "MatchGradeRowRoot",
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 700.0,
+            "height": 45.0
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_HEADER",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "LEFT",
+                 "fontSize": 17,
+            "textAlignV": "CENTER"
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "textAlignH": "LEFT",
+            "marginLeft": 80.0,
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+            "alignV": "FILL",
+       "fontSize": 17
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginLeft": 260.0,
+            "marginRight": 0.0,
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+            "textAlignH": "CENTER",
+                        "fontSize": 17,
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.valueRight": "RowPanel.RightNumberLabel.text",
+        "dataProviders.value": "RowPanel.LeftNumberLabel.text",
+        "dataProviders.label": "RowPanel.EventLabel.text",
+        "width": "RowPanel.width",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "EventLabel",
+                    "alignH": "CENTER",
+                    "width": 515.0,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "EventStyle"
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "LeftNumberLabel",
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyle"
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "RightNumberLabel",
+                    "alignH": "RIGHT",
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyle"
+                    ]
+                    },
+        {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "y": -20,
+            "x": 360,
+            "fontSize": 25,
+			"fontColor": "$COLOR_WHITE",
+            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+		    "text": ""
+                }
+            ]
+        }
+    ]
+}}

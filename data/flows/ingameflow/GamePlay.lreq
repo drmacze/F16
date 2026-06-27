@@ -1,0 +1,6 @@
+[
+    "/lua/enums/interactivetutorialmanager.lua",
+    "/lua/enums/eventmanager.lua",
+	"/lua/enums/gamestate_service.lua",
+	"/lua/common/CommonNavVars.lua"
+]

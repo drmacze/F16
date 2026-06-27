@@ -1,0 +1,194 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["RedirectKitSelect"]
+    },
+    "onEnter":
+    [
+		["updateUserPlateDisplayMode", ["lite"]],
+        ["setNavigationBarNavContext", [".gamemode", ".flow", ".type", "kitselect"]]
+    ],
+    "onExit":
+    [
+		["updateUserPlateDisplayMode", ["full"]],
+        ["resetNavigationBarNavContext"]
+    ],
+    "states":
+    [
+        {
+            "name": "RedirectKitSelect",
+            "onEnter":
+            [
+                ["invoke", [".flow"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "online",
+                    "cond":    ["==", ".gamemode", "real"],
+                    "targets": ["KitSelectSearch"]
+                },
+                {
+                    "event":   "online",
+                    "cond":    ["==", ".gamemode", "fut"],
+                    "targets": ["KitSelectStartMatch"]
+                },
+				{
+                    "event":   "online_friendly",
+                    "cond":    ["==", ".gamemode", "fut"],
+                    "targets": ["KitSelectStartMatch"]
+                },
+                {
+                    "event":   "offline",
+                    "targets": ["KitSelectStartMatch"]
+                },
+                {
+                    "event":   "friendly",
+                    "targets": ["KitSelectStartMatch"]
+                }
+            ]
+        },
+        {
+            "name": "KitSelectSearch",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/pregame/kitselect/KitSelectSearch.vvm",
+                    {
+                        "gamemode": ".gamemode",
+                        "flow":     ".flow",
+                        "type":     ".type",
+                        "skipFE":   ".SKIP_FE"
+                    }
+                ]],
+                ["notifyEnterKitSelect"]
+            ],
+            "onExit":
+            [
+                ["notifyExitKitSelect"],
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_back"]
+                },
+                {
+                    "event":   "evt_refresh_on_resize",
+					"cond":    ["==", ".gamemode", "real"],
+                    "targets": ["RedirectKitSelect"]
+                },
+                {
+                    "event":   "evt_to_settings",
+                    "targets": ["SettingsCustomize"]
+                },
+                {
+                    "event":   "evt_to_squad",
+                    "cond":    ["==", ".gamemode", "fut"],
+                    "targets": ["SquadFUT"]
+                },
+				{
+                    "event":   "evt_to_squad",
+                    "cond":    ["==", ".gamemode", "real"],
+                    "targets": ["SquadReal"]
+                },
+                {
+                    "event":   "evt_p2p_disconnect",
+                    "targets": ["out_back"]
+                }
+            ]
+        },
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/pregame/kitselect/KitSelectStartMatch.vvm",
+                    {
+                        "gamemode": ".gamemode",
+                        "flow":     ".flow",
+                        "type":     ".type",
+                        "skipFE":   ".SKIP_FE",
+						"fromScreen": ".fromScreen"
+                    }
+                ]],
+                ["notifyEnterKitSelect"]
+            ],
+            "onExit":
+            [
+                ["notifyExitKitSelect"],
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_back"]
+                },
+                {
+                    "event":   "evt_refresh_on_resize",
+					"cond":    ["==", ".gamemode", "real"],
+                    "targets": ["RedirectKitSelect"]
+                },
+                {
+                    "event":   "evt_to_squad",
+                    "cond":    ["==", ".gamemode", "fut"],
+                    "targets": ["SquadFUT"]
+                },
+				{
+                    "event":   "evt_to_squad",
+                    "cond":    ["==", ".gamemode", "real"],
+                    "targets": ["SquadReal"]
+                }
+            ]
+        },
+        {
+            "name": "SettingsCustomize",
+            "type": "external",
+            "file": "/flows/mainflow/settingscustomize/settingscustomize.nav",
+            "outputs":
+            {
+                "out_back":    "RedirectKitSelect",
+                "out_advance": "RedirectKitSelect"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/real/pregame/squad/squad.nav",
+            "outputs":
+            {
+                "out_back":    "RedirectKitSelect",
+                "out_advance": "RedirectKitSelect"
+            }
+        },        
+		{
+            "name": "SquadReal",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/real/pregame/squad/squad.nav",
+            "outputs":
+            {
+                "out_back":    "RedirectKitSelect",
+                "out_advance": "RedirectKitSelect"
+            }
+        },
+        {
+            "name": "SquadFUT",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/fut/club/squad/squad.nav",
+            "outputs":
+            {
+                "out_back":    "RedirectKitSelect",
+                "out_advance": "RedirectKitSelect"
+            }
+        }
+    ]
+}

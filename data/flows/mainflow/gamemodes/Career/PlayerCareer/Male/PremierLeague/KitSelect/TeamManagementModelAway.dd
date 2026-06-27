@@ -1,0 +1,384 @@
+{
+    "actions":
+    [
+        {
+            "viewname":   "act_swap_players",
+            "actionname": "act_swap_players"
+        },
+        {
+            "viewname":   "act_compare_players",
+            "actionname": "act_compare_players"
+        },
+        {
+            "viewname":   "act_item_show_bio",
+            "actionname": "act_item_show_bio"
+        },
+        {
+            "viewname":   "act_item_swap_with_club",
+            "actionname": "act_item_swap_with_club"
+        },
+        {
+            "viewname":   "act_item_remove_from_squad",
+            "actionname": "act_item_remove_from_squad"
+        },
+        {
+            "viewname":   "act_item_send_to_trade_pile",
+            "actionname": "act_item_send_to_trade_pile"
+        },
+        {
+            "viewname":   "act_item_apply_consumable",
+            "actionname": "act_item_apply_consumable"
+        },
+        {
+            "viewname":   "act_item_quick_sell",
+            "actionname": "act_item_quick_sell"
+        },
+        {
+            "viewname":   "act_swap_with_inventory",
+            "actionname": "act_swap_with_inventory"
+        },
+		{
+            "viewname":   "act_item_quick_list",
+            "actionname": "act_item_quick_list"
+        },
+		{
+            "viewname":   "act_send_item_data",
+            "actionname": "act_send_item_data"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_awaychemistry_matrix",
+            "binding":  "bnd_awaychemistry_matrix",
+            "type":     "object",
+            "deps":     ["bnd_awayformation"]
+        },
+        {
+            "viewname": "bnd_awaystarting_11",
+            "binding":  "bnd_awaystarting_11",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awaysubs_and_res",
+            "binding":  "bnd_awaysubs_and_res",
+            "type":     "array"
+        },
+        {
+        "viewname": "bnd_awaysbs_and_res",
+            "binding":  "bnd_awaysbs_and_res",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_awayteam_name",
+            "binding":  "bnd_awayteam_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayteam_crest",
+            "binding":  "bnd_awayteam_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayteam_rating",
+            "binding":  "bnd_awayteam_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_awayteam_rating_label",
+            "binding":  "bnd_awayteam_rating_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayteam_overall",
+            "binding":  "bnd_awayteam_overall",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_awayplayer_comparison_data",
+            "binding":  "bnd_awayplayer_comparison_data",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayteam_man",
+            "binding":  "bnd_awayteam_man",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awaymanager",
+            "binding":  "bnd_awaymanager",
+            "type":     "object",
+            "deps":     ["bnd_awayformation_index"]
+        },
+        {
+            "viewname": "bnd_awaymanager_item_visibility",
+            "binding":  "bnd_awaymanager_item_visibility",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_awaycontext_menu_visible",
+            "binding":  "bnd_awaycontext_menu_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_awayactive_player_visible",
+            "binding":  "bnd_awayactive_player_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_awaypassive_player_visible",
+            "binding":  "bnd_awaypassive_player_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_awayswap1_active",
+            "binding":  "bnd_awayswap1_active",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayswap2_active",
+            "binding":  "bnd_awayswap2_active",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayswap3_active",
+            "binding":  "bnd_awayswap3_active",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayswap1_passive",
+            "binding":  "bnd_awayswap1_passive",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayswap2_passive",
+            "binding":  "bnd_awayswap2_passive",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayswap3_passive",
+            "binding":  "bnd_awayswap3_passive",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayactive_player_name",
+            "binding":  "bnd_awayactive_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awaypassive_player_name",
+            "binding":  "bnd_awaypassive_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayactive_player_position",
+            "binding":  "bnd_awayactive_player_position",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awaypassive_player_position",
+            "binding":  "bnd_awaypassive_player_position",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayteam_rating",
+            "binding":  "bnd_awayteam_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_awayplayer_avatar",
+            "binding":  "bnd_awayplayer_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayplayer_rating",
+            "binding":  "bnd_awayplayer_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_awayactive_player_avatar",
+            "binding":  "bnd_awayactive_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awaypassive_player_avatar",
+            "binding":  "bnd_awaypassive_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_awayactive_player_rating",
+            "binding":  "bnd_awayactive_player_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_awaypassive_player_rating",
+            "binding":  "bnd_awaypassive_player_rating",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_awayteam_rating_label",
+            "binding":  "bnd_awayteam_rating_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_notification",
+            "binding":  "bnd_awayswap_notification",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label1",
+            "binding":  "bnd_awayswap_label1",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label2",
+            "binding":  "bnd_awayswap_label2",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label3",
+            "binding":  "bnd_awayswap_label3",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label4",
+            "binding":  "bnd_awayswap_label4",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label5",
+            "binding":  "bnd_awayswap_label5",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label6",
+            "binding":  "bnd_awayswap_label6",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_awayswap_label7",
+            "binding":  "bnd_awayswap_label7",
+            "type":     "string"
+        },
+{
+    "viewname": "bnd_awayactive_stat_1",
+    "binding":  "bnd_awayactive_stat_1",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awayactive_stat_2",
+    "binding":  "bnd_awayactive_stat_2",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awayactive_stat_3",
+    "binding":  "bnd_awayactive_stat_3",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awayactive_stat_4",
+    "binding":  "bnd_awayactive_stat_4",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awayactive_stat_5",
+    "binding":  "bnd_awayactive_stat_5",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awayactive_stat_6",
+    "binding":  "bnd_awayactive_stat_6",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awaypassive_stat_1",
+    "binding":  "bnd_awaypassive_stat_1",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awaypassive_stat_2",
+    "binding":  "bnd_awaypassive_stat_2",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awaypassive_stat_3",
+    "binding":  "bnd_awaypassive_stat_3",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awaypassive_stat_4",
+    "binding":  "bnd_awaypassive_stat_4",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awaypassive_stat_5",
+    "binding":  "bnd_awaypassive_stat_5",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awaypassive_stat_6",
+    "binding":  "bnd_awaypassive_stat_6",
+    "type":     "int"
+},
+{
+    "viewname": "bnd_awayactive_stat_color_1",
+    "binding":  "bnd_awayactive_stat_color_1",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awayactive_stat_color_2",
+    "binding":  "bnd_awayactive_stat_color_2",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awayactive_stat_color_3",
+    "binding":  "bnd_awayactive_stat_color_3",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awayactive_stat_color_4",
+    "binding":  "bnd_awayactive_stat_color_5",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awayactive_stat_color_5",
+    "binding":  "bnd_awayactive_stat_color_5",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awayactive_stat_color_6",
+    "binding":  "bnd_awayactive_stat_color_6",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awaypassive_stat_color_1",
+    "binding":  "bnd_awaypassive_stat_color_1",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awaypassive_stat_color_2",
+    "binding":  "bnd_awaypassive_stat_color_2",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awaypassive_stat_color_3",
+    "binding":  "bnd_awaypassive_stat_color_3",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awaypassive_stat_color_4",
+    "binding":  "bnd_awaypassive_stat_color_5",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awaypassive_stat_color_5",
+    "binding":  "bnd_awaypassive_stat_color_5",
+    "type":     "float"
+},
+{
+    "viewname": "bnd_awaypassive_stat_color_6",
+    "binding":  "bnd_awaypassive_stat_color_6",
+    "type":     "float"
+}
+    ]
+}

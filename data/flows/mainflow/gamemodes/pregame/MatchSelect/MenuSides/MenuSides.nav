@@ -1,0 +1,16 @@
+{
+    "name": "MenuSides",
+    "states":
+    [
+        {              
+            "name": "MenuSide_SelectSide",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/MenuSides/SelectSide/SelectSide.nav",
+            "outputs":
+            {
+               "out_back": "out_hub",
+               "out_advance": "out_hub"
+            }
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+	"dds": ["MarketValue.dd"],
+    "vms": [["lua", "MarketValue.lua"]],
+    "views": [["gfx", {"layout": "MarketValue.layout"}]]
+}

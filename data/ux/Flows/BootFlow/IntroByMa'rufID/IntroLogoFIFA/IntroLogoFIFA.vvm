@@ -1,0 +1,5 @@
+{
+    "dds":   ["IntroLogoFIFA.dd"],
+	"vms":   [["lua", "IntroLogoFIFA.lua"]],
+    "views": [["gfx", {"layout": "IntroLogoFIFA.layout"}]]
+}

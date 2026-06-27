@@ -1,0 +1,188 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_back",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_back"
+			}
+		},
+		{
+			"viewname": "act_go_right",
+			"actionname": "act_go_right"
+		},
+		{
+			"viewname": "act_go_left",
+			"actionname": "act_go_left"
+		},
+		{
+			"viewname": "act_on_image_loaded",
+			"actionname": "act_on_image_loaded"
+		}
+
+	],
+	"data":
+	[
+		{
+			"viewname": "bnd_page_title",
+			"binding": "bnd_page_title",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_subpage_title",
+			"binding": "bnd_subpage_title",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_subpage_content",
+			"binding": "bnd_subpage_content",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_sub_page_image",
+			"binding": "bnd_sub_page_image",
+			"type": "string"
+		},
+		{
+			"viewname": "bnd_swipe",
+			"binding": "bnd_swipe",
+			"type": "int",
+			"actions":
+			[
+				{
+					"viewname": "act_swipe",
+					"actionname": "act_swipe"
+				}
+			]
+		},
+
+		{
+			"viewname": "bnd_pass",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_PASS"
+			}
+		},
+		{
+			"viewname": "bnd_pass_visible",
+			"binding": "bnd_pass_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_through",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_THROUGH"
+			}
+		},
+		{
+			"viewname": "bnd_through_visible",
+			"binding": "bnd_through_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_shoot",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_FTF_VB_SHOOT_HUD"
+			}
+		},
+		{
+			"viewname": "bnd_shoot_visible",
+			"binding": "bnd_shoot_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_sprint_offence",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_SPRINT"
+			}
+		},
+		{
+			"viewname": "bnd_sprint_offence_visible",
+			"binding": "bnd_sprint_offence_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_switch",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_SWITCH"
+			}
+		},
+		{
+			"viewname": "bnd_switch_visible",
+			"binding": "bnd_switch_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_tackle",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_TACKLE"
+			}
+		},
+		{
+			"viewname": "bnd_2nd_defender_visible",
+			"binding": "bnd_2nd_defender_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_2nd_defender",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_2ND_DEFENDER"
+			}
+		},
+		{
+			"viewname": "bnd_tackle_basic_visible",
+			"binding": "bnd_tackle_basic_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_sprint_deffence",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_SPRINT"
+			}
+		},
+		{
+			"viewname": "bnd_sprint_deffence_visible",
+			"binding": "bnd_sprint_deffence_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_mentality",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_MOB_MENT_ATT"
+			}
+		},
+		{
+			"viewname": "bnd_mentality_visible",
+			"binding": "bnd_mentality_visible",
+			"type": "bool"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+  "dds": [
+    "MatchPlay.dd",
+    "TeamManagementModel.dd",
+    "formation/FormationModelReal.dd",
+   "TeamManagementModelAway.dd",
+    "formation/FormationModelRealAway.dd"
+  ],
+  "vms": [
+    ["lua", "MatchPlay.lua"],
+    ["lua", "TeamManagementModel.lua"],
+    ["lua", "formation/FormationModelReal.lua"],
+    ["lua", "TeamManagementModelAway.lua"],
+    ["lua", "formation/FormationModelRealAway.lua"]
+  ],
+  "views": [
+    ["gfx", { "layout": "MatchPlay.layout" }]
+  ],
+  "ireqs": [
+    "Common.ireq",
+    "Squad.ireq",
+    "TeamManagementModel.ireq",
+    "formation/FormationModelReal.ireq",
+    "SquadAway.ireq",
+    "TeamManagementModelAway.ireq",
+    "formation/FormationModelRealAway.ireq"
+  ]
+}

@@ -1,0 +1,137 @@
+{
+    "name": "Liga",
+    "initial":
+    {
+        "targets": ["MenuLiga"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuLiga",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Hub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+
+                    "event": "evt_remove",
+
+                    "targets": ["Remove"]
+
+                },
+                {
+
+                    "event": "evt_team",
+
+                    "targets": ["Team"]
+
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                }
+            ]
+        },
+        
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev2/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        },
+        {
+
+            "name": "Remove",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Transferhub/Remove/Remove.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "Liga",
+
+                "out_exit_gamemode1": "Liga"
+            }
+
+        },
+        
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev2/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",
+                "out_exit_gamemode1": "Liga"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Negotiate/Negotiate.nav",
+            "outputs":
+            {
+
+                "out_exit_gamemode": "Liga",
+
+                "out_exit_gamemode1": "Liga"
+            }
+
+        },
+        {
+
+            "name": "Team",
+
+            "type": "external",
+
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Team/TeamSelect.nav",
+
+            "outputs":
+
+            {
+
+                "out_exit_gamemode": "Liga"
+
+                
+
+            }
+
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/TransferStatus/Liga.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Liga",            
+                "out_exit_gamemode1": "Liga"
+                
+            }
+        }
+        
+    ]
+}

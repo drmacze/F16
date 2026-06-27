@@ -1,0 +1,5 @@
+{
+    "dds":   ["UserPlateHub.dd"],
+    "vms":   [["lua", "UserPlateHub.lua"]],
+    "views": [["gfx", {"layout": "UserPlateHub.layout"}]]
+}

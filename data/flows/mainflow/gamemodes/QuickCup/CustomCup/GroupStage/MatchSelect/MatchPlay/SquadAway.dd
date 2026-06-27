@@ -1,0 +1,87 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_advance"
+            }
+        },
+        {
+            "viewname":   "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_awayformation_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_SQD_FORMATION_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_awaycomparison_type",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_SQD_PLR_COMPARISON"
+            }
+        },
+        {
+            "viewname": "bnd_awaypanel_title",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_SQD_PANEL_TITLE"
+            }
+        },
+        {
+            "viewname": "bnd_awayteam_rating_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_SQD_TEAM_RATING_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_awayteam_chemistry_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_SQD_TEAM_CHEMISTRY_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_awayplayer_view_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_SQD_PLAYER_VIEW_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_awayaccept_button",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_DONE"
+            }
+        }
+    ]
+}

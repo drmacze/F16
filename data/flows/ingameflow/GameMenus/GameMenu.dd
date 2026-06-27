@@ -1,0 +1,399 @@
+{
+    "actions":
+    [
+        {
+            "viewname":   "act_toggle_pause",
+            "actionname": "act_toggle_pause"
+        },
+        {
+            "viewname":   "act_to_ingame_squad",
+            "actionname": "act_to_ingame_squad"
+        },
+        {
+            "viewname":   "act_to_ingame_squadaway",
+            "actionname": "act_to_ingame_squadaway"
+        },
+        {
+            "viewname": "act_to_settings",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize",
+                "data":
+                {
+                    "ingame": true
+                }
+            }
+        },
+        {
+            "viewname": "act_to_ingame_side",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_to_ingame_side"
+            }
+        },
+        {
+            "viewname": "act_to_instant_replay",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_instant_replay"
+            }
+        },
+        {
+            "viewname": "act_to_captured_media",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_captured_media"
+            }
+        },
+        {
+            "viewname": "act_to_match_highlights",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_to_match_highlights"
+            }
+        },
+        {
+            "viewname": "act_to_match_facts",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_match_facts"
+            }
+        },
+        {
+            "viewname": "act_match_end_stats",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_match_end_stats"
+            }
+        },
+        {
+            "viewname":   "act_forfeit_match",
+            "actionname": "act_forfeit_match"
+        },
+        {
+            "viewname":   "act_quit_match",
+            "actionname": "act_quit_match"
+        },
+        {
+            "viewname":   "act_restart_match",
+            "actionname": "act_restart_match"
+        },
+        
+        {
+            "viewname": "act_tab_resume",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_resume"
+            }
+        },
+        {
+            "viewname": "act_tab_team",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_team"
+            }
+        },
+        {
+            "viewname": "act_tab_team2",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_team2"
+            }
+        },
+        {
+            "viewname": "act_tab_facts",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_facts"
+            }
+        },
+        {
+            "viewname": "act_tab_replay",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_replay"
+            }
+        },
+        {
+            "viewname": "act_tab_settings",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_settings"
+            }
+        },
+        {
+            "viewname": "act_tab_controll",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_controll"
+            }
+        },
+        {
+            "viewname": "act_tab_restart",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_restart"
+            }
+        },
+        {
+            "viewname": "act_tab_end",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_tab_end"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_label_team_pauses",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_GM_PAUSES_LEFT"
+            }
+        },
+        {
+            "viewname": "bnd_home_team_pauses",
+            "binding":  "bnd_home_team_pauses",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_pauses",
+            "binding":  "bnd_away_team_pauses",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_match_type",
+            "binding":  "bnd_match_type",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_user_data",
+            "binding":  "bnd_home_user_data",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_live_tile_forfeit",
+            "binding": "bnd_live_tile_forfeit",
+            "type": "live_tile"
+        },
+        {
+            "viewname": "bnd_live_tile_matchfacts",
+            "binding": "bnd_live_tile_matchfacts",
+            "type": "live_tile"
+        },
+        {
+            "viewname": "bnd_away_user_data",
+            "binding":  "bnd_away_user_data",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding":  "bnd_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding":  "bnd_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_kit_home_team",
+            "binding":  "bnd_kit_home_team",
+            "type":     "object"        
+        },
+        {
+            "viewname": "bnd_kit_homegk_team",
+            "binding":  "bnd_kit_homegk_team",
+            "type":     "object"        
+        },
+        {
+            "viewname": "bnd_kit_away_team",
+            "binding":  "bnd_kit_away_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_kit_awaygk_team",
+            "binding":  "bnd_kit_awaygk_team",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_name_abbr",
+            "binding":  "bnd_home_team_name_abbr",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_name_abbr",
+            "binding":  "bnd_away_team_name_abbr",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding":  "bnd_home_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding":  "bnd_away_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_result",
+            "binding":  "bnd_result",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_shootout_result",
+            "binding":  "bnd_shootout_result",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_game_state",
+            "binding":  "bnd_game_state",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stadium_name",
+            "binding":  "bnd_stadium_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_time",
+            "binding":  "bnd_time",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_match_facts",
+            "binding":  "bnd_match_facts",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_away_events_list",
+            "binding":  "bnd_away_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_home_events_list",
+            "binding":  "bnd_home_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_empty_rows_data",
+            "binding":  "bnd_empty_rows_data",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_resume",
+            "binding":  "bnd_live_tile_resume",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_squad",
+            "binding":  "bnd_live_tile_squad",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_settings",
+            "binding":  "bnd_live_tile_settings",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_replay",
+            "binding":  "bnd_live_tile_replay",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_control",
+            "binding":  "bnd_live_tile_control",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_match_facts",
+            "binding":  "bnd_live_tile_match_facts",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_captured_media",
+            "binding":  "bnd_live_tile_captured_media",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_captured_media_enabled",
+            "binding":  "bnd_live_tile_captured_media_enabled",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_live_tile_matchhighlights",
+            "binding": "bnd_live_tile_matchhighlights",
+            "type": "live_tile"
+        },
+        {
+            "viewname": "bnd_live_tile_matchgrade",
+            "binding": "bnd_live_tile_matchgrade",
+            "type": "live_tile"
+        },
+        {
+            "viewname": "bnd_live_tile_replay_enable",
+            "binding":  "bnd_live_tile_replay_enable",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_live_tile_match_highlights_enabled",
+            "binding":  "bnd_live_tile_match_highlights_enabled",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_live_tile_quit",
+            "binding":  "bnd_live_tile_quit",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_live_tile_restart",
+            "binding":  "bnd_live_tile_restart",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_rain_visible",
+            "binding":  "bnd_rain_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_snow_visible",
+            "binding":  "bnd_snow_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_weather_type",
+            "binding":  "bnd_weather_type",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_show_online_info",
+            "binding":  "bnd_show_online_info",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_show_offline_info",
+            "binding":  "bnd_show_offline_info",
+            "type":     "bool"
+        }
+    ]
+}

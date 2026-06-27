@@ -1,0 +1,431 @@
+{
+    "constants":
+    {
+    
+        "Color" :
+        {
+            "COLOR_WHITE" : "0xFFFFFF",
+            "COLOR_BLACK" : "0x1E1E1E",
+            "COLOR_PURE_BLACK" : "0x000000",
+            "COLOR_BEIGE" : "0xE6E6E6",
+            "COLOR_OLIVE" : "0xD2D1AD",
+            "COLOR_BLUE" : "0x083C65",
+            "COLOR_DARK_GRAY" : "0x555555",
+            "COLOR_MEDIUM_GRAY" : "0x999999",
+            "COLOR_LIGHT_GRAY" : "0xC3C3C3",
+            "COLOR_DARK_BLUE" : "0x1E2930",
+            "COLOR_LIGHT_BLUE" : "0x197FC5",
+            "COLOR_LIGHTER_BLUE" : "0x33B9F7",
+            "COLOR_DARK_RED" : "0x860000",
+            "COLOR_LIGHT_RED" : "0xc82727",
+            "COLOR_GOLD" : "0xD0950B",
+            "COLOR_DARK_GOLD" : "0x734203",
+            "COLOR_GREEN" : "0x28992D",
+            "COLOR_LIGHT_GREEN" : "0x7EFD00",
+            "COLOR_YELLOW" : "0xE2BA00",
+			"COLOR_LIGHT_YELLOW" : "0xF7C849",
+            "COLOR_ORANGE" : "0xFFAF3D",
+            "COLOR_DARK_GREEN" : "0x287800",
+            "COLOR_HUD_BLUE" : "0x44adf5",
+			"COLOR_GREEN_CREDITS" : "0x5c901a",
+			"COLOR_DARK_BLUE_GRAY" : "0x34434e",
+			"COLOR_FIFA_POINTS" : "0x04b10c",
+
+            "TILE_COLOR_HEADER" : "0x454545",
+            "TILE_COLOR_HEADER_HIGHLIGHT" : "0x197FC5",
+            "TILE_COLOR_SUBHEADLINE" : "0x454545",
+            "TILE_COLOR_SUBHEADLINE_HIGHLIGHT" : "0x197FC5",
+            "TILE_COLOR_BODY" : "0x575757",
+            "TILE_COLOR_BODY_HIGHLIGHT" : "0x197FC5",
+			"TILE_COLOR_LABEL" : "0x666666",
+			"TILE_COLOR_VALUE" : "0x333333",
+
+			"COLOR_GOLD_PACKS" : "0x9c8012",
+			"COLOR_SILVER_PACKS" : "0x6f7374",
+			"COLOR_BRONZE_PACKS" : "0x875636",
+			"COLOR_SPECIAL_PACKS" : "0x084b80",
+
+            "STD_TITLE_TEXT_COLOR" : "0x454545",
+            "STD_HEADER_TEXT_COLOR" : "0x333333",
+            "STD_SUBHEADER_TEXT_COLOR" : "0x777777",
+            "STD_BODY_TEXT_COLOR" : "0x575757",
+            "STD_LINK_TEXT_COLOR" : "0x0790E2",
+
+            "COLOR_LOW_VALUE" : "0xCF0400",
+            "COLOR_MEDIUM_VALUE" : "0xF6EE00",
+            "COLOR_HIGH_VALUE" : "0x5DB515",
+
+            "COLOR_GOOD_LATENCY" : "0x00FF00",
+            "COLOR_MEDIUM_LATENCY" : "0xFFF000",
+            "COLOR_BAD_LATENCY" : "0xFF0000",
+
+			"COLOR_POSITIVE_COMPARE" : "0x436B19",
+			"COLOR_NEGATIVE_COMPARE" : "0x790000",
+			"COLOR_GOLD_TEXT" : "0xB48C13",
+			"COLOR_GREEN_TEXT" : "0x5b951b",
+			"COLOR_RED_TEXT" : "0x982222",
+
+			"COLOR_COMING_SOON": "0xE57C00"
+        },
+        
+        "String" :
+        {
+            "FONT_NORMAL" : "$Default",
+            "FONT_BODY" : "$Body",
+            "FONT_BOLD" : "$Title",
+            "FONT_REGULAR" : "$Title",
+            "FONT_HEADER" : "$Title",
+            "FONT_TITLE" : "$Title",
+            "FONT_TUTORIAL" : "$Body",
+            "FONT_TIMER" : "$Timer",
+            "FONT_KNULMEDIUM": "$KnulMedium",
+            "FONT_KNULBOLD": "$KnulBold",
+            "FONT_KNULEXTRABOLD": "$KnulExtraBold"
+        },
+        
+        "Number" :
+        {
+            "SCREEN_WIDTH" : 1024.0,
+            "SCREEN_HEIGHT" : 640.0,
+            "HALF_SCREEN_HEIGHT": 320.0,
+            "HALF_SCREEN_WIDTH" : 512.0,
+
+            "PADDING_SMALL" : 6,
+            "PADDING_MEDIUM" : 10,
+            "PADDING_LARGE" : 24,
+            "PADDING_JUMBO" : 36,
+			"TILE_PADDING" : 8,
+			"TILES_MARGIN_H" : 28,
+			"TILES_MARGIN_TOP" : 148,
+			"TILES_MARGIN_BOT" : 65,
+
+            "BUTTON_HEIGHT_SMALL" :32,
+            "BUTTON_HEIGHT_MEDIUM" :38,
+            "BUTTON_CONTENT_INDENT" :43,
+
+            "TWEEN_DURATION" : 0.5,
+            "SCROLL_TWEEN_DURATION" : 0.2,
+            "FADE_DURATION" : 1,
+
+            "FAST_ANIM_DURATION" : 100,
+            "SHORT_ANIM_DURATION" : 200,
+            "MEDIUM_ANIM_DURATION" : 400,
+            "LONG_ANIM_DURATION" : 500,
+            "EXTRA_LONG_ANIM_DURATION": 750,
+            "EXTRA_EXTRA_LONG_ANIM_DURATION": 1000,
+
+            "FONT_SIZE_SMALLEST" : 12,
+            "FONT_SIZE_SMALL" : 14,
+            "FONT_SIZE_MEDIUM" : 16,
+            "FONT_SIZE_LARGE" : 18,
+            "FONT_SIZE_SMALLEST_SMALLEST_HEADER": 18,
+            "FONT_SIZE_LARGEST" : 20,
+            "FONT_SIZE_TINY_HEADER" 	: 22,
+            "FONT_SIZE_SMALLEST_HEADER" : 24,
+            "FONT_SIZE_TUTORIAL_DESCRIPTION": 25,
+            "FONT_SIZE_SMALL_HEADER" 	: 26,
+            "FONT_SIZE_MEDIUM_HEADER" : 28,
+            "FONT_SIZE_HEADER" : 30,
+            "FONT_SIZE_LARGE_HEADER" : 32,
+			"FONT_SIZE_LARGER_HEADER"	: 34,
+            "FONT_SIZE_LEVEL_UP_TEXT"	: 36,
+            "FONT_SIZE_HUD_LARGE_TEXT" : 40,
+            "FONT_SIZE_BIG_TITLE" : 40,
+			"FONT_SIZE_SMALLER_COINS" : 46,
+            "FONT_SIZE_LARGEST_HEADER" : 48,
+            "FONT_SIZE_BIG_COINS" : 50,
+            "FONT_SIZE_WELCOME_TITLE" : 55,
+			"FONT_SIZE_AUCTION_ITEMS" : 60,
+            "FONT_SIZE_LARGE_POSITION" : 72,
+            "FONT_SIZE_LEVEL_UP_TITLE" : 80
+        }
+    },
+    
+    "animations":
+    {
+		"SLIDE_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "marginLeft":2000},
+                "end" : { "marginLeft":0 },
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+		"SCREEN_TRANSITION_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "x":2000},
+                "end" : { "x":0 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "TUTORIAL_TRANSITION_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha":0},
+                "end" : { "alpha":1 },
+                "duration" : "$EXTRA_EXTRA_LONG_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "TUTORIAL_TRANSITION_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha":1},
+                "end" : { "alpha":0 },
+                "duration" : "$EXTRA_EXTRA_LONG_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+		"OVERLAY_TRANSITION_IN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha":0},
+                "end" : { "alpha":1 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+		"SLIDE_IN_ALPHA" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0},
+                "end" : { "alpha" : 1},
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "SLIDE_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "marginLeft": 0 },
+                "end" : { "alpha" : 0, "marginLeft": -2000 },
+                "duration" : "$LONG_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "SCREEN_TRANSITION_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "x": 0 },
+                "end" : { "alpha" : 0, "x": -2000 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "OVERLAY_TRANSITION_OUT" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "SCREEN_SHOW" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : "$MEDIUM_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "SCREEN_HIDE" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1, "z" : 0 },
+                "end" : { "alpha" : 0, "z" : -1000 },
+                "duration" : "$MEDIUM_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        
+        "SIMPLE_SCREEN_SHOW" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+        "SIMPLE_SCREEN_HIDE" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : "$SHORT_ANIM_DURATION",
+                "easing" : "linear"
+            }
+        },
+
+        "ANIMASI_MASUK_BACKGROUND_SYSTEM" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : 1000,
+                "easing" : "linear"
+            }
+        },
+      
+        "ANIMASI_MASUK_INTRO_AWALGAME" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : 2000,
+                "easing" : "linear"
+            }
+        },
+        "ANIMASI_KELUAR_INTRO_AWALGAME" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : 2000,
+                "easing" : "linear"
+            }
+        },
+       
+        "ANIMASI_MASUK_SPLASHSCREEN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : 1000,
+                "easing" : "linear"
+            }
+        },
+        "ANIMASI_KELUAR_SPLASHSCREEN" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : 500,
+                "easing" : "linear"
+            }
+        },
+
+        "ANIMASI_MASUK_MAINMENU" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : 500,
+                "easing" : "linear"
+            }
+        },
+        "ANIMASI_KELUAR_MAINMENU" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : 200,
+                "easing" : "linear"
+            }
+        },
+
+        "ANIMASI_MASUK_MAINMENU_TAB" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "x" : 2000 },
+                "end" : { "x" : 0 },
+                "duration" : 300,
+                "easing" : "linear"
+            }
+        },
+        "ANIMASI_KELUAR_MAINMENU_TAB" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "x" : 0 },
+                "end" : { "x" : -2000 },
+                "duration" : 250,
+                "easing" : "linear"
+            }
+        },
+        
+        "ANIMASI_MASUK_NOTIFIKASI" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : 300,
+                "easing" : "linear"
+            }
+        },
+        "ANIMASI_KELUAR_NOTIFIKASI" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 1 },
+                "end" : { "alpha" : 0 },
+                "duration" : 150,
+                "easing" : "linear"
+            }
+        },
+
+        "ANIMASI_MASUK_MATCHREVEAL" :
+        {
+            "type" : "Absolute",
+            "data" :
+            {
+                "start" : { "alpha" : 0 },
+                "end" : { "alpha" : 1 },
+                "duration" : 500,
+                "easing" : "linear"
+            }
+        }
+             
+    }
+}

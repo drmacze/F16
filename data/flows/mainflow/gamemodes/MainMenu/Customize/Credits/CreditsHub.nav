@@ -1,0 +1,54 @@
+{
+    "name": "CreditsHub",
+    "initial":
+    {
+        "targets": ["RedirectCreditsHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectCreditsHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["CreditsHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_youtube_roberfl",
+                    "targets": ["YoutubeRoberFL"]
+                },
+                {
+                    "event": "evt_instagram_roberfl",
+                    "targets": ["InstagramRoberFL"]
+                }
+            ]
+        },
+        {
+            "name": "YoutubeRoberFL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/Credits/YoutubeRoberFL/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CreditsHub"
+            }
+        },
+        {
+            "name": "InstagramRoberFL",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/Credits/InstagramRoberFL/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CreditsHub"
+            }
+        }
+    ]
+}

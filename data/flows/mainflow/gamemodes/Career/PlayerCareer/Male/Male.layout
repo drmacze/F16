@@ -1,0 +1,1193 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "style-definitions":
+    {
+		"TF_LIVE_TILE_HEADLINE_BOLD_SMALL":
+        {
+			"fontFace": "$FONT_CRUYFFSANSREGULAR",
+		    "textAlignH": "LEFT",
+            "forceCaps": true,
+            "bold": false,
+			"fontSize": 17,
+			"fontColor": "0xFF767676",
+			"leading": 0
+	    },
+		"TF_LIVE_TILE_HEADLINE_SMALL": 
+        {
+			"fontFace": "$FONT_CRUYFFSANSHEAVY",
+			"fontSize": 20,
+			"fontColor": "$COLOR_WHITE",
+			"leading": 0
+        },
+        "TF_CONTEXT_MENU_ROW":
+        {
+			"fontFace": "$FONT_CRUYFFSANSHEAVY",
+            "forceCaps": true,
+			"fontSize": 25,
+			"fontColor": "0xFFFFFF",
+			"leading": 0
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": 
+        {
+			"fontFace": "$FONT_CRUYFFSANSHEAVY",
+			"fontSize": 20,
+			"fontColor": "$0xFF767676",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_HIGHLIGHTED_SMALL":
+        {
+			"fontFace": "$FONT_CRUYFFSANSHEAVY",
+			"fontSize": 20,
+		    "fontColor": "$COLOR_MEDIUM_GRAY",
+			"leading": 0
+        }
+    },
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundPC"  
+      },
+      {
+           "commonName": "Panel",
+            "name": "Actions",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -255,
+           "fontSize": 33,
+           "fontColor": "$COLOR_WHITE",
+           "fontFace": "$FONT_CRUYFFSANSHEAVY",
+           "text": "SELECT LEAGUE TEAM"
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "textAlignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -210,
+           "width": 700,
+           "multiline":true,
+           "fontSize": 16,
+           "leading": 3,
+           "fontColor": "$COLOR_WHITE",
+           "fontFace": "$FONT_CRUYFFSANSREGULAR",
+           "text": "Choose which leagues you would like to see simulated to the same level of detail as the competitions you are playing in. Cup competitions of participating teams will also be simulated.",
+           "alpha": 0.7
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "textAlignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": 170,
+           "width": 450,
+           "multiline":true,
+           "fontSize": 13,
+           "leading": 3,
+           "fontColor": "$COLOR_WHITE",
+           "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+           "text": "Please note that adding leagues impacts the career advancement speed. While adding check schedule, later in the seasons impacts the initialization time.",
+           "alpha": 0.7
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": -50,
+           "marginTop": -94,
+           "fontSize": 16,
+           "alpha": 0.7,
+           "fontColor": "$COLOR_WHITE",
+           "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+           "text": "Female"
+      },
+      {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 30,
+           "marginTop": -94,
+           "fontSize": 16,
+           "fontColor": "$COLOR_WHITE",
+           "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+           "text": "Male"
+       },
+       {              
+           "commonName": "SimpleButton",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+           "marginLeft": 570,
+           "marginTop": -45,            
+           "clickAction": "act_tab_epl",           
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_epl_off",
+                 "property": "label"
+               }
+           ],
+           "textStyles":
+           [
+               "TF_LIVE_TILE_HEADLINE_BOLD_SMALL"
+           ]          
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+	       "textAlignH": "LEFT",
+           "marginLeft": 577,
+           "marginTop": -45,    
+           "fontSize": 18,
+           "fontFace": "$FONT_CRUYFFSANSHEAVY",
+           "fontColor": "0xffffff",
+           "forceCaps": true,                 
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_epl_on",
+                 "property": "text"
+              }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": -48,
+           "marginLeft": -226,
+           "alpha": 0.6,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_epl_off",
+                 "property": "image"
+              }
+           ]        
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": -48,
+           "marginLeft": -226,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_epl_on",
+                 "property": "image"
+              }
+           ]        
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": -46,
+           "marginLeft": -180,
+           "alpha": 0.6,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_epl_off",
+                 "property": "image"
+               }
+           ]     
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": -46,
+           "marginLeft": -180,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_epl_on",
+                 "property": "image"
+               }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": -43,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_epl_off",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": -43,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_epl_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": -43,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_active_epl_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                  "binding": "bnd_false_epl_off",
+                  "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_true_epl_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "GenericButton",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": -43,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "clickAction": "act_confirm_epl"                                  
+       },
+       {              
+           "commonName": "SimpleButton",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+           "marginLeft": 577,
+           "marginTop": -5,            
+           "clickAction": "act_tab_laliga",           
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_laliga_off",
+                 "property": "label"
+               }
+            ],
+            "textStyles":
+            [
+                "TF_LIVE_TILE_HEADLINE_BOLD_SMALL"
+            ]          
+        },
+        {
+            "commonName": "Label",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+	        "textAlignH": "LEFT",
+            "marginLeft": 577,
+            "marginTop": -5,    
+            "fontSize": 18,
+            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+            "fontColor": "0xffffff",
+            "forceCaps": true,                 
+            "bindings":
+            [
+               {
+                   "binding": "bnd_label_laliga_on",
+                   "property": "text"
+                }
+             ]
+         },
+         {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginTop": -8,
+             "marginLeft": -226,
+             "alpha": 0.6,
+             "width": 27,
+             "height": 27,
+             "bindings": 
+             [
+                {
+                    "binding": "bnd_logo_laliga_off",
+                    "property": "image"
+                 }
+              ]
+         },
+         {
+              "commonName": "Image",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": -8,
+              "marginLeft": -226,
+              "width": 27,
+              "height": 27,
+              "bindings": 
+              [
+                 {
+                    "binding": "bnd_logo_laliga_on",
+                    "property": "image"
+                  }
+               ]
+         },
+         {
+               "commonName": "Image",
+               "alignV": "CENTER",
+               "alignH": "CENTER",
+               "marginTop": -6,
+               "marginLeft": -180,
+               "alpha": 0.6,
+               "width": 30,
+               "height": 26,
+               "bindings": 
+               [
+                {
+                    "binding": "bnd_flag_laliga_off",
+                    "property": "image"
+                 }
+              ]
+         },
+         {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginTop": -6,
+             "marginLeft": -180,
+             "width": 30,
+             "height": 26,
+             "bindings": 
+             [
+                {
+                    "binding": "bnd_flag_laliga_on",
+                    "property": "image"
+                 }
+              ]
+              },
+         {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginLeft": 225,
+             "marginTop": -3,
+             "scaleX": 0.09,
+             "scaleY": 0.09,
+             "bindings": 
+             [
+                {
+                    "binding": "bnd_icon_laliga_off",
+                    "property": "image"
+                 }
+              ]
+         },
+         {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginLeft": 225,
+             "marginTop": -3,
+             "scaleX": 0.09,
+             "scaleY": 0.09,
+             "bindings": 
+             [
+                {
+                    "binding": "bnd_icon_laliga_on",
+                    "property": "image"
+                 }
+              ]
+              },
+         {
+             "commonName": "Image",
+             "alignV": "CENTER",
+             "alignH": "CENTER",
+             "marginLeft": 225,
+             "marginTop": -3,
+             "scaleX": 0.09,
+             "scaleY": 0.09,
+             "bindings": 
+             [
+                {
+                    "binding": "bnd_active_laliga_on",
+                    "property": "image"
+                 }
+              ]
+          },
+          {
+              "commonName": "Image",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 0,
+              "marginTop": -150,
+              "scaleX": 0.2,
+              "scaleY": 0.2,
+              "bindings": 
+              [
+                 {
+                    "binding": "bnd_false_laliga_off",
+                    "property": "image"
+                 }
+              ]
+          },
+          {
+              "commonName": "Image",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 0,
+              "marginTop": -150,
+              "scaleX": 0.2,
+              "scaleY": 0.2,
+              "bindings": 
+              [
+                 {
+                    "binding": "bnd_true_laliga_on",
+                    "property": "image"
+                 }
+              ]
+         },
+          {
+              "commonName": "GenericButton",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 225,
+              "marginTop": -3,
+              "scaleX": 0.09,
+              "scaleY": 0.09,
+              "clickAction": "act_confirm_laliga"
+       },
+       {              
+           "commonName": "SimpleButton",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+           "marginLeft": 547,
+           "marginTop": 35,            
+           "clickAction": "act_tab_seriea",           
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_seriea_off",
+                 "property": "label"
+               }
+           ],
+           "textStyles":
+           [
+               "TF_LIVE_TILE_HEADLINE_BOLD_SMALL"
+           ]          
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+	       "textAlignH": "LEFT",
+           "marginLeft": 577,
+           "marginTop": 35,    
+           "fontSize": 18,
+           "fontFace": "$FONT_CRUYFFSANSHEAVY",
+           "fontColor": "0xffffff",
+           "forceCaps": true,                 
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_seriea_on",
+                 "property": "text"
+              }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 32,
+           "marginLeft": -226,
+           "alpha": 0.6,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_seriea_off",
+                 "property": "image"
+              }
+           ]        
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 32,
+           "marginLeft": -226,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_seriea_on",
+                 "property": "image"
+              }
+           ]   
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 34,
+           "marginLeft": -180,
+           "alpha": 0.6,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_seriea_off",
+                 "property": "image"
+               }
+           ]     
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 34,
+           "marginLeft": -180,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_seriea_on",
+                 "property": "image"
+               }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 37,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_seriea_off",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 37,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_seriea_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 37,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_active_seriea_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                  "binding": "bnd_false_seriea_off",
+                  "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_true_seriea_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "GenericButton",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 37,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "clickAction": "act_confirm_seriea"  
+       },
+       {              
+           "commonName": "SimpleButton",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+           "marginLeft": 553,
+           "marginTop": 75,            
+           "clickAction": "act_tab_bundesliga",           
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_bundesliga_off",
+                 "property": "label"
+               }
+           ],
+           "textStyles":
+           [
+               "TF_LIVE_TILE_HEADLINE_BOLD_SMALL"
+           ]          
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+	       "textAlignH": "LEFT",
+           "marginLeft": 576,
+           "marginTop": 75,    
+           "fontSize": 18,
+           "fontFace": "$FONT_CRUYFFSANSHEAVY",
+           "fontColor": "0xffffff",
+           "forceCaps": true,                 
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_bundesliga_on",
+                 "property": "text"
+              }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 72,
+           "marginLeft": -226,
+           "alpha": 0.6,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_bundesliga_off",
+                 "property": "image"
+              }
+           ]        
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 72,
+           "marginLeft": -226,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_bundesliga_on",
+                 "property": "image"
+              }
+           ]   
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 74,
+           "marginLeft": -180,
+           "alpha": 0.6,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_bundesliga_off",
+                 "property": "image"
+               }
+           ]     
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 74,
+           "marginLeft": -180,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_bundesliga_on",
+                 "property": "image"
+               }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 77,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_bundesliga_off",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 77,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_bundesliga_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 77,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_active_bundesliga_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                  "binding": "bnd_false_bundesliga_off",
+                  "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_true_bundesliga_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "GenericButton",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 77,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "clickAction": "act_confirm_bundesliga"  
+           
+       },
+       {              
+           "commonName": "SimpleButton",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+           "marginLeft": 586,
+           "marginTop": 115,            
+           "clickAction": "act_tab_ligue",           
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_ligue_off",
+                 "property": "label"
+               }
+           ],
+           "textStyles":
+           [
+               "TF_LIVE_TILE_HEADLINE_BOLD_SMALL"
+           ]          
+       },
+       {
+           "commonName": "Label",
+           "alignV": "CENTER",
+           "alignH": "LEFT",
+	       "textAlignH": "LEFT",
+           "marginLeft": 576,
+           "marginTop": 115,    
+           "fontSize": 18,
+           "fontFace": "$FONT_CRUYFFSANSHEAVY",
+           "fontColor": "0xffffff",
+           "forceCaps": true,                 
+           "bindings":
+           [
+              {
+                 "binding": "bnd_label_ligue_on",
+                 "property": "text"
+              }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 112,
+           "marginLeft": -226,
+           "alpha": 0.6,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_ligue_off",
+                 "property": "image"
+              }
+           ]        
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 112,
+           "marginLeft": -226,
+           "width": 29,
+           "height": 29,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_logo_ligue_on",
+                 "property": "image"
+              }
+           ]   
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 114,
+           "marginLeft": -180,
+           "alpha": 0.6,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_ligue_off",
+                 "property": "image"
+               }
+           ]     
+      },
+      {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginTop": 114,
+           "marginLeft": -180,
+           "width": 30,
+           "height": 26,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_flag_ligue_on",
+                 "property": "image"
+               }
+           ]     
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 117,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_ligue_off",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 117,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_icon_ligue_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 225,
+           "marginTop": 117,
+           "scaleX": 0.09,
+           "scaleY": 0.09,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_active_ligue_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                  "binding": "bnd_false_ligue_off",
+                  "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Image",
+           "alignV": "CENTER",
+           "alignH": "CENTER",
+           "marginLeft": 0,
+           "marginTop": -150,
+           "scaleX": 0.2,
+           "scaleY": 0.2,
+           "bindings": 
+           [
+              {
+                 "binding": "bnd_true_ligue_on",
+                 "property": "image"
+               }
+           ]
+       },
+       {
+           "commonName": "Panel",
+           "name": "Action",
+           "alignV": "BOTTOM",
+           "alignH": "CENTER",
+           "marginBottom": 60,
+           "marginLeft": 0,
+           "height": 42,
+           "width": 335,
+           "children":
+           [
+               {
+                   "commonName": "SimpleButton",
+                   "alignH": "CENTER",
+                   "alignV": "FILL",
+                   "width": 180,
+                   "backgroundImage": "$_ClickToEnterOn2",
+                   "backgroundHighlightImage": "$_ClickToEnterOn2",
+                   "clickAction": "act_confirm_ligue"
+               },
+               {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginLeft": 3,
+                   "marginBottom": -1,
+                   "width": 170,
+                   "autoScroll": true,
+                   "fontSize": 17,
+                   "fontColor": "0xFFFFFF",
+                   "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                   "text": "Advance"
+               }
+           ]
+       }
+   ]
+}

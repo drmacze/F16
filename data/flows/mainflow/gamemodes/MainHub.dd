@@ -1,0 +1,159 @@
+{
+	"actions":
+	[
+        {
+			"viewname": "act_menu_ko",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_ko"
+		    }
+		},
+		{
+			"viewname": "act_menu_tn",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_tn"
+		    }
+		},
+		{
+			"viewname": "act_menu_cm",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_cm"
+		    }
+		},
+		{
+			"viewname": "act_menu_pc",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_pc"
+		    }
+		},
+		{
+			"viewname": "act_menu_rm",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_menu_rm"
+		    }
+		},
+		{
+            "viewname": "act_enter_md",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_enter_md"
+		    }
+		},
+        {
+            "viewname": "act_enter_cl",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_enter_cl"
+            }
+		},
+        {
+            "viewname": "act_enter_md",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_enter_md"
+            }
+		},
+        {
+            "viewname": "act_to_credits",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_to_credits"
+            }
+        },
+        {
+            "viewname": "act_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_customize"
+            }
+        },
+        {
+            "viewname": "act_news",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_news"
+            }
+        },
+        {
+            "viewname": "act_to_about",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_about"
+            }
+		},
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+		{
+            "viewname": "act_to_info_tile",
+            "actionname": "act_to_info_tile"
+        },
+		{
+            "viewname": "act_to_mod_tile",
+            "actionname": "act_to_mod_tile"
+        },
+        {
+            "viewname": "act_match_play",
+            "actionname": "act_match_play"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team1",
+            "binding": "bnd_team1",
+			"type": "object"
+    	},
+        {
+            "viewname": "bnd_team2",
+            "binding": "bnd_team2",
+			"type": "object"
+        },
+        {
+            "viewname": "bnd_live_model_bg",
+            "binding": "bnd_live_model_bg",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_live_model_ads",
+            "binding": "bnd_live_model_ads",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_Menu_bg",
+            "binding": "bnd_Menu_bg",
+			"type": "object"
+    	},
+		{
+		    "viewname": "bnd_model",
+            "binding": "bnd_model",
+			"type": "object"
+	   }
+  ]
+}

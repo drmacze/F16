@@ -1,0 +1,141 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "PlayerRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_REGULAR",
+            "fontColor": "$TILE_COLOR_LABEL",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_SIZE_SMALLEST_HEADER"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_REGULAR",
+            "textAlignH": "RIGHT",
+            "fontColor": "$TILE_COLOR_VALUE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+        "dataProviders.PlayerAvatar": "RowPanel.RowLeftPanel.PlayerAvatar.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.Rating": "RowPanel.RowRightPanel.PlayerRating.text",
+        "dataProviders.FontColor": "RowPanel.RowLeftPanel.Position.fontColor",
+        "dataProviders.FontColor": "RowPanel.RowLeftPanel.PlayerName.fontColor",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 500,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width":495,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0xFFFFFF",
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Position",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 10,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "PlayerAvatar",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 100,
+                            "width": 50,
+                            "height": 50
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 1
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "marginRight": 0,
+                    "width": 100,
+                    "height": 100,
+                    "children":
+                    [
+                       {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x00fc7f",
+                            "highlightable": true,
+                            "visible":false,
+                            "alpha": 0
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerRating",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

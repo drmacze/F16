@@ -1,0 +1,24 @@
+{
+    "name": "Keyboard",
+    "states":
+    [
+        {
+            "name": "RedirectKeyboard",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Keyboard.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        }       
+    ]
+}

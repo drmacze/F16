@@ -1,0 +1,495 @@
+{
+    "data":
+    [
+        {
+            "viewname": "bnd_fontFace",
+            "binding":  "bnd_fontFace",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_bg1_color",
+            "binding":  "bnd_bg1_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg2_color",
+            "binding":  "bnd_bg2_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg1_color_width",
+            "binding":  "bnd_bg1_color_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_bg2_color_width",
+            "binding":  "bnd_bg2_color_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_bg1_color_left",
+            "binding":  "bnd_bg1_color_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_bg2_color_left",
+            "binding":  "bnd_bg2_color_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_bg1_color_alignH",
+            "binding":  "bnd_bg1_color_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg2_color_alignH",
+            "binding":  "bnd_bg2_color_alignH",
+            "type":     "string"
+        },
+        
+        {
+            "viewname": "bnd_eventinfo_alignV",
+            "binding":  "bnd_eventinfo_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_eventinfo_alignH",
+            "binding":  "bnd_eventinfo_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_eventinfo_bottom",
+            "binding":  "bnd_eventinfo_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_eventinfo_left",
+            "binding":  "bnd_eventinfo_left",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_bg_avatar_color",
+            "binding":  "bnd_bg_avatar_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar",
+            "binding":  "bnd_goal_player_avatar",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar_alignV",
+            "binding":  "bnd_goal_player_avatar_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar_alignH",
+            "binding":  "bnd_goal_player_avatar_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar_top",
+            "binding":  "bnd_goal_player_avatar_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar_bottom",
+            "binding":  "bnd_goal_player_avatar_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar_left",
+            "binding":  "bnd_goal_player_avatar_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_avatar_right",
+            "binding":  "bnd_goal_player_avatar_right",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_goal_player_name",
+            "binding":  "bnd_goal_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_name_fontSize",
+            "binding":  "bnd_goal_player_name_fontSize",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_name_fontColor",
+            "binding":  "bnd_goal_player_name_fontColor",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_name_alignV",
+            "binding":  "bnd_goal_player_name_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_name_alignH",
+            "binding":  "bnd_goal_player_name_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_name_top",
+            "binding":  "bnd_goal_player_name_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_name_bottom",
+            "binding":  "bnd_goal_player_name_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_name_left",
+            "binding":  "bnd_goal_player_name_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_name_right",
+            "binding":  "bnd_goal_player_name_right",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_goal_player_level",
+            "binding":  "bnd_goal_player_level",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_level_fontColor",
+            "binding":  "bnd_goal_player_level_fontColor",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_level_fontSize",
+            "binding":  "bnd_goal_player_level_fontSize",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_level_alignV",
+            "binding":  "bnd_goal_player_level_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_level_alignH",
+            "binding":  "bnd_goal_player_level_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_level_top",
+            "binding":  "bnd_goal_player_level_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_level_bottom",
+            "binding":  "bnd_goal_player_level_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_level_left",
+            "binding":  "bnd_goal_player_level_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_level_right",
+            "binding":  "bnd_goal_player_level_right",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_goal_player_count",
+            "binding":  "bnd_goal_player_count",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_count_fontColor",
+            "binding":  "bnd_goal_player_count_fontColor",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_count_fontSize",
+            "binding":  "bnd_goal_player_count_fontSize",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_count_alignV",
+            "binding":  "bnd_goal_player_count_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_count_alignH",
+            "binding":  "bnd_goal_player_count_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_count_top",
+            "binding":  "bnd_goal_player_count_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_count_bottom",
+            "binding":  "bnd_goal_player_count_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_count_left",
+            "binding":  "bnd_goal_player_count_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_count_right",
+            "binding":  "bnd_goal_player_count_right",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_bg_crest_color",
+            "binding":  "bnd_bg_crest_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg_crest_color_alpha",
+            "binding":  "bnd_bg_crest_color_alpha",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_crest_width",
+            "binding":  "bnd_team_crest_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_height",
+            "binding":  "bnd_team_crest_height",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_alignV",
+            "binding":  "bnd_team_crest_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest_alignH",
+            "binding":  "bnd_team_crest_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest_top",
+            "binding":  "bnd_team_crest_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_bottom",
+            "binding":  "bnd_team_crest_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_left",
+            "binding":  "bnd_team_crest_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_right",
+            "binding":  "bnd_team_crest_right",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_text",
+            "binding":  "bnd_text",
+            "type": 	  "string"
+        },
+        {
+            "viewname": "bnd_visible",
+            "binding": "bnd_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_player_visible",
+            "binding": "bnd_player_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_alpha",
+            "binding": "bnd_alpha",
+            "type": "float"
+        },
+        {
+            "viewname": "bnd_nationalization",
+            "binding": "bnd_nationalization",
+            "type": "int"
+        },
+
+        {
+            "viewname": "bnd_goal_player_desc",
+            "binding":  "bnd_goal_player_desc",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_fontColor",
+            "binding":  "bnd_goal_player_desc_fontColor",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_fontSize",
+            "binding":  "bnd_goal_player_desc_fontSize",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_alignV",
+            "binding":  "bnd_goal_player_desc_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_alignH",
+            "binding":  "bnd_goal_player_desc_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_top",
+            "binding":  "bnd_goal_player_desc_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_bottom",
+            "binding":  "bnd_goal_player_desc_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_left",
+            "binding":  "bnd_goal_player_desc_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_player_desc_right",
+            "binding":  "bnd_goal_player_desc_right",
+            "type":     "int"
+        },
+
+        
+        {
+            "viewname": "bnd_goal_desc",
+            "binding":  "bnd_goal_desc",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_goal_time",
+            "binding":  "bnd_goal_time",
+            "type":			"string"
+        },
+        {
+            "viewname": "bnd_goal_desctime_fontColor",
+            "binding":  "bnd_goal_desctime_fontColor",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_desctime_fontSize",
+            "binding":  "bnd_goal_desctime_fontSize",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_desctime_alignV",
+            "binding":  "bnd_goal_desctime_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_desctime_alignH",
+            "binding":  "bnd_goal_desctime_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_desctime_top",
+            "binding":  "bnd_goal_desctime_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_desctime_bottom",
+            "binding":  "bnd_goal_desctime_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_desctime_left",
+            "binding":  "bnd_goal_desctime_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_desctime_right",
+            "binding":  "bnd_goal_desctime_right",
+            "type":     "int"
+        },
+
+       {
+            "viewname": "bnd_goal_type",
+            "binding":  "bnd_goal_type",
+            "type": 		"string"
+        },
+        {
+            "viewname": "bnd_goal_type_fontColor",
+            "binding":  "bnd_goal_type_fontColor",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_type_fontSize",
+            "binding":  "bnd_goal_type_fontSize",
+            "type": 		"int"
+        },
+        {
+            "viewname": "bnd_goal_type_alignV",
+            "binding":  "bnd_goal_type_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_type_alignH",
+            "binding":  "bnd_goal_type_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_goal_type_top",
+            "binding":  "bnd_goal_type_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_type_bottom",
+            "binding":  "bnd_goal_type_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_type_left",
+            "binding":  "bnd_goal_type_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_goal_type_right",
+            "binding":  "bnd_goal_type_right",
+            "type":     "int"
+        },
+		{
+            "viewname": "bnd_data",
+            "binding": "bnd_data",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "team": "string",
+                    "kitNumber": "string",
+                    "playerName": "string",
+                    "bottomText": "string",
+                    "showBottomText": "bool",
+                    "iconType": "int"
+                }
+            }
+        }
+        
+    ]
+}

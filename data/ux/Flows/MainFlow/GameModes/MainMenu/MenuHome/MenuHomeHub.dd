@@ -1,0 +1,70 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_kickoff",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_kickoff"
+			}
+		},
+		{
+			"viewname": "act_playrivalmatch",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_playrivalmatch"
+			}
+		},
+		{
+			"viewname": "act_playaivsai",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_playaivsai"
+			}
+		},
+		{
+			"viewname": "act_help",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_help"
+			}
+		},
+		{
+			"viewname": "act_about",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_about"
+			}
+		}
+	],
+	"data":
+	[
+
+		{
+			"viewname": "bnd_live_tile_kickoff",
+			"binding": "bnd_live_tile_kickoff",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_fifa16playbeautiful",
+			"binding": "bnd_live_tile_fifa16playbeautiful",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_playrivalmatch_playaivsai",
+			"binding": "bnd_live_tile_playrivalmatch_playaivsai",
+			"type": "object"
+		},
+		{
+			"viewname": "bnd_live_tile_help_about",
+            "binding": "bnd_live_tile_help_about",
+			"type": "object"
+		}
+		
+	]
+}

@@ -1,0 +1,56 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_advance"
+            }
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_toggle_home",
+            "actionname": "act_toggle_home"
+        },
+        {
+            "viewname": "act_toggle_away",
+            "actionname": "act_toggle_away"
+        },
+        {
+            "viewname": "act_toggle_com",
+            "actionname": "act_toggle_com"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_side_home_icon",
+            "binding": "bnd_side_home_icon",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_side_away_icon",
+            "binding": "bnd_side_away_icon",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_side_com_icon1",
+            "binding": "bnd_side_com_icon1",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_side_com_icon2",
+            "binding": "bnd_side_com_icon2",
+            "type": "string"
+        }
+    ]
+}

@@ -1,0 +1,213 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "PlayerRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontColor": "$TILE_COLOR_LABEL",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_SIZE_SMALLEST_HEADER"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "textAlignH": "RIGHT",
+            "fontColor": "$TILE_COLOR_VALUE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+        "dataProviders.Country": "RowPanel.RowLeftPanel.Country.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.TeamRating.stars",
+        "dataProviders.Number": "RowPanel.RowLeftPanel.NumberLabel.text",
+        "dataProviders.PlayerAvatar": "RowPanel.RowLeftPanel.PlayerAvatar.image",
+        "dataProviders.PlayerNationality": "RowPanel.RowLeftPanel.PlayerNationality.image",
+        "dataProviders.HomeTeamCrest": "RowPanel.RowLeftPanel.HomeTeamCrest.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.PlayerRating.text",
+        "dataProviders.FontColor": "RowPanel.RowLeftPanel.Position.fontColor",
+        "dataProviders.FontColor": "RowPanel.RowLeftPanel.PlayerName.fontColor",
+        "height": "RowPanel.height"
+    },
+"children": [
+    {
+      "commonName": "Panel",
+      "name": "RowPanel",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "RowLeftPanel",
+          "width": 400,
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "children":
+          [         
+            {
+              "commonName": "Image",
+              "name": "PlayerAvatar",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": -5,
+              "marginLeft": 0,
+              "width": 100,
+              "height": 100,
+              "scaleX": 1.15,
+              "scaleY": 1.15
+            },
+            {
+              "commonName": "Label",
+              "name": "PlayerName",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 90,
+              "marginLeft": 0,
+              "fontSize": 20,            
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "fontColor": "$COLOR_WHITE"            
+            },
+            {
+              "commonName": "Image",
+              "name": "Country",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 134,
+              "marginRight": 95,
+              "alpha": 0,
+              "scaleX": 0.2,
+              "scaleY": 0.2
+            },
+            {
+              "commonName": "Image",
+              "name": "HomeTeamCrest",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 160,
+              "marginRight": 70,
+              "alpha": 0,
+              "scaleX": 0.35,
+              "scaleY": 0.35
+            },
+            {
+              "commonName": "Label",
+              "name": "Position",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "textAlignH": "CENTER",
+              "marginTop": 135,
+              "marginLeft": 125,
+              "fontSize": 15,
+              "fontFace": "$FONT_CRUYFFSANSREGULAR",
+              "fontColor": "0xFFFFFF",
+              "alpha": 1
+            },
+            {
+              "commonName": "Label",
+              "name": "NameTeam",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "textAlignH": "LEFT",
+              "marginTop": 160,
+              "marginLeft": 145,
+              "fontSize": 0,
+              "fontFace": "$FONT_CRUYFFSANSREGULAR",
+              "fontColor": "0xFFFFFF",
+              "alpha": 1
+            },
+            {
+              "commonName": "Label",
+              "name": "NumberLabel",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 135,
+              "marginLeft": 4,
+              "fontSize": 15,
+              "fontFace": "$FONT_CRUYFFSANSREGULAR",
+              "fontColor": "0xFFFFFF",
+              "alpha": 1
+            },
+            {
+              "commonName": "Label",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 145,
+              "marginLeft": 50,
+              "fontSize": 15,
+              "fontFace": "$FONT_CRUYFFSANSREGULAR",
+              "fontColor": "0xFFFFFF",
+              "text": ""
+            },
+            {
+              "commonName": "Label",
+              "name": "PlayerRating",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 135,
+              "marginLeft": 75,
+              "fontSize": 15,
+              "fontFace": "$FONT_CRUYFFSANSREGULAR",
+              "fontColor": "0xFFFFFF",
+              "alpha": 1
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": -30,
+              "marginTop": 134,
+              "width": 2,
+              "height": 18,
+              "color": "0x757575",
+              "alpha": 0.4
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 40,
+              "marginTop": 134,
+              "width": 2,
+              "height": 18,
+              "color": "0x757575",
+              "alpha": 0.4
+            },
+            {
+              "commonName": "Rectangle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": 55,
+              "width": 220,
+              "height": 2,
+              "color": "0x757575",
+              "alpha": 0.2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

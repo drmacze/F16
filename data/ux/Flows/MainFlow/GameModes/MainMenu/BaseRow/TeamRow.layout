@@ -1,0 +1,121 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "TeamRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_BOLD",
+            "fontColor": "$TILE_COLOR_LABEL",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_BOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_BOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$TILE_COLOR_VALUE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.TeamRating.stars",
+        "dataProviders.TeamNameFontColor": "RowPanel.RowLeftPanel.TeamName.fontColor",
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 800,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width":500,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "TeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 10,
+                            "width": 50,
+                            "height": 50
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamName",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 20,
+                            "marginLeft": 80,
+                            "fontSize": 25,
+                            "fontFace": "$FONT_DINPROBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "width": 300,
+                            "autoScroll":true
+                        },
+                        {
+                            "commonName": "StarRating",
+                            "name":"TeamRating",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 30,
+                            "marginLeft": 80
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "BOTTOM",
+                            "alignH": "FILL",
+                            "marginBottom": 0,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.2
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 10,
+                            "width": 40,
+                            "height": 40,
+                            "type": "$icon_match_ball_1",
+                            "alpha": 0.9
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

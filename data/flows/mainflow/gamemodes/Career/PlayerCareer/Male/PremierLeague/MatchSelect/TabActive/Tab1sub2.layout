@@ -1,0 +1,91 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "MatchDay",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 150,
+            "marginTop": 20,
+            "width": 500,
+            "height": 500,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_match_visible",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Info",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 80,
+                    "marginLeft": 0,
+                    "width": 400,
+                    "height": 45,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0xFFFFFF",
+                            "outlineAlpha": 1,
+                            "cornerRaduis": 7
+						},
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 10,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$IconCheckMark"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 1,
+                            "marginLeft": 45,
+                            "fontSize": 17,
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "fontColor": "0x000000",
+                            "text": "Opponent Analysis"
+                        },
+                        {
+                            "commonName": "GenericButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_opponent"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

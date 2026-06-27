@@ -1,0 +1,117 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab1sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1sub1"
+            }
+        },
+        {
+            "viewname": "act_tab1sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1sub2"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_tab2sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2sub1"
+            }
+        },
+        {
+            "viewname": "act_tab2sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2sub2"
+            }
+        },
+        {
+            "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_enter_cm",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_cm"
+            }
+        },
+        {
+            "viewname": "act_enter_md",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_md"
+            }
+        },
+        {
+            "viewname": "act_enter_ucl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_ucl"
+            }
+        },
+        {
+            "viewname": "act_enter_uwcl",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_uwcl"
+            }
+        },
+        {
+            "viewname": "act_enter_libertadores",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_enter_libertadores"
+            }
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_ads",
+            "binding":  "bnd_ads",
+            "type":     "object"
+        }
+    ]
+}

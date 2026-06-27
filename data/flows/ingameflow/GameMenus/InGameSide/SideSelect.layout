@@ -1,0 +1,233 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_2"
+         },
+         {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Home_Away"
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianSide",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -30,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 15,
+                    "marginLeft": 0,
+                    "width": 930,
+                    "height": 470,
+                    "cornerRaduis": 13,
+                    "alpha": 0,
+                    "color": "0x202020"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginTop": 15,
+                    "marginLeft": 0,
+                    "width": 170,
+                    "height": 440,
+                    "alpha": 0.6,
+                    "type": "$Bg_SideSelect"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_com"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": -250,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_home"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 250,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_away"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Com",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_com_icon1",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Com",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_com_icon2",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Home",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": -360,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_home_icon",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Away",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 165,
+                    "marginLeft": 360,
+                    "width": 430,
+                    "height": 130,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_away_icon",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

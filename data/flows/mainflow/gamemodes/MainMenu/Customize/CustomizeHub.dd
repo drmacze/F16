@@ -1,0 +1,176 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+             }
+		},
+        {
+			"viewname": "act_gamesettings",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_gamesettings"
+			}
+		},
+		{
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+		{
+            "viewname": "act_to_about_tile",
+			"actionname": "act_to_about_tile"
+        },
+		{
+            "viewname": "act_to_credits_tile",
+			"actionname": "act_to_credits_tile"
+        },
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_back"
+            }
+        },
+		{
+	    	"viewname": "act_credits",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_credits"
+            }
+        },
+		{
+	    	"viewname": "act_to_controls_help_hub",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_controls_help_hub"
+            }
+        },
+		{
+            "viewname":   "act_to_disableshare_tile",
+            "actionname": "act_to_disableshare_tile"
+		},
+		{
+            "viewname":   "act_to_privacy_tile",
+            "actionname": "act_to_privacy_tile"
+		},
+		{
+            "viewname":   "act_to_licenseagreement_tile",
+            "actionname": "act_to_licenseagreement_tile"
+		},
+		{
+            "viewname":   "act_to_termsofservice_tile",
+            "actionname": "act_to_termsofservice_tile"
+		},
+		{
+            "viewname":   "act_to_music_tile",
+            "actionname": "act_to_music_tile"
+        },
+		{
+            "viewname":   "act_to_info_tile",
+            "actionname": "act_to_info_tile"
+        },
+		{
+            "viewname":   "act_to_update_tile",
+            "actionname": "act_to_update_tile"
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+		}
+	],
+    "data":
+    [   
+       {
+			"viewname": "bnd_live_tile_settings",
+			"binding": "bnd_live_tile_settings",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_easportstrack",
+            "binding": "bnd_live_tile_easportstrack",
+			"type": "live_tile"
+		},
+		{
+            "viewname": "bnd_general_about",
+            "binding":  "bnd_general_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_privacy_about",
+            "binding":  "bnd_privacy_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_licenseagreement_about",
+            "binding":  "bnd_licenseagreement_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_disableshare_about",
+            "binding":  "bnd_disableshare_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_termsofservice_about",
+            "binding":  "bnd_termsofservice_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_credits_about",
+            "binding":  "bnd_credits_about",
+            "type":     "live_tile"
+        },
+		{
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab6_visible",
+            "binding":  "bnd_tab6_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab7_visible",
+            "binding":  "bnd_tab7_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab8_visible",
+            "binding":  "bnd_tab8_visible",
+            "type":     "bool"
+        }		
+	]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "TeamSelect",
+    "let":  
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "BE_A_PRO"
+	},
+    "onEnter":
+    [
+
+        ["stateChange", ["PlayerMode"]],
+        ["SetGameMode", ["PlayerMode"]]
+
+    ],
+    
+    "states":
+    [
+		{
+            "name": "RedirectTeamSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_team_select",
+                    "targets": ["MyTeam"]
+                }
+            ]
+        },
+        {
+            "name": "MyTeam",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/MatchSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "TeamSelect",
+                "out_exit_gamemode1": "out_exit_gamemode"
+            }
+        }
+        
+    ]
+}

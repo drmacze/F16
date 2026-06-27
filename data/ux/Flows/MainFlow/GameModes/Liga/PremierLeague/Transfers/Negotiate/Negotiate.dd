@@ -1,0 +1,265 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+			"viewname": "act_min_bid_change",
+			"actionname": "act_min_bid_change"
+		},
+		{
+			"viewname": "act_max_bid_change",
+			"actionname": "act_max_bid_change"
+		},
+		{
+			"viewname": "act_min_buy_change",
+			"actionname": "act_min_buy_change"
+		},
+		{
+			"viewname": "act_max_buy_change",
+			"actionname": "act_max_buy_change"
+		},
+		{
+			"viewname":   "act_min_bid_focusOut",
+			"actionname": "act_min_bid_focusOut"
+		},
+		{
+			"viewname":   "act_max_bid_focusOut",
+			"actionname": "act_max_bid_focusOut"
+		},
+		{
+			"viewname":   "act_min_buy_focusOut",
+			"actionname": "act_min_buy_focusOut"
+		},
+		{
+			"viewname":   "act_max_buy_focusOut",
+			"actionname": "act_max_buy_focusOut"
+		},
+		{
+			"viewname":   "act_text_change",
+			"actionname": "act_text_change"
+		},
+		{
+			"viewname":   "act_change_option",
+			"actionname": "act_change_option"
+		},
+		{
+			"viewname":   "act_focus_out",
+			"actionname": "act_focus_out"
+		},
+		{
+			"viewname":   "act_show_filter1_overlay",
+			"actionname": "act_show_filter1_overlay"
+		},
+		{
+			"viewname":   "act_show_filter2_overlay",
+			"actionname": "act_show_filter2_overlay"
+		},
+		{
+			"viewname":   "act_show_filter3_overlay",
+			"actionname": "act_show_filter3_overlay"
+		},
+		{
+			"viewname":   "act_show_filter4_overlay",
+			"actionname": "act_show_filter4_overlay"
+		},
+		{
+			"viewname":   "act_show_filter5_overlay",
+			"actionname": "act_show_filter5_overlay"
+		},
+		{
+			"viewname":   "act_show_filter6_overlay",
+			"actionname": "act_show_filter6_overlay"
+		},
+		{
+			"viewname":   "act_filter_overlay_cancel",
+			"actionname": "act_filter_overlay_cancel"
+		},
+		{
+			"viewname":   "act_filter_overlay_any",
+			"actionname": "act_filter_overlay_any"
+		},
+		{
+			"viewname":   "act_ab",
+			"actionname": "act_ab"
+		},
+		{
+			"viewname":   "act_cf",
+			"actionname": "act_cf"
+		},
+		{
+			"viewname":   "act_gl",
+			"actionname": "act_gl"
+		},
+		{
+			"viewname":   "act_mp",
+			"actionname": "act_mp"
+		},
+		{
+			"viewname":   "act_qs",
+			"actionname": "act_qs"
+		},
+		{
+			"viewname":   "act_tz",
+			"actionname": "act_tz"
+		},
+		{
+			"viewname":   "act_amount_decrease",
+			"actionname": "act_amount_decrease"
+		},
+		{
+			"viewname":   "act_amount_increase",
+			"actionname": "act_amount_increase"
+		},
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_search",
+            "actionname": "act_search"
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        }
+        
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_teamname_label",
+            "binding":  "bnd_teamname_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_teamstats_label",
+            "binding":  "bnd_teamstats_label",
+            "type":     "string"
+        },
+        {
+			"viewname": "bnd_pricing",
+			"type":     "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag":  "LTXT_AH_SEARCH_PRICING"
+			}
+		},
+		{
+			"viewname": "bnd_minimum_bid_price",
+			"type":     "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag":  "LTXT_AH_SEARCH_MIN_PRICE"
+			}
+		},
+		{
+			"viewname": "bnd_maximum_bid_price",
+			"type":     "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag":  "LTXT_AH_SEARCH_MAX_PRICE"
+			}
+		},
+		{
+			"viewname": "bnd_minimum_buy_now_price",
+			"type":     "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag":  "LTXT_AH_SEARCH_MIN_BUY_NOW"
+			}
+		},
+		{
+			"viewname": "bnd_maximum_buy_now_price",
+			"type":     "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag":  "LTXT_AH_SEARCH_MAX_BUY_NOW"
+			}
+		},
+		{
+			"viewname": "bnd_buy_now",
+			"type":     "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag":  "LTXT_AH_SEARCH_BUY_NOW"
+			}
+		},
+		{
+			"viewname": "bnd_min_bid",
+			"binding":  "bnd_min_bid",
+			"type":     "any"
+		},
+		{
+			"viewname": "bnd_max_bid",
+			"binding":  "bnd_max_bid",
+			"type":     "any"
+		},
+		{
+			"viewname": "bnd_min_buy",
+			"binding":  "bnd_min_buy",
+			"type":     "any"
+		},
+		{
+			"viewname": "bnd_max_buy",
+			"binding":  "bnd_max_buy",
+			"type":     "any"
+		},
+        {
+            "viewname": "bnd_teammp_label",
+            "binding":  "bnd_teammp_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_logo",
+            "binding":  "bnd_team_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_player_head",
+            "binding":  "bnd_player_head",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_status_label",
+            "binding":  "bnd_status_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_transfervalue_label",
+            "binding":  "bnd_transfervalue_label",
+            "type":     "string"
+        }
+        
+    ]
+}

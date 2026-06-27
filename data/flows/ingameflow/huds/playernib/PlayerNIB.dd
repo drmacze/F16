@@ -1,0 +1,200 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_camera_change",
+			"actionname": "act_camera_change"
+		}
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_crestBg_left",
+            "binding":  "bnd_crestBg_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crestBg_bottom",
+            "binding":  "bnd_crestBg_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crest_bottom",
+            "binding":  "bnd_crest_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crest_width",
+            "binding":  "bnd_crest_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crest_height",
+            "binding":  "bnd_crest_height",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crestBg_width",
+            "binding":  "bnd_crestBg_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crestBg_height",
+            "binding":  "bnd_crestBg_height",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_player_info_left",
+            "binding":  "bnd_player_info_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_crest_bg",
+            "binding":  "bnd_crest_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_crest_bg",
+            "binding":  "bnd_away_crest_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg",
+            "binding":  "bnd_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg_bottom",
+            "binding":  "bnd_bg_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_stamina_inner_bg",
+            "binding":  "bnd_stamina_inner_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stamina_width",
+            "binding":  "bnd_stamina_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_stamina_bottom",
+            "binding":  "bnd_stamina_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_stamina_outside_bg",
+            "binding":  "bnd_stamina_outside_bg",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stamina_short_width",
+            "binding":  "bnd_stamina_short_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_player_number",
+            "binding":  "bnd_player_number",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_name",
+            "binding":  "bnd_player_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_name_color",
+            "binding":  "bnd_player_name_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_number_color",
+            "binding":  "bnd_player_number_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_name_bottom",
+            "binding":  "bnd_player_name_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_player_number_bottom",
+            "binding":  "bnd_player_number_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_player_name_fontSize",
+            "binding": "bnd_player_name_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_player_number_fontSize",
+            "binding": "bnd_player_number_fontSize",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_active",
+            "binding":  "bnd_active",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_rain_visible",
+            "binding":  "bnd_rain_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_snow_visible",
+            "binding":  "bnd_snow_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_weather_type",
+            "binding":  "bnd_weather_type",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_alpha",
+            "binding":  "bnd_alpha",
+            "type":"float"
+        },
+        {
+            "viewname": "bnd_player_info",
+            "binding":  "bnd_player_info",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_stamina",
+            "binding":  "bnd_stamina",
+            "type":
+            {
+                "metaType": "object",
+                "members":
+                {
+                    "stamina":      "float",
+                    "shortStamina": "float"
+                }
+            }
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding":  "bnd_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding":  "bnd_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_forceCaps",
+            "binding":  "bnd_forceCaps",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_fontFace",
+            "binding":  "bnd_fontFace",
+            "type":     "int"
+        }
+    ]
+}

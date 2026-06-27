@@ -1,0 +1,242 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }        
+        },
+        {
+            "viewname": "act_team_select",
+            "actionname": "act_team_select"  
+        },
+        {
+            "viewname": "act_selected",
+            "actionname": "act_selected"  
+        },
+        {
+            "viewname": "act_confirm",
+            "actionname": "act_confirm"  
+        },
+        {
+            "viewname": "act_random",
+            "actionname": "act_random"  
+        }               
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_team_list",
+            "binding":  "bnd_team_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team_rating",
+            "binding":  "bnd_team_rating",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team1",
+            "binding":  "bnd_team1",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team2",
+            "binding":  "bnd_team2",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team3",
+            "binding":  "bnd_team3",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team4",
+            "binding":  "bnd_team4",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team5",
+            "binding":  "bnd_team5",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team6",
+            "binding":  "bnd_team6",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team7",
+            "binding":  "bnd_team7",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team8",
+            "binding":  "bnd_team8",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team9",
+            "binding":  "bnd_team9",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team10",
+            "binding":  "bnd_team10",
+            "type":     "object"          
+        },
+        {
+            "viewname": "bnd_team11",
+            "binding":  "bnd_team11",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team12",
+            "binding":  "bnd_team12",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team13",
+            "binding":  "bnd_team13",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team14",
+            "binding":  "bnd_team14",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team15",
+            "binding":  "bnd_team15",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team16",
+            "binding":  "bnd_team16",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team17",
+            "binding":  "bnd_team17",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team18",
+            "binding":  "bnd_team18",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team19",
+            "binding":  "bnd_team19",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team20",
+            "binding":  "bnd_team20",
+            "type":     "object"                      
+        },
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab5_visible",
+            "binding":  "bnd_tab5_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab6_visible",
+            "binding":  "bnd_tab6_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab7_visible",
+            "binding":  "bnd_tab7_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab8_visible",
+            "binding":  "bnd_tab8_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab9_visible",
+            "binding":  "bnd_tab9_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab10_visible",
+            "binding":  "bnd_tab10_visible",
+            "type":     "bool"            
+        },
+        {
+            "viewname": "bnd_tab11_visible",
+            "binding":  "bnd_tab11_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab12_visible",
+            "binding":  "bnd_tab12_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab13_visible",
+            "binding":  "bnd_tab13_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab14_visible",
+            "binding":  "bnd_tab14_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab15_visible",
+            "binding":  "bnd_tab15_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab16_visible",
+            "binding":  "bnd_tab16_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab17_visible",
+            "binding":  "bnd_tab17_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab18_visible",
+            "binding":  "bnd_tab18_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab19_visible",
+            "binding":  "bnd_tab19_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab20_visible",
+            "binding":  "bnd_tab20_visible",
+            "type":     "bool"            
+        }        
+    ]
+}

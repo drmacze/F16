@@ -1,0 +1,73 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "MatchDay",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 150,
+            "marginTop": 20,
+            "width": 500,
+            "height": 500,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_match_visible",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 10,
+                    "marginLeft": 0,
+                    "width": 146,
+                    "height": 42,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "marginLeft": 0,
+                            "marginTop": 0,
+                            "backgroundImage": "$_ClickToEnterOn5",
+                            "backgroundHighlightImage": "$_ClickToEnterOn5",
+                            "clickAction": "act_play"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 3,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Advance"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

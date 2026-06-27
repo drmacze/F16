@@ -1,0 +1,8 @@
+[
+    "/lua/common/ItemModel.lua",
+    "/lua/packages/tableutil.lua",
+    "/lua/common/FormationModel.lua",
+    "/lua/common/VirtualButton.lua",
+    "/lua/common/CommonEnums.lua",
+    "/lua/enums/card_service.lua"
+]

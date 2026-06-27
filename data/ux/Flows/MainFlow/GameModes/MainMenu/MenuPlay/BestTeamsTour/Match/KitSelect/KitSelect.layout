@@ -1,0 +1,270 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_advance",
+            "label": "Continue"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BestTeamsTourBackground"
+        },
+
+        {
+            "commonName": "Panel",
+            "name": "MenuPemilihanKits",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 480,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianKitsHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": -154,
+                    "width": 300,
+                    "height": 300,
+                    "children":
+                    [
+                       {
+                          "commonName": "GenericButton",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "marginLeft": 5,
+                          "width": 80,
+                          "height": 280,
+                          "clickAction": "act_home_kit_previous"
+                       },        
+                       {
+                          "commonName": "GenericButton",
+                          "alignV": "CENTER",
+                          "alignH": "RIGHT",
+                          "marginRight": 5,
+                          "width": 80,
+                          "height": 280,
+                          "clickAction": "act_home_kit_next"
+                       },
+                       {
+                          "commonName": "Asset",
+                          "alignV": "FILL",
+                          "alignH": "FILL",
+                          "type": "$LiveTileBackgroundIdle"
+                       },
+                       {
+                          "commonName": "Image",
+                          "alignV": "TOP",
+                          "alignH": "LEFT",
+                          "marginTop": 5,
+                          "marginLeft": 5,
+                          "width": 60,
+                          "height": 60,
+                          "bindings":
+                          [
+                              {
+                                 "binding": "bnd_home_team_crest",
+                                 "property": "image"
+                              }
+                          ]
+                       },
+                       {
+                          "commonName": "Asset",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "width": 45,
+                          "height": 45,
+                          "type": "$ArrowLeft"
+                       },
+                       {
+                          "commonName": "Asset",
+                          "alignV": "CENTER",
+                          "alignH": "RIGHT",
+                          "width": 45,
+                          "height": 45,
+                          "type": "$ArrowRight"
+                       },
+                       {
+                          "commonName": "Label",
+                          "alignV": "TOP",
+                          "alignH": "CENTER",
+                          "marginTop": 7,
+                          "marginLeft": -3,
+                          "fontSize": 27,
+			              "fontColor": "$COLOR_DARK_GRAY",
+			              "text": "TEAM HOME"
+                       },
+                       {
+                          "commonName": "Image",
+                          "name": "GambarKits",
+                          "alignV": "CENTER",
+                          "alignH": "CENTER",
+                          "marginBottom": -10,
+                          "width": 265,
+                          "height": 265,
+                          "bindings":
+                          [
+                             {
+                                 "binding": "bnd_2d_home_kit",
+                                 "property": "image"
+                             }
+                          ]
+                       }
+                   ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianKitsAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginRight": -154,
+                    "width": 300,
+                    "height": 300,
+                    "children":
+                    [
+                       {
+                          "commonName": "GenericButton",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "marginLeft": 5,
+                          "width": 80,
+                          "height": 280,
+                          "clickAction": "act_away_kit_previous"
+                       },        
+                       {
+                          "commonName": "GenericButton",
+                          "alignV": "CENTER",
+                          "alignH": "RIGHT",
+                          "marginRight": 5,
+                          "width": 80,
+                          "height": 280,
+                          "clickAction": "act_away_kit_next"
+                       },
+                       {
+                          "commonName": "Asset",
+                          "alignV": "FILL",
+                          "alignH": "FILL",
+                          "type": "$LiveTileBackgroundIdle"
+                       },
+                       {
+                          "commonName": "Image",
+                          "alignV": "TOP",
+                          "alignH": "LEFT",
+                          "marginTop": 5,
+                          "marginLeft": 5,
+                          "width": 60,
+                          "height": 60,
+                          "bindings":
+                          [
+                              {
+                                 "binding": "bnd_away_team_crest",
+                                 "property": "image"
+                              }
+                          ]
+                       },
+                       {
+                          "commonName": "Asset",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "width": 45,
+                          "height": 45,
+                          "type": "$ArrowLeft"
+                       },
+                       {
+                          "commonName": "Asset",
+                          "alignV": "CENTER",
+                          "alignH": "RIGHT",
+                          "width": 45,
+                          "height": 45,
+                          "type": "$ArrowRight"
+                       },
+                       {
+                          "commonName": "Label",
+                          "alignV": "TOP",
+                          "alignH": "CENTER",
+                          "marginTop": 7,
+                          "marginLeft": -3,
+                          "fontSize": 27,
+			              "fontColor": "$COLOR_DARK_GRAY",
+			              "text": "TEAM AWAY"
+                       },
+                       {
+                          "commonName": "Image",
+                          "name": "GambarKits",
+                          "alignV": "CENTER",
+                          "alignH": "CENTER",
+                          "marginBottom": -10,
+                          "width": 265,
+                          "height": 265,
+                          "bindings":
+                          [
+                             {
+                                 "binding": "bnd_2d_away_kit",
+                                 "property": "image"
+                             }
+                          ]
+                       }
+                  ]
+               }             
+           ]
+        }
+                
+    ]
+}

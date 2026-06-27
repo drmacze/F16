@@ -1,0 +1,373 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_IN" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_OUT" } ]
+	    }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "BtnClick"
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 775,
+                    "height": 30,
+                    "width": 130,
+                    "label": "Controller Settings",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 758,
+                    "height": 10,
+                    "width": 175,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "name": "VS",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -50,
+            "marginLeft": 0,
+            "fontSize": 100,
+            "scaleX": 3,
+            "scaleY": 2.5,
+            "fontColor": "0xffffff",
+            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+            "text": "VS",
+            "alpha": 0.04
+        },
+        {
+            "commonName": "Panel",
+            "name": "PlayerKits",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "PlayerHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": -420,
+                    "marginTop": 40,
+                    "height": 400,
+                    "width": 400,
+                    "bindings":
+                    [
+                        { 
+                            "binding": "bnd_man_team_home",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "PlayerAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginRight": -420,
+                    "marginTop": 40,
+                    "height": 400,
+                    "width": 400,
+                    "bindings":
+                    [
+                        { 
+                            "binding": "bnd_man_team_away",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "TeamsInfo",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 130,
+            "width": 700,
+            "height": 250,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "LogoTeamHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": -270,
+                    "width": 150,
+                    "height":150,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo_team_home",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "LogoTeamAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginRight": -270,
+                    "width": 150,
+                    "height":150,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_logo_team_away",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "HomeTeamName",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginLeft": -270,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontSize": 18,
+                    "forceCaps": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "AwayTeamName",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginRight": -270,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontSize": 18,
+                    "forceCaps": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Home",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginLeft": -270,
+                    "fontColor": "0x00FFE9",
+		            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "fontSize": 16,
+                    "forceCaps": true,
+                    "text": "Player 1"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Away",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginRight": -270,
+                    "fontColor": "0x00FF64",
+		            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "fontSize": 16,
+                    "forceCaps": true,
+                    "bindings":
+                    [
+                        {
+                            "property": "text",
+                            "binding": "bnd_match_difficulty"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -75,
+            "width": 228,
+            "height": 42,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "backgroundImage": "$_ClickToEnterOn4",
+                    "backgroundHighlightImage": "$_ClickToEnterOn4",
+                    "clickAction": "act_to_settings_customize"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Text",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 1,
+                    "marginLeft": 11,
+                    "width": 165,
+                    "autoScroll": true,
+                    "fontSize": 17,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "text": "Enter Controller Settings"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MatchPreviewInfo",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 130,
+            "width": 700,
+            "height": 100,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "name": "Player1",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": -10,
+                    "fontSize": 16,
+                    "fontColor": "0x00FFE9",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "forceCaps": false,
+                    "text": "Current Controller Preset"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "ControlInfo",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -25,
+                    "fontSize": 13,
+                    "fontColor": "0xFF0045",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "forceCaps": false,
+                    "text": "Player 1"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 20,
+                    "marginLeft": 0,
+                    "width": 105,
+                    "height": 70,
+                    "alpha": 1,
+                    "type": "$_IconController"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "ControlInfo",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": -25,
+                    "fontSize": 18,
+                    "fontColor": "0x979797",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "forceCaps": false,
+                    "text": "Classic"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MatchInfo",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 65,
+            "marginLeft": 0,
+            "width": 830,
+            "height": 37,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 8,
+                    "color": "0x1B1B2A",
+                    "alpha": 0.8
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 0,
+                    "marginBottom": 0,
+	          	  "width": 870,
+                    "fontSize": 15,
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_info_match",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

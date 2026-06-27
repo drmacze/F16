@@ -1,0 +1,287 @@
+{
+    "name": "MenuHub",
+    "initial":
+    {
+        "targets": ["RedirectMenuHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectMenuHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MenuHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab1sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab1sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab1sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab1sub2",
+                                            "targets": ["RedirectTab1sub2"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab1sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab1sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab1sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab1sub1",
+                                            "targets": ["RedirectTab1sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab2sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab2sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab2sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab2sub2",
+                                            "targets": ["RedirectTab2sub2"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab2sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab2sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab2sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab2sub1",
+                                            "targets": ["RedirectTab2sub1"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab3",
+                    "states":
+                    [
+                        {
+                            "name": "Tab3",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/mainflow/gamemodes/MainMenu/MenuKO/TabActive/Tab3.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_enter_cm",
+                    "targets": ["ClassicMatch"]
+                },
+                {
+                    "event": "evt_enter_md",
+                    "targets": ["MatchDay"]
+                },
+                {
+                    "event": "evt_enter_ucl",
+                    "targets": ["UCL"]
+                },
+                {
+                    "event": "evt_enter_uwcl",
+                    "targets": ["UWCL"]
+                },
+                {
+                    "event": "evt_enter_libertadores",
+                    "targets": ["Libertadores"]
+                }
+            ]
+        },
+        {
+            "name": "ClassicMatch",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickMatch/QuickMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab1sub1",
+                "out_exit_gamemode1": "RedirectTab1sub1"
+            }
+        },
+        {
+            "name": "MatchDay",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/MatchDay/MatchDay.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab1sub2",
+                "out_exit_gamemode1": "RedirectTab1sub2"
+            }
+        },
+        {
+            "name": "UCL",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/TeamMode/UCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2sub1",
+                "out_exit_gamemode1": "RedirectTab2sub1"
+            }
+        },
+        {
+            "name": "UWCL",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/TeamMode/UWCL/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab2sub2",
+                "out_exit_gamemode1": "RedirectTab2sub2"
+            }
+        },
+        {
+            "name": "Libertadores",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/QuickCup/TeamMode/Libertadores/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "RedirectTab3",
+                "out_exit_gamemode1": "RedirectTab3"
+            }
+        }
+    ]
+}

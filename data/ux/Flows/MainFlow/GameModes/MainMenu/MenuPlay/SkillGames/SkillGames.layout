@@ -1,0 +1,278 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+			"alignV": "CENTER",
+			"alignH": "CENTER",
+			"width": 800,
+			"height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 800,
+                    "height": 324,
+                    "type": "$LiveTileBackgroundIdle"
+                },
+                
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+
+				{
+					"commonName": "Label",
+					"alignV": "TOP",
+					"alignH": "CENTER",
+                    "fontColor": "$COLOR_WHITE",
+                   "fontSize": 25,
+					"marginTop": 5,
+					"text": "SKILL GAMES",
+					"styles":
+					[
+						"TF_SKILL_GAMES_TITLE"
+					]
+				},
+			    {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+					"marginTop": 46,
+                    "width": 787,
+                    "height": 271,
+                    "type": "$Gambar_SkillGames"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 800,
+                    "height": 120,
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuPlay",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "width": 262.5,
+                            "height": 120,
+                            "clickAction": "act_play",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$SkillGames_Icon3"
+                            ],
+                            "bindings":
+						    [
+							    {
+								    "binding": "bnd_live_tile_play",
+									"property": "dataProviders"
+							    }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 5,
+                            "marginRight": 179,
+                            "fontSize": 25,
+			                "fontColor": "$COLOR_DARK_GRAY",
+			                "text": "SQUAD"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 35,
+                            "marginRight": 186,
+                            "fontSize": 15,
+			                "fontColor": "$COLOR_DARK_GRAY",
+			                "text": "Put Skill on"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 50,
+                            "marginRight": 191,
+                            "fontSize": 15,
+			                "fontColor": "$COLOR_DARK_GRAY",
+			                "text": "Any Squad"
+                        },
+                        
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuPlay",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 262.5,
+                            "height": 120,
+                            "clickAction": "act_play",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$SkillGames_Icon2"
+                            ],
+                            "bindings":
+						    [
+							    {
+								    "binding": "bnd_live_tile_play",
+									"property": "dataProviders"
+							    }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 5,
+                            "marginLeft": -72,
+                            "fontSize": 25,
+			                "fontColor": "$COLOR_DARK_GRAY",
+			                "text": "TRAINING"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 35,
+                            "marginLeft": -66,
+                            "fontSize": 15,
+			                "fontColor": "$COLOR_DARK_GRAY",
+			                "text": "Play Training Match"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 50,
+                            "marginLeft": -62.5,
+                            "fontSize": 15,
+			                "fontColor": "$COLOR_DARK_GRAY",
+			                "text": "Against COMPUTER"
+                        },
+                        
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuInfo",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "width": 262.5,
+                            "height": 120,
+                            "clickAction": "act_info",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$SkillGames_Icon1"
+                            ],
+                            "bindings":
+						    [
+							    {
+								    "binding": "bnd_live_tile_info",
+									"property": "dataProviders"
+							    }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 5,
+                            "marginLeft": 5,
+                            "fontSize": 25,
+			                "fontColor": "$COLOR_WHITE",
+			                "text": "SKILL GAMES"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 35,
+                            "marginLeft": 5,
+                            "fontSize": 15,
+			                "fontColor": "$COLOR_WHITE",
+			                "text": "Select Skill Games"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 50,
+                            "marginLeft": 5,
+                            "fontSize": 15,
+			                "fontColor": "$COLOR_WHITE",
+			                "text": "to Improve Your Skill"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

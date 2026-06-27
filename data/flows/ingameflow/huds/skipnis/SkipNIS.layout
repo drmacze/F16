@@ -1,0 +1,12 @@
+{
+    "commonName": "Panel",
+    "alignH":     "FILL",
+    "alignV":     "FILL",
+	"behaviors":
+	[
+		{
+            "commonName": "MouseClickActionBehavior",
+            "actionName": "act_skip_nis"
+        }
+	]
+}

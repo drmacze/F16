@@ -1,0 +1,7 @@
+[
+    "TeamManagementModel.lua",
+    "/lua/common/PlayerViewModel.lua",
+    "/lua/common/VirtualButton.lua",
+	"/lua/enums/eventmanager.lua",
+	"/lua/common/CommonNavVars.lua"
+]

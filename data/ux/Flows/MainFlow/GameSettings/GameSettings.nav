@@ -1,0 +1,223 @@
+{
+    "name": "GameSettings",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["notifySettingsOpened"],
+        ["blockingLoadVVM", ["/Flows/MainFlow/GameSettings/GameSettings.vvm", ".context"]]
+    ],
+    "onExit":
+    [
+        ["notifySettingsClosed"],
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "states":
+            [
+            
+                {
+                    "name": "PengaturanMatch",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["SettingsCustomizeContent"]],
+                        ["setSettingsCustomizeTabContext", [0]],
+                        ["loadVVM", ["/Flows/MainFlow/GameSettings/PengaturanMatch/PengaturanMatch.vvm", ".context"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_pengaturan_kontrol",
+                            "targets": ["PengaturanKontrol"]
+                        },
+                        {
+                            "event": "evt_pengaturan_audio",
+                            "targets": ["PengaturanAudio"]
+                        },
+                        {
+                            "event": "evt_pengaturan_grafik",
+                            "targets": ["PengaturanGrafik"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "PengaturanKontrol",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["SettingsCustomizeContent"]],
+                        ["setSettingsCustomizeTabContext", [1]],
+                        ["loadVVM", ["/Flows/MainFlow/GameSettings/PengaturanKontrol/Controls.vvm", ".context"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "CheckControllerSettings",
+                            "transitions":
+                            [
+							    {
+									"event": "evt_select_controller_controls",
+									"targets": ["GamepadControls"]
+							    },
+							    {
+									"event": "evt_select_touch_controls",
+									"targets": ["TouchControls"]
+							    }
+                            ]
+                        },
+                        {
+                            "name": "TouchControls",
+                            "onEnter":
+                            [
+							    ["loadVVM", ["/Flows/MainFlow/GameSettings/PengaturanKontrol/TouchControls.vvm"]]
+                            ],
+                            "onExit":
+                            [
+							    ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+							    {
+									"event": "evt_select_controller_controls",
+									"targets": ["GamepadControls"]
+							    }
+                            ]
+                        },
+                        {
+                            "name": "GamepadControls",
+                            "onEnter":
+                            [
+							    ["loadVVM", ["/Flows/MainFlow/GameSettings/PengaturanKontrol/ControllerControls.vvm"]]
+                            ],
+                            "onExit":
+                            [
+							    ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+							    {
+									"event": "evt_select_touch_controls",
+									"targets": ["TouchControls"]
+							    }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_pengaturan_match",
+                            "targets": ["PengaturanMatch"]
+                        },
+                        {
+                            "event": "evt_pengaturan_audio",
+                            "targets": ["PengaturanAudio"]
+                        },
+                        {
+                            "event": "evt_pengaturan_grafik",
+                            "targets": ["PengaturanGrafik"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "PengaturanAudio",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["SettingsCustomizeContent"]],
+                        ["setSettingsCustomizeTabContext", [2]],
+                        ["loadVVM", ["/Flows/MainFlow/GameSettings/PengaturanAudio/PengaturanAudio.vvm", ".context"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_pengaturan_match",
+                            "targets": ["PengaturanMatch"]
+                        },
+                        {
+                            "event": "evt_pengaturan_kontrol",
+                            "targets": ["PengaturanKontrol"]
+                        },
+                        {
+                            "event": "evt_pengaturan_grafik",
+                            "targets": ["PengaturanGrafik"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "PengaturanGrafik",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["SettingsCustomizeContent"]],
+                        ["setSettingsCustomizeTabContext", [3]],
+                        ["loadVVM", ["/Flows/MainFlow/GameSettings/PengaturanGrafik/PengaturanGrafik.vvm", ".context"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_pengaturan_match",
+                            "targets": ["PengaturanMatch"]
+                        },
+                        {
+                            "event": "evt_pengaturan_kontrol",
+                            "targets": ["PengaturanKontrol"]
+                        },
+                        {
+                            "event": "evt_pengaturan_audio",
+                            "targets": ["PengaturanAudio"]
+                        }
+                    ]
+                }
+
+            ]
+        },
+        
+        {
+            "name": "SistemUntukSaveGameSettings",
+            "states":
+            [
+                {
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_save_settings",
+                            "targets": ["SaveSettings"]
+                        }
+                    ]
+                },
+                {
+                    "name": "SaveSettings",
+                    "onEnter":
+                    [
+                        ["saveSettings"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_response_basic_flow",
+                            "targets": ["out_exit_gamemode"]
+                        }
+                    ]
+                }
+            ]
+        }
+        
+    ]
+}

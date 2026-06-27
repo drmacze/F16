@@ -1,0 +1,22 @@
+{
+	"name": "SideSelect",
+	"onEnter":
+	[
+	   ["blockingLoadVVM", ["SideSelect.vvm"]]
+	],
+	"onExit":
+	[
+	   ["unloadVVM"]
+	],
+	"transitions":
+	[
+  	{
+          "event": "evt_advance",
+          "targets": ["out_advance"]
+       },
+	   {
+	       "event": "evt_back",
+		   "targets": ["out_back"]
+	   }
+	]
+}

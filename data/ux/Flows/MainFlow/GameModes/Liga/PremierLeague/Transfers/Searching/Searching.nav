@@ -1,0 +1,52 @@
+{
+    "name": "Searching",
+    "states":
+    [
+		{
+            "name": "RedirectSearching",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Searching.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_search",
+                    "targets": ["Players"]
+                },
+                {
+                    "event": "evt_text",
+                    "targets": ["Keyboard"]
+                }
+            ]
+        },
+        {
+            "name": "Players",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Players/PlayersSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Searching",
+                "out_exit_gamemode1": "Searching"
+            }
+        },
+        {
+            "name": "Keyboard",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Keyboard/Keyboard.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Searching",
+                "out_exit_gamemode1": "Searching"
+            }
+        }
+    ]
+}

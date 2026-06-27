@@ -1,0 +1,57 @@
+{
+    "actions":
+    [
+            
+        {
+            "viewname": "act_pengaturan_match",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_pengaturan_match"
+			}
+        },
+        {
+            "viewname": "act_pengaturan_kontrol",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_pengaturan_kontrol"
+			}
+        },
+        {
+            "viewname": "act_pengaturan_audio",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_pengaturan_audio"
+			}
+        },
+		{
+            "viewname": "act_pengaturan_grafik",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_pengaturan_grafik"
+			}
+        },
+        
+        {
+            "viewname": "act_save",
+            "actionname": "act_save"
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_settings_customize_tab_index",
+            "binding": "bnd_settings_customize_tab_index",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_is_in_game",
+            "binding": "bnd_is_in_game",
+            "type": "bool"
+        }
+    ]
+}

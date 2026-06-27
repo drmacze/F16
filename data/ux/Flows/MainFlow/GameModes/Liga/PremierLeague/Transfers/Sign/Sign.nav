@@ -1,0 +1,25 @@
+{
+    "name": "Sign",
+    "states":
+    [
+        {
+            "name": "RedirectSign",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Sign.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+                
+            ]
+        }
+    ]
+}

@@ -1,0 +1,168 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 665,
+                    "height": 30,
+                    "width": 180,
+                    "label": "CONMEBOL Libertadores",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 645,
+                    "height": 10,
+                    "width": 235,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillColor": "0x1B1B2A",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0x00D9D1",
+                            "outlineAlpha": 1,
+                            "cornerRaduis": 9
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -40,
+                            "width": 232,
+                            "height": 155,
+                            "type": "$_IconLibertadores",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 80,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "CONMEBOL Libertadores"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 110,
+                            "marginLeft": 0,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0x00FFD1",
+                            "width": 300,
+                            "text": "Silky skills • Full-blooded tackles • Passionate fans"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 145,
+                            "marginLeft": 0,
+                            "fontSize": 14,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xA1A1A1",
+                            "textAlignH": "CENTER",
+                            "width": 300,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Beat the best that South America has to offer,\nin the iconic CONMEBOL Libertadores."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 60,
+                    "marginLeft": 80,
+                    "height": 42,
+                    "width": 335,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "FILL",
+                            "width": 100,
+                            "backgroundImage": "$_ClickToEnterOn1",
+                            "backgroundHighlightImage": "$_ClickToEnterOn1",
+                            "clickAction": "act_enter_libertadores"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 8,
+                            "marginBottom": -1,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Play"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

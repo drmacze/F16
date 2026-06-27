@@ -1,0 +1,28 @@
+{
+    "name": "Hub",
+    "initial":
+    {
+        "targets": ["TeamHub"]
+    },
+    "states":
+    [
+		{
+            "name": "TeamHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamRoster.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        } 
+    ]
+}

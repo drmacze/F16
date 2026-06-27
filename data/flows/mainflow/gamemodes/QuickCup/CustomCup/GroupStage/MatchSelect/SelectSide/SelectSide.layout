@@ -1,0 +1,511 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Kick"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.3,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Icon_SelectSides"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 130,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon1",
+                    "clickAction": "act_advance"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 185,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Confirm"
+                }
+			]
+		},
+    {
+      "commonName": "Panel",
+      "name": "UIFrame",
+      "alignV": "TOP",
+      "alignH": "LEFT",
+	  "marginLeft": 30,
+	  "marginTop": 7,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel0Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount0",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": -50
+                    },
+                    "duration": 100
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 300
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 800,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+        {
+          "commonName": "Asset",
+          "alignV": "TOP",
+          "alignH": "LEFT",
+          "height": 80,
+          "width": 80,
+          "marginTop": 0,
+          "marginLeft": 20,
+          "alpha": 1,
+          "type": "$Icon_Ko"
+        }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount0",
+          "target": "panel0Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count0",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 36,
+                    "height": 30,
+                    "children":
+                    [
+        {
+          "commonName": "Panel",
+          "name": "panel0Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount0",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": 80
+                    },
+                    "duration": 100
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 300
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 800,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -2,
+                            "marginLeft": 148,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_LIGHT_GREEN",
+                            "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                            "text": "Classic Match"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 327,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.3,
+                            "text": "|"
+                        }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount0",
+          "target": "panel0Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count0",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 36,
+                    "height": 30,
+                    "children":
+                    [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": 80
+                    },
+                    "duration": 100
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 300
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 800,
+                    "easing": "OutBack"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 370,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_LIGHT_GREEN",
+                            "fontFace": "$FONT_ORIGIN_NORMAL",
+                            "alpha": 0.5,
+                            "text": "Select Sides"
+                         }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+
+        {
+            "commonName": "Panel",
+            "name": "BagianSide",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "children":
+            [
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_com"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": -250,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_home"
+                },
+                {
+                    "commonName": "LiveTilePlay",
+                    "name": "H",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 250,
+                    "width": 200,
+                    "height": 80,
+                    "alpha": 0,
+                    "clickAction": "act_toggle_away"
+                },
+
+                {
+                    "commonName": "Image",
+                    "name": "Com",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 500,
+                    "height": 150,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_com_icon1",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Com",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 0,
+                    "width": 500,
+                    "height": 150,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_com_icon2",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Home",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": -360,
+                    "width": 500,
+                    "height": 150,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_home_icon",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "Away",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 150,
+                    "marginLeft": 360,
+                    "width": 500,
+                    "height": 150,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_side_away_icon",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "dds": ["PlayerNIB.dd"],
+    "vms": [["lua", "PlayerNIB.lua"]],
+    "views": [["gfx", { "layout":"PlayerNIBBacking.layout" }]]
+}

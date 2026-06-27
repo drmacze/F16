@@ -1,0 +1,5 @@
+{
+    "dds": ["MenuHub.dd"],
+    "vms": [["lua", "MenuHub.lua"]],
+    "views": [["gfx", { "layout": "MenuHub.layout" }]]
+}

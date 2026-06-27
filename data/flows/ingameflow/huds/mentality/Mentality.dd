@@ -1,0 +1,71 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_defend",
+			"actionname":"act_defend"
+		},
+		{
+			"viewname": "act_balance",
+			"actionname":"act_balance"
+		},
+		{
+			"viewname": "act_attack",
+			"actionname":"act_attack"
+		},
+		{
+			"viewname": "act_camera_change",
+			"actionname":"act_camera_change"
+		}
+	],
+    "data":
+    [
+        {
+            "viewname": "bnd_home_mentality",
+            "binding":  "bnd_home_mentality",
+            "type":     "int"
+        },
+		{
+            "viewname": "bnd_home_mentality_index",
+            "binding":  "bnd_home_mentality_index",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_home_label",
+            "binding":  "bnd_home_label",
+            "type":     "string",
+            "deps":     ["bnd_home_mentality"]
+        },
+        {
+            "viewname": "bnd_home_active",
+            "binding":  "bnd_home_active",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_mentality",
+            "binding":  "bnd_away_mentality",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_away_label",
+            "binding":  "bnd_away_label",
+            "type":     "string",
+            "deps":     ["bnd_away_mentality"]
+        },
+        {
+            "viewname": "bnd_away_active",
+            "binding":  "bnd_away_active",
+            "type":     "bool"
+        },
+		{
+            "viewname": "bnd_home_mentality_default_visible",
+            "binding":  "bnd_home_mentality_default_visible",
+            "type":     "bool"
+        },
+		{
+            "viewname": "bnd_home_mentality_new_visible",
+            "binding":  "bnd_home_mentality_new_visible",
+            "type":     "bool"
+        }
+    ]
+}

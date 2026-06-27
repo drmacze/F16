@@ -1,0 +1,5 @@
+{
+	"dds":	 ["ProfileHub.dd"],
+	"vms":   [["lua", "ProfileHub.lua"]],
+    "views": [["gfx", {"layout": "ProfileHub.layout"}]]
+}

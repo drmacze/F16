@@ -1,0 +1,325 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU_TAB"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU_TAB"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                    [
+            
+                        {
+                            "commonName": "Grid",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "spacingH": 5.5,
+                            "spacingV": 7,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "MenuSettings",
+                                    "column": 0,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                {
+									"child": "MenuProfile",
+                                    "column": 1,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                {
+                                    "child": "MenuOnlineSettings",
+                                    "column": 2,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                {
+                                    "child": "MenuCatalogue",
+                                    "column": 3,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                
+                                {
+                                    "child": "MenuEditTeams",
+                                    "column": 0,
+                                    "row": 3,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                {
+                                    "child": "MenuTeamSheets",
+                                    "column": 1,
+                                    "row": 3,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                {
+                                    "child": "MenuCreatePlayer",
+                                    "column": 2,
+                                    "row": 3,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                },
+                                {
+                                    "child": "MenuEASportsTrack",
+                                    "column": 3,
+                                    "row": 3,
+                                    "colSpan": 1,
+                                    "rowSpan": 3
+                                }
+                                
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuSettings",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"clickAction": "act_gamesettings",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_Settings2"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_settings",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuProfile",
+									"alignV": "FILL",
+									"alignH": "FILL",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_Profile"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_profile",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuOnlineSettings",
+									"alignV": "FILL",
+									"alignH": "FILL",
+                                    "autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_Settings"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_onlinesettings",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuCatalogue",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_Catalogue"
+                                    ],
+									"bindings":
+									[
+										{
+											"binding": "bnd_live_tile_catalogue",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuEditTeams",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"clickAction": "act_editteams",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_EditTeams"
+                                    ],
+      						        "bindings":
+									[
+										{
+											"binding": "bnd_live_tile_editteams",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuTeamSheets",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_TeamSheets"
+                                    ],
+      						        "bindings":
+									[
+										{
+											"binding": "bnd_live_tile_teamsheets",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuCreatePlayer",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_CreatePlayer"
+                                    ],
+      						        "bindings":
+									[
+										{
+											"binding": "bnd_live_tile_createplayer",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTilePlay",
+									"name": "MenuEASportsTrack",
+									"alignV": "FILL",
+									"alignH": "FILL",
+									"autoScaleImageToTileHeight": true,
+                                    "images":
+                                    [
+                                       "$MenuCustomize_EASportsTrack"
+                                    ],
+      						        "bindings":
+									[
+										{
+											"binding": "bnd_live_tile_easportstrack",
+											"property": "dataProviders"
+										}
+                                    ]
+                                }
+                            ]
+                        }
+                        
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

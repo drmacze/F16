@@ -1,0 +1,18 @@
+{
+	"name": "SelectSide",
+	"onEnter":
+	[
+	   ["blockingLoadVVM", ["SelectSide.vvm"]]
+	],
+	"onExit":
+	[
+	   ["unloadVVM"]
+	],
+	"transitions":
+	[
+	   {
+	       "event": "evt_back",
+		   "targets": ["out_back"]
+	   }
+	]
+}

@@ -1,0 +1,107 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_change_control_scheme_option",
+            "actionname": "act_change_control_scheme_option"
+        },
+                
+			{
+			"viewname":   "act_change_move_assistance_option",
+			"actionname": "act_change_move_assistance_option"
+		},
+		{
+			"viewname": "act_change_floating_dpad_option",
+			"actionname": "act_change_floating_dpad_option"
+		},
+		{
+			"viewname": "act_change_virtual_button_position_option",
+			"actionname": "act_change_virtual_button_position_option"
+		},
+		{
+			"viewname": "act_change_skill_moves_option",
+			"actionname": "act_change_skill_moves_option"
+		},
+        {
+            "viewname": "act_change_large_buttons_option",
+            "actionname": "act_change_large_buttons_option"
+        },
+        {
+            "viewname": "act_change_large_dpad_option",
+            "actionname": "act_change_large_dpad_option"
+        },
+        {
+            "viewname": "act_change_left_handed_option",
+            "actionname": "act_change_left_handed_option"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_control_scheme_label",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SETTINGS_CONTROL_SCHEME"
+            }
+        },
+        {
+            "viewname": "bnd_control_scheme_index",
+            "binding": "bnd_control_scheme_index",
+            "type": "int",
+            "actions":
+            [
+                {
+                    "viewname": "act_change_control_scheme_option",
+                    "actionname": "act_change_control_scheme_option"
+                }
+            ]
+        },
+        {
+            "viewname": "bnd_control_scheme_options",
+            "binding": "bnd_control_scheme_options",
+            "type": "object"
+        },
+        	{
+            "viewname": "bnd_move_assistance_options",
+            "binding":  "bnd_move_assistance_options",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_floating_dpad_options",
+            "binding": "bnd_floating_dpad_options",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_virtual_button_position_options",
+            "binding": "bnd_virtual_button_position_options",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_skill_moves_options",
+            "binding": "bnd_skill_moves_options",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_large_buttons_options",
+            "binding": "bnd_large_buttons_options",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_large_dpad_options",
+            "binding": "bnd_large_dpad_options",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_left_handed_options",
+            "binding": "bnd_left_handed_options",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_touch_controls_list_data",
+            "binding": "bnd_touch_controls_list_data",
+            "type": "object"
+        }
+    ]
+}

@@ -1,0 +1,228 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },     
+        
+        
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 978,
+            "height": 370,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianPilihanNewGame",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "width": 485,
+                    "height": 370,
+                    "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "CENTER",
+                                  "alignH": "CENTER",
+                                  "width": 485,
+                                  "height": 370,
+                                  "clickAction": "act_newgame"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "CENTER",
+                                  "alignH": "CENTER",
+                                  "width": 485,
+                                  "height": 370,
+                                  "type": "$New_Career"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 10,
+                                  "fontSize": 35,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "NEW DATA"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 65,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "Start new season with"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 84,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "your own club and win"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 103,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "the league to become"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 122,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_WHITE",
+                                  "text": "Champion !"
+                              }     
+                          ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianPilihanLoadGame",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "width": 485,
+                    "height": 370,
+                    "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "CENTER",
+                                  "alignH": "CENTER",
+                                  "width": 485,
+                                  "height": 370,
+                                  "clickAction": "act_loadgame"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "CENTER",
+                                  "alignH": "CENTER",
+                                  "width": 485,
+                                  "height": 370,
+                                  "type": "$Load_Career"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 10,
+                                  "fontSize": 35,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "LOAD DATA"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 65,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "Continue the season with"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 84,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "club you chose before and"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 103,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "win the league to become"
+                              },
+                              {
+                                  "commonName": "Label",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 10,
+                                  "marginTop": 122,
+                                  "fontSize": 18,
+                                  "fontColor": "$COLOR_DARK_GRAY",
+                                  "text": "Champion !"
+                              }     
+                          ]
+                }
+            ]
+        }
+    ]
+}

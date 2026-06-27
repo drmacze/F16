@@ -1,0 +1,81 @@
+{
+    "actions":
+    [
+         {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_stadium_name",
+            "binding": "bnd_stadium_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_logo_team_home",
+            "binding": "bnd_logo_team_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_team_away",
+            "binding": "bnd_logo_team_away",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_man_team_home",
+            "binding": "bnd_man_team_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_man_team_away",
+            "binding": "bnd_man_team_away",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_match_difficulty",
+            "binding":  "bnd_match_difficulty",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_weather_type",
+            "binding": "bnd_weather_type",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "dds":   ["IntroTentangLisensi.dd"],
+	"vms":   [["lua", "IntroTentangLisensi.lua"]],
+    "views": [["gfx", {"layout": "IntroTentangLisensi.layout"}]]
+}

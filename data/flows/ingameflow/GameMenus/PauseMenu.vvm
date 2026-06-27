@@ -1,0 +1,5 @@
+{
+    "dds":   ["GameMenu.dd","Animated.dd"],
+    "vms":   [["lua", "GameMenu.lua"], ["lua", "Animated.lua"]],
+    "views": [["gfx", {"layout": "PauseMenu.layout"}]]
+}

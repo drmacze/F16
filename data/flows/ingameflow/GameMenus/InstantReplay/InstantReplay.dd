@@ -1,0 +1,95 @@
+{
+    "actions":
+    [
+        {
+            "viewname":   "act_back",
+            "actionname": "act_back"
+        },
+		{
+            "viewname":   "act_toggle_play",
+            "actionname": "act_toggle_play"
+        },
+		{
+            "viewname":   "act_change_camera",
+            "actionname": "act_change_camera"
+        },
+		{
+            "viewname":   "act_next_target",
+            "actionname": "act_next_target"
+        },
+		{
+            "viewname":   "act_previous_target",
+            "actionname": "act_previous_target"
+        },
+		{
+            "viewname":   "act_toggle_controls",
+            "actionname": "act_toggle_controls"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_replay_control",
+            "binding":  "bnd_replay_control",
+            "type":     "replay_control"
+        },
+        {
+            "viewname": "bnd_playhead_position",
+            "binding":  "bnd_playhead_position",
+            "type":     "double",
+            "actions":
+            [
+                {
+                    "viewname":   "act_move_playhead",
+                    "actionname": "act_move_playhead"
+                }
+            ]
+        },
+		{
+            "viewname": "bnd_pan_camera",
+            "binding":  "bnd_pan_camera",
+            "type":     "panEvent",
+            "actions":
+            [
+                {
+                    "viewname":   "act_pan_camera",
+                    "actionname": "act_pan_camera"
+                }
+            ]
+        },
+		{
+            "viewname": "bnd_zoom_camera",
+            "binding":  "bnd_zoom_camera",
+            "type":     "double",
+            "actions":
+            [
+                {
+                    "viewname":   "act_zoom_camera",
+                    "actionname": "act_zoom_camera"
+                }
+            ]
+        },
+		{
+            "viewname": "bnd_camera_lens_angle",
+            "binding":  "bnd_camera_lens_angle",
+            "type":     "double",
+            "actions":
+            [
+                {
+                    "viewname":   "act_camera_lens_angle",
+                    "actionname": "act_camera_lens_angle"
+                }
+            ]
+        },
+		{
+			"viewname": "bnd_controls_visibility",
+            "binding":  "bnd_controls_visibility",
+			"type":     "bool"
+		},
+        {
+            "viewname": "bnd_play_instant_replay",
+			"binding":  "bnd_play_instant_replay",
+            "type":     "string"
+        }
+    ]
+}

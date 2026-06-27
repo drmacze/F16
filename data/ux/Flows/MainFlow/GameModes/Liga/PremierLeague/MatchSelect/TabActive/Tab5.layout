@@ -1,0 +1,219 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 77,
+                    "width": 1000,
+                    "height": 475,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 626,
+                            "width": 150,
+                            "height": 35,
+                            "type": "$BackgroundJudulMenu"
+                        },
+
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignH": "LEFT",
+                            "marginLeft": 671,
+                            "marginTop": 5,
+                            "width": 150,
+                            "height": 35,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "SAVE"
+                        }
+                    ]
+                },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                          [
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "clickAction": "act_savegame"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Simpan"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "clickAction": "act_restart"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "RIGHT",
+                                  "width": 350,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Reset"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "CENTER",
+                                  "alignH": "LEFT",
+                                  "width": 642,
+                                  "height": 355,
+                                  "type": "$LiveTileBackgroundIdle"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "width": 642,
+                                  "height": 315,
+                                  "type": "$Bagian_InfoSimpan"
+                              }
+                          ]
+                },
+                 {
+                     "commonName": "Panel",
+                     "name": "Save",
+                     "alignV": "TOP",
+                     "alignH": "RIGHT",
+                     "marginTop": 120,
+                     "width": 350,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "SAVE"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "Save your progress"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Reset",
+                     "alignV": "BOTTOM",
+                     "alignH": "RIGHT",
+                     "marginTop": 120,
+                     "width": 350,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "RESET"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Reset your data"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Info",
+                     "alignV": "CENTER",
+                     "alignH": "LEFT",
+                     "marginTop": 59,
+                     "width": 642,
+                     "height": 355,
+                     "children":
+                          [
+                              {
+                                  "commonName": "Asset",
+                                   "alignV": "TOP",
+                                   "alignH": "CENTER",
+                                  "height": 40,
+                                  "width": 642,
+                                  "type": "$BackgroundJudulMenu"
+                              },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "CENTER",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 25,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "INFORMATION"
+                               }
+                          ]
+                 }
+            ]
+        }
+     ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

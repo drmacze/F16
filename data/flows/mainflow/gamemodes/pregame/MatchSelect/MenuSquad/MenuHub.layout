@@ -1,0 +1,432 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_IN" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_OUT" } ]
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 443,
+                    "height": 30,
+                    "width": 130,
+                    "label": "Team Management",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 421,
+                    "height": 10,
+                    "width": 185,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 140,
+            "marginLeft": -310,
+            "name": "insTeamStats",
+            "children": 
+            [
+                {
+                    "commonName": "Image",
+                    "scaleX": 0.2,
+                    "scaleY": 0.2,
+                    "name": "insTeamCrest",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": -120,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Tactical Plan"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": 85,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Formation"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "HomeTeamName",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": -130,
+                    "width": 110,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontSize": 20,
+                    "forceCaps": true,
+                    "autoScroll": true,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 50,
+                    "marginLeft": -110,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "Default"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "formationDisplay",
+                    "alignH": "LEFT",
+                    "marginTop": 27,
+                    "marginLeft": 90,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_formation_name",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        },
+		{
+			"commonName": "Panel",
+        	"name": "insTeamStats",
+			"alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 140,
+            "marginLeft": 250,
+			"children":
+            [
+                {
+                    "commonName": "Image",
+                	"name": "insTeamCrest",
+                    "scaleX": 0.2,
+                    "scaleY": 0.2,
+					"bindings":
+                    [
+				        {
+					        "binding": "bnd_away_team_crest",
+							"property": "image"
+						}
+					]
+				},
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": -120,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Tactical Plan"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 5,
+                    "marginLeft": 85,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Formation"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "AwayTeamName",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": -130,
+                    "width": 110,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontSize": 20,
+                    "forceCaps": true,
+                    "autoScroll": true,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_name",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 50,
+                    "marginLeft": -110,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "Default"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "formationDisplay",
+                    "alignH": "LEFT",
+                    "marginTop": 27,
+                    "marginLeft": 90,
+                    "fontSize": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_formation_name",
+                            "property": "text"
+                        }
+                    ]
+                }
+	  	  ]
+		},
+        {
+            "commonName": "Panel",
+            "name": "insSquadHome",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 350.0,
+	        "width": 450.0,
+            "marginTop": 60,
+      	  "marginLeft": -280.0,
+            "children":
+            [
+	        	{
+		        	"commonName": "Rectangle",
+		        	"alignV": "FILL",
+			        "alignH": "FILL",
+		        	"color": "0x1C1C1C",
+		        	"alpha": 0
+	        	},
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+	                "marginTop": -50,
+                    "height": 250.0,
+	                "width": 458.0,
+                    "type": "$Pitch"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 0,
+                    "marginTop": 185,
+                    "height": 42,
+                    "width": 180,
+                    "backgroundImage": "$_ClickToEnterOn2",
+                    "backgroundHighlightImage": "$_ClickToEnterOn2",
+                    "clickAction": "act_squad_home"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 12,
+                    "marginTop": 186,
+                    "fontSize": 17,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "text": "Enter Formation"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insSquadContainer",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "scaleX": 0.47,
+                    "scaleY": 0.47,
+                    "children":
+                    [
+                        {
+                            "commonName": "SquadLayout",
+                            "name": "insSquadLayout",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+			                "marginTop": -125,
+			                "size": 0,
+                            "itemView": 1,
+                            "highlightable": false,
+                            "preserveWidth": false,
+			                "mouseInteractive": false,
+		              	  "draggable": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_formation",
+                                    "property": "formation"
+                                },
+                                {
+                                    "binding": "bnd_home_starting_11",
+                                    "property": "starting11"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "insSquadAway",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 350.0,
+	        "width": 450.0,
+            "marginTop": 60,
+	        "marginLeft": 280.0,
+            "children":
+            [
+	        	{
+		        	"commonName": "Rectangle",
+		        	"alignV": "FILL",
+		        	"alignH": "FILL",
+		        	"color": "0x1C1C1C",
+		        	"alpha": 0
+	        	},
+                {
+                    "commonName": "Asset",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+	                "marginTop": -50,
+                    "height": 250.0,
+	                "width": 458.0,
+                    "type": "$Pitch"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 0,
+                    "marginTop": 185,
+                    "height": 42,
+                    "width": 180,
+                    "backgroundImage": "$_ClickToEnterOn2",
+                    "backgroundHighlightImage": "$_ClickToEnterOn2",
+                    "clickAction": "act_squad_away"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 12,
+                    "marginTop": 186,
+                    "fontSize": 17,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "text": "Enter Formation"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insSquadContainer",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "scaleX": 0.47,
+                    "scaleY": 0.47,
+                    "children":
+                    [
+                        {
+                            "commonName": "SquadLayout",
+                            "name": "insSquadLayout",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+			                "marginTop": -125,
+			                "size": 0,
+                            "itemView": 1,
+                            "highlightable": false,
+                            "preserveWidth": false,
+		              	  "mouseInteractive": false,
+		              	  "draggable": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_formation",
+                                    "property": "formation"
+                                },
+                                {
+                                    "binding": "bnd_away_starting_11",
+                                    "property": "starting11"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

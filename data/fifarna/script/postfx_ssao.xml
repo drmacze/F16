@@ -1,0 +1,330 @@
+<technique name="postfx_ssao">
+  <rendertargets>
+	<target name="ssao" screenRatio="1.0" format="T888"/>
+	<target name="blurBuffer" screenRatio="1.0" format="T888"/>
+  </rendertargets>
+
+  <pass name="postfx_ssao_generate" target="GLES2.0">
+    <uniforms>
+		<var name="vpRatio" val="rendertarget.ratio.previous"/>
+		<var name="vpSize" val="rendertarget.size.previous"/>
+    </uniforms>
+    <attributes>
+      <var name="inPos" val="mesh.positions"/>
+	  <var name="inUV0" val="mesh.uv0"/>
+    </attributes>
+	<samplers>
+		<var name="depthTexture" val="#previous" wrapT="clamp" filter="nearest"/>
+		<var name="randomTexture" val="random4x4.tga" wrapT="repeat" filter="nearest"/>
+	</samplers>
+
+    <renderstate>
+      <culling val="back"/>
+	  <depthWrite val="false"/>
+    </renderstate>
+    <rendertarget val="ssao" clear="true"/>
+    <shader>
+      <vshader>
+        <![CDATA[
+				attribute vec4 inPos;
+				attribute vec2 inUV0;
+				uniform highp vec2 vpRatio;
+				varying highp vec2 currentScreenPosition;
+
+				void main()
+				{
+					gl_Position = vec4(inPos.xyz, 1.0);
+					currentScreenPosition = inUV0/* * vpRatio*/;
+				}
+			   ]]>
+      </vshader>
+      <fshader>
+        <![CDATA[
+		
+				varying highp vec2 currentScreenPosition;
+				uniform sampler2D depthTexture;
+				uniform sampler2D randomTexture;
+				uniform highp vec2 vpRatio;
+				uniform highp vec2 vpSize;
+				
+				const highp float zNear = 0.5;
+				const highp float zFar = 3000.0;
+				
+				const highp float maxz =   0.00035; //this is the valueof the z difference between pixels that gives darkest result. 
+				const highp float div_factor = 3.0 ; //used for ssao fade after the maximum z is reached
+				const highp float maxz2 =  maxz*div_factor ;  // used to fade the ssao value 
+
+				
+				highp float LinearizeDepth(highp float z)
+				{
+					// (f, (1-f/n)/2, (1+f/n)/2)
+					//highp vec4 nearFar = vec4(f, (1.0 - zFar / zNear) / 2.0, (1.0 + zFar / zNear)/2.0, 0.0);
+					//highp float lz = nearFar.x / (nearFar.y * z + nearFar.z); // depth from 0.0 to Far
+					//lz  = lz / zFar;
+					//return lz;
+					return (2.0 * zNear ) / (zFar + zNear - z * (zFar - zNear));
+				}
+				
+				mediump float CompareDepth(mediump float depth, mediump vec2 uv1)  //the main function for comparing current depth with sampled pixel depth
+				{
+					mediump float diff = 0.0;
+                    mediump float dif1 = 0.0;
+					mediump float sampledDepth = LinearizeDepth(texture2D( depthTexture, uv1 ).r);
+                    dif1= depth - sampledDepth; //calculate difference betwen current depth and sampled depth
+                    diff = clamp(dif1, -maxz, maxz) -  clamp(dif1/div_factor,0.0,maxz2) ; // we clamp the difference value so it is within maxz boundries and calculate a fade based on maxz2
+                    return diff;
+				}
+
+
+				void main()
+				{
+					
+					highp vec2 uv = currentScreenPosition;
+					
+					highp vec2 rotationTC = uv * vpSize.xy/4.0;
+					highp vec3 rotation = texture2D(randomTexture, rotationTC).xyz * 2.0 - 1.0;
+					rotation = normalize(rotation);
+					
+					highp float depth = LinearizeDepth(texture2D(depthTexture, uv).x);
+					//mediump float crtRealDepth = depth * zFar + zNear;	  //this is the part where the intensity value is calculated based on the fog present in the game
+					mediump float fog = 1.0;
+					//fog = 1.0 - clamp((crtRealDepth - FogStartEnd.x) / (FogStartEnd.y - FogStartEnd.x), 0.0, 1.0) * (1.0 - FogColor.a);
+					mediump float increment = 0.013   -  clamp(depth*0.4,0.001,0.009);  //increment is based on the first number that is the sample radius increment for camera near and a formula that decreases the increment value as the z gets further from camera
+					mediump float dif1 = 0.0; //difference variables needed for each sample set around current pixel
+					mediump float dif2 = 0.0;    
+					mediump float dif3 = 0.0;
+					mediump float dif4 = 0.0;
+					mediump float dif5 = 0.0;
+					mediump float dif6 = 0.0;    
+					mediump float dif7 = 0.0;
+					mediump float dif8 = 0.0;
+					mediump  float dif =  0.0;  //final gathering difference
+					
+					increment =  increment * 0.75;
+					mediump vec2 inc1 = rotation.xy * increment;
+					mediump vec2 inc2 = rotation.xy * increment * 2.0;
+					mediump vec2 inc3 = rotation.xy * increment * 3.0;
+					
+					dif1 = CompareDepth(depth, uv + inc1);
+					dif2 = CompareDepth(depth, uv - inc1);				
+					dif3 = CompareDepth(depth, uv + inc2);
+					dif4 = CompareDepth(depth, uv - inc2);
+					dif5 = CompareDepth(depth, uv + inc3);
+					dif6 = CompareDepth(depth, uv - inc3);
+					
+					dif1=dif1+dif2;
+					dif3=dif3+dif4;
+					dif5=dif5+dif6 ;
+					dif=max(dif1,0.0)+max(dif3,0.0)+max(dif5,0.0);  //get the sum of all 3 differences (only positive values)      
+					
+
+					dif = 1.0 - dif * 600.0*fog ; 	//we invert the value of the ssao so white becomes black and also amplify it by an empiricaly found value based on maxZ, divfactor etc.
+					
+					gl_FragColor = vec4(dif);     //that's it
+
+				}
+			   ]]>
+      </fshader>
+    </shader>
+  </pass>
+  
+  
+  <pass name="separable_horizontal_blur_pass" target="GLES2.0">
+    <uniforms>
+		<var name="vpRatio" val="rendertarget.ratio.ssao"/>
+		<var name="vpSize" val="rendertarget.size.ssao"/>
+    </uniforms>
+    <attributes>
+      <var name="inPos" val="mesh.positions"/>
+	  <var name="inUV0" val="mesh.uv0"/>
+    </attributes>
+	<samplers>
+		<var name="texture0" val="ssao" filter="nearest"/>
+	</samplers>
+    <renderstate>
+      <culling val="back"/>
+      <blend src="one" dst="zero"/>
+	  <depthWrite val="false"/>
+    </renderstate>
+    <rendertarget val="blurBuffer" clear="true"/>
+	
+    <shader>
+      <vshader>
+        <![CDATA[
+				uniform highp vec2 vpRatio;
+				uniform highp vec2 vpSize;
+				attribute vec4 inPos;
+				attribute vec2 inUV0;
+				varying highp vec2 uv0;
+				varying highp vec2 uv1;
+				varying highp vec2 uv2;
+				varying highp vec2 uv3;
+
+				void main()
+				{
+					gl_Position = vec4(inPos.xyz, 1.0);
+					highp vec2 uv = inUV0;
+					highp float offset = 1.0/ (vpSize.x);
+					uv0 = uv + vec2(offset*0.5);
+					uv1 = uv0 + vec2(offset, 0.0);
+					uv2 = uv0 + vec2(offset * 2.0, 0.0);
+					uv3 = uv0 + vec2(offset * 3.0, 0.0);
+				}
+			   ]]>
+      </vshader>
+      <fshader>
+        <![CDATA[
+				varying highp vec2 uv0;
+				varying highp vec2 uv1;
+				varying highp vec2 uv2;
+				varying highp vec2 uv3;
+				uniform sampler2D texture0;
+
+				void main()
+				{
+					lowp vec4 color;
+					color  = texture2D(texture0, uv0) * 0.25;
+					color += texture2D(texture0, uv1) * 0.25;
+					color += texture2D(texture0, uv2) * 0.25;
+					color += texture2D(texture0, uv3) * 0.25;
+					gl_FragColor = color;
+				}
+			   ]]>
+      </fshader>
+    </shader>
+  </pass>
+ 
+  <pass name="separable_vertical_blur_pass" target="GLES2.0">
+    <uniforms>
+		<var name="vpRatio" val="rendertarget.ratio.blurBuffer"/>
+		<var name="vpSize" val="rendertarget.size.blurBuffer"/>
+    </uniforms>
+    <attributes>
+      <var name="inPos" val="mesh.positions"/>
+	  <var name="inUV0" val="mesh.uv0"/>
+    </attributes>
+	<samplers>
+		<var name="texture0" val="blurBuffer" filter="nearest"/>
+	</samplers>
+    <renderstate>
+      <culling val="back"/>
+	  <depthWrite val="false"/>
+    </renderstate>
+    <rendertarget val="ssao" clear="true"/>
+    <shader>
+	
+      <vshader>
+        <![CDATA[
+				uniform highp vec2 vpRatio;
+				uniform highp vec2 vpSize;
+				attribute vec4 inPos;
+				attribute vec2 inUV0;
+				varying highp vec2 uv0;
+				varying highp vec2 uv1;
+				varying highp vec2 uv2;
+				varying highp vec2 uv3;
+
+				void main()
+				{
+					gl_Position = vec4(inPos.xyz, 1.0);
+					highp vec2 uv = inUV0/**vpRatio*/;
+					highp float offset = 1.0/ (vpSize.y);
+					uv0 = uv + vec2(offset*0.5);
+					uv0 = uv;
+					uv1 = uv + vec2(0.0, offset);
+					uv2 = uv + vec2(0.0, offset * 2.0);
+					uv3 = uv + vec2(0.0, offset * 3.0);
+				}
+			   ]]>
+      </vshader>
+      <fshader>
+        <![CDATA[
+				varying highp vec2 uv0;
+				varying highp vec2 uv1;
+				varying highp vec2 uv2;
+				varying highp vec2 uv3;
+				uniform sampler2D texture0;
+
+				void main()
+				{
+					lowp vec4 color;
+					color  = texture2D(texture0, uv0) * 0.25;
+					color += texture2D(texture0, uv1) * 0.25;
+					color += texture2D(texture0, uv2) * 0.25;
+					color += texture2D(texture0, uv3) * 0.25;
+					gl_FragColor = color;
+				}
+			   ]]>
+      </fshader>
+    </shader>
+  </pass>
+
+  <pass name="postfx_ssao_combine" target="GLES2.0">
+    <uniforms>
+		<var name="factor" type="float" val="1.0"/>
+		<var name="vpRatio0" val="rendertarget.ratio.previous"/>
+		<var name="vpRatio1" val="rendertarget.ratio.ssao"/>
+    </uniforms>
+    <attributes>
+      <var name="inPos" val="mesh.positions"/>
+	  <var name="inUV0" val="mesh.uv0"/>
+    </attributes>
+	<samplers>
+		<var name="colorBuffer"     val="previous"/>
+		<var name="ssaoBuffer"     val="ssao"  filter="bilinear"/>
+	</samplers>
+
+    <renderstate>
+      <culling val="back"/>
+	  <depthWrite val="false"/>
+      
+    </renderstate>
+
+    <rendertarget val="default"/>
+    <shader>
+      <vshader>
+        <![CDATA[
+				uniform highp vec2 vpRatio0;
+				uniform highp vec2 vpRatio1;
+				attribute vec4 inPos;
+				attribute vec2 inUV0;
+				
+				varying highp vec2 uv0;
+				varying highp vec2 uv1;
+			
+
+				void main()
+				{
+					gl_Position = vec4(inPos.xyz, 1.0);		
+					uv0 = inUV0/* * vpRatio0*/;
+					uv1 = inUV0/*  * vpRatio1*/;
+				}
+			   ]]>
+      </vshader>
+      <fshader>
+        <![CDATA[
+				varying highp vec2 uv0;
+				varying highp vec2 uv1;
+
+				uniform lowp sampler2D colorBuffer;
+				uniform lowp sampler2D ssaoBuffer;
+
+				void main()
+				{
+					lowp vec4 color = texture2D(colorBuffer, uv0);
+					lowp vec4 ssao = texture2D(ssaoBuffer, uv1);
+					
+					lowp vec4 Complete = color * ssao;
+					
+					//if (gl_FragCoord.x > 500)
+						Complete = color * ssao * ssao * ssao;//debug
+					//else
+					//	Complete = color;
+					
+					gl_FragColor = Complete;
+				}	
+			   ]]>
+      </fshader>
+    </shader>
+  </pass>
+</technique>

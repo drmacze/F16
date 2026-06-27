@@ -1,0 +1,162 @@
+{
+    "data":
+    [
+		{
+            "viewname": "bnd_banner_image",
+            "binding":  "bnd_banner_image",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_banner_data",
+            "binding":  "bnd_banner_data",
+            "type":     "array"
+        }
+    ],
+    "actions":
+    [
+		{
+			"viewname": "act_cab_display_ad_banner",
+			"actionname": "act_cab_display_ad_banner"
+		},
+        {
+            "viewname": "act_cab_to_main_hub",
+            "actionname": "act_cab_to_main_hub"
+        },
+        {
+            "viewname": "act_cab_to_fut_hub",
+            "actionname": "act_cab_to_fut_hub"
+        },
+        {
+            "viewname": "act_cab_to_fut_offline_seasons",
+			"actionname": "act_cab_to_fut_offline_seasons"
+        },
+        {
+            "viewname": "act_cab_to_fut_online_seasons",
+            "actionname": "act_cab_to_fut_online_seasons"
+        },
+        {
+            "viewname":   "act_cab_to_feature",
+            "actionname": "act_cab_to_feature"
+        },
+        {
+            "viewname": "act_cab_to_fut_online_tournaments",
+            "actionname": "act_cab_to_fut_online_tournaments"
+        },
+        {
+            "viewname": "act_cab_to_fut_offline_tournaments",
+            "actionname": "act_cab_to_fut_offline_tournaments"
+        },		
+        {
+            "viewname": "act_cab_to_fut_totw",
+            "actionname": "act_cab_to_fut_totw"
+        },
+        {
+            "viewname": "act_cab_to_fut_auction_house",
+            "actionname": "act_cab_to_fut_auction_house"
+        },
+		{
+            "viewname": "act_cab_to_fut_player_exchange",
+            "actionname": "act_cab_to_fut_player_exchange"
+        },
+        {
+            "viewname": "act_cab_to_fut_watch_list",
+            "actionname": "act_cab_to_fut_watch_list"
+        },
+        {
+            "viewname": "act_cab_to_fut_trade_pile",
+            "actionname": "act_cab_to_fut_trade_pile"
+        },
+        {
+            "viewname": "act_cab_buy_match_credits",
+			"actionname": "act_cab_buy_match_credits"
+        },
+        {
+            "viewname":   "act_cab_to_store",
+            "actionname": "act_cab_to_store"
+        },
+		{
+            "viewname":   "act_cab_to_store_player",
+            "actionname": "act_cab_to_store_player"
+        },
+		{
+            "viewname":   "act_cab_to_store_shop",
+            "actionname": "act_cab_to_store_shop"
+        },
+        {
+            "viewname":   "act_cab_to_store_my_packs",
+            "actionname": "act_cab_to_store_my_packs"
+        },
+        {
+            "viewname":   "act_cab_to_store_unassigned",
+            "actionname": "act_cab_to_store_unassigned"
+        },
+        {
+            "viewname":   "act_cab_to_store_single_category_gold",
+            "actionname": "act_cab_to_store_single_category_gold"
+        },
+        {
+            "viewname":   "act_cab_to_store_single_category_silver",
+            "actionname": "act_cab_to_store_single_category_silver"
+        },
+        {
+            "viewname":   "act_cab_to_store_single_category_bronze",
+            "actionname": "act_cab_to_store_single_category_bronze"
+        },
+        {
+            "viewname":   "act_cab_to_store_single_category_special",
+            "actionname": "act_cab_to_store_single_category_special"
+        },
+        {
+            "viewname":   "act_cab_buy_fifa_points",
+            "actionname": "act_cab_buy_fifa_points"
+        },
+        {
+            "viewname":   "act_cab_to_forums",
+            "actionname": "act_cab_to_forums"
+        },
+        {
+            "viewname":   "act_cab_open_link_in_igo_browser",
+            "actionname": "act_cab_open_link_in_igo_browser"
+        },
+        {
+            "viewname":   "act_cab_open_link_in_external_browser",
+            "actionname": "act_cab_open_link_in_external_browser"
+        },
+        {
+            "viewname":   "act_cab_to_accomplishments",
+            "actionname": "act_cab_to_accomplishments"
+        },
+		{
+            "viewname":   "act_cab_to_shop_fitness_category",
+            "actionname": "act_cab_to_shop_fitness_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_healing_category",
+            "actionname": "act_cab_to_shop_healing_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_morale_category",
+            "actionname": "act_cab_to_shop_morale_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_player_training_category",
+            "actionname": "act_cab_to_shop_player_training_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_gk_training_category",
+            "actionname": "act_cab_to_shop_gk_training_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_player_position_category",
+            "actionname": "act_cab_to_shop_player_position_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_player_formation_category",
+            "actionname": "act_cab_to_shop_player_formation_category"
+        },
+		{
+            "viewname":   "act_cab_to_shop_manager_formation_category",
+            "actionname": "act_cab_to_shop_manager_formation_category"
+        }
+    ]
+}

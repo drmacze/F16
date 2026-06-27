@@ -1,0 +1,62 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_select_facts",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_facts"
+            }
+        },
+        {
+            "viewname": "act_select_events",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_events"
+            }
+        }
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_home_team_crest",
+            "binding": "bnd_home_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding": "bnd_away_team_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_result",
+            "binding": "bnd_result",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_shootout_result",
+            "binding": "bnd_shootout_result",
+            "type": "string"
+        }
+    ]
+}

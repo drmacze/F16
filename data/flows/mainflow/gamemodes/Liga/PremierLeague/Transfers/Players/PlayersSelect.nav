@@ -1,0 +1,105 @@
+{
+    "name": "PlayersSelect",
+    "initial":
+    {
+        "targets": ["MenuPlayersSelect"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuPlayersSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["PlayersSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_nego",
+                    "targets": ["Nego"]
+                },
+                {
+                    "event": "evt_team",
+                    "targets": ["Team"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                }
+            ]
+        },
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev2/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Dev2/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayersSelect",
+                "out_exit_gamemode1": "PlayersSelect"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Negotiate/Negotiate.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayersSelect"
+                
+            }
+        },
+        {
+            "name": "Nego",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Transfers/Players/Negotiate/Negotiate.nav",
+            "outputs":
+           {
+                "out_exit_gamemode": "PlayersSelect"
+            }
+        },
+        {
+            "name": "Team",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/Team/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayersSelect"
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/TransferStatus/Liga.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "PlayersSelect",            
+                "out_exit_gamemode1": "PlayersSelect"
+            }
+        }
+    ]
+}

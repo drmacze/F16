@@ -1,0 +1,6 @@
+[
+    "/lua/common/ItemModel.lua",
+    "/lua/packages/tableutil.lua",
+    "/lua/common/FormationModel.lua",
+    "/flows/mainflow/gamemodes/MainMenu/MenuPlay/quickcup/squad/formation/FormationModelReal.lua"
+]

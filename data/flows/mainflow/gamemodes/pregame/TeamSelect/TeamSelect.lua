@@ -1,0 +1,580 @@
+local TeamSelect = {}
+
+local eventmanager, PregameManager, CommonNavVars, HomeTeamSelectModel, TableUtil = ...
+local EventTypes = eventmanager.FE.FIFA.EventTypes
+
+local PRIVATE_MATCH_CONNECTION_STATES = PregameManager.FE.FIFA.PrivateMatchConnectionState
+local bndHomeTeamUser = "bnd_panel_home_title"
+local bndHomeTeamData = "bnd_home_team_selector"
+local bndHome2TeamData = "bnd_home2_team_selector"
+local bndHome3TeamData = "bnd_home3_team_selector"
+local bndHomeSquadName = "bnd_home_squad_name"
+local bndHomeRealTeamVisible = "bnd_home_real_team_visible"
+local bndHomeFutSquadVisible = "bnd_home_fut_squad_visible"
+local bndHomeFriendlyTeamVisible = "bnd_home_friendly_team_visible"
+local bndHomeUserPlate = "bnd_home_user_plate"
+local bndHomeTeamSelectorAlpha = "bnd_home_team_selector_alpha"
+local bndLabelTickernavpublisher = "bnd_label_tickernavpublisher"
+local bndAutodisableTickernavpublisher = "bnd_autodisable_tickernavpublisher"
+local bndReadyLabelTexture = "bnd_ready_label_texture"
+local bndHomeTeamCountry = "bnd_home_team_country"
+local bndHomeTeamLeague = "bnd_home_team_league"
+local bndHomeTeamName = "bnd_home_team_name"
+local bndOptionsEnabled = "bnd_options_enabled"
+local actAdvance = "act_advance"
+local actBack = "act_back"
+local actSettings = "act_settings"
+local actSquad = "act_squad"
+local actSquadAway = "act_squadaway"
+local actHomeCountryPrevious = "act_home_country_previous"
+local actHomeCountryNext = "act_home_country_next"
+local actHomeLeaguePrevious = "act_home_league_previous"
+local actHomeLeagueNext = "act_home_league_next"
+local actHomeTeamPrevious = "act_home_team_previous"
+local actHomeTeamNext = "act_home_team_next"
+
+function TeamSelect:new(init)
+  local o = init or {}
+  setmetatable(o, self)
+  self.__index = self
+  o.navContext = o.data
+  o.models = {
+    HomeTeamSelectModel = HomeTeamSelectModel:new({
+      im = o.im,
+      api = o.api,
+      nav = o.nav,
+      loc = o.loc,
+      data = o.data
+    })
+  }
+  o.services = {
+    MatchSetup = o.api("MatchSetupService"),
+    UserPlate = o.api("UserPlateService"),
+    GameSetup = o.api("GameSetupService"),
+    FutSquadMgt = o.api("FUTSquadManagementService"),
+    Pregame = o.api("PregameService"),
+    gameState = o.api("GameStateService"),
+    EventManagerService = o.api("EventManagerService"),
+    SocialService = o.api("SocialService")
+  }
+  o.handlerId = o.services.EventManagerService.RegisterHandler(function(...)
+  o:handleEvent(...)
+  end)
+  o.USER_SIDE = {HOME = "home", AWAY = "away"}
+  o.countryToggleId = 0
+  o.leagueToggleId = 1
+  o.teamToggleId = 2
+  o.toggleSideHome = 0
+  o.homeInitialized = false
+  o.opponentTeamSelectorAlpha = 1
+  o.isSearchingOpponent = false
+  o.homeTeam = {}
+  o.homeTeamId = -1
+  o.initialHomeTeamId = -1
+  o.isDynamic = o.models.HomeTeamSelectModel:isDynamic()
+  o.userSide = o.USER_SIDE.HOME
+  if o.navContext.flow == CommonNavVars.FLOWS.ONLINE or o.navContext.flow == CommonNavVars.TYPES.FRIENDLY then
+    o.userSide = o.services.GameSetup.IsHostTeam() and o.USER_SIDE.HOME or o.USER_SIDE.AWAY
+  end
+  --if o.userSide == o.USER_SIDE.HOME then
+  -- o.services.gameState.SetUserSideAsHome()
+  -- else
+  --o.services.gameState.SetUserSideAsAway()
+  --end
+  o.im.Subscribe(bndOptionsEnabled, function()
+    o:publishOptionsEnabled()
+  end)
+  o.im.Subscribe(bndReadyLabelTexture, function()
+    o:publishReadyLabelTexture()
+  end)
+  o.im.Subscribe(bndHomeUserPlate, function()
+    o:publishHomeUserPlate()
+  end)
+  o.im.Subscribe(bndHomeTeamSelectorAlpha, function()
+    o:publishHomeTeamSelectorAlpha()
+  end)
+  o.im.Subscribe(bndHomeRealTeamVisible, function()
+    o:publishHomeRealTeamVisible()
+  end)
+  o.im.Subscribe(bndHomeFriendlyTeamVisible, function()
+    o:publishHomeFriendlyTeamVisible()
+  end)
+  o.im.Subscribe(bndHomeFutSquadVisible, function()
+    o:publishHomeFutSquadVisible()
+  end)
+  o.im.Subscribe(bndLabelTickernavpublisher, function()
+    o:publishLabelTickernavpublisher()
+  end)
+  o.im.Subscribe(bndAutodisableTickernavpublisher, function()
+    o:publishAutodisableTickernavpublisher()
+  end)
+  if o.navContext.gamemode == CommonNavVars.GAMEMODES.FUT or o.navContext.type == CommonNavVars.TYPES.TOURNAMENTS then
+  -- o.models.HomeTeamSelectModel:FUT()
+  -- o:setHomeTeamData(o.models.HomeTeamSelectModel:getHomeTeam())
+  else
+    o.initialHomeTeamId = o.models.HomeTeamSelectModel:REAL(o.toggleSideHome, o.navContext.fromScreen == "PrematchFlow")
+    
+    o.im.RegisterAction(actHomeCountryPrevious, function(actionName, data)
+      o:sendToggleInfo(o.toggleSideHome, o.countryToggleId, 0)
+      o.services.MatchSetup.TogglePrevious(o.toggleSideHome, o.countryToggleId)
+    end)
+    o.im.RegisterAction(actHomeCountryNext, function(actionName, data)
+      o:sendToggleInfo(o.toggleSideHome, o.countryToggleId, 1)
+      o.services.MatchSetup.ToggleNext(o.toggleSideHome, o.countryToggleId)
+    end)
+    o.im.RegisterAction(actHomeLeaguePrevious, function(actionName, data)
+      o:sendToggleInfo(o.toggleSideHome, o.leagueToggleId, 0)
+      o.services.MatchSetup.TogglePrevious(o.toggleSideHome, o.leagueToggleId)
+    end)
+    o.im.RegisterAction(actHomeLeagueNext, function(actionName, data)
+      o:sendToggleInfo(o.toggleSideHome, o.leagueToggleId, 1)
+      o.services.MatchSetup.ToggleNext(o.toggleSideHome, o.leagueToggleId)
+    end)
+    o.im.RegisterAction(actHomeTeamPrevious, function(actionName, data)
+      o:sendToggleInfo(o.toggleSideHome, o.teamToggleId, 0)
+      o.services.MatchSetup.TogglePrevious(o.toggleSideHome, o.teamToggleId)
+    end)
+    o.im.RegisterAction(actHomeTeamNext, function(actionName, data)
+      o:sendToggleInfo(o.toggleSideHome, o.teamToggleId, 0)
+      o.services.MatchSetup.ToggleNext(o.toggleSideHome, o.teamToggleId)
+    end)
+  end
+  o.im.RegisterAction(actAdvance, function(actionName, data)
+    if o.navContext.gamemode == CommonNavVars.GAMEMODES.FUT and o.navContext.flow == CommonNavVars.FLOWS.ONLINE then
+      if o.models.HomeTeamSelectModel:checkAdvance() == true then
+        o.im.ChangeActionState(actAdvance, o.im.GetActionState("INVALID"))
+        o.models.HomeTeamSelectModel:advance(o.isDynamic)
+      else
+        o.models.HomeTeamSelectModel:showDisconnectPopup()
+      end
+    else
+      o.models.HomeTeamSelectModel:advance(o.isDynamic)
+    end
+  end)
+  o.im.RegisterAction(actBack, function(actionName, data)
+    if o.navContext.type == CommonNavVars.TYPES.FRIENDLY and o.navContext.flow == CommonNavVars.FLOWS.ONLINE then
+      local popupData = {
+        title = "LTXT_INV_CANCEL_INVITE_POPUP_TITLE",
+        message = "LTXT_INV_CANCEL_INVITE_POPUP_BODY",
+        buttons = {
+          {
+            label = "LTXT_CMN_NO",
+            clickEvents = {
+              "evt_hide_popup"
+            }
+          },
+          {
+            label = "LTXT_CMN_YES",
+            clickEvents = {
+              "evt_hide_popup",
+              "evt_back"
+            }
+          }
+        }
+      }
+      o.nav.Event(nil, "evt_show_popup", popupData)
+    else
+      o.nav.Event(nil, "evt_back")
+    end
+  end)
+  o.im.RegisterAction(actSettings, function(actionName, data)
+    o.nav.Event(nil, "evt_to_settings")
+  end)
+  o.im.RegisterAction(actSquad, function(actionName, data)
+    o.nav.Event(nil, "evt_to_squad")
+  end)
+  o.im.RegisterAction(actSquadAway, function(actionName, data)
+    o.nav.Event(nil, "evt_to_squadaway")
+  end)
+  if o.isDynamic then
+    o.services.Pregame.ListenTeamSelectionEvents()
+  end
+  return o
+end
+function TeamSelect:publishLabelTickernavpublisher()
+  if self.navContext.flow == CommonNavVars.FLOWS.ONLINE and (self.navContext.type == CommonNavVars.TYPES.TOURNAMENTS or self.navContext.type == CommonNavVars.TYPES.SEASONS) then
+    self.im.Publish(bndLabelTickernavpublisher, self.loc.LocalizeString("LTXT_CMN_SEARCH"))
+  else
+    self.im.Publish(bndLabelTickernavpublisher, self.loc.LocalizeString("LTXT_CMN_CONTINUE"))
+  end
+end
+function TeamSelect:publishAutodisableTickernavpublisher()
+  if self.navContext.flow == CommonNavVars.FLOWS.ONLINE and (self.navContext.type == CommonNavVars.TYPES.TOURNAMENTS or self.navContext.type == CommonNavVars.TYPES.SEASONS or self.navContext.type == CommonNavVars.TYPES.FRIENDLY) then
+    self.im.Publish(bndAutodisableTickernavpublisher, false)
+  end
+end
+function TeamSelect:handleEvent(eventType, data)
+  if eventType == EventTypes.OnTeamDataChanged then
+    self:onTeamDataChanged(data)
+  elseif eventType == EventTypes.OnTeamReady then
+    self:onTeamReady(data)
+  elseif eventType == EventTypes.MatchSetupSelectedTeamChanged then
+    print("TeamSelect:handleEvent")
+    self:onToggleCompleted(data.currentTeamInfo, data.resetRoster)
+  end
+end
+function TeamSelect:sendToggleInfo(side, toggle, direction)
+  if self.isDynamic == true then
+    local teamData = {}
+    teamData.DIRECTION = direction
+    teamData.SIDE = side
+    teamData.TOGGLE = toggle
+    self.services.Pregame.HandleTeamChange(teamData)
+  end
+end
+function TeamSelect:publishOptionsEnabled()
+  self.im.Publish(bndOptionsEnabled, not isSearchingOpponent)
+end
+function TeamSelect:publishHomeUserData()
+  self.im.Publish(bndHomeTeamUser, self.services.UserPlate.GetDisplayName())
+end
+function TeamSelect:publishHomeRealTeamVisible()
+  self.im.Publish(bndHomeRealTeamVisible, self.navContext.gamemode == CommonNavVars.GAMEMODES.REAL)
+end
+function TeamSelect:publishHomeFutSquadVisible()
+  self.im.Publish(bndHomeFutSquadVisible, self.navContext.gamemode ~= CommonNavVars.GAMEMODES.REAL)
+end
+function TeamSelect:publishHomeFriendlyTeamVisible()
+  self.im.Publish(bndHomeFriendlyTeamVisible, self.userSide == self.USER_SIDE.AWAY and self.navContext.type == CommonNavVars.TYPES.FRIENDLY)
+end
+function TeamSelect:publishHomeUserPlate()
+  self.im.Publish(bndHomeUserPlate, self.opponentUserData)
+end
+function TeamSelect:publishHomeTeamSelectorAlpha()
+  self.im.Publish(bndHomeTeamSelectorAlpha, self.userSide == self.USER_SIDE.AWAY and opponentTeamSelectorAlpha or 1)
+end
+function TeamSelect:publishReadyLabelTexture()
+  self.im.Publish(bndReadyLabelTexture, "$ReadyTexture")
+end
+function TeamSelect:setHomeTeamData(homeTeamValue)
+  self.homeTeamId = homeTeamValue.teamId
+  self.im.Subscribe(bndHomeTeamUser, function()
+    self:publishHomeUserData()
+  end)
+  self.im.Subscribe(bndHomeSquadName, function()
+    self:publishTeamData(bndHomeSquadName, self:getSelectedSquadName())
+  end)
+  self.im.Subscribe(bndHomeTeamData, function()
+    self:publishTeamData(bndHomeTeamData, homeTeamValue)
+  end)
+end
+function TeamSelect:setHomeTeamData(homeTeamValue)
+  self.homeTeamId = homeTeamValue.teamId
+  self.im.Subscribe(bndHomeTeamUser, function()
+    self:publishHomeUserData()
+  end)
+  self.im.Subscribe(bndHomeSquadName, function()
+    self:publishTeamData(bndHomeSquadName, self:getSelectedSquadName())
+  end)
+  self.im.Subscribe(bndHome2TeamData, function()
+    self:publish2TeamData(bndHome2TeamData, homeTeamValue)
+  end)
+end
+function TeamSelect:setHomeTeamData(homeTeamValue)
+  self.homeTeamId = homeTeamValue.teamId
+  self.im.Subscribe(bndHomeTeamUser, function()
+    self:publishHomeUserData()
+  end)
+  self.im.Subscribe(bndHomeSquadName, function()
+    self:publishTeamData(bndHomeSquadName, self:getSelectedSquadName())
+  end)
+  self.im.Subscribe(bndHome3TeamData, function()
+    self:publish3TeamData(bndHome3TeamData, homeTeamValue)
+  end)
+end
+function TeamSelect:getSelectedSquadName()
+  local squadList = self.services.FutSquadMgt.GetSquadList()
+  local currSquadID = self.services.FutSquadMgt.GetCurrentSquadID()
+  for i = 1, table.getn(squadList) do
+    if squadList[i].id == currSquadID then
+      return squadList[i].name
+    end
+  end
+  return ""
+end
+function TeamSelect:publishTeamData(bindingName, value)
+  if bindingName == bndHomeTeamData then
+    if self.navContext.gamemode == CommonNavVars.GAMEMODES.FUT then
+      self.im.Publish(bndHomeTeamData, {
+        chemistry = value.chemistry,
+        ratingLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_RATING_LABEL"),
+        chemLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_CHEMISTRY_LABEL"),
+        crest = {
+          name = "$Crest",
+          id = string.format("%d", value.crestId)
+        },
+        starRating = value.starRating,
+        overall = value.overall,
+        teamRating = value.teamRating,
+        userSide = true,
+        avatar = self.services.SocialService.GetImagePathForUser(true)
+      })
+    else
+      self.im.Publish(bndHomeTeamData, {
+        crest = {
+          name = "$Crest",
+          id = string.format("%d", value.crestId)
+        },
+        leagueCrest = {
+          name = "$LeagueCrest",
+          id = string.format("%s", value.leagueName)
+        },
+        flagCrest = {
+          name = "$Flag128x128",
+          id = string.format("%s", value.flagName)
+        },
+        starRating = value.starRating,
+        teamRating = value.teamRating,
+        userSide = false
+      })
+    end
+    self.initialHomeTeamId = value.teamId
+    self.models.HomeTeamSelectModel:setHomeTeam(value)
+    if self.navContext.fromScreen == "PrematchFlow" then
+      self.models.HomeTeamSelectModel:setTeam(self.initialHomeTeamId)
+    end
+    self.models.HomeTeamSelectModel:setupTeams()
+  elseif bindingName == bndHomeSquadName then
+    self.im.Publish(bndHomeSquadName, value)
+  elseif bindingName == bndHomeTeamCountry then
+    self.im.Publish(bndHomeTeamCountry, value)
+  elseif bindingName == bndHomeTeamLeague then
+    self.im.Publish(bndHomeTeamLeague, value)
+  elseif bindingName == bndHomeTeamName then
+    self.im.Publish(bndHomeTeamName, value)
+  else
+    print("TeamSelect:: Teamdata out of bounds.")
+  end
+end
+function TeamSelect:publish2TeamData(bindingName, value)
+  if bindingName == bndHome2TeamData then
+    if self.navContext.gamemode == CommonNavVars.GAMEMODES.FUT then
+      self.im.Publish(bndHome2TeamData, {
+        chemistry = value.chemistry,
+        ratingLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_RATING_LABEL"),
+        chemLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_CHEMISTRY_LABEL"),
+        crest = {
+          name = "$Crest",
+          id = string.format("%d", value.crestId)
+        },
+        starRating = value.starRating,
+        overall = value.overall,
+        teamRating = value.team2Rating,
+        userSide = true,
+        avatar = self.services.SocialService.GetImagePathForUser(true)
+      })
+    else
+      self.im.Publish(bndHome2TeamData, {
+        crest = {
+          name = "$Crest",
+          id = string.format("%d", value.crestId)
+        },
+        leagueCrest = {
+          name = "$LeagueCrest",
+          id = string.format("%s", value.leagueName)
+        },
+        flagCrest = {
+          name = "$Flag128x128",
+          id = string.format("%s", value.flagName)
+        },
+        starRating = value.starRating,
+        teamRating = value.team2Rating,
+        userSide = false
+      })
+    end
+    self.initialHomeTeamId = value.teamId
+    self.models.HomeTeamSelectModel:setHomeTeam(value)
+    if self.navContext.fromScreen == "PrematchFlow" then
+      self.models.HomeTeamSelectModel:setTeam(self.initialHomeTeamId)
+    end
+    self.models.HomeTeamSelectModel:setupTeams()
+  elseif bindingName == bndHomeSquadName then
+    self.im.Publish(bndHomeSquadName, value)
+  elseif bindingName == bndHomeTeamCountry then
+    self.im.Publish(bndHomeTeamCountry, value)
+  elseif bindingName == bndHomeTeamLeague then
+    self.im.Publish(bndHomeTeamLeague, value)
+  elseif bindingName == bndHomeTeamName then
+    self.im.Publish(bndHomeTeamName, value)
+  else
+    print("TeamSelect:: Teamdata out of bounds.")
+  end
+end
+function TeamSelect:publish3TeamData(bindingName, value)
+  if bindingName == bndHome3TeamData then
+    if self.navContext.gamemode == CommonNavVars.GAMEMODES.FUT then
+      self.im.Publish(bndHome3TeamData, {
+        chemistry = value.chemistry,
+        ratingLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_RATING_LABEL"),
+        chemLabel = self.loc.LocalizeString("LTXT_SQD_TEAM_CHEMISTRY_LABEL"),
+        crest = {
+          name = "$Crest",
+          id = string.format("%d", value.crestId)
+        },
+        starRating = value.starRating,
+        overall = value.overall,
+        teamRating = value.teamRating,
+        userSide = true,
+        avatar = self.services.SocialService.GetImagePathForUser(true)
+      })
+    else
+      self.im.Publish(bndHome3TeamData, {
+        crest = {
+          name = "$Crest",
+          id = string.format("%d", value.crestId)
+        },
+        leagueCrest = {
+          name = "$LeagueCrest",
+          id = string.format("%s", value.leagueName)
+        },
+        flagCrest = {
+          name = "$Flag128x128",
+          id = string.format("%s", value.flagName)
+        },
+        starRating = value.starRating,
+        teamRating = value.teamRating,
+        userSide = false
+      })
+    end
+    self.initialHomeTeamId = value.teamId
+    self.models.HomeTeamSelectModel:setHomeTeam(value)
+    if self.navContext.fromScreen == "PrematchFlow" then
+      self.models.HomeTeamSelectModel:setTeam(self.initialHomeTeamId)
+    end
+    self.models.HomeTeamSelectModel:setupTeams()
+  elseif bindingName == bndHomeSquadName then
+    self.im.Publish(bndHomeSquadName, value)
+  elseif bindingName == bndHomeTeamCountry then
+    self.im.Publish(bndHomeTeamCountry, value)
+  elseif bindingName == bndHomeTeamLeague then
+    self.im.Publish(bndHomeTeamLeague, value)
+  elseif bindingName == bndHomeTeamName then
+    self.im.Publish(bndHomeTeamName, value)
+  else
+    print("TeamSelect:: Teamdata out of bounds.")
+  end
+end
+function TeamSelect:onToggleCompleted(selected, resetRoster)
+  local country = selected.country
+  local league = selected.league
+  local teamName = selected.team
+  local side = selected.side
+  local teamData = {
+    teamId = selected.teamRatings.teamId,
+    teamName = teamName,
+    crestId = selected.teamRatings.teamId,
+    flagName = selected.countryId,
+    leagueName = selected.leagueId,
+    starRating = selected.teamRatings.starRating,
+    overall = selected.teamRatings.overall,
+    teamRating = {
+      attackValue = selected.teamRatings.offense,
+      middleValue = selected.teamRatings.midfield,
+      defenseValue = selected.teamRatings.defense,
+      attackLabel = self.loc.LocalizeString("LTXT_CMN_ATT"),
+      middleLabel = self.loc.LocalizeString("LTXT_CMN_MID"),
+      defenseLabel = self.loc.LocalizeString("LTXT_CMN_DEF")
+    },
+    team2Rating = {
+      attackValueHome = selected.teamRatings.offense,
+      middleValueHome = selected.teamRatings.midfield,
+      defenseValueHome = selected.teamRatings.defense,
+      attackLabelHome = self.loc.LocalizeString("LTXT_CMN_ATT"),
+      middleLabelHome = self.loc.LocalizeString("LTXT_CMN_MID"),
+      defenseLabelHome = self.loc.LocalizeString("LTXT_CMN_DEF")
+    },
+    chemistry = 0,
+    overall = 0
+  }
+  if side == self.USER_SIDE.HOME then
+    if self.homeTeamId ~= teamData.teamId then
+      self.homeTeamId = teamData.teamId
+      if resetRoster or self.navContext.fromScreen == "PrematchFlow" then
+        self.models.HomeTeamSelectModel:setTeam(teamData.teamId)
+      end
+    end
+    if self.homeInitialized == false then
+      self.im.Subscribe(bndHomeTeamUser, function()
+        self:publishHomeUserData()
+      end)
+      self.im.Subscribe(bndHomeTeamCountry, function()
+        self:publishTeamData(bndHomeTeamCountry, country)
+      end)
+      self.im.Subscribe(bndHomeTeamLeague, function()
+        self:publishTeamData(bndHomeTeamLeague, league)
+      end)
+      self.im.Subscribe(bndHomeTeamName, function()
+        self:publishTeamData(bndHomeTeamName, teamName)
+      end)
+      self.im.Subscribe(bndHomeTeamData, function()
+        self:publishTeamData(bndHomeTeamData, teamData)
+      end)
+      self.im.Subscribe(bndHome2TeamData, function()
+        self:publish2TeamData(bndHome2TeamData, teamData)
+      end)
+      self.im.Subscribe(bndHome3TeamData, function()
+        self:publish3TeamData(bndHome3TeamData, teamData)
+      end)
+      self.homeInitialized = true
+    else
+      self:publishTeamData(bndHomeTeamCountry, country)
+      self:publishTeamData(bndHomeTeamLeague, league)
+      self:publishTeamData(bndHomeTeamName, teamName)
+      self:publishTeamData(bndHomeTeamData, teamData)
+      self:publish2TeamData(bndHome2TeamData, teamData)
+      self:publish3TeamData(bndHome3TeamData, teamData)
+    end
+  end
+end
+function TeamSelect:onTeamDataChanged(teamData)
+  local direction = teamData.DIRECTION
+  if direction == 0 then
+    self.services.MatchSetup.TogglePrevious(teamData.SIDE, teamData.TOGGLE)
+  else
+    self.services.MatchSetup.ToggleNext(teamData.SIDE, teamData.TOGGLE)
+  end
+end
+function TeamSelect:onTeamReady(readyData)
+  if self.isDynamic and self.services.Pregame.AreBothSidesReady() then
+    self.models.HomeTeamSelectModel:doAdvance()
+  end
+end
+function TeamSelect:finalize()
+  self.im.Unsubscribe(bndHomeTeamUser)
+  self.im.Unsubscribe(bndHomeTeamData)
+  self.im.Unsubscribe(bndHome2TeamData)
+  self.im.Unsubscribe(bndHome3TeamData)
+  self.im.Unsubscribe(bndHomeSquadName)
+  self.im.Unsubscribe(bndHomeRealTeamVisible)
+  self.im.Unsubscribe(bndHomeFutSquadVisible)
+  self.im.Unsubscribe(bndHomeFriendlyTeamVisible)
+  self.im.Unsubscribe(bndHomeUserPlate)
+  self.im.Unsubscribe(bndHomeTeamSelectorAlpha)
+  self.im.Unsubscribe(bndHomeTeamCountry)
+  self.im.Unsubscribe(bndHomeTeamLeague)
+  self.im.Unsubscribe(bndHomeTeamName)
+  self.im.Unsubscribe(bndReadyLabelTexture)
+  self.im.Unsubscribe(bndOptionsEnabled)
+  self.im.Unsubscribe(bndLabelTickernavpublisher)
+  self.im.Unsubscribe(bndAutodisableTickernavpublisher)
+  if self.navContext.gamemode == CommonNavVars.GAMEMODES.REAL then
+    self.im.UnregisterAction(actHomeCountryPrevious)
+    self.im.UnregisterAction(actHomeCountryNext)
+    self.im.UnregisterAction(actHomeLeaguePrevious)
+    self.im.UnregisterAction(actHomeLeagueNext)
+    self.im.UnregisterAction(actHomeTeamPrevious)
+    self.im.UnregisterAction(actHomeTeamNext)
+  end
+  self.im.UnregisterAction(actBack)
+  self.im.UnregisterAction(actAdvance)
+  self.im.UnregisterAction(actSettings)
+  self.im.UnregisterAction(actSquad)
+  self.im.UnregisterAction(actSquadAway)
+  self.services.EventManagerService.UnregisterHandler(self.handlerId)
+  if self.isDynamic then
+    self.services.Pregame.UnlistenTeamSelectionEvents()
+  end
+  self.homeInitialized = false
+  self.models.HomeTeamSelectModel:finalize()
+end
+return TeamSelect

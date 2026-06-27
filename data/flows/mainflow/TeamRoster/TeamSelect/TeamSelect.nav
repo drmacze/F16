@@ -1,0 +1,82 @@
+{
+    "name": "TeamSelect",
+    "initial":
+    {
+        "targets": ["RedirectSelectTeam"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectSelectTeam",
+            "onEnter":
+            [
+                ["set", ["fromScreen", ".fromScreen"]]
+            ],
+            "states":
+            [
+                {
+                    "name": "inTeam",
+                    "onEnter":
+                    [
+                        ["invoke", [".type"]],
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "friendly",
+                            "targets": ["RedirectMenu"]
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectMenu",
+                    "transitions":
+                    [
+                        {
+                            "let": { "fromScreen": ".fromScreen" },
+                            "targets": ["menuTeamSelect"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "menuTeamSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["TeamSelect.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE", "fromScreen" : ".fromScreen" }]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                },
+				{
+                    "event": "evt_to_squad",
+                    "cond": ["==", ".gamemode", "real"],
+                    "targets": ["SquadReal"]
+                }
+            ]
+        },
+		{
+	    	"name": "SquadReal",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/real/pregame/squad/squad.nav",
+            "outputs":
+            {
+                "out_back": "RedirectSelectTeam",
+                "out_advance": "RedirectSelectTeam"
+            }
+        }
+    ]
+}

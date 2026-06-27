@@ -1,0 +1,6 @@
+[
+    "/lua/common/VirtualButton.lua",
+	"/lua/enums/eventmanager.lua",
+	"/lua/enums/settings_service.lua",
+	"/flows/mainflow/settingscustomize/SettingsCustomizeModel.lua"
+]

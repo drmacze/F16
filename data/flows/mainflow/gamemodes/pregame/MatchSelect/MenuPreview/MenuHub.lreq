@@ -1,0 +1,6 @@
+[
+	"/lua/enums/eventmanager.lua",
+    "/lua/enums/pregamemanager.lua",
+    "/lua/packages/tableutil.lua",
+	"/lua/common/CommonNavVars.lua"
+]

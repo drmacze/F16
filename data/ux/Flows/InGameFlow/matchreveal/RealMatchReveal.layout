@@ -1,0 +1,192 @@
+{ 
+    "commonName": "Panel",
+	"name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+	"bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+    	{
+			"commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundDefault"
+        },
+        {
+
+            "commonName": "Image",
+            "name": "insHomeStadium",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                            "property": "image",
+                            "binding":  "bnd_home_stadium_bg"
+                }
+            ]
+        },
+    	{
+			"commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$MatchReveal_Background"
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianLogoEASportsLive",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 35,
+            "marginRight": 45,
+            "width": 185,
+            "height": 60,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LogoEASportsHDLive"
+                }
+            ]
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 150,
+            "marginRight": 48,
+            "fontSize": 30,
+            "fontColor": "$COLOR_WHITE",
+            "text": "TODAY'S MATCH"
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 310,
+            "marginRight": 262,
+			"fontFace": "$FONT_KNULMEDIUM",
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE",
+            "text": "HOME"
+        },
+        {
+            "commonName": "Label",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 310,
+            "marginRight": 60,
+			"fontFace": "$FONT_KNULMEDIUM",
+            "fontSize": 20,
+            "fontColor": "$COLOR_WHITE",
+            "text": "AWAY"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "width": 30,
+            "height": 30,
+            "marginRight": 47,
+            "marginTop": 376,
+            "type": "$Icon_Stadium"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "BOTTOM",
+            "alignH": "RIGHT",
+            "width": 350,
+            "height": 120,
+            "marginRight": 80,
+            "marginBottom": 77,
+            "type": "$Icon_Sponsor"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "BOTTOM",
+            "alignH": "RIGHT",
+            "marginBottom": 35,
+            "marginRight": 30,
+            "width": 70,
+            "height": 50,
+            "path": "animasi/Loading16.swf"
+        },
+        {
+            "commonName": "Image",
+            "name": "insCrestHome",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginRight": 250,
+            "marginTop": 220,
+            "width": 75,
+            "height": 75,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_home_team_crest"
+                }
+            ]
+        },
+        {
+            "commonName": "Image",
+            "name": "insCrestAway",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginRight": 45,
+            "marginTop": 220,
+            "width": 75,
+            "height": 75,
+            "bindings":
+            [
+                {
+                    "property": "image",
+                    "binding":  "bnd_away_team_crest"
+                }
+            ]
+        },
+        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginRight": 172,
+                            "marginTop": 237,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "VS"
+                        },
+                        {
+            "commonName": "Label",
+            "name": "insLabelMatchType",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginRight": 85,
+            "marginTop": 382,
+            "fontSize": 19,
+            "forceCaps": true,
+            "fontColor": "$COLOR_WHITE",
+            "styles": ["TF_MATCH_TYPE"],
+            "bindings":
+            [
+                {
+                    "property": "text",
+                    "binding":  "bnd_stadium"
+                }
+                    ]
+                }
+            ]
+        }
+    ]
+}

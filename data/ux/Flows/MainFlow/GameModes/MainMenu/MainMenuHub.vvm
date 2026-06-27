@@ -1,0 +1,5 @@
+{
+    "dds": ["MainMenuHub.dd", "/lua/common/TabModel.dd"],
+    "vms": [["lua", "/lua/common/TabModel.lua"]],
+    "views": [["gfx", { "layout": "MainMenuHub.layout" }]]
+}

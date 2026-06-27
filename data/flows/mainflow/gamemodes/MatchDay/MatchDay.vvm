@@ -1,0 +1,5 @@
+{
+	"dds": ["MatchDay.dd"],
+    "vms": [["lua", "MatchDay.lua"]],
+    "views": [["gfx", {"layout": "MatchDay.layout"}]]
+}

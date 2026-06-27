@@ -1,0 +1,549 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+
+                {
+                    "commonName": "Panel",
+                    "name": "MenuLayout",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 77,
+                    "width": 1000,
+                    "height": 475,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "width": 150,
+                            "height": 35,
+                            "type": "$BackgroundJudulMenu"
+                        },
+
+                        {
+                            "commonName": "Label",
+                            "name": "Live",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 29,
+                            "marginTop": 5,
+                            "width": 150,
+                            "height": 35,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "CENTRAL"
+                        }
+                    ]
+                },
+                
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 475,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMainMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "width": 1000,
+                    "height": 355,
+                    "children":
+                          [
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "CENTER",
+                                  "alignH": "LEFT",
+                                  "width": 350,
+                                  "height": 355,
+                                  "type": "$LiveTileBackgroundIdle"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "LEFT",
+                                  "width": 350,
+                                  "height": 300,
+                                  "type": "$ads1"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "type": "$LiveTileBackgroundIdle"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "TOP",
+                                  "alignH": "RIGHT",
+                                  "width": 642,
+                                  "height": 173.5,
+                                  "type": "$Background_Matchday"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 358,
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "clickAction": "act_table"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "LEFT",
+                                  "marginLeft": 358,
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "type": "$Table"
+                              },
+                              {
+                                  "commonName": "LiveTile",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "RIGHT",
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "clickAction": "act_progressdate"
+                              },
+                              {
+                                  "commonName": "Asset",
+                                  "alignV": "BOTTOM",
+                                  "alignH": "RIGHT",
+                                  "width": 317,
+                                  "height": 173.5,
+                                  "type": "$Tombol_Lanjut"
+                              }
+                          ]  
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "MatchDay",
+                     "alignV": "TOP",
+                     "alignH": "RIGHT",
+                     "marginTop": 120,
+                     "width": 642,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "RIGHT",
+                                   "marginTop": 5,
+                                   "marginRight": 8,
+                                   "fontSize": 15,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "forceCaps": true,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_month_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },                             
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "RIGHT",
+                                   "marginTop": 5,
+                                   "marginRight": -31,
+                                   "fontSize": 15,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "width": 90,
+                                   "multiline": true,
+                                   "leading": 3000,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_date_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "RIGHT",
+                                   "marginTop": 5,
+                                   "marginRight": 64,
+                                   "fontSize": 15,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "forceCaps": true,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_day_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },
+                               
+                               {
+                                   "commonName": "Asset",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "RIGHT",
+                                   "marginBottom": -9,
+                                   "marginRight": -204,
+                                   "width": 387,
+                                   "height": 62,
+                                   "type": "$Background_Judulstand2"
+                               },
+                               
+                               {
+                                   "commonName": "Image",
+                                   "name": "Logo",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "CENTER",
+                                   "marginBottom": -15,
+                                   "marginLeft": 238,
+                                   "width": 147,
+                                   "height": 61,
+                                   "alpha": 1,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_logo_league",
+                                                "property": "image"
+                                             }
+                                         ]               
+                               },
+                               
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "forceCaps": true,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_league_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },                  
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 115,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "forceCaps": true,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_matchup_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },                             
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_matchtag",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },
+                               
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 78,
+                                   "marginLeft": 55,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_advances_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },
+                               
+                               {
+                                   "commonName": "Image",
+                                   "name": "HomeCrest",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 70,
+                                   "marginLeft": 8,
+                                   "width": 40,
+                                   "height": 40,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_team_crest_home",
+                                                "property": "image"
+                                             }
+                                         ]
+                               },
+                               
+                               {
+                                   "commonName": "Image",
+                                   "name": "AwayCrest",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 70,
+                                   "marginLeft": 74.5,
+                                   "width": 40,
+                                   "height": 40,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_team_crest_away",
+                                                "property": "image"
+                                             }
+                                         ]
+                               },
+                               {
+                                   "commonName": "Image",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 72,
+                                   "marginLeft": 10,
+                                   "width": 65,
+                                   "height": 65,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_logo_checkmark",
+                                                "property": "image"
+                                             }
+                                         ]      
+                               }        
+                               
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Kickoff",
+                     "alignV": "BOTTOM",
+                     "alignH": "RIGHT",
+                     "width": 317,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "forceCaps": true,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_advance_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 45,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_matchdate_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "News",
+                     "alignV": "CENTER",
+                     "alignH": "LEFT",
+                     "marginTop": 59,
+                     "width": 350,
+                     "height": 355,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 25,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "text": "NEWS"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "LEFT",
+                                   "marginBottom": 27,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "GOAL . COM : Paul Pogba is the new owner of"
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "LEFT",
+                                   "marginBottom": 6,
+                                   "marginLeft": 8,
+                                   "fontSize": 17.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "Juventus No. 10 jersey"
+                               }
+                          ]
+                 },
+                 {
+                     "commonName": "Panel",
+                     "name": "Standings",
+                     "alignV": "BOTTOM",
+                     "alignH": "LEFT",
+                     "marginLeft": 358,
+                     "width": 317,
+                     "height": 173.5,
+                     "children":
+                          [
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 5,
+                                   "marginLeft": 8,
+                                   "fontSize": 27.5,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "text": "TABLES"
+                               },                              
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "LEFT",
+                                   "marginTop": 21.5,
+                                   "marginLeft": 8,
+                                   "fontSize": 15,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "forceCaps": true,
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_match_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               },
+                               {
+                                   "commonName": "Label",
+                                   "alignV": "TOP",
+                                   "alignH": "RIGHT",
+                                   "marginTop": 47.5,
+                                   "marginRight": 15,
+                                   "fontSize": 15,
+                                   "fontColor": "$COLOR_DARK_GRAY",
+                                   "bindings":
+                                         [
+                                             {
+                                                "binding": "bnd_point_label",
+                                                "property": "text"
+                                             }
+                                         ]
+                               }        
+                          ]
+                 }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "TabInfoMatch",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 300,
+            "marginTop": 0,
+            "width": 330,
+            "height": 400,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -5,
+                    "marginLeft": 80,
+                    "width": 340,
+                    "height": 410,
+                    "alpha": 0.9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_ads",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 10,
+                    "marginLeft": 330,
+                    "fontSize": 0,
+                    "alpha": 0.8,
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "fontColor": "$COLOR_WHITE",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchdate_label",
+                            "property": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

@@ -1,0 +1,5 @@
+{
+	"dds":	 ["PlayerCareerHub.dd"],
+	"vms":   [["lua", "PlayerCareerHub.lua"]],
+    "views": [["gfx", {"layout": "PlayerCareerHub.layout"}]]
+}

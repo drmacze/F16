@@ -1,0 +1,37 @@
+{
+    "name": "KitSelect",
+    "initial":
+    {
+        "targets": ["KitSelectStartMatch"]
+    },
+    "states":
+    [
+        {
+            "name": "KitSelectStartMatch",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["KitSelectStartMatch.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_advance",
+					"let":     {"fromScreen":"KitSelect"},
+					"targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event":   "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event":   "evt_refresh_on_resize",
+                    "targets": ["KitSelectStartMatch"]
+                }
+            ]
+        }
+    ]
+}

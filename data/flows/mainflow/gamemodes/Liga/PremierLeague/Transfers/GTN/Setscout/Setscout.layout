@@ -1,0 +1,381 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_submit",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 215,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_submit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 275,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Confirm"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 70,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "MC"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Transfers"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 276,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xA8A8A8",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 306,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Configure Scout"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 20,
+            "width": 1000,
+            "height": 430,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 15,
+                    "alpha": 0,
+                    "color": "0xFFFFFF"
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "width": 600,
+                    "height": 300,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x1B1B2A"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -46,
+                            "marginLeft": 0,
+                            "fontSize": 18,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "World Map"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "Scout",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_scout",
+                                     "property": "image"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 484,
+                    "height": 430,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 20,
+                            "marginLeft": 0,
+                            "fontSize": 17,
+                            "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "PLAYER CHARACTERISTICS"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 62.1,
+                            "width": 300,
+                            "height": 1.1,
+                            "color": "0xA8A8A8",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 45,
+                            "marginLeft": 0,
+                            "fontSize": 20,
+                            "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "bold": false,
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_team_label",
+                                     "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "matchlist",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 66,
+                            "marginLeft": 0,
+                            "x": 0,
+                            "y": 0,
+                            "displayRange": 7,
+                            "highlightable": true,
+                            "row": "Setscout",
+                            "rowHeight": 38,
+                            "rowWidth": 455,
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_match_list",
+                                     "property": "dataProviders"
+                                }
+                            ]
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 165,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 40,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillColor": "0x1B1B2A",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0x00D9D1",
+                            "outlineAlpha": 1,
+                            "cornerRaduis": 12
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": 10,
+                            "width": 30,
+                            "height": 30,
+                            "backgroundImage": "$BlueArrowLeft1",
+                            "backgroundHighlightImage": "$BlueArrowLeft1",
+                            "clickAction": "act_decrease"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "RIGHT",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginRight": 10,
+                            "width": 30,
+                            "height": 30,
+                            "backgroundImage": "$BlueArrowRight1",
+                            "backgroundHighlightImage": "$BlueArrowRight1",
+                            "clickAction": "act_next"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": 0,
+                            "fontSize": 20,
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "fontColor": "$COLOR_WHITE",
+                            "bold": false,
+                            "bindings":
+                            [
+                                {
+                                     "binding": "bnd_matchday_label",
+                                     "property": "text"
+                                },
+                                {
+                                     "binding":  "bnd_fontColor",
+                                     "property": "fontColor"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

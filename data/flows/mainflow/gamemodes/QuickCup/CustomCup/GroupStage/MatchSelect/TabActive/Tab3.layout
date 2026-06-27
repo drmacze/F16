@@ -1,0 +1,240 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 435,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Office",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 450,
+                    "height": 10,
+                    "width": 80,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "alpha": 1,
+                            "cornerRaduis": 9,
+                            "bindings":
+                            [
+						        {
+							        "binding": "bnd_color_tourid",
+									"property": "fillColor"
+								}
+							]
+						},
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Standings"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 65,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xDDDDDD",
+							"forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_current",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 134,
+                            "marginLeft": 103,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xFFFFFF",
+							"alpha": 0.6,
+                            "text": "CLUB"
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "Standings",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 120,
+                            "marginLeft": 34,
+                            "scaleX": 0.65,
+                            "scaleY": 0.65,
+                            "displayRange": 6,
+                            "highlightable": true,
+                            "row": "StandingsGroupRow",
+                            "rowHeight": 63,
+                            "rowWidth": 410,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_standings",
+                                    "property": "dataProviders"
+                                }
+                            ]
+	                	},
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab3sub1"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 430,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "alpha": 1,
+                            "cornerRaduis": 9,
+                            "bindings":
+                            [
+						        {
+							        "binding": "bnd_color_tourid",
+									"property": "fillColor"
+								}
+							]
+						},
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Top Scorers"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 65,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xDDDDDD",
+							"forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tour_label",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "TopScorers",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 108,
+                            "marginLeft": 34,
+                            "scaleX": 0.65,
+                            "scaleY": 0.65,
+                            "displayRange": 6,
+                            "highlightable": true,
+                            "row": "TopGoalRow",
+                            "rowHeight": 60,
+                            "rowWidth": 410,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+	                	},
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab3sub2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "MenuOnlineHub",
+    "onEnter":
+    [
+        ["setTabContext", [2]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuOnlineHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+
+        {
+            "event": "evt_menu_home",
+            "targets": ["out_menu_home"]
+        },
+        {
+            "event": "evt_menu_play",
+            "targets": ["out_menu_play"]
+        },
+        {
+            "event": "evt_menu_customize",
+            "targets": ["out_menu_customize"]
+        }
+        
+    ]
+}

@@ -1,0 +1,1115 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "BntClick"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Group",
+            "name": "BntClick",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "countryButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": -450,
+                    "y": -115,
+                    "width": 300,
+                    "height": 250,
+                    "autoSelect": true,
+                    "clickSFXID": "act_click_customization",
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonHeight": 250,
+                    "buttonWidth": 300,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "countryButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": -450,
+                    "y": -175,
+                    "width": 300,
+                    "height": 30,
+                    "autoSelect": true,
+                    "clickSFXID": "act_click_customization",
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonHeight": 30,
+                    "buttonWidth": 300,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "countryButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": -450,
+                    "y": 165,
+                    "width": 300,
+                    "height": 45,
+                    "autoSelect": true,
+                    "clickSFXID": "act_click_customization",
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonHeight": 45,
+                    "buttonWidth": 300,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "countryButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": 150,
+                    "y": -175,
+                    "width": 300,
+                    "height": 30,
+                    "autoSelect": true,
+                    "clickSFXID": "act_click_customization",
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonHeight": 30,
+                    "buttonWidth": 300,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "countryButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": 150,
+                    "y": -115,
+                    "width": 300,
+                    "height": 250,
+                    "autoSelect": true,
+                    "clickSFXID": "act_click_customization",
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonHeight": 250,
+                    "buttonWidth": 300,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "countryButton",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "x": 150,
+                    "y": 165,
+                    "width": 300,
+                    "height": 45,
+                    "autoSelect": true,
+                    "clickSFXID": "act_click_customization",
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonHeight": 45,
+                    "buttonWidth": 300,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Ready",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "x": -500,
+                    "y": 270,
+                    "width": 70,
+                    "height": 10,
+                    "autoSelect": true,
+                    "clickSFXID": "",
+                    "id": 7,
+                    "type": "blackandblue",
+                    "buttonHeight": 10,
+                    "buttonWidth": 70,
+                    "buttonX": 0,
+                    "buttonY": 0,
+                    "selectable": true,
+                    "rollOverSFXID": "mouse_over_customization"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Bagian",
+            "alignH": "FILL",
+            "alignV": "CENTER",
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -300,
+                    "marginTop": -160,
+                    "width": 320,
+                    "height": 50,
+                    "fillColor": "0x1B1B2A",
+                    "fillAlpha": 0,
+                    "drawFill": true,
+                    "drawOutline": true,
+                    "outlineThickness": 0.8,
+                    "outlineColor": "0x00D9D1",
+                    "outlineAlpha": 1,
+                    "cornerRaduis": 9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_country_select_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -300,
+                    "marginTop": 10,
+                    "width": 320,
+                    "height": 280,
+                    "fillColor": "0x1B1B2A",
+                    "fillAlpha": 0,
+                    "drawFill": true,
+                    "drawOutline": true,
+                    "outlineThickness": 0.8,
+                    "outlineColor": "0x00D9D1",
+                    "outlineAlpha": 1,
+                    "cornerRaduis": 9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_select_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -300,
+                    "marginTop": 195,
+                    "width": 320,
+                    "height": 80,
+                    "fillColor": "0x1B1B2A",
+                    "fillAlpha": 0,
+                    "drawFill": true,
+                    "drawOutline": true,
+                    "outlineThickness": 0.8,
+                    "outlineColor": "0x00D9D1",
+                    "outlineAlpha": 1,
+                    "cornerRaduis": 9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_league_select_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insHomeRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_country_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_home_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 38,
+                            "marginLeft": -5,
+                            "clickAction": "act_home_country_previous",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 38,
+                            "marginRight": -1,
+                            "clickAction": "act_home_country_next",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insHomeRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_team_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_home2_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -27,
+                            "marginLeft": 35,
+                            "clickAction": "act_home_team_previous",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": -27,
+                            "marginRight": 31,
+                            "clickAction": "act_home_team_next",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insHomeRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": -300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_league_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_home3_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 23,
+                            "marginLeft": -5,
+                            "clickAction": "act_home_league_previous",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginBottom": 23,
+                            "marginRight": -1,
+                            "clickAction": "act_home_league_next",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_home_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "insTeamSelectorAway",
+            "alignH": "FILL",
+            "alignV": "CENTER",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "insAwayRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_real_team_toggles_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_away_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Bagian",
+            "alignH": "FILL",
+            "alignV": "CENTER",
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": -160,
+                    "width": 320,
+                    "height": 50,
+                    "fillColor": "0x1B1B2A",
+                    "fillAlpha": 0,
+                    "drawFill": true,
+                    "drawOutline": true,
+                    "outlineThickness": 0.8,
+                    "outlineColor": "0x00D9D1",
+                    "outlineAlpha": 1,
+                    "cornerRaduis": 9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_country_select_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 10,
+                    "width": 320,
+                    "height": 280,
+                    "fillColor": "0x1B1B2A",
+                    "fillAlpha": 0,
+                    "drawFill": true,
+                    "drawOutline": true,
+                    "outlineThickness": 0.8,
+                    "outlineColor": "0x00D9D1",
+                    "outlineAlpha": 1,
+                    "cornerRaduis": 9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_select_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 195,
+                    "width": 320,
+                    "height": 80,
+                    "fillColor": "0x1B1B2A",
+                    "fillAlpha": 0,
+                    "drawFill": true,
+                    "drawOutline": true,
+                    "outlineThickness": 0.8,
+                    "outlineColor": "0x00D9D1",
+                    "outlineAlpha": 1,
+                    "cornerRaduis": 9,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_league_select_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insAwayRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_country_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_away_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 38,
+                            "marginLeft": -5,
+                            "clickAction": "act_away_country_previous",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 38,
+                            "marginRight": -5,
+                            "clickAction": "act_away_country_next",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insAwayRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_team_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_away2_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": -27,
+                            "marginLeft": 35,
+                            "clickAction": "act_away_team_previous",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": -27,
+                            "marginRight": 31,
+                            "clickAction": "act_away_team_next",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "insAwayRealTeamToggleContent",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "marginLeft": 300,
+                    "marginTop": 10,
+                    "width": 300,
+                    "height": 450,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_league_select_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamSelector",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_selector_alpha",
+                                    "property": "alpha"
+                                },
+                                {
+                                    "binding": "bnd_away3_team_selector",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 23,
+                            "marginLeft": -5,
+                            "clickAction": "act_away_league_previous",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginBottom": 23,
+                            "marginRight": -1,
+                            "clickAction": "act_away_league_next",
+                            "buttonAsset": "$BlueArrowRight1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginBottom": 55,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 14,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_league",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 45,
+                            "marginLeft": 106,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_country",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 100,
+                            "marginLeft": 150,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "textAlignH": "CENTER",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_away_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

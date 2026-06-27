@@ -1,0 +1,165 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.PlayerHead": "RowPanel.RowLeftPanel.PlayerHead.image",
+        "dataProviders.PlayerName": "RowPanel.RowLeftPanel.PlayerName.text",
+        "dataProviders.TeamCrest": "RowPanel.RowLeftPanel.TeamCrest.image",
+        "dataProviders.TeamName": "RowPanel.RowLeftPanel.TeamName.text",
+        "dataProviders.Rating": "RowPanel.RowLeftPanel.Rating.text",
+        "dataProviders.Position": "RowPanel.RowLeftPanel.Position.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 800,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 800,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "PlayerHead",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "width": 45,
+                            "height": 45
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"PlayerName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 60,
+                            "marginBottom": 0,
+                            "width": 150,
+                            "autoScroll":true,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Position",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 300,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Rating",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 475,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "TeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 0,
+                            "marginLeft": 640,
+                            "width": 45,
+                            "height": 45
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 700,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 28,
+                            "width": 750,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.2
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 828,
+                            "width": 45,
+                            "height": 45,
+                            "type": "$IconSendToTransfer"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 828,
+                            "width": 45,
+                            "height": 45,
+                            "type": "$IconSendToTransfer"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

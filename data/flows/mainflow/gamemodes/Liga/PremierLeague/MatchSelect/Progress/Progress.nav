@@ -1,0 +1,24 @@
+{
+    "name": "Progress",
+    "states":
+    [
+        {
+            "name": "RedirectProgress",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Progress.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        }
+    ]
+}

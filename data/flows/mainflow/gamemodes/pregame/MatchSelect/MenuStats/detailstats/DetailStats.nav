@@ -1,0 +1,28 @@
+{
+    "name": "DetailStats",
+    "initial":
+    {
+        "targets": ["RedirectDetailStats"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectDetailStats",
+            "onEnter":
+            [
+                ["loadVVM", ["/flows/mainflow/gamemodes/pregame/matchselect/MenuStats/detailstats/detailstats.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["out_advance"]
+                }
+            ]
+        }
+    ]
+}

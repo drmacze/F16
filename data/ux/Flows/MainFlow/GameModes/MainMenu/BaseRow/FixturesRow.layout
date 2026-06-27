@@ -1,0 +1,136 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontColor": "$COLOR_DARK_GRAY",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_DARK_GRAY"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.TeamAwayCrest": "RowPanel.RowLeftPanel.TeamAwayCrest.image",
+        "dataProviders.TeamHomeCrest": "RowPanel.RowLeftPanel.TeamHomeCrest.image",
+        "dataProviders.TeamAwayName": "RowPanel.RowLeftPanel.TeamAwayName.text",
+        "dataProviders.TeamHomeName": "RowPanel.RowLeftPanel.TeamHomeName.text",
+        "dataProviders.MatchScore": "RowPanel.RowLeftPanel.MatchScore.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 900,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 800,
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "TeamHomeCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 0,
+                            "marginRight": 0,
+                            "width": 45,
+                            "height": 45
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamHomeName",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY",
+                            "forceCaps": true
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "TeamAwayCrest",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginBottom": 0,
+                            "marginLeft": 0,
+                            "width": 45,
+                            "height": 45
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"TeamAwayName",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 250,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY",
+                            "forceCaps": true
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"MatchScore",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 0,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                            },
+                        {
+                        "commonName": "Rectangle",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 35,
+                            "width": 893,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

@@ -1,0 +1,414 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 800,
+            "height": 500,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "PLAYER INFO"
+                },
+
+                {
+                   "commonName": "Asset",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 5.5,
+                   "marginLeft": 5,
+                   "width": 485,
+                   "height": 300,
+                   "alpha": 0.7,
+                   "type": "$BackgroundHitam"
+                },
+                                
+                {
+                   "commonName": "VerticalList",
+                   "name": "BagianMenuSelectPlayer",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 196,
+                   "marginLeft": 3,
+                   "displayRange": 4,
+                   "rowChangeAction": "act_player_select",
+                   "highlightable": true,
+                   "row": "PlayerRow1",
+                   "rowWidth": 482.5,
+                   "rowHeight": 73,
+                   "bindings":
+                   [
+                      {
+                         "binding": "bnd_player_list",
+                         "property": "dataProviders"
+                      }
+                   ]
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMenuInfoPlayer",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 45.5,
+                    "marginLeft": 5,
+                    "width": 485,
+                    "height": 145,
+                    "children":
+                    [
+                        {
+                           "commonName": "Asset",
+                           "alignV": "FILL",
+                           "alignH": "FILL",
+                           "alpha": 0.7,
+                           "type": "$BackgroundHitam"
+                        },
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": -22,
+                            "marginLeft": 2,
+                            "width": 100,
+                            "height": 100,
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_player_avatar",
+                                   "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 5,
+                            "marginLeft": 7,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_player_name",
+                                   "property": "text"
+                                }
+                            ]
+                        },
+
+                        {
+                            "commonName": "Image",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 18,
+                            "marginLeft": 110,
+                            "width": 70,
+                            "height": 70,
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_player_country",
+                                   "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 75,
+                            "marginLeft": 110,
+                            "fontSize": 35,
+                            "fontColor": "0xffd700",
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_player_rating",
+                                   "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginBottom": 1,
+                            "marginLeft": 110,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_player_position",
+                                   "property": "text"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 28.5,
+                            "marginRight": 150,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "PLAYER ID :"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginTop": 28.5,
+                            "marginRight": 62,
+                            "fontSize": 25,
+                            "fontColor": "0xffd700",
+                            "bindings":
+                            [
+                                {
+                                   "binding": "bnd_player_ID",
+                                   "property": "text"
+                                }
+                            ]
+                        },
+                                                
+                        {
+                            "commonName": "Panel",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": 7,
+                            "marginRight": 30,
+                            "width": 250,
+                            "height": 30,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_player_stat1",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "CENTER",
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_player_stat2",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "RIGHT",
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_player_stat3",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 30,
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_player_stat4",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "CENTER",
+                                    "marginTop": 30,
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_player_stat5",
+                                            "property": "text"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "TOP",
+                                    "alignH": "RIGHT",
+                                    "marginTop": 30,
+                                    "fontSize": 18,
+                                    "fontColor": "$COLOR_WHITE",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_player_stat6",
+                                            "property": "text"
+                                        }
+                                    ]
+                                }
+
+                            ]
+                        }
+                        
+                    ]
+                },
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMenuInfoTeam",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 45.5,
+                    "marginRight": 5,
+                    "width": 300.5,
+                    "height": 448.5,
+                    "children":
+                    [
+                        {
+                           "commonName": "Asset",
+                           "alignV": "FILL",
+                           "alignH": "FILL",
+                           "alpha": 0.7,
+                           "type": "$BackgroundHitam"
+                        },
+                        {
+                           "commonName": "Label",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": -85,
+                           "fontSize": 30,
+                           "fontColor": "$COLOR_WHITE",
+                           "bindings":
+                           [
+                              {
+                                 "binding": "bnd_team_name",
+                                 "property": "text"
+                              }
+                           ]
+                        },
+                        {
+                           "commonName": "Image",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "marginTop": 40,
+                           "width": 200,
+                           "height": 200,
+                           "bindings":
+                           [
+                              {
+                                 "binding": "bnd_team_crest",
+                                 "property": "image"
+                              }
+                           ]
+                        }
+                    ]
+                }
+                
+             ]
+         }
+	]
+}

@@ -1,0 +1,67 @@
+{
+    "name": "QuickCupHub",
+    "initial":
+    {
+        "targets": ["RedirectQuickCupHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectQuickCupHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["QuickCupHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_euro2016",
+                    "targets": ["Euro2016"]
+                },
+                {
+                    "event": "evt_facup",
+                    "targets": ["FACup"]
+                },
+                {
+                    "event": "evt_ucl2016",
+                    "targets": ["UCL2016"]
+                }
+            ]
+        },
+        {
+            "name": "Euro2016",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/Tournaments/Euro2016/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "QuickCupHub"
+            }
+        },
+        {
+            "name": "FACup",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/Tournaments/FACup/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "QuickCupHub"
+            }
+        },
+        {
+            "name": "UCL2016",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/Tournaments/UCL2016/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "QuickCupHub"
+            }
+        }
+    ]
+}

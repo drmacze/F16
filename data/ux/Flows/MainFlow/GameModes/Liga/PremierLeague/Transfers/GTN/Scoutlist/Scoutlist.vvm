@@ -1,0 +1,5 @@
+{
+	"dds": ["Scoutlist.dd"],
+    "vms": [["lua", "Scoutlist.lua"]],
+    "views": [["gfx", {"layout": "Scoutlist.layout"}]]
+}

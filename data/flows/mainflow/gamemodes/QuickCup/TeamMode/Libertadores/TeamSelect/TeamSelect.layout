@@ -1,0 +1,2216 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_BACKGROUND_SYSTEM"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+         },
+         {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_selected",
+            "buttonContainer": "selectedButton"
+        }
+    ],
+    "style-definitions":
+    {
+		"TF_TEAM_SELECT_RATING_LABELS": {
+			"fontFace": "$FONT_CRUYFFSANSREGULAR",
+			"fontSize": 17,
+			"fontColor": "0xFFFFFF",
+			"textAlignH": "CENTER",
+			"alpha": 1
+		},
+		"TF_TEAM_SELECT_RATING_VALUES": {
+			"fontFace": "$FONT_CRUYFFSANSREGULAR",
+			"fontSize": 25,
+			"fontColor": "0x00C21B",
+			"textAlignH": "CENTER",
+			"alpha": 1
+		}
+    },
+    "children":
+    [
+       {
+            "commonName": "Image",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_cup_bg",
+                    "property": "image"
+                }
+			]
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "CupInfo",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 25,
+            "height": 90,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 50,
+                    "width": 90,
+                    "height": 90,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_cup_logo",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 150,
+                    "width": 2,
+                    "height": 60,
+                    "color": "0xffffff",
+                    "alpha": 0.8
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 170,
+                    "fontSize": 32,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 1,
+                    "text": "Select Team"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": 20,
+            "width": 800,
+            "height": 210,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x000000",
+					"cornerRaduis": 8,
+                    "alpha": 0
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionNon",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -350,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team1",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team2",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -150,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team3",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team4",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+							"marginTop": 20,
+                            "marginLeft": 50,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team5",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab6",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 150,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team6",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab7",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 250,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team7",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab8",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 350,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team8",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab9",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -350,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team9",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab10",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team10",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab11",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -150,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team11",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab12",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team12",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab13",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 50,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team13",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab14",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 150,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team14",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab15",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 250,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team15",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab16",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 350,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "alpha": 0.7,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team16",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionActive",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -350,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team1",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team2",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -150,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team3",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team4",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 50,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team5",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab6",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 150,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab6_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team6",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab7",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 250,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab7_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team7",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab8",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginLeft": 350,
+							"marginTop": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab8_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team8",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab9",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -350,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab9_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team9",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab10",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab10_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team10",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab11",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -150,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab11_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team11",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab12",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": -50,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab12_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team12",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab13",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 50,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab13_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team13",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab14",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 150,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab14_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team14",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab15",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 250,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab15_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team15",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab16",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginLeft": 350,
+							"marginBottom": 20,
+                            "height": 70,
+                            "width": 70,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab16_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 100,
+                                    "height": 100,
+                                    "type": "$Tab_Cup_TeamSelect"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "Icon",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "width": 60,
+                                    "height": 60,
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_team16",
+                                            "property": "image"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 180,
+            "marginLeft": 0,
+            "width": 550,
+            "height": 100,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 13,
+                    "color": "0x000000",
+                    "alpha": 0.5
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "dataPanel",
+                    "alignH": "RIGHT",
+                    "alignV": "CENTER",
+                    "marginRight": 20,
+                    "marginTop": 0,
+                    "height": 50.0,
+                    "width": 200,
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "TeamRating",
+                            "name": "teamRating",
+                            "width": 190.0,
+                            "attLabelStyles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS"
+                            ],
+                            "attValueStyles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES"
+                            ],
+                            "defLabelStyles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS"
+                            ],
+                            "defValueStyles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES"
+                            ],
+                            "dividersVisible": true,
+                            "midLabelStyles":
+                            [
+                                "TF_TEAM_SELECT_RATING_LABELS"
+                            ],
+                            "midValueStyles":
+                            [
+                                "TF_TEAM_SELECT_RATING_VALUES"
+                            ],
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_rating",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab3_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab4_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab5_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab6_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab7_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab8_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab9_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab10_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab11_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab12_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab13_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab14_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab15_visible",
+                            "property": "visible"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": 30,
+                    "marginLeft": 10,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 1,
+                    "rowChangeAction": "act_team_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "scrollEnabled": false,
+                    "clipChildren": true,
+                    "verticalScrollPolicy": "off",
+                    "horizontalScrollPolicy": "off",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_tab16_visible",
+                            "property": "visible"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "selectedButton",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": 20,
+            "width": 900,
+            "height": 180,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 70,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 175,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 275,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 375,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 475,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act6",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 575,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act7",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 675,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 7,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act8",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 775,
+                    "y": 10,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 8,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act9",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 75,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 9,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act10",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 175,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 10,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act11",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 275,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 11,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act12",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 375,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 12,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act13",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 475,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 13,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act14",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 575,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 14,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act15",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 675,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 15,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act16",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 775,
+                    "y": 119,
+                    "width": 50,
+                    "height": 50,
+                    "autoSelect": true,
+                    "id": 16,
+                    "type": "blackandblue",
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

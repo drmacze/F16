@@ -1,0 +1,11 @@
+{
+    "dds": [
+        "Players.dd"
+    ],
+    "vms": [
+        ["lua", "Players.lua"]
+    ],
+    "views": [
+        ["gfx", {"layout": "Tab2.layout"}]
+    ]
+}

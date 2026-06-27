@@ -1,0 +1,383 @@
+{
+    "actions":
+    [
+         {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        },
+        {
+            "viewname":   "act_home_kit_previous",
+            "actionname": "act_home_kit_previous"
+        },
+        {
+            "viewname":   "act_home_kit_next",
+            "actionname": "act_home_kit_next"
+        },
+        {
+            "viewname":   "act_away_kit_previous",
+            "actionname": "act_away_kit_previous"
+        },
+        {
+            "viewname":   "act_away_kit_next",
+            "actionname": "act_away_kit_next"
+        },
+		{
+            "viewname":   "act_change_home",
+            "actionname": "act_change_home"
+        },
+        {
+            "viewname":   "act_squad",
+            "actionname": "act_squad"
+        },
+        {
+            "viewname":   "act_squadaway",
+            "actionname": "act_squadaway"
+        }
+    ],
+    "data":
+    [
+	     {
+            "viewname": "bnd_home_kit_index",
+            "binding":  "bnd_home_kit_index",
+            "type":     "int",
+            "actions":
+            [
+                {
+					"viewname":   "act_change_home",
+					"actionname": "act_change_home"
+				}
+			]
+        },
+		{
+            "viewname": "bnd_away_kit_index",
+            "binding":  "bnd_away_kit_index",
+            "type":     "int",
+            "actions":
+            [
+                {
+					"viewname":   "act_change_away",
+					"actionname": "act_change_away"
+				}
+			]
+        },
+        {
+            "viewname": "bnd_home_team_kit",
+            "binding":  "bnd_home_team_kit",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_kit",
+            "binding":  "bnd_away_team_kit",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_versus",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_VS"
+            }
+        },
+        {
+            "viewname": "bnd_kit_home_ready",
+            "binding":  "bnd_kit_home_ready",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_kit_away_ready",
+            "binding":  "bnd_kit_away_ready",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_all_ready",
+            "binding":  "bnd_all_ready",
+            "type":     "bool"
+        },
+		{
+            "viewname": "bnd_insToggleHomeKitMessage",
+			"binding":  "bnd_insToggleHomeKitMessage",
+            "type":     "string"
+        },
+		
+		{
+            "viewname": "bnd_insToggleAwayKitMessage",
+			"binding":  "bnd_insToggleAwayKitMessage",
+            "type":     "string"
+        },		
+		{
+            "viewname": "bnd_home_team_name",
+            "binding": "bnd_home_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding": "bnd_away_team_name",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_panel_home_title",
+            "binding":  "bnd_panel_home_title",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_panel_away_title",
+            "binding":  "bnd_panel_away_title",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_option_customize",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_OPTION_CUSTOMIZE"
+            }
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding":  "bnd_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding":  "bnd_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_ready_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MOB_READY"
+            }
+        },
+        {
+            "viewname": "bnd_away_ready_label_visible",
+            "binding":  "bnd_away_ready_label_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_ready_label_visible",
+            "binding":  "bnd_home_ready_label_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_selecting_kit_msg",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MOB_OPPONENT_KIT"
+            }
+        },
+        {
+            "viewname": "bnd_away_selecting_kit_msg_visible",
+            "binding":  "bnd_away_selecting_kit_msg_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_selecting_kit_msg_visible",
+            "binding":  "bnd_home_selecting_kit_msg_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_toggle_visible",
+            "binding":  "bnd_away_toggle_visible",
+            "type":     "bool"
+        },
+		{
+			"viewname": "bnd_away_toggle_iscircular",
+            "binding":  "bnd_away_toggle_iscircular",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_home_toggle_visible",
+            "binding":  "bnd_home_toggle_visible",
+            "type":     "bool"
+        },
+		{
+			"viewname": "bnd_home_toggle_iscircular",
+            "binding":  "bnd_home_toggle_iscircular",
+            "type":     "bool"
+		},
+        {
+            "viewname": "bnd_latency",
+            "binding":  "bnd_latency",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_latency_visible",
+            "binding":  "bnd_latency_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_kit_selector_visible",
+            "binding":  "bnd_away_kit_selector_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_no_opponent_question_mark_visible",
+            "binding":  "bnd_no_opponent_question_mark_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_team_selector",
+            "binding":  "bnd_away_team_selector",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_matchmaking_message",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_PREGAME_WILL_MATCHMAKE"
+            }
+        },
+        {
+            "viewname": "bnd_away_matchmaking_message_visible",
+            "binding":  "bnd_away_matchmaking_message_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_away_loading_message",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "OSDK_SEARCH_FOR_OPP"
+            }
+        },
+        {
+            "viewname": "bnd_away_loading_visible",
+            "binding":  "bnd_away_loading_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_3d_players_visible",
+            "binding":  "bnd_3d_players_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_2d_kits_visible",
+            "binding":  "bnd_2d_kits_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_2d_kits_player_visible",
+            "binding":  "bnd_2d_kits_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_2d_home_kit",
+            "binding":  "bnd_2d_home_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_2d_home_kit2",
+            "binding":  "bnd_2d_home_kit2",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_2d_home_kit3",
+            "binding":  "bnd_2d_home_kit3",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_3d_home_kit",
+            "binding":  "bnd_3d_home_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_2d_away_kit",
+            "binding":  "bnd_2d_away_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_2d_away_kit2",
+            "binding":  "bnd_2d_away_kit2",
+            "type":     "object"
+        },       
+        {
+            "viewname": "bnd_2d_away_kit3",
+            "binding":  "bnd_2d_away_kit3",
+            "type":     "object"
+        },       
+        {
+            "viewname": "bnd_3d_away_kit",
+            "binding":  "bnd_3d_away_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_kit_alpha",
+            "binding":  "bnd_home_kit_alpha",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_home_kit_player_alpha",
+            "binding":  "bnd_home_kit_player_alpha",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_away_kit_alpha",
+            "binding":  "bnd_away_kit_alpha",
+            "type":     "float"
+        },
+        {
+            "viewname": "bnd_away_kit_player_alpha",
+            "binding":  "bnd_away_kit_player_alpha",
+            "type":     "float"
+        },
+		{
+            "viewname": "bnd_home_kits",
+            "binding":  "bnd_home_kits",
+            "type":     "object"
+        },
+		{
+            "viewname": "bnd_away_kits",
+            "binding":  "bnd_away_kits",
+            "type":     "object"
+        },
+		{
+			"viewname": "bnd_kit_select_label",
+			"type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MOB_SELECT_KIT"
+            }
+		},
+    	{
+            "viewname": "bnd_match_difficulty",
+            "binding":  "bnd_match_difficulty",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_back_btn_text",
+            "binding":  "bnd_back_btn_text",
+            "type":     "string"
+        }
+    ]
+}

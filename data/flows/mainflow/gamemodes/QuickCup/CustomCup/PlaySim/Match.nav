@@ -1,0 +1,54 @@
+{
+  "name": "Match",
+  "onEnter": [
+    ["blockingLoadVVM", ["Match.vvm"]],
+    ["blockingLoadVVM", ["/flows/mainflow/gamemodes/fut/simulation/simulation.vvm"]]
+  ],
+  "onExit": [
+    ["unloadVVM"],
+    ["unloadVVM"]
+  ],
+  "states": [
+    {
+      "name": "MatchSetup",
+      "onEnter": [
+        ["stateChange", ["MOTM_MATCH"]],
+        ["substateChange", ["PREGAME"]],
+        ["set", ["flow", ".flow"]],
+        ["resetTeamsAndKits"],
+        ["disableInvites"],
+        ["invoke", ["evt_to_team_setup"]]
+      ],
+      "onExit": [
+        ["enableInvites"]
+      ],
+      "transitions": [
+        {
+          "event": "evt_to_team_setup",
+          "targets": ["TeamSetup"]
+        }
+      ]
+    },
+    {
+      "name": "TeamSetup",
+      "onEnter": [
+        ["setTeams"],
+        ["invoke", ["evt_advance"]]
+      ],
+      "transitions": [
+        {
+          "event": "evt_advance",
+          "targets": ["SimulateMatch"]
+        }
+      ]
+    },
+    {
+      "name": "SimulateMatch",
+      "type": "external",
+      "file": "/flows/mainflow/gamemodes/fut/simulation/simulation.nav",
+      "outputs": {
+        "out_back": "out_exit_sim"
+      }
+    }
+  ]
+}

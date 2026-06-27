@@ -1,0 +1,188 @@
+{
+   "commonName": "fow.base.BaseRow",
+   "name": "MatchRowRoot",
+   "mouseInteractive": true,
+   "authoringData": 
+   {
+      "designSize": 
+      {
+         "width": 585,
+         "height": 120
+      }
+   },
+   "style-definitions": {
+      "EventStyle": {
+         "fontFace": "$FONT_REGULAR",
+         "fontColor": "$TILE_COLOR_LABEL",
+         "textAlignH": "RIGHT",
+         "textAlignV": "CENTER",
+         "marginRight": 130.0
+      },
+      "LabelStyle": {
+         "resizeType": "NONE",
+         "textAlignV": "CENTER",
+         "alignV": "FILL",
+         "fontSize": "$FONT_SIZE_SMALLEST_HEADER"
+      },
+      "NumberStyle": {
+         "width": 80.0,
+         "marginRight": 10.0,
+         "fontFace": "$FONT_REGULAR",
+         "textAlignH": "RIGHT",
+         "fontColor": "$TILE_COLOR_VALUE"
+      }
+   },
+   "propertyMap": {
+      "dataProviders.HomeTeamCrest": "RowPanel.RowLeftPanel.HomeTeamCrest.image",
+      "dataProviders.HomeTeamName": "RowPanel.RowLeftPanel.HomeTeamName.text",
+      "dataProviders.HomeTeamShortName": "RowPanel.RowLeftPanel.HomeTeamShortName.text",
+      "dataProviders.AwayTeamCrest": "RowPanel.RowLeftPanel.AwayTeamCrest.image",
+      "dataProviders.AwayTeamName": "RowPanel.RowLeftPanel.AwayTeamName.text",
+      "dataProviders.AwayTeamShortName": "RowPanel.RowLeftPanel.AwayTeamShortName.text",
+      "height": "RowPanel.height"
+   },
+   "children": 
+   [
+      {
+         "commonName": "Panel",
+         "name": "RowPanel",
+         "x": 0.0,
+         "y": 0.0,
+         "width": 950,
+         "children":
+         [
+            {
+               "commonName": "Panel",
+               "name": "RowLeftPanel",
+               "alignV": "FILL",
+               "alignH": "FILL",
+               "width": 950,
+               "children":
+               [
+                  {
+                     "commonName": "Rectangle",
+                     "alignV": "FILL",
+                     "alignH": "FILL",
+                     "color": "0x000000",
+                     "alpha": 0
+                  },
+                  {
+                     "commonName": "Image",
+                     "name": "HomeTeamCrest",
+                     "alignV": "CENTER",
+                     "alignH": "LEFT",
+                     "marginLeft": 10,
+                     "width": 90,
+                     "height": 90
+                  },
+                  {
+                     "commonName": "Label",
+                     "name": "HomeTeamShortName",
+                     "alignV": "TOP",
+                     "alignH": "CENTER",
+                     "marginTop": 15,
+                     "marginLeft": -270,
+                     "fontSize": 45,
+                     "fontColor": "$COLOR_WHITE",
+                     "fontFace": "$FONT_CRUYFFSANSBOLD",
+                     "alpha": 0.6
+                  },
+                  {
+                     "commonName": "Label",
+                     "name": "HomeTeamName",
+                     "alignV": "BOTTOM",
+                     "alignH": "CENTER",
+                     "marginBottom": 15,
+                     "marginLeft": -270,
+                     "fontSize": 18,
+                     "fontColor": "$COLOR_WHITE",
+                     "fontFace": "$FONT_CRUYFFSANSBOLD",
+                     "alpha": 1
+                  },
+                  {
+                     "commonName": "Label",
+                     "alignV": "CENTER",
+                     "alignH": "CENTER",
+                     "marginLeft": -100,
+                     "fontSize": 30,
+                     "fontColor": "$COLOR_WHITE",
+                     "fontFace": "$FONT_CRUYFFSANSBOLD",
+                     "text": "VS",
+                     "alpha": 1
+                  },
+                  {
+                     "commonName": "Image",
+                     "name": "AwayTeamCrest",
+                     "alignV": "CENTER",
+                     "alignH": "RIGHT",
+                     "marginRight": 200,
+                     "width": 90,
+                     "height": 90
+                  },
+                  {
+                     "commonName": "Label",
+                     "name": "AwayTeamShortName",
+                     "alignV": "TOP",
+                     "alignH": "CENTER",
+                     "marginTop": 15,
+                     "marginRight": -85,
+                     "fontSize": 45,
+                     "fontColor": "$COLOR_WHITE",
+                     "fontFace": "$FONT_CRUYFFSANSBOLD",
+                     "alpha": 0.6
+                  },
+                  {
+                     "commonName": "Label",
+                     "name": "AwayTeamName",
+                     "alignV": "BOTTOM",
+                     "alignH": "CENTER",
+                     "marginBottom": 15,
+                     "marginRight": -85,
+                     "fontSize": 18,
+                     "fontColor": "$COLOR_WHITE",
+                     "fontFace": "$FONT_CRUYFFSANSBOLD",
+                     "alpha": 1
+                  }
+               ]
+            },
+            {
+               "commonName": "Panel",
+               "alignV": "FILL",
+               "alignH": "RIGHT",
+               "marginRight": 0,
+               "width": 170,
+               "height": 100,
+               "children": 
+               [
+                  {
+                     "commonName": "Rectangle",
+                     "alignV": "FILL",
+                     "alignH": "FILL",
+                     "color": "0x000000",
+                     "highlightable": true,
+                     "alpha": 0
+                  },
+                  {
+                     "commonName": "Label",
+                     "alignV": "TOP",
+                     "alignH": "CENTER",
+                     "marginTop": 12,
+                     "fontSize": 21,
+                     "fontColor": "$COLOR_WHITE",
+                     "text": "Play"
+                  },
+                  {
+                     "commonName": "Asset",
+                     "alignV": "BOTTOM",
+                     "alignH": "CENTER",
+                     "marginBottom": 12,
+                     "width": 50,
+                     "height": 50,
+                     "type": "$IconMatchPlay"
+                   }
+                ]
+             }
+          ]
+       }
+    ]
+}

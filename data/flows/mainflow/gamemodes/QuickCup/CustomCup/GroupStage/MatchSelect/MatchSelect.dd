@@ -1,0 +1,338 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_matchplay",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_matchplay"
+            }
+        },
+        {
+            "viewname": "act_manager",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_manager"
+            }
+        },
+        {
+            "viewname": "act_group_advance",
+            "actionname": "act_group_advance"
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+            "viewname": "act_topscores",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_topscores"
+            }
+        },
+        {
+            "viewname": "act_standing",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_standing"
+            }
+        },
+        {
+            "viewname": "act_standing_home",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_standing_home"
+            }
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        },
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_tab3sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3sub1"
+            }
+        },
+        {
+            "viewname": "act_tab3sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3sub2"
+            }
+        },
+        {
+            "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_tab4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4"
+            }
+        },
+        {
+            "viewname": "act_tab4sub1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4sub1"
+            }
+        },
+        {
+            "viewname": "act_tab4sub2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4sub2"
+            }
+        },
+        {
+            "viewname": "act_end",
+            "actionname": "act_end"
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_restart",
+            "actionname": "act_restart"
+        },
+        {
+            "viewname": "act_simulate",
+            "actionname": "act_simulate"
+        },
+        {
+            "viewname": "act_simulate_current_match",
+            "actionname": "act_simulate_current_match"
+        },
+        {
+            "viewname": "act_ads",
+            "actionname":  "act_ads"
+        },
+        {
+            "viewname": "act_belum",
+            "actionname":  "act_belum"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_color_tourid",
+            "binding":  "bnd_color_tourid",
+            "type":     "init"
+        },
+        {
+            "viewname": "bnd_panel_loading",
+            "binding":  "bnd_panel_loading",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_ads_a_visible",
+            "binding":  "bnd_ads_a_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_ads_b_visible",
+            "binding":  "bnd_ads_b_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_hub_actions_visible",
+            "binding":  "bnd_hub_actions_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_busy_state_visible",
+            "binding":  "bnd_busy_state_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_last_match_result",
+            "binding":  "bnd_last_match_result",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_tour_label",
+            "binding":  "bnd_tour_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_name",
+            "binding":  "bnd_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_score",
+            "binding":  "bnd_home_score",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_score",
+            "binding":  "bnd_away_score",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_group_standings",
+            "binding":  "bnd_group_standings",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_top_scorers_list",
+            "binding":  "bnd_top_scorers_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_matchday",
+            "binding":  "bnd_matchday",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_group_label",
+            "binding":  "bnd_group_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_text",
+            "binding":  "bnd_text",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_tour_map",
+            "binding":  "bnd_tour_map",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_trophy",
+            "binding":  "bnd_trophy",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_tour_logo",
+            "binding":  "bnd_tour_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_bg_tour",
+            "binding":  "bnd_bg_tour",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_champion_crest",
+            "binding":  "bnd_champion_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_champion_visible",
+            "binding":  "bnd_champion_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_match_visible",
+            "binding":  "bnd_match_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_champion_team",
+            "binding":  "bnd_champion_team",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_crest",
+            "binding":  "bnd_home_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_crest",
+            "binding":  "bnd_away_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team",
+            "binding":  "bnd_home_team",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team",
+            "binding":  "bnd_away_team",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_date",
+            "binding":  "bnd_date",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_short",
+            "binding":  "bnd_home_team_short",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_short",
+            "binding":  "bnd_away_team_short",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_ads",
+            "binding":  "bnd_ads",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_realtime",
+            "binding":  "bnd_realtime",
+            "type": 		"int"
+        }
+    ]
+}

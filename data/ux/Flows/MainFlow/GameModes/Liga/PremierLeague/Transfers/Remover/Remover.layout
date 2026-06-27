@@ -1,0 +1,223 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Kembali"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Pilih Hapus Pemain"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 0,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Pilih pemain yang ingin Anda keluarkan dari tim
+"
+                 }
+             ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "SelectTransfers",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "marginLeft": -50,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 130,
+                    "marginLeft": 0,
+                    "width": 800,
+                    "height": 340,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 120,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Pemain"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 420,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Posisi"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 595,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "OVR"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 765,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Tim"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 100,
+                    "marginRight": 0,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Transfer"
+                 },
+                 {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 131,
+                    "marginLeft": 125,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 5,
+                    "highlightable": true,
+                    "row": "ScoutRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 935,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

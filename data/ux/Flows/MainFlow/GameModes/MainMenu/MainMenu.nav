@@ -1,0 +1,170 @@
+{
+    "name": "MainMenu",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "onEnter":
+                    [
+						["showFEUI"],
+						["invoke", ["Hub"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "Hub",
+                            "targets": ["MainMenuHub"]
+                        }
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "MainMenuHub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MainMenu/MainMenuHub.vvm", {}, { "viewType": "screen" }]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "MenuHomeHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/MenuHomeHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_play": "MenuPlayHub",
+                                        "out_menu_online": "MenuOnlineHub",
+                                        "out_menu_customize": "MenuCustomizeHub",
+                        
+                                        "out_menuhome_kickoff": "in_menuhome_kickoff",
+                                        "out_menuhome_playrivalmatch": "in_menuhome_playrivalmatch",
+                                        "out_menuhome_playaivsai": "in_menuhome_playaivsai",
+                                        "out_menuhome_help": "in_menuhome_help",
+                                        "out_menuhome_about": "in_menuhome_about"
+                                    }
+                                },
+                                {
+                                    "name": "MenuPlayHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/MenuPlayHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_home": "MenuHomeHub",
+                                        "out_menu_online": "MenuOnlineHub",
+                                        "out_menu_customize": "MenuCustomizeHub",
+
+                                        "out_menuplay_kickoff": "in_menuplay_kickoff",
+                                        "out_menuplay_career": "in_menuplay_career",
+                                        "out_menuplay_skillgames": "in_menuplay_skillgames",
+                                        "out_menuplay_tournament": "in_menuplay_tournament",
+                                        "out_menuplay_beapro": "in_menuplay_beapro",
+                                        "out_menuplay_bestteamstour": "in_menuplay_bestteamstour"
+                                    }
+                                },
+                                {
+                                    "name": "MenuOnlineHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuOnline/MenuOnlineHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_home": "MenuHomeHub",
+                                        "out_menu_play": "MenuPlayHub",
+                                        "out_menu_customize": "MenuCustomizeHub"
+                                    }
+                                },
+                                {
+                                    "name": "MenuCustomizeHub",
+                                    "type": "external",
+                                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/MenuCustomizeHub.nav",
+                                    "outputs":
+                                    {
+                                        "out_menu_home": "MenuHomeHub",
+                                        "out_menu_play": "MenuPlayHub",
+                                        "out_menu_online": "MenuOnlineHub",
+ 
+                                        "out_gamesettings": "in_gamesettings",
+                                        "out_editteams": "in_editteams"
+                                    }
+                                }
+                            ]
+                        },				
+                        {
+                            "name": "MenuHome",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/MenuHome.nav",
+                            "inputs":
+                            {
+                                "in_menuhome_kickoff": "MenuHome_KickOff",
+                                "in_menuhome_playrivalmatch": "MenuHome_PlayRivalMatch",
+                                "in_menuhome_playaivsai": "MenuHome_PlayAIVSAI",
+                                "in_menuhome_help": "MenuHome_Help",
+                                "in_menuhome_about": "MenuHome_About"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuHomeHub"
+                            }
+                        },
+                        {
+                            "name": "MenuPlay",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/MenuPlay.nav",
+                            "inputs":
+                            {
+                                "in_menuplay_kickoff": "MenuPlay_KickOff",
+                                "in_menuplay_career": "MenuPlay_Career",
+                                "in_menuplay_tournament": "MenuPlay_NewTournament",
+                                "in_menuplay_skillgames": "MenuPlay_SkillGames",
+                                "in_menuplay_beapro": "MenuPlay_BeAPro",
+                                "in_menuplay_bestteamstour": "MenuPlay_BestTeamsTour"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuPlayHub"
+                            }
+                        },
+                        {
+                            "name": "MenuOnline",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuOnline/MenuOnline.nav",
+                            "inputs":
+                            {
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuOnlineHub"
+                            }
+                        },
+                        {
+                            "name": "MenuCustomize",
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/MenuCustomize.nav",
+                            "inputs":
+                            {
+                                "in_gamesettings": "GameSettings",
+                                "in_editteams": "EditTeams"
+                            },
+                            "outputs":
+                            {
+                                "out_hub": "MenuCustomizeHub"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+	"name": "rootContainer",
+	"alignV": "FILL",
+	"alignH": "FILL",
+    "children":
+    [  
+        {
+            "commonName": "Panel",
+            "name": "BagianLogoEASportsLive",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 35,
+            "marginRight": 45,
+            "width": 100,
+            "height": 45,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LogoEASportsHDLive1"
+                }
+            ]
+        },
+        {
+            "commonName": "Shootout",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 30,
+            "marginLeft": 32,
+            "visible": false,
+            "bindings":
+            [
+                {
+                   "property": "visible",
+                   "binding": "bnd_active"
+                },
+                {
+                   "property": "score",
+                   "binding": "bnd_score"
+                },
+                {
+                   "property": "homeTeam",
+                   "binding": "bnd_home_team"
+                },
+                {
+                   "property": "awayTeam",
+                   "binding": "bnd_away_team"
+                },
+                {
+                   "property": "title",
+                   "binding": "bnd_title"
+                },
+                {
+                   "property": "side",
+                   "binding": "bnd_side"
+                },
+                {
+                   "property": "homeHistory",
+                   "binding": "bnd_home_history"
+                },
+                {
+                   "property": "awayHistory",
+                   "binding": "bnd_away_history"
+                }
+            ]
+        }
+        
+    ]
+}

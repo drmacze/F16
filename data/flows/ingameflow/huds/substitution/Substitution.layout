@@ -1,0 +1,848 @@
+/* ------------------------------------- */
+/* ----------- MOD MVN PROD ------------ */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "SubstitutionGroup",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "alpha": 0.9,
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Substitution",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginBottom": 65,
+            "marginLeft": 100,	
+            "width": 400,
+            "height": 100,
+            "alpha": 1,
+            "bindings":
+            [
+                {
+                    "property": "visible",
+                    "binding":  "bnd_visible"
+                }
+            ],
+            "children": 
+            [
+                {
+                    "commonName": "Panel",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "width": 100,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_crest_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 80,
+                            "height": 80,
+                            "bindings":
+                            [
+                                {
+                                    "property": "image",
+                                    "binding":  "bnd_sub_crest"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "CENTER",
+                    "width": 300,
+                    "height": 40,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_textsub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontSize": 22,
+                            "fontFace": "$KnulExtraBold",
+                            "text": "SUBSTITUTION",
+                            "bindings":
+                            [
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_textsub_fontColor"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "width": 300,
+                    "height": 30,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_subin1_visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_playersub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_num1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_text1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$SubstitutionInArrow"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "marginTop": -30,
+                    "width": 300,
+                    "height": 60,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_subin2_visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_playersub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "marginTop": 13,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_num1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "marginTop": 13,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_text1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "marginTop": -13,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_num2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "marginTop": -13,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_text2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$SubstitutionInArrow"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "marginTop": -50,
+                    "width": 300,
+                    "height": 80,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_subin3_visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_playersub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginLeft": 20,
+                            "marginBottom": 10,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_num1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginLeft": 50,
+                            "marginBottom": 10,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_text1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "marginBottom": 0,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_num2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "marginBottom": 0,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_text2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_num3"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginLeft": 50,
+                            "marginTop": 10,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subin_text3"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$SubstitutionInArrow"
+                        }
+                    ]
+                },
+
+
+                {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "BOTTOM",
+                    "width": 300,
+                    "height": 30,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_subout1_visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_playersub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_num1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_text1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$SubstitutionOutArrow"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -30,
+                    "width": 300,
+                    "height": 60,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_subout2_visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_playersub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "marginBottom": 13,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_num1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "marginBottom": 13,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_text1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "marginBottom": -13,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_num2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "marginBottom": -13,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_text2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$SubstitutionOutArrow"
+                        }
+                      ]
+                    },
+                    {
+                    "commonName": "Panel",
+                    "alignH": "RIGHT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -50,
+                    "width": 300,
+                    "height": 80,
+                    "bindings":
+                    [
+                        {
+                            "property": "visible",
+                            "binding":  "bnd_subout3_visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "bindings":
+                            [
+                                {
+                                    "property": "color",
+                                    "binding":  "bnd_bg_playersub_color"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginLeft": 20,
+                            "marginTop": 10,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_num1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginLeft": 50,
+                            "marginTop": 10,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_text1"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 20,
+                            "marginBottom": 0,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_num2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "CENTER",
+                            "marginLeft": 50,
+                            "marginBottom": 0,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_text2"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginLeft": 20,
+                            "marginBottom": 10,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_num3"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_num_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "BOTTOM",
+                            "marginLeft": 50,
+                            "marginBottom": 10,
+                            "width": 170,
+                            "fontSize": 15,
+                            "fontColor":"0xffffff",
+                            "autoScroll":true,
+                            "bindings":
+                            [
+                                {
+                                    "property": "text",
+                                    "binding":  "bnd_subout_text3"
+                                },
+                                {
+                                    "property": "fontColor",
+                                    "binding":  "bnd_sub_text_fontColor"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 20,
+                            "width": 25,
+                            "height": 25,
+                            "type": "$SubstitutionOutArrow"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

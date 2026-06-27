@@ -1,0 +1,558 @@
+{
+    "name": "MatchSelect",
+    "onEnter":
+    [
+        ["stateChange", [".flowState"]],
+        ["set", ["flow", ".flow"]]
+    ],
+    "states":
+    [
+        {
+            "name": "FlowBranch",
+            "states":
+            [
+                {
+                    "name": "InitPregame",
+                    "onEnter":
+                    [
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "offline",
+                            "targets": ["MenuMatchSelect"]
+                        }
+                    ]
+                },
+		{
+            "name": "MenuMatchSelect",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "states":
+            [
+                {
+                    "name": "RedirectTab1",
+                    "states":
+                    [
+                        {
+                            "name": "Tab1",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab1.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab1sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab1sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab1sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                                ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab1sub2",
+                                            "targets": ["RedirectTab1sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub3",
+                                            "targets": ["RedirectTab1sub3"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub4",
+                                            "targets": ["RedirectTab1sub4"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab1sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab1sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab1sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab1sub1",
+                                            "targets": ["RedirectTab1sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub3",
+                                            "targets": ["RedirectTab1sub3"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub4",
+                                            "targets": ["RedirectTab1sub4"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab1sub3",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab1sub3",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab1sub3.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab1sub1",
+                                            "targets": ["RedirectTab1sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub2",
+                                            "targets": ["RedirectTab1sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub4",
+                                            "targets": ["RedirectTab1sub4"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab1sub4",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab1sub4",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab1sub4.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab1sub1",
+                                            "targets": ["RedirectTab1sub1"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub2",
+                                            "targets": ["RedirectTab1sub2"]
+                                        },
+                                        {
+                                            "event": "evt_tab1sub3",
+                                            "targets": ["RedirectTab1sub3"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]                       
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab2",
+                    "states":
+                    [
+                        {
+                            "name": "Tab2",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab2sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab2sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab2sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                                ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab2sub2",
+                                            "targets": ["RedirectTab2sub2"]                                        
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab2sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab2sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab2sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab2sub1",
+                                            "targets": ["RedirectTab2sub1"]              
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]                        
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab3",
+                    "states":
+                    [
+                        {
+                            "name": "Tab3",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab3.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab3sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab3sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub2",
+                                            "targets": ["RedirectTab3sub2"]                                      
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab3sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab3sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab3sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab3sub1",
+                                            "targets": ["RedirectTab3sub1"]                                      
+                                        }
+                                    ]                               
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab4",
+                            "targets": ["RedirectTab4"]             
+                        }
+                    ]
+                },
+                {
+                    "name": "RedirectTab4",
+                    "states":
+                    [
+                        {
+                            "name": "Tab4",
+                            "onEnter":
+                            [
+                              ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab4.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "RedirectTab4sub1",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub1",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab4sub1.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub2",
+                                            "targets": ["RedirectTab4sub2"]                                      
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "RedirectTab4sub2",
+                                    "states":
+                                    [
+                                        {
+                                            "name": "Tab4sub2",
+                                            "onEnter":
+                                            [
+                                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/TabActive/Tab4sub2.vvm"]]
+                                            ],
+                                            "onExit":
+                                            [
+                                                ["unloadVVM"]
+                                            ]
+                                        }
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_tab4sub1",
+                                            "targets": ["RedirectTab4sub1"]                      
+                                        }
+                                    ]                         
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_tab1",
+                            "targets": ["RedirectTab1"]
+                        },
+                        {
+                            "event": "evt_tab2",
+                            "targets": ["RedirectTab2"]
+                        },
+                        {
+                            "event": "evt_tab3",
+                            "targets": ["RedirectTab3"]                       
+                        }
+                    ]
+                }
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_opponent",
+                    "targets": ["Opponent"]
+                },
+                {
+                    "event": "evt_myteam",
+                    "targets": ["MyTeam"]
+                },
+                {
+                    "event": "evt_fixtures",
+                    "targets": ["Fixtures"]
+                },
+                {
+                    "event": "evt_table",
+                    "targets": ["Table"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                }
+            ]
+        },       
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },        
+        {
+            "name": "MyTeam",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/MyTeam/TeamRoster.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Tab2sub2"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Tab2sub1"               
+            }
+        },
+        {
+            "name": "Opponent",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Opponent/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Tab1sub2"              
+            }
+        },
+        {
+            "name": "Fixtures",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/Fixtures/Fixtures.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Tab3sub1",
+                "out_exit_gamemode1": "Tab3sub1"
+            }
+        },
+        {
+            "name": "Table",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/MatchSelect/Fixtures/Fixtures.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MatchSelect",
+                "out_exit_gamemode1": "MatchSelect"
+            }
+        },        
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Restart/Restart.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"               
+            }
+         }
+       ]
+     }        
+  ]
+}

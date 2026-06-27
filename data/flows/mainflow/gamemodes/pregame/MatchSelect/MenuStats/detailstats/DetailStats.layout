@@ -1,0 +1,154 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "children":
+    [    
+    {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Icon_Stats2"
+    },
+          {
+            "commonName": "Panel",
+            "name": "BackNext",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "marginLeft": 0,
+            "marginBottom": 40,
+            "children":
+            [
+
+                {
+                    "commonName": "SimpleButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -10,
+                    "marginLeft": 50,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "label": "Back",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_advance"
+                }
+            ]
+        },
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMatchPreview",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 50,
+                    "width": 1350,
+                    "height": 530,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 100,
+                            "marginLeft": -200,                                                    
+                            "alpha": 0.9,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",                  
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_nama_tim_home",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                       {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 100,
+                            "marginRight": -200,                                                    
+                            "alpha": 0.9,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_nama_tim_away",
+                                    "property": "text"
+                                }
+                          ]
+                       },
+                       {
+                          "commonName": "Image",
+                          "name": "LogoTimHome",
+                          "alignV": "CENTER",
+                          "alignH": "LEFT",
+                          "marginLeft": 90,
+                          "marginTop": -90,
+                          "scaleY": 0.30,
+                          "scaleX": 0.30,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_logo_tim_home",
+                                "property": "image"
+                             }
+                          ]
+                       },
+                        {
+                          "commonName": "Image",
+                          "name": "LogoTimAway",
+                          "alignV": "CENTER",
+                          "alignH": "RIGHT",
+                          "marginRight": 100,
+                          "marginTop": -90,
+                          "scaleY": 0.30,
+                          "scaleX": 0.30,
+                          "bindings":
+                          [
+                             {
+                                "binding": "bnd_logo_tim_away",
+                                "property": "image"
+                             }
+                          ]
+                       }
+                    ]
+                }
+                
+           ]
+        }
+    ]
+}

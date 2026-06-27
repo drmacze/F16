@@ -1,0 +1,5 @@
+{
+    "dds": ["PengaturanAudio.dd"],
+    "vms": [["lua", "PengaturanAudio.lua"]],
+    "views": [["gfx", {"layout": "PengaturanAudio.layout"}]]
+}

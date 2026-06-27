@@ -1,0 +1,86 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+	"name": "rootContainer",
+	"alignV": "CENTER",
+	"alignH": "CENTER",
+	"marginTop": -35,
+    "children":
+    [
+    
+        {
+            "commonName": "Panel",
+            "name": "IntroFormasiKeduaTim",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 620,
+            "height": 480,
+            "bindings":
+			[
+				{
+					"binding": "bnd_active",
+					"property": "visible"
+				}
+			],
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 6,
+                    "width": 630,
+                    "height": 500,
+                    "type": "$Background_Starting11"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -25,
+                    "marginLeft": -8,
+                    "width": 65,
+                    "height": 65,
+                    "type": "$Fifa_Badge"
+                },
+                {
+                    "commonName": "Image",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -15,
+                    "marginLeft": 1,
+                    "width": 46.5,
+                    "height": 46.5,
+                    "bindings":[
+                                        {
+                                            "property": "image",
+                                            "binding":  "bnd_team_crest"
+                                        }
+                               ]
+                },
+                {
+                   "commonName": "Starting11",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "marginTop": 13,
+                   "marginLeft": -31.2,
+                   "bindings":
+                   [
+                      {
+                          "binding": "bnd_player_lineup",
+                          "property": "dataProviders"
+                      },
+                      {
+                          "binding": "bnd_active",
+                          "property": "active"
+                      }
+                   ]
+               }
+            ]
+        }
+        
+    ]
+}

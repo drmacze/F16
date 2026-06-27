@@ -1,0 +1,5 @@
+{
+    "dds": ["ScoreClock.dd"],
+    "vms": [["lua", "ScoreClock.lua"]],
+    "views": [["gfx", {"layout":"ScoreClock_Tournament.layout"}]]
+}

@@ -1,0 +1,13 @@
+{
+  "dds": [
+    "TeamRoster.dd",
+    "MyTeam.dd"
+  ],
+  "vms": [
+    ["lua", "TeamRoster.lua"],
+    ["lua", "MyTeam.lua"]
+  ],
+  "views": [
+    ["gfx", { "layout": "TeamRoster.layout" }]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Squad",
+    "onEnter":
+    [
+        ["updateUserPlateDisplayMode", ["lite"]],
+        ["invoke", ["evt_hide_watermark"]], 
+        ["loadVVM", ["/flows/mainflow/gamemodes/real/pregame/squad/Squad.vvm", { "type": ".type", "gamemode": ".gamemode", "eventData": ".event.data" } ]]
+    ],
+    "onExit":
+    [
+        ["updateUserPlateDisplayMode", ["full"]],
+        ["invoke", ["evt_show_watermark"]], 
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_advance",
+            "let":     {"fromScreen":"Squad"},
+            "targets": ["out_advance"]
+        },
+        {
+            "event":   "evt_back",
+            "let":     {"fromScreen":"Squad"},
+            "targets": ["out_back"]
+        }
+    ]
+}

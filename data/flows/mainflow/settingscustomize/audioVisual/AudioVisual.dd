@@ -1,0 +1,173 @@
+{
+	"actions":
+	[
+        {
+            "viewname": "act_reset_all",
+            "actionname": "act_reset_all"
+        },
+        {
+			"viewname":  "act_music_change",
+			"actionname":"act_music_change"
+		},
+        {
+			"viewname":  "act_fx_change",
+			"actionname":"act_fx_change"
+		},
+        {
+			"viewname":  "act_commentary_change",
+			"actionname":"act_commentary_change"
+		},
+        {
+			"viewname":  "act_crowd_change",
+			"actionname":"act_crowd_change"
+		},
+        {
+			"viewname":  "act_usermusic_toggle",
+			"actionname":"act_usermusic_toggle"
+		},		
+		{
+            "viewname": "act_show_speech_download_popup",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_show_speechdownload_popup"
+            }
+        }
+    ],
+    "data":
+    [
+		{
+            "viewname": "bnd_btn_reset",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_RESET_TO_DEFAULT"
+            }
+        },
+		{
+            "viewname": "bnd_right_label",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CUSTOMIZATION_AUDIO_VISUAL"
+            }
+        },
+		{
+            "viewname": "bnd_usermusic_label",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_DEVICE_MUSIC"
+            }
+        },		
+		{
+            "viewname": "bnd_audio_title",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_AUDIO"
+            }
+        },
+		{
+            "viewname": "bnd_music_label",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MUSIC_VOLUME"
+            }
+        },
+        {
+            "viewname": "bnd_music_value",
+            "binding":  "bnd_music_value",
+            "type":     "number"
+        },
+		{
+			"viewname": "bnd_user_music_enabled",
+            "binding":  "bnd_user_music_enabled",
+            "type":     "bool"
+		},
+		{
+			"viewname": "bnd_toggle_device_music_enabled",
+            "binding":  "bnd_toggle_device_music_enabled",
+            "type":     "bool"
+		},
+		{
+			"viewname": "bnd_userMusic_toggle_index",
+            "binding":  "bnd_userMusic_toggle_index",
+            "type":     "int",
+            "actions":
+            [
+                {
+                    "viewname":   "act_usermusic_toggle",
+                    "actionname": "act_usermusic_toggle"
+                }
+            ]
+		},	
+		{
+            "viewname": "bnd_fx_label",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_FX_VOLUME"
+            }
+        },
+        {
+            "viewname": "bnd_fx_value",
+            "binding":  "bnd_fx_value",
+            "type":     "number"
+        },
+		{
+            "viewname": "bnd_commentary_label",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_COMMENTARY_VOLUME"
+            }
+        },
+        {
+            "viewname": "bnd_commentary_value",
+            "binding":  "bnd_commentary_value",
+            "type":     "number"
+        },
+		{
+            "viewname": "bnd_crowd_label",
+            "type":     "string",
+			"impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CROWD_VOLUME"
+            }
+        },
+        {
+            "viewname": "bnd_crowd_value",
+            "binding":  "bnd_crowd_value",
+            "type":     "number"
+        },
+        {
+            "viewname": "bnd_usermusic_yesno",
+            "binding":  "bnd_usermusic_yesno",
+            "type":"object"
+        },
+		{
+            "viewname": "bnd_download_speech_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_DOWNLOAD_SPEECH"
+            }
+        },
+		{
+            "viewname": "bnd_download_speech_disable",
+            "binding":  "bnd_download_speech_disable",
+            "type":"bool"
+        }
+    ]
+}

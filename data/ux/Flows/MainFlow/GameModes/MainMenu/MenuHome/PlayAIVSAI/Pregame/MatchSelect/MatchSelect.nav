@@ -1,0 +1,67 @@
+{
+    "name": "MatchSelect",
+    "states":
+    [
+		{
+            "name": "MenuMatchSelect",
+            "onEnter":
+            [
+                ["loadVVM", ["/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayAIVSAI/PreGame/matchselect/MatchSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_back"]
+                },
+                {
+                    "event": "evt_playmatch",
+                    "targets": ["out_advance"]
+                },
+				{
+                    "event": "evt_teammanagement",
+                    "targets": ["TeamManagement"]
+                },
+				{
+                    "event": "evt_gamesettings",
+                    "targets": ["GameSettings"]
+                },
+                {
+                    "event": "evt_selectside",
+                    "targets": ["SelectSide"]
+                }
+            ]
+        },
+        {
+            "name": "TeamManagement",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/PreGame/MatchSelect/TeamManagement/TeamManagement.nav",
+            "outputs":
+            {
+                "out_back": "MenuMatchSelect"
+            }
+        },
+        {
+            "name": "GameSettings",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameSettings/GameSettings.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "MenuMatchSelect"
+            }
+        },
+        {
+            "name": "SelectSide",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/pregame/MatchSelect/SelectSide/SelectSide.nav",
+            "outputs":
+            {
+                "out_back": "MenuMatchSelect"
+            }
+        }
+    ]
+}

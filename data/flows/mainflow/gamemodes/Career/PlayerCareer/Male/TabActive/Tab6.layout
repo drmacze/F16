@@ -1,0 +1,51 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],    
+    "children":
+    [
+       {           
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 575,
+            "marginLeft": 30,
+            "height": 60,
+            "width": 60,            
+            "clickAction": "act_back"        
+	    },
+        {
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 575,
+            "marginLeft": 110,
+            "height": 60,
+            "width": 60,            
+            "clickAction": "act_confirm_ligue"         
+        },
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "marginLeft": 0,
+            "marginTop": 240,
+            "height": 65,
+            "width": 220,
+            "backgroundImage": "$",
+            "backgroundHighlightImage": "$",
+            "clickAction": "act_next_update"
+        }
+    ]
+}

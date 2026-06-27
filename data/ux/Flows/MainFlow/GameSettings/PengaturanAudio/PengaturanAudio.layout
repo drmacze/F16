@@ -1,0 +1,157 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+    
+		{
+			"commonName": "GenericButton",
+			"name": "ButtonDownloadKomentator",
+			"x": 25,
+			"y": -125,
+			"width": 280,
+			"height": 50,
+			"icon": "$SheechDlIcon",
+			"label": "DOWNLOAD COMMENTARY",
+			"clickAction": "act_show_speech_download_popup",
+			"bindings":
+			[
+				{
+					"binding": "bnd_download_speech_disable",
+					"property": "enabled"
+				}
+			]
+		},
+		
+        {
+            "commonName": "Group",
+            "name": "PengaturanAudio",
+            "x": -40,
+            "y": -250,
+            "children":
+            [
+
+                {
+                    "commonName": "Image",
+                    "name": "BackgroundPutihAtas",
+                    "alpha": 0.5,
+                    "width": 900,
+                    "height": 80,
+                    "x": 40,
+                    "y": 335,
+                    "image": "$CustRowSeparator"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "BackgroundPutihBawah",
+                    "alpha": 0.5,
+                    "width": 900,
+                    "height": 80,
+                    "x": 40,
+                    "y": 500,
+                    "image": "$CustRowSeparator"
+                },
+                
+                {
+                    "commonName": "Label",
+                    "x": 70,
+                    "y": 275,
+					"text": "Music Volume",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "HSlider",
+                    "x": 575,
+                    "y": 285,
+                    "changeAction": "act_music_change",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_music_value",
+                            "property": "value"
+                        }
+                    ]
+                },
+                                
+                {
+                    "commonName": "Label",
+                    "x": 70,
+                    "y": 355,
+					"text": "Sound FX Volume",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "HSlider",
+                    "x": 575,
+                    "y": 370,
+                    "changeAction": "act_fx_change",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_fx_value",
+                            "property": "value"
+                        }
+                    ]
+                },
+                
+                {
+                    "commonName": "Label",
+                    "x": 70,
+                    "y": 440,
+					"text": "Commentary Volume",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "HSlider",
+                    "x": 575,
+                    "y": 450,
+                    "changeAction": "act_commentary_change",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_commentary_value",
+                            "property": "value"
+                        }
+                    ]
+                },
+                
+                {
+                    "commonName": "Label",
+                    "x": 70,
+                    "y": 520,
+					"text": "Crowd Volume",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "HSlider",
+                    "x": 575,
+                    "y": 535,
+                    "changeAction": "act_crowd_change",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_crowd_value",
+                            "property": "value"
+                        }						
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

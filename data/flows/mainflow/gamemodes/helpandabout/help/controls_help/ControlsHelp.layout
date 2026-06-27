@@ -1,0 +1,485 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+	"children":
+	[
+	    {
+			"commonName": "Label",
+			"name": "PageTitle",
+			"height": 30.0,
+			"marginLeft": 60.0,
+			"marginTop": 55.0,
+			"width": 437.0,
+			"multiline": true,
+			"fontColor": "$COLOR_WHITE",
+			"bindings":
+			[
+				{
+					"binding": "bnd_page_title",
+					"property": "text"
+				}
+			],
+			"styles":
+			[
+				"TF_SELECT_MODE_LABEL"
+			]
+		},
+		{
+			"commonName": "Panel",
+			"name": "assetsContainer",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"marginBottom": 62.0,
+			"marginTop": 90.0,
+			"authoringData":
+			{
+				"expanded": false
+			},
+			"children":
+			[
+				{
+					"commonName": "Asset",
+					"name": "divider",
+					"alignH": "FILL",
+					"marginTop": -9.0,
+					"styles":
+					[
+						"DividerHorizontal"
+					]
+				},
+				{
+					"commonName": "Asset",
+					"name": "background",
+					"alignH": "FILL",
+					"alignV": "FILL",
+					"styles":
+					[
+						""
+					]
+				}
+			]
+		},
+		{
+			"commonName": "Panel",
+			"name": "panelDataContainer",
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"marginBottom": 64.0,
+			"marginTop": 90.0,
+			"children":
+			[
+				{
+					"commonName": "GestureArea",
+					"name": "gestureArea",
+					"alignH": "FILL",
+					"alignV": "FILL",
+					"swipeAction":
+					{
+						"action": "act_swipe",
+						"binding": "bnd_swipe"
+					},
+					"bindings":
+					[
+						{
+							"binding": "BND_SCREEN_HEIGHT",
+							"property": "height"
+						},
+						{
+							"binding": "BND_SCREEN_WIDTH",
+							"property": "width"
+						}
+					]
+				},
+				{
+					"commonName": "Panel",
+					"name": "panelWithImageAndText",
+					"alignH": "CENTER",
+                    "alignV": "CENTER",
+					"height": 489.0,
+					"width": 968.0,
+					"children":
+					[
+						{
+							"commonName": "Image",
+							"name": "descriptionImage",
+							"alignH": "FILL",
+							"alignV": "FILL",
+							"bindings":
+							[
+								{
+									"binding": "bnd_sub_page_image",
+									"property": "image"
+								}
+							],
+							"behaviors":
+							[
+								{
+									"commonName": "ControlsHelpLoadBehavior",
+									"actionName": "act_on_image_loaded"
+								}
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelMentality",
+							"alignH": "CENTER",
+							"alignV": "TOP",
+							"marginTop": 150.0,
+							"width": 328.0,
+							"multiline": false,
+							"bindings":
+							[
+								{
+									"binding": "bnd_mentality",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_mentality_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_MENTALITY_LABEL_HELP"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelThrough",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 156.0,
+							"marginRight": 108.0,
+							"width": 110.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_through",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_through_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON_SMALLER_FONT"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "label2ndDefender",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 153.0,
+							"marginRight": 126.0,
+							"width": 98.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_2nd_defender",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_2nd_defender_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON_SMALLER_FONT"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelPass",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 53.0,
+							"marginRight": 167.0,
+							"width": 76.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_pass",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_pass_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelSwitch",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 53.0,
+							"marginRight": 168.0,
+							"width": 72.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_switch",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_switch_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelShoot",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 180.0,
+							"marginRight": 34.0,
+							"width": 72.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_shoot",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_shoot_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelTackleBasic",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 180.0,
+							"marginRight": 26.0,
+							"width": 92.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_tackle",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_tackle_basic_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelSprintOff",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 65.0,
+							"marginRight": 45.0,
+							"width": 86.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_sprint_offence",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_sprint_offence_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Label",
+							"name": "labelSprintDeff",
+							"alignH": "RIGHT",
+							"alignV": "BOTTOM",
+							"bold": true,
+							"marginBottom": 65.0,
+							"marginRight": 52.0,
+							"width": 72.0,
+							"multiline": true,
+							"bindings":
+							[
+								{
+									"binding": "bnd_sprint_deffence",
+									"property": "text"
+								},
+								{
+									"binding": "bnd_sprint_deffence_visible",
+									"property": "visible"
+								}
+							],
+							"styles":
+							[
+								"TF_GAME_BUTTON"
+							]
+						},
+						{
+							"commonName": "Panel",
+							"name": "panelForTopBanner",
+							"alignH": "CENTER",
+							"height": 123.0,
+							"width": 968.0,
+							"children":
+							[
+								{
+									"commonName": "Asset",
+									"name": "background",
+									"alignH": "CENTER",
+									"alignV": "CENTER",
+									"type": "$bkg_panel_top_controls_help"
+								},
+								{
+									"commonName": "AssetButton",
+									"name": "buttonRight",
+									"alignH": "RIGHT",
+									"alignV": "CENTER",
+									"clickAction": "act_go_right",
+									"buttonAsset": "$BlueArrowRight"
+								},
+								{
+									"commonName": "AssetButton",
+									"name": "buttonLeft",
+									"alignV": "CENTER",
+									"clickAction": "act_go_left",
+									"buttonAsset": "$BlueArrowLeft"
+								},
+								{
+									"commonName": "Panel",
+									"name": "panelWithText",
+									"alignH": "CENTER",
+									"alignV": "FILL",
+									"children":
+									[
+										{
+											"commonName": "Label",
+											"name": "labelSubPageCnt",
+											"alignH": "CENTER",
+											"marginTop": 50.0,
+											"textAlignH": "CENTER",
+											"width": 900.0,
+											"multiline": true,
+											"leading": 2,
+											"bindings":
+											[
+												{
+													"binding": "bnd_subpage_content",
+													"property": "text"
+												}
+											],
+											"styles":
+											[
+												"TF_SELECT_MODE_LABEL_GENERAL_HELP"
+											]
+										},
+										{
+											"commonName": "Label",
+											"name": "labelSubPageTitle",
+											"alignH": "CENTER",
+											"marginTop": 8.0,
+											"textAlignH": "CENTER",
+											"width": 900.0,
+											"multiline": true,
+											"bindings":
+											[
+												{
+													"binding": "bnd_subpage_title",
+													"property": "text"
+												}
+											],
+											"styles":
+											[
+												"TF_CONTENT_HEADER"
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

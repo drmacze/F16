@@ -1,0 +1,136 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Tab",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 690,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Quarter-Finals",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 690,
+                    "height": 10,
+                    "width": 115,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 5,
+            "width": 900,
+            "height": 375,
+            "alpha": 1,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 9,
+                            "alpha": 1,
+			                "bindings":
+                            [
+                                {
+				                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+			                	}
+                            ]
+                        },
+		            	{
+		                    "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 10,
+                            "fontSize": 20,
+			                "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": true,
+			                "text": "QUARTER FINALS"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 35,
+                            "fontSize": 12,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                                { 
+                                    "binding": "bnd_month_label",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "Fixtures",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 63,
+                            "marginLeft": 40,
+                            "scaleX": 0.67,
+                            "scaleY": 0.67,
+                            "displayRange": 4,
+                            "highlightable": true,
+                            "row": "FixturesQuarterFinal",
+                            "rowHeight": 115,
+                            "rowWidth": 1150,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_quarter_fixtures",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

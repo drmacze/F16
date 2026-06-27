@@ -1,0 +1,249 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_exit",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_exit"
+			}
+			        },
+
+        {
+
+            "viewname": "bnd_draw_label",
+
+            "type":     "string",
+
+            "impl":
+
+            {
+
+                "type": "ltxt",
+
+                "tag":  "LTXT_DRAW_MATCH"
+
+            }
+		},
+		{
+			"viewname": "act_encode_videos",
+			"actionname": "act_encode_videos"
+		},
+		{
+            "viewname": "act_row_click",
+            "actionname": "act_row_click"
+        },
+		{
+            "viewname": "act_checkbox_click",
+            "actionname": "act_checkbox_click"
+        }
+	],
+	"data":
+	[
+    {
+            "viewname": "bnd_team_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_TEAM_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_time_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_TIME_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_event_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_EVENT_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_number_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "Number_Abbr2"
+            }
+        },
+        {
+            "viewname": "bnd_player_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_PLAYER_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_away_events_list",
+            "binding":  "bnd_away_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_home_events_list",
+            "binding":  "bnd_home_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_empty_rows_data",
+            "binding":  "bnd_empty_rows_data",
+            "type":     "array"
+            },
+        {
+            "viewname": "bnd_team_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_TEAM_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_time_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_TIME_LABELy"
+            }
+        },
+        {
+            "viewname": "bnd_event_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_EVENT_LABEL"
+            }
+            },
+		{
+            "viewname": "bnd_home_team_crest",
+            "binding": "bnd_home_team_crest",
+            "type": "object"
+            },
+        
+        {
+            "viewname":"bnd_home_crest",
+            "binding":"bnd_home_crest",
+            "type":"object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding": "bnd_away_team_crest",
+            "type": "object"
+            
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding":  "bnd_home_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding":  "bnd_away_team_name",
+            "type":     "string"
+  
+        },
+        {
+            "viewname": "bnd_logo_tim_home",
+            "binding":  "bnd_logo_tim_home",
+            "type":     "object"
+            },
+        {
+            "viewname":"bnd_team_crest",
+            "binding":"bnd_team_crest",
+            "type":"object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding":  "bnd_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_crest3",
+            "binding":  "bnd_home_team_crest3",
+            "type":     "object"
+            },
+            {
+            "viewname": "bnd_logo_tim_home",
+            "binding": "bnd_logo_tim_home",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_logo_tim_away",
+            "binding": "bnd_logo_tim_away",
+            "type": "object"
+        },      
+        {
+            "viewname": "bnd_nama_tim_home",
+            "binding": "bnd_nama_tim_home",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team_crest3",
+            "binding":  "bnd_away_team_crest3",
+            "type":     "object"
+            },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_crest7",
+            "binding":  "bnd_home_team_crest7",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_number_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "Number_Abbr2"
+            }
+        },
+        {
+            "viewname": "bnd_player_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_MFA_PLAYER_LABEL"
+            }
+        },
+        {
+            "viewname": "bnd_away_events_list",
+            "binding":  "bnd_away_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_home_events_list",
+            "binding":  "bnd_home_events_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_match_facts",
+            "binding":  "bnd_match_facts",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_empty_rows_data",
+            "binding":  "bnd_empty_rows_data",
+            "type":     "array"
+        }
+            
+    ]
+}

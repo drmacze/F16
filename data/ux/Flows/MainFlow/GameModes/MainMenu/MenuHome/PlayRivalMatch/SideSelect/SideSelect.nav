@@ -1,0 +1,42 @@
+{
+    "name": "SideSelect",
+    "initial":
+    {
+        "targets": ["RedirectSideSelect"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectSideSelect",
+            "onEnter":
+            [
+                  ["blockingLoadVVM", ["SideSelect.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                }
+            ]
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "SideSelect",
+                "out_exit_gamemode1": "out_exit_gamemode1"
+            }
+        }
+    ]
+}

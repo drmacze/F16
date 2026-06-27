@@ -1,0 +1,53 @@
+{
+    "name": "MenuHome",
+    "states":
+    [
+
+        {
+            "name": "MenuHome_KickOff",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/QuickMatch/QuickMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuHome_PlayRivalMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayRivalMatch/PlayRivalMatch.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuHome_PlayAIVSAI",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/PlayAIVSAI/PlayAIVSAI.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuHome_Help",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/ControlsHelp/ControlsHelp.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        },
+        {
+            "name": "MenuHome_About",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuHome/AboutMOD/AboutMOD.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_hub"
+            }
+        }
+        
+    ]
+}

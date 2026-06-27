@@ -1,0 +1,5 @@
+[
+    "/lua/common/ItemModel.lua",
+    "/lua/packages/tableutil.lua",
+    "/flows/mainflow/gamemodes/PreGame/MatchSelect/MenuSquad/TeamManagement/Formation/FormationModelReal_Away.lua"
+]

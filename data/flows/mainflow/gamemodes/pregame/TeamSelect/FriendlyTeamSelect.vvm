@@ -1,0 +1,5 @@
+{
+    "dds":   ["TeamSelect.dd", "FriendlyTeamSelect.dd"],
+    "vms":   [["lua", "TeamSelect.lua"], ["lua", "FriendlyTeamSelect.lua"]],
+    "views": [["gfx", { "layout": "TeamSelect.layout" }], ["gfx", { "layout": "FriendlyTeamSelect.layout" }]]
+}

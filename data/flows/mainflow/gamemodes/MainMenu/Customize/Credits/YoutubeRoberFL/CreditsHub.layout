@@ -1,0 +1,73 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIconOff",
+            "actionName": "act_back",
+            "label": ""
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Label",
+            "alignH": "LEFT",
+            "alignV": "BOTTOM",
+            "marginLeft": 20,
+            "marginBottom": 10,
+            "width": 180,
+            "autoScroll": true,
+            "autoTextShadow": true,
+            "text":"DFL 25 v1.0 Copyright Rober FL & DK7",
+            "fontSize": 14,
+            "alpha": 0,
+            "fontColor": "$COLOR_BLACK"
+            }
+               ]
+                  }
+                    ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

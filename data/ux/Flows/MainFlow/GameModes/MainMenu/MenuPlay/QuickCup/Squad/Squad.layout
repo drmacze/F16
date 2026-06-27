@@ -1,0 +1,338 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+	"commonName": "Panel",
+	"name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+	"behaviors":
+	[
+		{
+			"commonName": "SquadTeamManagementBehavior",
+			"actionName": "act_swap_players",
+			"starting11": "MenuTeamManagement.MenuBagianAturFormasi.BagianPosisiPemain",
+			"subsAndReserves": "MenuTeamManagement.MenuBagianAturFormasi.BagianSubstitutions"
+		},
+		{
+			"commonName": "SquadPlayerComparisonBehavior",
+			"actionName": "act_compare_players",
+			"comparisonTargetNames":
+			[
+				"MenuTeamManagement.MenuBagianAturFormasi.BagianPosisiPemain",
+				"MenuTeamManagement.MenuBagianAturFormasi.BagianSubstitutions"
+			]
+		},
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_X",
+            "actionName": "act_advance",
+            "label": "Save"
+        }
+	],
+	"children":
+	[
+        		
+		{
+		    "commonName": "Panel",
+		    "name": "MenuTeamManagement",
+		    "alignV": "CENTER",
+		    "alignH": "CENTER",
+		    "width": 1050,
+		    "height": 500,
+		    "children":
+		    [
+		        {
+		            "commonName": "Panel",
+		            "name": "MenuBagianTim",
+		            "alignV": "CENTER",
+		            "alignH": "LEFT",
+		            "width": 245,
+		            "height": 500,
+		            "children":
+		            [
+		                {
+			                "commonName": "Panel",
+			                "name": "BagianInfoTim",
+			                "alignV": "TOP",
+			                "alignH": "CENTER",
+			                "width": 245,
+			                "height": 210,
+			                "children":
+			                [
+                                {
+                                   "commonName": "Asset",
+                                   "alignV": "FILL",
+                                   "alignH": "FILL",
+                                   "type": "$LiveTileBackgroundIdle"
+                                },
+                                {
+                                   "commonName": "Image",
+                                   "name": "LogoTim",
+                                   "alignV": "CENTER",
+                                   "alignH": "CENTER",
+                                   "marginTop": -30,
+                                   "scaleX": 1.5,
+                                   "scaleY": 1.5,
+                                   "bindings":
+                                   [
+                                      {
+                                         "binding": "bnd_team_crest",
+							             "property": "image"
+						              }
+					               ]
+                                },
+                                {
+                                   "commonName": "Label",
+                                   "name": "NamaTim",
+                                   "alignV": "CENTER",
+                                   "alignH": "CENTER",
+                                   "marginBottom": -36,
+					               "fontSize": 28,
+					               "fontColor": "$COLOR_WHITE",
+					               "autoTextShadow": true,
+					               "bindings":
+					               [
+						              {
+							             "binding": "bnd_team_name",
+							             "property": "text"
+						              }
+					               ]
+                                },
+                                {
+					               "commonName": "StarRating",
+					               "name": "insStarRating",
+					               "alignV": "CENTER",
+					               "alignH": "CENTER",
+					               "marginBottom": -60,
+					               "bindings":
+					               [
+						              {
+							             "binding": "bnd_team_rating",
+							             "property": "stars"
+					                  }
+					               ]
+                                }
+			                ]
+		                },
+		                {
+			                "commonName": "Panel",
+			                "name": "BagianPilihFormasi",
+			                "alignV": "CENTER",
+			                "alignH": "CENTER",
+			                "marginTop": 15,
+			                "width": 245,
+			                "height": 100,
+			                "children":
+			                [
+                                {
+					               "commonName": "Asset",
+                                   "alignV": "FILL",
+                                   "alignH": "FILL",
+                                   "type": "$LiveTileBackgroundIdle"
+                                },
+                                {
+                                   "commonName": "Label",
+                                   "alignV": "CENTER",
+                                   "alignH": "CENTER",
+                                   "marginTop": -23,
+                                   "fontSize": 23,
+                                   "fontColor": "$COLOR_WHITE",
+                                   "autoTextShadow": true,
+                                   "text": "FORMATION :"
+                                },
+    				            {
+                                   "commonName": "DragToggle",
+                                   "alignV": "CENTER",
+                                   "alignH": "CENTER",
+                                   "marginBottom": -10,
+                                   "width": 210,
+                                   "itemStyleName": "SquadToggleInfoPreMatch",
+                                   "itemType": "Label",
+                                   "toggleAction":
+                                   {
+                                      "binding": "bnd_formation_index",
+                                      "action": "act_change"
+                                   },
+					               "bindings":
+				        	       [
+						              {
+							             "binding": "bnd_formation_list",
+							             "property": "dataProviders"
+						              }
+					               ]
+				                }
+                            ]
+                        },
+		                {
+			                "commonName": "Panel",
+			                "name": "BagianRatingPemainSaatMengganti",
+			                "alignV": "BOTTOM",
+			                "alignH": "CENTER",
+			                "width": 245,
+			                "height": 180,
+			                "children":
+			                [
+			                    {
+                                   "commonName": "Asset",
+                                   "alignV": "FILL",
+                                   "alignH": "FILL",
+                                   "type": "$LiveTileBackgroundIdle"
+                                },
+		                        {
+                                   "commonName": "PlayerComparison",
+                                   "name": "insPlayerComparison",
+                                   "alignV": "BOTTOM",
+                                   "alignH": "CENTER",
+                                   "width": 245,
+                                   "height": 180,
+                                   "bindings":
+                                   [
+                                      {
+					                     "binding": "bnd_player_comparison_data",
+					                     "property": "dataProviders"
+				                      },
+				                      {
+					                     "binding": "bnd_comparison_type",
+				                         "property": "playerLabel"
+				                      }
+                                   ]
+		                        }
+		                    ]
+		                }
+		            ]
+		        },
+		      
+		        {
+		            "commonName": "Panel",
+		            "name": "MenuBagianAturFormasi",
+		            "alignV": "CENTER",
+		            "alignH": "RIGHT",
+		            "width": 800,
+		            "height": 500,
+		            "children":
+		            [
+		                {
+			                "commonName": "Asset",
+			                "alignV": "FILL",
+			                "alignH": "FILL",
+			                "type": "$LiveTileBackgroundIdle"
+		                },
+		                {
+			                "commonName": "Asset",
+			                "alignV": "CENTER",
+			                "alignH": "CENTER",
+			                "width": 720,
+			                "height": 450,
+			                "type": "$Pitch"
+		                },
+		                {
+			                "commonName": "SquadChemistryLinks",
+			                "name": "BagianGarisPolaGrafik",
+			                "alignV": "CENTER",
+			                "alignH": "CENTER",
+			                "marginTop": -15,
+			                "bindings":
+			                [
+			                   {
+				                   "binding": "bnd_chemistry_matrix",
+						           "property": "formationChemistry"
+			                   }
+			                ]
+		                },
+		                {
+			                "commonName": "SquadLayout",
+			                "name": "BagianPosisiPemain",
+			                "alignV": "CENTER",
+			                "alignH": "CENTER",
+			                "marginTop": -22,
+			                "itemView": 1,
+			                "highlightable": true,
+			                "exchangeTargetNames":
+			                [
+							   "MenuTeamManagement.MenuBagianAturFormasi.BagianSubstitutions"
+			                ],
+			                "bindings":
+			                [
+			                   {
+			                       "binding": "bnd_starting_11",
+							       "property": "starting11"
+						       },
+						       {
+							       "binding": "bnd_formation",
+							       "property": "formation"
+						       }
+					        ]
+		                },
+		                {
+			                "commonName": "SubsDrawer",
+			                "name": "BagianSubstitutions",
+			                "alignV": "BOTTOM",
+			                "alignH": "CENTER",
+			                "marginBottom": -230,
+			                "marginLeft": -125,
+			                "width": 1100,
+			                "height": 200,
+			                "selectable": true,
+			                "mouseInteractive": true,
+			                "contextMenuEnabled": true,
+			                "exchangeTargetNames":
+			                [
+			                    "MenuTeamManagement.MenuBagianAturFormasi.BagianPosisiPemain"
+			                ],
+			                "itemView": 1,
+			                "scrollable": false,
+			                "draggable": true,
+			                "highlightable": true,
+			                "autoHide": true,
+			                "displayType": "SUBS_AND_RES",
+			                "bindings":
+			                [
+			                    {
+							       "binding": "bnd_subs_and_res",
+							       "property": "dataProviders"
+							    }
+			                ]
+		                }
+			        ]
+			    }
+			    
+			]
+		}
+		
+	]
+}

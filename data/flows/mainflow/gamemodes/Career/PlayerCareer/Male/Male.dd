@@ -1,0 +1,438 @@
+{
+    "actions":
+    [
+        {        
+            "viewname": "act_tab_epl",
+            "actionname": "act_tab_epl"
+        },
+        {
+            "viewname": "act_tab_laliga",
+            "actionname": "act_tab_laliga"
+        },
+        {
+            "viewname": "act_tab_seriea",
+            "actionname": "act_tab_seriea"
+        },
+        {
+            "viewname": "act_tab_bundesliga",
+            "actionname": "act_tab_bundesliga"
+        },
+        {
+            "viewname": "act_tab_ligue",
+            "actionname": "act_tab_ligue"
+        },
+        {
+            "viewname": "act_confirm_epl",
+            "actionname": "act_confirm_epl"
+        },
+        {
+            "viewname": "act_confirm_laliga",
+            "actionname": "act_confirm_laliga"
+        },
+        {
+            "viewname": "act_confirm_seriea",
+            "actionname": "act_confirm_seriea"
+        },
+        {
+            "viewname": "act_confirm_bundesliga",
+            "actionname": "act_confirm_bundesliga"
+        },
+        {
+            "viewname": "act_confirm_ligue",
+            "actionname": "act_confirm_ligue"
+        },
+        {
+            "viewname": "act_next_update",
+            "actionname": "act_next_update"
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },       
+        {
+            "viewname": "act_tab1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab1"
+            }
+        },
+        {
+            "viewname": "act_tab2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab2"
+            }
+        },
+        {
+            "viewname": "act_tab3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab3"
+            }
+        },
+        {
+            "viewname": "act_tab4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab4"
+            }
+        },
+        {
+            "viewname": "act_tab5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab5"
+            }
+        },
+        {
+            "viewname": "act_tab6",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab6"
+            }
+        },
+        {
+            "viewname": "act_premier_league",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_premier_league"
+            }
+        },
+        {
+            "viewname": "act_ligue",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_ligue"
+            }
+        },
+        {
+            "viewname": "act_bundesliga",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_bundesliga"
+            }
+        },
+        {
+            "viewname": "act_laliga",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_laliga"
+            }
+        },
+        {
+            "viewname": "act_seriea",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_seriea"
+            }        
+        }    
+    ],
+    "data":
+    [    
+        {
+			"viewname": "bnd_player_bg",
+            "binding": "bnd_player_bg",
+			"type": "object"
+	    },
+        {
+            "viewname": "bnd_label_epl_on",
+            "binding": "bnd_label_epl_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_epl_off",
+            "binding": "bnd_label_epl_off",
+            "type": "string"
+        },
+        {
+			"viewname": "bnd_logo_epl_on",
+            "binding": "bnd_logo_epl_on",
+			"type": "object"
+	    },
+     	{
+			"viewname": "bnd_active_epl_on",
+            "binding": "bnd_active_epl_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_true_epl_on",
+            "binding": "bnd_true_epl_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_false_epl_off",
+            "binding": "bnd_false_epl_off",
+			"type": "object"
+        },
+        {
+			"viewname": "bnd_logo_epl_off",
+            "binding": "bnd_logo_epl_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_flag_epl_on",
+            "binding": "bnd_flag_epl_on",
+			"type": "object"
+        },
+		{
+			"viewname": "bnd_flag_epl_off",
+            "binding": "bnd_flag_epl_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_icon_epl_on",
+            "binding": "bnd_icon_epl_on",
+			"type": "object"
+        },
+    	{
+			"viewname": "bnd_icon_epl_off",
+            "binding": "bnd_icon_epl_off",
+			"type": "object"
+        },
+        {
+            "viewname": "bnd_label_laliga_on",
+            "binding": "bnd_label_laliga_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_laliga_off",
+            "binding": "bnd_label_laliga_off",
+            "type": "string"
+        },
+    	{
+			"viewname": "bnd_logo_laliga_on",
+            "binding": "bnd_logo_laliga_on",
+			"type": "object"
+        },
+    	{
+			"viewname": "bnd_logo_laliga_off",
+            "binding": "bnd_logo_laliga_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_flag_laliga_on",
+            "binding": "bnd_flag_laliga_on",
+			"type": "object"
+        },
+    	{
+		    "viewname": "bnd_flag_laliga_off",
+            "binding": "bnd_flag_laliga_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_icon_laliga_on",
+            "binding": "bnd_icon_laliga_on",
+			"type": "object"
+        },
+    	{
+			"viewname": "bnd_icon_laliga_off",
+            "binding": "bnd_icon_laliga_off",
+			"type": "object"        
+	    },
+    	{
+			"viewname": "bnd_true_laliga_on",
+            "binding": "bnd_true_laliga_on",
+			"type": "object"
+        },
+     	{
+			"viewname": "bnd_active_laliga_on",
+            "binding": "bnd_active_laliga_on",
+			"type": "object"	
+	    },
+    	{
+			"viewname": "bnd_false_laliga_off",
+            "binding": "bnd_false_laliga_off",
+			"type": "object"
+        },
+        {
+            "viewname": "bnd_label_seriea_on",
+            "binding": "bnd_label_seriea_on",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_label_seriea_off",
+            "binding": "bnd_label_seriea_off",
+            "type": "string"
+        },
+        {
+			"viewname": "bnd_logo_seriea_on",
+            "binding": "bnd_logo_seriea_on",
+			"type": "object"
+	    },
+     	{
+			"viewname": "bnd_active_seriea_on",
+            "binding": "bnd_active_seriea_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_true_seriea_on",
+            "binding": "bnd_true_seriea_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_false_seriea_off",
+            "binding": "bnd_false_seriea_off",
+			"type": "object"
+        },
+        {
+			"viewname": "bnd_logo_seriea_off",
+            "binding": "bnd_logo_seriea_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_flag_seriea_on",
+            "binding": "bnd_flag_seriea_on",
+			"type": "object"
+        },
+		{
+			"viewname": "bnd_flag_seriea_off",
+            "binding": "bnd_flag_seriea_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_icon_seriea_on",
+            "binding": "bnd_icon_seriea_on",
+			"type": "object"
+        },
+    	{
+			"viewname": "bnd_icon_seriea_off",
+            "binding": "bnd_icon_seriea_off",
+			"type": "object"
+	    },
+        {
+            "viewname": "bnd_label_bundesliga_on",
+            "binding": "bnd_label_bundesliga_on",
+            "type": "string"
+	    },
+        {
+            "viewname": "bnd_label_bundesliga_off",
+            "binding": "bnd_label_bundesliga_off",
+            "type": "string"
+        },
+        {
+			"viewname": "bnd_logo_bundesliga_on",
+            "binding": "bnd_logo_bundesliga_on",
+			"type": "object"
+	    },
+     	{
+			"viewname": "bnd_active_bundesliga_on",
+            "binding": "bnd_active_bundesliga_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_true_bundesliga_on",
+            "binding": "bnd_true_bundesliga_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_false_bundesliga_off",
+            "binding": "bnd_false_bundesliga_off",
+			"type": "object"
+        },
+        {
+			"viewname": "bnd_logo_bundesliga_off",
+            "binding": "bnd_logo_bundesliga_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_flag_bundesliga_on",
+            "binding": "bnd_flag_bundesliga_on",
+			"type": "object"
+        },
+		{
+			"viewname": "bnd_flag_bundesliga_off",
+            "binding": "bnd_flag_bundesliga_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_icon_bundesliga_on",
+            "binding": "bnd_icon_bundesliga_on",
+			"type": "object"
+        },
+    	{
+			"viewname": "bnd_icon_bundesliga_off",
+            "binding": "bnd_icon_bundesliga_off",
+			"type": "object"						
+		},
+        {
+            "viewname": "bnd_label_ligue_on",
+            "binding": "bnd_label_ligue_on",
+            "type": "string"
+	    },
+        {
+            "viewname": "bnd_label_ligue_off",
+            "binding": "bnd_label_ligue_off",
+            "type": "string"
+        },
+        {
+			"viewname": "bnd_logo_ligue_on",
+            "binding": "bnd_logo_ligue_on",
+			"type": "object"
+	    },
+     	{
+			"viewname": "bnd_active_ligue_on",
+            "binding": "bnd_active_ligue_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_true_ligue_on",
+            "binding": "bnd_true_ligue_on",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_false_ligue_off",
+            "binding": "bnd_false_ligue_off",
+			"type": "object"
+        },
+        {
+			"viewname": "bnd_logo_ligue_off",
+            "binding": "bnd_logo_ligue_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_flag_ligue_on",
+            "binding": "bnd_flag_ligue_on",
+			"type": "object"
+        },
+		{
+			"viewname": "bnd_flag_ligue_off",
+            "binding": "bnd_flag_ligue_off",
+			"type": "object"
+	    },
+    	{
+			"viewname": "bnd_icon_ligue_on",
+            "binding": "bnd_icon_ligue_on",
+			"type": "object"
+        },
+    	{
+			"viewname": "bnd_icon_ligue_off",
+            "binding": "bnd_icon_ligue_off",
+			"type": "object"					
+		},
+    	{
+			"viewname": "bnd_live_tile_squad",
+            "binding": "bnd_live_tile_squad",
+			"type": "object"
+		},
+        {
+			"viewname": "bnd_live_tile_name",
+            "binding": "bnd_live_tile_name",
+			"type": "object"
+		}
+    ]
+}

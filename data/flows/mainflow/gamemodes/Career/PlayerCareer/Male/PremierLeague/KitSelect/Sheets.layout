@@ -1,0 +1,229 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings": [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts": [
+        {
+            "name": "show",
+            "script": [ { "anim": "SCREEN_SHOW" } ]
+        },
+        {
+            "name": "hide",
+            "script": [ { "anim": "SIMPLE_SCREEN_HIDE" } ]
+        }
+    ],
+    "children": [
+        /* Background Elements */
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Background_Gradian"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        /* UI Frame (Back Button) */
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children": [
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Back"
+                }
+            ]
+        },
+        /* Main Content Panel */
+        {
+            "commonName": "Panel",
+            "name": "SelectTransfers",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -40,
+            "marginLeft": -80,
+            "width": 1000,
+            "height": 500,
+            "children": [
+                /* Header Section */
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 0,
+                    "marginLeft": 0,
+                    "width": 220,
+                    "height": 50,
+                    "color": "0x1E1E1E",
+                    "cornerRaduis": 15,
+                    "alpha": 0.7
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 15,
+                    "marginLeft": 25,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_WHITE",
+                    "scaleX": 1.1,
+                    "scaleY": 0.9,
+                    "text": "Team Sheets"
+                },
+                /* Player Info Section */
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 50,
+                    "marginLeft": 600,
+                    "width": 900,
+                    "height": 483,
+                    "color": "0x1f1c1c",
+                    "cornerRaduis": 20,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignH": "CENTER",
+                    "alignV": "TOP",
+                    "marginTop": 150,
+                    "marginLeft": 460,
+                    "width": 400,
+                    "height": 300,
+                    "clickAction": "act_squad"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 55,
+                    "marginLeft": 620,
+                    "fontSize": 16,
+                    "fontFace": "$CruyffSans-Bold",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "scaleX": 1.4,
+                    "scaleY": 1.6,
+                    "bindings": [
+                        {
+                            "binding": "bnd_sheetname",
+                            "property": "text"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 700,
+                            "width": 500,
+                            "height": 400,
+                            "type": "$Tab_inTeam"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "playerteam",
+                    "alignH": "RIGHT",
+                    "alignV": "TOP",
+                    "marginTop": 100,
+                    "marginRight": 530,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3,
+                    "bindings": [
+                        {
+                            "binding": "bnd_crest",
+                            "property": "image"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 270,
+                    "marginLeft": 0,
+                    "fontSize": 22,
+                    "fontFace": "$FONT_ORIGIN_KNULMEDIUM",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings": [
+                        {
+                            "binding": "bnd_playerteam",
+                            "property": "text"
+                        }
+                    ]
+                },
+                /* Grid Section */
+                {
+                    "commonName": "GridTable",
+                    "name": "leaguesGridTable",
+                    "height": 480,
+                    "width": 650,
+                    "marginTop": 80,
+                    "marginLeft": 110,
+                    "color": "0xC3C3C3",
+                    "cellIndexChangeAction": {
+                        "action": "act_change",
+                        "binding": "bnd_player_index"
+                    },
+                    "columns": 2,
+                    "hasBulletIndicator": false,
+                    "itemType": "LeagueGridCell",
+                    "rows": 2,
+                    "bindings": [
+                        {
+                            "binding": "bnd_player_list",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_default_cell_data",
+                            "property": "defaultCellData"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

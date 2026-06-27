@@ -1,0 +1,319 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "children":
+    [
+    
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.5,
+            "type": "$BackgroundHitam"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "MenuPostMatch",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 900,
+            "height": 460,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BagianInfoTim&Skor",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 900,
+                    "height": 110,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$MenuSelection"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoBabak",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 4.5,
+                            "fontSize": 23,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "POST MATCH"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoWaktu",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -15,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_stadium_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoHasilAduPinalti",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 6.5,
+                            "fontSize": 16,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_shootout_result",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "InfoHasil",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": -3,
+                            "fontSize": 44,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_result",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 7,
+                            "marginLeft": -180,
+                            "fontSize": 28,
+                            "fontColor": "$COLOR_WHITE",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimAway",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 7,
+                            "marginRight": -180,
+                            "fontSize": 28,
+                            "fontColor": "$COLOR_WHITE",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name",
+                                  "property": "text"
+                               }
+                            ]
+                       },
+                       {
+                            "commonName": "Image",
+                            "name": "LogoTimHome",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 10,
+                            "scaleX": 0.37,
+                            "scaleY": 0.37,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "LogoTimAway",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 10,
+                            "scaleX": 0.37,
+                            "scaleY": 0.37,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        }
+                    ]
+                },
+
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMatchFacts",
+                    "alignV": "BOTTOM",
+                    "alignH": "RIGHT",
+                    "width": 447,
+                    "height": 345,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$LiveTileBackgroundIdle"
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "rowWidth": 447,
+                            "rowHeight": 38,
+                            "divider": "$Divider",
+                            "row": "GameMenuRows",
+                            "useAlternating": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_facts",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "name": "BagianMenu",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "width": 447,
+                    "height": 345,
+                    "children":
+                    [
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuMatchFacts&Events",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "width": 447,
+                            "height": 111,
+                            "clickAction": "act_to_match_facts",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$IconMatchFact"
+                            ],
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_live_tile_matchfacts",
+                                   "property": "headline"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuMatchHighlights",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "width": 447,
+                            "height": 111,
+                            "clickAction": "act_to_match_highlights",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$IconInstantReplay"
+                            ],
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_live_tile_matchhighlights",
+                                   "property": "headline"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuRestartMatch",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "width": 221,
+                            "height": 111,
+                            "clickAction": "act_restart_match",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$IconRestartMatch"
+                            ],
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_live_tile_restart",
+                                   "property": "headline"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "LiveTile",
+                            "name": "MenuQuitMatch",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": -0.3,
+                            "width": 221,
+                            "height": 111,
+                            "clickAction": "act_quit_match",
+                            "autoScaleImageToTileHeight": true,
+                            "images":
+                            [
+                               "$IconExit"
+                            ],
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_live_tile_quit",
+                                   "property": "headline"
+                               }
+                            ]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

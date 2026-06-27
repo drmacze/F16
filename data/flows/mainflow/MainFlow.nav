@@ -1,0 +1,356 @@
+{
+    "name": "MainFlow",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["/flows/mainflow/MainFlow.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "name": "Main",
+            "type": "parallel",
+            "states":
+            [
+                {
+                    "states":
+                    [
+                        {
+                            "name": "Gamemodes",
+                            "type": "external",
+                            "file": "/flows/mainflow/gamemodes/MainMenu/MainHub.nav"
+                        },
+                        {
+                            "name": "Metrics",
+                            "type": "external",
+                            "file": "/flows/metricsflow/metricsflow.nav",
+                            "outputs":
+                            {
+                                "out_next_flow": "Gamemodes"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Widgets",
+                    "type": "external",
+                    "file": "/flows/mainflow/widgets/widgets.nav"
+                }
+            ]
+        },
+        {
+            "name": "SpeechDownloadPopup",
+            "type": "external",
+            "file": "/flows/mainflow/speechdownload/speechdownload.nav"
+        },
+        {
+            "name": "SettingsCustomize",
+            "type": "external",
+            "file": "/flows/mainflow/settingscustomize/settingscustomize.nav"
+        },
+        {
+            "name": "Invite",
+            "type": "external",
+            "file": "/flows/mainflow/invite/invite.nav"
+        },
+        {
+            "name": "Store",
+            "type": "external",
+            "file": "/flows/mainflow/store/store.nav"
+        },
+        {
+            "name": "UserBio",
+            "type": "external",
+            "file": "/flows/mainflow/widgets/bio/userplatebio.nav"
+        },
+        {
+            "name": "ExtendedUserBio",
+            "type": "external",
+            "file": "/flows/mainflow/widgets/extendeduserbio/extendeduserbio.nav"
+        },
+        {
+            "name": "MessageCenter",
+            "type": "external",
+            "file": "/flows/mainflow/messagecenter/messagecenter.nav"
+        },
+        {
+            "name": "Accomplishments",
+            "type": "external",
+            "file": "/flows/mainflow/accomplishments/accomplishments.nav"
+        },
+        {
+            "name": "PlayerBio",
+            "type": "external",
+            "file": "/flows/mainflow/gamemodes/fut/club/playerstats/playerbio/playerbio.nav"
+        },
+        {
+            "name": "CriticalConnectionLost",
+            "states":
+            [
+                {
+                    "name": "HideCriticalConnectionLost",
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_show_victory_connection_lost",
+                            "targets": ["ShowCriticalConnectionLost"],
+							"let": { "terminate_string": "Victory"}
+                        },
+                        {
+                            "event":   "evt_show_victory_connection_lost_ingame",
+                            "targets": ["ShowCriticalConnectionLostInGame"],
+							"let": { "terminate_string": "Victory"}
+                        },
+						{
+							"event":   "evt_show_victory_connection_lost_relogin",
+						    "targets": ["ExitAndRetryConnection"]			
+						},
+						{
+							"event":   "evt_show_victory_version_error",
+						    "targets": ["VictoryVersionError"],
+							"let": { "terminate_string": "Victory"}			
+						},
+						{
+                            "event":   "evt_show_victory_version_error_in_game",
+                            "targets": ["VictoryVersionErrorInGame"],
+							"let": { "terminate_string": "Victory"}
+                        },
+                        {
+                            "event":   "evt_show_victory_connection_lost_duplicate_account",
+                            "targets": ["ShowCriticalConnectionLostDuplicateAccount"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowCriticalConnectionLostInGame",
+                    "onEnter":
+                    [
+						["set", ["terminate_string", ".terminate_string"]],
+                        ["feShowing", [true, false]],                        
+                        ["invoke", ["evt_show_critical_connection_lost"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_show_critical_connection_lost",
+                            "targets": ["ShowCriticalConnectionLost"],
+							"let": { "terminate_string": ".terminate_string"}
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowCriticalConnectionLost",
+                    "onEnter":
+                    [
+						["set", ["terminate_string", ".terminate_string"]],
+                        ["hideWarning"],
+                        ["hideOverlays"],
+                        ["invoke", ["evt_hide_blocking_load"]],
+                        [
+                            "showWarning",
+                            [
+                                {
+                                    "title":      "LTXT_VICTORY_SERVER_ERROR_TITLE",
+                                    "message":    "LTXT_VICTORY_SERVER_ERROR",
+                                    "autoEscape": false,
+                                    "buttons":
+                                    [
+                                        {
+                                            "label": "LTXT_CMN_OK",
+                                            "clickEvents":
+                                            [
+                                                "array",
+                                                "evt_hide_critical_connection_lost"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    ],
+                    "onExit":
+                    [
+                        ["hideWarning"],
+                        ["terminateProgramString", [".terminate_string"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_hide_critical_connection_lost",
+                            "targets": ["HideCriticalConnectionLost"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowCriticalConnectionLostDuplicateAccount",
+                    "onEnter":
+                    [
+                        ["set", ["terminate_string", ".terminate_string"]],
+                        ["hideWarning"],
+                        ["hideOverlays"],
+                        ["invoke", ["evt_hide_blocking_load"]],
+                        [
+                            "showWarning",
+                            [
+                                {
+                                    "title":      "LTXT_MOB_MULTIPLE_LOGIN_TITLE",
+                                    "message":    "LTXT_MOB_MULTIPLE_LOGIN_TEXT",
+                                    "autoEscape": false,
+                                    "buttons":
+                                    [
+                                        {
+                                            "label": "LTXT_MOB_PU_RETRYCONNECT",
+                                            "clickEvents":
+                                            [
+                                                "array",
+                                                "evt_to_home",
+                                                "evt_exit_store",
+                                                "evt_hide_critical_connection_lost"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    ],
+                    "onExit":
+                    [
+                        ["hideWarning"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_hide_critical_connection_lost",
+                            "targets": ["RetryConnection"]
+                        }
+                    ]
+                },
+				{
+                    "name": "ExitAndRetryConnection",
+                    "onEnter":
+                    [
+                        ["hideOverlays"],
+                        ["invoke", ["evt_hide_blocking_load"]],
+                        ["showWarning",
+                            [
+                                {
+                                    "title":   "LTXT_VICTORY_SERVER_ERROR_TITLE",
+                                    "message": "LTXT_VICTORY_SERVER_ERROR",
+                                    "buttons":
+                                    [
+                                        {
+                                            "label": "LTXT_MOB_PU_RETRYCONNECT",
+                                            "clickEvents":
+                                            [
+                                                "array",
+                                                "evt_to_home",
+                                                "evt_exit_store",
+												"evt_hide_critical_connection_lost"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    ],
+                    "onExit":
+                    [
+                        ["hideWarning"]
+                    ],
+					"transitions":
+                    [
+                        {
+                            "event":   "evt_hide_critical_connection_lost",
+                            "targets": ["RetryConnection"]
+                        }
+                    ]
+                },
+				{	"name": "RetryConnection",
+                    "onEnter":
+                    [
+						["retryVictoryLogin"]
+                    ],
+                    "onExit":
+                    [
+                    ],
+					"transitions":
+                    [					
+						{
+                            "event":   "evt_victory_login_failed",
+                            "targets": ["ExitAndRetryConnection"]
+                        },
+                        {
+                            "event":   "evt_victory_login_complete",
+                            "targets": ["HideCriticalConnectionLost"]
+                        }
+                    ]
+                },
+				{
+                    "name": "VictoryVersionErrorInGame",
+                    "onEnter":
+                    [
+						["set", ["terminate_string", ".terminate_string"]],
+                        ["feShowing", [true, false]],                        
+                        ["invoke", ["evt_show_critical_connection_lost"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_show_critical_connection_lost",
+                            "targets": ["VictoryVersionError"],
+							"let": { "terminate_string": ".terminate_string"}
+                        }
+                    ]
+                },
+				{
+                    "name": "VictoryVersionError",
+                    "onEnter":
+                    [
+						["set", ["terminate_string", ".terminate_string"]],
+						["hideWarning"],
+                        ["hideOverlays"],
+                        ["invoke", ["evt_hide_blocking_load"]],
+                        [
+                            "showWarning",
+                            [
+                                {
+                                    "title":      "LTXT_VERSION_OUT_OF_DATE_TITLE",
+                                    "message":    "LTXT_VERSION_OUT_OF_DATE_DESC",
+                                    "autoEscape": false,
+                                    "buttons":
+                                    [
+                                        {
+                                            "label": "LTXT_CMN_OK",
+                                            "clickEvents":
+                                            [
+                                                "array",
+                                                "evt_hide_critical_connection_lost"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        ]
+                    ],
+                    "onExit":
+                    [
+                        ["hideWarning"],
+						["goToUpdatesPage"],
+                        ["terminateProgramString", [".terminate_string"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_hide_critical_connection_lost",
+                            "targets": ["HideCriticalConnectionLost"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

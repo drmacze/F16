@@ -1,0 +1,66 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_gamesettings",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_gamesettings"
+			}
+		},
+		{
+			"viewname": "act_editteams",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_editteams"
+			}
+		}
+	],
+	"data":
+	[
+
+		{
+			"viewname": "bnd_live_tile_settings",
+			"binding": "bnd_live_tile_settings",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_profile",
+			"binding": "bnd_live_tile_profile",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_onlinesettings",
+			"binding": "bnd_live_tile_onlinesettings",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_catalogue",
+            "binding": "bnd_live_tile_catalogue",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_editteams",
+            "binding": "bnd_live_tile_editteams",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_teamsheets",
+            "binding": "bnd_live_tile_teamsheets",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_createplayer",
+            "binding": "bnd_live_tile_createplayer",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_easportstrack",
+            "binding": "bnd_live_tile_easportstrack",
+			"type": "live_tile"
+		}
+		
+	]
+}

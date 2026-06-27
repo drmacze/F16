@@ -1,0 +1,146 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2BeaproRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "fontColor": "$COLOR_WHITE",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_CRUYFFSANSBOLD"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_CRUYFFSANSBOLD",
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_WHITE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.AwayTeamCrest": "RowPanel.RowLeftPanel.AwayTeamCrest.image",
+        "dataProviders.AwayTeamName": "RowPanel.RowLeftPanel.AwayTeamName.text",
+"dataProviders.MatchdayText": "RowPanel.RowLeftPanel.MatchdayLabel.text",
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 350,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width":350,
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "children":
+                    [
+                       {
+                            "commonName": "Image",
+                            "name": "AwayTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginBottom": 0,
+                            "marginLeft": 10,
+                            "width": 35,
+                            "height": 35
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"AwayTeamName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 60,
+                            "marginBottom": 5,
+                            "fontSize": 15,
+                            "width": 165,
+                            "autoScroll":true,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "textAlignH": "LEFT",
+                            "fontColor": "0xFFFFFF",
+                            "forceCaps": true
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 5,
+                            "marginLeft": -35,
+                            "fontSize": 22,
+                            "alpha": 0.5,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xFFFFFF",
+                            "text": ""
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "MatchdayLabel",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 60,
+                            "marginBottom": -10,
+                            "fontSize": 15,
+                            "alpha": 0.6,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "textAlignH": "LEFT",
+                            "fontColor": "0xFFFFFF"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "RowRightPanel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "marginRight": 0,
+                    "width": 170,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name":"StartGameIcon",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "marginLeft": 10,
+                            "width": 30,
+                            "height": 30
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

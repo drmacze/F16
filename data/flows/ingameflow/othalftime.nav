@@ -1,0 +1,635 @@
+{
+    "name": "OTHalftime",
+    "let":  { "gameState": "othalftime" },
+    "type": "parallel",
+    "onEnter":
+    [
+        ["showControllerCursor"],
+		["viewLayer", ["Gamemodes"]],
+        ["substateChange", ["HALFTIME"]],
+        ["feShowing", [true, false]],
+        ["activeZoneTransition", ["ZONE_NONE", "ZONE_OFFLINE"]],
+        ["zoneChange", ["ZONE_OFFLINE"]],
+        ["loadVVM", ["/flows/ingameflow/gamemenus/pausetimer/PauseTimer.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type" }]]
+    ],
+    "onExit":
+    [
+        ["hideControllerCursor"],
+        ["hideOverlays"],
+        ["substateChange", ["INGAME"]],
+        ["activeZoneTransition", ["ZONE_OFFLINE", "ZONE_NONE"]],
+        ["zoneChange", ["ZONE_NONE"]],
+        ["hideUI"],
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_toggle_pause",
+            "targets": ["out_resume_match"]
+        },
+        {
+            "event":   "evt_force_toggle_pause",
+            "targets": ["out_resume_match"]
+        },
+        {
+            "event":   "evt_quit_from_game",
+            "targets": ["out_exit_match"]
+        },
+        {
+            "event":   "evt_restart_match",
+            "targets": ["out_restart_match"]
+        },
+        {
+            "event":   "evt_automate_metrics",
+            "cond":    ["==", ".SKIP_FE", true],
+            "targets": ["out_exit_match"]
+        },
+        {
+            "event":   "evt_skip_to_postmatch",
+            "targets": ["out_skip_to_postmatch"]
+        }
+    ],
+    "states":
+    [
+        {
+            "initial":
+            {
+                "targets": ["InitOTHalftime"]
+            },
+            "states":
+            [
+                {
+                    "name": "InitOTHalftime",
+                    "states":
+                    [
+                        {
+                            "name": "AutomateMetrics",
+                            "onEnter":
+                            [
+                                ["invoke", ["evt_redirect"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_redirect",
+                                    "cond":    ["==", ".SKIP_FE", false],
+                                    "targets": ["ShowUI"]
+                                },
+                                {
+                                    "event":   "evt_redirect",
+                                    "cond":    ["==", ".SKIP_FE", true],
+                                    "targets": ["OTHalftimeMenu"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ShowUI",
+                            "onEnter":
+                            [
+                                ["showInGameUI", [".gamemode"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_on_show_in_game_ui_complete",
+                                    "targets": ["OTHalftimeMenu"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "OTHalftimeMenu",
+                    "onEnter":
+                    [
+                        ["blockingLoadVVM", ["/flows/ingameflow/gamemenus/PauseMenu.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE" }]],
+                        ["invoke", ["evt_automate_metrics"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "TabResume",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Resume.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabTeam",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Team.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabTeam2",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Team2.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabFacts",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Facts.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabReplay",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Replay.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabSettings",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Settings.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabControll",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Controll.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabRestart",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/Restart.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_end",
+                                    "targets": ["TabEnd"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TabEnd",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/flows/ingameflow/GameMenus/TabActive/End.vvm"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM"]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_tab_resume",
+                                    "targets": ["TabResume"]
+                                },
+                                {
+                                    "event":   "evt_tab_team",
+                                    "targets": ["TabTeam"]
+                                },
+                                {
+                                    "event":   "evt_tab_team2",
+                                    "targets": ["TabTeam2"]
+                                },
+                                {
+                                    "event":   "evt_tab_facts",
+                                    "targets": ["TabFacts"]
+                                },
+                                {
+                                    "event":   "evt_tab_replay",
+                                    "targets": ["TabReplay"]
+                                },
+                                {
+                                    "event":   "evt_tab_settings",
+                                    "targets": ["TabSettings"]
+                                },
+                                {
+                                    "event":   "evt_tab_controll",
+                                    "targets": ["TabControll"]
+                                },
+                                {
+                                    "event":   "evt_tab_restart",
+                                    "targets": ["TabRestart"]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_to_settings",
+                            "targets": ["SettingsCustomize"]
+                        },
+                        {
+                            "event":   "evt_to_ingame_squad",
+                            "targets": ["InGameSquad"]
+                        },
+                        {
+                            "event":   "evt_to_ingame_squadaway",
+                            "targets": ["InGameSquadAway"]
+                        },
+                        {
+                            "event":	 "evt_to_match_facts",
+                            "targets": ["MatchFacts"],
+                            "let": 		 { "redirect": "menu" }
+                        },
+                        {
+                            "event":   "evt_to_instant_replay",
+                            "targets": ["InstantReplay"]
+                        },
+                        {
+                            "event": 	 "evt_to_ingame_side",
+                            "targets": ["InGameSide"]
+                        }
+                    ]
+                },
+                {
+                    "name": "SettingsCustomize",
+                    "type": "external",
+                    "file": "/flows/mainflow/settingscustomize/settingscustomize.nav",
+                    "outputs":
+                    {
+                        "out_back":    "OTHalftimeMenu",
+                        "out_advance": "OTHalftimeMenu"
+                    }
+                },
+                {
+                    "name": "InGameSquad",
+                    "type": "external",
+                    "file": "/flows/ingameflow/gamemenus/InGameSquad/InGameSquad.nav",
+                    "outputs":
+                    {
+                        "out_back":    "TabTeam",
+                        "out_advance": "TabTeam"
+                    }
+                },
+                {
+                    "name": "InGameSquadAway",
+                    "type": "external",
+                    "file": "/flows/ingameflow/gamemenus/InGameSquad/InGameSquadAway.nav",
+                    "outputs":
+                    {
+                        "out_back":    "TabTeam2",
+                        "out_advance": "TabTeam2"
+                    }
+                },
+                {
+                    "name": "MatchFacts",
+                    "type": "external",
+                    "file": "/flows/ingameflow/postmatch/matchfacts/matchfacts.nav",
+                    "outputs":
+                    {
+                        "out_menu": "TabFacts"
+                    }
+                },
+                {
+                    "name": "InstantReplay",
+                    "type": "external",
+                    "file": "/flows/ingameflow/gamemenus/instantreplay/instantreplay.nav",
+                    "outputs":
+                    {
+                        "out_back": "TabReplay"
+                    }
+                },
+                {
+                    "name": "InGameSide",
+                    "type": "external",
+                    "file": "/flows/ingameflow/gamemenus/InGameSide/Sideselect.nav",
+                    "outputs":
+                    {
+                        "out_back": 	 "TabControll",
+                        "out_advance": "TabControll"
+                    }
+                }
+            ]
+        },
+        {
+            "states":
+            [
+                {
+                    "name": "Notifications",
+                    "type": "external",
+                    "file": "/flows/ingameflow/notifications/notifications.nav",
+                    "outputs":
+                    {
+                        "out_exit_match":        "out_exit_match",
+                        "out_skip_to_postmatch": "out_skip_to_postmatch"
+                    }
+                }
+            ]
+        }
+    ]
+}

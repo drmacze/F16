@@ -1,0 +1,228 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 345,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Squad",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 362,
+                    "height": 10,
+                    "width": 75,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 80,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillColor": "0x1B1B2A",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0x00D9D1",
+                            "outlineAlpha": 0,
+                            "cornerRaduis": 9
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Team Management"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 70,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xCCCCCC",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_active_home_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -30,
+                            "width": 150,
+                            "height": 100,
+                            "type": "$_IconSquad",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 250,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xFFFFFF",
+                            "textAlignH": "CENTER",
+                            "width": 230,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Lineup, saved formations and tactics."
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab2sub1"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Tab",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 430,
+                    "marginTop": 5,
+                    "width": 335,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillColor": "0x1B1B2A",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0x00D9D1",
+                            "outlineAlpha": 0,
+                            "cornerRaduis": 9
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "TOP",
+                            "marginTop": 30,
+                            "marginLeft": 0,
+                            "fontSize": 23,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor":"0xFFFFFF",
+                            "text": "Personality"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 270,
+                            "marginLeft": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xFFFFFF",
+                            "textAlignH": "CENTER",
+                            "width": 230,
+                            "multiline": true,
+                            "leading": 3,
+                            "alpha": 1,
+                            "text": "Players to play in"
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "teamlist",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": -5,
+                            "marginLeft": 10,
+                            "scaleX": 0.80,
+                            "scaleY": 0.80,
+                            "displayRange": 1.0,
+                            "highlightable": true,
+                            "rowChangeAction": "act_player_select",
+                            "row": "PlayersCareerRow",
+                            "rowHeight": 350,
+                            "rowWidth": 410,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_player_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "clickAction": "act_tab2sub2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

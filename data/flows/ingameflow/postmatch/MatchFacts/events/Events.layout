@@ -1,0 +1,140 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "marginTop": -90,
+            "width": 400,
+            "height": 60,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "marginLeft": 100,
+                    "width": 90,
+                    "height": 40,
+                    "scaleY": 1,
+                    "multiline": true,
+                    "bold": true,
+                    "label": "Events",
+                    "icon": "",
+                    "backgroundImage": "",
+                    "backgroundHighlightImage": "",
+                    "clickAction": "act_to",
+                    "textStyles":
+                    [
+                        "TF_BUTTON_TABON"
+                    ]
+                 },
+                 {
+                    "commonName": "Rectangle",
+                    "alignV": "BOTTOM",
+                    "alignH": "CENTER",
+                    "marginBottom": 10,
+                    "marginLeft": 100,
+                    "width": 90,
+                    "height": 5,
+                    "color": "0xFFAF3D"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 90,
+            "width": 590,
+            "height": 300,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "verticalSeparator",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 260.0,
+                    "type": "$UserPlateDividerLine"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "verticalSeparator",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 260.0,
+                    "type": "$UserPlateDividerLine"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "verticalSeparator",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "height": 260.0,
+                    "type": "$UserPlateDividerLine"
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchEventsHome",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -140,
+                    "marginLeft": -450,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "displayRange": 6,
+                    "row": "MatchEventsRowHome",
+                    "rowHeight": 70.0,
+                    "rowWidth": 422.0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_home_events_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchEventsAway",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -140,
+                    "marginLeft": -10,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "displayRange": 6,
+                    "row": "MatchEventsRowAway",
+                    "rowHeight": 70.0,
+                    "rowWidth": 422.0,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_away_events_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

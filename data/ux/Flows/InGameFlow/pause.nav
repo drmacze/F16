@@ -1,0 +1,208 @@
+{
+    "name": "Pause",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["showControllerCursor"],
+		["viewLayer", ["Gamemodes"]],
+        ["set", ["initial", ".initial"]],
+        ["substateChange", ["INGAME"]],
+        ["feShowing", [true, true]],
+        ["activeZoneTransition", ["ZONE_NONE", "ZONE_OFFLINE"]],
+        ["zoneChange", ["ZONE_OFFLINE"]],
+		["viewLayer", ["Widgets"]],
+        ["loadVVM", ["/flows/ingameflow/gamemenus/pausetimer/PauseTimer.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type" }]],
+		["viewLayer", ["Gamemodes"]]
+    ],
+    "onExit":
+    [
+        ["hideControllerCursor"],
+        ["hideOverlays"],
+        ["substateChange", ["INGAME"]],
+        ["activeZoneTransition", ["ZONE_OFFLINE", "ZONE_NONE"]],
+        ["zoneChange", ["ZONE_NONE"]],
+        ["hideUI"],
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_toggle_pause",
+            "targets": ["out_resume_match"]
+        },
+        {
+            "event":   "evt_force_toggle_pause",
+            "targets": ["out_resume_match"]
+        },
+        {
+            "event":   "evt_quit_from_game",
+            "targets": ["out_exit_match"]
+        },
+        {
+            "event":   "evt_restart_match",
+            "targets": ["out_restart_match"]
+        },
+        {
+            "event":   "evt_skip_to_postmatch",
+            "targets": ["out_skip_to_postmatch"]
+        }
+    ],
+    "states":
+    [
+        {
+            "initial":
+            {
+                "targets": ["InitPause"]
+            },
+            "states":
+            [
+                {
+                    "name": "InitPause",
+                    "states":
+                    [
+						{
+							"name": "Initial",
+							"onEnter":
+							[
+								["invoke", ["evt_redirect"]]
+							],
+							"transitions":
+							[
+								{
+                                    "event":   "evt_redirect",
+									"cond":    ["==", ".SKIP_FE", false],
+                                    "targets": ["ShowUI"]
+                                },
+								{
+                                    "event":   "evt_redirect",
+									"cond":    ["==", ".SKIP_FE", true],
+                                    "targets": ["ShowUIComplete"]
+                                }
+							]
+						},
+                        {
+                            "name": "ShowUI",
+                            "onEnter":
+                            [
+                                ["showInGameUI", [".gamemode"]]
+                            ],
+                            "transitions":
+                            [
+								{
+                                    "event":   "evt_on_show_in_game_ui_complete",
+                                    "targets": ["ShowUIComplete"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ShowUIComplete",
+                            "onEnter":
+                            [
+                                ["invoke", [".initial"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "menu",
+                                    "targets": ["PauseMenu"]
+                                },
+                                {
+                                    "event": "squad",
+                                    "targets": ["PauseMenu"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PauseMenu",
+                    "onEnter":
+                    [
+                        ["loadVVM", ["/flows/ingameflow/gamemenus/PauseMenu.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type", "gameState": ".gameState", "skipFE": ".SKIP_FE" }]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_gamesettings",
+                            "targets": ["GameSettings"]
+                        },
+                        {
+                            "event": "evt_ingamesquad_home",
+                            "targets": ["InGameSquad_Home"]
+                        },
+                        {
+                            "event": "evt_ingamesquad_away",
+                            "targets": ["InGameSquad_Away"]
+                        },
+                        {
+                            "event": "evt_selectside",
+                            "targets": ["SelectSide"]
+                        },
+                        {
+                            "event":   "evt_to_instant_replay",
+                            "targets": ["out_instant_replay"]
+                        }
+                    ]
+                },
+                {
+                    "name": "GameSettings",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameSettings/GameSettings.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "PauseMenu"
+                    }
+                },
+                {
+                    "name": "InGameSquad_Home",
+                    "type": "external",
+                    "file": "/Flows/InGameFlow/GameMenus/InGameSquad/InGameSquad_Home.nav",
+                    "outputs":
+                    {
+                        "out_back": "PauseMenu",
+                        "out_advance": "PauseMenu"
+                    }
+                },
+                {
+                    "name": "InGameSquad_Away",
+                    "type": "external",
+                    "file": "/Flows/InGameFlow/GameMenus/InGameSquad/InGameSquad_Away.nav",
+                    "outputs":
+                    {
+                        "out_back": "PauseMenu",
+                        "out_advance": "PauseMenu"
+                    }
+                },
+                {
+            "name": "SelectSide",
+            "type": "external",
+            "file": "/flows/ingameflow/gamemenus/sideselect/sideselect.nav",
+            "outputs":
+            {
+               "out_back": "PauseMenu",
+               "out_advance": "PauseMenu"
+            }
+                }
+            ]
+        },
+        {
+            "states":
+            [
+                {
+                    "name": "Notifications",
+                    "type": "external",
+                    "file": "/flows/ingameflow/notifications/notifications.nav",
+                    "outputs":
+                    {
+                        "out_exit_match":        "out_exit_match",
+                        "out_skip_to_postmatch": "out_skip_to_postmatch"
+                    }
+                }
+            ]
+        }
+    ]
+}

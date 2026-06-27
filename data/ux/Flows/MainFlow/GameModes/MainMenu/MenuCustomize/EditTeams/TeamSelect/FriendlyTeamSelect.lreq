@@ -1,0 +1,7 @@
+[
+	"/lua/enums/eventmanager.lua",
+    "/lua/enums/pregamemanager.lua",
+	"/lua/common/CommonNavVars.lua",
+	"/flows/mainflow/gamemodes/mainmenu/menucustomize/editteams/teamselect/AwayTeamSelectModel.lua",
+	"/lua/packages/tableutil.lua"
+]

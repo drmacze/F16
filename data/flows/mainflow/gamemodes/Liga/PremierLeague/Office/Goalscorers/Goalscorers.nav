@@ -1,0 +1,24 @@
+{
+    "name": "Goalscorers",
+    "states":
+    [
+        {
+            "name": "RedirectGoalscorers",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Goalscorers.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        }
+    ]
+}

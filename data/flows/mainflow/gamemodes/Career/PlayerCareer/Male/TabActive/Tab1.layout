@@ -1,0 +1,29 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],    
+    "children":
+    [
+       {           
+            "commonName": "GenericButton",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 575,
+            "marginLeft": 30,
+            "height": 60,
+            "width": 60,            
+            "clickAction": "act_back"            
+        }
+    ]
+}

@@ -1,0 +1,463 @@
+{
+    "name": "InGameFlow",
+    "onEnter":
+    [
+        ["set", ["flow", ".flow"]],
+        ["blockingLoadVVM", ["/flows/ingameflow/InGameFlow.vvm", { "skipFE": ".SKIP_FE" }]],
+		["if",
+            [
+                ["==", ".type", "ftf"],
+                [
+                    ["beginFTFInteractiveTutorials"]
+                ],
+				[
+				]
+            ]
+        ],
+		["setInGame"]
+    ],
+    "onExit":
+    [
+		["showStageBackground", ["fut"]],
+        ["unloadVVM"],
+		["if",
+            [
+                ["==", ".type", "ftf"],
+                [
+                   ["endFTFInteractiveTutorials"]
+                ],
+				[
+				]
+            ]
+        ],
+		["setOutOfGame"]
+    ],
+    "initial":
+    {
+        "targets": ["InitInGameFlow"]
+    },
+    "states":
+    [
+        {
+            "name": "InitInGameFlow",
+            "onEnter":
+            [
+                ["invoke", ["evt_redirect"]],
+				["initializeDebugInteractiveTutorial"]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_redirect",
+                    "cond":    ["==", ".SKIP_FE", true],
+                    "targets": ["MatchReveal"]
+                },
+                {
+                    "event":   "evt_redirect",
+                    "cond":    ["==", ".SKIP_FE", false],
+                    "targets": ["HideUI"]
+                }
+            ]
+        },
+        {
+            "name": "HideUI",
+            "onEnter":
+            [
+                ["hideUI"]
+            ],
+			"onExit":
+			[
+				["hideOverlays"]
+			],
+            "transitions":
+            [
+                {
+                    "event":   "evt_on_hide_ui_complete",
+                    "targets": ["MatchReveal"]
+                }
+            ]
+        },
+        {
+            "name": "MatchReveal",
+            "type": "external",
+            "file": "/flows/ingameflow/matchreveal/matchreveal.nav",
+            "outputs":
+            {
+                "out_next_flow": "RedirectAfterReveal"
+            }
+        },
+		{
+            "name": "RedirectAfterReveal",
+            "onEnter":
+            [
+                ["invoke", ["evt_redirect"]]
+            ],
+            "transitions":
+            [
+				{
+                    "event":   "evt_redirect",
+                    "cond":    ["==", ".flowState", "SKILL_GAME"],
+                    "targets": ["GamePlay"]
+                },
+                {
+                    "event":   "evt_redirect",
+                    "cond":    ["==", ".FORCE_PRACTICE_MODE", true],
+                    "targets": ["GamePlay"]
+                },
+                {
+                    "event":   "evt_redirect",
+                    "cond":    ["==", ".FORCE_PRACTICE_MODE", false],
+                    "targets": ["NIS"]
+                }
+            ]
+        },
+        {
+            "name": "NIS",
+            "type": "external",
+            "file": "/flows/ingameflow/nis_tournament.nav",
+            "outputs":
+            {
+                "out_exit_flow":					"GamePlay",
+                "out_p2p_disconnect":				"in_p2p_disconnect_in_gameplay",
+                "out_fos_error":					"in_fos_error_in_gameplay",
+				"out_victory_error_relogin":		"in_victory_error_relogin",
+                "out_victory_error_relogin_duplicate":        "in_victory_error_relogin_duplicate",
+                "out_exit_pause":					"Pause"
+            }
+        },
+				
+        {
+            "name": "GamePlay",
+            "type": "parallel",
+            "states":
+            [
+            {
+                    "initial":
+                    {
+                        "targets":
+                        [
+                            "InGameResume"
+                        ]
+                    },
+                    "states":
+                    [	
+                        {
+                            "name": "InGameResume",
+							"onEnter":
+							[
+								["showGamePlayHUDs", [true]]
+							],
+							"onExit":
+							[
+								["showGamePlayHUDs", [false]]
+							],
+							"transitions":
+							[
+								{
+									"event":   "evt_toggle_pause",
+									"targets": ["Pause"],
+									"let":     { "initial": "menu" }
+								},
+								{
+									"event": "evt_toggle_pause_squad",
+									"targets": ["Pause"],
+									"let": { "initial": "squad" }
+								},
+								{
+									"event":   "evt_halftime_started",
+									"targets": ["Halftime"]
+								},
+								{
+									"event":   "evt_to_fulltime",
+									"targets": ["Fulltime"]
+								},
+								{
+									"event":   "evt_to_ot_halftime",
+									"targets": ["OTHalftime"]
+								},
+								{
+									"event":   "evt_to_ot_fulltime",
+									"targets": ["OTFulltime"]
+								},
+								{
+									"event":   "evt_regulation_time_over",
+									"targets": ["Postmatch"]
+								},
+								{
+									"event":   "evt_p2p_disconnect",
+									"targets": ["in_p2p_disconnect_in_gameplay"]
+								},
+								{
+									"event":   "evt_fos_error_ingame",
+									"targets": ["in_fos_error_in_gameplay"]
+								},
+								{
+									"event": "evt_create_match_failed",
+									"targets": ["in_fos_error_in_gameplay"]        
+								},
+								{
+									"event":   "evt_show_victory_connection_lost_ingame_relogin",
+									"targets": ["in_victory_error_relogin"]
+								},
+                                {
+                                    "event":   "evt_show_victory_connection_lost_duplicate_account_ingame",
+                                    "targets": ["in_victory_error_relogin_duplicate"]
+								}
+							]
+                        },
+						{
+							"name": "PauseMenuShow",
+							"let":
+							{
+								"gameState": "pause"
+							},
+							"states":	
+							[
+								{
+									"name": "Pause",
+									"type": "external",
+									"file": "/flows/ingameflow/pause.nav",									
+									"outputs":
+									{
+										"out_resume_match": "in_resume_match_gameplay",
+										"out_restart_match": "in_restart_match",
+										"out_exit_match": "in_forfeit_match",
+										"out_skip_to_postmatch": "in_skip_to_postmatch",
+										"out_instant_replay": "InstantReplay"
+									}
+								}
+							]
+						},
+						{
+							"name": "InstantReplay",
+							"type": "external",
+							"file": "/flows/ingameflow/gamemenus/instantreplay/instantreplay.nav",
+							"outputs":
+							{
+								"out_back": "Pause"
+							}
+						},
+						{
+							"name": "Halftime",
+							"type": "external",
+							"file": "/flows/ingameflow/halftime.nav",
+							"outputs":
+							{
+								"out_resume_match": "in_resume_match_gameplay",
+								"out_restart_match": "in_restart_match",
+								"out_exit_match": "in_forfeit_match",
+								"out_skip_to_postmatch": "in_skip_to_postmatch",
+								"out_instant_replay": "InstantReplay"
+							}
+						},
+						{
+							"name": "OTHalftime",
+							"type": "external",
+							"file": "/flows/ingameflow/othalftime.nav",
+							"outputs":
+							{
+								"out_resume_match": "in_resume_match_gameplay",
+								"out_restart_match": "in_restart_match",
+								"out_exit_match": "in_forfeit_match",
+								"out_skip_to_postmatch": "in_skip_to_postmatch"
+							}
+						},
+						{
+							"name": "GameplayGameFlow",
+            "type": "external",
+							"file": "/flows/ingameflow/gameflow/gameflow.nav",
+							"inputs":
+							{
+								"in_resume_match_gameplay":      "ResumeMatch"
+							},
+							"outputs":
+							{
+								"out_resume_match_complete":      "InGameResume",
+								"out_resume_shootout_complete":   "Shootout",
+								"out_restart_match_complete":     "NIS",
+								"out_exit_match_complete":        "Quit",
+								"out_retry_match_complete":       "Retry",
+								"out_skip_to_postmatch_complete": "Postmatch"
+							}
+						}
+					]
+                },	
+				{
+                    "name": "GamePlayHud",
+                    "type": "external",
+                    "file": "/flows/ingameflow/gameplay_tournament.nav",
+					"inputs":
+					{
+						"in_game_pause": "InGamePause",
+						"in_game_resume": "InGameResume"
+					}
+                }
+            ]
+        },        
+        {
+            "name": "Fulltime",
+            "type": "external",
+            "file": "/flows/ingameflow/fulltime.nav",
+            "outputs":
+            {
+                "out_resume_match": "in_resume_match",
+                "out_restart_match": "in_restart_match",
+                "out_exit_match": "in_exit_match",
+                "out_skip_to_postmatch": "in_skip_to_postmatch"
+            }
+        },
+        {
+            "name": "OTFulltime",
+            "type": "external",
+            "file": "/flows/ingameflow/otfulltime.nav",
+            "outputs":
+            {
+                "out_resume_match":      "in_resume_shootout",
+                "out_restart_match":     "in_restart_match",
+                "out_exit_match":        "in_forfeit_match",
+                "out_skip_to_postmatch": "in_skip_to_postmatch"
+            }
+        },
+        {
+            "name": "Shootout",
+            "type": "external",
+            "file": "/flows/ingameflow/shootout.nav",
+            "outputs":
+            {
+                "out_pause":						"ShootoutPause",
+                "out_match_over":					"Postmatch",
+                "out_p2p_disconnect":				"in_p2p_disconnect_in_gameplay",
+                "out_fos_error":					"in_fos_error_in_gameplay",
+				"out_victory_error_relogin":		"in_victory_error_relogin",
+                "out_victory_error_relogin_duplicate":        "in_victory_error_relogin_duplicate"
+            }
+        },
+        {
+            "let":  { "gameState": "shootoutpause" },
+            "states":
+            [
+                {
+                    "name": "ShootoutPause",
+                    "type": "external",
+                    "file": "/flows/ingameflow/pause.nav",
+                    "outputs":
+                    {
+                        "out_resume_match":      "in_resume_shootout",
+                        "out_restart_match":     "in_restart_match",
+                        "out_exit_match":        "in_forfeit_match",
+                        "out_skip_to_postmatch": "in_skip_to_postmatch",
+                        "out_instant_replay":	 "InstantReplay"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Postmatch",
+            "type": "external",
+            "file": "/flows/ingameflow/postmatch/postmatch_tournament.nav",
+            "outputs":
+            {
+                "out_restart_match": "in_restart_match",
+                "out_exit_match":    "in_exit_match",
+                "out_retry_match":   "in_retry_match"
+            }
+        },
+        {
+            "name": "Quit",
+            "states":
+            [
+                {
+                    "name": "AutomateMetrics",
+                    "onEnter":
+                    [
+                        ["invoke", ["evt_redirect"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_redirect",
+                            "cond":    ["==", ".SKIP_FE", false],
+                            "targets": ["ShowUI"]
+                        },
+                        {
+                            "event":   "evt_redirect",
+                            "cond":    ["==", ".SKIP_FE", true],
+                            "targets": ["out_exit"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ShowUI",
+                    "onEnter":
+                    [
+                        ["showFEUI", [".gamemode"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_on_show_fe_ui_complete",
+                            "let":     { "redirect": "hub" },
+                            "targets": ["out_exit"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Retry",
+            "onEnter":
+            [
+                ["showFEUI", [".gamemode"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event":   "evt_on_show_fe_ui_complete",
+                    "let":     { "redirect": "pregame" },
+                    "targets": ["out_exit"]
+                }
+            ]
+        },
+        {
+            "name": "Notifications",
+            "type": "external",
+            "file": "/flows/ingameflow/notifications/notifications.nav",
+            "inputs":
+            {
+                "in_p2p_disconnect_in_gameplay": "P2PDisconnectInGameplay",
+                "in_fos_error_in_gameplay":      "FOSErrorInGameplay",
+				"in_victory_error_relogin":		 "VictoryErrorReloginGameplay",
+                "in_victory_error_relogin_duplicate":      "VictoryErrorDuplicateAccountReloginGameplay"
+            },
+            "outputs":
+            {
+                "out_exit_match":        "in_exit_match",
+                "out_skip_to_postmatch": "in_skip_to_postmatch"
+            }
+        },
+        {
+            "name": "GameFlow",
+            "type": "external",
+            "file": "/flows/ingameflow/gameflow/gameflow.nav",
+            "inputs":
+            {
+                "in_resume_match":      "ResumeMatch",
+                "in_resume_shootout":   "ResumeShootout",
+                "in_restart_match":     "RestartMatch",
+                "in_exit_match":        "ExitMatch",
+                "in_forfeit_match":     "SkipToPostmatch",
+                "in_retry_match":       "RetryMatch",
+                "in_skip_to_postmatch": "SkipToPostmatch"
+            },
+            "outputs":
+            {
+                "out_resume_match_complete":      "GamePlay",
+                "out_resume_shootout_complete":   "Shootout",
+                "out_restart_match_complete":     "NIS",
+                "out_exit_match_complete":        "Quit",
+                "out_retry_match_complete":       "Retry",
+                "out_skip_to_postmatch_complete": "Postmatch"
+            }
+        }
+    ]
+}

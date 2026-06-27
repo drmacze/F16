@@ -1,0 +1,80 @@
+{
+    "name": "ProfileHub",
+    "initial":
+    {
+        "targets": ["RedirectProfileHub"]
+    },
+    "states":
+    [
+        {
+            "name": "RedirectProfileHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["ProfileHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_to_youtube",
+                    "targets": ["Youtube"]
+                },
+                {
+                    "event": "evt_to_instagram",
+                    "targets": ["Instagram"]
+                },
+                {
+                    "event": "evt_to_facebook",
+                    "targets": ["Facebook"]
+                },
+                {
+                    "event": "evt_to_tiktok",
+                    "targets": ["Tiktok"]
+                }
+            ]
+        },
+        {
+            "name": "Youtube",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/More/Menu/Profile/YouTube_MVNPROD/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ProfileHub"
+            }
+        },
+        {
+            "name": "Instagram",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/More/Menu/Profile/Instagram_MVNPROD/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ProfileHub"
+            }
+        },
+        {
+            "name": "Facebook",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/More/Menu/Profile/Facebook_MVNPROD/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ProfileHub"
+            }
+        },
+        {
+            "name": "Tiktok",
+            "type": "external",
+            "file": "/Flows/mainflow/gamemodes/MainMenu/More/Menu/Profile/Tiktok_MVNPROD/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "ProfileHub"
+            }
+        }
+    ]
+}

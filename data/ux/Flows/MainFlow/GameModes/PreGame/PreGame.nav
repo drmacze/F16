@@ -1,0 +1,201 @@
+{
+    "name": "Pregame",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["substateChange", ["PREGAME"]],
+        ["stateChange", [".flowState"]],
+        ["set", ["flow", ".flow"]]
+    ],
+    "states":
+    [
+        {
+            "name": "FlowBranch",
+            "states":
+            [
+                {
+                    "name": "InitPregame",
+                    "onEnter":
+                    [
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "offline",
+                            "let": { "fromScreen": "PrematchFlow" },
+                            "targets": ["TeamSelect"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "TeamSelect",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/pregame/teamselect/teamselect.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectTeamSelectExit",
+                                "out_advance": "RedirectTeamSelectAdvance"
+                            }
+                        },
+                        {
+                            "name": "RedirectTeamSelectExit",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "offline",
+                                    "targets": ["ExitPreGame"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RedirectTeamSelectAdvance",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "offline",
+                                    "targets": ["KitSelect"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "KitSelect",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/pregame/kitselect/kitselect.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectKitSelectExit",
+                                "out_advance": "RedirectKitSelectAdvance"
+                            }
+                        },
+                        {
+                            "name": "RedirectKitSelectExit",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "offline",
+                                    "targets": ["TeamSelect"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RedirectKitSelectAdvance",
+                            "onEnter":
+                            [
+                                ["commitKitSelect"],
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "offline",
+                                    "targets": ["MatchSelect"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "MatchSelect",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/Flows/MainFlow/GameModes/pregame/matchselect/matchselect.nav",
+                            "outputs":
+                            {
+                                "out_back": "RedirectMatchSelectExit",
+                                "out_advance": "RedirectMatchSelectAdvance"
+                            }
+                        },
+                        {
+                            "name": "RedirectMatchSelectExit",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "offline",
+                                    "targets": ["KitSelect"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RedirectMatchSelectAdvance",
+                            "onEnter":
+                            [
+                                ["commitKitSelect"],
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "offline",
+                                    "targets": ["StartMatch"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "StartMatch",
+                    "onEnter":
+                    [
+						["invoke", ["evt_start_match"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_start_match",
+                            "targets": ["out_ingame_flow"]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "ExitPreGame",
+                    "onEnter":
+                    [
+						["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["invoke", ["evt_exit_pregame"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_exit_pregame",
+                            "targets": ["out_exit_gamemode"]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

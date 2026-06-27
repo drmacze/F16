@@ -1,0 +1,211 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_next",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_next"
+            }
+        },
+        {
+            "viewname": "act_nextteam",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_nextteam"
+            }
+        },
+        {
+            "viewname": "act_previousteam",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_previousteam"
+            }
+        },
+        {
+            "viewname": "act_decrease",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_decrease"
+            }
+        },
+        {
+            "viewname": "act_table",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_table"
+            }
+        },
+        {
+            "viewname": "act_teamselect",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_teamselect"
+            }
+        },
+        {
+            "viewname": "act_restart",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_restart"
+            }
+        },
+        {
+            "viewname": "act_manager",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_manager"
+            }
+        },
+        {
+            "viewname": "act_transfers",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_transfers"
+            }
+        },
+        {
+            "viewname": "act_season",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_season"
+            }
+        },
+         {
+            "viewname": "act_office",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_office"
+            }
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+            "viewname": "act_sim",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_sim"
+            }
+        },
+        {
+            "viewname": "act_end",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_end"
+            }
+        },
+        {
+            "viewname": "act_hub",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_hub"
+            }
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_to_settings_customize",
+            "impl":
+            {
+                "type":  "nav",
+                "event": "evt_to_settings_customize"
+            }
+        }
+        
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_match_list",
+            "binding":  "bnd_match_list",
+            "type":     "array"
+        },
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_match_label",
+            "binding":  "bnd_match_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_date_label",
+            "binding":  "bnd_date_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_month_label",
+            "binding":  "bnd_month_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_matchday_label",
+            "binding":  "bnd_matchday_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_point_label",
+            "binding":  "bnd_point_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_mp_label",
+            "binding":  "bnd_mp_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_matchdate_label",
+            "binding":  "bnd_matchdate_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_league_label",
+            "binding":  "bnd_league_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_advance_label",
+            "binding":  "bnd_advance_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_label",
+            "binding":  "bnd_team_label",
+            "type":     "string"
+        }
+        
+    ]
+}

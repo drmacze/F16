@@ -1,0 +1,447 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": ""
+                }
+            ]
+        }
+    ],
+    "children":
+    [   
+        {
+            "commonName": "SimpleButton",
+            "alignH": "CENTER",
+            "alignV": "TOP",
+            "marginTop": 90,
+            "marginLeft": -210,
+            "height": 28,
+            "width": 110,
+            "scaleY": 1,
+            "multiline": true,
+            "bold": true,
+            "label": "Audio",
+            "icon": "",
+            "backgroundImage": "",
+            "backgroundHighlightImage": "",
+            "clickAction": "act_to",
+             "textStyles":
+            [
+               "TF_BUTTON_PLAYMODEON"
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": 230,
+                    "fontSize": 23,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "text": "Audio Settings"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 160,
+                    "marginLeft": 290,
+                    "width": 300,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "text": "Here you can make changes to the game's sound effects, narration, music, crowd..."
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 280,
+                    "marginLeft": 315,
+                    "width": 320,
+                    "height": 190,
+                    "type": "$_Audio_Settings"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "name": "speechDownloadButton",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 148,
+                    "marginLeft": -350,
+                    "width": 480,
+                    "height": 40,
+                    "icon": "$SheechDlIcon",
+                    "clickAction": "act_show_speech_download_popup",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "Download Comentary",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_download_speech_disable",
+                            "property": "enabled"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 3400000,
+                    "marginLeft": 150,
+                    "height": 110,
+                    "width": 115,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x3E3E3E",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "height": 70,
+                            "width": 75,
+                            "type": "$DefaultAvatar"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 120,
+                            "marginBottom": 20,
+                            "height": 70,
+                            "width": 75,
+                            "type": "$_IconResume"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "marginTop": -30,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_BOLD",
+                            "text":"John Newman - Love me again."
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 200,
+                            "marginTop": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_BOLD",
+                            "text": "Alive - Empire of the sun."
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 125,
+                            "width": 330,
+                            "height": 5,
+                            "color": "0x555555",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 125,
+                            "marginBottom": 4,
+                            "width": 330,
+                            "fontSize": 8,
+                            "fontColor": "$COLOR_WHITE",
+                            "autoScroll":true,
+                            "alpha": 0.8,
+                            "text":"•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 125,
+                            "marginBottom": 10,
+                            "width": 330,
+                            "fontSize": 15,
+                            "fontColor": "$COLOR_WHITE",
+                            "autoScroll":true,
+                            "alpha": 0.8,
+                            "text":"IIIIIIIIII|||ll|||||||||||IIII|||||||||||IIIIIIIIIIIIl|||||||||||IIIl||||IIIIl|||||||||||IIIIIIIIl||||II|||||IIIIIIIl|||||||||||IIIIIIIIIIIIIIIIIIIIII"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginBottom": 40,
+            "marginLeft": -660,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "name": "ResetAll",
+                    "marginTop": 520,
+                    "marginLeft": 0,
+                    "width": 470,
+                    "height": 40,
+                    "icon": "$FooterIconRetry",
+                    "clickAction": "act_reset_all",
+                    "textStyles": ["TF_AWARDS_TITLE"],
+                    "label": "Reset"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "insToggleUserMusicMessage",
+                    "alignH": "CENTER",
+                    "marginTop": 405.0,
+                    "marginLeft": 245,
+                    "width": 270.0,
+                    "x": 600,
+                    "y": 136,
+                    "multiline": true,
+                    "textAlignH":"CENTER",
+                    "text":"Lock Sound",
+                    "styles":
+                    [
+                        "TF_SETTINGS_ROW_LABEL"
+                    ]
+                },
+                {
+                    "commonName": "DragToggle",
+                    "name": "insToggleUserMusic",
+                    "alignH": "CENTER",
+                    "marginTop": 405.0,
+                    "marginLeft": 637,
+                    "height": 40,
+                    "width": 250,
+                    "x": 600,
+                    "y": 170,
+                    "arrowType": "blue_small",
+                    "hasArrows": true,
+                    "itemStyleName": "TF_SETTINGS_ROW_TOGGLE",
+                    "itemType": "Label",
+                    "toggleAction":
+                    {
+                        "action": "act_usermusic_toggle",
+                        "binding": "bnd_userMusic_toggle_index"
+                    },
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_usermusic_yesno",
+                            "property": "dataProviders"
+                        },
+                        {
+                            "binding": "bnd_usermusic_toggle_iscircular",
+                            "property": "isCircular"
+
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Group",
+                    "name": "insAudio",
+                    "x": 0.0,
+                    "y": -260,
+                    "children":
+                    [
+                        {
+                            "commonName": "",
+                            "name": "insRowSeparator1",
+                            "alpha": 0.5,
+                            "height": 90.0,
+                            "width": 600.0,
+                            "x": 0.0,
+                            "y": 346.0,
+                            "image": "$CustRowSeparator"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insMusicLabel",
+                            "x": 190.0,
+                            "y": 170.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Music",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 410.0,
+                            "y": 175.0,
+                            "changeAction": "act_music_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_music_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                    "property": "enabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insFxLabel",
+                            "x": 190.0,
+                            "y": 230.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Sound FX",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 410.0,
+                            "y": 235,
+                            "changeAction": "act_fx_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_fx_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                    "property": "enabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "",
+                            "name": "insRowSeparator2",
+                            "alpha": 0.5,
+                            "height": 90.0,
+                            "width": 600.0,
+                            "x": 0.0,
+                            "y": 520.0,
+                            "image": "$CustRowSeparator"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insCommentaryLabel",
+                            "x": 190.0,
+                            "y": 288.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Commentary",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 410.0,
+                            "y": 292,
+                            "changeAction": "act_commentary_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_commentary_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                      "property": "enabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "insCrowdLabel",
+                            "x": 190.0,
+                            "y": 348.0,
+                            "autoScroll": true,
+                            "width": 275.0,
+                            "resizeType": "NONE",
+                            "text":"Crowd",
+                            "styles":
+                            [
+                                "TF_SETTINGS_ROW_LABEL"
+                            ]
+                        },
+                        {
+                            "commonName": "HSlider",
+                            "x": 410.0,
+                            "y": 352,
+                            "changeAction": "act_crowd_change",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_crowd_value",
+                                    "property": "value"
+                                },
+                                {
+                                    "binding": "bnd_user_music_enabled",
+                                    "property": "enabled"
+                                }
+                            ]
+                        }
+                    ]
+                 }
+              ]
+           }
+       ]
+     }
+  ]
+}

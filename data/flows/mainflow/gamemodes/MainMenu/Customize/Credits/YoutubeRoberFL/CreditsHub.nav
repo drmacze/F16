@@ -1,0 +1,67 @@
+{
+    "name": "CreditsHub",
+    "onEnter":
+    [
+        ["setTabContext", [0]],
+        ["stateChange", ["ARENA"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["CreditsHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_back",
+            "targets": ["out_exit_gamemode"]
+        }
+    ],
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "name": "BrowserClosed",
+                    "onEnter":
+                    [
+                        ["showBackButton"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_open_browser",
+                            "targets": ["BrowserOpened"]
+                        }
+                    ]
+                },
+                {
+                    "name": "BrowserOpened",
+                    "onEnter":
+                    [
+                        ["loadVVM", ["/Flows/MainFlow/GameModes/MainMenu/Customize/Browser/BrowserScreen.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_close_browser",
+                            "targets": ["BrowserClosed"]
+                        },
+                        {
+                            "event": "evt_networkstatus_showpopup",
+                            "cond":    ["==", ".HIDE_NETWORK_POPUP", false],
+                            "targets": ["BrowserClosed"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Bracket",
+    "initial":
+    {
+        "targets": ["MenuBracket"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuBracket",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Bracket.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                }
+            ]
+        }
+    ]
+}

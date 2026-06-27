@@ -1,0 +1,5 @@
+{
+    "dds":   ["UserPlateBio.dd"],
+    "vms":   [["lua", "UserPlateBio.lua"]],
+    "views": [["gfx", {"layout": "UserPlateBio.layout"}]]
+}

@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------------- */
+/* New Game Mode Be A Pro Created By Ma'ruf ID */
+/* ------------------------------------------------------------------- */
+
+{
+	"name": "BeAPro",
+    "let": 
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "BE_A_PRO"
+	},
+    "onEnter":
+    [
+        ["viewLayer", ["Gamemodes"]],
+        ["finishViewUnload", ["screen"]],
+        ["showFEUI", [".gamemode"]],
+        ["stateChange", ["BE_A_PRO"]],
+        ["SetGameMode", ["BE_A_PRO"]]
+    ],
+    "onExit":
+    [
+        ["hideUI", [".gamemode"]]
+    ],
+    "states":
+    [
+        {
+            "name": "PreGame",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/PreGame/PreGame.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode",
+                "out_ingame_flow": "InGameFlow"
+            }
+        },
+		{
+			"name": "InGameFlow",
+			"type": "external",
+			"file": "/Flows/InGameFlow/InGameFlow.nav",
+			"outputs":
+			{
+				"out_exit": "out_exit_gamemode"
+			}
+		}
+    ]
+}

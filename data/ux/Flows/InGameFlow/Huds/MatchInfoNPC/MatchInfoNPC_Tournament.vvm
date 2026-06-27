@@ -1,0 +1,5 @@
+{
+    "dds": ["MatchInfoNPC.dd"],
+    "vms": [["lua", "MatchInfoNPC.lua"]],
+    "views": [["gfx", {"layout":"MatchInfoNPC_Tournament.layout"}]]
+}

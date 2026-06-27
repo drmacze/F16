@@ -1,0 +1,6340 @@
+{
+	"styles":
+	{
+	
+		"Visible":
+		{
+			"visible": true
+		},
+		"Hidden":
+		{
+			"visible": false
+		},
+
+		"TF_TICKER_BUTTONS_WHITE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontColor": "$COLOR_WHITE",
+			"fontSize": 23.5
+		},
+		
+		"TF_GAME_BUTTON":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontColor": "0x25C4CD",
+			"textAlignH": "CENTER",
+			"fontSize": 12
+		},
+
+		"TF_PLAYER_PREVIEW_POS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYER_PREVIEW_FNAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYER_PREVIEW_LNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYER_PREVIEW_OVR": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYER_PREVIEW_OVR_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+				
+		"TF_GAME_BUTTON_SMALLER_FONT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 0,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": 0.0
+		},
+
+		"TF_TUTORIAL":
+		{
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": 27.0,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AGE_SELECTED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "LEFT"
+		},
+		"TF_AGE_DESELECTED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "LEFT"
+		},
+		"TF_TOS_TITLE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TOS_BUTTON":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "CENTER",
+			"height": 90,
+			"width": 200,
+			"leading": 5,
+			"underline": true,
+			"multiline": true
+		},
+		"TF_TOS_BUTTON_PRESSED":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER",
+			"height": 90,
+			"width": 200,
+			"leading": 5,
+			"underline": true,
+			"multiline": true
+		},
+		"TF_PANEL_HEADER":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER"
+		},
+		"TF_PANEL_HEADER_CENTERED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"textAlignH": "CENTER"
+		},
+		"TF_PANEL_HEADER_WHITE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SUBHEADER_LEFT":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SUBHEADER_CENTERED":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TROPHY_NAME":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER",
+			"leading": -8,
+			"bold":	true
+		},
+		"TF_TROPHY_NAME_NOT_SELECTED":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -8,
+			"bold":	true
+		},
+		"TF_TROPHY_PRG":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"bold":	true
+		},
+		"TF_TROPHY_COMINGSOON":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_TROPHY_EXPIRES":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_TROPHY_EXPIRED":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"bold":	true
+		},
+		"TF_TROPHY_COMPLETED":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_GREEN",
+			"textAlignH": "CENTER",
+			"bold":	true
+		},
+		"TF_TROPHY_INPRG":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_GREEN",
+			"textAlignH": "CENTER",
+			"bold":	true
+		},
+		"TF_TROPHY_DIFFICULTY_LEVEL":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -3
+		},
+		"TF_SUBHEADER_RIGHT":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_CONTEXT_MENU_ROW":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_CONTEXT_MENU_INFO_ROW":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_HUD_BLUE"
+		},
+		"TF_CONTEXT_MENU_COINS_ROW":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_GOLD"
+		},
+		"TF_CONTEXT_MENU_TOGGLE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_MENU_BUTTONS":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_LIST":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		
+		"TF_TABS_IDLE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 23,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TABS_HIGHLIGHT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 23,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TABS_SELECTED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 23,
+			"fontColor": "$COLOR_WHITE"
+		},
+		
+		"TF_TABS_SELECTED_FIFAPOINTS":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_TABS_SECOND_LINE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TABS_SECOND_LINE_HIGHLIGHT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_BLUE"
+		},
+		"TF_SECONDARY_TABS_IDLE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SECONDARY_TABS_HIGHLIGHT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_CONTENT_HEADER":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SECONDARY_TABS_SELECTED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SLIDER":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_BODY_TEXT_DARK":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"leading": 5.0
+		},
+		"TF_POPUP_BODY_TEXT":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"leading": 2.0
+		},
+		"TF_BREADCRUMB":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_WIDGET_BUTTON":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_WIDGET_BUTTON_HIGHLIGHT":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 13.0,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_LABEL_LEFT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_LABEL_CENTERED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_LABEL_CENTERED_BIG":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_LABEL_RIGHT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_LABEL_LEFT_LARGER":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR"
+		},
+		"TF_LABEL_RIGHT_LARGER":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"textAlignH": "RIGHT"
+		},
+		"TF_WHITE_LABEL_LEFT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_WHITE_LABEL_CENTERED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_WHITE_LABEL_RIGHT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_HELP_TEXT_DEFAULT":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_MEDIUM_GRAY"
+		},
+		"TF_ERROR":
+		{
+			"fontFace": "$Title",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"ContainerScreen":
+		{
+			"alignH": "FILL",
+			"alignV": "FILL",
+			"width": "$SCREEN_WIDTH",
+			"height": "$SCREEN_HEIGHT"
+		},
+		"LabelWithIcon":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"LabelWithIcon_Gray":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_MEDIUM_GRAY"
+		},
+		"LabelWithIconLeft":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"PlayerPosition":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"SeasonSelSubHeader":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"PlayerPositionHighlighted":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"RadioButton":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"AmmountSelectorLabel":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"AmountSelectorButton":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"StyleBaseComboBox":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2.0
+		},
+		"PackButton":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 25.0,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"MenuButtons":
+		{
+			"textFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"SocialPanelFriendFinder":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"ManageSquadRowButtons":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -3.0
+		},
+		"InputTextFieldStyle":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2.0
+		},
+		"AnimateFromLeftScreen":
+		{
+			"alpha": 0.0,
+			"marginLeft": 2000.0
+		},
+		"GenericButtonHighlight":
+		{
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonHighlight"
+		},
+		"GenericButtonSelected":
+		{
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonSelected"
+		},
+		"GenericBackgroundIdle":
+		{
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonIdle"
+		},
+		"GenericBackgroundHighlighted":
+		{
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonHighlight"
+		},
+		"GenericBackgroundSelected":
+		{
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonSelected"
+		},
+		"GenericBackgroundGreenIdle":
+		{
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonGreenIdle"
+		},
+		"GenericBackgroundBlueIdle":
+		{
+			"type": "$GenericButtonBlueIdle",
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0
+		},
+		"GenericBackgroundOrangeIdle":
+		{
+			"type": "$GenericButtonOrangeIdle",
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0
+		},
+		"GenericBackgroundBlueHighlighted":
+		{
+			"type": "$GenericButtonBlueHighlight",
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0
+		},
+		"GenericBackgroundOrangeHighlighted":
+		{
+			"type": "$GenericButtonOrangeHighlighted",
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 15.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0
+		},
+		"GenericBackgroundGreyIdle":
+		{
+			"type": "$GenericButtonGreyIdle",
+			"overflowTop": 1.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowBottom": 1.0,
+			"sliceBottom": 3.0,
+			"sliceLeft": 3.0,
+			"sliceRight": 3.0,
+			"sliceTop": 3.0
+		},
+		"GenericBackgroundGreyHighlighted":
+		{
+			"type": "$GenericButtonHighlight",
+			"overflowTop": 1.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowBottom": 1.0,
+			"sliceBottom": 3.0,
+			"sliceLeft": 3.0,
+			"sliceRight": 3.0,
+			"sliceTop": 3.0
+		},
+		"GenericBackgroundTileIdle":
+		{
+			"type": "$GenericButtonTileIdle",
+			"overflowBottom": 5.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0
+		},
+		"GenericBackgroundDrawerIdle":
+		{
+			"type": "$GenericButtonDrawerIdle",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 54.0,
+			"sliceRight": 54.0
+		},
+		"GenericBackgroundBlackBlueHighlighted":
+		{
+			"overflowBottom": 8.0,
+			"overflowLeft": 8.0,
+			"overflowRight": 8.0,
+			"overflowTop": 6.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonBlueIdle"
+		},
+		"GenericBackgroundBlackBlueSelected":
+		{
+			"overflowBottom": 8.0,
+			"overflowLeft": 8.0,
+			"overflowRight": 8.0,
+			"overflowTop": 6.0,
+			"sliceBottom": 19.0,
+			"sliceLeft": 17.0,
+			"sliceRight": 17.0,
+			"sliceTop": 15.0,
+			"type": "$GenericButtonBlueIdle"
+		},
+		"PopupButtonBlueBackgroundIdleFlat":
+		{
+			"type": "$PopupButtonBlueIdleFlat",
+			"overflowBottom": 4.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowTop": 1.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"PopupButtonBlueBackgroundHighlightedFlat":
+		{
+			"type": "$PopupButtonBlueHighlightedFlat",
+			"overflowBottom": 4.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowTop": 1.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"PopupButtonDarkBackgroundIdleFlat":
+		{
+			"type": "$PopupButtonIdleDarkFlat",
+			"overflowBottom": 8.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 4.0,
+			"overflowTop": 4.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"PopupButtonDarkBackgroundHighlightedFlat":
+		{
+			"type": "$PopupButtonHighlightDarkFlat",
+			"overflowBottom": 8.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 4.0,
+			"overflowTop": 4.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"PopupButtonBackgroundIdleFlat":
+		{
+			"type": "$PopupButtonIdleFlat",
+			"overflowBottom": 4.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowTop": 1.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+
+		"PopupButtonLightBlueBackgroundIdleFlat":
+		{
+			"type": "$PopupButtonLightBlueIdleFlat",
+			"overflowBottom": 8.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 4.0,
+			"overflowTop": 4.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"PopupButtonLightBlueBackgroundHighlightedFlat":
+		{
+			"type": "$PopupButtonLightBlueHighlightedFlat",
+			"overflowBottom": 8.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 4.0,
+			"overflowTop": 4.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+
+		"PopupButtonBackgroundIdleAngleLeft":
+		{
+			"type": "$PopupButtonIdleAngleLeft",
+			"overflowBottom": 13.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 26.0
+		},
+		"PopupButtonBackgroundIdleAngleRight":
+		{
+			"type": "$PopupButtonIdleAngleRight",
+			"overflowBottom": 13.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowTop": 11.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 16.0,
+			"sliceRight": 16.0
+		},
+		"PopupButtonBackgroundIdleAngleBoth":
+		{
+			"type": "$PopupButtonIdleAngleBoth",
+			"overflowBottom": 13.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 26.0
+		},
+		"PopupButtonBackgroundHighlightedFlat":
+		{
+			"type": "$PopupButtonHighlightedFlat",
+			"overflowBottom": 4.0,
+			"overflowLeft": 1.0,
+			"overflowRight": 1.0,
+			"overflowTop": 1.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"PopupButtonBackgroundHighlightedAngleLeft":
+		{
+			"type": "$PopupButtonHighlightedLeft",
+			"overflowBottom": 13.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 26.0
+		},
+		"PopupButtonBackgroundHighlightedAngleRight":
+		{
+			"type": "$PopupButtonHighlightedRight",
+			"overflowBottom": 13.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 26.0
+		},
+		"PopupButtonBackgroundHighlightedAngleBoth":
+		{
+			"type": "$PopupButtonHighlightedAngleBoth",
+			"overflowBottom": 13.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 5.0,
+			"overflowTop": 3.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 26.0
+		},
+
+		"TabButtonBackgroundIdle":
+		{
+			"type": "$TabButtonIdle",
+			"overflowTop": 0.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 5.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 14.0,
+			"sliceRight": 15.0
+		},
+		"TabButtonBackgroundHighlighted":
+		{
+			"type": "$TabButtonHighlighted",
+			"overflowTop": 0.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 5.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 10.0,
+			"sliceRight": 10.0
+		},
+		"TabButtonBackgroundSelected":
+		{
+			"type": "$TabButtonSelected",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 10.0,
+			"sliceRight": 10.0
+		},
+		"NavigationButtonBackgroundIdle":
+		{
+			"type": "$NavigationBlueButtonIdle",
+			"overflowTop": 0.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 6.0,
+			"overflowBottom": 6.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 16.0,
+			"sliceRight": 16.0
+		},
+		"NavigationButtonBackgroundHighlighted":
+		{
+			"type": "$NavigationBlueButtonHighlighted",
+			"overflowTop": 0.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 6.0,
+			"overflowBottom": 6.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 16.0,
+			"sliceRight": 16.0
+		},
+		"NavigationBarBackground":
+		{
+			"type": "$NavigationBarBackground",
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 0.0
+		},
+		"AdRadioButtonBackground":
+		{
+			"type": "$AdNormalBack",
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 50.0,
+			"sliceRight": 0.0,
+			"overflowTop": 12.0
+		},
+		"AwardsBackground":
+		{
+			"type": "$AwardsBackground",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0
+		},
+		"LiveTileBackgroundIdle":
+		{
+			"type": "$LiveTileBackgroundIdle",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 20.0,
+			"sliceBottom": 20.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"LiveTileBackForSeasonsgroundHighlighted":
+		{
+			"type": "$LiveTileBackgroundWithStrokeIdle",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 20.0,
+			"sliceBottom": 20.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0
+		},
+		"LiveTileBackgroundHighlighted":
+		{
+			"type": "$LiveTileBackgroundHighlighted",
+			"overflowTop": 3.0,
+			"overflowLeft": 3.0,
+			"overflowRight": 5.0,
+			"overflowBottom": 5.0,
+			"sliceTop": 17.0,
+			"sliceBottom": 18.0,
+			"sliceLeft": 16.0,
+			"sliceRight": 19.0
+		},
+		"LiveTileNewBackground":
+		{
+			"type": "$LiveTileNewBackground",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 17.0,
+			"sliceBottom": 18.0,
+			"sliceLeft": 16.0,
+			"sliceRight": 19.0
+		},
+		"PopupBackground":
+		{
+			"type": "$PopupBackground",
+			"overflowTop": 16.0,
+			"overflowLeft": 13.0,
+			"overflowRight": 16.0,
+			"overflowBottom": 46.0,
+			"sliceTop": 68.0,
+			"sliceBottom": 77.0,
+			"sliceLeft": 38.0,
+			"sliceRight": 38.0
+		},
+		"PopupHeaderBackground":
+		{
+			"type": "$PopupHeaderBackground",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 10.0,
+			"sliceRight": 10.0
+		},
+		"PopupFooterBackground":
+		{
+			"type": "$PopupFooterBackground",
+			"overflowTop": 31.0,
+			"overflowLeft": 5.0,
+			"overflowRight": 8.0,
+			"overflowBottom": 25.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 32.0,
+			"sliceRight": 32.0
+		},
+		"StadiumNameBackground":
+		{
+			"type": "$StadiumNameBackground",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 27.0,
+			"sliceRight": 27.0
+		},
+		"MatchInfoTitleBackground":
+		{
+			"type": "$MatchInfoTitleBackground",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 26.0,
+			"sliceRight": 26.0
+		},
+		"GameButtonBackground":
+		{
+			"backgroundAsset": "$GameButtonBackground",
+			"highlightAsset": "$GameButtonHighlight",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14
+		},
+		"GameButtonBackgroundYellow":
+		{
+			"backgroundAsset": "$GameButtonBackgroundYellow",
+			"highlightAsset": "$GameButtonHighlight",
+			"ArrowBackgroundAsset": "$GameButtonArrowBackgroundYellow",
+			"noArrowBackgroundAsset": "$GameButtonBackgroundYellow",
+			"arrowAsset": "$GameButtonArrow",
+			"staticArrowAsset": "$GameButtonStaticArrow",
+			"staticOrangeArrowAsset": "$GameButtonStaticOrangeArrow",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14,
+			"swipeOffsetX": 8,
+			"swipeOffsetYgeneral": 20,
+			"swipeOffsetYup": 2,
+			"swipeOffsetYdown": -8
+		},
+		"GameButtonBackgroundRed":
+		{
+			"backgroundAsset": "$GameButtonBackgroundRed",
+			"highlightAsset": "$GameButtonHighlight",
+			"ArrowBackgroundAsset": "$GameButtonArrowBackgroundRed",
+			"noArrowBackgroundAsset": "$GameButtonBackgroundRed",
+			"arrowAsset": "$GameButtonArrow",
+			"staticArrowAsset": "$GameButtonStaticArrow",
+			"staticOrangeArrowAsset": "$GameButtonStaticOrangeArrow",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14,
+			"swipeOffsetX": 8,
+			"swipeOffsetYgeneral": 20,
+			"swipeOffsetYup": 2,
+			"swipeOffsetYdown": -8
+		},
+		"GameButtonBackgroundBlue":
+		{
+			"backgroundAsset": "$GameButtonBackgroundBlue",
+			"highlightAsset": "$GameButtonHighlight",
+			"ArrowBackgroundAsset": "$GameButtonArrowBackgroundBlue",
+			"noArrowBackgroundAsset": "$GameButtonBackgroundBlue",
+			"arrowAsset": "$GameButtonArrow",
+			"staticArrowAsset": "$GameButtonStaticArrow",
+			"staticOrangeArrowAsset": "$GameButtonStaticOrangeArrow",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14,
+			"swipeOffsetX": 8,
+			"swipeOffsetYgeneral": 20,
+			"swipeOffsetYup": 2,
+			"swipeOffsetYdown": -8
+		},
+		"GameButtonBackgroundGreen":
+		{
+			"backgroundAsset": "$GameButtonBackgroundGreen",
+			"highlightAsset": "$GameButtonHighlight",
+			"ArrowBackgroundAsset": "$GameButtonArrowBackgroundGreen",
+			"noArrowBackgroundAsset": "$GameButtonBackgroundGreen",
+			"arrowAsset": "$GameButtonArrow",
+			"staticArrowAsset": "$GameButtonStaticArrow",
+			"staticOrangeArrowAsset": "$GameButtonStaticOrangeArrow",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14,
+			"swipeOffsetX": 8,
+			"swipeOffsetYgeneral": 20,
+			"swipeOffsetYup": 2,
+			"swipeOffsetYdown": -8
+		},
+		"SwipeButtonBackground":
+		{
+			"backgroundAsset": "$GameButtonBackground",
+			"ArrowBackgroundAsset": "$GameButtonArrowBackground",
+			"noArrowBackgroundAsset": "$GameButtonBackground",
+			"highlightAsset": "$GameButtonHighlight",
+			"arrowAsset": "$GameButtonArrow",
+			"staticOrangeArrowAsset": "$GameButtonStaticOrangeArrow",
+			"staticArrowAsset": "$GameButtonStaticArrow",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14,
+			"swipeOffsetX": 8,
+			"swipeOffsetYgeneral": 20,
+			"swipeOffsetYup": 2,
+			"swipeOffsetYdown": -8
+		},
+		"TutorialSprintButtonBackground":
+		{
+			"backgroundAsset": "$GameButtonBackground",
+			"highlightAsset": "$GameButtonHighlight",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14
+		},
+		"TutorialPassButtonBackground":
+		{
+			"backgroundAsset": "$GameButtonBackground",
+			"highlightAsset": "$GameButtonHighlight",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14
+		},
+		"SprintButtonBackground":
+		{
+			"backgroundAsset": "$GameButtonBackground",
+			"highlightAsset": "$GameButtonHighlight",
+			"backgroundWidth": 164,
+			"backgroundHeight": 167,
+			"highlightWidth": 210,
+			"highlightHeight": 206,
+			"contentOffsetX": 24,
+			"contentOffsetY": 14
+		},
+		"PauseButtonBackground":
+		{
+			"backgroundAsset": "$PauseButton",
+			"backgroundWidth": 80,
+			"backgroundHeight": 67
+		},
+		"DPadButtonBackground":
+		{
+			"backgroundAsset": "$DPadBackground",
+			"highlightAsset": "$DPadHighlight",
+			"knobAsset": "$Knob",
+			"backgroundWidth": 228,
+			"backgroundHeight": 232,
+			"contentOffsetX": 16,
+			"contentOffsetY": 13,
+			"knobWidth": 98,
+			"knobHeight": 94
+		},
+		"DPadSkillButtonBackground":
+		{
+			"backgroundAsset": "$DPadBackground",
+			"highlightAsset": "$DPadHighlight",
+			"knobAsset": "$Knob",
+			"backgroundWidth": 228,
+			"backgroundHeight": 232,
+			"contentOffsetX": 16,
+			"contentOffsetY": 13,
+			"knobWidth": 98,
+			"knobHeight": 94
+		},
+		"SubsDrawerDivider":
+		{
+			"type": "$SubsDrawerDivider",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 100.0,
+			"sliceRight": 100.0
+		},
+		"AuctionHouseBackground":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 62.0,
+			"sliceRight": 62.0,
+			"sliceTop": 0.0,
+			"type": "$AuctionHouseBackground"
+		},
+		"TextFieldCaseBackground":
+		{
+			"overflowBottom": 1.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 8.0,
+			"sliceLeft": 8.0,
+			"sliceRight": 8.0,
+			"sliceTop": 8.0,
+			"type": "$TextFieldCaseBackground"
+		},
+		"TabsUnderline":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 64.0,
+			"sliceRight": 64.0,
+			"sliceTop": 0.0,
+			"type": "$TabsUnderline"
+		},
+		"NotificationBackground":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 2.0,
+			"sliceLeft": 66.0,
+			"sliceRight": 66.0
+		},
+		"HSliderBacking":
+		{
+			"overflowBottom": 4.0,
+			"overflowLeft": 3.0,
+			"overflowRight": 4.0,
+			"overflowTop": 3.0,
+			"sliceLeft": 10.0,
+			"sliceRight": 10.0,
+			"type": "$HSliderBacking"
+		},
+		"HSliderKnob":
+		{
+			"overflowBottom": 10.0,
+			"overflowLeft": 15.0,
+			"overflowRight": 15.0,
+			"overflowTop": 10.0,
+			"type": "$HSliderKnob"
+		},
+		"HSliderKnobDisabled":
+		{
+			"overflowBottom": 10.0,
+			"overflowLeft": 15.0,
+			"overflowRight": 15.0,
+			"overflowTop": 10.0,
+			"type": "$HSliderKnobHighlightBlocked"
+		},
+		"HSliderKnobHighlight":
+		{
+			"overflowBottom": 10.0,
+			"overflowLeft": 15.0,
+			"overflowRight": 15.0,
+			"overflowTop": 10.0,
+			"type": "$HSliderKnobHighlight"
+		},
+		"PopupScrim":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 0.0,
+			"sliceRight": 0.0,
+			"sliceTop": 0.0,
+			"type": "$PopupBG"
+		},
+		"StoreScrim":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 60.0,
+			"sliceLeft": 60.0,
+			"sliceRight": 60.0,
+			"sliceTop": 60.0,
+			"type": "$StoreBG"
+		},
+		"StoreButtonActiveStyle":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 71.0,
+			"sliceRight": 14.0,
+			"sliceTop": 0.0,
+			"type": "$StoreButtonActive"
+		},
+		"SimulationWhiteBackground":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 60.0,
+			"sliceRight": 60.0,
+			"sliceTop": 0.0,
+			"type": "$SimulationWhiteBackground"
+		},
+		"SimulationTextBoxBackground":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 20.0,
+			"sliceLeft": 0.0,
+			"sliceRight": 20.0,
+			"sliceTop": 20.0,
+			"type": "$SimulationTextBoxBackground"
+		},
+		"SimulationTextBoxBgRight":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 20.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 0.0,
+			"sliceTop": 20.0,
+			"type": "$SimulationTextBoxBgRight"
+		},
+		"SimulationTopRibbon":
+		{
+			"overflowBottom": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowTop": 0.0,
+			"sliceBottom": 0.0,
+			"sliceLeft": 50.0,
+			"sliceRight": 50.0,
+			"sliceTop": 0.0,
+			"type": "$SimulationTopRibbon"
+		},
+		"SystemMessageFormat":
+		{
+			"font": "$Title",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -2.0
+		},
+		"InfoMessageFormat":
+		{
+			"font": "$Title",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -2.0
+		},
+		"SystemTimestampFormat":
+		{
+			"font": "$Title",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"InfoTimestampFormat":
+		{
+			"font": "$Title",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"ChatMessageFormat":
+		{
+			"font": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2.0
+		},
+		"ChatTimestampFormat":
+		{
+			"font": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"SquadInfoLabel":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"SquadToggleInfo":
+		{
+			"font": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		
+	    "SquadToggleInfoPreMatch":
+		{
+			"font": "$FONT_BODY",
+			"fontSize": 30,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"autoTextShadow": true
+		},
+		
+		"KitSelectToggleInfo":
+		{
+			"font": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"textAlignV": "CENTER"
+		},
+		"TransferMarketExtra":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$TILE_COLOR_SUBHEADLINE",
+			"leading":-3
+		},
+		"KitSelectToggleTextInfo":
+		{
+			"font": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TradePileToggleInfo":
+		{
+			"font": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"textAlignV": "BOTTOM"
+		},
+		"TeamRatingBackground":
+		{
+			"overflowBottom": 8.0,
+			"overflowLeft": 3.0,
+			"overflowRight": 7.0,
+			"overflowTop": 2.0,
+			"type": "$TeamRatingBG"
+		},
+		"FlatPanelBackground":
+		{
+			"sliceBottom": 25.0,
+			"sliceLeft": 225.0,
+			"sliceRight": 220.0,
+			"sliceTop": 25.0,
+			"overflowTop":10.0,
+			"overflowBottom":5.0,
+			"type":"$FlatPanelFull"
+		},
+		"PanelBackgroundStyle":
+		{
+			"sliceBottom": 20.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0,
+			"sliceTop": 20.0,
+			"overflowTop":0.0,
+			"overflowBottom":0.0,
+			"overflowLeft":0.0,
+			"overflowRight":0.0,
+			"type":"$PopupBackgroundFull"
+		},
+		"PopupBackgroundAlterStyle":
+		{
+			"sliceBottom": 20.0,
+			"sliceLeft": 20.0,
+			"sliceRight": 20.0,
+			"sliceTop": 20.0,
+			"overflowTop":0.0,
+			"overflowBottom":0.0,
+			"overflowLeft":0.0,
+			"overflowRight":0.0,
+			"type":"$PopupBackgroundAlterFull"
+		},
+		"PanelHeaderStyle":
+		{
+			"sliceBottom": 0.0,
+			"sliceLeft": 0.0,
+			"sliceRight": 20.0,
+			"sliceTop": 20.0,
+			"type":"$PopupHeaderFull"
+		},
+		"SubPanel":
+		{
+			"sliceBottom": 0.0,
+			"sliceLeft": 30.0,
+			"sliceRight": 30.0,
+			"sliceTop": 0.0,
+			"type":"$SubPanelBG"
+		},
+		"GridCellBackground":
+		{
+			"sliceBottom": 8,
+			"sliceLeft": 8,
+			"sliceRight": 8,
+			"sliceTop": 8,
+			"overflowTop":2,
+			"overflowBottom":2,
+			"overflowLeft":2,
+			"overflowRight":2,
+			"type":"$GridCellBackground"
+		},
+		"GridCellBackgroundAlt":
+		{
+			"sliceBottom": 8,
+			"sliceLeft": 8,
+			"sliceRight": 8,
+			"sliceTop": 8,
+			"overflowTop":2,
+			"overflowBottom":2,
+			"overflowLeft":2,
+			"overflowRight":2,
+			"type":"$GridCellBackgroundAlt"
+		},
+		"GridCellHighlight":
+		{
+			"sliceBottom": 8,
+			"sliceLeft": 8,
+			"sliceRight": 8,
+			"sliceTop": 8,
+			"overflowTop":2,
+			"overflowBottom":2,
+			"overflowLeft":2,
+			"overflowRight":2,
+			"type":"$GridCellHighlight"
+		},
+		"SimulationRowShadow":
+		{
+			"sliceLeft": 20,
+			"sliceRight": 20,
+			"type":"$SimulationRowShadow"
+		},
+		"DividerHorizontal":
+		{
+			"sliceLeft": 64,
+			"sliceRight": 64,
+			"type":"$DividerHor"
+		},
+		"TeamSelectBackgroundItem":
+		{
+			"sliceLeft": 128,
+			"sliceRight": 128,
+			"type":"$TeamSelectBg"
+		},
+		"OfflineOnlineHubBackgroundItem":
+		{
+			"sliceLeft": 70,
+			"sliceRight": 70,
+			"type":"$OfflineOnlineHubBG"
+		},
+		"SortableListHeader":
+		{
+			"sliceLeft": 64,
+			"sliceRight": 64,
+			"type":"$SquadListAsset"
+		},
+		"TeamInfoPanelBackground":
+		{
+			"sliceLeft": 128,
+			"sliceRight": 128,
+			"type":"$TeamPanelBg"
+		},
+		"AwardsListHeaderBackground":
+		{
+			"sliceLeft": 49,
+			"sliceRight": 115,
+			"type":"$AwardsListHeader"
+		},
+		"SeasonTableBackgroundRed":
+		{
+			"sliceLeft": 44,
+			"sliceRight": 110,
+			"type":"$TableBackgroundRed"
+		},
+		"SeasonTableBackgroundGreen":
+		{
+			"sliceLeft": 44,
+			"sliceRight": 110,
+			"type":"$TableBackgroundGreen"
+		},
+		"SeasonTableBackgroundBlue":
+		{
+			"sliceLeft": 44,
+			"sliceRight": 110,
+			"type":"$TableBackgroundBlue"
+		},
+		"SeasonTableBackgroundGold":
+		{
+			"sliceLeft": 44,
+			"sliceRight": 110,
+			"type":"$TableBackgroundGold"
+		},
+		"FilterCellLevel":
+		{
+			"imageWidth": 128.0,
+			"imageHeight": 128.0,
+			"imageMarginTop": 0.0
+		},
+		"FilterCellGeneric":
+		{
+			"imageMarginTop": 20.0,
+			"imageWidth": 100.0,
+			"imageHeight": 100.0
+		},
+		"FIFAPointsPackBG":
+		{
+			"type": "$FifaPointsPackBG",
+			"overflowTop": 4.0,
+			"overflowLeft": 4.0,
+			"overflowRight": 4.0,
+			"overflowBottom": 4.0,
+			"sliceBottom": 8.0,
+			"sliceLeft": 8.0,
+			"sliceRight": 8.0,
+			"sliceTop": 8.0
+		},
+		"PackComponentBG":
+		{
+			"type": "$packBRG",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceBottom": 2.0,
+			"sliceLeft": 2.0,
+			"sliceRight": 2.0,
+			"sliceTop": 2.0
+		},
+		"PackComponentBGDisabled":
+		{
+			"type": "$packBRGDisabled",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceBottom": 220.0,
+			"sliceLeft": 2.0,
+			"sliceRight": 2.0,
+			"sliceTop": 2.0
+		},
+		"skillGameComponenetBGIdle":
+		{
+			"type": "$skillGameComponenetBGIdle",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceBottom": 2.0,
+			"sliceLeft": 2.0,
+			"sliceRight": 2.0,
+			"sliceTop": 2.0
+		},
+		"skillGameComponenetBGDetail":
+		{
+			"type": "$skillGameComponenetBGDetail",
+			"overflowTop": 0.0,
+			"overflowLeft": 0.0,
+			"overflowRight": 0.0,
+			"overflowBottom": 0.0,
+			"sliceBottom": 220.0,
+			"sliceLeft": 2.0,
+			"sliceRight": 2.0,
+			"sliceTop": 2.0
+		},
+		"SelectFavoriteTeamPanel":
+		{
+			"type": "$selectFavoriteTeamPanel",
+			"sliceTop": 7.0,
+			"sliceBottom": 7.0,
+			"sliceLeft": 7.0,
+			"sliceRight": 7.0
+		},
+		"SkillPauseBackgroundIdle":
+		{
+			"type": "$SkillGamesPauseButton",
+			"overflowTop": 6.0,
+			"overflowLeft": 6.0,
+			"overflowRight": 6.0,
+			"overflowBottom": 2.0,
+			"sliceTop": 8.0,
+			"sliceBottom": 9.0,
+			"sliceLeft": 13.0,
+			"sliceRight": 13.0
+		},
+		"TF_FIFA_POINTS_PACK_TITLE":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 25,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_FIFA_POINTS_PACK_POINTS":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 35,
+			"fontColor": "$COLOR_FIFA_POINTS"
+		},
+		"TF_FIFA_POINTS_PACK_VALUES":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_FIFA_POINTS"
+		},
+		"TF_FIFA_POINTS_PACK_LABELS":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$TILE_COLOR_VALUE"
+		},
+		"TF_FIFA_POINTS_PACK_PLUS":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 25,
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_FIFA_POINTS_PACK_POPULAR":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FIFA_POINTS_PRICE_BUTTON":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 25,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FIFA_POINTS_BANNER_LABEL":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TacticsOverlayRegular":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 14.0,
+			"fontColor": "$COLOR_OLIVE"
+		},
+		"TacticsOverlaySelected":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 14.0,
+			"fontColor": "$COLOR_HUD_BLUE"
+		},
+		"TF_ADPOPUP_BUTTON":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TUTORIAL_BODY":
+		{
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"leading": 5.0
+		},
+		"TF_CheckBox":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 18,
+			"fontColor":"$COLOR_BLACK"
+		},
+		
+		"TF_NAME": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_ACCOMPLISHMENT_ROW_NAME": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_ACCOMPLISHMENT_ROW_DESCRIPTION": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$TILE_COLOR_LABEL",
+			"leading": -3
+		},
+		"TF_ACCOMPLISHMENT_ROW_TIMES_WON": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_ACCOMPLISHMENT_ROW_REWARD_DESCRIPTION": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_STATUS_HEADER": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 15,
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_STATUS_NUMERAL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_TIMER_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_TIMER_EXPIRED_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_RED"
+		},
+		"TF_NAME_TILE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -4
+		},
+		"TF_COMPLETED_NAME_TILE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLUE",
+			"leading": -7
+		},
+		"TF_REPEAT_TILE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -4
+		},
+		"TF_COMPLETED_REPEAT_TILE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 15,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -4
+		},
+		"TF_REWARD_TITLE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_REWARD_DESC": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"leading": -3
+		},
+		"TF_REWARD_DESCRIPTION": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_REWARD": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_GREEN_LABEL_LEFT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_GREEN_LABEL_RIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_GREEN",
+			"textAlignH": "RIGHT"
+		},
+		"TF_SQDCUST_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQDCUST_DATE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQDCUST_ITEM_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_SQDCUST_STADIUM_BONUS_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_SQDCUST_STADIUM_BONUS_VALUE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQDMGMT_DISCLAIMER": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2
+		},
+		"TF_SQDMGMT_LABELS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQDMGMT_CREATE_LABELS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQDMGMT_INFO": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SQDMGMT_BUTTONS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SQDMGMT_CLUB_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SQDMGMT_CLUB_EST": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQDMGMT_ROW_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"TF_SQDMGMT_ROW_STATS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"TF_SQDMGMT_ROW_FORMATION_LBL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SQDMGMT_ROW_FORMATION_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"TF_SQDMGMT_ROW_BUTTONS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -3
+		},
+		"TF_SQDBUILDER_SQUAD_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_PLAYERBIO_PLAYER_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_PLAYERBIO_INFO_TITLES": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYERBIO_INFO_ROWS": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYERBIO_INFO_ROWS_VALUES": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PLAYERBIO_DROPDOWN_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_LABEL_DARK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 15,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2
+		},
+		"TF_INPUT_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_INPUT_TEXT_FIELD": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "LEFT"
+		},
+		"TF_INPUT_DESCRIPTION_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"TF_INPUT_DONE_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FTF_BUTTONS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 28,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FTF_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -2
+		},
+		"TF_REQUIREMENTS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLUE",
+			"leading": -2
+		},
+		"TF_WELCOME": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_INGAME_TUT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 25,
+			"fontColor": "$COLOR_WHITE",
+			"leading": -2,
+			"textAlignH": "CENTER"
+		},
+		"TF_TUTORIAL_LEFT": {
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -3
+		},
+		"TF_TUTORIAL_LEFT_DARK": {
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -3
+		},
+		"TF_TUTORIAL_SUBHEADER": {
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -3
+		},
+		"TF_TUTORIAL_RIGHT": {
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT",
+			"leading": -3
+		},
+		"TF_TUTORIAL_CENTER": {
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -3
+		},
+		"TF_TUTORIAL_CENTER_DARK": {
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": -3
+		},
+		"TF_TUTORIAL_TIP":{
+			"fontFace": "$FONT_TUTORIAL",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -3
+		},
+		"TF_TUTORIAL_TRANSFER_MARKET_BUTTON": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TUTORIAL_TRANSFER_MARKET_COIN": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TUTORIAL_ADVANCE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_TUTORIAL_ADVANCE_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_TUTORIAL_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 50,
+			"fontColor": "$COLOR_LIGHTER_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_LEVEL_UP_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LEVEL_UP_TITLE",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_LEVEL_UP_TEXT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LEVEL_UP_TEXT",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_BIG_COINS_VALUE_TEXT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_COINS",
+			"fontColor": "$COLOR_PURE_BLACK"
+		},
+		"TF_SMALLER_COINS_VALUE_TEXT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLER_COINS",
+			"fontColor": "$COLOR_PURE_BLACK"
+		},
+
+		"TF_INTRODUCTION_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 35,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_INTRODUCTION_DESC": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_INTRODUCTION_DESC_BOLD": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 27,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_CONTROL_SELECT_HOW": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 45,
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"textAlignH": "CENTER"
+		},
+		"TF_CONTROL_SELECT_PLAY": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 35,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FUT_FTF_INTRO_LEFT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_WHITE",
+			"leading": 1
+		},
+		"TF_FUT_FTF_INTRO_CENTER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": 1
+		},
+		"TF_FUT_FTF_INTRO_RIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT",
+			"leading": 1
+		},
+		"TF_FUT_FTF_STEPS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FUT_FTF_DESCRIPTION_LEFT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FUT_FTF_DESCRIPTION_CENTER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FUT_FTF_DESCRIPTION_RIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_FUT_FTF_YELLOW_LEFT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 26,
+			"fontColor": "$COLOR_ORANGE"
+		},
+		"TF_FUT_FTF_YELLOW_CENTER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 26,
+			"fontColor": "$COLOR_ORANGE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FUT_FTF_RED_CENTER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_LIGHT_RED",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKIP_BUTTON": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TOTW_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TOTW_LABEL_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TOTW_LABEL_WON": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TOTW_LABEL_BIG": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TOTW_LABEL_BIG_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASONS_TILE_LABEL_BIG": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK",
+			"leading":-10
+		},
+		"TF_SEASONS_MATCH_RESULT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASONS_MATCH_FORM": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASONS_MATCH_FORM_BIG": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASONS_PLAYER_NAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SEASONS_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SEASONS_CLUB_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SEASONS_CLUB_EST": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SEASONS_ALL_TIME": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SEASONS_TEAM_STATS_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASONS_TEAM_STATS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASONS_PROJECTION_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_SEASONS_PROJECTION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_STSELECT_PROGRESS_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_IN_PROGRESS_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_STSELECT_SUBTITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_STSELECT_ROW_RIGHT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_STSELECT_ROW_LEFT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -4
+		},
+		"TF_STSELECT_REQUIREMENT_TITLE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -4
+		},
+		"TF_STSELECT_REQUIREMENT_POINTS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_STSELECT_REQUIREMENT_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 33,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_STSELECT_TOGGLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_STSELECT_BOX_DESCRIPTION": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": -4
+		},
+		"TF_COMING_SOON_TIMER_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_EXPIRES_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "0x333333",
+			"leading": -3
+		},
+		"TF_EXPIRED_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_LIGHT_RED",
+			"leading": -3
+		},
+		"TF_REQS_VAL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_REQS_VAL1": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_REQS_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 17,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TREE_HEADER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 10,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TREE_NAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TREE_ROUND_LEFT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_GREY",
+			"textAlignH": "CENTER"
+		},
+		"TF_TREE_SCORE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TREE_ROUND_CENTER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TREE_LEAGUE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TREE_CHAMPION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TREE_TEAM_NAME_CENTER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_FR_COLUMN_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_FR_COMPARISON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MH_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_PURE_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_MH_SCORE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MH_TEAM": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_AH_SEARCH_TYPE":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_AH_BUTTON": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AH_BUTTON_GREY": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR"
+		},
+		"TF_AH_ROW_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_AH_ROW_LABEL_RIGHT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AH_ROW_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AH_TIME_REMAINING_ALERT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_RED",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AH_TIME_REMAINING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AH_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AH_SUB_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_MEDIUM_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AH_TRADE_HISTORY_TITLE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_AH_TRADE_HISTORY": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -4
+		},
+		"TF_AH_LIST_BUTTON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AH_HEADER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"TF_AH_HEADER_TIME_REMAINING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "LEFT"
+		},
+		"TF_AH_HEADER_TITLE_COLOR": {
+					"fontFace": "$FONT_TITLE",
+					"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+					"fontColor": "$TILE_COLOR_VALUE",
+					"textAlignH": "LEFT"
+		},
+		"TF_AH_OPTIONS_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_WELCOME_HEADER_TITLE":{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_WELCOME_TITLE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TYPE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_PAUSES_LEFT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PAUSES_LABEL_LEFT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PAUSES_RIGHT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_PAUSES_LABEL_RIGHT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_TIME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_GAME_MENU_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RESULT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SHOOTOUT_RESULT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_TIME_REMAINING": {
+			"fontFace": "$Header",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_GAME_PAUSED": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		
+		"TF_PLAYERNIB_NAME_LEFT": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+		"TF_PLAYERNIB_NAME_RIGHT": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true,
+			"textAlignH": "RIGHT"
+		},
+		
+		"TF_PLAYERNIB_NUMBER_LEFT": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PLAYERNIB_NUMBER_RIGHT": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		
+		
+		
+		"TF_SCORECLOCK_TEAMS": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": 20,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SCORECLOCK_SCORE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 20,
+			"fontColor": "$COLOR_YELLOW",
+			"textAlignH": "CENTER"
+		},
+		"TF_SCORECLOCK_TIME": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": 20,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SCORECLOCK_EXTRA_TIME": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": 20,
+			"fontColor": "$COLOR_YELLOW",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKIP_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_MENTALITY_LABEL_LEFT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_MENTALITY_LABEL_RIGHT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"textAlignV": "TOP"
+		},
+		"TF_MENTALITY_LABEL_HELP": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"TF_CAPTURE_MEDIA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_CAPTURE_MEDIA_GREEN": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_SHOOTOUT_SCORE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "0x25C4CD",
+			"textAlignH": "CENTER"
+		},
+		"TF_SHOOTOUT_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_SHOOTOUT_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 0,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_INTERACTIVETUTORIAL_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_INTERACTIVETUTORIAL_LABEL_LEFT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_INTERACTIVETUTORIAL_SUBLABEL_LEFT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_INTERACTIVETUTORIAL_GESTURE_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4,
+			"textAlignH": "CENTER"
+		},
+		"TF_INTERACTIVETUTORIAL_SUBLABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_LIGHT_GRAY"
+		},
+		"TF_CONTROL_HUD_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_CONTROL_HUD_LINE1": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_CONTROL_HUD_LINE2": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 13,
+			"fontColor": "$COLOR_LIGHT_GRAY"
+		},
+		"TF_CLUB_NAME": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CLUB_EST": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_FILTER_PERIOD": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_NO_RESULTS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_HEADER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 46,
+			"fontColor": "$TILE_COLOR_HEADER"
+		},
+		"TF_MAIN_HUB_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER"
+		},
+		"TF_SUBTITLE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 46,
+			"fontColor": "$TILE_COLOR_HEADER"
+		},
+		"TF_DESCRIPTON": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$TILE_COLOR_BODY",
+			"leading": -5
+		},
+		"TF_HUB_BUTTONS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 33,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_MATCH_TYPE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_MATCH_STADIUM": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MATCH_REVEAL_LABELS": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_MATCH_REVEAL_LABELS_SMALL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_MATCH_REVEAL_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MATCH_REVEAL_LOADING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 33,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_VS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 50,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_FUT_MATCH_TYPE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_FUT_MATCH_TYPE2": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_FUT_MATCH_STADIUM": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"MESSAGE_COLUMN_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_PENALTY_HELP_DESCRIPTION": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_MATCHFACTS_MATCH_TYPE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCHFACTS_MATCH_STADIUM": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCHFACTS_EVENT_TITLE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_MATCHFACTS_TEAM_NAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 22,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCHFACTS_GAMES_REMAINNG": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 22,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MATCHFACTS_RESULT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 60,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCHFACTS_SHOOTOUT_RESULT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 25,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_AWARDS_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_AWARDS_TITLE_DARK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AWARDS_TITLE_C": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_AWARDS_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_AWARDS_LABEL_C": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_AWARDS_SUB_LABEL_R": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AWARDS_GREEN": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_GREEN",
+			"textAlignH": "RIGHT"
+		},
+		"TF_AWARDS_GRAY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_AWARDS_TOTAL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "40",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_AWARDS_TOTAL_EARNED": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_OPTIONS_ULTIMATE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 48,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_OPTIONS_TEASER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_OPTIONS_TEASER_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_OPTIONS_SHOOTOUT_RESULT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_LABEL_1": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_LABEL_2": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 48,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_LABEL_1_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_LABEL_2_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 48,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_LABEL_3_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -5
+		},
+		"TF_RETRY_LABEL_3": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_CUP_LABEL_3": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_FOOTER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_BUTTON": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 25,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_CUP_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_GOLD"
+		},
+		"TF_RETRY_MODE_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_STADIUM_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_MATCH_RESULT_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 60,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_MESSAGE_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_USER_NAME_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_RETRY_NO_RETRIES_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SECURITY_CHECK_LABELS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SECURITY_CHECK_DESCRIPTION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -2
+		},
+		"TF_QUESTION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_TUTORIAL_MEDIUM_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_TUTORIAL_DESCRIPTION":{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TUTORIAL_DESCRIPTION",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"leading": -5
+		},
+		"TF_TUTORIAL_DESCRIPTION_DARK":{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TUTORIAL_DESCRIPTION",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -5
+		},
+		"TF_TUTORIAL_MEDIUM_DESCRIPTION":{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"leading": -5
+		},
+		"TF_RESET_PASSWORD": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SECURITY_CHECK_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_BUTTON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_REQUIREMENTS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_USER_NAME": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_USER_NAME_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FRIEND_FINDER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FRIEND_LIST_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_FRIEND_LIST_TOGGLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_FRIEND_LIST_TOGGLE_HIGHLIGHT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_CAPTURE_BUTTON": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_EA_SPORTS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_FOOTBALL_CLUB": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT"
+		},
+		"TF_USER_NAME_LINK": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_NEWS_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -2
+		},
+		"TF_NEWS_USER_NAME": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_NEWS_DESCRIPTION": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2
+		},
+		"TF_NEWS_COMMENT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -2
+		},
+		"TF_NEWS_COMMENT_DATE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 11,
+			"fontColor": "$COLOR_MEDIUM_GRAY"
+		},
+		"TF_NEWS_COMMENT_COUNT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_PREV_COMMENTS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_NEWS_REPORT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_MEDIUM_GRAY"
+		},
+		"TF_CAPTURE_SUBTITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -3
+		},
+		"TF_CAPTURE_HOME_TEAM_NAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_CAPTURE_AWAY_TEAM_NAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CAPTURE_SCORE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 25,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_CAPTURE_TIME": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_MEDIUM_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_CAPTURE_SHARE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_CAPTURE_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_CAPTURE_SHARED_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_PLAY_MATCH_GAMEMODE_SELECT_BUTTON_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_INVITE_FRIEND": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_USER_PLATE_DISPLAY_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_USER_PLATE_DISPLAY_NAME_SMALL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_USER_PLATE_DISPLAY_NAME_HIGHLIGHT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_USER_PLATE_DISPLAY_NAME_SMALL_HIGHLIGHT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SHARED_USER_PLATE_TEXT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_PLATE_LABELS": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_USER_PLATE_NUMBERS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_PLATE_NUMBERS_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "24",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_PLATE_NUMBERS_LEVEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 24,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_PLATE_NUMBERS_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_PLATE_NUMBERS_LARGE_HIGHLIGHT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_PLATE_XP": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_USER_PLATE_NEXT_LEVEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BEIGE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_USER_BIO_CATEGORY_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_USER_BIO_USER_NAME_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_BIO_LEVEL_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_USER_BIO_STAT_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_USER_BIO_STAT_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 25,
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_USER_BIO_DESC": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -3
+		},
+		"TF_USER_BIO_EDIT_PLAYER_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -6
+		},
+		"TF_NAVIGATION_BAR_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SHARED_USER_PLATE_DISPLAY_NAME": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 22,
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SHARED_USER_PLATE_DISPLAY_NAME_HIGHLIGHT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SHARED_USER_PLATE_LABELS": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_SHARED_USER_PLATE_LABELS_HIGHLIGHT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SHARED_USER_PLATE_NUMBERS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SHARED_USER_PLATE_NUMBERS_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_HOT_KEY_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_HOT_KEY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MY_PACK_INFO": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading":	-2
+		},
+		"TF_MY_PACK_TITLE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading":	-3
+		},
+		"TF_MY_PACK_GIFT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 25,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_MY_PACK_OPEN": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 25,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_ACCOMPLISHMENT_CATEGORY": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_ACCOMPLISHMENT_VALUE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_YELLOW",
+			"textAlignH": "RIGHT"
+		},
+		"TF_ACCOMPLISHMENT_HUB_CATEGORY": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_ACCOMPLISHMENT_HUB_CATEGORY_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_ACCOMPLISHMENT_HUB_CATEGORY_COMPLETION": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_ACCOMPLISHMENT_HUB_CATEGORY_COMPLETION_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_ACCOMPLISHMENT_COMPLETION_METER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_ACCOMPLISHMENT_REDEEM_BUTTON":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AMMOUNT_SELECTOR_BUTTON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AMMOUNT_SELECTOR_TEXT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "LEFT"
+		},
+		"TF_AMMOUNT_SELECTOR_LABEL_ANY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "LEFT"
+		},
+		"TF_NAME_SEARCH_HELP_TEXT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"textAlignH": "LEFT"
+		},
+		"TF_NAME_SEARCH_BY_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACk",
+			"textAlignH": "LEFT"
+		},
+		"TF_AMMOUNT_SELECTOR_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_BREAD_CRUMB_REGULAR": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_BREAD_CRUMB_CURRENT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_GAME_EVENTS_ROW": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_COMPARISON_VIEW_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_COMPARISON_VIEW_VALUE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_COMPARISON_VIEW_BOTTOM": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_DISTANCE_TO_GOAL_VIEW": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_EVENT_INFO_VIEW_TEAM": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 0,
+			"fontColor": "0x25C4CD"
+		},
+		"TF_EVENT_INFO_VIEW_INFO": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 0,
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+		"TF_EVENT_INFO_VIEW_BOTTOM": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_GAME_EVENTS_VIEW_HOME": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true,
+			"textAlignH": "RIGHT"
+		},
+		"TF_GAME_EVENTS_VIEW_AWAY": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+		"TF_GAME_EVENTS_VIEW_MESSAGE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true,
+			"textAlignH": "CENTER"
+		},
+		"TF_GAME_EVENTS_VIEW_SCORE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "0x25C4CD",
+			"textAlignH": "CENTER"
+		},
+		"TF_GAME_EVENTS_ROW_DP": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "0x25C4CD",
+            "forceCaps": true
+		},
+		"TF_GOAL_SCORED_VIEW_KIT": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_YELLOW"
+		},
+		"TF_GOAL_SCORED_VIEW_PLAYER": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_GOAL_SCORED_VIEW_MINUTE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_GOAL_SCORED_VIEW_BOTTOM": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_INJURY_BOOKING_VIEW_KIT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_YELLOW"
+		},
+		"TF_INJURY_BOOKING_VIEW_PLAYER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_INJURY_BOOKING_VIEW_BOTTOM": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		
+		
+		
+		"TF_MATCH_INFO_VIEW_HOME": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_MATCH_INFO_VIEW_AWAY": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_MATCH_INFO_VIEW_STADIUM": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCH_INFO_VIEW_VS": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCH_INFO_VIEW_TITLE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		
+		"TF_MATCH_INFO_NPC_VIEW_TOP": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCH_INFO_NPC_VIEW_TITLE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},		
+		
+		"TF_SKIP_NIS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		
+		"TF_SUBSITUTION_VIEW_SUB_IN": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+		"TF_SUBSITUTION_VIEW_SUB_IN_NUM": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "0x25C4CD",
+			"textAlignH": "RIGHT"
+		},
+		"TF_SUBSITUTION_VIEW_SUB_OUT": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+		"TF_SUBSITUTION_VIEW_SUB_OUT_NUM": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "0x25C4CD",
+			"textAlignH": "RIGHT"
+		},
+		
+		"TF_SUBSITUTION_VIEW_TITLE": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCH_CREDIT_DISPLAY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_MATCH_FACTS_ROW_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_MATCH_FACTS_ROW_VALUE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_NOTIFICATION_ICON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+
+		"TF_SEARCH_ROW": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TILE_BONUS_VALUE_L": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TILE_BONUS_VALUE_S": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 22,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TILE_BONUS_DESC_MG": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_MEDIUM_GRAY"
+		},
+		"TF_TILE_BONUS_DESC_DG": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_TILE_BONUS_DESC_B": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CONTROLS_ROW": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_BLUE"
+		},
+		"TF_CONTROLS_ROW_TITLE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_DARK_BLUE"
+		},
+		"TF_AVATAR_LINK": {
+			"fontFace": "$FONT_TITLE",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_NEWS_BOTTOM": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_NEWS_COMMENT_ROW_COMMENT": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_NEWS_COMMENT_ROW_DATA": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 11,
+			"fontColor": "$COLOR_MEDIUM_GRAY"
+		},
+		"TF_NEWS_ITEM": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SQUAD_BUILDER_ROW": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_VIDEO_PROGRESS_BAR": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CONTROL_SELECT_BTN_IDLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_CONTROL_SELECT_BTN_SELECTED": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_CONTROL_SELECT_BTN_HIGHLIGHTED": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_BODY_HIGHLIGHT",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_FEATURE_PACK_INFO": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_FEATURE_PACK_TITLE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 21,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_FEATURE_PACK_LIMITED_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_FEATURE_PACK_LIMITED_AMOUNT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_FEATURE_PACK_GLOBAL_AMOUNT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_FEATURE_PACK_POINT_SALES": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_FEATURE_PACK_COINS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_MATCH_HIGHLIGHTS_ROW_HIGHLIGHT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_MATCH_HIGHLIGHTS_ROW": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+
+
+
+
+
+		"TF_MATCH_INFO_NPC_VIEW_BOTTOM": {
+			"fontFace": "$FONT_TIMER",
+			"fontSize": 18,
+			"fontColor": "0x25C4CD",
+            "forceCaps": true,
+			"textAlignH": "CENTER"
+		},
+		
+		"TF_ENGLAND_VIEW_TEAM": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_ENGLAND_VIEW_FORMATION": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 20,
+			"fontColor": "0x25C4CD",
+			"textAlignH": "CENTER"
+		},
+		"TF_ENGLAND_VIEW_TITLE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 22,
+			"fontColor": "0x25C4CD"
+		},
+
+		"TF_STARTING11_VIEW_NUM_LINEUP": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 17,
+			"fontColor": "0x25C4CD",
+			"textAlignH": "RIGHT"
+		},
+		"TF_STARTING11_VIEW_NAME_LINEUP": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+
+		"TF_STARTING11_VIEW_NUM_POS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 17,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_STARTING11_VIEW_NAME_POS": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 15,
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true,
+			"textAlignH": "CENTER"
+		},
+
+
+
+
+
+		"TF_SCOREBOARD_SUBSTITUTIONS_VIEW": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+            "forceCaps": true
+		},
+		"TF_FILTER_CATEGORY": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$TILE_COLOR_LABEL",
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_SELECTION_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_CELL_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_CELL_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_FILTER_CELL_LABEL_RIGHT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "RIGHT"
+		},
+		"TF_ACCOMPLISHMENT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PACK_COMPONENT_PACK_INFO": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_PACK_COMPONENT_PACK_DESC": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_PACK_COMPONENT_PACK_TITLE": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_PACK_COMPONENT_PACK_TITLE_ALT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_PACK_COMPONENT_LIMITED_LABEL_TOP": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PACK_COMPONENT_LIMITED_LABEL_BOTTOM": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": 22,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PACK_COMPONENT_LIMITED_AMOUNT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 15,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PACK_COMPONENT_AMOUNT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PACK_COMPONENT_LIMITED_INFO": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_PACK_COMPONENT_BUY": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PACK_COMPONENT_DISABLED": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PACK_COMPONENT_PACK_INFO_EXPIRED": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_LIGHT_GRAY"
+		},
+		"TF_PACK_COMPONENT_PACK_TITLE_EXPIRED": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_PACK_HIGHLIGHTS_EXPIRED_ALT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_PACK_HIGHLIGHTS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_PACK_HIGHLIGHTS_EXPIRED": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_PACK_COMPONENT_TIME": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_PACK_PURCHASE_LIMIT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_PACK_ITEM_DETAILS": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -1
+		},
+		"TF_PACK_ITEM_DETAILS_EXPIRED": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -1
+		},
+		"TF_TABS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_STORE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_STORE_BUTTON_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_MATCH_CREDIT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 13,
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_CREDIT_TIMER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_PAID_CREDITS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 15,
+			"fontColor": "$COLOR_GREEN_CREDITS"
+		},
+		"TF_LOADING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SPLASH_DISCLAIMER": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 22,
+			"fontColor": "$TILE_COLOR_VALUE",
+			"leading": -4
+		},
+		"TF_SPLASH_PRESS_START": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_INTRO_SUBTITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASON_HEADER_BOLD": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SEASON_HEADLINE_BOLD": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$TILE_COLOR_VALUE"
+		},
+		"TF_SEASON_SELECT": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": 35,
+			"fontColor": "$TILE_COLOR_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		
+		
+		
+		"TF_LIVE_TILE_HEADLINE_BOLD": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_HIGHLIGHTED": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_SMALL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_SMALL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_BOLD_HIGHLIGHTED_SMALL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_HEADLINE_HIGHLIGHTED_SMALL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"leading": -4
+		},
+		"TF_LIVE_TILE_SUBHEADLINE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$TILE_COLOR_SUBHEADLINE",
+			"leading": -5
+		},
+		"TF_LIVE_TILE_BODY": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 15,
+			"fontColor": "$TILE_COLOR_BODY",
+			"leading": -3
+		},
+		"TF_LIVE_TILE_STATUS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_LIVE_TILE_FEEDBACK_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$TILE_COLOR_LABEL"
+		},
+		"TF_LIVE_TILE_FEEDBACK_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_GIFT_OVERLAY_HEADLINE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER",
+			"leading": -3
+		},
+		"TF_GIFT_OVERLAY_SUBHEADLINE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TUTORIAL_DESCRIPTION",
+			"fontColor": "$TILE_COLOR_SUBHEADLINE",
+			"leading": -2
+		},
+		"TF_SEASON_TILE_FEEDBACK_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEASON_TILE_FEEDBACK_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_LIVE_TILE_SUBFEEDBACK_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 13,
+			"fontColor": "$TILE_COLOR_LABEL"
+		},
+		"TF_LIVE_TILE_SUBFEEDBACK_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$TILE_COLOR_VALUE"
+		},
+		"TF_MENU_BUTTONS_WHITE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_MENU_BUTTONS_BLACK": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_COMBO_BOX": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_COMBO_BOX_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_COMBO_BOX_SELECTED": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_ACCORDION": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_ACCORDION_HIGHLIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_UNASSIGNED_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_UNASSIGNED_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_UNASSIGNED_BUTTON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -3
+		},
+		"TF_UNASSIGNED_COINS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_GOLD"
+		},
+		"TF_UNASSIGNED_COMBOBOX_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_CATEGORY_BRONZE_PACK_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BRONZE_PACKS",
+			"leading": -4
+		},
+		"TF_CATEGORY_SILVER_PACK_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_SILVER_PACKS",
+			"leading": -4
+		},
+		"TF_CATEGORY_GOLD_PACK_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_GOLD_PACKS",
+			"leading": -4
+		},
+		"TF_CATEGORY_SPECIAL_PACK_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_SPECIAL_PACKS",
+			"leading": -4
+		},
+		"TF_CATEGORY_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_CATEGORY_DESCRIPTION": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_CONSUMABLES_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER",
+			"leading": -5
+		},
+		"TF_SQUAD_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TEAM_NAME_WHITE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TEAM_STATS_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_TEAM_STATS_LABEL_WHITE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_DARK_BLUE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_TEAM_STATS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TEAM_STATS_RIGHT": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_TEAM_STATS_WHITE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_COMBOBOX_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_COMBOBOX_LABEL_WHITE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PLAYER_INFO": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_ITEM_INDEX": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SEARCH_BUTTON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SUB_PANEL_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_POSITION_LABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_COMPARISON_TITLE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_COMPARISON_LABELS": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_COMPARISON_STATS_RED": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_COMPARISON_STATS_BLUE_NEUTRAL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_COMPARISON_STATS_BLUE_POSITIVE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_POSITIVE_COMPARE",
+			"textAlignH": "CENTER"
+		},
+		"TF_COMPARISON_STATS_BLUE_NEGATIVE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_NEGATIVE_COMPARE",
+			"textAlignH": "CENTER"
+		},
+		"TF_INVALID_CONSUMABLES": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_DARK_RED",
+			"textAlignH": "CENTER"
+		},
+		"TF_SOCIAL_WALL_TOGGLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_POINTS_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_BOX_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_LABEL_RED": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_RED_TEXT"
+		},
+		"TF_LABEL_GRAY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_LABEL_GREEN": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_GREEN_TEXT"
+		},
+		"TF_LABEL_GOLD": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_GOLD_TEXT"
+		},
+		"TF_PRIZES_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_STEP_POINTS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_VALUE": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CURRENCY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_TITLE_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -5
+		},
+		"TF_VALUE_LARGE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": 38,
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CURRENCY_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 22,
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_STEP_POINTS_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_STEP_TITLE_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_POSITION": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"PLAYER_BRONZE_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_STATLABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_BRONZE_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_RARE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_RARE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_RARE_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_RARE_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_RARE_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_RARE_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_RARE_POSITION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_BRONZE_RARE_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_RARE_STATLABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_BRONZE_RARE_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_TOTW_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_TOTW_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_TOTW_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_TOTW_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_BRONZE_TOTW_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_TOTW_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_TOTW_POSITION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_BRONZE_TOTW_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_BRONZE_TOTW_STATLABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_BRONZE_TOTW_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_POSITION": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"PLAYER_SILVER_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_STATLABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_SILVER_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_RARE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_RARE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_RARE_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_RARE_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_RARE_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_RARE_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_RARE_POSITION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_SILVER_RARE_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_RARE_STATLABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_SILVER_RARE_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_TOTW_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_TOTW_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_TOTW_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_TOTW_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_SILVER_TOTW_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_TOTW_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_TOTW_POSITION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_SILVER_TOTW_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_SILVER_TOTW_STATLABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_SILVER_TOTW_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_POSITION": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"PLAYER_GOLD_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_STATLABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_GOLD_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_RARE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_RARE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_RARE_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_RARE_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_RARE_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_RARE_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_RARE_POSITION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_GOLD_RARE_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_RARE_STATLABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_GOLD_RARE_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_TOTW_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_TOTW_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_TOTW_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_TOTW_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_GOLD_TOTW_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_TOTW_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_TOTW_POSITION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_GOLD_TOTW_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_GOLD_TOTW_STATLABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_GOLD_TOTW_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_RARE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_RARE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_RARE_SHORTNAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_RARE_FORMATION": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"PLAYER_RARE_RATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_RARE_SMALLRATING": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 17,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_RARE_POSITION": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALLEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"PLAYER_RARE_STATVALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"PLAYER_RARE_STATLABEL": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"PLAYER_RARE_STAMINA": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 13,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"CONSUMABLE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"CONSUMABLE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"CONSUMABLE_TYPE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"CONSUMABLE_STAT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"CONSUMABLE_RARE_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"CONSUMABLE_RARE_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"CONSUMABLE_RARE_TYPE": {
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"CONSUMABLE_RARE_STAT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_ITEM_LIST_LABEL": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_TEAMKITSELECT_VERSUS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_AUCTIONHOUSE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_AUCTION_ITEMS",
+			"fontColor": "$COLOR_DARK_GRAY"
+		},
+		"TF_TEAMKITSELECT_MESSAGE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_DARK_RED",
+			"textAlignH": "CENTER",
+			"leading" : -4
+		},
+		"TF_TEAMKITSELECT_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 26,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAMKITSELECT_SQUAD_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAMKITSELECT_SELECTED_SQUAD": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAMKITSELECT_COUNTRY_NAME": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TEAMKITSELECT_LEAGUE_NAME": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TEAMKITSELECT_READY": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 60,
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAMKITSELECT_GREEN_MESSAGE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_GREEN",
+			"textAlignH": "CENTER"
+		},
+		"TF_SUBHEADER_CENTERED": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_SUBS_DRAWER_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_DARK_BLUE"
+		},
+		"TF_SUBS_DRAWER_RIGHT_ALIGN_LABEL": {
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_DARK_BLUE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_DOWNLOAD_PROGRESS_BAR": {
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_LABEL_HIGHLIGHT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_USER_BIO_CATEGORY_LABEL":
+		{
+			"fontTitle":"$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor":"$COLOR_DARK_GRAY"
+		},
+		"TF_USER_BIO_STAT_LABEL":
+		{
+			"fontTitle":"$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor":"$COLOR_BLACK"
+		},
+		"TF_USER_BIO_STAT_VALUE":
+		{
+			"fontTitle":"$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor":"$COLOR_BLACK"
+		},
+		"TF_USER_BIO_LEVEL_VALUE":
+		{
+			"fontTitle":"$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor":"$COLOR_BLACK"
+		},
+		"TF_GRIDBUTTON_DESCRIPTION":
+		{
+			"fontTitle":"$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor":"$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_GRIDBUTTON_DESCRIPTION_HIGHLIGHT":
+		{
+			"fontTitle":"$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor":"$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_LABEL_HIGHLIGHT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		
+		"TF_TEAM_SELECT_RATING": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAM_SELECT_RATING_LABELS": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAM_SELECT_RATING_VALUES": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		
+		"TF_TEAM_INFO_PANEL_VALUE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_TEAM_INFO_PANEL_TEAM_NAME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_PLAY_OR_SIM_BUTTONS": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PLAY_OR_SIM_MATCH_TYPE_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_PLAY_OR_SIM_MATCH_DIFF_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_OR_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_MODE_LABEL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE"
+		},
+		"TF_SELECT_MODE_LABEL_LARGE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_WELCOME_TITLE",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+            		"alignH": "CENTER",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_MODE_LABEL_GENERAL_HELP": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SELECT_FAVORITE_LABEL_HIGHLIGHT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_WELCOME": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 65,
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_PLAYER": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": 32,
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_LEAGUE_TOGGLE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 20,
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+            "forceCaps": true
+		},
+		"TF_SQDMGMT_SELECT_FAVORITE_LEAGUE_TOGGLE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 27,
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_FAVORITE_TEAM_TOGGLE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 25,
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+            "forceCaps": true
+		},
+		"TF_SELECT_TEAM_STAT_LABEL": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 30,
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"textAlignH": "CENTER"
+		},
+		"TF_SELECT_TEAM_STAT_VALUE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 45,
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"textAlignH": "CENTER"
+		},
+		"TF_FB_LOGIN_BUTTONS": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 25,
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_FB_LOGIN_MESSAGE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -4
+		},
+		"TF_FB_REWARD_MESSAGE": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": 25,
+			"fontColor": "$COLOR_BLACK",
+			"leading": -4
+		},
+		"TF_AUCTIONHOUSE_TIMER_SMALL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLUE"
+		},
+		"TF_AUCTIONHOUSE_PRICE_SMALL": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALL",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SIM_PAUSE_TITLE":{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SIM_PAUSE_SCORE":{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_AUCTION_ITEMS",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_AH_GEN_BUTTON": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AH_BID_BUTTON_MAIN": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AH_BID_BUTTON_SUB": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_AH_BID_TEXT": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_AH_BIG_TIMER_TEXT": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "LEFT"
+		},
+		"TF_AH_BID_TEXT_CENTERED_GRAY": {
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_MEDIUM_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_LABEL_BIG_BINARY_TOGGLE_WHITE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_LABEL_BIG_BINARY_TOGGLE_BLACK":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_TOUCH_CONTROLS_WHITE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_PLAYER_EXCHANGE_RESULT_INFO_BLACK":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_PLAYER_EXCHANGE_RESULT_INFO_WHITE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SIM_TUTORIAL":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"leading": -4
+		},
+		"TF_EDIT_FILTER_BUTTON": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_LABEL_FILTER_SUB_HEADING":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_TINY_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR"
+		},
+		"TF_SWAP_LABEL":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SWAP_FILTER_TYPE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_LABEL_FILTER_LARGE_POSITION":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGE_POSITION",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER"
+		},
+		"TF_SIMULATION_SCORE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"textAlignH": "CENTER",
+			"textAlignV": "CENTER"
+		},
+		"TF_CONSUMABLES_TYPE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_CONSUMABLES_SUBTITLE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -1
+		},
+		"TF_CONSUMABLES_BIG_VALUES":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_BIG_COINS",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_CONSUMABLES_SMALL_VALUES":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"leading": -1
+		},
+		"TF_CONSUMABLES_BIG_VALUES_GREEN":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_BIG_COINS",
+			"fontColor": "$COLOR_GREEN"
+		},
+		"TF_CONSUMABLES_SMALL_VALUES_GREEN":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_GREEN",
+			"leading": -1
+		},
+		"TF_NUM_CONSUMABLES_CENTERED_BLUE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_NUM_CONSUMABLES_CENTERED_BLACK":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_CONSUMABLES_SMALL_VALUES_RIGHT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_MEDIUM",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "RIGHT"
+		},
+		"TF_RARE_ITEM_POPUP_TEXT":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LEVEL_UP_TITLE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_PLAYER_TITLE":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_BIG_COINS",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SKILL_PLAYER_DESCRIPTION":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_DARK_GRAY",
+			"leading": -3
+		},
+		"TF_SKILL_PLAYER_SELECTED":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_PLAYER_TOPPICK":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_PLAYER_NONE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_HUD_LARGE_TEXT",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": 0
+		},
+		"TF_KEYBOARD_INVALID_CHARS":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGER_HEADER",
+			"fontColor": "0xCC3300",
+			"leading": -3.0,
+			"textAlignH": "CENTER"
+		},
+		"ScrimOverlayMargins":
+		{
+			"marginTop": -2.0,
+			"marginBottom": -2.0,
+			"marginLeft": -2.0,
+			"marginRight": -2.0
+		},
+		"TF_SKILL_GAMES_COMP_TITLE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR"
+		},
+		"TF_SKILL_GAMES_COMP_SUBTITLE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$STD_SUBHEADER_TEXT_COLOR"
+		},
+		"TF_SKILL_GAMES_COMP_TITLE_DETAIL":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_COMP_SUBTITLE_DETAIL":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_COMP_TIMER":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SKILL_GAMES_COMP_TIMER_WARNING":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_COMP_TIMER_COMING_SOON":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_COMING_SOON"
+		},
+		"TF_SKILL_GAMES_COMP_DIFFICULTY":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_COMP_DESCRIPTION":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"leading": -2
+		},
+		"TF_SKILL_GAMES_COMP_REWARD_DESCRIPTION":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_COMP_SCORE":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$STD_SUBHEADER_TEXT_COLOR"
+		},
+		"TF_SKILL_GAMES_COMP_SCORE_VALUE":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$STD_HEADER_TEXT_COLOR",
+			"textAlignH": "RIGHT"
+		},
+		"TF_SKILL_GAMES_COMP_STATUS_READY":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_COMP_STATUS_COMPLETE":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_COMP_STATUS_REQS_NOT_MET":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGE",
+			"fontColor": "$COLOR_DARK_RED",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_COMP_COMING_SOON":
+		{
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER",
+			"leading": -2
+		},
+		"TF_SKILL_GAMES_COMP_REWARD":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_COMP_PLAY":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_TITLE": {
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$TILE_COLOR_HEADER_HIGHLIGHT"
+		},
+		"TF_SKILL_GAMES_TILE_REWARD_DESCRIPTION":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_TILE_TIMER":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SKILL_GAMES_TILE_TIMER_WARNING":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_TILE_DIFFICULTY":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"tileTimerBannerWhite":
+		{
+			"sliceLeft": 2.0,
+			"sliceRight": 85.0,
+			"type": "$tileTimerBannerWhite"
+		},
+		"tileTimerBannerRed":
+		{
+			"sliceRight": 85.0,
+			"type": "$tileTimerBannerRed"
+		},
+		"skillGameTileBacking":
+		{
+			"sliceLeft": 256.0,
+			"sliceRight": 8.0,
+			"type": "$tileBacking"
+		},
+		"TF_SKILL_GAMES_INS_TITLE":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE"
+		},
+		"TF_SKILL_GAMES_INS_DESCRIPTION":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_MEDIUM_HEADER",
+			"fontColor": "$TILE_COLOR_SUBHEADLINE",
+			"textAlignH": "CENTER",
+			"leading": 0
+		},
+		"TF_SKILL_GAMES_INS_REWARD":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER",
+			"leading": -5
+		},
+		"TF_SKILL_GAMES_INS_SCORE":
+		{
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_WELCOME_TITLE",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"SkillGamePauseBanner":
+		{
+			"type": "$bannerPause",
+			"overflowTop": 20.0,
+			"overflowLeft": 28.0,
+			"overflowRight": 28.0,
+			"overflowBottom": 20.0
+		},
+		"SkillGameInstructionsBanner":
+		{
+			"type": "$bannerStart",
+			"overflowTop": 20.0,
+			"overflowLeft": 29.0,
+			"overflowRight": 28.0,
+			"overflowBottom": 20.0
+		},
+		"SkillGameRewardsWinBanner":
+		{
+			"type": "$SkillGamesRewardsWinBanner",
+			"overflowTop": 0.0,
+			"overflowLeft": 61.0,
+			"overflowRight": 61.0,
+			"overflowBottom": 30.0
+		},
+		"SkillGameRewardsTryAgainBanner":
+		{
+			"type": "$SkillGamesRewardsTryAgainBanner",
+			"overflowTop": 20.0,
+			"overflowLeft": 28.0,
+			"overflowRight": 28.0,
+			"overflowBottom": 20.0
+		},
+		"SkillGameRewardsWinPlayer":
+		{
+			"type": "$SkillGamesRewardsWinPlayer",
+			"overflowLeft": 30.0
+		},
+		"SkillGameRewardsTryAgainPlayer":
+		{
+			"type": "$SkillGamesRewardsTryAgainPlayer",
+			"overflowLeft": -75.0
+		},
+		"SkillGameRewardsXPIcon":
+		{
+			"type": "$RewardXPIcon",
+			"overflowTop": 7.0,
+			"overflowLeft": 6.0,
+			"overflowRight": 6.0,
+			"overflowBottom": 7.0
+		},
+		"SkillGameRewardsCoinsIcon":
+		{
+			"type": "$RewardCoinsIcon",
+			"overflowTop": 0.0,
+			"overflowLeft": 6.0,
+			"overflowRight": 6.0,
+			"overflowBottom": 7.0
+		},
+		"TF_SKILL_GAMES_REWARDS_TITLE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LEVEL_UP_TITLE",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_REWARDS_SCORE":
+		{
+			"fontFace": "$FONT_TITLE",
+			"fontSize": "$FONT_SIZE_LARGEST_HEADER",
+			"fontColor": "$COLOR_LIGHT_BLUE",
+			"textAlignH": "CENTER"
+		},
+		"TF_SKILL_GAMES_REWARDS_DESCRIPTION":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_BIG_COINS",
+			"fontColor": "$TILE_COLOR_VALUE",
+			"leading": -10
+		},
+		"TF_SKILL_GAMES_REWARDS_SECONDARY":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LEVEL_UP_TEXT",
+			"fontColor": "$TILE_COLOR_VALUE"
+		},
+		"TF_SKILL_GAMES_REWARDS_BUTTON_LABEL":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_LEVEL_UP_TEXT",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_SKILL_GAMES_REWARDS_LABEL":
+		{
+			"fontFace": "$FONT_REGULAR",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SKILL_GAMES_REWARDS_TRY_AGAIN_LABEL":
+		{
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": "$FONT_SIZE_LARGE_HEADER",
+			"fontColor": "$COLOR_BLACK"
+		},
+		"TF_SKILL_GAMES_REWARDS_TRY_AGAIN_POINTS":
+		{
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 65,
+			"fontColor": "$COLOR_LIGHT_RED"
+		},
+		"TF_SKILL_GAMES_START":
+		{
+			"fontFace": "$FONT_HEADER",
+			"fontSize": "$FONT_SIZE_BIG_TITLE",
+			"fontColor": "$COLOR_WHITE"
+		},
+		"TF_QUICK_EVENT_INFO_TRIES_LABEL":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_SMALLEST_HEADER",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "RIGHT"
+		},
+		"TF_QUICK_EVENT_INFO_TRIES_VALUE":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_HUD_LARGE_TEXT",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "LEFT"
+		},
+		"TF_QUICK_EVENT_INFO_POINTS_LABEL":
+		{
+			"fontFace": "$FONT_BODY",
+			"fontSize": "$FONT_SIZE_LARGEST",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_QUICK_EVENT_INFO_POINTS_VALUE":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_QUICK_EVENT_INFO_TIME_REMAINING":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_HUD_LARGE_TEXT",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+		"TF_QUICK_EVENT_INFO_TIME_REMAINING_WHITE":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_HUD_LARGE_TEXT",
+			"fontColor": "$COLOR_WHITE",
+			"textAlignH": "CENTER"
+		},
+		"TF_QUICK_EVENT_INFO_BONUS_LABEL":
+		{
+			"fontFace": "$FONT_BOLD",
+			"fontSize": "$FONT_SIZE_SMALL_HEADER",
+			"fontColor": "$COLOR_BLACK",
+			"textAlignH": "CENTER"
+		},
+
+		"TF_QUICK_EVENT_COUNT_DOWN": {
+			"fontFace": "$FONT_KNULMEDIUM",
+			"fontSize": 160,
+			"fontColor": "$COLOR_WHITE"
+		}
+	}
+}

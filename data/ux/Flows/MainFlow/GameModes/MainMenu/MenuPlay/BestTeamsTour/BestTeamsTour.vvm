@@ -1,0 +1,4 @@
+{
+	"dds": ["BestTeamsTour.dd"],
+    "views": [["gfx", {"layout": "BestTeamsTour.layout"}]]
+}

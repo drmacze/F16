@@ -1,0 +1,198 @@
+/*-- Layout Design MVNPROD YouTube --*/
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		        "script" : [ { "anim" : "SCREEN_SHOW" } ]
+		    },
+		    {
+		       	"name" : "hide",
+		       	"script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	      }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$Bg_Liga"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "alpha": 0.1,
+            "type": "$Bg_Smoke"
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+               {
+                    "commonName": "GenericButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": 0,
+                    "marginLeft": 30,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 0,
+                    "marginLeft": 86,
+                    "fontSize": 14,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "styles": ["TF_MATCH_REVEAL_TEAM_NAME"],
+                    "text": "Transfer"
+                }
+            ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Teams",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -20,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "color": "0x1C1C1C",
+                    "cornerRaduis": 25,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 130,
+                    "marginLeft": 100,
+                    "width": 405,
+                    "height": 340,
+                    "color": "0xFFFFFF",
+                    "cornerRaduis": 25,
+                    "alpha": 0.1
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 130,
+                    "marginLeft": 630,
+                    "width": 2,
+                    "height": 340,
+                    "color": "0x555555",
+                    "alpha": 0.3
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 50,
+                    "marginLeft": 300,
+                    "width": 270,
+                    "height": 270,
+                    "type": "$l13"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 7,
+                    "marginLeft": 0,
+                    "fontFace": "$MONTBLANC_TRIAL_BOLD",
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Pilih Tim"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 0,
+                    "fontFace": "$FONT_DINPROBOLD",
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "alpha": 0.7,
+                    "text": "Sekarang pilih tim tersisa yang ingin Anda miliki di liga yang Anda buat."
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 100,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Tim ∆"
+                 },
+                 {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 100,
+                    "marginLeft": 515,
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Nilai"
+                 },
+                 {
+                    "commonName": "VerticalList",
+                    "name": "teamlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 131,
+                    "marginLeft": 100,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 5,
+                    "rowChangeAction": "act_match_select",
+                    "highlightable": true,
+                    "row": "TeamCupRow",
+                    "rowHeight": 67.5,
+                    "rowWidth": 544,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_team_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/

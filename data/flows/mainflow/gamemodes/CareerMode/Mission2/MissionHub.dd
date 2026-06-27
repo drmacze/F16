@@ -1,0 +1,81 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_tab_mission1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission1"
+            }
+        },
+        {
+            "viewname": "act_tab_mission2",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission2"
+            }
+        },
+        {
+            "viewname": "act_tab_mission3",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission3"
+            }
+        },
+        {
+            "viewname": "act_tab_mission4",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission4"
+            }
+        },
+        {
+            "viewname": "act_tab_mission5",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tab_mission5"
+            }
+        },
+        
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        
+        {
+            "viewname": "act_setup",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_setup"
+            }
+        },
+        
+        {
+            "viewname": "act_missionmode1",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_missionmode1"
+            }
+        }
+        
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_live_menu",
+            "binding": "bnd_live_menu",
+            "type": "object"
+        }
+    ]
+}

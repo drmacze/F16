@@ -1,0 +1,39 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_key_press",
+            "actionname": "act_key_press"
+        },
+        {
+            "viewname": "act_mouse_click",
+            "actionname": "act_mouse_click"
+        },
+		{
+			"viewname": "act_close",
+			"actionname": "act_close"
+		}
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_overlay_title",
+            "type": "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag": "LTXT_SET_CONTROLS"
+            }
+        },
+        {
+            "viewname": "bnd_message",
+            "binding": "bnd_message",
+            "type": "string"
+        },
+		{
+            "viewname": "bnd_overlay_footer",
+            "binding": "bnd_overlay_footer",
+            "type": "object_array"
+        }
+    ]
+}

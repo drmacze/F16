@@ -1,0 +1,16 @@
+{
+    "commonName":  "Asset",
+    "type":        "$SixSecondIndicator",
+    "alignH":      "RIGHT",
+    "alignV":      "TOP",
+    "marginTop":   60,
+    "marginRight": 30,
+    "visible":     false,
+    "bindings":
+    [
+        {
+            "property": "visible",
+            "binding":  "bnd_visible"
+        }
+    ]
+}

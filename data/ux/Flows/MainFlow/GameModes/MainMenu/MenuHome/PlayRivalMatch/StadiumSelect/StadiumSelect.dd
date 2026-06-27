@@ -1,0 +1,53 @@
+{
+    "actions":
+    [
+         {
+            "viewname": "act_advance",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_advance"
+            }
+        },
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        
+        {
+            "viewname":   "act_stadium_previous",
+            "actionname": "act_stadium_previous"
+        },
+        {
+            "viewname":   "act_stadium_next",
+            "actionname": "act_stadium_next"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_stadium_name",
+            "binding":  "bnd_stadium_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding":  "bnd_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding":  "bnd_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_stadium_bg",
+            "binding":  "bnd_stadium_bg",
+            "type":     "object"
+        }
+    ]
+}

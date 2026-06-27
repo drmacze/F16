@@ -1,0 +1,24 @@
+local CommonNavVars = {}
+CommonNavVars.GAMEMODES = {}
+CommonNavVars.GAMEMODES.REAL = "real"
+CommonNavVars.GAMEMODES.FUT = "fut"
+CommonNavVars.GAMEMODES.FTF = "ftf"
+CommonNavVars.FLOWS = {}
+CommonNavVars.FLOWS.ONLINE = "online"
+CommonNavVars.FLOWS.OFFLINE = "offline"
+CommonNavVars.TYPES = {}
+CommonNavVars.TYPES.SEASONS = "seasons"
+CommonNavVars.TYPES.TOURNAMENTS = "tournaments"
+CommonNavVars.TYPES.FRIENDLY = "friendly"
+CommonNavVars.TYPES.FTF = "ftf"
+CommonNavVars.TYPES.DEBUG = "debug"
+CommonNavVars.GAME_STATES = {}
+CommonNavVars.GAME_STATES.PAUSE = "pause"
+CommonNavVars.GAME_STATES.HALFTIME = "halftime"
+CommonNavVars.GAME_STATES.FULLTIME = "fulltime"
+CommonNavVars.GAME_STATES.OT_HALFTIME = "othalftime"
+CommonNavVars.GAME_STATES.OT_FULLTIME = "otfulltime"
+CommonNavVars.GAME_STATES.SHOOTOUT = "shootout"
+CommonNavVars.GAME_STATES.SHOOTOUT_PAUSE = "shootoutpause"
+CommonNavVars.GAME_STATES.POSTMATCH = "postmatch"
+return CommonNavVars

@@ -1,0 +1,363 @@
+{
+    "name": "MainHub",
+    "type": "parallel",
+    "states":
+    [
+        {
+            "states":
+            [
+                {
+                    "name": "InitHub",
+                    "onEnter":
+                    [
+                        ["showFEUI"],
+                        ["enableMainFlowLayerMouseInteraction", ["Widgets", true, false]],
+                        ["blockingLoadVVM", ["/flows/mainflow/widgets/extendeduserbio/loading/Loading.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_on_show_fe_ui_complete",
+                            "targets": ["Hub"]
+                        }
+                    ]
+                },
+                {
+                    "onEnter":
+                    [
+                        ["viewLayer", ["Gamemodes"]],
+                        ["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["updateUserPlateDisplayMode", ["full"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Hub",
+                            "onEnter":
+                            [
+                                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/MainHub.vvm", {}, { "viewType": "screen" }]],
+                                ["stateChange", ["ARENA"]],
+                                ["substateChange", ["SUBSTATE_NONE"]],
+                                ["updateUserPlateDisplayMode", ["full"]]
+                            ],
+                            "onExit":
+                            [
+                                ["unloadVVM", [{}, { "waitForNextView": ".enableScreenTransitions" }]]
+                            ],
+                            "states":
+                            [
+                                {
+                                    "name": "MenuKO",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [0]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/MenuKO/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_menu_tn",
+                                            "targets": ["MenuTN"]
+                                        },
+                                        {
+                                            "event": "evt_menu_cm",
+                                            "targets": ["MenuCM"]
+                                        },
+                                        {
+                                            "event": "evt_menu_pc",
+                                            "targets": ["MenuPC"]
+                                        },
+                                        {
+                                            "event": "evt_menu_rm",
+                                            "targets": ["MenuRM"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "MenuTN",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [1]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/MenuTN/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_menu_ko",
+                                            "targets": ["MenuKO"]
+                                        },
+                                        {
+                                            "event": "evt_menu_cm",
+                                            "targets": ["MenuCM"]
+                                        },
+                                        {
+                                            "event": "evt_menu_pc",
+                                            "targets": ["MenuPC"]
+                                        },
+                                        {
+                                            "event": "evt_menu_rm",
+                                            "targets": ["MenuRM"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "MenuCM",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [2]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/MenuCM/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_menu_ko",
+                                            "targets": ["MenuKO"]
+                                        },
+                                        {
+                                            "event": "evt_menu_tn",
+                                            "targets": ["MenuTN"]
+                                        },
+                                        {
+                                            "event": "evt_menu_pc",
+                                            "targets": ["MenuPC"]
+                                        },
+                                        {
+                                            "event": "evt_menu_rm",
+                                            "targets": ["MenuRM"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "MenuPC",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [3]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/MenuPC/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_menu_ko",
+                                            "targets": ["MenuKO"]
+                                        },
+                                        {
+                                            "event": "evt_menu_tn",
+                                            "targets": ["MenuTN"]
+                                        },
+                                        {
+                                            "event": "evt_menu_cm",
+                                            "targets": ["MenuCM"]
+                                        },
+                                        {
+                                            "event": "evt_menu_rm",
+                                            "targets": ["MenuRM"]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "MenuRM",
+                                    "onEnter":
+                                    [
+                                        ["setTabContext", [4]],
+                                        ["blockingLoadVVM", ["/flows/mainflow/gamemodes/MainMenu/MenuRM/PlayHub.vvm"]]
+                                    ],
+                                    "onExit":
+                                    [
+                                        ["unloadVVM"]
+                                    ],
+                                    "transitions":
+                                    [
+                                        {
+                                            "event": "evt_menu_ko",
+                                            "targets": ["MenuKO"]
+                                        },
+                                        {
+                                            "event": "evt_menu_tn",
+                                            "targets": ["MenuTN"]
+                                        },
+                                        {
+                                            "event": "evt_menu_cm",
+                                            "targets": ["MenuCM"]
+                                        },
+                                        {
+                                            "event": "evt_menu_pc",
+                                            "targets": ["MenuPC"]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_enter_ko",
+                            "targets": ["EnterKO"]
+                        },
+                        {
+                            "event": "evt_enter_tn",
+                            "targets": ["EnterTN"]
+                        },
+                        {
+                            "event": "evt_enter_cm",
+                            "targets": ["EnterCM"]
+                        },
+                        {
+                            "event": "evt_enter_pc",
+                            "targets": ["EnterPC"]
+                        },
+                        {
+                            "event": "evt_enter_md",
+                            "targets": ["EnterMD"]
+                        },
+                        {
+                            "event": "evt_enter_rm",
+                            "targets": ["EnterRM"]
+                        },
+                        {
+                            "event": "evt_enter_cl",
+                            "targets": ["EnterCL"]
+                        },
+                        {
+                            "event":   "evt_to_credits",
+                            "targets": ["Credits"]
+                        },
+                        {
+                            "event": "evt_customize",
+                            "targets": ["Customize"]
+                        },
+                        {
+                            "event":   "evt_news",
+                            "targets": ["News"]
+                        },
+                        {
+                            "event":   "evt_to_about",
+                            "targets": ["About"]
+                        }
+                    ]
+                },
+                {
+                    "name": "EnterKO",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuKO/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MenuKO"
+                    }
+                },
+                {
+                    "name": "EnterTN",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/QuickCup/CustomCup/CustomCup.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MenuTN"
+                    }
+                },
+                {
+                    "name": "EnterCM",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/Liga/Newgame/Newgame.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MenuCM",
+                        "out_exit_gamemode1": "MenuCM"
+                    }
+                },
+                {
+                    "name": "EnterPC",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/Career/CareerHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MenuPC"
+                    }
+                },
+                {
+                    "name": "EnterRM",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/ClassicMatch/ClassicMatch.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MenuRM"
+                    }
+                },
+                {
+                    "name": "EnterMD",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/MatchDay/MatchDay.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "EnterCL",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCL/Menu/MenuHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "Credits",
+                    "type": "external",
+                    "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/Credits/CreditsHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "RedirectTab6"
+                    }
+                },
+                {
+                    "name": "Customize",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/Customize/CustomizeHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "News",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/MainMenu/Customize/News/NewsHub.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                },
+                {
+                    "name": "About",
+                    "type": "external",
+                    "file": "/flows/mainflow/gamemodes/helpandabout/help/Help.nav",
+                    "outputs":
+                    {
+                        "out_exit_gamemode": "MainHub"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 445,
+                    "marginTop": 11,
+                    "width": 300,
+                    "height": 440,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "width": 335,
+                            "height": 377,
+                            "type": "$Tab_Cup_Select",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Panel",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 0,
+                            "height": 50,
+                            "width": 200,
+                            "children":
+                            [
+                                {
+                                    "commonName": "SimpleButton",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "marginLeft": 0,
+                                    "marginTop": 0,
+                                    "height": 108,
+                                    "width": 250,
+                                    "backgroundImage": "$Tab_Action_White",
+                                    "backgroundHighlightImage": "$Tab_Action_White",
+                                    "clickAction": "act_teamhub"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": -95,
+                                    "marginBottom": -1.5,
+                                    "width": 35,
+                                    "height": 35,
+                                    "type": "$SimMatchIcon16"  
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "alignV": "CENTER",
+                                    "alignH": "CENTER",
+                                    "marginLeft": 15,
+                                    "marginBottom": -3,
+                                    "fontSize": 18,
+                                    "fontColor": "0x151515",
+                                    "fontFace": "$CruyffSansBold",
+                                    "text": "Enter Development"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+         }
+     ]
+}

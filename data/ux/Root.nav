@@ -1,0 +1,367 @@
+{
+    "onEnter":
+    [
+        ["initDataSystems", ["data"]],
+        ["initViewSystems", ["view"]],
+        ["initScaleform"],
+		["initJuice"]
+    ],
+	"let": {"enableScreenTransitions": false},
+    "states":
+    [
+        {
+            "name": "Root",
+            "type": "parallel",
+            "onEnter":
+            [
+                ["createBranch", ["data"]],
+				["initBase"],
+                ["pushContext", ["data", "base"]],
+                ["lockBranch", ["data"]],
+
+                ["loadGfxModule", ["lib/Zinc"]],
+                ["loadGfxModule", ["lib/UxZinc"]],
+				["loadGfxModule", ["lib/libactuate"]],
+                ["loadGfxModule", ["lib/libfefowzinc"]],
+                ["loadGfxModule", ["ApplicationZinc"]],
+
+                ["createBranch", ["view"]],
+                ["createDefaultPresentationServices", ["default"]],
+                ["pushContext", ["view","default"]],
+                ["lockBranch", ["view"]],
+
+                ["addAudioContext", ["root"]],
+
+                ["loadVVM", ["/common/loc/LocalizedStrings.vvm"]],
+                ["loadVVM", ["/common/cursor/MouseCursor.vvm"]],
+                ["loadVVM", ["/helpprovider/HelpProvider.vvm"]],
+                ["loadVVM", ["/main/Viewport.vvm"]],
+				["loadVVM", ["/main/Root.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"],
+                ["unloadVVM"],
+                ["unloadVVM"],
+                ["unloadVVM"],
+                ["unloadVVM"],
+
+                ["unlockBranch", ["view"]],
+                ["popContext", ["view","default"]],
+                ["destroyDefaultPresentationServices"],
+                ["removeBranch", ["view"]],
+
+                ["unloadGfxModule", ["ApplicationZinc"]],
+                ["unloadGfxModule", ["lib/libfefowzinc"]],
+				["unloadGfxModule", ["lib/libactuate"]],
+                ["unloadGfxModule", ["lib/UxZinc"]],
+                ["unloadGfxModule", ["lib/Zinc"]],
+
+                ["unlockBranch", ["data"]],
+                ["popContext", ["data","base"]],
+                ["destroyBase"],
+                ["removeBranch", ["data"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "*debug_evt_reload",
+                    "targets": ["Root"]
+                }
+            ],
+            "states":
+            [
+                {
+                    "name": "Backgrounds",
+                    "type": "external",
+                    "file": "/flows/mainflow/backgrounds/backgrounds.nav"
+                },
+				{
+					"name": "DebugConsoleBranch",
+					"onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["debugConsole"]]
+                    ],
+					"onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+					"states":
+                    [
+                        {
+                            "name": "DebugConsole",
+                            "type": "external",
+                            "file": "/common/debugconsole/debugconsole.nav"
+                        }
+                    ]
+				},
+				{
+					"name": "CursorBranch",
+					"onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["controllerCursor"]]
+                    ],
+					"onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+					"states":
+                    [
+                        {
+                            "name": "Controller",
+                            "type": "external",
+                            "file": "/common/controller/controller.nav"
+                        }
+                    ]
+				},
+                {
+                    "name": "NonfatalBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["debug"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Nonfatal",
+                            "type": "external",
+                            "file": "/debug/nonfatal.nav"
+                        }
+                    ]
+                },
+				{
+                    "name": "NetworkStatusBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["networkstatus"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "NetworkStatus",
+                            "type": "external",
+                            "file": "/flows/mainflow/networkstatus/networkstatus.nav"
+                        }
+                    ]
+                },
+                {
+                    "name": "CaptchaBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["captcha"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Captcha",
+                            "type": "external",
+                            "file": "/flows/mainflow/captcha/captcha.nav"
+                        }
+                    ]
+                },
+                {
+                    "name": "LoaderBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["loader"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Loader",
+                            "type": "external",
+                            "file": "/common/loader/loader.nav"
+                        }
+                    ]
+                },
+                {
+                    "name": "WarningBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["warnings"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Warning",
+                            "type": "external",
+                            "file": "/common/warning/warning.nav"
+                        }
+                    ]
+                },
+                {
+                    "name": "OverlayBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["overlays"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Overlay",
+                            "type": "external",
+                            "file": "/common/overlay/overlay.nav"
+                        }
+                    ]
+                },
+                {
+                    "name": "KeyboardOverlayBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["keyboard"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Keyboard",
+                            "type": "external",
+                            "file": "/common/keyboard/keyboard.nav"
+                        }
+                    ]
+                },
+                {
+                    "name": "MainBranch",
+                    "initial":
+                    {
+                        "targets": ["BootFlow"]
+                    },
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["main"]]
+                    ],
+                    "onExit":
+                    [
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "BootFlow",
+                            "type": "external",
+                            "file": "/flows/bootflow/bootflow.nav",
+                            "outputs":
+                            {
+                                "out_metrics_flow": "in_metrics",
+                                "out_next_flow": "in_mainmenu"
+                            }
+                        },
+                        {
+                            "name": "MainFlow",
+                            "type": "external",
+                            "file": "/flows/mainflow/mainflow.nav",
+							"inputs":
+                            {
+                                "in_metrics": "MetricsMode",
+                                "in_mainmenu": "MainMenu"
+                            }
+                        }
+                    ]
+                },
+				{
+					"name": "DragMountBranch",
+					"onEnter":
+					[
+						["createBranch", ["data"]],
+                        ["viewLayer", ["dragMount"]],
+						["loadVVM", ["/common/dragmount/DragMount.vvm"]]
+					],
+					"onExit":
+					[
+						["unloadVVM"],
+						["removeBranch", ["data"]]
+					]
+				},
+                {
+                    "name": "AutoSaveBranch",
+                    "onEnter":
+                    [
+                        ["createBranch", ["data"]],
+                        ["viewLayer", ["autosave"]],
+                        ["blockingLoadVVM", ["/common/autosave/AutoSave.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"],
+                        ["removeBranch", ["data"]]
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "Idle",
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_autosave_exit_game",
+                                    "targets": ["AutoSave"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "AutoSave",
+                            "onEnter":
+                            [
+                                ["sendSaveLoadMsg", [8]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event": "evt_response_basic_flow",
+                                    "targets": ["ExitGame_Final"]
+                                },
+                                {
+                                    "event": "evt_forcefully_exit_game",
+                                    "targets": ["ExitGame_Final"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ExitGame_Final",
+                            "onEnter":
+                            [
+                                ["exitGame_Final"]
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

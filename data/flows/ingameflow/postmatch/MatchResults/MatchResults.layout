@@ -1,0 +1,907 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "SCREEN_SHOW" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+	    }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon4",
+            "actionName": "act_advance",
+            "label": "Advance"
+        }
+    ],
+    "children":
+    [
+       {
+           "commonName": "Rectangle",
+           "alignV": "FILL",
+           "alignH": "FILL",
+     	  "alpha": 0.8,
+           "color": "0x000000"
+       },
+       {
+            
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": -100,
+      "width": 400,
+      "height": 50,
+      "children": [
+        {
+          "commonName": "Image",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "marginTop": -110,
+          "width": 450,
+          "image": "$FadedDividerLine"
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": -100,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": -60
+                    },
+                    "duration": 100
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 300
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginTop": -80
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Label",
+              "name": "MatchResultsTitle",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginTop": -50,
+              "marginLeft": 0,
+              "fontSize": 30,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "text": "MATCH RESULTS"
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": -100,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "CENTER",
+          "alignH": "FILL",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": -120
+                    },
+                    "duration": 200
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 600
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0.8,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginTop": -70
+                    },
+                    "duration": 800,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Label",
+              "name": "MatchTypeLabel",
+              "alignV": "CENTER",
+              "alignH": "FILL",
+              "marginTop": 0,
+              "marginLeft": 0,
+              "fontSize": 22,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "textAlignH": "CENTER",
+              "bindings": [
+                {
+                  "binding": "bnd_match_type",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": -90,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "CENTER",
+          "alignH": "LEFT",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": 40
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 300
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginLeft": 0
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "ColorBg",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "width": 200,
+              "height": 40,
+              "marginRight": 0,
+              "color": "0x0896FF",
+              "cornerRadius": 2,
+              "alpha": 1
+            },
+            {
+              "commonName": "Label",
+              "name": "NamaTimHome",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginBottom": 0,
+              "marginLeft": 70,
+              "fontSize": 23,
+              "fontColor": "0x000000",
+              "fontFace": "$FONT_HEADER",
+              "forceCaps": true,
+              "autoScroll": true,
+              "width": 160,
+              "text": "Home"
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": -90,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel1Group",
+          "alignV": "CENTER",
+          "alignH": "RIGHT",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount1",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginRight": 40
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 300
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginRight": 0
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Rectangle",
+              "name": "ColorBg",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "width": 200,
+              "height": 40,
+              "marginLeft": 0,
+              "color": "$COLOR_LIGHT_GREEN",
+              "cornerRadius": 2,
+              "alpha": 1
+            },
+            {
+              "commonName": "Label",
+              "name": "NamaTimHome",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginBottom": 0,
+              "marginRight": 100,
+              "fontSize": 23,
+              "fontColor": "0x000000",
+              "fontFace": "$FONT_HEADER",
+              "forceCaps": true,
+              "autoScroll": true,
+              "width": 160,
+              "text": "Away"
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount1",
+          "target": "panel1Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count1",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": 0,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel2Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel1_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount2",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": -60
+                    },
+                    "duration": 20
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 500
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginTop": 0
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Label",
+              "name": "SkorPertandingan",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 0,
+              "fontSize": 50,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "alpha": 1,
+              "bindings": [
+                {
+                  "binding": "bnd_result",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount2",
+          "target": "panel2Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count2",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": 0,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel2Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel2_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount2",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginLeft": -200
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginLeft": -240
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "width": 100,
+              "height": 100,
+              "marginLeft": 0,
+              "bindings": [
+                {
+                  "binding": "bnd_home_team_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "HomeTeamName",
+              "alignV": "CENTER",
+              "alignH": "LEFT",
+              "marginTop": 0,
+              "marginLeft": -260,
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "bindings": [
+                {
+                  "binding": "bnd_home_team_name",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount2",
+          "target": "panel2Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count2",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": 0,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel2Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel2_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount2",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginRight": -200
+                    },
+                    "duration": 1
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 400
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginRight": -240
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Image",
+              "name": "LogoTimHome",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "width": 100,
+              "height": 100,
+              "marginRight": 0,
+              "bindings": [
+                {
+                  "binding": "bnd_away_team_crest",
+                  "property": "image"
+                }
+              ]
+            },
+            {
+              "commonName": "Label",
+              "name": "HomeTeamName",
+              "alignV": "CENTER",
+              "alignH": "RIGHT",
+              "marginTop": 0,
+              "marginRight": -260,
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "bindings": [
+                {
+                  "binding": "bnd_away_team_name",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount2",
+          "target": "panel2Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count2",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commonName": "Panel",
+      "name": "MenuLayout",
+      "alignV": "CENTER",
+      "alignH": "CENTER",
+      "marginLeft": 0,
+      "marginTop": 50,
+      "width": 400,
+      "height": 400,
+      "children": [
+        {
+          "commonName": "Panel",
+          "name": "panel3Group",
+          "alignV": "CENTER",
+          "alignH": "CENTER",
+          "alpha": 0,
+          "bindings": [
+            {
+              "binding": "bnd_panel3_visible",
+              "property": "Visible"
+            }
+          ],
+          "animationScripts": [
+            {
+              "name": "animateCount3",
+              "script": [
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 0,
+                      "marginTop": 0
+                    },
+                    "duration": 20
+                  }
+                },
+                {
+                  "type": "Delay",
+                  "data": {
+                    "duration": 50
+                  }
+                },
+                {
+                  "type": "Direct",
+                  "data": {
+                    "end": {
+                      "alpha": 1,
+                      "scaleX": 1,
+                      "scaleY": 1,
+                      "marginTop": 40
+                    },
+                    "duration": 900,
+                    "easing": "OutElastic"
+                  }
+                }
+              ]
+            }
+          ],
+          "children": [
+            {
+              "commonName": "Label",
+              "name": "SkorPertandingan",
+              "alignV": "CENTER",
+              "alignH": "CENTER",
+              "marginLeft": 0,
+              "fontSize": 20,
+              "fontColor": "$COLOR_WHITE",
+              "fontFace": "$FONT_CRUYFFSANSBOLD",
+              "alpha": 1,
+              "bindings": [
+                {
+                  "binding": "bnd_shootout_result",
+                  "property": "text"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "behaviors": [
+        {
+          "commonName": "TriggerScriptBehavior",
+          "name": "trigger_fadein_all",
+          "script": "animateCount3",
+          "target": "panel3Group"
+        },
+        {
+          "commonName": "TriggerOnTrue",
+          "name": "trigger_on_true_all",
+          "target": "trigger_fadein_all",
+          "bindings": [
+            {
+              "binding": "bnd_animate_count3",
+              "property": "value"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+/*-- Animated UI MounTsa --*/

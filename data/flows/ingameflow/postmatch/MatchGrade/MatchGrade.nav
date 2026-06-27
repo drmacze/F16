@@ -1,0 +1,39 @@
+{
+    "name": "MatchGrade",
+    "onEnter":
+    [
+        ["blockingLoadVVM", ["/flows/ingameflow/postmatch/matchgrade/MatchGrade.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type" }]],
+        ["viewLayer", ["Gamemodes"]],
+        ["set", ["redirect", ".redirect"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "transitions":
+            [
+                {
+                    "event": "evt_exit",
+                    "targets": ["Exit"]
+                }
+            ]         
+        },
+        {
+            "name": "Exit",
+            "onEnter":
+            [
+                ["invoke", [".redirect"]]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "menu",
+                    "targets": ["out_menu"]
+                }
+            ]
+        }
+    ]
+}

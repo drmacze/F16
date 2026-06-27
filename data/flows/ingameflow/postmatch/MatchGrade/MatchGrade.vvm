@@ -1,0 +1,5 @@
+{
+	"dds":	 ["MatchGrade.dd"],
+	"vms":   [["lua", "MatchGrade.lua"]],
+    "views": [["gfx", {"layout": "MatchGrade.layout"}]]
+}

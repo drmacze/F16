@@ -1,0 +1,72 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        }
+    ],
+	"data":
+	[
+		{
+			"viewname": "bnd_animate_count1",
+			"binding": "bnd_animate_count1",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count2",
+			"binding": "bnd_animate_count2",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count3",
+			"binding": "bnd_animate_count3",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count4",
+			"binding": "bnd_animate_count4",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count5",
+			"binding": "bnd_animate_count5",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count6",
+			"binding": "bnd_animate_count6",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count7",
+			"binding": "bnd_animate_count7",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_animate_count0",
+			"binding": "bnd_animate_count0",
+			"type": "bool"
+		},
+        {
+            "viewname": "bnd_panel1_visible",
+            "binding": "bnd_panel1_visible",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_animate_count0",
+            "binding": "bnd_animate_count0",
+            "type": "bool"
+        },
+		{
+			"viewname": "bnd_panel1_right_visible",
+			"binding": "bnd_panel1_right_visible",
+			"type": "bool"
+		},
+		{
+			"viewname": "bnd_panel1_visible",
+			"binding": "bnd_panel1_visible",
+			"type": "bool"
+		}
+	]
+}

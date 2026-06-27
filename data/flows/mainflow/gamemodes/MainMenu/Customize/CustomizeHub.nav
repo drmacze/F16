@@ -1,0 +1,67 @@
+{
+    "name": "CustomizeHub",
+    "initial":
+    {
+        "targets": ["RedirectCustomizeHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectCustomizeHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["CustomizeHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                 },
+                 {
+                    "event": "evt_team_roster",
+                    "targets": ["TeamRoster"]
+                 },
+                 {
+                    "event": "evt_credits",
+                    "targets": ["Credits"]
+                },
+				{
+					"event":   "evt_to_controls_help_hub",
+                    "targets": ["ControlsHelp"]
+                }
+            ]
+        },
+        {
+            "name": "TeamRoster",
+            "type": "external",
+            "file": "/Flows/MainFlow/TeamRoster/TeamSelectHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomizeHub"
+            }
+        },
+        {
+            "name": "Credits",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/Customize/Credits/CreditsHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "CustomizeHub"
+            }
+		},	
+		{
+			"name": "ControlsHelp",
+			"type": "external",
+			"file": "/flows/mainflow/gamemodes/helpandabout/help/controls_help/ControlsHelp.nav",
+			"outputs":
+			{
+				"out_exit_gamemode": "CustomizeHub"
+            }
+        }
+    ]
+}

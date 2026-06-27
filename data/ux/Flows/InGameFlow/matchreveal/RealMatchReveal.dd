@@ -1,0 +1,70 @@
+{
+"data":
+    [
+        {
+            "viewname": "bnd_home_stadium_bg",
+            "binding":  "bnd_home_stadium_bg",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_cup_bg",
+            "binding":  "bnd_home_cup_bg",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_team_name",
+            "binding":  "bnd_home_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_away_team_name",
+            "binding":  "bnd_away_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_home_team_crest",
+            "binding":  "bnd_home_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_team_crest",
+            "binding":  "bnd_away_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_match_type",
+            "binding":  "bnd_match_type",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_stadium",
+            "binding":  "bnd_stadium",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_info_match",
+            "binding":  "bnd_info_match",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_logo",
+            "binding":  "bnd_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_universal_show",
+            "binding": "bnd_universal_show",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_cup_show",
+            "binding": "bnd_cup_show",
+            "type": "bool"
+        },
+        {
+            "viewname": "bnd_tour_show",
+            "binding": "bnd_tour_show",
+            "type": "bool"
+        }
+    ]
+}

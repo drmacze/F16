@@ -1,0 +1,391 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$BackgroundMainMenu"
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 705,
+            "height": 395,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "alpha": 0.75,
+                   "type": "$BackgroundHitam"
+                },
+                {
+                   "commonName": "Asset",
+                   "alignV": "TOP",
+                   "alignH": "FILL",
+                   "height": 40,
+                   "type": "$BackgroundJudulMenu"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "CENTER",
+                   "marginTop": 5,
+                   "fontSize": 25,
+			       "fontColor": "$COLOR_WHITE",
+			       "text": "SELECT YOUR TEAM"
+                },
+                
+                {
+                   "commonName": "Panel",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "marginTop": 45,
+                   "marginBottom": 5,
+                   "marginLeft": 5,
+                   "marginRight": 5,
+                   "children":
+                   [
+                   
+                      {
+                         "commonName": "Panel",
+                         "alignV": "TOP",
+                         "alignH": "LEFT",
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_chelsea"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_Chelsea"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Chelsea"
+                            }
+                         ]
+                      },
+                      {
+                         "commonName": "Panel",
+                         "alignV": "TOP",
+                         "alignH": "LEFT",
+                         "marginLeft": 175,
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_manchesterutd"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_ManUtd"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Man. United"
+                            }
+                         ]
+                      },
+                      {
+                         "commonName": "Panel",
+                         "alignV": "TOP",
+                         "alignH": "RIGHT",
+                         "marginRight": 175,
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_fcbayern"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_BayernMunchen"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Bayern Munchen"
+                            }
+                         ]
+                      },
+                      {
+                         "commonName": "Panel",
+                         "alignV": "TOP",
+                         "alignH": "RIGHT",
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_borussiadortmund"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_BorussiaDortmund"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Bor. Dortmund"
+                            }
+                         ]
+                      },
+
+                      {
+                         "commonName": "Panel",
+                         "alignV": "BOTTOM",
+                         "alignH": "LEFT",
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_fcbarcelona"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_FCBarcelona"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "FC Barcelona"
+                            }
+                         ]
+                      },
+                      {
+                         "commonName": "Panel",
+                         "alignV": "BOTTOM",
+                         "alignH": "LEFT",
+                         "marginLeft": 175,
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_realmadrid"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_RealMadrid"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Real Madrid"
+                            }
+                         ]
+                      },
+                      {
+                         "commonName": "Panel",
+                         "alignV": "BOTTOM",
+                         "alignH": "RIGHT",
+                         "marginRight": 175,
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_psg"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_PSG"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Paris Saint G."
+                            }
+                         ]
+                      },
+                      {
+                         "commonName": "Panel",
+                         "alignV": "BOTTOM",
+                         "alignH": "RIGHT",
+                         "width": 170,
+                         "height": 170,
+                         "children":
+                         [
+                            {
+                               "commonName": "LiveTilePlay",
+                               "alignV": "FILL",
+                               "alignH": "FILL",
+                               "clickAction": "act_juventus"
+                            },
+                            {
+                               "commonName": "Asset",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": -15,
+                               "width": 80,
+                               "height": 80,
+                               "type": "$Logo_Juventus"
+                            },
+                            {
+                               "commonName": "Label",
+                               "alignV": "CENTER",
+                               "alignH": "CENTER",
+                               "marginTop": 40,
+                               "fontSize": 20,
+                               "fontColor": "$COLOR_DARK_GRAY",
+                               "text": "Juventus"
+                            }
+                         ]
+                      }
+                      
+                   ]
+                }
+
+		    ]
+	    }
+
+	]
+}

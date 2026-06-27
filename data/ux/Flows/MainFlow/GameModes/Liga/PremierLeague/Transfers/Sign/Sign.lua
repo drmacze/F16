@@ -1,0 +1,1 @@
+local Sign = {}function Sign:new(init)  local o = init or {}  setmetatable(o, self)  self.__index = self  o.nav.Event(nil, "evt_back")  mode = 3  return oendfunction Sign:finalize() endreturn Sign

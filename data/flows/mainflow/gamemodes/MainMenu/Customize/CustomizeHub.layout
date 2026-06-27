@@ -1,0 +1,1051 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "TUTORIAL_TRANSITION_IN" } ]
+	    },
+	    {
+		    "name" : "hide",
+		    "script" : [ { "anim" : "TUTORIAL_TRANSITION_OUT" } ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "BtnClick"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$",
+            "actionName": "act_back",
+            "label": ""
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_exit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 38,
+            "width": 855,
+            "height": 355,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": -65,
+                    "marginLeft": -15,
+                    "fontSize": 16,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                    "leading": 1,
+                    "text": "Settings"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionOff",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Customise\nControls"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconCustomise"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 215,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Basic\nControls"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconControl"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginRight": 215,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Skill\nMoves"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconKO"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Team\nSheets"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 10,
+                                    "width": 100,
+                                    "height": 70,
+                                    "type": "$_IconSquad"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Game\nSettings"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconSettings"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab6",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 215,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Update"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconTransfers"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab7",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 215,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Soundtrack"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconMusic"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab8",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 175,
+                            "width": 210,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 11,
+                                    "alpha": 1   
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Credits"
+                                },
+                                {
+                                    "commonName": "Asset",
+                                    "name": "Icon",
+                                    "alignV": "BOTTOM",
+                                    "alignH": "RIGHT",
+                                    "marginBottom": 20,
+                                    "marginRight": 0,
+                                    "width": 120,
+                                    "height": 80,
+                                    "type": "$_IconInfo"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionOn",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_info_tile"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Customise\nControls"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginLeft": 215,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_controls_help_hub"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Basic\nControls"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab3",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginRight": 215,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab3_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_info_tile"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Skill\nMoves"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab4",
+                            "alignV": "TOP",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab4_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_licenseagreement_tile"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Team\nSheets"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab5",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab5_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_settings_customize"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Game\nSettings"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab6",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 215,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab6_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_update_tile"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Update"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab7",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 215,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab7_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_to_music_tile"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Soundtrack"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab8",
+                            "alignV": "BOTTOM",
+                            "alignH": "RIGHT",
+                            "marginRight": 0,
+                            "height": 175,
+                            "width": 210,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab8_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 0,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_credits"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 10,
+                                    "marginLeft": 10,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Credits"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "BtnClick",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 38,
+            "width": 855,
+            "height": 355,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 0,
+                    "y": 0,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 215,
+                    "y": 0,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act3",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 430,
+                    "y": 0,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 3,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act4",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 645,
+                    "y": 0,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 4,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act5",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 0,
+                    "y": 180,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 5,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act6",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 215,
+                    "y": 180,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 6,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act7",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 430,
+                    "y": 180,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 7,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act7",
+                    "alignH": "LEFT",
+                    "alignV": "TOP",
+                    "x": 645,
+                    "y": 180,
+                    "width": 210,
+                    "height": 175,
+                    "autoSelect": true,
+                    "id": 8,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 175,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

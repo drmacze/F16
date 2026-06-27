@@ -1,0 +1,48 @@
+{    
+	"actions":
+    [
+        {
+            "viewname":   "act_cancel",
+            "actionname": "act_cancel"
+        },
+        {
+            "viewname":   "act_confirm",
+            "actionname": "act_confirm"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_title",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_SETTING_CONFIRMATION"
+            }
+        },
+        {
+            "viewname": "bnd_cancel_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_CANCEL"
+            }
+        },
+        {
+            "viewname": "bnd_confirm_label",
+            "type":     "string",
+            "impl":
+            {
+                "type": "ltxt",
+                "tag":  "LTXT_CMN_OK"
+            }
+        },
+        {
+            "viewname": "bnd_message",
+            "binding":  "bnd_message",
+            "type":     "string"
+        }
+    ]
+}

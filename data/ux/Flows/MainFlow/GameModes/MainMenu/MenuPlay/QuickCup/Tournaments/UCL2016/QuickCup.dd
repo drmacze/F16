@@ -1,0 +1,396 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname": "act_gamesettings",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_gamesettings"
+            }
+        },
+        {
+            "viewname": "act_restart",
+            "actionname": "act_restart"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_team1_crest",
+            "binding": "bnd_team1_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team2_crest",
+            "binding": "bnd_team2_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team3_crest",
+            "binding": "bnd_team3_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team4_crest",
+            "binding": "bnd_team4_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team5_crest",
+            "binding": "bnd_team5_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team6_crest",
+            "binding": "bnd_team6_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team7_crest",
+            "binding": "bnd_team7_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team8_crest",
+            "binding": "bnd_team8_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team9_crest",
+            "binding": "bnd_team9_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team10_crest",
+            "binding": "bnd_team10_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team11_crest",
+            "binding": "bnd_team11_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team12_crest",
+            "binding": "bnd_team12_crest",
+            "type": "object"
+        },
+        
+        {
+            "viewname": "bnd_team13_crest",
+            "binding": "bnd_team13_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team14_crest",
+            "binding": "bnd_team14_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team15_crest",
+            "binding": "bnd_team15_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team16_crest",
+            "binding": "bnd_team16_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team17_crest",
+            "binding": "bnd_team17_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team18_crest",
+            "binding": "bnd_team18_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team19_crest",
+            "binding": "bnd_team19_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team20_crest",
+            "binding": "bnd_team20_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team21_crest",
+            "binding": "bnd_team21_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team22_crest",
+            "binding": "bnd_team22_crest",
+            "type": "object"
+        },
+        
+        {
+            "viewname": "bnd_team23_crest",
+            "binding": "bnd_team23_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team24_crest",
+            "binding": "bnd_team24_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team25_crest",
+            "binding": "bnd_team25_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team26_crest",
+            "binding": "bnd_team26_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team27_crest",
+            "binding": "bnd_team27_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team28_crest",
+            "binding": "bnd_team28_crest",
+            "type": "object"
+        },
+        
+        {
+            "viewname": "bnd_team29_crest",
+            "binding": "bnd_team29_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_team30_crest",
+            "binding": "bnd_team30_crest",
+            "type": "object"
+        },
+        
+        {
+            "viewname": "bnd_team1_score",
+            "binding": "bnd_team1_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team2_score",
+            "binding": "bnd_team2_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team3_score",
+            "binding": "bnd_team3_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team4_score",
+            "binding": "bnd_team4_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team5_score",
+            "binding": "bnd_team5_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team6_score",
+            "binding": "bnd_team6_score",
+            "type": "string"
+        },        
+        {
+            "viewname": "bnd_team7_score",
+            "binding": "bnd_team7_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team8_score",
+            "binding": "bnd_team8_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team9_score",
+            "binding": "bnd_team9_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team10_score",
+            "binding": "bnd_team10_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team11_score",
+            "binding": "bnd_team11_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team12_score",
+            "binding": "bnd_team12_score",
+            "type": "string"
+        },
+        
+        {
+            "viewname": "bnd_team13_score",
+            "binding": "bnd_team13_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team14_score",
+            "binding": "bnd_team14_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team15_score",
+            "binding": "bnd_team15_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team16_score",
+            "binding": "bnd_team16_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team17_score",
+            "binding": "bnd_team17_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team18_score",
+            "binding": "bnd_team18_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team19_score",
+            "binding": "bnd_team19_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team20_score",
+            "binding": "bnd_team20_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team21_score",
+            "binding": "bnd_team21_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team22_score",
+            "binding": "bnd_team22_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team23_score",
+            "binding": "bnd_team23_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team24_score",
+            "binding": "bnd_team24_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team25_score",
+            "binding": "bnd_team25_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team26_score",
+            "binding": "bnd_team26_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team27_score",
+            "binding": "bnd_team27_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team28_score",
+            "binding": "bnd_team28_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team29_score",
+            "binding": "bnd_team29_score",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_team30_score",
+            "binding": "bnd_team30_score",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_text",
+            "binding": "bnd_text",
+            "type": "string"
+        },
+        
+        {
+            "viewname": "bnd_champion_crest",
+            "binding": "bnd_champion_crest",
+            "type": "object"
+        },
+        
+        {
+            "viewname": "bnd_champion_visible",
+            "binding": "bnd_champion_visible",
+            "type": "bool"
+        },
+        
+        {
+            "viewname": "bnd_match_visible",
+            "binding": "bnd_match_visible",
+            "type": "bool"
+        },
+        
+        {
+            "viewname": "bnd_champion_team",
+            "binding": "bnd_champion_team",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_home_crest",
+            "binding": "bnd_home_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_away_crest",
+            "binding": "bnd_away_crest",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_home_team",
+            "binding": "bnd_home_team",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_away_team",
+            "binding": "bnd_away_team",
+            "type": "string"
+        }
+    ]
+}

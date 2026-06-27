@@ -1,0 +1,5 @@
+{
+    "dds": ["TeamManagement_Home.dd", "TeamManagementModelHome.dd", "Formation/FormationModelReal_Home.dd"],
+    "vms": [["lua", "TeamManagement_Home.lua"]],
+    "views": [["gfx", {"layout": "TeamManagement_Home.layout"}]]
+}

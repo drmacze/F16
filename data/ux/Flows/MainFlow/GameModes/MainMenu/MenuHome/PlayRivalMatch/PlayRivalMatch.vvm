@@ -1,0 +1,5 @@
+{
+	"dds": ["PlayRivalMatch.dd"],
+    "vms": [["lua", "PlayRivalMatch.lua"]],
+    "views": [["gfx", {"layout": "PlayRivalMatch.layout"}]]
+}

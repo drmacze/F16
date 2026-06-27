@@ -1,0 +1,6 @@
+[
+    "InGameTeamManagementModel.lua",
+    "/lua/common/VirtualButton.lua",
+    "/lua/common/CommonEnums.lua",
+    "/lua/enums/eventmanager.lua"
+]

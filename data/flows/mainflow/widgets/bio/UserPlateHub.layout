@@ -1,0 +1,150 @@
+/*-- Modified MVNPROD Youtube Channel --*/
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 34,
+                    "marginLeft": 350,
+                    "height": 70,
+                    "width": 150,
+                    "alpha": 1,
+                    "path": "views/backgrounds/Green_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 55,
+                    "marginLeft": 395,
+                    "fontSize": 22,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_NORMAL",
+                    "text": "Visual"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": -13,
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 107,
+                    "marginLeft": 90,
+                    "fontSize": 25,
+                    "fontColor": "$COLOR_WHITE",
+                    "fontFace": "$FONT_ORIGIN_KNULEXTRABOLD",
+                    "text": "Customise Visual"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 150,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "You can make visual settings now"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 173,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "HUD settings, weather, player indicators"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 195,
+                    "marginLeft": 90,
+                    "fontSize": 17,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_TIMER",
+                    "text": "allows to improve the display while the game is in progress"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 235,
+                    "marginLeft": 90,
+                    "width": 480,
+                    "height": 250,
+                    "type": "$ImgVisual"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "VerticalList",
+                    "name": "PengaturanMatch",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginTop": -190,
+                    "marginLeft": 85,
+                    "rowWidth": 610,
+                    "rowHeight": 60,
+                    "displayRange": 7,
+                    "useAlternating": false,
+                    "row": "CustomizationRow",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_settings_list_data",
+                            "property": "dataProviders"
+                        }
+                    ]
+                 }
+              ]
+           }
+        ]
+     }
+  ]
+}
+
+/*-- Modified MVNPROD Youtube Channel --*/

@@ -1,0 +1,189 @@
+{
+  "name": "Male",
+  "initial": {
+    "targets": ["MenuMale"]
+  },
+  "states": [
+    {
+      "name": "MenuMale",
+      "initial": {
+        "targets": ["RedirectTab1"]
+      },
+      "onEnter": [
+        ["blockingLoadVVM", ["Male.vvm"]]
+      ],
+      "onExit": [
+        ["unloadVVM"]
+      ],
+      "states": [
+        {
+          "name": "RedirectTab1",
+          "initial": { "targets": ["Tab1"] },
+          "states": [
+            {
+              "name": "Tab1",
+              "onEnter": [
+                ["setTabContext", [0]],
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/TabActive/Tab1.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+            { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+            { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+            { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+            { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+          ]
+        },
+        {
+          "name": "RedirectTab2",
+          "initial": { "targets": ["Tab2"] },
+          "states": [
+            {
+              "name": "Tab2",
+              "onEnter": [
+                ["setTabContext", [1]],
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/TabActive/Tab2.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+            { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+            { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+            { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+            { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+          ]
+        },
+        {
+          "name": "RedirectTab3",
+          "initial": { "targets": ["Tab3"] },
+          "states": [
+            {
+              "name": "Tab3",
+              "onEnter": [
+                ["setTabContext", [2]],
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/TabActive/Tab3.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+            { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+            { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+            { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+            { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+          ]
+        },
+        {
+          "name": "RedirectTab4",
+          "initial": { "targets": ["Tab4"] },
+          "states": [
+            {
+              "name": "Tab4",
+              "onEnter": [
+                ["setTabContext", [3]],
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/TabActive/Tab4.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+            { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+            { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+            { "event": "evt_tab5", "targets": ["RedirectTab5"] },
+            { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+          ]
+        },
+        {
+          "name": "RedirectTab5",
+          "initial": { "targets": ["Tab5"] },
+          "states": [
+            {
+              "name": "Tab5",
+              "onEnter": [
+                ["setTabContext", [4]],
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/TabActive/Tab5.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+            { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+            { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+            { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+            { "event": "evt_tab6", "targets": ["RedirectTab6"] }
+          ]
+        },
+        {
+          "name": "RedirectTab6",
+          "initial": { "targets": ["Tab6"] },
+          "states": [
+            {
+              "name": "Tab6",
+              "onEnter": [
+                ["setTabContext", [5]],
+                ["blockingLoadVVM", ["/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/TabActive/Tab6.vvm"]]
+              ],
+              "onExit": [["unloadVVM"]]
+            }
+          ],
+          "transitions": [
+            { "event": "evt_tab1", "targets": ["RedirectTab1"] },
+            { "event": "evt_tab2", "targets": ["RedirectTab2"] },
+            { "event": "evt_tab3", "targets": ["RedirectTab3"] },
+            { "event": "evt_tab4", "targets": ["RedirectTab4"] },
+            { "event": "evt_tab5", "targets": ["RedirectTab5"] }
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "event": "evt_back",
+          "targets": ["out_exit_gamemode"]
+        },
+        { "event": "evt_premier_league", "targets": ["PremierLeague"] },
+        { "event": "evt_ligue", "targets": ["Ligue"] },
+        { "event": "evt_bundesliga", "targets": ["Bundesliga"] },
+        { "event": "evt_laliga", "targets": ["Laliga"] },
+        { "event": "evt_seriea", "targets": ["SerieA"] }
+      ]
+    },
+    {
+      "name": "PremierLeague",
+      "type": "external",
+      "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/PremierLeague/TeamSelect/TeamSelect.nav",
+      "outputs": { "out_exit_gamemode": "Male" }
+    },
+    {
+      "name": "Ligue",
+      "type": "external",
+      "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/Ligue/TeamSelect/TeamSelect.nav",
+      "outputs": { "out_exit_gamemode": "Male" }
+    },
+    {
+      "name": "Bundesliga",
+      "type": "external",
+      "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/Bundesliga/TeamSelect/TeamSelect.nav",
+      "outputs": { "out_exit_gamemode": "Male" }
+    },
+    {
+      "name": "Laliga",
+      "type": "external",
+      "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/Laliga/TeamSelect/TeamSelect.nav",
+      "outputs": { "out_exit_gamemode": "Male" }   
+    },
+    {
+      "name": "SerieA",
+      "type": "external",
+      "file": "/Flows/MainFlow/GameModes/Career/PlayerCareer/Male/Liga1BRI/TeamSelect/TeamSelect.nav",
+      "outputs": { "out_exit_gamemode": "Male" }
+    }
+  ]
+}

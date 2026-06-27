@@ -1,0 +1,31 @@
+{
+	"actions":
+	[
+	
+	],
+	"data":
+	[
+
+		{
+			"viewname": "bnd_live_tile_seasons",
+			"binding": "bnd_live_tile_seasons",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_proclubs",
+			"binding": "bnd_live_tile_proclubs",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_coopseasons",
+			"binding": "bnd_live_tile_coopseasons",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_onlinefriendlies",
+			"binding": "bnd_live_tile_onlinefriendlies",
+			"type": "live_tile"
+		}
+				
+	]
+}

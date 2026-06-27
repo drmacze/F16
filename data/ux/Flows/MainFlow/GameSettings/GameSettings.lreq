@@ -1,0 +1,5 @@
+[
+    "/lua/common/TabModel.lua",
+    "/lua/enums/eventmanager.lua",
+    "/lua/enums/settings_service.lua"
+]

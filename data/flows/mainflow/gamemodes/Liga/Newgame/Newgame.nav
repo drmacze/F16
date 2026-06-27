@@ -1,0 +1,51 @@
+{
+    "name": "Newgame",
+    "states":
+    [
+        {
+            "name": "RedirectNewgame",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["Newgame.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_new",
+                    "targets": ["New"]
+                },
+                {
+                    "event": "evt_load",
+                    "targets": ["Load"]
+                }
+            ]
+        },
+        {
+            "name": "New",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/SelectLeagueTeam/Mission1/SelectLeagueTeam.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Newgame"
+            }
+        },
+        {
+            "name": "Load",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/Liga/PremierLeague/TeamSelect/TeamSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "Newgame",
+                "out_exit_gamemode1": "Newgame"
+            }
+        }
+    ]
+}       

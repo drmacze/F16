@@ -1,0 +1,308 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Tab",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 301,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Group Stage",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 300,
+                    "height": 10,
+                    "width": 115,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 5,
+            "width": 1100,
+            "height": 375,
+            "alpha": 1,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "LEFT",
+                    "width": 350,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 9,
+                            "alpha": 1,
+			                "bindings":
+                            [
+                                {
+				                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+			                	}
+                            ]
+                        },
+		            	{
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 10,
+                            "fontSize": 20,
+			                "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": true,
+			                "text": "GROUP STAGE"
+		            	},
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 50,
+                            "fontSize": 13,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_current",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 65,
+                            "fontSize": 12,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_YELLOW",
+                            "bold": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_month_label",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "Fixtures",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 110,
+                            "marginLeft": 34,
+                            "scaleX": 0.6,
+                            "scaleY": 0.6,
+                            "displayRange": 6,
+                            "highlightable": true,
+                            "row": "FixturesSmall",
+                            "rowHeight": 63,
+                            "rowWidth": 470,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_fixtures_list",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "marginLeft": -100,
+                            "clickAction": "act_prev_group",
+                            "buttonAsset": "$BlueArrowLeft1"
+                        },
+                        {
+                            "commonName": "AssetButton",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "marginLeft": 100,
+                            "clickAction": "act_next_group",
+                            "buttonAsset": "$BlueArrowRight1"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "RIGHT",
+                    "width": 745,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 9,
+                            "alpha": 1,
+		              	  "bindings":
+                            [
+                                {
+				                    "binding": "bnd_color_tourid",
+                                    "property": "color"
+			                	}
+                            ]
+                        },
+		            	{
+                            "commonName": "Rectangle",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "width": 705,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 60,
+                            "fontSize": 23,
+                            "fontColor": "0xffffff",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_current", 
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "name": "GroupStandings",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 115,
+                            "marginLeft": 10,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "displayRange": 5,
+                            "highlightable": true,
+                            "row": "StandingsRow",
+                            "rowHeight": 50,
+                            "rowWidth": 910,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_standings",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 50,
+                            "width": 705,
+                            "height": 2,
+                            "color": "0x757575",
+                            "alpha": 0.5
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "TOP",
+                            "marginTop": 0,
+                            "height": 50,
+                            "alpha": 1,
+		              	  "backgroundImage": "",
+			                "backgroundHighlightImage": "",
+                            "clickAction": "act_prev_group"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "alpha": 0.6,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_prev",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "BOTTOM",
+                            "height": 50,
+                            "alpha": 1,
+		              	  "backgroundImage": "",
+			                "backgroundHighlightImage": "",
+                            "clickAction": "act_next_group"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 10,
+                            "fontSize": 20,
+                            "fontColor": "0xFFFFFF",
+                            "alpha": 0.6,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_label_next",
+                                    "property": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

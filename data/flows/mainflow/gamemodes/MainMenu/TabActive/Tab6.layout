@@ -1,0 +1,178 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Tab",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 965,
+                    "height": 30,
+                    "width": 100,
+                    "label": "Premium V3.0",
+                    "textStyles": [ "TF_BUTTON_PLAYMODEON" ]
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -5,
+                    "marginLeft": 961,
+                    "height": 10,
+                    "width": 120,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "BgInfo",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 130,
+                    "marginTop": -30,
+                    "width": 562,
+                    "height": 375,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "fillColor": "0x1B1B2A",
+                            "fillAlpha": 1,
+                            "drawFill": true,
+                            "drawOutline": true,
+                            "outlineThickness": 0.8,
+                            "outlineColor": "0x00D9D1",
+                            "outlineAlpha": 1,
+                            "cornerRaduis": 9
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 560,
+                            "height": 373,
+                            "type": "$_Ads_1"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 10,
+                            "marginLeft": 10,
+                            "width": 5,
+                            "height": 20,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0x00D9D1"
+                        },
+                        {
+                            "commonName": "Rectangle",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 10,
+                            "marginLeft": 15,
+                            "width": 2,
+                            "height": 70,
+                            "cornerRaduis": 0,
+                            "alpha": 1,
+                            "color": "0x00D9D1"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 10,
+                            "marginLeft": 20,
+                            "autoTextShadow": true,
+                            "fontSize": 18,
+                            "fontFace": "$FONT_ARCHIVOBLACKREGULAR",
+                            "fontColor": "0xFFFFFF",
+                            "text": "OFFICIAL CREATOR"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "LEFT",
+                            "alignV": "TOP",
+                            "marginTop": 31,
+                            "marginLeft": 20,
+                            "autoTextShadow": true,
+                            "fontSize": 16,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "0xD1D1D1",
+                            "text": "Find out who the official creator is.\nAvoid falling for scams, make sure you\nwill receive what was promised.",
+                            "leading": 1
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Action",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 85,
+                    "marginLeft": 130,
+                    "height": 42,
+                    "width": 562,
+                    "children":
+                    [
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "CENTER",
+                            "alignV": "FILL",
+                            "width": 228,
+                            "backgroundImage": "$_ClickToEnterOn4",
+                            "backgroundHighlightImage": "$_ClickToEnterOn4",
+                            "clickAction": "act_to_credits"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": 14,
+                            "marginBottom": -1,
+                            "width": 170,
+                            "autoScroll": true,
+                            "fontSize": 17,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "text": "Follow the Official Creator"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

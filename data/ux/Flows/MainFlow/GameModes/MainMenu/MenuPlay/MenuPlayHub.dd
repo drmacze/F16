@@ -1,0 +1,88 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_kickoff",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_kickoff"
+			}
+		},
+		{
+			"viewname": "act_career",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_career"
+			}
+		},
+		{
+			"viewname": "act_skillgames",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_skillgames"
+			}
+		},
+		{
+			"viewname": "act_tournament",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_tournament"
+			}
+		},
+		{
+			"viewname": "act_beapro",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_beapro"
+			}
+		},
+		{
+			"viewname": "act_bestteamstour",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_bestteamstour"
+			}
+		}
+	],
+	"data":
+	[
+
+		{
+			"viewname": "bnd_live_tile_kickoff",
+			"binding": "bnd_live_tile_kickoff",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_ultimateteam",
+			"binding": "bnd_live_tile_ultimateteam",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_newcareer",
+			"binding": "bnd_live_tile_newcareer",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_newtournament",
+			"binding": "bnd_live_tile_newtournament",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_skillgames",
+			"binding": "bnd_live_tile_skillgames",
+			"type": "live_tile"
+		},
+		{
+			"viewname": "bnd_live_tile_beapro_bestteamstour",
+            "binding": "bnd_live_tile_beapro_bestteamstour",
+			"type": "live_tile"
+		}
+		
+	]
+}

@@ -1,0 +1,65 @@
+{
+    "name": "NIS",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["viewLayer", ["GamePlay"]],
+		["enterNIS"]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_p2p_disconnect",
+            "targets": ["out_p2p_disconnect"]
+        },
+        {
+            "event":   "evt_fos_error_ingame",
+            "targets": ["out_fos_error"]
+        },
+		{
+            "event":   "evt_show_victory_connection_lost_ingame_relogin",
+            "targets": ["out_victory_error_relogin"]
+        },
+        {
+            "event":   "evt_show_victory_connection_lost_duplicate_account_ingame",
+            "targets": ["out_victory_error_relogin_duplicate"]
+        },
+        {
+            "event":   "evt_skipNISFlow",
+            "targets": ["out_exit_flow"]
+        },
+        {
+            "event":   "evt_toggle_pause",
+            "targets": ["out_exit_pause"],
+            "let":     { "initial": "menu" }
+        }
+    ],
+    "states":
+    [
+        {
+            "name":    "SkipNIS",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/skipnis/SkipNIS.vvm"]]],
+            "onExit":  [["unloadVVM"]]
+        },
+        {
+            "name":    "MatchInfo",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/matchinfo/MatchInfo.vvm"]]],
+            "onExit":  [["unloadVVM"]]
+        },
+        {
+            "name":    "MatchInfoNPC",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/matchinfonpc/MatchInfoNPC.vvm"]]],
+            "onExit":  [["unloadVVM"]]
+        },
+        {
+            "name":    "Starting11",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/starting11/Starting11.vvm", { "gamemode": ".gamemode", "flow": ".flow" }]]],
+            "onExit":  [["unloadVVM"]]
+        },
+        {
+            "name":    "SkipCinematic",
+            "onEnter": [["loadVVM", ["/flows/ingameflow/huds/skipcinematic/SkipCinematic.vvm"]]],
+            "onExit":  [["unloadVVM"]]
+        }
+    ]
+}

@@ -1,0 +1,1250 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "SIMPLE_SCREEN_SHOW"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "SIMPLE_SCREEN_HIDE"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Rectangle",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "color": "0x333333"
+        },       
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": -240,
+            "marginLeft": 0,
+            "width": 1020,
+            "height": 80,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 0,
+                    "color": "0x1C1C1C",
+                    "alpha": 0.6
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 3,
+                    "marginLeft": 15,
+                    "fontSize": 31,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "$COLOR_WHITE",
+                    "bold": false,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_matchday_label",
+                            "property": "text"
+                         }
+                     ]
+                 }
+             ]
+         },
+         {
+            "commonName": "Panel",
+            "name": "Keyboard",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 80,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "cornerRaduis": 10,
+                    "alpha": 0,
+                    "color": "0xffffff"
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": -450,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_q"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "q"
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": -350,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_w"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "w"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": -250,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_e"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "e"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": -150,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_r"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "r"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": -50,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_t"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "t"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": 50,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_y"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "y"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": 150,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_u"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "u"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": 250,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_i"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "i"
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": 350,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_o"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "o"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -180,
+                    "marginLeft": 450,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_p"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "p"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": -450,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_a"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "a"
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": -350,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_s"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "s"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": -250,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_d"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "d"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": -150,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_f"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "f"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": -50,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_g"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "g"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": 50,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_h"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "h"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": 150,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_j"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "j"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": 250,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_k"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "k"
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": 350,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_l"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "l"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": -60,
+                    "marginLeft": 450,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_dot"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "."
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": -450,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_z"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "z"
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": -350,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_x"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "x"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": -250,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_c"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "c"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": -150,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_v"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "v"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": -50,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_b"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "b"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 50,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_n"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "n"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 150,
+                    "width": 80,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_m"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 30,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "m"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 275,
+                    "width": 130,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_space"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 20,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Space"
+                         }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 60,
+                    "marginLeft": 425,
+                    "width": 130,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_backspace"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 20,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Reset"
+                          }
+                     ]
+                 },
+                 {
+                    "commonName": "Panel",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 180,
+                    "marginLeft": 0,
+                    "width": 300,
+                    "height": 100,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "cornerRaduis": 10,
+                            "alpha": 1,
+                            "color": "0x000000"
+                        },
+                        {
+                            "commonName": "SimpleButton",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "backgroundImage": "",
+                            "backgroundHighlightImage": "$_ShadowHighlight",
+                            "clickAction": "act_submit"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "autoTextShadow": true,
+                            "fontSize": 25,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Search"
+                          }
+                        ]
+                      }
+                   ]
+                }
+             ]
+          }
+       ]
+    }
+  ]
+}

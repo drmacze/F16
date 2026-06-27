@@ -1,0 +1,300 @@
+/* ------------------------------------- */
+/* MOD Created By MounTsa */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],    
+    "behaviors":
+    [
+
+    ],
+
+    "children":
+    [
+    
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$Background_Squad"
+        },
+        {
+            "commonName": "Asset",
+            "name": "Weather",
+	        "alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginBottom": -50,
+			"height": 750,
+			"width": 1650,
+			"marginRight": 80,
+			"marginLeft": 0,
+            "alpha": 0.6,
+            "path": "views/weather/rain.swf"
+        },
+               { 
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 0,
+                    "height": 60,
+                    "width": 60,
+                    "alpha": 1,
+                    "marginBottom": 0,
+                    "path": "views/loadingindicator/loadingIcon.swf"
+                },
+          {
+            "commonName": "Panel",
+            "name": "BackNext",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "marginLeft": 0,
+            "marginBottom": 40,
+            "children":
+            [
+
+                {
+                    "commonName": "SimpleButton",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "marginBottom": -10,
+                    "marginLeft": 50,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "label": "Back",
+                    "icon": "$IconButton_O",
+                    "clickAction": "act_back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianSquad",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 150,
+            "width": 780,
+            "height": 307.5,
+            "children": []},
+            
+        {
+            "commonName": "Panel",
+            "name": "BagianSquadHome",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 220.5,
+            "marginLeft": 260,
+            "width": 280,
+            "height": 80,
+            "children": [
+            			{
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x000000",
+                            "alpha": 0
+                        },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimHome",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontSize": 13,
+                    "forceCaps": true,
+                    "text": "Tactical Plan"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimHome",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 40,
+                    "marginLeft": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontSize": 25,
+                    "forceCaps": true,
+                    "text": "BALANCE"
+                },
+
+               
+                {
+                    "commonName": "Image",
+                    "name": "LogoTimHome",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 30,
+                    "width": 50,
+                    "height": 50,
+                    "bindings": [
+                        {
+                            "binding": "bnd_logo_tim_home",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+          },
+        {
+            "commonName": "Panel",
+            "name": "BagianSquadAway",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 220.5,
+            "marginRight": 270,
+            "width": 280,
+            "height": 80,
+            "children": [
+            			{
+                            "commonName": "Rectangle",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x000000",
+                            "alpha": 0
+                        },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimHome",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 30,
+                    "marginLeft": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontSize": 13,
+                    "forceCaps": true,
+                    "text": "Tactical Plan"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "NamaTimHome",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 40,
+                    "marginLeft": 20,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontSize": 25,
+                    "forceCaps": true,
+                    "text": "BALANCE"
+                },
+
+               
+                {
+                    "commonName": "Image",
+                    "name": "LogoTimHome",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginTop": 0,
+                    "marginRight": 30,
+                    "width": 50,
+                    "height": 50,
+                    "bindings": [
+                        {
+                            "binding": "bnd_logo_tim_away",
+                            "property": "image"
+                        }
+                    ]
+                }
+            ]
+          },
+        {
+            "commonName": "Panel",
+            "name": "BagianSquad",
+            "alignV": "TOP",
+            "alignH": "CENTER",
+            "marginTop": 83.5,
+            "width": 780,
+            "height": 307.5,
+            "children": [
+
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 23,
+                    "marginLeft": 0,
+                    "fontSize": 27,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_BOLD",
+                    "text": "Select Your"
+                },
+                {
+                    "commonName": "Label",
+                    "name": "Live",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 53,
+                    "marginLeft": 0,
+                    "fontSize": 27,
+                    "fontColor": "$COLOR_LIGHT_GRAY",
+                    "fontFace": "$FONT_BOLD",
+                    "text": "Team Management"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginLeft": -285,
+                    "width": 650,
+                    "height": 350,
+                    "backgroundImage": "$FTeam",
+                    "backgroundHighlightImage": "$FTeam",
+                    "clickAction": "act_teammanagement_home"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 120,
+                    "marginRight": -290,
+                    "width": 650,
+                    "height": 350,
+                    "backgroundImage": "$FTeam",
+                    "backgroundHighlightImage": "$FTeam",
+                    "clickAction": "act_teammanagement_away"
+                }
+                ]
+               }
+
+       ]
+     }
+   ]
+}

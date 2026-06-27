@@ -1,0 +1,32 @@
+{	
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "GenericButton",
+            "alignV": "BOTTOM",
+            "alignH": "FILL",
+            "marginTop": 0,
+            "marginLeft": 0,
+            "height": 40,
+            "clickAction": "act_back",
+            "type": "grey",
+            "textStyles": ["TF_AWARDS_TITLE"],
+            "label": "< Back"
+        }
+    ]
+}

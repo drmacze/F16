@@ -1,0 +1,27 @@
+{
+  "dds": [
+    "KitSelect.dd",
+    "TeamManagementModel.dd",
+    "formation/FormationModelReal.dd",
+   "TeamManagementModelAway.dd",
+    "formation/FormationModelRealAway.dd"
+  ],
+  "vms": [
+    ["lua", "KitSelect.lua"],
+    ["lua", "TeamManagementModel.lua"],
+    ["lua", "formation/FormationModelReal.lua"],
+    ["lua", "TeamManagementModelAway.lua"],
+    ["lua", "formation/FormationModelRealAway.lua"]
+  ],
+  "views": [
+    ["gfx", { "layout": "KitSelect.layout" }],
+    ["gfx", { "layout": "KitSelectStartMatch.layout" }]
+  ],
+  "ireqs": [
+    
+    "TeamManagementModel.ireq",
+    "formation/FormationModelReal.ireq",
+    "TeamManagementModelAway.ireq",
+    "formation/FormationModelRealAway.ireq"
+  ]
+}

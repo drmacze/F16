@@ -1,0 +1,264 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+       "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$SimMatchIcon3",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "tilesContainer",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "marginTop": 120,
+                    "marginBottom": 120,
+                    "marginLeft": 150,
+                    "marginRight": 150,
+                    "children":
+                    [
+                        {
+                            "commonName": "Grid",
+                            "name": "grid",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "spacingH": "$TILE_PADDING",
+                            "spacingV": "$TILE_PADDING",
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "aboutTile",
+                                    "column": 0,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "privacyTile",
+                                    "column": 1,
+                                    "row": 0,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "licenceAgreementTile",
+                                    "column": 0,
+                                    "row": 1,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "disableShareTile",
+                                    "column": 1,
+                                    "row": 1,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+								{
+                                    "child": "termsOfServiceTile",
+                                    "column": 0,
+                                    "row": 2,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                },
+                                {
+                                    "child": "creditsTile",
+                                    "column": 1,
+                                    "row": 2,
+                                    "colSpan": 1,
+                                    "rowSpan": 1
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "LiveTile",
+                                    "name": "creditsTile",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 137.0,
+                                    "width": 386.0,
+                                    "autoScaleImageToTileHeight":true,
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "clickAction": "act_to_credits_tile",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_credits_about",
+                                            "property": "dataProviders"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTile",
+                                    "name": "termsOfServiceTile",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 137.0,
+                                    "width": 386.0,
+                                    "autoScaleImageToTileHeight":true,
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "clickAction": "act_to_termsofservice_tile",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_termsofservice_about",
+                                            "property": "dataProviders"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTile",
+                                    "name": "disableShareTile",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 137.0,
+                                    "width": 386.0,
+                                    "autoScaleImageToTileHeight":true,
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "clickAction": "act_to_disableshare_tile",
+                                    "bindings":
+                                    [
+										{
+											"binding":  "bnd_disableshare_about",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTile",
+                                    "name": "licenceAgreementTile",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 137.0,
+                                    "width": 386.0,
+                                    "autoScaleImageToTileHeight":true,
+									"x": 0.0,
+                                    "y": 0.0,
+                                    "clickAction": "act_to_licenseagreement_tile",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_licenseagreement_about",
+                                            "property": "dataProviders"
+                                        }
+
+                                    ]
+                                },
+								{
+                                    "commonName": "LiveTile",
+                                    "name": "privacyTile",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 137.0,
+                                    "width": 386.0,
+                                    "autoScaleImageToTileHeight":true,
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "clickAction": "act_to_privacy_tile",
+                                    "bindings":
+                                    [
+										{
+											"binding":  "bnd_privacy_about",
+											"property": "dataProviders"
+										}
+                                    ]
+                                },
+                                {
+                                    "commonName": "LiveTile",
+                                    "name": "aboutTile",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 137.0,
+                                    "width": 386.0,
+                                    "autoScaleImageToTileHeight":true,
+									"x": 0.0,
+                                    "y": 0.0,
+                                    "clickAction": "act_to_about_tile",
+                                    "bindings":
+                                    [
+                                        {
+                                            "binding": "bnd_general_about",
+                                            "property": "dataProviders"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

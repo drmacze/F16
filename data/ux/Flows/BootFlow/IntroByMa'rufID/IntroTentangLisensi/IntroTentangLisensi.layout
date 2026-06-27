@@ -1,0 +1,166 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_INTRO_AWALGAME"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_INTRO_AWALGAME"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+    
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 150,
+            "width": 500,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "BOTTOM",
+                    "alignH": "RIGHT",
+                    "marginBottom": -30,
+                    "marginRight": -125,
+                    "width": 80,
+                    "height": 60,
+                    "path": "animasi/Loading16.swf"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 25,
+            "width": 700,
+            "height": 350,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "width": 132,
+                    "height": 110,
+                    "type": "$LogoFIFAOLP"
+                },
+                
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "Official FIFA Licensed Product."
+                },
+                
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 50,
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "© FIFA and FIFA's Licensed Product Logo are copyrights and/"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 70,
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "or trademarks of FIFA. All rights reserved."
+                },
+                
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 120,
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "Manufactured under license by Electronic Arts Inc."
+                },
+                
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 170,
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "The use of real player names and likenesses is authorised by FIFPro"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "TOP",
+                   "alignH": "LEFT",
+                   "marginTop": 190,
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "Commercial Enterprises BV."
+                },
+                
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginBottom": 20,
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "ESRB Notice:"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "BOTTOM",
+                   "alignH": "LEFT",
+                   "marginLeft": 140,
+                   "fontSize": 20,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "Online Interactions Not Rated by by ESRB"
+                }
+                
+            ]
+        }
+    ]
+}

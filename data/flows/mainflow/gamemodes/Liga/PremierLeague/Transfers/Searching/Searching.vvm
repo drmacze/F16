@@ -1,0 +1,5 @@
+{
+    "dds":   ["Searching.dd"],
+    "vms":   [["lua", "Searching.lua"]],
+    "views": [["gfx", { "layout": "Searching.layout" }]]
+}

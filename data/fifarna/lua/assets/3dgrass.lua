@@ -1,0 +1,9 @@
+3DPOSITION()=1
+
+if (3DPOSITION==1)
+{
+  ALLOW VERTICAL();
+}
+
+END.
+

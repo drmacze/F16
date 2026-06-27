@@ -1,0 +1,24 @@
+{
+    "commonName": "Panel",
+    "alignH": "FILL",
+    "alignV": "FILL",
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Ticker",
+            "alignH": "FILL",
+            "alignV": "BOTTOM",
+            "height": 29,
+            "children":
+            [
+                {
+                    "commonName": "NavBar",
+                    "name": "navBar",
+                    "height": 29,
+                    "alignH": "FILL"
+                }
+            ]
+        }
+    ]
+}

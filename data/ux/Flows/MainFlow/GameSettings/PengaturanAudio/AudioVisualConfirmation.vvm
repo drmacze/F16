@@ -1,0 +1,5 @@
+{
+    "dds": ["AudioVisualConfirmation.dd"],
+    "vms": [["lua", "AudioVisualConfirmation.lua"]],
+    "views": [["gfx", {"layout": "AudioVisualConfirmation.layout"}]]
+}

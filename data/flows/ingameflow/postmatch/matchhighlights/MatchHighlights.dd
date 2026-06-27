@@ -1,0 +1,42 @@
+{
+	"actions":
+	[
+		{
+			"viewname": "act_exit",
+			"impl":
+			{
+				"type": "nav",
+				"event": "evt_exit"
+			}
+		},
+		{
+			"viewname": "act_encode_videos",
+			"actionname": "act_encode_videos"
+		},
+		{
+            "viewname": "act_row_click",
+            "actionname": "act_row_click"
+        },
+		{
+            "viewname": "act_checkbox_click",
+            "actionname": "act_checkbox_click"
+        }
+	],
+	"data":
+	[
+		{
+			"viewname": "bnd_judul",
+			"type": "string",
+			"impl":
+			{
+				"type": "ltxt",
+				"tag": "LTXT_TILE_MATCH_HIGHLIGHTS_LINE2"
+			}
+		},
+        {
+            "viewname": "bnd_match_highlights_list",
+            "binding": "bnd_match_highlights_list",
+            "type": "object"
+        }
+	]
+}

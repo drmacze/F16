@@ -1,0 +1,6 @@
+[
+	"/lua/common/VirtualButton.lua",
+    "/lua/enums/pregamemanager.lua",
+	"/lua/common/CommonNavVars.lua",
+	"/lua/packages/tableutil.lua"
+]

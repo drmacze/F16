@@ -1,0 +1,48 @@
+{
+	"name": "TeamRosterHub",
+    "let":  
+	{ 
+		"type": "friendly",
+		"gamemode": "real",
+		"flow": "offline",
+		"flowState": "MOTM_MATCH"
+	},
+    "onEnter":
+    [
+         ["viewLayer", ["Gamemodes"]],
+        ["finishViewUnload", ["screen"]],
+        ["showFEUI", [".gamemode"]],
+        ["stateChange", ["TeamRosterHub"]],
+        ["SetGameMode", ["TeamRosterHub"]]
+    ],
+    "onExit":
+    [
+        ["hideUI", [".gamemode"]]
+    ],
+    "initial":
+    {
+        "targets": ["Pregame"]
+    },
+    "states":
+    [
+        {
+            "name": "Pregame",
+            "type": "external",
+            "file": "/flows/mainflow/teamroster/pregame.nav",
+            "outputs":
+            {
+                "out_exit": "out_exit_gamemode",
+                "out_ingame_flow": "InGameFlow"
+            }
+        },
+		{
+			"name": "InGameFlow",
+			"type": "external",
+			"file": "/flows/ingameflow/InGameFlow.nav",
+			"outputs":
+			{
+				"out_exit": "out_exit_gamemode"
+			}
+		}
+    ]
+}

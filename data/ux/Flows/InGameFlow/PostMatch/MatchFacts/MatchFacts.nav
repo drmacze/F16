@@ -1,0 +1,67 @@
+{
+    "name": "MatchFacts",
+    "onEnter":
+    [
+       ["showFEUI"],
+       ["viewLayer", ["Gamemodes"]],
+       ["blockingLoadVVM", ["/Flows/InGameFlow/PostMatch/MatchFacts/MatchFacts.vvm", { "gamemode": ".gamemode", "flow": ".flow", "type": ".type" }]],
+       ["set", ["redirect", ".redirect"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "states":
+    [
+        {
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_menu"]
+                }
+            ],
+            "states":
+            [
+                {
+                    "name": "Facts",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["MatchFactsTabView"]],
+                        ["blockingLoadVVM", ["/Flows/InGameFlow/PostMatch/MatchFacts/Facts/Facts.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_events",
+                            "targets": ["Events"]
+                        }
+                    ]
+                },
+                {
+                    "name": "Events",
+                    "onEnter":
+                    [
+                        ["viewLayer", ["MatchFactsTabView"]],
+                        ["blockingLoadVVM",  ["/Flows/InGameFlow/PostMatch/MatchFacts/Events/Events.vvm"]]
+                    ],
+                    "onExit":
+                    [
+                        ["unloadVVM"]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event": "evt_facts",
+                            "targets": ["Facts"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

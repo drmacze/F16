@@ -1,0 +1,5 @@
+{
+	"dds":	 ["NewsHub.dd"],
+	"vms":   [["lua", "NewsHub.lua"]],
+    "views": [["gfx", {"layout": "NewsHub.layout"}]]
+}

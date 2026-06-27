@@ -1,0 +1,19 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Asset",
+    "alignV": "TOP",
+    "alignH": "RIGHT",
+    "marginTop": 95,
+    "marginRight": 45,
+    "type": "$RefereeAdvantage",
+    "bindings":
+    [
+        {
+            "binding": "bnd_visible",
+            "property": "visible"
+        }
+    ]
+}

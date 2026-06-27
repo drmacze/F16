@@ -1,0 +1,5 @@
+{
+	"dds": ["Bracket.dd"],
+    "vms": [["lua", "Bracket.lua"]],
+    "views": [["gfx", {"layout": "Bracket.layout"}]]
+}

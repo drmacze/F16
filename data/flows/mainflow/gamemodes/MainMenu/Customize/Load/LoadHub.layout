@@ -1,0 +1,96 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+		         	"name" : "show",
+		         	"script" :
+		         	[
+			             	{
+					              "anim" : "SCREEN_SHOW"
+			             	}
+		         	]
+		     },
+		     {
+		         	"name" : "hide",
+		         	"script" :
+		         	[
+			             	{
+					              "anim" : ""
+			             	}
+		         	]
+	       	}
+    ],
+
+    "children":
+    [
+
+
+        {
+            "commonName": "Panel",
+            "name": "BagianMenu",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginLeft": 0,
+            "width": 1600,
+            "height": 700,
+            "children":
+            [
+
+								{
+									"commonName": "Asset",
+									"name": "background",
+									"alignH": "FILL",
+									"alignV": "FILL",
+                                    
+									"type": "$ReBoost"
+								},
+
+               {
+                    "commonName": "Rectangle",
+                    "alignV": "TOP",
+                    "alignH": "FILL",
+                    "marginTop": 0,
+                    "height": 350,
+                    "color": "0x000000"
+               },
+               {
+                    "commonName": "Rectangle",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "marginBottom": 20,
+                    "height": 200,
+                    "color": "0x000000"
+               },
+               {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": 50,
+                    "marginLeft": 0,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text":"Load Saved Data . . ."
+                }
+                    ]
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

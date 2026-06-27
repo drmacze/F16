@@ -1,0 +1,5 @@
+{
+	"dds": ["GTN.dd"],
+    "vms": [["lua", "GTN.lua"]],
+    "views": [["gfx", {"layout": "GTN.layout"}]]
+}

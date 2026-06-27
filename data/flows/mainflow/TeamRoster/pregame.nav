@@ -1,0 +1,272 @@
+{
+    "name": "Pregame",
+    "type": "parallel",
+    "onEnter":
+    [
+        ["stateChange", [".flowState"]],
+        ["substateChange", ["PREGAME"]],
+        ["set", ["flow", ".flow"]]
+    ],
+   
+    "states":
+    [
+        {
+            "name": "FlowBranch",
+            "states":
+            [
+                {
+                    "name": "InitPregame",
+                    "onEnter":
+                    [
+                        ["invoke", [".flow"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "offline",
+                            "let":     { "fromScreen": "PrematchFlow" },
+                            "targets": ["TeamSelect"]
+                        }
+                    ]
+                },
+                {
+                    "name": "TeamSelect",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/flows/mainflow/TeamRoster/TeamSelect/teamselect.nav",
+                            "outputs":
+                            {
+                                "out_back":    "RedirectTeamSelectExit",
+                                "out_advance": "RedirectTeamSelectAdvance"
+                            }
+                        },
+                        {
+                            "name": "RedirectTeamSelectExit",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "offline",
+                                    "targets": ["ExitPregame"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RedirectTeamSelectAdvance",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "offline",
+                                    "targets": ["TeamRoster"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                
+                {
+                    "name": "TeamRoster",
+                    "states":
+                    [
+                        {
+                            "type": "external",
+                            "file": "/flows/mainflow/TeamRoster/TeamRoster.nav",
+                            "outputs":
+                            {
+                                "out_back":    "RedirectKitSelectExit",
+                                "out_advance": "RedirectKitSelectAdvance"
+                            }
+                        },
+                        {
+                            "name": "RedirectKitSelectExit",
+                            "onEnter":
+                            [
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "offline",
+                                    "targets": ["TeamSelect"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "RedirectKitSelectAdvance",
+                            "onEnter":
+                            [
+                                ["commitKitSelect"],
+                                ["invoke", [".flow"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "offline",
+                                    "targets": ["StartMatch"]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "StartMatch",
+                    "onEnter":
+                    [
+						["invoke", ["evt_start_match"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_start_match",
+                            "let":     { "flow": ".flow" },
+                            "targets": ["out_ingame_flow"]
+                        }
+                    ]
+                },
+                {
+                    "name": "ExitPregame",
+                    "onEnter":
+                    [
+						["stateChange", ["ARENA"]],
+                        ["substateChange", ["SUBSTATE_NONE"]],
+                        ["invoke", ["evt_exit_pregame"]]
+                    ],
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_exit_pregame",
+                            "targets": ["out_exit"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "WarningBranch",
+            "states":
+            [
+                {
+                    "transitions":
+                    [
+                        {
+                            "event":   "evt_to_pregame_warning_idle",
+                            "targets": ["WarningIdle"]
+                        },
+                        {
+                            "event":   "evt_force_exit",
+                            "targets": ["ForceExit"]
+                        }
+                    ],
+                    "states":
+                    [
+                        {
+                            "name": "WarningIdle",
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_p2p_disconnect",
+                                    "targets": ["P2PDisconnect"]
+                                },
+                                {
+                                    "event":   "evt_on_invite_expired",
+                                    "targets": ["InviteExpired"]
+                                },
+								{
+                                    "event":   "evt_direct_ip_failed",
+									"cond":    ["==", ".type", "friendly"],
+                                    "targets": ["P2PDisconnect"]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "P2PDisconnect",
+                            "onEnter":
+                            [
+                                ["showWarning",
+                                    [
+                                        {
+                                            "title":      "LTXT_POP_P2P_DISCONNECT",
+                                            "message":    "LTXT_POP_P2P_DISCONNECT_MESSAGE",
+                                            "buttons":
+                                            [
+                                                {
+                                                    "label": "LTXT_PREMATCH_EXIT_SESSION",
+                                                    "clickEvents":
+                                                    [
+                                                        "array",
+                                                        "evt_force_exit"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ],
+                            "onExit":
+                            [
+                                ["hideWarning"]
+                            ]
+                        },
+                        {
+                            "name": "InviteExpired",
+                            "onEnter":
+                            [
+                                ["hideOverlays"],
+                                ["showWarning",
+                                    [
+                                        {
+                                            "title":      "LTXT_INV_INVITE_EXPIRED_POPUP_TITLE",
+                                            "message":    "LTXT_INV_INVITE_EXPIRED_POPUP_BODY",
+                                            "autoEscape": false,
+                                            "buttons":
+                                            [
+                                                {
+                                                    "label": "LTXT_PREMATCH_EXIT_SESSION",
+                                                    "clickEvents":
+                                                    [
+                                                        "array",
+                                                        "evt_force_exit"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                ]
+                            ],
+                            "onExit":
+                            [
+                                ["hideWarning"]
+                            ]
+                        },
+                        {
+                            "name": "ForceExit",
+                            "onEnter":
+                            [
+                                ["cancelPrivateMatch"],
+                                ["hideOverlays"],
+                                ["substateChange", ["SUBSTATE_NONE"]],
+                                ["invoke", ["evt_redirect_force_exit"]]
+                            ],
+                            "transitions":
+                            [
+                                {
+                                    "event":   "evt_redirect_force_exit",
+                                    "targets": ["out_exit"]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

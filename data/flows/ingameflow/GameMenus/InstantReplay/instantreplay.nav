@@ -1,0 +1,23 @@
+{
+    "name": "InstantReplay",
+    "onEnter":
+    [
+		["substateChange", ["REPLAYS"]],
+        ["loadVVM", ["/flows/ingameflow/gamemenus/instantreplay/InstantReplay.vvm"]],
+		["hideUI"]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"],
+		["substateChange", ["INGAME"]],
+		["showInGameUI", [".gamemode", ".flow", ".type", ".gameState"]]
+    ],
+    "transitions":
+    [
+        {
+            "event":   "evt_back",
+            "targets": ["out_back"],
+            "let":     { "initial": "menu" }
+        }
+    ]
+}

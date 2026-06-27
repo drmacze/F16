@@ -1,0 +1,452 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "SCREEN_SHOW" } ]
+	    },
+	    {
+		    "name" : "hide",
+		    "script" : [ { "anim" : "SIMPLE_SCREEN_HIDE" } ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "SquadCustomizationBehavior",
+            "actionName": "act_btn_click",
+            "buttonContainer": "BtnClick"
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_exit"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BgInfo",
+            "alignV": "CENTER",
+            "alignH": "LEFT",
+            "marginLeft": 100,
+            "marginTop": -15,
+            "width": 600,
+            "height": 325,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 590,
+                    "marginTop": 260,
+                    "width": 300,
+                    "height": 190,
+                    "type": "$_Shadow"
+                },
+                {
+                    "commonName": "Asset",
+                    "name": "icon",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 590,
+                    "marginBottom": -70,
+                    "width": 420,
+                    "height": 420,
+                    "type": "$_ModelManager_1"
+                }, 
+                {
+                    "commonName": "Panel",
+                    "name": "Info1",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab1_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "Text",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 19,
+                            "marginLeft": 24,
+                            "fontSize": 33,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "leading": 1,
+                            "text": "Create New\nManager"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Text",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 100,
+                            "marginLeft": 24,
+                            "fontSize": 14,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "leading": 1,
+                            "text": "Take the reins at your favourite club. Apply your\nTactical Vision and lead them to success.\nBalance their performance with meeting the club's\nstrategic and business objectives."
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Info2",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_tab2_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name": "Text",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 19,
+                            "marginLeft": 24,
+                            "fontSize": 33,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "leading": 1,
+                            "text": "Load Manager"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Text",
+                            "alignV": "TOP",
+                            "alignH": "LEFT",
+                            "marginTop": 65,
+                            "marginLeft": 24,
+                            "fontSize": 14,
+                            "fontColor": "0xFFFFFF",
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "leading": 1,
+                            "text": "Continue your journey in management. Pick up\nwhere you left off and take your team even further,\nfacing new challenges on and off the pitch."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "BagianAction",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1150,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "ActionOff",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "width": 215,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Create New\nManager"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "color": "0x1B1B2A",
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 20,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xFFFFFF",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "width": 215,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Load Manager"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "ActionOn",
+                    "alignV": "BOTTOM",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Panel",
+                            "name": "tab1",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 0,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab1_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 1,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_newgame"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "CENTER",
+                                    "alignH": "LEFT",
+                                    "marginTop": 0,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xffffff",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "width": 215,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Create New\nManager"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "tab2",
+                            "alignV": "BOTTOM",
+                            "alignH": "LEFT",
+                            "marginLeft": 231.2,
+                            "height": 80,
+                            "width": 225,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tab2_visible",
+                                    "property": "visible"
+                                }
+                            ],
+                            "children":
+                            [
+                                {
+                                    "commonName": "Rectangle",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "fillColor": "0x1B1B2A",
+                                    "fillAlpha": 1,
+                                    "drawFill": true,
+                                    "drawOutline": true,
+                                    "outlineThickness": 0.8,
+                                    "outlineColor": "0x00D9D1",
+                                    "outlineAlpha": 1,
+                                    "cornerRaduis": 10
+                                },
+                                {
+                                    "commonName": "GenericButton",
+                                    "name": "Action",
+                                    "alignV": "FILL",
+                                    "alignH": "FILL",
+                                    "clickAction": "act_loadgame"
+                                },
+                                {
+                                    "commonName": "Label",
+                                    "name": "Text",
+                                    "alignV": "TOP",
+                                    "alignH": "LEFT",
+                                    "marginTop": 20,
+                                    "marginLeft": 20,
+                                    "fontSize": 20,
+                                    "fontColor": "0xffffff",
+                                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                                    "width": 215,
+                                    "multiline": true,
+                                    "leading": 1,
+                                    "text": "Load Manager"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Group",
+            "name": "BtnClick",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 75,
+            "width": 1210,
+            "height": 500,
+            "alpha": 0,
+            "children":
+            [
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act1",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 39,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 1,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                },
+                {
+                    "commonName": "ClubButton",
+                    "name": "Act2",
+                    "alignH": "LEFT",
+                    "alignV": "BOTTOM",
+                    "x": 270,
+                    "y": 420,
+                    "width": 210,
+                    "height": 70,
+                    "autoSelect": true,
+                    "id": 2,
+                    "type": "blackandblue",
+                    "buttonWidth": 210,
+                    "buttonHeight": 70,
+                    "selectable": true
+                }
+            ]
+        }
+    ]
+}

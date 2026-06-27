@@ -1,0 +1,91 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "2LigaRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontColor": "$COLOR_DARK_GRAY",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "textAlignH": "RIGHT",
+            "fontColor": "$COLOR_DARK_GRAY"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.Parameter": "RowPanel.RowLeftPanel.Parameter.text",
+        "dataProviders.Setparameter": "RowPanel.RowLeftPanel.Setparameter.text",
+
+        "dataProviders.FontColor": "RowPanel.RowRightPanel.StartGame.fontColor",
+        "dataProviders.Icon": "RowPanel.RowRightPanel.StartGameIcon.image",
+        "dataProviders.RightText": "RowPanel.RowRightPanel.StartGame.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 900,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "width": 800,
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "name":"Parameter",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -250,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"Setparameter",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -100,
+                            "marginBottom": 0,
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_DARK_GRAY"
+                            }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

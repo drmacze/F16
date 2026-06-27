@@ -1,0 +1,699 @@
+{
+    "actions":
+    [
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_active",
+            "binding":  "bnd_active",
+			"type":     "bool"
+        },
+        {
+            "viewname": "bnd_visible",
+            "binding":  "bnd_visible",
+			"type":     "bool"
+        },
+
+        {
+            "viewname": "bnd_field_height",
+            "binding": "bnd_field_height",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_field_width",
+            "binding": "bnd_field_width",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_field_left",
+            "binding": "bnd_field_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_field_top",
+            "binding": "bnd_field_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_field",
+            "binding": "bnd_field",
+            "type": "object"
+        },
+        {
+            "viewname": "bnd_formation_left",
+            "binding": "bnd_formation_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_formation_top",
+            "binding": "bnd_formation_top",
+            "type": "int"
+        },
+        
+        {
+            "viewname": "bnd_team_crest",
+            "binding":  "bnd_team_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_crest_width",
+            "binding":  "bnd_team_crest_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_height",
+            "binding":  "bnd_team_crest_height",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_alignV",
+            "binding":  "bnd_team_crest_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest_alignH",
+            "binding":  "bnd_team_crest_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest_left",
+            "binding":  "bnd_team_crest_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_top",
+            "binding":  "bnd_team_crest_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_right",
+            "binding":  "bnd_team_crest_right",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest_bottom",
+            "binding":  "bnd_team_crest_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest2",
+            "binding":  "bnd_team_crest2",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_team_crest2_width",
+            "binding":  "bnd_team_crest2_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest2_height",
+            "binding":  "bnd_team_crest2_height",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest2_alignV",
+            "binding":  "bnd_team_crest2_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest2_alignH",
+            "binding":  "bnd_team_crest2_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_crest2_left",
+            "binding":  "bnd_team_crest2_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest2_top",
+            "binding":  "bnd_team_crest2_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest2_right",
+            "binding":  "bnd_team_crest2_right",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_crest2_bottom",
+            "binding":  "bnd_team_crest2_bottom",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_logo",
+            "binding":  "bnd_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_logo_width",
+            "binding":  "bnd_logo_width",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_logo_height",
+            "binding":  "bnd_logo_height",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_logo_alignV",
+            "binding":  "bnd_logo_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_logo_alignH",
+            "binding":  "bnd_logo_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_logo_left",
+            "binding":  "bnd_logo_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_logo_top",
+            "binding":  "bnd_logo_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_logo_right",
+            "binding":  "bnd_logo_right",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_logo_bottom",
+            "binding":  "bnd_logo_bottom",
+            "type":     "int"
+        },
+        
+        {
+            "viewname": "bnd_team_name",
+            "binding":  "bnd_team_name",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_name_alignV",
+            "binding":  "bnd_team_name_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_name_alignH",
+            "binding":  "bnd_team_name_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_name_left",
+            "binding": "bnd_team_name_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_team_name_top",
+            "binding": "bnd_team_name_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_team_name_fontColor",
+            "binding": "bnd_team_name_fontColor",
+            "type": "string"
+        },
+        {
+            "viewname": "bnd_fontFace",
+            "binding":  "bnd_fontFace",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_team_name_fontSize",
+            "binding": "bnd_team_name_fontSize",
+            "type": "int"
+        },
+        
+        {
+            "viewname": "bnd_team_formation",
+            "binding":  "bnd_team_formation",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_formation_alignV",
+            "binding":  "bnd_team_formation_alignV",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_formation_alignH",
+            "binding":  "bnd_team_formation_alignH",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_team_formation_left",
+            "binding": "bnd_team_formation_left",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_team_formation_top",
+            "binding": "bnd_team_formation_top",
+            "type": "int"
+        },
+        {
+            "viewname": "bnd_team_formation_fontColor",
+            "binding": "bnd_team_formation_fontColor",
+            "type": "string"
+        },
+
+        {
+            "viewname": "bnd_team_formation_fontSize",
+            "binding": "bnd_team_formation_fontSize",
+            "type": "int"
+        },
+        
+        {
+            "viewname": "bnd_posisi_sub_left",
+            "binding":  "bnd_posisi_sub_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_posisi_sub_top",
+            "binding":  "bnd_posisi_sub_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_text_sub",
+            "binding":  "bnd_text_sub",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_text_sub_fontSize",
+            "binding":  "bnd_text_sub_fontSize",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_text_sub_fontColor",
+            "binding":  "bnd_text_sub_fontColor",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_text_sub_left",
+            "binding":  "bnd_text_sub_left",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_text_sub_top",
+            "binding":  "bnd_text_sub_top",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_playersub_fontSize",
+            "binding":  "bnd_playersub_fontSize",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_playersub_fontColor",
+            "binding":  "bnd_playersub_fontColor",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_playergksub_fontColor",
+            "binding":  "bnd_playergksub_fontColor",
+            "type":     "string"
+        },
+        
+        {
+            "viewname": "bnd_bg_number_color",
+            "binding":  "bnd_bg_number_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_bg_name_color",
+            "binding":  "bnd_bg_name_color",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_number_fontColor",
+            "binding":  "bnd_player_number_fontColor",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_player_name_fontColor",
+            "binding":  "bnd_player_name_fontColor",
+            "type":     "string"
+        },
+        
+        
+		{
+            "viewname": "bnd_player_lineup",
+            "binding":  "bnd_player_lineup",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player1_name",
+            "binding":  "bnd_player1_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player2_name",
+            "binding":  "bnd_player2_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player3_name",
+            "binding":  "bnd_player3_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player4_name",
+            "binding":  "bnd_player4_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player5_name",
+            "binding":  "bnd_player5_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player6_name",
+            "binding":  "bnd_player6_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player7_name",
+            "binding":  "bnd_player7_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player8_name",
+            "binding":  "bnd_player8_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player9_name",
+            "binding":  "bnd_player9_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player10_name",
+            "binding":  "bnd_player10_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player11_name",
+            "binding":  "bnd_player11_name",
+			"type":     "string"
+        },
+
+        {
+            "viewname": "bnd_player12_name",
+            "binding":  "bnd_player12_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player13_name",
+            "binding":  "bnd_player13_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player14_name",
+            "binding":  "bnd_player14_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player15_name",
+            "binding":  "bnd_player15_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player16_name",
+            "binding":  "bnd_player16_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player17_name",
+            "binding":  "bnd_player17_name",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player18_name",
+            "binding":  "bnd_player18_name",
+			"type":     "string"
+        },
+
+        {
+            "viewname": "bnd_player1_avatar",
+            "binding":  "bnd_player1_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player2_avatar",
+            "binding":  "bnd_player2_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player3_avatar",
+            "binding":  "bnd_player3_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player4_avatar",
+            "binding":  "bnd_player4_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player5_avatar",
+            "binding":  "bnd_player5_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player6_avatar",
+            "binding":  "bnd_player6_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player7_avatar",
+            "binding":  "bnd_player7_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player8_avatar",
+            "binding":  "bnd_player8_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player9_avatar",
+            "binding":  "bnd_player9_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player10_avatar",
+            "binding":  "bnd_player10_avatar",
+			"type":     "object"
+        },
+        {
+            "viewname": "bnd_player11_avatar",
+            "binding":  "bnd_player11_avatar",
+			"type":     "object"
+        },
+
+        {
+            "viewname": "bnd_player1_number",
+            "binding":  "bnd_player1_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player2_number",
+            "binding":  "bnd_player2_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player3_number",
+            "binding":  "bnd_player3_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player4_number",
+            "binding":  "bnd_player4_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player5_number",
+            "binding":  "bnd_player5_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player6_number",
+            "binding":  "bnd_player6_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player7_number",
+            "binding":  "bnd_player7_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player8_number",
+            "binding":  "bnd_player8_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player9_number",
+            "binding":  "bnd_player9_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player10_number",
+            "binding":  "bnd_player10_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player11_number",
+            "binding":  "bnd_player11_number",
+			"type":     "string"
+        },
+
+        {
+            "viewname": "bnd_player12_number",
+            "binding":  "bnd_player12_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player13_number",
+            "binding":  "bnd_player13_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player14_number",
+            "binding":  "bnd_player14_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player15_number",
+            "binding":  "bnd_player15_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player16_number",
+            "binding":  "bnd_player16_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player17_number",
+            "binding":  "bnd_player17_number",
+			"type":     "string"
+        },
+        {
+            "viewname": "bnd_player18_number",
+            "binding":  "bnd_player18_number",
+			"type":     "string"
+        },
+
+
+        {
+            "viewname": "bnd_player1_left",
+            "binding":  "bnd_player1_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player2_left",
+            "binding":  "bnd_player2_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player3_left",
+            "binding":  "bnd_player3_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player4_left",
+            "binding":  "bnd_player4_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player5_left",
+            "binding":  "bnd_player5_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player6_left",
+            "binding":  "bnd_player6_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player7_left",
+            "binding":  "bnd_player7_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player8_left",
+            "binding":  "bnd_player8_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player9_left",
+            "binding":  "bnd_player9_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player10_left",
+            "binding":  "bnd_player10_left",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player11_left",
+            "binding":  "bnd_player11_left",
+			"type":     "int"
+        },
+
+        {
+            "viewname": "bnd_player1_bottom",
+            "binding":  "bnd_player1_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player2_bottom",
+            "binding":  "bnd_player2_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player3_bottom",
+            "binding":  "bnd_player3_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player4_bottom",
+            "binding":  "bnd_player4_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player5_bottom",
+            "binding":  "bnd_player5_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player6_bottom",
+            "binding":  "bnd_player6_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player7_bottom",
+            "binding":  "bnd_player7_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player8_bottom",
+            "binding":  "bnd_player8_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player9_bottom",
+            "binding":  "bnd_player9_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player10_bottom",
+            "binding":  "bnd_player10_bottom",
+			"type":     "int"
+        },
+        {
+            "viewname": "bnd_player11_bottom",
+            "binding":  "bnd_player11_bottom",
+			"type":     "int"
+        }
+    ]
+}

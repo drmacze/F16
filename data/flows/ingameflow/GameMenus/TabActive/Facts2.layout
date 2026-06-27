@@ -1,0 +1,301 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name" : "show",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_IN" } ]
+	    },
+	    {
+			"name" : "hide",
+		    "script" : [ { "anim" : "QUICK_ANIMATION_OUT" } ]
+	    }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Action",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 45,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_to_match_facts"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Select"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 104,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_to_match_facts"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 238,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_toggle_pause"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 298,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Quit"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 298,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_quit_match"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "UIFrame",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "height": 580,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "MyTeam",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": 120,
+                    "marginTop": 0,
+                    "width": 550,
+                    "height": 370,
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "ColorBg",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "color": "0x1B1B2A",
+                            "cornerRaduis": 13,
+                            "alpha": 0.8
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "cresthome",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "marginLeft": -205,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimHome",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 115,
+                            "marginLeft": -205,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "forceCaps": false,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_home_team_name_abbr",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "crestaway",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 40,
+                            "marginLeft": 205,
+                            "scaleX": 0.27,
+                            "scaleY": 0.27,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_crest",
+                                  "property": "image"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "NamaTimAway",
+                            "alignV": "TOP",
+                            "alignH": "CENTER",
+                            "marginTop": 115,
+                            "marginLeft": 205,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_WHITE",
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "forceCaps": false,
+                            "bindings":
+                            [
+                               {
+                                  "binding": "bnd_away_team_name_abbr",
+                                  "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "name": "Fo",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -80,
+                            "marginLeft": 0,
+                            "fontSize": 17,
+                            "fontColor": "$COLOR_LIGHT_GRAY",
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "forceCaps": false,
+                            "text": "Statistics"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "name": "matchFactsBGPitch",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": -20,
+                            "height": 80,
+                            "width": 450,
+                            "alpha": 0.7,
+                            "type": "$PitchFacts"
+                        },
+                        {
+                            "commonName": "VerticalList",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": 310,
+                            "x": 0.0,
+                            "y": 0.0,
+                            "marginTop": 15,
+                            "rowWidth": 650,
+                            "rowHeight": 35,
+                            "displayRange": 4,
+                            "row": "GameMenuRows",
+                            "useAlternating": false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_match_facts",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "CENTER",
+            "alignH": "FILL",
+            "marginLeft": 85,
+            "marginTop": 20,
+            "height": 450,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 26,
+                    "marginLeft": 17,
+                    "height": 12,
+                    "width": 165,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 26,
+                    "marginLeft": 17,
+                    "height": 12,
+                    "width": 165,
+                    "alpha": 1,
+                    "path": "views/backgrounds/White_Effect.swf"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 10,
+                    "marginLeft": 25,
+                    "fontSize": 16,
+                    "fontColor": "0xFFFFFF",
+                    "fontFace": "$FONT_CRUYFFSANSHEAVY",
+                    "text": "MATCH FACTS"
+                }
+            ]
+        }
+    ]
+}

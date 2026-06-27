@@ -1,0 +1,2914 @@
+{
+    "commonName": "Panel",
+    "alignH": "CENTER",
+    "alignV": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        },
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "Actions",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 780,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_tab2"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 840,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "More Groups"
+                },
+                {
+                    "commonName": "SimpleButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 840,
+                    "height": 25,
+                    "width": 100,
+                    "clickAction": "act_tab2"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "AllInfo",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 0,
+            "width": 1000,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "Info",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginTop": 0,
+                    "width": 1000,
+                    "height": 500,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -170,
+                            "marginLeft": -520,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP A"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -170,
+                            "marginLeft": -290,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP B"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -170,
+                            "marginLeft": -60,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP C"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -170,
+                            "marginLeft": 170,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP D"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 60,
+                            "marginLeft": -520,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP E"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 60,
+                            "marginLeft": -290,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP F"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 60,
+                            "marginLeft": -60,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP G"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 60,
+                            "marginLeft": 170,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontSize": 20,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "GROUP H"
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "Teams",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginLeft": 500,
+                    "marginTop": 0,
+                    "width": 1000,
+                    "height": 500,
+                    "children":
+                    [
+                        {
+                            "commonName": "Image",
+                            "name": "HomeCrest",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -130,
+                            "marginLeft": -70,
+                            "width": 120,
+                            "height": 120,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_crest",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "StarRating",
+                            "name": "starRating",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginLeft": -70,
+                            "marginTop": -60,
+                            "alpha": 1,
+                            "size": "medium",
+                            "bindings": 
+                            [
+                                {
+                                    "binding": "bnd_rating_star_team",
+                                    "property": "stars"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 60,
+                            "marginLeft": 360,
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Team Name :"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 90,
+                            "marginLeft": 360,
+                            "fontSize": 23,
+                            "alpha": 1,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xffffff",
+                            "width": 140,
+                            "autoScroll":true,
+                            "forceCaps":  false,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 130,
+                            "marginLeft": 360,
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "fontSize": 18,
+                            "fontColor": "$COLOR_WHITE",
+                            "text": "Overall Rating"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 160,
+                            "marginLeft": 360,
+                            "fontSize": 23,
+                            "alpha": 1,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_rating_team",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 200,
+                            "marginLeft": 360,
+                            "fontSize": 23,
+                            "alpha": 1,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "0xffffff",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_group_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeCrest",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 180,
+                            "marginLeft": 80,
+                            "width": 75,
+                            "height": 75,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_flag_team",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 128,
+                            "marginLeft": 80,
+                            "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                            "fontSize": 18,
+                            "width": 140,
+                            "autoScroll":true,
+                            "forceCaps":  false,
+                            "alpha": 1,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tour_name",
+                                    "property": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeKit",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -140,
+                            "marginLeft": 80,
+                            "width": 95,
+                            "height": 95,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_kit_home",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "AwayKit",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -15,
+                            "marginLeft": 80,
+                            "width": 95,
+                            "height": 95,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_team_kit_away",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "Logo",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 70,
+                            "marginLeft": 80,
+                            "width": 55,
+                            "height": 55,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_tour_logo",
+                                    "property": "image"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "Panel",
+                            "name": "dataPanel",
+                            "alignH": "CENTER",
+                            "alignV": "CENTER",
+                            "marginTop": 0,
+                            "marginLeft": -55,
+                            "height": 50,
+                            "width": 200,
+                            "authoringData": 
+                           {
+                            "expanded": false
+                            },
+                            "children":
+                            [
+                        {
+                            "commonName": "TeamRating",
+                            "name": "teamRating",
+                            "width": 140,
+                            "attLabelStyles":
+                            [
+                            "TF_TEAM_SELECT_RATING_LABELS"
+                            ],
+                            "attValueStyles":
+                            [
+                            "TF_TEAM_SELECT_RATING_VALUES"
+                            ],
+                            "defLabelStyles":
+                            [
+                            "TF_TEAM_SELECT_RATING_LABELS"
+                            ],
+                            "defValueStyles":
+                            [
+                            "TF_TEAM_SELECT_RATING_VALUES"
+                            ],
+                            "dividersVisible": true,
+                            "midLabelStyles":
+                            [
+                            "TF_TEAM_SELECT_RATING_LABELS"
+                            ],
+                            "midValueStyles":
+                            [
+                            "TF_TEAM_SELECT_RATING_VALUES"
+                            ],
+                            "bindings":
+                            [
+                            {
+                                "binding": "bnd_team_rating",
+                                "property": "dataProviders"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupa",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 50,
+        "marginLeft": -35,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team1",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team1",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team1"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team1",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team1",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team2",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team2",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team2"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team2",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team2",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team3",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team3",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team3"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team3",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team3",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team4",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team4",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team4"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team4",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team4",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupb",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 50,
+        "marginLeft": 195,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team5",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team5",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team5"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team5",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team5",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team6",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team6",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team6"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team6",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team6",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team7",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team7",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team7"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team7",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team7",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team8",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team8",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team8"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team8",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team8",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupc",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 50,
+        "marginLeft": 425,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team9",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team9",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team9"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team9",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team9",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team10",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team10",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team10"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team10",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team10",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team11",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team11",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team11"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team11",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team11",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team12",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team12",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team12"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team12",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team12",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupd",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 50,
+        "marginLeft": 655,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team13",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team13",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team13"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team13",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team13",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team14",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team14",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team14"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team14",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team14",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team15",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team15",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team15"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team15",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team15",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team16",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team16",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team16"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team16",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team16",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupe",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 280,
+        "marginLeft": -35,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team17",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team17",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team17"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team17",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team17",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team18",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team18",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team18"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team18",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team18",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team19",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team19",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team19"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team19",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team19",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team20",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team20",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team20"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team20",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team20",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupf",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 280,
+        "marginLeft": 195,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team21",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team21",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team21"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team21",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team21",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team22",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team22",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team22"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team22",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team22",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team23",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team23",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team23"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team23",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team23",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team23",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team24",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team24"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team24",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team24",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Grupg",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 280,
+        "marginLeft": 425,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team25",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team25",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team25"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team25",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team25",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team26",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team26",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team26"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team26",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team26",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team27",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team27",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team27"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team27",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team27",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team28",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team28",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team28"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team28",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team28",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commonName": "Panel",
+        "name": "Gruph",
+        "alignV": "CENTER",
+        "alignH": "CENTER",
+        "marginTop": 280,
+        "marginLeft": 655,
+        "height": 40,
+        "width": 210,
+        "children":
+        [
+            {
+                "commonName": "Panel",
+                "name": "Team29",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -180,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team29",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team29"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team29",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team29",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team30",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -140,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team30",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team30"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team30",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team30",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team31",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -100,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team31",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team31"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team31",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team31",
+                                "property": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "commonName": "Panel",
+                "name": "Team32",
+                "alignV": "CENTER",
+                "alignH": "CENTER",
+                "marginTop": -60,
+                "marginLeft": -490,
+                "height": 40,
+                "width": 210,
+                "children":
+                [
+                    {
+                        "commonName": "Rectangle",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "alpha": 1,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_tour_color_tab",
+                                "property": "color"
+                            },
+                            {
+                                "binding": "bnd_visible_team32",
+                                "property": "visible"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "GenericButton",
+                        "name": "Action",
+                        "alignV": "FILL",
+                        "alignH": "FILL",
+                        "clickAction": "act_tab_team32"
+                    },
+                    {
+                        "commonName": "Image",
+                        "name": "HomeCrest",
+                        "alignV": "CENTER",
+                        "alignH": "CENTER",
+                        "marginTop": 0,
+                        "marginLeft": -80,
+                        "width": 35,
+                        "height": 35,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_logo_team32",
+                                "property": "image"
+                            }
+                        ]
+                    },
+                    {
+                        "commonName": "Label",
+                        "alignV": "CENTER",
+                        "alignH": "LEFT",
+                        "marginTop": 0,
+                        "marginLeft": 60,
+                        "fontSize": 20,
+                        "fontFace": "$FONT_CRUYFFSANSMEDIUM",
+                        "fontColor": "0xffffff",
+                        "width": 140,
+                        "autoScroll":true,
+                        "forceCaps":  false,
+                        "bindings":
+                        [
+                            {
+                                "binding": "bnd_name_team32",
+                                "property": "text"
+                             }
+                         ]
+                     }
+                 ]
+             }
+         ]
+     }
+ ]
+}
+]
+}

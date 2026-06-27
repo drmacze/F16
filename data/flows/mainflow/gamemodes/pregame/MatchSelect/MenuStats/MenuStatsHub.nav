@@ -1,0 +1,39 @@
+{
+    "name": "MenuStatsHub",
+    "onEnter":
+    [
+        ["setTabContext", [5]],
+        ["stateChange", [".flowState"]],
+        ["substateChange", ["SUBSTATE_NONE"]],
+        ["invoke", ["evt_show_stage_background"]],
+        ["blockingLoadVVM", ["MenuStatsHub.vvm"]]
+    ],
+    "onExit":
+    [
+        ["unloadVVM"]
+    ],
+    "transitions":
+    [
+        {
+            "event": "evt_menustats_detailstats",
+            "targets": ["out_menustat_detailstats"]
+        },
+        {
+            "event": "evt_menu_match",
+            "targets": ["out_menu_match"]
+        },
+
+        {
+            "event": "evt_menu_squad",
+            "targets": ["out_menu_squad"]
+        },
+        {
+            "event": "evt_menu_settings",
+            "targets": ["out_menu_settings"]
+        },
+        {
+            "event": "evt_menu_sides",
+            "targets": ["out_menu_sides"]
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "name": "MatchHighlights",
+    "onEnter":
+    [
+       ["showFEUI"],
+       ["viewLayer", ["Gamemodes"]],
+       ["substateChange", ["REPLAYS"]],
+       ["blockingLoadVVM", ["MatchHighlights.vvm"]]
+    ],
+    "onExit":
+    [
+       ["substateChange", ["INGAME"]],
+       ["unloadVVM"]
+    ],
+    "transitions":
+    [
+       {
+          "event": "evt_back",
+          "targets": ["out_menu"]
+       }
+    ]
+}

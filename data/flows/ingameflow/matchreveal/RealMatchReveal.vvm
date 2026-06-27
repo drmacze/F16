@@ -1,0 +1,5 @@
+{
+    "dds":   ["RealMatchReveal.dd"],
+	"vms":   [["lua", "RealMatchReveal.lua"]],
+    "views": [["gfx", {"layout":"RealMatchReveal.layout"}]]
+}

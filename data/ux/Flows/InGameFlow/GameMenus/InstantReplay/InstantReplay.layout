@@ -1,0 +1,197 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "FILL",
+    "alignH": "FILL",
+    "behaviors":
+    [
+        {
+            "commonName": "MouseClickActionBehavior",
+            "name": "clickBehavior",
+            "actionName": "act_toggle_controls"
+        }
+    ],
+    "children":
+    [
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1500,
+            "height": 800,
+            "alpha": 1,
+            "type": "$EfekKabut"
+        },
+        {
+            "commonName": "Asset",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1500,
+            "height": 800,
+            "alpha": 1,
+            "type": "$EfekVignette"
+        },                   
+        {
+            "commonName": "GestureArea",
+            "name": "BagianAreaUntukZoom&Pan",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "panAction":
+            {
+                "action": "act_pan_camera",
+                "binding": "bnd_pan_camera"
+            },
+            "zoomAction":
+            {
+                "action": "act_zoom_camera",
+                "binding": "bnd_zoom_camera"
+            },
+            "bindings":
+            [
+                {
+                    "binding": "BND_SCREEN_WIDTH",
+                    "property": "width"
+                },
+                {
+                    "binding": "BND_SCREEN_HEIGHT",
+                    "property": "height"
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianKontrolUntukReplay",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 105,
+            "width": 500,
+            "height": 100,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_controls_visibility",
+                    "property": "visible"
+                }
+            ],
+            "children":
+            [
+			    {
+			        "commonName": "Panel",
+			        "name": "BagianBarLamaReplay",
+			        "alignV": "TOP",
+			        "alignH": "CENTER",
+			        "width": 500,
+			        "height": 50,
+			        "children":
+			        [
+			    	   {
+                           "commonName": "ReplayControl",
+                           "alignV": "TOP",
+                           "alignH": "CENTER",
+                           "width": 500,
+                           "movePlayheadAction":
+                           {
+                              "action": "act_move_playhead",
+                              "binding": "bnd_playhead_position"
+                           },
+                           "blueTrackAsset": "$BlueTrackAsset",
+                           "replayControlKnob": "$ReplayControlKnob",
+                           "replayMiddleTrack": "$ReplayMiddleTrack",
+                           "bindings":
+                           [
+                              {
+                                  "binding": "bnd_replay_control",
+                                  "property": "dataProviders"
+                              }
+                           ]
+			    	   }
+			        ]
+			    },
+			    {
+			        "commonName": "Panel",
+			        "name": "BagianButton",
+			        "alignV": "BOTTOM",
+			        "alignH": "CENTER",
+			        "width": 500,
+			        "height": 50,
+			        "children":
+			        [
+			    	   {
+                           "commonName": "Asset",
+                           "alignV": "FILL",
+                           "alignH": "FILL",
+                           "alpha": 0.5,
+                           "type": "$BackgroundHitam"
+			    	   },
+			    	   {
+                           "commonName": "AssetButton",
+                           "name": "ButtonExit",
+                           "alignV": "CENTER",
+                           "alignH": "LEFT",
+                           "marginLeft": 10,
+                           "width": 40,
+                           "height": 40,
+                           "clickAction": "act_back",
+                           "buttonAsset": "$ReplayExit"
+			    	   },
+			    	   {
+                           "commonName": "AssetButton",
+                           "name": "ButtonKamera",
+                           "alignV": "CENTER",
+                           "alignH": "RIGHT",
+                           "marginRight": 10,
+                           "width": 40,
+                           "height": 40,
+                           "clickAction": "act_change_camera",
+                           "buttonAsset": "$ReplayChangeCamera"
+			    	   },
+			    	   {
+                           "commonName": "AssetButton",
+                           "name": "ButtonPreviousPlayer",
+                           "alignV": "CENTER",
+                           "alignH": "LEFT",
+                           "marginLeft": 110,
+                           "width": 40,
+                           "height": 40,
+                           "clickAction": "act_previous_target",
+                           "buttonAsset": "$ReplayPreviousTarget"
+			    	   },
+			    	   {
+                           "commonName": "AssetButton",
+                           "name": "ButtonPlay&Pause",
+                           "alignV": "CENTER",
+                           "alignH": "CENTER",
+                           "width": 40,
+                           "height": 40,
+                           "clickAction": "act_toggle_play",
+                           "bindings":
+                           [
+						       {
+							       "binding": "bnd_play_instant_replay",
+							       "property": "buttonAsset"
+                               }
+                           ]
+			    	   },
+			    	   {
+                           "commonName": "AssetButton",
+                           "name": "ButtonNextPlayer",
+                           "alignV": "CENTER",
+                           "alignH": "RIGHT",
+                           "marginRight": 112,
+                           "width": 40,
+                           "height": 40,
+                           "clickAction": "act_next_target",
+                           "buttonAsset": "$ReplayNextTarget"
+			    	   }
+			        ]
+			    }
+            ]
+		}
+		
+    ]
+}

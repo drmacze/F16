@@ -1,0 +1,116 @@
+{
+    "actions":
+    [
+        {
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },
+        {
+            "viewname": "act_squad",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_squad"
+            }
+        },
+        {
+            "viewname": "act_customize",
+            "actionname": "act_customize"
+        },
+        {
+            "viewname": "act_advance",
+            "actionname": "act_advance"
+        },
+        {
+            "viewname":"act_btn_click",
+            "actionname":"act_btn_click"
+        }
+    ],
+    "data":
+    [
+        {
+            "viewname": "bnd_tab1_visible",
+            "binding":  "bnd_tab1_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab2_visible",
+            "binding":  "bnd_tab2_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab3_visible",
+            "binding":  "bnd_tab3_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_tab4_visible",
+            "binding":  "bnd_tab4_visible",
+            "type":     "bool"
+        },
+        {
+            "viewname": "bnd_color_tourid",
+            "binding":  "bnd_color_tourid",
+            "type":     "init"
+        },
+        {
+            "viewname": "bnd_match_info",
+            "binding":  "bnd_match_info",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_tour_label",
+            "binding":  "bnd_tour_label",
+            "type":     "string"
+        },
+        {
+            "viewname": "bnd_match_hour",
+            "binding":  "bnd_match_hour",
+            "type":     "int"
+        },
+        {
+            "viewname": "bnd_home_side_icon",
+            "binding":  "bnd_home_side_icon",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_side_icon",
+            "binding":  "bnd_away_side_icon",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_2d_away_kit",
+            "binding":  "bnd_2d_away_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_2d_home_kit",
+            "binding":  "bnd_2d_home_kit",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_tour_logo",
+            "binding":  "bnd_tour_logo",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_bg_tour",
+            "binding":  "bnd_bg_tour",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_home_crest",
+            "binding":  "bnd_home_crest",
+            "type":     "object"
+        },
+        {
+            "viewname": "bnd_away_crest",
+            "binding":  "bnd_away_crest",
+            "type":     "object"
+        }
+    ]
+}

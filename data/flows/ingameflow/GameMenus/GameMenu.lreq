@@ -1,0 +1,7 @@
+[
+    "/lua/packages/tableutil.lua",
+    "/lua/common/CommonNavVars.lua",
+	"/lua/enums/gamestate_service.lua",
+	"/lua/overlayparam.lua",
+	"/lua/enums/eventmanager.lua"
+]

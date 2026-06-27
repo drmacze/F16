@@ -1,0 +1,48 @@
+{
+    "actions":
+    [
+		{
+            "viewname": "act_back",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_back"
+            }
+        },        
+        {
+            "viewname": "act_setscout",
+            "actionname": "act_setscout"
+        },
+        {
+            "viewname": "act_toscout",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_toscout"
+            }
+        },
+        {
+            "viewname": "act_tolist",
+            "impl":
+            {
+                "type": "nav",
+                "event": "evt_tolist"
+            }
+        },
+        {
+            "viewname": "act_scoutlist",
+            "actionname": "act_scoutlist"
+        }
+        
+               
+    ],
+    "data":
+    [        
+        {
+            "viewname": "bnd_matchday_label",
+            "binding":  "bnd_matchday_label",
+            "type":     "string"
+        }
+              
+    ]
+}

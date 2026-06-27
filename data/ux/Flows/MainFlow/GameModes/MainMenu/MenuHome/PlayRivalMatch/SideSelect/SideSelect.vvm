@@ -1,0 +1,5 @@
+{
+    "dds": ["SideSelect.dd"],
+    "vms": [["lua", "SideSelect.lua"]],
+    "views": [["gfx", { "layout": "SideSelect.layout" }]]
+}

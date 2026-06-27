@@ -1,0 +1,5 @@
+{
+    "dds": ["GameMenu.dd", "PostMatchMenu.dd", "/flows/mainflow/widgets/cab/CAB.dd"],
+    "vms": [["lua", "GameMenu.lua"], ["lua", "PostMatchMenu.lua"]],
+    "views": [["gfx", {"layout": "PostMatchMenu_Tournament.layout"}]]
+}

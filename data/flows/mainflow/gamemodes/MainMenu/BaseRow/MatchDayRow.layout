@@ -1,0 +1,149 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "MatchDayRowRoot",
+    "mouseInteractive": true,
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 585,
+            "height": 120
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_REGULAR",
+            "fontColor": "$TILE_COLOR_LABEL",
+            "textAlignH": "RIGHT",
+            "textAlignV": "CENTER",
+            "marginRight": 130.0
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL",
+            "fontSize": "$FONT_SIZE_SMALLEST_HEADER"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginRight": 10.0,
+            "fontFace": "$FONT_REGULAR",
+            "textAlignH": "RIGHT",
+            "fontColor": "$TILE_COLOR_VALUE"
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.HomeTeamCrest": "RowPanel.RowLeftPanel.HomeTeamCrest.image",
+        "dataProviders.HomeTeamName": "RowPanel.RowLeftPanel.HomeTeamName.text",
+        "dataProviders.MatchBackground": "RowPanel.RowLeftPanel.background.color",
+        "dataProviders.MatchScore": "RowPanel.RowLeftPanel.MatchScore.text",
+        "dataProviders.AwayTeamCrest": "RowPanel.RowLeftPanel.AwayTeamCrest.image",
+        "dataProviders.AwayTeamName": "RowPanel.RowLeftPanel.AwayTeamName.text",
+        "dataProviders.MatchTimeAndType": "RowPanel.RowLeftPanel.MatchTimeAndType.text",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "width": 980,
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "RowLeftPanel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "children":
+                    [
+                        {
+                            "commonName": "Rectangle",
+                            "name": "background",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "width": 980,
+                            "height": 80,
+                            "cornerRaduis": 12,
+                            "color": "0x00fc7f",
+                            "alpha": 1
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "HomeTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": 50,
+                            "width": 70,
+                            "height": 70
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"HomeTeamName",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginTop": 0,
+                            "marginLeft": 150,
+                            "fontSize": 25,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"MatchScore",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": 0,
+                            "fontSize": 25,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 1,
+                            "text": "0 - 0"
+                        },
+                        {
+                            "commonName": "Image",
+                            "name": "AwayTeamCrest",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginRight": 50,
+                            "width": 70,
+                            "height": 70
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"AwayTeamName",
+                            "alignV": "CENTER",
+                            "alignH": "RIGHT",
+                            "marginTop": 0,
+                            "marginRight": 150,
+                            "fontSize": 25,
+                            "fontFace": "$FONT_CRUYFFSANSBOLD",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7
+                        },
+                        {
+                            "commonName": "Label",
+                            "name":"MatchTimeAndType",
+                            "alignV": "BOTTOM",
+                            "alignH": "CENTER",
+                            "marginBottom": 7,
+                            "marginRight": 0,
+                            "fontSize": 15,
+                            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                            "fontColor": "$COLOR_WHITE",
+                            "alpha": 0.7
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+

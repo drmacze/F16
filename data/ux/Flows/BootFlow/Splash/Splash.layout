@@ -1,0 +1,119 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_SPLASH_SCREEN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_SPLASH_SCREEN"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "MouseClickActionBehavior",
+            "actionName": "act_press_start"
+        },
+        {
+            "commonName": "KeyPressActionBehavior",
+            "actionName": "act_press_start"
+        }
+    ],
+    "children":
+    [
+    
+        {
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$SplashScreen"
+        },
+
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "RIGHT",
+            "marginRight": 150,
+            "width": 500,
+            "height": 500,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "width": 500,
+                    "height": 300,
+                    "type": "$SplashScreenLogo"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -100,
+                   "marginLeft": -13,
+                   "fontSize": 30,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "TOUCH TO CONTINUE"
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -160,
+                   "marginLeft": -13,
+                   "fontSize": 22,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "© 2015 Electronic Arts Inc."
+                },
+{
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -190,
+                   "marginLeft": -13,
+                   "fontSize": 15,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "This is uses autosave. autosave will overwrite content without confirmation."
+                },
+                {
+                   "commonName": "Label",
+                   "alignV": "CENTER",
+                   "alignH": "CENTER",
+                   "marginBottom": -210,
+                   "marginLeft": -13,
+                   "fontSize": 15,
+                   "fontColor": "$COLOR_WHITE",
+			       "text": "Do not turn off your Android Phone while the autosave icon is displayed."
+                }
+            ]
+        }
+    ]
+}

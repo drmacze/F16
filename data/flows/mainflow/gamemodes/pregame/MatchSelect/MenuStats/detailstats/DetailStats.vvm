@@ -1,0 +1,5 @@
+{
+    "dds":   ["DetailStats.dd"],
+    "vms":   [["lua", "DetailStats.lua"]],
+    "views": [["gfx", { "layout": "DetailStats.layout" }]]
+}

@@ -1,0 +1,5 @@
+{
+	"dds": ["QuickCup.dd"],
+    "vms": [["lua", "QuickCup.lua"]],
+    "views": [["gfx", {"layout": "QuickCup.layout"}]]
+}

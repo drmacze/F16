@@ -1,0 +1,5 @@
+{
+    "dds": ["CustomizeControlPrompt.dd"],
+    "vms": [["lua", "CustomizeControlPrompt.lua"]],
+    "views": [["gfx", {"layout": "CustomizeControlPrompt.layout"}]]
+}

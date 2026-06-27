@@ -1,0 +1,5 @@
+{
+    "dds":   ["Splash.dd"],
+	"vms":   [["lua", "Splash.lua"]],
+    "views": [["gfx", {"layout": "Splash.layout"}]]
+}

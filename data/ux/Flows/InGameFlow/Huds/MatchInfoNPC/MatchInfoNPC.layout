@@ -1,0 +1,138 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+	"name": "rootContainer",
+	"alignV": "FILL",
+	"alignH": "FILL",
+    "children":
+    [
+    
+        {
+            "commonName": "Panel",
+            "name": "IntroInfoKomentator",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 60,
+            "width": 460,
+            "height": 155,
+            "bindings":
+			[
+				{
+					"binding": "bnd_visible_komentator",
+					"property": "visible"
+				}
+			],
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$Background_MatchInfoNPC"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 3,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "ON AIR"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 36,
+                    "marginLeft": 45,
+                    "width": 83,
+                    "height": 62,
+                    "type": "$KomentatorMartinTyler"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "RIGHT",
+                    "marginTop": 36,
+                    "marginRight": 45,
+                    "width": 83,
+                    "height": 62,
+                    "type": "$KomentatorAlanSmith"
+                },
+                {
+                    "commonName": "MatchInfoNPC",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -55,
+                    "bindings":
+                    [
+				       {
+					       "binding": "bnd_nationalization",
+					       "property": "nationalization"
+				       },
+				       {
+					       "binding": "bnd_npc_info",
+					       "property": "data"
+				       }
+		            ]
+		        }
+            ]
+        },
+
+        {
+            "commonName": "Panel",
+            "name": "IntroInfoWasit",
+            "alignV": "BOTTOM",
+            "alignH": "CENTER",
+            "marginBottom": 60,
+            "width": 460,
+            "height": 155,
+            "bindings":
+			[
+				{
+					"binding": "bnd_visible_wasit",
+					"property": "visible"
+				}
+			],
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$Background_MatchInfoNPC"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "CENTER",
+                    "marginTop": 3,
+                    "fontSize": 15,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "ON BOARD"
+                },
+                {
+                    "commonName": "MatchInfoNPC",
+                    "alignV": "CENTER",
+                    "alignH": "CENTER",
+                    "marginBottom": -55,
+                    "bindings":
+                    [
+				       {
+					       "binding": "bnd_nationalization",
+					       "property": "nationalization"
+				       },
+				       {
+					       "binding": "bnd_npc_info",
+					       "property": "data"
+				       }
+		            ]
+		        }
+            ]
+        }
+
+    ]
+}

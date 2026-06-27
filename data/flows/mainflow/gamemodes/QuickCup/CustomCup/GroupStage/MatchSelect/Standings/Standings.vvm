@@ -1,0 +1,6 @@
+{
+	"dds": ["Standings.dd"],
+    "vms": [["lua", "Standings.lua"]],
+    "views": [["gfx", {"layout": "Standings.layout"}]],
+	"ireqs": ["Standings.ireq"]
+}

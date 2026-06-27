@@ -1,0 +1,113 @@
+{
+    "commonName": "fow.base.BaseRow",
+    "name": "MatchEventsAwayRowRoot",
+    "authoringData":
+    {
+        "designSize":
+        {
+            "width": 560.0,
+            "height": 70.0
+        }
+    },
+    "style-definitions":
+    {
+        "EventStyle":
+        {
+            "fontFace": "$FONT_CRUYFFSANSREGULAR",
+            "fontColor": "$COLOR_LIGHT_GRAY",
+            "textAlignV": "CENTER",
+            "fontSize": 18
+        },
+        "LabelStyle":
+        {
+            "resizeType": "NONE",
+            "textAlignV": "CENTER",
+            "alignV": "FILL"
+        },
+        "NumberStyle":
+        {
+            "width": 80.0,
+            "marginLeft": 10.0,
+            "fontFace": "$FONT_TITLE",
+            "textAlignH": "CENTER",
+            "fontColor": "$COLOR_WHITE",
+            "fontSize": 18
+        }
+    },
+    "propertyMap":
+    {
+        "dataProviders.minute": "RowPanel.TimeLabel.text",
+        "dataProviders.image": "RowPanel.EventIcon.image",
+        "dataProviders.name": "RowPanel.PlayerLabel.text",
+        "dataProviders.head": "RowPanel.PlayerHead.image",
+        "dataProviders.iconOffset": "RowPanel.EventIcon.marginLeft",
+        "width": "RowPanel.width",
+        "height": "RowPanel.height"
+    },
+    "children":
+    [
+        {
+            "commonName": "Panel",
+            "name": "RowPanel",
+            "x": 10.0,
+            "y": 0.0,
+            "children":
+            [
+                {
+                    "commonName": "Image",
+                    "name": "EventTimeBgIdle",
+                    "alignH": "LEFT",
+                    "alignV": "CENTER",
+                    "marginLeft": 10.0,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5,
+                    "alpha": 0.15,
+                    "image": "$EventTimeBgIdle"
+                },
+                {
+                    "commonName": "Image",
+                    "name": "PlayerHead",
+                    "alignH": "RIGHT",
+                    "alignV": "CENTER",
+                    "marginRight": 25.0,
+                    "width": 50,
+                    "height": 50,
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "name": "PlayerLabel",
+                    "width": 200,
+                    "alignH": "RIGHT",
+                    "marginRight": 110.0,
+                    "autoScroll":true,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "EventStyle"
+                    ]
+                },
+                {
+                    "commonName": "Image",
+                    "name": "EventIcon",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 50.0,
+                    "scaleX": 1.4,
+                    "scaleY": 1.4,
+                    "x": 0.0
+                },
+                {
+                    "commonName": "Label",
+                    "name": "TimeLabel",
+                    "marginLeft": 20.0,
+                    "styles":
+                    [
+                        "LabelStyle",
+                        "NumberStyle"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,98 @@
+{
+    "name": "QuickCup",
+    "onEnter":
+    [
+        ["invoke", ["evt_show_stage_background"]]
+    ],
+    "initial":
+    {
+        "targets": ["MenuQuickCup"]
+    },
+    "states":
+    [
+		{
+            "name": "MenuQuickCup",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["QuickCup.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode1"]
+                },
+                {
+                    "event": "evt_advance",
+                    "targets": ["KitSelect"]
+                },
+                {
+                    "event": "evt_squad",
+                    "targets": ["Squad"]
+                },
+                {
+                    "event": "evt_restart",
+                    "targets": ["Restart"]
+                },
+                {
+                    "event": "evt_gamesettings",
+                    "targets": ["GameSettings"]
+                }
+            ]
+        },
+        
+        {
+            "name": "PlayMatch",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/PlayMatch/Match.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode"
+            }
+        },
+        {
+            "name": "KitSelect",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/Tournaments/Euro2016/KitSelect/KitSelect.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "QuickCup",
+                "out_exit_gamemode1": "QuickCup"
+            }
+        },
+        {
+            "name": "Squad",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/Squad/Squad.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "QuickCup"
+                
+            }
+        },
+        {
+            "name": "Restart",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuPlay/QuickCup/Restart/Restart.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "out_exit_gamemode1"
+                
+            }
+        },
+        {
+            "name": "GameSettings",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameSettings/GameSettings.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "QuickCup"
+            }
+        }
+        
+    ]
+}

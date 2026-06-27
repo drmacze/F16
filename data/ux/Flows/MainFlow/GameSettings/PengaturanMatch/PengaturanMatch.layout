@@ -1,0 +1,25 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+        {
+            "commonName": "VerticalList",
+            "name": "PengaturanMatch",
+            "rowWidth": 910,
+            "rowHeight": 55,
+            "displayRange": 6,
+            "useAlternating": true,
+            "row": "CustomizationRow",
+            "bindings":
+            [
+                {
+                    "binding": "bnd_data_pengaturan_match",
+                    "property": "dataProviders"
+                }
+            ]
+        }
+    ]
+}

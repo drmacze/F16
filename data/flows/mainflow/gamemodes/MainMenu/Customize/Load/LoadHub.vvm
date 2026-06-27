@@ -1,0 +1,5 @@
+{
+	"dds":	 ["LoadHub.dd"],
+	"vms":   [["lua", "LoadHub.lua"]],
+    "views": [["gfx", {"layout": "LoadHub.layout"}]]
+}

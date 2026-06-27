@@ -1,0 +1,5 @@
+{
+	"dds":	 ["CreditsHub.dd"],
+	"vms":   [["lua", "CreditsHub.lua"]],
+    "views": [["gfx", {"layout": "CreditsHub.layout"}]]
+}

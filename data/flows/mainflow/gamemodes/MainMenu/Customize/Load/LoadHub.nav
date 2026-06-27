@@ -1,0 +1,43 @@
+{
+    "name": "LoadHub",
+    "initial":
+    {
+        "targets": ["RedirectLoadHub"]
+    },
+    "states":
+    [
+		{
+            "name": "RedirectLoadHub",
+            "onEnter":
+            [
+                ["blockingLoadVVM", ["LoadHub.vvm"]]
+            ],
+            "onExit":
+            [
+                ["unloadVVM"]
+            ],
+            "transitions":
+            [
+                {
+                    "event": "evt_back",
+                    "targets": ["out_exit_gamemode"]
+                },
+                {
+                    "event": "evt_load",
+                    "targets": ["Load"]
+                }
+            ]
+        },
+        {
+            "name": "Load",
+            "type": "external",
+            "file": "/Flows/MainFlow/GameModes/MainMenu/MenuCustomize/Load/Load/LoadHub.nav",
+            "outputs":
+            {
+                "out_exit_gamemode": "LoadHub"
+            }
+        }
+    ]
+}
+                
+            

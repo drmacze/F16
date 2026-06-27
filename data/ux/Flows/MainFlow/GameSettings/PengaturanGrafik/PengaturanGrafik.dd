@@ -1,0 +1,72 @@
+{
+    "data":
+    [
+    
+		{
+			"viewname": "bnd_data_pengaturan_grafik",
+            "binding": "bnd_data_pengaturan_grafik",
+            "type": "object"
+		},
+		
+        {
+            "viewname": "bnd_render_resolution",
+            "binding": "bnd_render_resolution",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_default",
+            "binding": "bnd_crowd_mode_default",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_replay",
+            "binding": "bnd_crowd_mode_replay",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_nis",
+            "binding": "bnd_crowd_mode_nis",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_highlight",
+            "binding": "bnd_crowd_mode_highlight",
+            "type": "object"
+        },
+		{
+            "viewname": "bnd_crowd_mode_setpiece",
+            "binding": "bnd_crowd_mode_setpiece",
+            "type": "object"
+        }
+        
+    ],
+	"actions":
+	[
+	
+		{
+			"viewname": "act_change_render_resolution",
+			"actionname": "act_change_render_resolution"
+		},
+		{
+			"viewname": "act_change_crowd_mode_default",
+			"actionname": "act_change_crowd_mode_default"
+		},
+		{
+			"viewname": "act_change_crowd_mode_replay",
+			"actionname": "act_change_crowd_mode_replay"
+		},
+		{
+			"viewname": "act_change_crowd_mode_nis",
+			"actionname": "act_change_crowd_mode_nis"
+		},
+		{
+			"viewname": "act_change_crowd_mode_highlight",
+			"actionname": "act_change_crowd_mode_highlight"
+		},
+		{
+			"viewname": "act_change_crowd_mode_setpiece",
+			"actionname": "act_change_crowd_mode_setpiece"
+		}
+		
+	]
+}

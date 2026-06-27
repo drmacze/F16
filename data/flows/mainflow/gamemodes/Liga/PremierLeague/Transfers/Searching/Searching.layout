@@ -1,0 +1,1001 @@
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+	"alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_IN"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "TUTORIAL_TRANSITION_OUT"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_back",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_search",
+            "label": ""
+        },
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "",
+            "actionName": "act_reset",
+            "label": ""
+        }
+    ],
+    "children":
+    [    
+        {  
+            "commonName": "Asset",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "type": "$_Background_2"
+        },
+        {
+            "commonName": "Panel",
+            "name": "Back",
+            "alignV": "FILL",
+            "alignH": "FILL",
+            "children":
+            [
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 50,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon3",
+                    "clickAction": "act_back"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 110,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Back"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 215,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon4",
+                    "clickAction": "act_search"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 275,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Search"
+                },
+                {
+                    "commonName": "GenericButton",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": -2,
+                    "marginLeft": 410,
+                    "height": 50,
+                    "width": 50,
+                    "label": "",
+                    "icon": "$SimMatchIcon2",
+                    "clickAction": "act_reset"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "BOTTOM",
+                    "alignH": "LEFT",
+                    "marginBottom": 13,
+                    "marginLeft": 470,
+                    "forceCaps": false,
+                    "fontSize": 18,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "Reset"
+                }
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "MenuLayout",
+            "alignV": "TOP",
+            "alignH": "FILL",
+            "marginTop": 40,
+            "height": 30,
+            "children":
+            [
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 70,
+                    "fontSize": 38,
+                    "fontFace": "$FONT_EAFCGAMEMODES",
+	                "fontColor": "0xFFFFFF",
+	                "text": "MC"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "forceCaps": false,
+                    "marginLeft": 155,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSBOLD",
+                    "fontColor": "0xFFFFFF",
+                    "text": "Transfers"
+                },
+                {
+                    "commonName": "Rectangle",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 276,
+                    "width": 2,
+                    "height": 23,
+                    "color": "0xA8A8A8",
+                    "alpha": 1
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": 306,
+                    "fontSize": 20,
+                    "fontFace": "$FONT_CRUYFFSANSREGULAR",
+                    "fontColor": "0xAAAAAA",
+                    "text": "Search Players"
+                }
+            ]
+        },
+        {
+            "commonName": "Rectangle",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "marginTop": 10,
+            "width": 1000,
+            "height": 450,
+            "cornerRaduis": 13,
+            "color": "0x1B1B2A",
+            "alpha": 0
+         },
+         {
+            "commonName": "Panel",
+            "name": "content",
+            "alignH": "CENTER",
+            "alignV": "CENTER",
+            "height": 515,
+            "marginBottom": 55,
+            "marginLeft": 0,      
+            "marginTop": 28,
+            "width": 990,
+            "alpha": 1,
+            "children":
+            [
+                {
+                    "commonName": "Grid",
+                    "name": "filtersGrid",
+                    "alignH": "FILL",
+                    "alignV": "FILL",
+                    "height": 390.0,
+                    "marginRight": 0.0,
+                    "marginTop": 75.0,
+                    "width": 540.0,
+                    "x": 0.0,
+                    "y": 0.0,
+                    "spacingH": 0.0,
+                    "spacingV": 0.0,
+                    "columns":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "layout":
+                    [
+                        {
+                            "child": "filterCategory1",
+                            "column": 0,
+                            "row": 0
+                        },
+                        {
+                            "child": "filterCategory2",
+                            "column": 1,
+                            "row": 0
+                        },
+                        {
+                            "child": "filterCategory3",
+                            "column": 2,
+                            "row": 0
+                        },
+                        {
+                            "child": "filterCategory4",
+                            "column": 0,
+                            "row": 1
+                        },
+                        {
+                            "child": "filterCategory5",
+                            "column": 1,
+                            "row": 1
+                        },
+                        {
+                            "child": "filterCategory6",
+                            "column": 2,
+                            "row": 1
+                        }
+                    ],
+                    "rows":
+                    [
+                        {
+                            "sizing": "FILL"
+                        },
+                        {
+                            "sizing": "FILL"
+                        }
+                    ],
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory6",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_show_filter6_overlay",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_6",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory5",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_show_filter5_overlay",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_5",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory4",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_show_filter4_overlay",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_4",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory3",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_show_filter3_overlay",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_3",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_club_filter_enabled",
+                                    "property": "forceDisabled"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory2",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_show_filter2_overlay",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_2",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "FilterCategory",
+                            "name": "filterCategory1",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "clickAction": "act_text",
+                            "alternateBackground": true,
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_category_desc_1",
+                                    "property": "dataProviders"
+                                }
+                            ]
+                        }
+                    ]
+                }             
+            ]
+        },
+        {
+            "commonName": "Panel",
+            "name": "filterOverlayContainer",
+            "alignH": "FILL",
+            "alignV": "FILL",
+            "authoringData":
+            {
+                "visible": false,
+                "expanded": false
+            },
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "name": "filtersPanelContainer",
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_filter_table_container_height",
+                            "property": "height"
+                        },
+                        {
+                            "binding": "bnd_filter_table_width",
+                            "property": "width"
+                        }
+                    ],
+                    "behaviors":
+                    [
+                        {
+                            "commonName": "LoadItInOverlay",
+                            "name": "loadFilterTableInOverlay",
+                            "overlay": "gridTableOverlay",
+                            "overlayScrim": "scrimContainer",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_overlay_visibility",
+                                    "property": "loadInOverlay"
+                                },
+                                {
+                                    "binding": "bnd_filter_overlay_title",
+                                    "property": "overlayTitle"
+                                }
+                            ]
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Grid",
+                            "name": "gridCountryInitials",
+                            "height": 56.0,
+                            "columns":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                },
+                                {
+                                    "sizing": "PIXEL",
+                                    "value": 3
+                                },
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "layout":
+                            [
+                                {
+                                    "child": "button0",
+                                    "column": 0,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider0",
+                                    "column": 1,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button1",
+                                    "column": 2,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider1",
+                                    "column": 3,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button2",
+                                    "column": 4,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider2",
+                                    "column": 5,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button3",
+                                    "column": 6,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider3",
+                                    "column": 7,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button4",
+                                    "column": 8,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "divider4",
+                                    "column": 9,
+                                    "row": 0
+                                },
+                                {
+                                    "child": "button5",
+                                    "column": 10,
+                                    "row": 0
+                                }
+                            ],
+                            "rows":
+                            [
+                                {
+                                    "sizing": "FILL"
+                                }
+                            ],
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_country_initials_visible",
+                                    "property": "visible"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_width",
+                                    "property": "width"
+                                }
+                            ],
+                            "authoringData":
+                            {
+                                "visible": false,
+                                "expanded": false
+                            },
+                            "children":
+                            [
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button0",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonAB",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_ab",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelAB",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter1_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_AB_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button1",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonCF",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_cf",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelCF",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter2_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_CF_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button2",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonGL",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_gl",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelGL",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter3_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_GL_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button3",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonMP",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_mp",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelMP",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter4_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_MP_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button4",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonQS",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_qs",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelQS",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter5_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_QS_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Panel",
+                                    "name": "button5",
+                                    "alignH": "FILL",
+                                    "alignV": "FILL",
+                                    "height": 56.0,
+                                    "width": 116.0,
+                                    "authoringData":
+                                    {
+                                        "expanded": false
+                                    },
+                                    "children":
+                                    [
+                                        {
+                                            "commonName": "fow.base.BaseButton",
+                                            "name": "buttonTZ",
+                                            "alignH": "FILL",
+                                            "alignV": "FILL",
+                                            "clickAction": "act_tz",
+                                            "isInteractive": "true"
+                                        },
+                                        {
+                                            "commonName": "Label",
+                                            "name": "labelTZ",
+                                            "alignH": "FILL",
+                                            "alignV": "CENTER",
+                                            "bindings":
+                                            [
+                                                {
+                                                    "binding": "bnd_filter6_color",
+                                                    "property": "fontColor"
+                                                },
+                                                {
+                                                    "binding": "bnd_TZ_label",
+                                                    "property": "text"
+                                                }
+                                            ],
+                                            "styles":
+                                            [
+                                                "TF_GRIDBUTTON_DESCRIPTION"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider0",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider1",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider2",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider3",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                },
+                                {
+                                    "commonName": "Image",
+                                    "name": "divider4",
+                                    "alignH": "CENTER",
+                                    "alignV": "CENTER",
+                                    "image": "$UserPlateDividerLine"
+                                }
+                            ]
+                        },
+                        {
+                            "commonName": "GridTable",
+                            "name": "filterGridTable",
+                            "cellIndexChangeAction":
+                            {
+                                "action": "act_change_filter_index",
+                                "binding": "bnd_filter_index"
+                            },
+                            "itemType": "FilterCell",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "bnd_filter_table_height",
+                                    "property": "height"
+                                },
+                                {
+                                    "binding": "bnd_filter_grid_y_pos",
+                                    "property": "marginTop"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_width",
+                                    "property": "width"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_columns",
+                                    "property": "columns"
+                                },
+                                {
+                                    "binding": "bnd_filter_category_data",
+                                    "property": "dataProviders"
+                                },
+                                {
+                                    "binding": "bnd_default_cell_data",
+                                    "property": "defaultCellData"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_has_bullets",
+                                    "property": "hasBulletIndicator"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_cell_style",
+                                    "property": "itemStyleName"
+                                },
+                                {
+                                    "binding": "bnd_filter_table_rows",
+                                    "property": "rows"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Group",
+                    "name": "scrimContainer",
+                    "alignH": "CENTER",
+                    "alignV": "CENTER",
+                    "bindings":
+                    [
+                        {
+                            "binding": "BND_SCREEN_HEIGHT",
+                            "property": "height"
+                        },
+                        {
+                            "binding": "BND_SCREEN_WIDTH",
+                            "property": "width"
+                        }
+                    ],
+                    "behaviors":
+                    [
+                        {
+                            "commonName": "ScrimClickBehavior",
+                            "name": "ClickThroughPreventer"
+                        },
+                        {
+                            "commonName": "PanelLayoutBehavior",
+                            "name": "MakeItAPanel"
+                        }
+                    ],
+                    "authoringData":
+                    {
+                        "expanded": false
+                    },
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "name": "darkScrimAsset",
+                            "alignH": "FILL",
+                            "alignV": "FILL",
+                            "styles":
+                            [
+                                "PopupScrim"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "commonName": "Overlay",
+                    "name": "gridTableOverlay",
+                    "height": 316.0,
+                    "width": 600.0,
+                    "footer":
+                    [
+                        {
+                            "icon": "$FooterIconNo",
+                            "clickAction": "act_filter_overlay_cancel",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "BND_LTXT_CNCL",
+                                    "property": "label"
+                                }
+                            ]
+                        },
+                        {
+                            "icon": "$FooterIconYes",
+                            "clickAction": "act_filter_overlay_any",
+                            "bindings":
+                            [
+                                {
+                                    "binding": "BND_LTXT_ANY",
+                                    "property": "label"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

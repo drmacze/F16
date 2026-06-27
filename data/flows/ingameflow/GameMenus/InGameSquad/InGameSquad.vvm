@@ -1,0 +1,5 @@
+{
+    "dds":   ["InGameSquad.dd", "InGameTeamManagementModel.dd", "/lua/common/FormationModel.dd"],
+    "vms":   [["lua", "InGameSquad.lua"]],
+    "views": [["gfx", {"layout": "InGameSquad.layout"}]]
+}

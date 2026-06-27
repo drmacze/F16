@@ -1,0 +1,570 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+	"name": "rootContainer",
+	"alignV": "FILL",
+	"alignH": "FILL",
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "children":
+    [
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianLogoEASportsLive",
+            "alignV": "TOP",
+            "alignH": "RIGHT",
+            "marginTop": 35,
+            "marginRight": 45,
+            "width": 185,
+            "height": 60,
+            "children":
+            [
+                {
+                   "commonName": "Asset",
+                   "alignV": "FILL",
+                   "alignH": "FILL",
+                   "type": "$LogoEASportsHDLive"
+                }
+            ]
+        },
+        
+        {
+            "commonName": "Panel",
+            "name": "BagianScoreBoardBesar",
+			"alignH": "CENTER",
+			"alignV": "BOTTOM",
+			"marginBottom": 70,
+            "width": 700,
+			"scaleX": 1.2,
+			"scaleY": 1.2,
+            "bindings":
+			[
+				{
+					"binding": "bnd_visible",
+					"property": "visible"
+				}
+			],
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+			        [
+                        {
+                            "binding": "bnd_stat_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -80,
+                            "width": 630,
+                            "height": 140,
+			                "type": "$BackgroundDadakan"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -20,
+                            "marginBottom": 56,
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_BLACK",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_homeScore_text",
+                                   "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -20,
+                            "marginBottom": 56,
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_BLACK",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_awayScore_text",
+                                   "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 56,
+                            "fontSize": 24,
+                            "fontColor": "$COLOR_BLACK",
+                            "text": "-"
+                        },
+			        	{
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 56,
+                            "marginLeft": -150.5,
+                            "fontSize": 20,
+                            "forceCaps": true,
+                            "bindings":
+                            [
+			                   {
+					              "binding": "bnd_nama_tim_home",
+					              "property": "text"
+			                   }
+                            ]
+			        	},
+			        	{
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginBottom": 56,
+                            "marginRight": -147.5,
+                            "fontSize": 20,
+                            "forceCaps": true,
+                            "bindings":
+                            [
+			                   {
+					              "binding": "bnd_nama_tim_away",
+					              "property": "text"
+			                   }
+                            ]
+			        	},
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -56.5,
+                            "marginLeft": -278.5,
+                            "width": 45,
+                            "height": 45,
+                            "bindings":
+		                	[
+			                   {
+					              "binding": "bnd_homeCrest",
+					              "property": "image"
+				               }
+			                ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -56.5,
+                            "marginRight": -280.7,
+                            "width": 45,
+                            "height": 45,
+                            "bindings":
+		                	[
+			                   {
+					              "binding": "bnd_awayCrest",
+					              "property": "image"
+				               }
+			                ]
+                        }
+                    ]
+                }
+            ]
+        },
+
+        {
+            "commonName": "Panel",
+            "name": "BagianScoreBoard",
+            "alignV": "TOP",
+            "alignH": "LEFT",
+            "marginTop": 50,
+            "marginLeft": 45,
+            "width": 380,
+            "height": 38,
+            "bindings":
+			[
+				{
+					"binding": "bnd_visible",
+					"property": "visible"
+				}
+			],
+            "children":
+            [
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "marginRight": -82,
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -30,
+                            "width": 150,
+                            "height": 84,
+                            "alpha": 1,
+                            "type": "$ScoreBoard_Atas"
+                        },
+                        {
+                            "commonName": "Asset",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -27.5,
+                            "marginLeft": 1.5,
+                            "width": 70,
+                            "height": 17,
+                            "type": "$LogoEASports"
+                        }
+                    ]
+                },
+
+                {
+                    "commonName": "Asset",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "type": "$ScoreBoard"
+                },
+                {
+                    "commonName": "Panel",
+                    "name": "NamaTim-Skor-Waktu",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "width": 300,
+                    "height": 36,
+                    "children":
+                    [
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -73.5,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_homeName_text",
+                                   "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -72,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_awayName_text",
+                                   "property": "text"
+                               }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginLeft": -116,
+                            "width": 30,
+                            "height": 30,
+                            "bindings":
+		                	[
+			                   {
+					              "binding": "bnd_homeCrest",
+					              "property": "image"
+				               }
+			                ]
+                        },
+                        {
+                            "commonName": "Image",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": -117,
+                            "width": 30,
+                            "height": 30,
+                            "bindings":
+		                	[
+			                   {
+					              "binding": "bnd_awayCrest",
+					              "property": "image"
+				               }
+			                ]
+                        },
+   
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -2,
+                            "marginLeft": -22.5,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_BLACK",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_homeScore_text",
+                                   "property": "text"
+                               }
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -2,
+                            "marginRight": -20.5,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_BLACK",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_awayScore_text",
+                                   "property": "text"
+                               }
+                            ]
+                        },
+                        
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginTop": -3.5,
+                            "marginLeft": -1,
+                            "fontSize": 25,
+                            "fontColor": "$COLOR_BLACK",
+                            "text": "-"
+                        },
+                        
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "LEFT",
+                            "marginLeft": -61,
+                            "fontSize": 22,
+                            "fontColor": "$COLOR_WHITE",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_time_text",
+                                   "property": "text"
+                               }
+                            ]
+                        }
+                        
+                    ]
+                },
+                
+                {
+                    "commonName": "Panel",
+                    "alignV": "FILL",
+                    "alignH": "FILL",
+                    "bindings":
+			        [
+                        {
+                            "binding": "bnd_stat_visible",
+                            "property": "visible"
+                        }
+                    ],
+                    "children":
+                    [
+			        	{
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+			                "type": "$ScoreBoard_Stat"
+			        	},
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontFace":"$FONT_HEADER",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_home_stat_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_stat_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_home_stat_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_home_stat_text_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_home_stat_text_top",
+                                   "property": "marginTop"
+                               }
+                               
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontFace":"$FONT_HEADER",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_away_stat_text",
+                                   "property": "text"
+                               },
+                               {
+                                   "binding": "bnd_stat_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_away_stat_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_away_stat_text_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_away_stat_text_top",
+                                   "property": "marginTop"
+                               }
+                               
+                            ]
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "fontFace":"$FONT_HEADER",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_stat_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_text_bold",
+                                   "property": "bold"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_left",
+                                   "property": "marginLeft"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_top",
+                                   "property": "marginTop"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_fontSize",
+                                   "property": "fontSize"
+                               },
+                               {
+                                   "binding": "bnd_stat_text_fontColor",
+                                   "property": "fontColor"
+                               },
+                               {
+                                   "binding": "bnd_stat_text",
+                                   "property": "text"
+                               }
+                               
+                            ]
+                        }
+                    ]
+                },
+
+                {
+                    "commonName": "Panel",
+                    "name": "ExtraTime",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginBottom": -39,
+                    "marginLeft": 11,
+                    "width": 96,
+                    "height": 62,
+                    "bindings":
+			        [
+				       {
+					      "binding": "bnd_extraTime_visible",
+					      "property": "visible"
+				       }
+			        ],
+                    "children":
+                    [
+                        {
+                            "commonName": "Asset",
+                            "alignV": "FILL",
+                            "alignH": "FILL",
+                            "type": "$ScoreBoard_ExtraTime"
+                        },
+                        {
+                            "commonName": "Label",
+                            "alignV": "CENTER",
+                            "alignH": "CENTER",
+                            "marginRight": 3,
+                            "fontSize": 23,
+                            "fontColor": "$COLOR_BLACK",
+                            "bindings":
+                            [
+                               {
+                                   "binding": "bnd_extraTime_text",
+                                   "property": "text"
+                               }
+                            ]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+        
+    ]
+}

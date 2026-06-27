@@ -1,0 +1,59 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "children":
+    [
+        {
+            "commonName": "VerticalList",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "rowWidth": 700,
+            "rowHeight": 30,
+            "row": "MatchFactRow",
+            "useAlternating": true,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_empty_rows_data",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "matchEventsHome",
+            "x": -20,
+            "y": 0,
+            "displayRange": 10,
+            "row": "MatchEventsRowHome",
+            "rowHeight": 30,
+            "rowWidth": 350,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_home_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+        },
+        {
+            "commonName": "VerticalList",
+            "name": "matchEventsAway",
+            "x": 340,
+            "y": 0,
+            "displayRange": 10,
+            "row": "MatchEventsRowAway",
+            "rowHeight": 30,
+            "rowWidth": 350,
+            "bindings":
+            [
+                {
+                    "binding": "bnd_away_events_list",
+                    "property": "dataProviders"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+/* ------------------------------------- */
+/* MOD Created By Ma'ruf ID */
+/* ------------------------------------- */
+
+{
+    "commonName": "Panel",
+    "name": "rootContainer",
+    "alignV": "CENTER",
+    "alignH": "CENTER",
+    "bindings":
+    [
+        {
+            "binding": "BND_SCREEN_WIDTH",
+            "property": "width"
+        },
+        {
+            "binding": "BND_SCREEN_HEIGHT",
+            "property": "height"
+        }
+    ],
+    "animationScripts":
+    [
+        {
+            "name": "show",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_MASUK_MAINMENU"
+                }
+            ]
+        },
+        {
+            "name": "hide",
+            "script":
+            [
+                {
+                    "anim": "ANIMASI_KELUAR_MAINMENU"
+                }
+            ]
+        }
+    ],
+    "behaviors":
+    [
+        {
+            "commonName": "TickerNavPublisher",
+            "alignH": "LEFT",
+            "icon": "$IconButton_O",
+            "actionName": "act_back",
+            "label": "Back"
+        }
+    ],
+    "children":
+    [
+        {
+           "commonName": "Asset",
+           "alignV": "FILL",
+           "alignH": "FILL",
+           "type": "$BackgroundPreGame"
+        },
+        
+        {
+           "commonName": "Asset",
+           "alignV": "TOP",
+           "alignH": "CENTER",
+           "marginTop": 420,
+           "marginRight": 20,
+           "width": 1500,
+           "height": 60,
+           "alpha": 0.6,
+           "path": "Animasi/Animasi_Adboard_LogoEASports.swf"
+        },
+
+        {
+            "commonName": "Panel",
+            "alignV": "CENTER",
+            "alignH": "CENTER",
+            "width": 1000,
+            "height": 550,
+            "children":
+            [
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "LEFT",
+                    "marginLeft": -50,
+                    "width": 350,
+                    "height": 450,
+                    "type": "$LiveTileBackgroundIdle"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "CENTER",
+                    "alignH": "RIGHT",
+                    "marginRight": -50,
+                    "width": 735,
+                    "height": 450,
+                    "type": "$Bg_Peta"
+                },
+
+                {
+                    "commonName": "VerticalList",
+                    "name": "matchlist",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 140,
+                    "marginLeft": -142,
+                    "x": 0,
+                    "y": 0,
+                    "displayRange": 7,
+                    "highlightable": true,
+                    "row": "Setscout",
+                    "rowHeight": 60,
+                    "rowWidth": 455,
+                    "bindings":
+                    [
+                        {
+                            "binding": "bnd_match_list",
+                            "property": "dataProviders"
+                        }
+                    ]
+                },
+		        {
+		            "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 452,
+                    "marginLeft": -40,
+                    "width": 330,
+                    "height": 40,
+		            "clickAction": "act_submit"
+		        },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginLeft": -50,
+                    "marginTop": 449.5,
+                    "width": 350,
+                    "height": 50,
+                    "type": "$MenuSelection"
+                },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginLeft": 100,
+                    "marginTop": 65,
+                    "width": 60,
+                    "height": 60,
+                    "type": "$Bendera_ENG"
+                },
+                {
+                    "commonName": "Label",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 457,
+                    "marginLeft": 72,
+                    "fontSize": 30,
+                    "fontColor": "$COLOR_WHITE",
+                    "text": "SUBMIT"
+                },
+		        {
+		            "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 388,
+                    "marginLeft": -40,
+                    "width": 45,
+                    "height": 45,
+		            "clickAction": "act_decrease"
+		        },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 385,
+                    "marginLeft": -46,
+                    "width": 56,
+                    "height": 56,
+                    "type": "$Panah_Kiri"
+                },
+		        {
+		            "commonName": "GenericButton",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 388,
+                    "marginLeft": 244,
+                    "width": 45,
+                    "height": 45,
+		            "clickAction": "act_next"
+		        },
+                {
+                    "commonName": "Asset",
+                    "alignV": "TOP",
+                    "alignH": "LEFT",
+                    "marginTop": 385,
+                    "marginLeft": 239,
+                    "width": 56,
+                    "height": 56,
+                    "type": "$Panah_Kanan"
+                }
+            ]
+        }
+    ]
+}
+/*-- Layout Design MVNPROD YouTube --*/
