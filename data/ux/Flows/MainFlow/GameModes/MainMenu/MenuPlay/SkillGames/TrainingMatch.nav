@@ -1,0 +1,1 @@
+{"name":"TrainingMatch","onEnter":[["invoke",["evt_exit"]]],"transitions":[{"event":"evt_exit","targets":["out_exit_gamemode"]}]}
