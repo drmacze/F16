@@ -43,6 +43,25 @@ jobs:
             exit 1
           fi
 
+          # FIFA 16 Mobile DLavie package uses the original main expansion version plus patch 26.
+          # Keep only the known working OBB pair so stale renamed files are not shipped.
+          if [ -f "build/dlavie-content/obb-root/main.13.com.ea.gp.fifaworld.obb" ]; then
+            find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'main.*.com.ea.gp.fifaworld.obb' ! -name 'main.13.com.ea.gp.fifaworld.obb' -delete
+          else
+            echo "Missing required main.13.com.ea.gp.fifaworld.obb" >&2
+            exit 1
+          fi
+
+          if [ -f "build/dlavie-content/obb-root/patch.26.com.ea.gp.fifaworld.obb" ]; then
+            find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'patch.*.com.ea.gp.fifaworld.obb' ! -name 'patch.26.com.ea.gp.fifaworld.obb' -delete
+          else
+            echo "Missing required patch.26.com.ea.gp.fifaworld.obb" >&2
+            exit 1
+          fi
+
+          echo "Packaged OBB files:"
+          find build/dlavie-content/obb-root -maxdepth 1 -type f -name '*.obb' -print
+
           (cd build/dlavie-content/data-root && zip -r ../DLavie26-data-v1.zip .)
           (cd build/dlavie-content/obb-root && zip -r ../DLavie26-obb-v1.zip .)
 
@@ -94,6 +113,7 @@ jobs:
              .releaseNotes = [
                "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
                "DATA dan OBB DLavie 26 sudah dipaketkan otomatis dari repo resmi DLavie.",
+               "OBB dikemas sebagai pasangan main.13 dan patch.26 sesuai struktur game yang diupload.",
                "Semua konten wajib diverifikasi SHA-256 sebelum install."
              ]' updates/install.json > "$tmp"
           mv "$tmp" updates/install.json
