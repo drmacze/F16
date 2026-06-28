@@ -1,0 +1,109 @@
+name: Package DLavie 26 Content
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  package-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zip rsync jq
+
+      - name: Package DATA and OBB
+        run: |
+          set -euo pipefail
+          rm -rf build/dlavie-content
+          mkdir -p build/dlavie-content/data-root
+          mkdir -p build/dlavie-content/obb-root
+
+          rsync -a ./ build/dlavie-content/data-root/ \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.gitattributes' \
+            --exclude='build/' \
+            --exclude='updates/' \
+            --exclude='obb/' \
+            --exclude='*.zip'
+
+          if [ -d "obb/com.ea.gp.fifaworld" ]; then
+            rsync -a obb/com.ea.gp.fifaworld/ build/dlavie-content/obb-root/
+          else
+            echo "Missing obb/com.ea.gp.fifaworld folder" >&2
+            exit 1
+          fi
+
+          (cd build/dlavie-content/data-root && zip -r ../DLavie26-data-v1.zip .)
+          (cd build/dlavie-content/obb-root && zip -r ../DLavie26-obb-v1.zip .)
+
+          cd build/dlavie-content
+          sha256sum DLavie26-data-v1.zip DLavie26-obb-v1.zip > checksums.txt
+          echo "DATA_SHA=$(sha256sum DLavie26-data-v1.zip | awk '{print $1}')" >> "$GITHUB_ENV"
+          echo "OBB_SHA=$(sha256sum DLavie26-obb-v1.zip | awk '{print $1}')" >> "$GITHUB_ENV"
+          echo "DATA_SIZE=$(stat -c%s DLavie26-data-v1.zip)" >> "$GITHUB_ENV"
+          echo "OBB_SIZE=$(stat -c%s DLavie26-obb-v1.zip)" >> "$GITHUB_ENV"
+
+      - name: Upload release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0-dlavie26
+          name: DLavie 26 Base
+          body: Base release untuk DLavie 26 public installer.
+          files: |
+            build/dlavie-content/DLavie26-data-v1.zip
+            build/dlavie-content/DLavie26-obb-v1.zip
+            build/dlavie-content/checksums.txt
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update install manifest
+        run: |
+          set -euo pipefail
+          DATA_URL="https://github.com/drmacze/F16/releases/download/v1.0-dlavie26/DLavie26-data-v1.zip"
+          OBB_URL="https://github.com/drmacze/F16/releases/download/v1.0-dlavie26/DLavie26-obb-v1.zip"
+          tmp=$(mktemp)
+          jq \
+            --arg dataUrl "$DATA_URL" \
+            --arg dataSha "$DATA_SHA" \
+            --argjson dataSize "$DATA_SIZE" \
+            --arg obbUrl "$OBB_URL" \
+            --arg obbSha "$OBB_SHA" \
+            --argjson obbSize "$OBB_SIZE" \
+            '.status.state = "content_published" |
+             .status.message = "APK, DATA, dan OBB DLavie 26 sudah dipublish sebagai release asset resmi." |
+             .data.url = $dataUrl |
+             .data.sha256 = $dataSha |
+             .data.sizeBytes = $dataSize |
+             .data.published = true |
+             .data.source = "release_asset" |
+             .obb.url = $obbUrl |
+             .obb.sha256 = $obbSha |
+             .obb.sizeBytes = $obbSize |
+             .obb.published = true |
+             .obb.source = "release_asset" |
+             .releaseNotes = [
+               "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
+               "DATA dan OBB DLavie 26 sudah dipaketkan otomatis dari repo resmi DLavie.",
+               "Semua konten wajib diverifikasi SHA-256 sebelum install."
+             ]' updates/install.json > "$tmp"
+          mv "$tmp" updates/install.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet updates/install.json; then
+            git add updates/install.json
+            git commit -m "Publish packaged DLavie content assets"
+            git push
+          else
+            echo "install.json already up to date"
+          fi
