@@ -4,17 +4,18 @@
   "productName": "DLavie 26",
   "gamePackage": "com.ea.gp.fifaworld",
   "status": {
-    "state": "preparing",
-    "message": "DLavie public installer manifest is ready. Tambahkan release asset APK/DATA/OBB resmi DLavie sebelum production launch."
+    "state": "apk_published",
+    "message": "DLavie 26 APK sudah dipublish. DATA dan OBB masih memakai sumber repo DLavie dan akan masuk ke installer konten berikutnya."
   },
   "apk": {
     "versionCode": 1,
     "versionName": "DLavie 26 Base",
     "fileName": "DLavie26.apk",
-    "url": "",
+    "url": "https://github.com/drmacze/F16/releases/download/v1.0-dlavie26/DLavie26.apk",
     "sha256": "",
     "sizeBytes": 0,
-    "required": true
+    "required": true,
+    "published": true
   },
   "data": {
     "versionCode": 1,
@@ -24,7 +25,9 @@
     "sha256": "",
     "sizeBytes": 0,
     "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
-    "required": true
+    "required": true,
+    "published": false,
+    "source": "repo"
   },
   "obb": {
     "versionCode": 1,
@@ -34,11 +37,13 @@
     "sha256": "",
     "sizeBytes": 0,
     "target": "/sdcard/Android/obb/com.ea.gp.fifaworld/",
-    "required": true
+    "required": true,
+    "published": false,
+    "source": "repo"
   },
   "releaseNotes": [
-    "Manifest awal untuk Auto Setup publik DLavie Launcher.",
-    "APK, DATA, dan OBB harus berasal dari sumber resmi DLavie dan diverifikasi SHA-256.",
+    "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
+    "DATA dan OBB akan dipasang dari sumber resmi DLavie pada tahap installer konten.",
     "Login/community ditunda sampai production launch."
   ]
 }
