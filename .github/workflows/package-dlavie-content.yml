@@ -58,6 +58,12 @@ jobs:
             exit 1
           fi
 
+          MAIN13="build/dlavie-content/obb-root/main.13.com.ea.gp.fifaworld.obb"
+          MAIN26="build/dlavie-content/obb-root/main.26.com.ea.gp.fifaworld.obb"
+          if [ ! -f "$MAIN26" ]; then
+            cp -f "$MAIN13" "$MAIN26"
+          fi
+
           echo "OBB format check:"
           file "$PATCH_OBB" || true
           if unzip -tq "$PATCH_OBB" >/dev/null 2>&1; then
@@ -65,7 +71,7 @@ jobs:
             (cd build/dlavie-content/data-root && zip -qr -u "../obb-root/patch.26.com.ea.gp.fifaworld.obb" .)
           else
             echo "patch.26 is not zip-compatible. Skipping OBB injection and packaging original OBB pair."
-            echo "DLavie DATA overlay will be installed by launcher into Android/data files after first setup."
+            echo "DATA overlay is installed by launcher after first setup."
           fi
 
           echo "Packaged OBB files:"
@@ -121,9 +127,9 @@ jobs:
              .obb.source = "release_asset" |
              .releaseNotes = [
                "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
-               "OBB non-zip dikemas sebagai pasangan main.13 dan patch.26 original.",
+               "OBB dikemas dengan main.13, main.26 compatibility alias, dan patch.26.",
                "DATA DLavie disediakan sebagai overlay final setelah first setup selesai.",
-               "Launcher harus memasang DATA ke Android/data root dan Android/data/files agar resource runtime terbaca.",
+               "main.26 disediakan karena APK versionCode 26 dapat mencari expansion dengan versi 26.",
                "Semua konten wajib diverifikasi SHA-256 sebelum install."
              ]' updates/install.json > "$tmp"
           mv "$tmp" updates/install.json
