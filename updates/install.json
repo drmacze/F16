@@ -22,7 +22,7 @@
     "versionName": "DLavie 26 Data Base",
     "fileName": "DLavie26-data-v1.zip",
     "url": "https://github.com/drmacze/F16/releases/download/v1.0-dlavie26/DLavie26-data-v1.zip",
-    "sha256": "cd663dec86664f071c821ae7acbbf7f55a9185e84ce2a16a1910b5ace3bc6326",
+    "sha256": "cf12fa570bf973eb55f314955aba45d9d0f3b5212c7734fcbe0f35b39c7350bb",
     "sizeBytes": 1438971335,
     "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
     "required": true,
@@ -34,7 +34,7 @@
     "versionName": "DLavie 26 OBB Base",
     "fileName": "DLavie26-obb-v1.zip",
     "url": "https://github.com/drmacze/F16/releases/download/v1.0-dlavie26/DLavie26-obb-v1.zip",
-    "sha256": "b9cdffd5351ff577e4a20799e46e401e23526b7bd152e22e8ee77c9326edeb6a",
+    "sha256": "20205fdf8ebfd9bce9471bc2009cf819e9e3fa33788284ba89080b73019cefb1",
     "sizeBytes": 1405682052,
     "target": "/sdcard/Android/obb/com.ea.gp.fifaworld/",
     "required": true,
@@ -43,8 +43,9 @@
   },
   "releaseNotes": [
     "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
-    "DATA dan OBB DLavie 26 sudah dipaketkan otomatis dari repo resmi DLavie.",
-    "OBB dikemas sebagai pasangan main.13 dan patch.26 sesuai struktur game yang diupload.",
+    "OBB non-zip dikemas sebagai pasangan main.13 dan patch.26 original.",
+    "DATA DLavie disediakan sebagai overlay final setelah first setup selesai.",
+    "Launcher harus memasang DATA ke Android/data root dan Android/data/files agar resource runtime terbaca.",
     "Semua konten wajib diverifikasi SHA-256 sebelum install."
   ]
 }
