@@ -18,7 +18,7 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y zip rsync jq
+          sudo apt-get install -y zip unzip rsync jq
 
       - name: Package DATA and OBB
         run: |
@@ -52,10 +52,22 @@ jobs:
             exit 1
           fi
 
-          if [ -f "build/dlavie-content/obb-root/patch.26.com.ea.gp.fifaworld.obb" ]; then
+          PATCH_OBB="build/dlavie-content/obb-root/patch.26.com.ea.gp.fifaworld.obb"
+          if [ -f "$PATCH_OBB" ]; then
             find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'patch.*.com.ea.gp.fifaworld.obb' ! -name 'patch.26.com.ea.gp.fifaworld.obb' -delete
           else
             echo "Missing required patch.26.com.ea.gp.fifaworld.obb" >&2
+            exit 1
+          fi
+
+          # Important: FIFA 16 first setup extracts OBB into the active game runtime.
+          # If DLavie files live only in Android/data after that, early splash/resources still come from OBB.
+          # Inject the DLavie DATA overlay into patch.26 so the game extracts DLavie files during first setup.
+          if unzip -tq "$PATCH_OBB" >/dev/null 2>&1; then
+            echo "Injecting DLavie DATA overlay into patch.26 OBB..."
+            (cd build/dlavie-content/data-root && zip -qr -u "../obb-root/patch.26.com.ea.gp.fifaworld.obb" .)
+          else
+            echo "patch.26 OBB is not a zip-compatible expansion file; cannot inject DLavie DATA overlay." >&2
             exit 1
           fi
 
@@ -112,8 +124,9 @@ jobs:
              .obb.source = "release_asset" |
              .releaseNotes = [
                "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
-               "DATA dan OBB DLavie 26 sudah dipaketkan otomatis dari repo resmi DLavie.",
-               "OBB dikemas sebagai pasangan main.13 dan patch.26 sesuai struktur game yang diupload.",
+               "DATA DLavie tetap disediakan sebagai repair/overlay eksternal.",
+               "OBB dikemas sebagai main.13 plus patch.26 yang sudah diinjeksi overlay DATA DLavie.",
+               "Tujuannya agar first setup FIFA 16 mengekstrak resource DLavie, bukan hanya resource base Messi.",
                "Semua konten wajib diverifikasi SHA-256 sebelum install."
              ]' updates/install.json > "$tmp"
           mv "$tmp" updates/install.json
