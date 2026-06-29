@@ -44,9 +44,12 @@ jobs:
           fi
 
           if [ -f "build/dlavie-content/obb-root/main.13.com.ea.gp.fifaworld.obb" ]; then
-            find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'main.*.com.ea.gp.fifaworld.obb' ! -name 'main.13.com.ea.gp.fifaworld.obb' -delete
+            mv -f build/dlavie-content/obb-root/main.13.com.ea.gp.fifaworld.obb build/dlavie-content/obb-root/main.26.com.ea.gp.fifaworld.obb
+            find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'main.*.com.ea.gp.fifaworld.obb' ! -name 'main.26.com.ea.gp.fifaworld.obb' -delete
+          elif [ -f "build/dlavie-content/obb-root/main.26.com.ea.gp.fifaworld.obb" ]; then
+            find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'main.*.com.ea.gp.fifaworld.obb' ! -name 'main.26.com.ea.gp.fifaworld.obb' -delete
           else
-            echo "Missing required main.13.com.ea.gp.fifaworld.obb" >&2
+            echo "Missing required main OBB" >&2
             exit 1
           fi
 
@@ -64,8 +67,7 @@ jobs:
             echo "patch.26 is zip-compatible. Injecting DATA overlay."
             (cd build/dlavie-content/data-root && zip -qr -u "../obb-root/patch.26.com.ea.gp.fifaworld.obb" .)
           else
-            echo "patch.26 is not zip-compatible. Skipping OBB injection and packaging original OBB pair."
-            echo "main.26 compatibility alias will be created locally by launcher after OBB install."
+            echo "patch.26 is not zip-compatible. Skipping OBB injection and packaging OBB pair."
           fi
 
           echo "Packaged OBB files:"
@@ -121,8 +123,7 @@ jobs:
              .obb.source = "release_asset" |
              .releaseNotes = [
                "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
-               "OBB release tetap main.13 dan patch.26 agar asset tidak melewati limit 2GB GitHub Release.",
-               "Launcher membuat alias main.26 lokal setelah install OBB untuk kompatibilitas APK versionCode 26.",
+               "OBB dikemas sebagai main.26 dan patch.26 supaya cocok dengan APK versionCode 26 serta tetap di bawah limit 2GB GitHub Release.",
                "DATA DLavie disediakan sebagai overlay final setelah first setup selesai.",
                "Semua konten wajib diverifikasi SHA-256 sebelum install."
              ]' updates/install.json > "$tmp"
