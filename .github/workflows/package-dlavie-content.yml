@@ -18,7 +18,7 @@ jobs:
       - name: Install tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y zip unzip rsync jq
+          sudo apt-get install -y zip unzip rsync jq file
 
       - name: Package DATA and OBB
         run: |
@@ -43,8 +43,6 @@ jobs:
             exit 1
           fi
 
-          # FIFA 16 Mobile DLavie package uses the original main expansion version plus patch 26.
-          # Keep only the known working OBB pair so stale renamed files are not shipped.
           if [ -f "build/dlavie-content/obb-root/main.13.com.ea.gp.fifaworld.obb" ]; then
             find build/dlavie-content/obb-root -maxdepth 1 -type f -name 'main.*.com.ea.gp.fifaworld.obb' ! -name 'main.13.com.ea.gp.fifaworld.obb' -delete
           else
@@ -60,15 +58,14 @@ jobs:
             exit 1
           fi
 
-          # Important: FIFA 16 first setup extracts OBB into the active game runtime.
-          # If DLavie files live only in Android/data after that, early splash/resources still come from OBB.
-          # Inject the DLavie DATA overlay into patch.26 so the game extracts DLavie files during first setup.
+          echo "OBB format check:"
+          file "$PATCH_OBB" || true
           if unzip -tq "$PATCH_OBB" >/dev/null 2>&1; then
-            echo "Injecting DLavie DATA overlay into patch.26 OBB..."
+            echo "patch.26 is zip-compatible. Injecting DATA overlay."
             (cd build/dlavie-content/data-root && zip -qr -u "../obb-root/patch.26.com.ea.gp.fifaworld.obb" .)
           else
-            echo "patch.26 OBB is not a zip-compatible expansion file; cannot inject DLavie DATA overlay." >&2
-            exit 1
+            echo "patch.26 is not zip-compatible. Skipping OBB injection and packaging original OBB pair."
+            echo "DLavie DATA overlay will be installed by launcher into Android/data files after first setup."
           fi
 
           echo "Packaged OBB files:"
@@ -124,9 +121,9 @@ jobs:
              .obb.source = "release_asset" |
              .releaseNotes = [
                "APK DLavie 26 sudah terhubung ke GitHub Release asset.",
-               "DATA DLavie tetap disediakan sebagai repair/overlay eksternal.",
-               "OBB dikemas sebagai main.13 plus patch.26 yang sudah diinjeksi overlay DATA DLavie.",
-               "Tujuannya agar first setup FIFA 16 mengekstrak resource DLavie, bukan hanya resource base Messi.",
+               "OBB non-zip dikemas sebagai pasangan main.13 dan patch.26 original.",
+               "DATA DLavie disediakan sebagai overlay final setelah first setup selesai.",
+               "Launcher harus memasang DATA ke Android/data root dan Android/data/files agar resource runtime terbaca.",
                "Semua konten wajib diverifikasi SHA-256 sebelum install."
              ]' updates/install.json > "$tmp"
           mv "$tmp" updates/install.json
