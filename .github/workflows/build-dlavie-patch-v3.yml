@@ -1,0 +1,127 @@
+name: Publish DLavie Patch v3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-v3-patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build patch zip
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="updates/patches/v3"
+          ZIP="dlavie-patch-v3.zip"
+          test -d "$SRC"
+          rm -f "$ZIP"
+          cd "$SRC"
+          find . -type f -print | sort | zip -X -@ "../../../../$ZIP"
+          cd - >/dev/null
+          SHA=$(sha256sum "$ZIP" | awk '{print $1}')
+          SIZE=$(stat -c%s "$ZIP")
+          FILE_SHA=$(sha256sum "$SRC/DLavieZipPatchV3.txt" | awk '{print $1}')
+          FILE_SIZE=$(stat -c%s "$SRC/DLavieZipPatchV3.txt")
+          echo "PATCH_SHA=$SHA" >> "$GITHUB_ENV"
+          echo "PATCH_SIZE=$SIZE" >> "$GITHUB_ENV"
+          echo "FILE_SHA=$FILE_SHA" >> "$GITHUB_ENV"
+          echo "FILE_SIZE=$FILE_SIZE" >> "$GITHUB_ENV"
+
+      - name: Publish GitHub release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v3 >/dev/null 2>&1; then
+            gh release upload v3 dlavie-patch-v3.zip --clobber
+          else
+            gh release create v3 dlavie-patch-v3.zip \
+              --title "DLavie Patch v3" \
+              --notes "Real ZIP patch for DLavie Launcher download, SHA verify, extract, Shizuku apply, and file verification."
+          fi
+
+      - name: Update manifest latest.json
+        shell: python
+        run: |
+          import json, os
+          path = "updates/latest.json"
+          with open(path, "r", encoding="utf-8") as f:
+              data = json.load(f)
+
+          data["schemaVersion"] = max(int(data.get("schemaVersion", 2)), 3)
+          data["latestVersionCode"] = 3
+          data["latestVersionName"] = "v3 - DLavie ZIP Patch Engine"
+          data["status"] = {
+              "state": "online",
+              "message": "DLavie update service is ready. Patch ZIP v3 tersedia untuk validasi engine download, verifikasi, install, dan repair."
+          }
+          data["releaseNotes"] = [
+              "Menambahkan patch ZIP nyata untuk DLavie Update Center.",
+              "Launcher dapat download patch, verifikasi SHA-256, cache file, dan install via Shizuku.",
+              "Patch ZIP v3 memvalidasi pipeline update sebelum dipakai untuk file gameplay besar.",
+              "Release notes kini tampil langsung di DLavie Launcher tanpa menampilkan URL internal."
+          ]
+          data["knownIssues"] = [
+              "Patch ZIP v3 adalah patch engine kecil, belum mengubah gameplay.",
+              "Patch gameplay besar berikutnya perlu file mod asli dengan SHA per file."
+          ]
+
+          url = "https://github.com/drmacze/F16/releases/download/v3/dlavie-patch-v3.zip"
+          patch_common = {
+              "name": "DLavie ZIP Patch v3",
+              "type": "zip",
+              "channel": "stable",
+              "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
+              "url": url,
+              "sha256": os.environ["PATCH_SHA"],
+              "estimatedSizeBytes": int(os.environ["PATCH_SIZE"]),
+              "requiresShizuku": True,
+              "requiresRoot": False,
+              "critical": False,
+              "safeToAutoApply": True,
+              "riskLevel": "low",
+              "restartGameRequired": False,
+              "description": "Patch ZIP nyata untuk menguji download, SHA verify, cache, extract, Shizuku apply, dan verifikasi file.",
+              "files": [
+                  {
+                      "path": "DLavieZipPatchV3.txt",
+                      "sha256": os.environ["FILE_SHA"],
+                      "sizeBytes": int(os.environ["FILE_SIZE"])
+                  }
+              ]
+          }
+
+          old = data.get("patches", [])
+          old = [p for p in old if not (int(p.get("to", -1)) == 3 and p.get("type") == "zip")]
+          p1 = dict(patch_common)
+          p1["from"] = 1
+          p1["to"] = 3
+          p2 = dict(patch_common)
+          p2["from"] = 2
+          p2["to"] = 3
+          data["patches"] = old + [p1, p2]
+
+          with open(path, "w", encoding="utf-8") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+
+      - name: Commit manifest update
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add updates/latest.json
+          if git diff --cached --quiet; then
+            echo "Manifest already up to date."
+          else
+            git commit -m "Publish DLavie v3 zip patch manifest"
+            git push
+          fi
