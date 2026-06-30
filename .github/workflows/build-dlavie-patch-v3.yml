@@ -21,9 +21,8 @@ jobs:
           ZIP="dlavie-patch-v3.zip"
           test -d "$SRC"
           rm -f "$ZIP"
-          cd "$SRC"
-          find . -type f -print | sort | zip -X -@ "../../../../$ZIP"
-          cd - >/dev/null
+          (cd "$SRC" && find . -type f -print | sort | zip -X "$GITHUB_WORKSPACE/$ZIP" -@)
+          test -f "$ZIP"
           SHA=$(sha256sum "$ZIP" | awk '{print $1}')
           SIZE=$(stat -c%s "$ZIP")
           FILE_SHA=$(sha256sum "$SRC/DLavieZipPatchV3.txt" | awk '{print $1}')
