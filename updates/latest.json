@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 2,
-  "latestVersionCode": 2,
-  "latestVersionName": "v2 - DLavie Launcher Test Patch",
+  "schemaVersion": 3,
+  "latestVersionCode": 3,
+  "latestVersionName": "v3 - DLavie ZIP Patch Engine",
   "minimumLauncherVersionCode": 7,
   "minimumLauncherVersionName": "0.6.0",
   "gamePackage": "com.ea.gp.fifaworld",
@@ -13,17 +13,17 @@
   },
   "status": {
     "state": "online",
-    "message": "DLavie update service is ready. Gunakan patch test ini untuk memastikan Shizuku/root copy berhasil."
+    "message": "DLavie update service is ready. Patch ZIP v3 tersedia untuk validasi engine download, verifikasi, install, dan repair."
   },
   "releaseNotes": [
-    "Menambahkan manifest metadata v2 untuk DLavie Update Center.",
-    "Menyiapkan channel stable/beta/developer.",
-    "Patch test membuat file DLavieLauncherTest.txt di folder data FIFA 16.",
-    "Jika file test muncul, sistem Shizuku/root updater berjalan benar."
+    "Menambahkan patch ZIP nyata untuk DLavie Update Center.",
+    "Launcher dapat download patch, verifikasi SHA-256, cache file, dan install via Shizuku.",
+    "Patch ZIP v3 memvalidasi pipeline update sebelum dipakai untuk file gameplay besar.",
+    "Release notes kini tampil langsung di DLavie Launcher tanpa menampilkan URL internal."
   ],
   "knownIssues": [
-    "Patch test belum mengubah gameplay atau UI game.",
-    "File OBB besar belum dipatch secara delta; OBB masih perlu strategi khusus."
+    "Patch ZIP v3 adalah patch engine kecil, belum mengubah gameplay.",
+    "Patch gameplay besar berikutnya perlu file mod asli dengan SHA per file."
   ],
   "patches": [
     {
@@ -48,6 +48,56 @@
           "content": "DLavie Launcher Test Patch v2\nJika file ini muncul di folder FIFA 16, berarti sistem update otomatis via Shizuku/root berhasil.\n"
         }
       ]
+    },
+    {
+      "name": "DLavie ZIP Patch v3",
+      "type": "zip",
+      "channel": "stable",
+      "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
+      "url": "https://github.com/drmacze/F16/releases/download/v3/dlavie-patch-v3.zip",
+      "sha256": "e084937d3412ff4d74315743ca4cea3a5577c9b39791de89e3cf9aa55412d48d",
+      "estimatedSizeBytes": 317,
+      "requiresShizuku": true,
+      "requiresRoot": false,
+      "critical": false,
+      "safeToAutoApply": true,
+      "riskLevel": "low",
+      "restartGameRequired": false,
+      "description": "Patch ZIP nyata untuk menguji download, SHA verify, cache, extract, Shizuku apply, dan verifikasi file.",
+      "files": [
+        {
+          "path": "DLavieZipPatchV3.txt",
+          "sha256": "f58b9873476fbf173045149e19ce14bf20ffed105ee2972db0ca1d068a7f1890",
+          "sizeBytes": 244
+        }
+      ],
+      "from": 1,
+      "to": 3
+    },
+    {
+      "name": "DLavie ZIP Patch v3",
+      "type": "zip",
+      "channel": "stable",
+      "target": "/sdcard/Android/data/com.ea.gp.fifaworld/",
+      "url": "https://github.com/drmacze/F16/releases/download/v3/dlavie-patch-v3.zip",
+      "sha256": "e084937d3412ff4d74315743ca4cea3a5577c9b39791de89e3cf9aa55412d48d",
+      "estimatedSizeBytes": 317,
+      "requiresShizuku": true,
+      "requiresRoot": false,
+      "critical": false,
+      "safeToAutoApply": true,
+      "riskLevel": "low",
+      "restartGameRequired": false,
+      "description": "Patch ZIP nyata untuk menguji download, SHA verify, cache, extract, Shizuku apply, dan verifikasi file.",
+      "files": [
+        {
+          "path": "DLavieZipPatchV3.txt",
+          "sha256": "f58b9873476fbf173045149e19ce14bf20ffed105ee2972db0ca1d068a7f1890",
+          "sizeBytes": 244
+        }
+      ],
+      "from": 2,
+      "to": 3
     }
   ]
 }
