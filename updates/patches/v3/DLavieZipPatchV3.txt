@@ -1,0 +1,3 @@
+DLavie Zip Patch v3
+Patch ini dibuat untuk mengaktifkan dan memvalidasi engine patch ZIP DLavie Launcher.
+Jika file ini muncul di folder data FIFA 16 Mobile, berarti download, SHA verify, extract, Shizuku apply, dan verify file berjalan benar.
